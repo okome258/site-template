@@ -14,7 +14,9 @@ import time
 
 import requests
 
-ITEM_SEARCH = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20220601"
+ITEM_SEARCH = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/{ver}"
+# 新しい順に試す。古い版は新規アプリでは "API Configuration not found" になる
+ITEM_SEARCH_VERSIONS = ["20260701", "20260401", "20220601"]
 DEFAULT_REFERER = "https://okomen.workers.dev/"
 
 
@@ -31,6 +33,7 @@ class Rakuten:
         self.interval = interval  # 楽天の目安は1秒1回まで
         self._last = 0.0
         self.session = requests.Session()
+        self._versions = list(ITEM_SEARCH_VERSIONS)
 
     @property
     def ready(self) -> bool:
@@ -67,5 +70,16 @@ class Rakuten:
 
     def search_items(self, keyword: str, **params) -> list[dict]:
         """市場商品検索。formatVersion=2 なので Items は商品dictのリスト。"""
-        body = self._get(ITEM_SEARCH, {"keyword": keyword, **params})
-        return body.get("Items", [])
+        last = None
+        for ver in list(self._versions):
+            try:
+                body = self._get(ITEM_SEARCH.format(ver=ver), {"keyword": keyword, **params})
+            except RakutenError as e:
+                if "API Configuration not found" in str(e) and len(self._versions) > 1:
+                    print(f"::notice::IchibaItem/Search {ver} は使えないので次の版を試します")
+                    self._versions.remove(ver)
+                    last = e
+                    continue
+                raise
+            return body.get("Items", [])
+        raise last or RakutenError("使える版がありません")

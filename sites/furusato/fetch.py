@@ -95,7 +95,7 @@ def fetch(cfg: dict) -> dict:
     if all(not v["items"] for v in out.values()):
         # 全カテゴリ空=取得失敗とみなし、前回データで生成させる
         raise RakutenError("全カテゴリで0件でした: " + " / ".join(errors[:3]))
-    return {"categories": out}
+    return {"categories": out, "errors": errors[:10]}
 
 
 def pages(cfg: dict, data: dict) -> list[dict]:
