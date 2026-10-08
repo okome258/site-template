@@ -64,3 +64,8 @@ def test_evidence_is_clean():
 def test_shipping_month_range_is_ok():
     q, _ = parse_quantity("【ふるさと納税】コシヒカリ 10kg 9～11月発送", "weight")
     assert q == pytest.approx(10)
+
+
+def test_two_variants_with_multipliers_rejected():
+    q, _ = parse_quantity("大型むきエビ1kg(500g×2パック) 1.5kg(500g×3パック)", "weight")
+    assert q is None

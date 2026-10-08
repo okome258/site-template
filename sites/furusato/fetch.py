@@ -41,6 +41,8 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
             drop("在庫なし"); continue
         if any(w in name for w in cat.get("exclude", [])):
             drop("対象外の商品"); continue
+        if cat.get("require") and not any(w in name for w in cat["require"]):
+            drop("対象外の商品"); continue  # 商品名にカテゴリの言葉が無いもの(別の品)
         if price <= 0:
             continue
         q, evidence = parse_quantity(name, cat["unit_kind"], cat.get("count_units"))

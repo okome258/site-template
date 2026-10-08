@@ -85,7 +85,8 @@ def parse_quantity(name: str, kind: str, count_units: list[str] | None = None):
     if len(sa_vals) >= 2:
         # 「1kg 2kg 3kg」のように値が複数並ぶ。掛け算の結果と一致する最大値だけは採用できる
         mu_vals = {q for q, _ in multiplied}
-        if max(sa_vals) in mu_vals or (mu_vals and max(mu_vals) >= max(sa_vals)):
+        # 「1kg(500g×2) 1.5kg(500g×3)」のように掛け算も複数なら容量違いの併記なので捨てる
+        if len(mu_vals) == 1 and max(sa_vals) in mu_vals:
             return max(standalone | multiplied)
         return None, "量が複数"
     cands = standalone | multiplied
