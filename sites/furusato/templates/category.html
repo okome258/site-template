@@ -1,5 +1,5 @@
 {% extends "_layout.html" %}
-{% set d = 1 if cat.unit_kind != 'count' else 0 %}
+{% set d = 1 if (cat.unit_kind != 'count' and cat.scale is not defined) else 0 %}
 {% block content %}
 <h1>{{ cat.emoji }} {{ cat.name }}の量コスパランキング</h1>
 <p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順・{{ rank.ranked or 0 }}件を比較<br><span class="small">{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新{% endif %}</span></p>

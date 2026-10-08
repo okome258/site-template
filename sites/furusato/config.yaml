@@ -18,7 +18,9 @@ fetch:
   top_n: 30
 
 # unit_kind: weight(kg) / volume(L) / count(count_units の個数)
-# range: 1件あたりの総量として妥当な範囲(外れたら読み違いとして捨てる)
+# scale: 表示単位への倍率(いくらを g で見せるなら 1000)
+# range: 1件あたりの総量として妥当な範囲(表示単位。外れたら読み違いとして捨てる)
+# 並び順 = サイトに出る順。楽天ふるさと納税で人気のジャンル順にしている
 categories:
   - id: rice
     name: お米
@@ -28,14 +30,6 @@ categories:
     keywords: ["ふるさと納税 米 精米", "ふるさと納税 無洗米"]
     exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
     range: [2, 60]
-  - id: pork
-    name: 豚肉
-    emoji: "🐖"
-    unit_kind: weight
-    unit: kg
-    keywords: ["ふるさと納税 豚肉 小間切れ", "ふるさと納税 豚肉 切り落とし"]
-    exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ", "味付", "タレ", "牛", "鶏"]
-    range: [0.5, 15]
   - id: beef
     name: 牛肉
     emoji: "🐄"
@@ -44,6 +38,14 @@ categories:
     keywords: ["ふるさと納税 牛肉 切り落とし", "ふるさと納税 牛肉 小間切れ"]
     exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン", "味付", "タレ", "豚", "鶏", "バラエティ"]
     range: [0.3, 10]
+  - id: pork
+    name: 豚肉
+    emoji: "🐖"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 豚肉 小間切れ", "ふるさと納税 豚肉 切り落とし"]
+    exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ", "味付", "タレ", "牛", "鶏"]
+    range: [0.5, 15]
   - id: chicken
     name: 鶏肉
     emoji: "🐔"
@@ -52,14 +54,63 @@ categories:
     keywords: ["ふるさと納税 鶏肉 もも", "ふるさと納税 鶏むね肉"]
     exclude: ["唐揚げ", "からあげ", "チキン南蛮", "焼き鳥", "焼鳥", "ハム", "サラダチキン", "つくね", "味付", "タレ", "牛", "豚"]
     range: [1, 20]
-  - id: seafood
-    name: エビ・ホタテ
+  - id: scallop
+    name: ホタテ
+    emoji: "🐚"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 ホタテ 貝柱", "ふるさと納税 ほたて 冷凍"]
+    exclude: ["フライ", "グラタン", "干し", "乾燥", "缶詰", "食べ比べ", "詰め合わせ", "ひも", "えび", "カニ"]
+    range: [0.3, 10]
+  - id: shrimp
+    name: エビ
     emoji: "🦐"
     unit_kind: weight
     unit: kg
-    keywords: ["ふるさと納税 ホタテ 冷凍", "ふるさと納税 えび 冷凍"]
-    exclude: ["フライ", "グラタン", "干し", "乾燥", "缶詰", "食べ比べ", "詰め合わせ"]
+    keywords: ["ふるさと納税 むきえび", "ふるさと納税 えび 冷凍"]
+    exclude: ["フライ", "天ぷら", "グラタン", "干し", "乾燥", "桜えび", "食べ比べ", "詰め合わせ", "ホタテ", "カニ"]
     range: [0.3, 10]
+  - id: crab
+    name: カニ
+    emoji: "🦀"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 ズワイガニ", "ふるさと納税 カニ ポーション"]
+    exclude: ["缶詰", "カニカマ", "かにかま", "甲羅", "グラタン", "クリーム", "食べ比べ", "詰め合わせ"]
+    range: [0.3, 10]
+  - id: ikura
+    name: いくら
+    emoji: "🟠"
+    unit_kind: weight
+    scale: 1000
+    unit: g
+    keywords: ["ふるさと納税 いくら 醤油漬け"]
+    exclude: ["筋子", "すじこ", "鱒", "食べ比べ", "詰め合わせ", "サーモン"]
+    range: [100, 3000]
+  - id: salmon
+    name: サーモン・鮭
+    emoji: "🐟"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 サーモン 刺身", "ふるさと納税 鮭 切り身"]
+    exclude: ["いくら", "フレーク", "燻製", "スモーク", "ルイベ漬", "食べ比べ", "詰め合わせ"]
+    range: [0.3, 10]
+  - id: mikan
+    name: みかん
+    emoji: "🍊"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 みかん"]
+    exclude: ["ジュース", "ゼリー", "ドライ", "缶詰", "マーマレード"]
+    range: [2, 30]
+  - id: apple
+    name: りんご
+    emoji: "🍎"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 りんご"]
+    exclude: ["ジュース", "ゼリー", "ドライ", "チップス", "シードル", "ジャム"]
+    range: [2, 30]
   - id: toilet
     name: トイレットペーパー
     emoji: "🧻"
@@ -70,6 +121,16 @@ categories:
     exclude: ["ティッシュ", "キッチンペーパー", "ペーパータオル"]
     range: [12, 300]
     note: "シングル/ダブル・長さ(倍巻き)の違いは考慮していません。"
+  - id: tissue
+    name: ティッシュ
+    emoji: "📦"
+    unit_kind: count
+    count_units: ["箱"]
+    unit: 箱
+    keywords: ["ふるさと納税 ティッシュペーパー"]
+    exclude: ["トイレットペーパー", "ウェット", "キッチン"]
+    range: [5, 200]
+    note: "1箱あたりの枚数の違いは考慮していません。"
   - id: water
     name: 水
     emoji: "💧"
@@ -78,6 +139,15 @@ categories:
     keywords: ["ふるさと納税 水 2L", "ふるさと納税 天然水"]
     exclude: ["炭酸", "ウォーターサーバー", "お茶", "ジュース", "サーバー"]
     range: [6, 200]
+  - id: beer
+    name: ビール
+    emoji: "🍺"
+    unit_kind: volume
+    unit: L
+    keywords: ["ふるさと納税 ビール 350ml 24本", "ふるさと納税 ビール ケース"]
+    exclude: ["ノンアルコール", "グラス", "飲み比べ", "クラフト", "ギフト"]
+    range: [3, 60]
+    note: "20歳未満の飲酒は法律で禁止されています。"
   - id: egg
     name: 卵
     emoji: "🥚"

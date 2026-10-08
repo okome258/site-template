@@ -46,6 +46,7 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
         q, evidence = parse_quantity(name, cat["unit_kind"], cat.get("count_units"))
         if q is None:
             drop(evidence); continue
+        q *= cat.get("scale", 1)  # 表示単位へ(いくら: kg → g)
         if not (lo <= q <= hi):
             drop("量が範囲外"); continue
         rows.append({

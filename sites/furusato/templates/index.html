@@ -9,10 +9,10 @@
   <section class="card">
     <h2 style="margin:0">{{ c.emoji }} {{ c.name }}</h2>
     {% if r["items"] %}
-    <div class="small">1万円あたり最大 <strong style="color:var(--accent)">{{ r["items"][0].per10k | num(1 if c.unit_kind != 'count' else 0) }}{{ c.unit }}</strong></div>
+    <div class="small">1万円あたり最大 <strong style="color:var(--accent)">{{ r["items"][0].per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}</strong></div>
     <ol class="mini">
       {% for it in r["items"][:3] %}
-      <li><span>{{ loop.index }}</span><span>{{ it.shop }}</span><span class="v">{{ it.per10k | num(1 if c.unit_kind != 'count' else 0) }}{{ c.unit }}</span></li>
+      <li><span>{{ loop.index }}</span><span>{{ it.shop }}</span><span class="v">{{ it.per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}</span></li>
       {% endfor %}
     </ol>
     {% else %}
