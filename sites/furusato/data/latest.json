@@ -1674,21 +1674,6 @@
      "wakeari": false
     },
     {
-     "code": "f342041-mihara:10000846",
-     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉 皮無し3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ とりむねにく 鶏むね肉 むね肉 鶏 皮なし 小分け みはら 広島県産 神明鶏 012017",
-     "price": 17000,
-     "qty": 3.0,
-     "evidence": "3kg",
-     "per10k": 1.765,
-     "unit_price": 5667,
-     "shop": "広島県三原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110783%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000846%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f592cbbb26a6284704.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false
-    },
-    {
      "code": "f434841-tsunagi:10000055",
      "name": "鶏肉 若鶏 むね肉 約2kg × 1袋 2袋(1袋あたり約300g×7枚前後) たっぷり大満足！《30日以内に出荷予定(土日祝除く)》熊本県 葦北郡 津奈木町 訳あり SDGs 定期 でない",
      "price": 12100,
@@ -1837,14 +1822,29 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false
+    },
+    {
+     "code": "f072133-date:10000403",
+     "name": "福島県 伊達市産 伊達鶏むね肉 4kg ブランド鶏 銘柄鶏 惣菜 おつまみ グルメ チキン BBQ キャンプ バーベキューだてどり 高タンパク F20C-223",
+     "price": 31000,
+     "qty": 4.0,
+     "evidence": "4kg",
+     "per10k": 1.29,
+     "unit_price": 7750,
+     "shop": "福島県伊達市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t6ipo.ia330a0a.g00t6ipo.ia3314fa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff072133-date%2Ff20c-223%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff072133-date%2Fi%2F10000403%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f072133-date/cabinet/f20c-0200-0399/r_f20c_223_1.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false
     }
    ],
-   "candidates": 166,
+   "candidates": 167,
    "ranked": 40,
    "dropped": {
     "対象外の商品": 75,
     "選択式": 45,
-    "量なし": 4,
+    "量なし": 5,
     "量が複数": 1,
     "量が範囲外": 1
    }
@@ -2765,14 +2765,14 @@
      "wakeari": false
     }
    ],
-   "candidates": 140,
+   "candidates": 141,
    "ranked": 35,
    "dropped": {
-    "選択式": 41,
+    "選択式": 40,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 5
+    "量が範囲外": 7
    }
   },
   "crab": {
@@ -3240,6 +3240,36 @@
   "ikura": {
    "items": [
     {
+     "code": "f015636-oumu:10000408",
+     "name": "北海道雄武産　生冷いくら「我が家の黄金比」1パック150g×2【21041AA0101】",
+     "price": 23000,
+     "qty": 300.0,
+     "evidence": "150g×2",
+     "per10k": 130.435,
+     "unit_price": 77,
+     "shop": "北海道雄武町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbvpo.ia3301d0.g00tbvpo.ia3311cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff015636-oumu%2F07121%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff015636-oumu%2Fi%2F10000408%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f015636-oumu/cabinet/henreihin/007/0070344_2_113957.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 2,
+     "wakeari": false
+    },
+    {
+     "code": "f014818-mashike:10001127",
+     "name": "8-036-001　ぐるめ食品の醤油いくら 400g　魚貝類・いくら・魚卵　お届け：入金確認後、2週間～1ヶ月前後",
+     "price": 36000,
+     "qty": 400.0,
+     "evidence": "400g",
+     "per10k": 111.111,
+     "unit_price": 90,
+     "shop": "北海道増毛町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00smsto.ia330739.g00smsto.ia33103c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff014818-mashike%2F5547373%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff014818-mashike%2Fi%2F10001127%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f014818-mashike/cabinet/d_202209/5547373_01_web_s.jpg?_ex=240x240",
+     "review_avg": 4.5,
+     "review_count": 6,
+     "wakeari": false
+    },
+    {
      "code": "f034851-fudai:10000024",
      "name": "鮭 いくら 三陸産 いくら醤油漬け(鮭卵)牛乳瓶160g 1本 3本 プチプチ感強め。 岩手県産 国産 魚介 海鮮 海産 醤油漬け 鮭 いくら瓶 冷凍 イクラ ikura 数量限定",
      "price": 15000,
@@ -3252,6 +3282,21 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f034851-fudai/cabinet/06503502/imgrc0123268601.jpg?_ex=240x240",
      "review_avg": 4.66,
      "review_count": 71,
+     "wakeari": false
+    },
+    {
+     "code": "f013641-otobe:10000445",
+     "name": "【2025年度産】＜いくら醤油漬　1パック(500g)＞鮮度にこだわる笹谷商店の絶品の醤油タレで漬けたいくら（検索：鮭イクラ 醤油いくら 醤油イクラ イクラ醤油漬け 秋鮭 国産 北海道産 日本海 冷凍 人気 使い道）",
+     "price": 50000,
+     "qty": 500.0,
+     "evidence": "500g",
+     "per10k": 100.0,
+     "unit_price": 100,
+     "shop": "北海道乙部町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3ivo.ia330ba2.g00t3ivo.ia3314ad/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff013641-otobe%2Fikuracp2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff013641-otobe%2Fi%2F10000445%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f013641-otobe/cabinet/08434504/10276761/square_ikura1_01.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
      "wakeari": false
     },
     {
@@ -3328,13 +3373,28 @@
      "review_avg": 4.78,
      "review_count": 18,
      "wakeari": false
+    },
+    {
+     "code": "f012246-chitose:10000827",
+     "name": "佐藤水産 北海道産いくら（塩味）240g 魚貝類 いくら 魚卵【北海道千歳市】ギフト ふるさと納税",
+     "price": 32000,
+     "qty": 240.0,
+     "evidence": "240g",
+     "per10k": 75.0,
+     "unit_price": 133,
+     "shop": "北海道千歳市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t8i5o.ia330b48.g00t8i5o.ia331e0d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012246-chitose%2Faf235-r%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012246-chitose%2Fi%2F10000827%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012246-chitose/cabinet/item5/af308_0.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false
     }
    ],
-   "candidates": 80,
-   "ranked": 6,
+   "candidates": 109,
+   "ranked": 10,
    "dropped": {
-    "選択式": 14,
-    "対象外の商品": 57,
+    "選択式": 17,
+    "対象外の商品": 79,
     "量が複数": 2,
     "量なし": 1
    }
@@ -5118,6 +5178,21 @@
      "wakeari": false
     },
     {
+     "code": "f052019-akita:10005091",
+     "name": "ティッシュペーパー スコッティ ティシュー ファン 150組 5箱×4パック 秋田市オリジナル 最短翌日発送 [ティッシュ スコッティ(SCOTTIE) スコッティティシュー]",
+     "price": 9000,
+     "qty": 20.0,
+     "evidence": "5箱×4",
+     "per10k": 22.222,
+     "unit_price": 450,
+     "shop": "秋田県秋田市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ti67o.ia330f77.g00ti67o.ia331fb2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff052019-akita%2F15_nsc-140401%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff052019-akita%2Fi%2F10005091%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f052019-akita/cabinet/img/p/nsc/15_nsc-140401_yk.jpg?_ex=240x240",
+     "review_avg": 4.6,
+     "review_count": 10,
+     "wakeari": false
+    },
+    {
      "code": "f052019-akita:10004127",
      "name": "ティッシュペーパー スコッティ フラワーボックス250組 60箱(5箱×12パック) ティッシュ 日用品 最短翌日発送 [ティッシュ スコッティ(SCOTTIE) スコッティティシュー]",
      "price": 29000,
@@ -5235,21 +5310,6 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f432024-yatsushiro/cabinet/09711498/09809712/r186-6426_01b.jpg?_ex=240x240",
      "review_avg": 4.82,
      "review_count": 11,
-     "wakeari": false
-    },
-    {
-     "code": "f052019-akita:10005084",
-     "name": "ティッシュペーパー スコッティ ティシュー ファン 150組 5箱×2パック 秋田市オリジナル 最短翌日発送 [ティッシュ スコッティ(SCOTTIE) スコッティティシュー]",
-     "price": 6500,
-     "qty": 10.0,
-     "evidence": "5箱×2",
-     "per10k": 15.385,
-     "unit_price": 650,
-     "shop": "秋田県秋田市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ti67o.ia330f77.g00ti67o.ia331fb2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff052019-akita%2F15_nsc-140201%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff052019-akita%2Fi%2F10005084%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f052019-akita/cabinet/img/p/nsc/15_nsc-140201_yk.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 2,
      "wakeari": false
     },
     {
@@ -6503,5 +6563,5 @@
   }
  },
  "errors": [],
- "fetched_at": "2026-10-09T00:54+09:00"
+ "fetched_at": "2026-10-09T00:56+09:00"
 }
