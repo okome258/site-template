@@ -3,6 +3,14 @@
 {% block content %}
 <h1>{{ cat.emoji }} {{ cat.name }}の量コスパランキング</h1>
 <p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順・{{ rank.ranked or 0 }}件を比較<br><span class="small">{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新{% endif %}</span></p>
+{% set s = rank.summary or {} %}
+{% if s %}
+<section class="market" aria-label="相場">
+  <div><span>相場（中央値）</span><strong>{{ s.median_per10k | num(d) }}{{ cat.unit }}</strong><small>/ 1万円</small></div>
+  <div><span>1{{ cat.unit }}あたり寄付額</span><strong>{{ s.min_unit_price | yen }}〜{{ s.max_unit_price | yen }}</strong><small>中央値 {{ s.median_unit_price | yen }}</small></div>
+  <div><span>比較した返礼品</span><strong>{{ rank.ranked }}件</strong><small>{{ s.towns }}自治体</small></div>
+</section>
+{% endif %}
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
 
 {% if rank["items"] %}
@@ -15,7 +23,7 @@
         <span class="rank-no">{{ loop.index }}</span>
       </a>
       <div class="rank-body">
-        <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small></div>
+        <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small>{% if it.vs_median %} <span class="vs {{ 'up' if it.vs_median >= 1 else 'down' }}">相場の{{ "%.1f" | format(it.vs_median) }}倍</span>{% endif %}</div>
         <p class="rank-name">{{ it.name }}</p>
         <div class="rank-meta">
           {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}{{ it.shop }}{% if it.review_count %} ・ ★{{ it.review_avg }}（{{ it.review_count | num }}）{% endif %}
@@ -27,7 +35,7 @@
       <div><dt>内容量</dt><dd>{{ "%g" | format(it.qty) }}{{ cat.unit }}</dd></div>
       <div><dt>1{{ cat.unit }}あたり</dt><dd>{{ it.unit_price | yen }}</dd></div>
     </dl>
-    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天で詳細を見る</a>
+    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ it.portal or '楽天ふるさと納税' }}で見る</a>
   </li>
 {% endfor %}
 </ol>

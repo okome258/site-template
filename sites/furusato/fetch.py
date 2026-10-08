@@ -61,13 +61,26 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
             "unit_price": round(price / q),  # 1単位あたりの寄付額
             "shop": it.get("shopName", ""),
             "url": it.get("affiliateUrl") or it.get("itemUrl", ""),
+            "portal": "楽天ふるさと納税",
             "image": _image(it),
             "review_avg": it.get("reviewAverage") or 0,
             "review_count": it.get("reviewCount") or 0,
             "wakeari": "訳あり" in name or "訳アリ" in name,
         })
     rows.sort(key=lambda r: (-r["per10k"], -r["review_count"]))
-    return {"items": rows[:top_n], "candidates": len(seen), "ranked": len(rows), "dropped": dropped}
+    # 相場(比較対象すべての中央値)。各商品が相場の何倍の量かを出して「比較サイト」として読めるように
+    summary = {}
+    if rows:
+        per = sorted(r["per10k"] for r in rows)
+        up = sorted(r["unit_price"] for r in rows)
+        med = per[len(per) // 2]
+        summary = {"median_per10k": med, "median_unit_price": up[len(up) // 2],
+                   "min_unit_price": up[0], "max_unit_price": up[-1],
+                   "towns": len({r["shop"] for r in rows})}
+        for r in rows:
+            r["vs_median"] = round(r["per10k"] / med, 2) if med else None
+    return {"items": rows[:top_n], "candidates": len(seen), "ranked": len(rows), "dropped": dropped,
+            "summary": summary}
 
 
 def fetch(cfg: dict) -> dict:

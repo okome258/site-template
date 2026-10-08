@@ -66,10 +66,22 @@ h2 { font-size: 19px; margin: 32px 0 10px; }
 .stats dt { font-size: 11px; color: var(--muted); }
 .stats dd { margin: 0; font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .badge { display: inline-block; font-size: 11px; background: #fdeee8; color: #a3401c; border-radius: 4px; padding: 0 6px; margin-right: 6px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #bf0000; color: #fff; text-decoration: none; font-size: 15px; font-weight: 700; border-radius: 10px; padding: 10px 14px; min-height: 44px; }
+/* 比較サイトらしく控えめなボタン(派手な赤ボタンは広告っぽく見えるので使わない) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--card); color: var(--ink); border: 1px solid var(--line); text-decoration: none; font-size: 14px; font-weight: 600; border-radius: 10px; padding: 10px 14px; min-height: 44px; }
+.btn::after { content: "↗"; color: var(--muted); font-size: 13px; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
 .btn:active { opacity: .85; }
 .btn-block { display: flex; width: 100%; }
-.btn .pr { color: #fff; border-color: rgba(255,255,255,.7); margin: 0; }
+.btn .pr { margin: 0; }
+/* 相場ボックス */
+.market { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 16px; }
+.market > div { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 8px; text-align: center; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.market span { font-size: 11px; color: var(--muted); }
+.market strong { font-size: 16px; line-height: 1.3; }
+.market small { font-size: 11px; color: var(--muted); }
+.vs { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 4px; vertical-align: 3px; }
+.vs.up { background: var(--soft); color: var(--accent); }
+.vs.down { background: var(--bg); color: var(--muted); }
 
 /* カテゴリカード */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
