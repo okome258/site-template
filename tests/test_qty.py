@@ -38,3 +38,29 @@ def test_fruit_size_grade_is_not_volume():
     assert q is None
     q, _ = parse_quantity("【ふるさと納税】みかん 2Lサイズ 5kg", "weight")
     assert q == pytest.approx(5)
+
+
+@pytest.mark.parametrize("name", [
+    "【ふるさと納税】二本松熟成牛 切り落とし1kg（250g×4袋）〜4kg （250g×16袋）",
+    "【ふるさと納税】牛ハラミ 切り落とし 1~2kg 個包装",
+    "【ふるさと納税】むきえび 1〜3kg",
+    "【ふるさと納税】トイレットペーパー 48個/96個 シングル 240ロール",
+])
+def test_range_or_choice_rejected(name):
+    q, _ = parse_quantity(name, "count" if "ロール" in name else "weight", ["ロール"])
+    assert q is None
+
+
+def test_net_weight_preferred():
+    q, ev = parse_quantity("【ふるさと納税】むきえび 2kg（正味重量1.6kg）", "weight")
+    assert q == pytest.approx(1.6) and ev.startswith("正味")
+
+
+def test_evidence_is_clean():
+    _, ev = parse_quantity("若鶏 むね肉 約2kg×4袋！計8kg", "weight")
+    assert ev == "計8kg"
+
+
+def test_shipping_month_range_is_ok():
+    q, _ = parse_quantity("【ふるさと納税】コシヒカリ 10kg 9～11月発送", "weight")
+    assert q == pytest.approx(10)
