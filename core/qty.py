@@ -89,6 +89,8 @@ def parse_quantity(name: str, kind: str, count_units: list[str] | None = None):
         if len(mu_vals) == 1 and max(sa_vals) in mu_vals:
             return max(standalone | multiplied)
         return None, "量が複数"
+    if len({q for q, _ in multiplied}) >= 2:
+        return None, "量が複数"  # 「80g×4P・100g×3P」のような容量違いの併記
     cands = standalone | multiplied
     if not cands:
         return None, "量なし"

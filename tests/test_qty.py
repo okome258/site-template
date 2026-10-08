@@ -69,3 +69,13 @@ def test_shipping_month_range_is_ok():
 def test_two_variants_with_multipliers_rejected():
     q, _ = parse_quantity("大型むきエビ1kg(500g×2パック) 1.5kg(500g×3パック)", "weight")
     assert q is None
+
+
+def test_two_pack_variants_rejected():
+    q, _ = parse_quantity("秋鮭いくら醤油漬け 80g × 4P ・ 100g × 3P", "weight")
+    assert q is None
+
+
+def test_same_total_written_two_ways_ok():
+    q, _ = parse_quantity("豚こま 250g×8 500g×4 2kg", "weight")
+    assert q == pytest.approx(2)
