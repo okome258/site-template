@@ -5,7 +5,7 @@ site:
   base_url: "https://furusato-kosupa.okomen.workers.dev"
   theme_color: "#1f6f5c"
   google_site_verification: ""  # Search Console の確認タグの content の値
-  cf_analytics_token: ""   # Cloudflare Web Analytics のトークンを入れると計測開始
+  cf_analytics_token: "51a79abed12a41eea0d2cb216a642808"   # Cloudflare Web Analytics
   operator: "ふるさと納税 量コスパ比較"
 
 # 取得設定(1カテゴリ = キーワード数 × sorts × pages 回 API を呼ぶ。1秒1回)
