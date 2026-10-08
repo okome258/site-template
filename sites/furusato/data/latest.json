@@ -2815,7 +2815,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.82
+     "vs_median": 1.83
     },
     {
      "code": "f242047-matsusaka:10001233",
@@ -2833,7 +2833,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.53
+     "vs_median": 1.55
     },
     {
      "code": "f442119-usa:10001528",
@@ -2851,7 +2851,7 @@
      "review_avg": 4.82,
      "review_count": 336,
      "wakeari": false,
-     "vs_median": 1.52
+     "vs_median": 1.53
     },
     {
      "code": "f042072-natori:10002269",
@@ -2869,7 +2869,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.46
+     "vs_median": 1.47
     },
     {
      "code": "f422037-shimabara:10000444",
@@ -2887,7 +2887,7 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.36
+     "vs_median": 1.38
     },
     {
      "code": "f182109-sakai:10000785",
@@ -2905,7 +2905,7 @@
      "review_avg": 4.69,
      "review_count": 248,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.31
     },
     {
      "code": "f242047-matsusaka:10001039",
@@ -2923,7 +2923,7 @@
      "review_avg": 4.64,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.24
+     "vs_median": 1.25
     },
     {
      "code": "f452033-nobeoka:10000030",
@@ -2941,7 +2941,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.21
     },
     {
      "code": "f232131-nishio:10001591",
@@ -2959,7 +2959,7 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.19
+     "vs_median": 1.2
     },
     {
      "code": "f013625-kaminokuni:10000901",
@@ -2977,7 +2977,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.17
+     "vs_median": 1.18
     },
     {
      "code": "f242098-owase:10001208",
@@ -2995,7 +2995,7 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.15
     },
     {
      "code": "f242098-owase:10001210",
@@ -3013,7 +3013,7 @@
      "review_avg": 1.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.1
     },
     {
      "code": "f260002-kyoto:10003468",
@@ -3031,7 +3031,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.06
     },
     {
      "code": "f182109-sakai:10002079",
@@ -3049,7 +3049,7 @@
      "review_avg": 4.36,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.02
+     "vs_median": 1.03
     },
     {
      "code": "f143413-oiso:10000272",
@@ -3067,7 +3067,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.02
+     "vs_median": 1.03
     },
     {
      "code": "f013625-kaminokuni:10000899",
@@ -3085,25 +3085,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.02
-    },
-    {
-     "code": "f412040-taku:10000910",
-     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
-     "price": 12000,
-     "qty": 0.9,
-     "evidence": "合計900g",
-     "per10k": 0.75,
-     "unit_price": 13333,
-     "shop": "佐賀県多久市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "多久市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.02
+     "vs_median": 1.03
     },
     {
      "code": "f232131-nishio:10000873",
@@ -3121,7 +3103,7 @@
      "review_avg": 4.29,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.01
     },
     {
      "code": "f182095-echizen:10000776",
@@ -3139,7 +3121,7 @@
      "review_avg": 3.67,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 0.99
+     "vs_median": 1.0
     },
     {
      "code": "f012238-nemuro:10007424",
@@ -3157,7 +3139,7 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.99
+     "vs_median": 1.0
     },
     {
      "code": "f242098-owase:10001209",
@@ -3175,7 +3157,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.99
+     "vs_median": 1.0
     },
     {
      "code": "f014087-yoichi:10003090",
@@ -3193,7 +3175,7 @@
      "review_avg": 4.58,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.97
+     "vs_median": 0.98
     },
     {
      "code": "f402036-kurume:10002429",
@@ -3211,7 +3193,7 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.97
+     "vs_median": 0.98
     },
     {
      "code": "f182109-sakai:10000004",
@@ -3229,7 +3211,7 @@
      "review_avg": 4.8,
      "review_count": 279,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.92
     },
     {
      "code": "f232017-toyohashi:10000701",
@@ -3247,7 +3229,7 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": true,
-     "vs_median": 0.91
+     "vs_median": 0.92
     },
     {
      "code": "f014842-haboro:10000118",
@@ -3265,7 +3247,25 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.86
+    },
+    {
+     "code": "f013625-kaminokuni:10000898",
+     "name": "【北海道加工】大粒冷凍むきえび　600g（ブラックタイガー使用、無添加・無保水・下処理済み）　冷凍えび　冷凍エビ　冷凍海老　冷凍食品　エビ　海老　えび　大粒えび　大粒エビ　大粒海老　人気　むきエビ　むき海老",
+     "price": 10000,
+     "qty": 0.6,
+     "evidence": "600g",
+     "per10k": 0.6,
+     "unit_price": 16667,
+     "shop": "北海道上ノ国町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tjx9o.ia330dff.g00tjx9o.ia331bd1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff013625-kaminokuni%2Frh-r001-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff013625-kaminokuni%2Fi%2F10000898%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "上ノ国町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f013625-kaminokuni/cabinet/12277087/12277089/imgrc0106418229.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.83
     },
     {
      "code": "f185019-wakasa:10000339",
@@ -3283,7 +3283,7 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.68
+     "vs_median": 0.69
     },
     {
      "code": "f172014-kanazawa:10000909",
@@ -3301,7 +3301,7 @@
      "review_avg": 4.81,
      "review_count": 47,
      "wakeari": false,
-     "vs_median": 0.62
+     "vs_median": 0.63
     },
     {
      "code": "f372013-takamatsu:10001604",
@@ -3319,7 +3319,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.59
+     "vs_median": 0.6
     },
     {
      "code": "f184233-echizen:10001595",
@@ -3340,21 +3340,21 @@
      "vs_median": 0.55
     }
    ],
-   "candidates": 141,
+   "candidates": 140,
    "ranked": 35,
    "dropped": {
     "選択式": 40,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 6
    },
    "summary": {
-    "median_per10k": 0.733,
-    "median_unit_price": 13636,
+    "median_per10k": 0.727,
+    "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 27
+    "towns": 26
    }
   },
   "crab": {
@@ -4496,24 +4496,6 @@
      "vs_median": 0.63
     },
     {
-     "code": "f232319-tahara:10000042",
-     "name": "渥美プレミアムラスサーモン 刺身用 柵 500g 刺身 サーモン プレミアム 国産 海鮮 生食用 カルパッチョ 陸上養殖 魚 食品 お取り寄せ お取り寄せグルメ おつまみ 家飲み 送料無料 産地直送 ブロック",
-     "price": 13000,
-     "qty": 0.5,
-     "evidence": "500g",
-     "per10k": 0.385,
-     "unit_price": 26000,
-     "shop": "愛知県田原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u8g2o.ia330004.g00u8g2o.ia331cf6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff232319-tahara%2F202242%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff232319-tahara%2Fi%2F10000042%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "田原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f232319-tahara/cabinet/item/10030945/imgrc0120134613.jpg?_ex=240x240",
-     "review_avg": 4.33,
-     "review_count": 3,
-     "wakeari": false,
-     "vs_median": 0.61
-    },
-    {
      "code": "f242098-owase:10001179",
      "name": "サーモン ブロック&切り落とし600gセット 小分け 鮭 サーモン アトランティックサーモン さけ シャケ しゃけ sake カルパッチョ ソテー レアステーキ 人気 高級 大満足 生食用 刺身 お刺身 刺し身 魚介類 海鮮 冷凍 ob-f-22",
      "price": 16000,
@@ -4640,6 +4622,24 @@
      "vs_median": 0.45
     },
     {
+     "code": "f182087-awara:10000623",
+     "name": "ふくいサーモン 切り身 100g×6切 計600g ＜鮮度抜群！アレンジ自在！真空冷凍＞ ／サーモン さーもん 鮭 しゃけ サケ カルパッチョ 生食OK 焼き魚 刺身 国産 個包装 冷凍 海鮮 海鮮丼 福井県 あわら市",
+     "price": 22700,
+     "qty": 0.6,
+     "evidence": "計600g",
+     "per10k": 0.264,
+     "unit_price": 37833,
+     "shop": "福井県あわら市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tsoxo.ia330318.g00tsoxo.ia331d75/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182087-awara%2Fae38-r%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff182087-awara%2Fi%2F10000623%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "あわら市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f182087-awara/cabinet/img/aw002/aw002-b003-s.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 3,
+     "wakeari": false,
+     "vs_median": 0.42
+    },
+    {
      "code": "f182087-awara:10000624",
      "name": "ふくいサーモン 柵どり 150g×4パック 計600g ＜鮮度抜群！アレンジ自在！真空冷凍＞ ／サーモン さーもん 鮭 しゃけ サケ カルパッチョ 生食OK 刺身 国産 個包装 冷凍 海鮮 海鮮丼 福井県 あわら市",
      "price": 22700,
@@ -4672,7 +4672,7 @@
     "median_unit_price": 15714,
     "min_unit_price": 5625,
     "max_unit_price": 40000,
-    "towns": 22
+    "towns": 21
    }
   },
   "mikan": {
@@ -7947,5 +7947,5 @@
   }
  },
  "errors": [],
- "fetched_at": "2026-10-09T02:06+09:00"
+ "fetched_at": "2026-10-09T02:18+09:00"
 }
