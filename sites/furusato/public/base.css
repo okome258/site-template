@@ -88,3 +88,16 @@ h2 { font-size: 19px; margin: 32px 0 10px; }
   .rank-img { width: 120px; height: 120px; }
   .btn-block { width: auto; display: inline-flex; min-width: 240px; }
 }
+/* PC: 1行に「商品 | 数字 | ボタン」を並べて比べやすく */
+@media (min-width: 960px) {
+  .wrap { max-width: 1120px; }
+  .tabs { max-width: 1120px; flex-wrap: wrap; overflow: visible; }
+  .rank-list { gap: 10px; }
+  .rank-item { display: grid; grid-template-columns: minmax(0, 1fr) 360px 190px; gap: 20px; align-items: center; padding: 14px 18px; }
+  .rank-top { grid-template-columns: 96px 1fr; gap: 16px; align-items: center; }
+  .rank-img { width: 96px; height: 96px; }
+  .rank-item .stats { margin: 0; }
+  .rank-item .btn-block { display: flex; width: 100%; min-width: 0; }
+  .rank-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+}
