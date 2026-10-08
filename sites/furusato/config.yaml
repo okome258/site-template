@@ -23,6 +23,7 @@ fetch:
 # 並び順 = サイトに出る順。楽天ふるさと納税で人気のジャンル順にしている
 categories:
   - id: rice
+    search_word: 米
     name: お米
     emoji: "🍚"
     unit_kind: weight
@@ -31,6 +32,7 @@ categories:
     exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
     range: [2, 60]
   - id: beef
+    search_word: 牛肉
     name: 牛肉
     emoji: "🐄"
     unit_kind: weight
@@ -39,6 +41,7 @@ categories:
     exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン", "味付", "タレ", "豚", "鶏", "バラエティ"]
     range: [0.3, 10]
   - id: pork
+    search_word: 豚肉
     name: 豚肉
     emoji: "🐖"
     unit_kind: weight
@@ -47,6 +50,7 @@ categories:
     exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ", "味付", "タレ", "牛", "鶏"]
     range: [0.5, 15]
   - id: chicken
+    search_word: 鶏肉
     name: 鶏肉
     emoji: "🐔"
     unit_kind: weight
@@ -92,6 +96,7 @@ categories:
     require: ["いくら", "イクラ"]
     range: [100, 3000]
   - id: salmon
+    search_word: 鮭
     name: サーモン・鮭
     emoji: "🐟"
     unit_kind: weight
@@ -129,6 +134,7 @@ categories:
     range: [12, 300]
     note: "シングル/ダブル・長さ(倍巻き)の違いは考慮していません。"
   - id: tissue
+    search_word: ティッシュ
     name: ティッシュ
     emoji: "📦"
     unit_kind: count
@@ -139,6 +145,7 @@ categories:
     range: [5, 200]
     note: "1箱あたりの枚数の違いは考慮していません。"
   - id: water
+    search_word: 水
     name: 水
     emoji: "💧"
     unit_kind: volume
@@ -157,6 +164,7 @@ categories:
     range: [3, 60]
     note: "20歳未満の飲酒は法律で禁止されています。"
   - id: egg
+    search_word: 卵
     name: 卵
     emoji: "🥚"
     unit_kind: count

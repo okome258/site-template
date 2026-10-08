@@ -36,6 +36,14 @@
       <div><dt>1{{ cat.unit }}あたり</dt><dd>{{ it.unit_price | yen }}</dd></div>
     </dl>
     <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ it.portal or '楽天ふるさと納税' }}で見る</a>
+    {% set q = (it.town or it.shop) ~ " " ~ (cat.search_word or cat.name) %}
+    <div class="others">
+      <span>同じ自治体を他サイトで探す</span>
+      <a href="https://www.satofull.jp/products/list.php?mode=search&q={{ q | urlencode }}" target="_blank" rel="noopener">さとふる</a>
+      <a href="https://www.furusato-tax.jp/search?q={{ q | urlencode }}" target="_blank" rel="noopener">ふるさとチョイス</a>
+      <a href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="noopener">ふるなび</a>
+      <a href="https://shopping.yahoo.co.jp/search?p={{ ('ふるさと納税 ' ~ q) | urlencode }}" target="_blank" rel="noopener">Yahoo!</a>
+    </div>
   </li>
 {% endfor %}
 </ol>

@@ -7,7 +7,15 @@ import re
 from core.qty import parse_quantity
 from core.rakuten import Rakuten, RakutenError
 
-FURUSATO_SHOP = re.compile(r"^f\d{6}")  # 楽天ふるさと納税の自治体ショップ(f + 自治体コード)
+FURUSATO_SHOP = re.compile(r"^f\d{6}")
+PREF = re.compile(r"^(北海道|東京都|京都府|大阪府|.{2,3}県)")
+
+
+def _town(shop: str) -> str:
+    """ショップ名「福井県小浜市」→「小浜市」(他サイト検索用)。形が違えばそのまま。"""
+    s = re.sub(r"[\(（].*$", "", shop).strip()
+    s2 = PREF.sub("", s)
+    return s2 if re.search(r"[市町村区]$", s2) else s  # 楽天ふるさと納税の自治体ショップ(f + 自治体コード)
 
 
 def _image(it: dict) -> str:
@@ -62,6 +70,7 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
             "shop": it.get("shopName", ""),
             "url": it.get("affiliateUrl") or it.get("itemUrl", ""),
             "portal": "楽天ふるさと納税",
+            "town": _town(it.get("shopName", "")),
             "image": _image(it),
             "review_avg": it.get("reviewAverage") or 0,
             "review_count": it.get("reviewCount") or 0,
