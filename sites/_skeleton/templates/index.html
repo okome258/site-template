@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ site.name }}</h1>
+<p class="lead">{{ site.description }}</p>
+<ul>
+{% for it in data["items"] %}
+  <li><a href="{{ it.url }}" target="_blank" rel="sponsored noopener">{{ it.name }}</a> {{ it.price | yen }} <span class="pr">PR</span></li>
+{% endfor %}
+</ul>
+{% endblock %}

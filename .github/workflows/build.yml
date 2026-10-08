@@ -1,0 +1,62 @@
+name: 毎日のサイト更新
+
+on:
+  schedule:
+    - cron: "10 20 * * *"   # 毎日 5:10 JST(UTC 20:10)
+  push:
+    branches: [main]
+    paths-ignore: ["sites/*/public/**", "sites/*/data/**", "**.md"]
+  workflow_dispatch:
+    inputs:
+      site:
+        description: "サイト名(空なら全サイト)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      - name: テスト
+        run: python -m pytest -q
+      - name: サイトを生成
+        id: build
+        continue-on-error: true   # 1サイト失敗しても他サイトの更新はコミットする
+        env:
+          RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          SITE: ${{ inputs.site }}
+        run: |
+          if [ -n "$SITE" ]; then
+            python -m core.build "$SITE"
+          else
+            python -m core.build --all
+          fi
+      - name: 変更があればコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sites/*/public sites/*/data
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "サイト自動更新 $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+            git push
+          fi
+      - name: 生成に失敗したサイトがあれば赤にする
+        if: steps.build.outcome == 'failure'
+        run: exit 1

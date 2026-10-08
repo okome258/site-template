@@ -1,0 +1,89 @@
+site:
+  name: "ふるさと納税 量コスパ比較"
+  tagline: "寄付1万円あたり、どれだけ届く？"
+  description: "楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。"
+  base_url: "https://furusato-kosupa.okomen.workers.dev"
+  theme_color: "#1f6f5c"
+  cf_analytics_token: ""   # Cloudflare Web Analytics のトークンを入れると計測開始
+  operator: "ふるさと納税 量コスパ比較"
+
+# 取得設定(1カテゴリ = キーワード数 × sorts × pages 回 API を呼ぶ。1秒1回)
+fetch:
+  pages: 2
+  hits: 30
+  sorts: ["standard", "-reviewCount"]
+  min_price: 5000
+  max_price: 100000
+  ng_keyword: "定期便"     # 定期便は寄付額と1回分の量が対応しないので除外
+  top_n: 30
+
+# unit_kind: weight(kg) / volume(L) / count(count_units の個数)
+# range: 1件あたりの総量として妥当な範囲(外れたら読み違いとして捨てる)
+categories:
+  - id: rice
+    name: お米
+    emoji: "🍚"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 米 精米", "ふるさと納税 無洗米"]
+    exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
+    range: [2, 60]
+  - id: pork
+    name: 豚肉
+    emoji: "🐖"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 豚肉 小間切れ", "ふるさと納税 豚肉 切り落とし"]
+    exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ"]
+    range: [0.5, 15]
+  - id: beef
+    name: 牛肉
+    emoji: "🐄"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 牛肉 切り落とし", "ふるさと納税 牛肉 小間切れ"]
+    exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン"]
+    range: [0.3, 10]
+  - id: chicken
+    name: 鶏肉
+    emoji: "🐔"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 鶏肉 もも", "ふるさと納税 鶏むね肉"]
+    exclude: ["唐揚げ", "からあげ", "チキン南蛮", "焼き鳥", "焼鳥", "ハム", "サラダチキン", "つくね"]
+    range: [1, 20]
+  - id: seafood
+    name: エビ・ホタテ
+    emoji: "🦐"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 ホタテ 冷凍", "ふるさと納税 えび 冷凍"]
+    exclude: ["フライ", "グラタン", "干し", "乾燥", "缶詰", "食べ比べ", "詰め合わせ"]
+    range: [0.3, 10]
+  - id: toilet
+    name: トイレットペーパー
+    emoji: "🧻"
+    unit_kind: count
+    count_units: ["ロール"]
+    unit: ロール
+    keywords: ["ふるさと納税 トイレットペーパー"]
+    exclude: ["ティッシュ", "キッチンペーパー", "ペーパータオル"]
+    range: [12, 300]
+    note: "シングル/ダブル・長さ(倍巻き)の違いは考慮していません。"
+  - id: water
+    name: 水
+    emoji: "💧"
+    unit_kind: volume
+    unit: L
+    keywords: ["ふるさと納税 水 2L", "ふるさと納税 天然水"]
+    exclude: ["炭酸", "ウォーターサーバー", "お茶", "ジュース", "サーバー"]
+    range: [6, 200]
+  - id: egg
+    name: 卵
+    emoji: "🥚"
+    unit_kind: count
+    count_units: ["個", "玉"]
+    unit: 個
+    keywords: ["ふるさと納税 卵", "ふるさと納税 たまご"]
+    exclude: ["プリン", "カステラ", "燻製", "ピータン", "うずら", "マヨネーズ", "卵焼き"]
+    range: [10, 400]

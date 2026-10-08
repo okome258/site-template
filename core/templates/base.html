@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% set full_title = (page.title ~ "｜" ~ site.name) if page.title else site.name %}
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+{% if site.base_url %}<link rel="canonical" href="{{ page.url }}">{% endif %}
+<meta property="og:title" content="{{ full_title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:type" content="{{ 'website' if page.path == 'index.html' else 'article' }}">
+{% if site.base_url %}<meta property="og:url" content="{{ page.url }}">{% endif %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="{{ site.theme_color }}">
+<link rel="icon" href="{{ page.root }}favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ page.root }}base.css">
+<style>:root{--accent: {{ site.theme_color }};}</style>
+{% block head %}{% endblock %}
+</head>
+<body>
+{# ステマ規制対応: 全ページの先頭に広告表記 #}
+<div class="pr-bar" role="note"><span class="pr">PR</span>{{ site.pr_note }}</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="{{ page.root }}">{{ site.name }}</a>
+    {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
+  </div>
+  {% block nav %}{% endblock %}
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    {% block footer_extra %}{% endblock %}
+    <p class="small">{{ site.pr_note }}</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: {{ built_at | jdate }}</p>
+    {% if site.rakuten_credit | default(true) %}
+    <p class="small"><a href="https://developers.rakuten.com/" target="_blank" rel="noopener">Supported by Rakuten Developers</a></p>
+    {% endif %}
+    <p class="small">&copy; {{ built_at[:4] }} {{ site.operator or site.name }}</p>
+  </div>
+</footer>
+{# Cloudflare Web Analytics: config.yaml の site.cf_analytics_token を入れると有効 #}
+{% if site.cf_analytics_token %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cf_analytics_token }}"}'></script>
+{% endif %}
+</body>
+</html>

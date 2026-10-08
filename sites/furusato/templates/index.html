@@ -1,0 +1,31 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h1>ふるさと納税、量で選ぶならどれ？</h1>
+<p class="lead">楽天ふるさと納税の返礼品を<strong>寄付1万円あたりの量</strong>で毎日ランキング。{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新。{% endif %}</p>
+
+<div class="grid">
+{% for c in cats %}
+  {% set r = data.categories.get(c.id, {"items": []}) %}
+  <section class="card">
+    <h2 style="margin:0">{{ c.emoji }} {{ c.name }}</h2>
+    {% if r["items"] %}
+    <div class="small">1万円あたり最大 <strong style="color:var(--accent)">{{ r["items"][0].per10k | num(1 if c.unit_kind != 'count' else 0) }}{{ c.unit }}</strong></div>
+    <ol class="mini">
+      {% for it in r["items"][:3] %}
+      <li><span>{{ loop.index }}</span><span>{{ it.shop }}</span><span class="v">{{ it.per10k | num(1 if c.unit_kind != 'count' else 0) }}{{ c.unit }}</span></li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="small">集計中です。</p>
+    {% endif %}
+    <a class="more" href="{{ page.root }}c/{{ c.id }}/">{{ c.name }}のランキングを見る →</a>
+  </section>
+{% endfor %}
+</div>
+
+<h2>このランキングの見方</h2>
+<div class="note">
+  量 ÷ 寄付額 で「寄付1万円でどれだけ届くか」を出しています。味・品質・送料込みかどうかは比べていません。
+  商品名から量を読み取れないもの、「選べる容量」の商品、定期便は除いています。寄付前に必ずリンク先で内容量をご確認ください。
+</div>
+{% endblock %}

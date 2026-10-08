@@ -1,1 +1,56 @@
 # site-template
+
+自動更新サイトを量産するための共通テンプレート。Python + Jinja2 で静的HTMLを生成し、GitHub Actions で毎日更新、Cloudflare Workers(workers.dev)で公開する。
+
+| サイト | フォルダ | URL |
+|---|---|---|
+| ふるさと納税 量コスパ比較 | `sites/furusato` | https://furusato-kosupa.okomen.workers.dev |
+
+## しくみ
+
+```
+core/                 全サイト共通
+  build.py            ビルダー(データ取得 → Jinja2 → public/ 書き出し → sitemap.xml/robots.txt)
+  rakuten.py          楽天ウェブサービス(新API)クライアント。Referer=okomen.workers.dev を付ける
+  qty.py              商品名から内容量を読む(量コスパ系で共通)
+  templates/base.html PR表記・OGP・canonical・Cloudflare Web Analytics枠・フッター
+  static/             共通CSS・favicon
+sites/<slug>/         サイトごとの差分(ここだけ書けば新サイトになる)
+  config.yaml         サイト名・URL・Analyticsトークン + サイト固有の設定
+  fetch.py            fetch(cfg) でデータ取得 / pages(cfg, data) でページ一覧
+  templates/          base.html を継承したページ
+  wrangler.jsonc      Cloudflare Workers の設定(public/ を配信)
+  public/             生成物(Actionsがコミット → Cloudflareが自動デプロイ)
+  data/latest.json    最後に取れたデータ。取得失敗時はこれで生成するのでサイトが空にならない
+sites/_skeleton/      新サイトの雛形
+```
+
+毎日 5:10 JST に `.github/workflows/build.yml` が全サイトをビルドして `public/` をコミットする。Actions の「Run workflow」からサイト名を指定して手動実行もできる。
+
+## 新しいサイトを作る
+
+```
+python scripts/new_site.py <slug> "サイト名"   # sites/_skeleton をコピー
+# config.yaml / fetch.py / templates を書き換える
+python -m core.build <slug>                   # 楽天キーが必要。--offline で保存済みデータから生成
+```
+
+Cloudflare 側(サイトごとに1回):
+1. Workers & Pages → 作成 → 「Gitリポジトリをインポート」→ `okome258/site-template`
+2. プロジェクト名 = `wrangler.jsonc` の `name`(URL が `<name>.okomen.workers.dev` になる)
+3. ビルド設定: ルートディレクトリ `sites/<slug>`、ビルドコマンド空、デプロイコマンド `npx wrangler deploy`
+4. ビルドの監視パス(Build watch paths)に `sites/<slug>/*` を入れると、他サイトの更新で再デプロイされない
+5. Web Analytics でサイトを追加 → 表示された token を `config.yaml` の `cf_analytics_token` に入れる
+
+## 共通で入っているもの
+
+- 全ページ上部とリンクボタンに「PR」表記(ステマ規制対応)、フッターに広告の説明
+- `sitemap.xml` / `robots.txt` / `404.html` / canonical / OGP
+- Cloudflare Web Analytics(token を入れたときだけ読み込む)
+- 楽天のクレジット表記「Supported by Rakuten Developers」
+- 広告リンクは `rel="sponsored noopener"`
+
+## 秘密情報
+
+GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`。コードやファイルには書かない。
+楽天アプリの許可Webサイトは `okomen.workers.dev`。API 呼び出し時はこれを Referer/Origin に付ける(`site.rakuten_referer` で変更可)。

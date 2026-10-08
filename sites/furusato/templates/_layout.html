@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block nav %}
+<nav class="tabs" aria-label="カテゴリ">
+  <a href="{{ page.root }}" {% if page.path == 'index.html' %}class="on"{% endif %}>総合</a>
+  {% for c in cats %}
+  <a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}>{{ c.emoji }} {{ c.name }}</a>
+  {% endfor %}
+  <a href="{{ page.root }}about/" {% if page.path == 'about/index.html' %}class="on"{% endif %}>計算方法</a>
+</nav>
+{% endblock %}
+{% block footer_extra %}
+<p class="small">「1万円あたりの量」は商品名に書かれた内容量 ÷ 寄付額で機械的に計算しています。<a href="{{ page.root }}about/">計算方法</a></p>
+{% endblock %}

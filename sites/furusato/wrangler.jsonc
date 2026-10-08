@@ -1,0 +1,10 @@
+// Cloudflare Workers(静的アセットのみ)。Workers Builds で「ルートディレクトリ = sites/furusato」にする
+{
+  "name": "furusato-kosupa",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
