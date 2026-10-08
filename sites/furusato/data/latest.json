@@ -1674,21 +1674,6 @@
      "wakeari": false
     },
     {
-     "code": "f342041-mihara:10000846",
-     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉 皮無し3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ とりむねにく 鶏むね肉 むね肉 鶏 皮なし 小分け みはら 広島県産 神明鶏 012017",
-     "price": 17000,
-     "qty": 3.0,
-     "evidence": "3kg",
-     "per10k": 1.765,
-     "unit_price": 5667,
-     "shop": "広島県三原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110783%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000846%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f592cbbb26a6284704.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false
-    },
-    {
      "code": "f434841-tsunagi:10000055",
      "name": "鶏肉 若鶏 むね肉 約2kg × 1袋 2袋(1袋あたり約300g×7枚前後) たっぷり大満足！《30日以内に出荷予定(土日祝除く)》熊本県 葦北郡 津奈木町 訳あり SDGs 定期 でない",
      "price": 12100,
@@ -1837,12 +1822,27 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false
+    },
+    {
+     "code": "f072133-date:10000403",
+     "name": "福島県 伊達市産 伊達鶏むね肉 4kg ブランド鶏 銘柄鶏 惣菜 おつまみ グルメ チキン BBQ キャンプ バーベキューだてどり 高タンパク F20C-223",
+     "price": 31000,
+     "qty": 4.0,
+     "evidence": "4kg",
+     "per10k": 1.29,
+     "unit_price": 7750,
+     "shop": "福島県伊達市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t6ipo.ia330a0a.g00t6ipo.ia3314fa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff072133-date%2Ff20c-223%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff072133-date%2Fi%2F10000403%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f072133-date/cabinet/f20c-0200-0399/r_f20c_223_1.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false
     }
    ],
    "candidates": 166,
-   "ranked": 40,
+   "ranked": 41,
    "dropped": {
-    "対象外の商品": 75,
+    "対象外の商品": 74,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 1,
@@ -2302,12 +2302,12 @@
      "wakeari": false
     }
    ],
-   "candidates": 159,
+   "candidates": 160,
    "ranked": 46,
    "dropped": {
     "量なし": 9,
     "選択式": 72,
-    "対象外の商品": 25,
+    "対象外の商品": 26,
     "量が複数": 1,
     "量が範囲外": 6
    }
@@ -3583,5 +3583,5 @@
   }
  },
  "errors": [],
- "fetched_at": "2026-10-09T00:22+09:00"
+ "fetched_at": "2026-10-09T00:33+09:00"
 }
