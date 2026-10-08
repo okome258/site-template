@@ -4,6 +4,7 @@ site:
   description: "楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。"
   base_url: "https://furusato-kosupa.okomen.workers.dev"
   theme_color: "#1f6f5c"
+  google_site_verification: ""  # Search Console の確認タグの content の値
   cf_analytics_token: ""   # Cloudflare Web Analytics のトークンを入れると計測開始
   operator: "ふるさと納税 量コスパ比較"
 

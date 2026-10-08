@@ -18,6 +18,7 @@
 <link rel="icon" href="{{ page.root }}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ page.root }}base.css">
 <style>:root{--accent: {{ site.theme_color }};}</style>
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
 {% block head %}{% endblock %}
 </head>
 <body>

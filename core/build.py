@@ -38,7 +38,8 @@ SITE_DEFAULTS = {
     "lang": "ja",
     "description": "",
     "base_url": "",
-    "cf_analytics_token": "",  # Cloudflare Web Analytics のトークン(空なら読み込まない)
+    "cf_analytics_token": "",
+    "google_site_verification": "",  # Search Console の HTMLタグ確認用(content の値だけ)  # Cloudflare Web Analytics のトークン(空なら読み込まない)
     "pr_note": "当サイトはアフィリエイト広告（楽天アフィリエイト等）を利用しています。リンク先での購入・寄付により当サイトに収益が発生する場合があります。",
     "pr_short": "本ページは広告（アフィリエイト）を含みます",  # 全ページ上部の短い表記。詳細はフッターの pr_note
     "operator": "",
