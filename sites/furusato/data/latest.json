@@ -1378,11 +1378,11 @@
     }
    ],
    "candidates": 149,
-   "ranked": 62,
+   "ranked": 61,
    "dropped": {
     "対象外の商品": 36,
     "選択式": 43,
-    "量が複数": 6,
+    "量が複数": 7,
     "量なし": 2
    }
   },
@@ -2768,11 +2768,11 @@
    "candidates": 140,
    "ranked": 35,
    "dropped": {
-    "選択式": 40,
-    "対象外の商品": 51,
+    "選択式": 41,
+    "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 5
    }
   },
   "crab": {
@@ -3255,21 +3255,6 @@
      "wakeari": false
     },
     {
-     "code": "f012238-nemuro:10005441",
-     "name": "秋鮭いくら醤油漬け 80g × 4P ・ 100g × 3P イクラ 醤油 醤油漬 魚卵 鮭卵 お取り寄せ グルメ 海鮮 サケ さけ しゃけ シャケ 北海道 根室市 ふるさと納税",
-     "price": 31000,
-     "qty": 320.0,
-     "evidence": "80g×4",
-     "per10k": 103.226,
-     "unit_price": 97,
-     "shop": "北海道根室市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tif2o.ia330f2c.g00tif2o.ia33195b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012238-nemuro%2F10005441%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012238-nemuro%2Fi%2F10005441%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012238-nemuro/cabinet/kinenhin/r01/24/a-24011_r.jpg?_ex=240x240",
-     "review_avg": 4.6,
-     "review_count": 5,
-     "wakeari": false
-    },
-    {
      "code": "f012238-nemuro:10003630",
      "name": "秋鮭いくら 100g × 6P ( 計 600g ) イクラ 醤油 醤油漬 醤油漬け 魚卵 鮭卵 鮭 さけ サケ しゃけ シャケ 魚 さかな サカナ 秋鮭 秋ざけ 秋ザケ あきざけ アキザケ グルメ 海鮮小分け 北海道 根室市 D-24001",
      "price": 62000,
@@ -3346,11 +3331,11 @@
     }
    ],
    "candidates": 80,
-   "ranked": 7,
+   "ranked": 6,
    "dropped": {
     "選択式": 14,
     "対象外の商品": 57,
-    "量が複数": 1,
+    "量が複数": 2,
     "量なし": 1
    }
   },
@@ -5415,6 +5400,21 @@
      "wakeari": false
     },
     {
+     "code": "f222101-fuji:10000726",
+     "name": "猫砂 LOVEにゃんブルーでキャッチ 12L×5袋 紙砂 色が青に変わる しっかり固まる 燃えるゴミ 水洗トイレ使用不可 消臭 ニャン 猫 ネコ ねこ まとめ買い ペット用 消耗 衛生 防災 備蓄 日本製 国産 SDGs サノテック 静岡 富士市 [sf024-019]",
+     "price": 20000,
+     "qty": 60.0,
+     "evidence": "12L×5",
+     "per10k": 30.0,
+     "unit_price": 333,
+     "shop": "静岡県富士市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3yio.ia330d9c.g00t3yio.ia331f8c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222101-fuji%2F1431%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222101-fuji%2Fi%2F10000726%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222101-fuji/cabinet/024/10516565/sf024-019-s-r.jpg?_ex=240x240",
+     "review_avg": 2.5,
+     "review_count": 2,
+     "wakeari": false
+    },
+    {
      "code": "f434281-takamori:10000593",
      "name": "い・ろ・は・す 阿蘇の天然水 2L 計12本 2L×6本×2ケース いろはす 水 箱 飲料水 天然水 軟水 ミネラルウォーター コカ・コーラ ドリンク ペットボトル 阿蘇 熊本県 送料無料",
      "price": 9000,
@@ -5803,25 +5803,10 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false
-    },
-    {
-     "code": "f382141-seiyo:10000027",
-     "name": "＜四国カルスト天然水ぞっこん 2L×6本 計12L＞飲料 水 みず 中硬水 弱アルカリイオン水 ペットボトル ウォーター バナジウム 備蓄 防災 非常用 キャンプ アウトドア 国産 特産品 ぞっこん四国 愛媛県 西予市【常温】『最短10営業日以内に順次発送予定』",
-     "price": 8000,
-     "qty": 12.0,
-     "evidence": "計12L",
-     "per10k": 15.0,
-     "unit_price": 667,
-     "shop": "愛媛県西予市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00te1oo.ia3309ab.g00te1oo.ia3315d8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff382141-seiyo%2F0025_zk%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff382141-seiyo%2Fi%2F10000027%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f382141-seiyo/cabinet/zk/0025_zk_01_s10.jpg?_ex=240x240",
-     "review_avg": 4.0,
-     "review_count": 1,
-     "wakeari": false
     }
    ],
-   "candidates": 164,
-   "ranked": 58,
+   "candidates": 165,
+   "ranked": 59,
    "dropped": {
     "選択式": 63,
     "量が範囲外": 21,
@@ -6518,5 +6503,5 @@
   }
  },
  "errors": [],
- "fetched_at": "2026-10-09T00:51+09:00"
+ "fetched_at": "2026-10-09T00:54+09:00"
 }
