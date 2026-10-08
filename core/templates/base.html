@@ -22,14 +22,14 @@
 </head>
 <body>
 {# ステマ規制対応: 全ページの先頭に広告表記 #}
-<div class="pr-bar" role="note"><span class="pr">PR</span>{{ site.pr_note }}</div>
+<div class="pr-bar" role="note"><span class="pr">PR</span>{{ site.pr_short }}</div>
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="{{ page.root }}">{{ site.name }}</a>
     {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
   </div>
-  {% block nav %}{% endblock %}
 </header>
+{% block nav %}{% endblock %}
 <main class="wrap">
 {% block content %}{% endblock %}
 </main>
@@ -44,6 +44,7 @@
     <p class="small">&copy; {{ built_at[:4] }} {{ site.operator or site.name }}</p>
   </div>
 </footer>
+<script>/* 選択中のタブが画面外なら見える位置へ */try{var o=document.querySelector('.tabs .on');if(o)o.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}</script>
 {# Cloudflare Web Analytics: config.yaml の site.cf_analytics_token を入れると有効 #}
 {% if site.cf_analytics_token %}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cf_analytics_token }}"}'></script>

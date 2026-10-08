@@ -2,31 +2,32 @@
 {% set d = 1 if cat.unit_kind != 'count' else 0 %}
 {% block content %}
 <h1>{{ cat.emoji }} {{ cat.name }}の量コスパランキング</h1>
-<p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順。{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新・{% endif %}{{ rank.ranked or 0 }}件を比較。</p>
+<p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順・{{ rank.ranked or 0 }}件を比較<br><span class="small">{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新{% endif %}</span></p>
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
 
 {% if rank["items"] %}
 <ol class="rank-list">
 {% for it in rank["items"] %}
   <li class="rank-item">
-    <div class="rank-no">{{ loop.index }}</div>
-    <a href="{{ it.url }}" target="_blank" rel="sponsored noopener">
-      {% if it.image %}<img class="rank-img" src="{{ it.image }}" alt="" loading="lazy" width="110" height="110">{% else %}<div class="rank-img"></div>{% endif %}
-    </a>
-    <div class="rank-body">
-      <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }} <small>/ 1万円</small></div>
-      <p class="rank-name">{{ it.name }}</p>
-      <div class="stats">
-        <span>寄付額 <strong>{{ it.price | yen }}</strong></span>
-        <span>量 <strong>{{ "%g" | format(it.qty) }}{{ cat.unit }}</strong></span>
-        <span>1{{ cat.unit }}あたり {{ it.unit_price | yen }}</span>
+    <div class="rank-top">
+      <a class="rank-thumb" href="{{ it.url }}" target="_blank" rel="sponsored noopener">
+        {% if it.image %}<img class="rank-img" src="{{ it.image }}" alt="" loading="lazy" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}
+        <span class="rank-no">{{ loop.index }}</span>
+      </a>
+      <div class="rank-body">
+        <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small></div>
+        <p class="rank-name">{{ it.name }}</p>
+        <div class="rank-meta">
+          {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}{{ it.shop }}{% if it.review_count %} ・ ★{{ it.review_avg }}（{{ it.review_count | num }}）{% endif %}
+        </div>
       </div>
-      <div class="rank-meta">
-        {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}
-        {{ it.shop }}{% if it.review_count %} ・ ★{{ it.review_avg }}（{{ it.review_count | num }}件）{% endif %}
-      </div>
-      <div style="margin-top:8px"><a class="btn" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天で見る</a></div>
     </div>
+    <dl class="stats">
+      <div><dt>寄付額</dt><dd>{{ it.price | yen }}</dd></div>
+      <div><dt>内容量</dt><dd>{{ "%g" | format(it.qty) }}{{ cat.unit }}</dd></div>
+      <div><dt>1{{ cat.unit }}あたり</dt><dd>{{ it.unit_price | yen }}</dd></div>
+    </dl>
+    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天で詳細を見る</a>
   </li>
 {% endfor %}
 </ol>
