@@ -4,7 +4,7 @@
 
 | サイト | フォルダ | URL |
 |---|---|---|
-| ふるさと納税 量コスパ比較 | `sites/furusato` | https://furusato-kosupa.okomen.workers.dev |
+| ふるさと納税 量コスパ比較 | `sites/furusato` | https://furusato.otokuest.com |
 
 ## しくみ
 
@@ -37,10 +37,11 @@ python -m core.build <slug>                   # 楽天キーが必要。--offlin
 
 Cloudflare 側(サイトごとに1回):
 1. Workers & Pages → 作成 → 「Gitリポジトリをインポート」→ `okome258/site-template`
-2. プロジェクト名 = `wrangler.jsonc` の `name`(URL が `<name>.okomen.workers.dev` になる)
+2. プロジェクト名 = `wrangler.jsonc` の `name`
 3. ビルド設定: ルートディレクトリ `sites/<slug>`、ビルドコマンド空、デプロイコマンド `npx wrangler deploy`
 4. ビルドの監視パス(Build watch paths)に `sites/<slug>/*` を入れると、他サイトの更新で再デプロイされない
-5. Web Analytics でサイトを追加 → 表示された token を `config.yaml` の `cf_analytics_token` に入れる
+5. 設定 → ドメインとルート → カスタムドメインで `<slug>.otokuest.com` を追加し、`wrangler.jsonc` の `CANONICAL_HOST` と `config.yaml` の `base_url` をそれに合わせる
+6. Web Analytics でサイトを追加 → 表示された token を `config.yaml` の `cf_analytics_token` に入れる
 
 ## 共通で入っているもの
 
@@ -53,7 +54,7 @@ Cloudflare 側(サイトごとに1回):
 ## 秘密情報
 
 GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`。コードやファイルには書かない。
-楽天アプリの許可Webサイトは `okomen.workers.dev`。API 呼び出し時はこれを Referer/Origin に付ける(`site.rakuten_referer` で変更可)。
+屋号ドメインは `otokuest.com`(Cloudflare Registrar)。各サイトはサブドメイン。楽天アプリの許可Webサイトは `okomen.workers.dev`(API の Referer 用。サイトの公開URLとは別でよい)。API 呼び出し時はこれを Referer/Origin に付ける(`site.rakuten_referer` で変更可)。
 
 ## ふるさと納税サイトのキャラクター
 

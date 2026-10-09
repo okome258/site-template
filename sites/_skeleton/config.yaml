@@ -3,7 +3,7 @@ site:
   name: "__NAME__"
   tagline: "ひとことで何のサイトか"
   description: "検索結果に出る説明文(120字くらい)"
-  base_url: "https://__SLUG__.okomen.workers.dev"
+  base_url: "https://__SLUG__.otokuest.com"
   theme_color: "#1f6f5c"
   cf_analytics_token: ""   # Cloudflare Web Analytics のトークン(空なら無効)
   # pr_note: "広告表記を変えたいときだけ書く"

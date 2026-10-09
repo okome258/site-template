@@ -6,7 +6,7 @@ site:
   apple_touch_icon: "apple-touch-icon.png"
   og_image: "ogp.png"   # SNSでシェアされた時の画像(static/ に置く)
   description: "楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。"
-  base_url: "https://furusato-kosupa.okomen.workers.dev"
+  base_url: "https://furusato.otokuest.com"
   theme_color: "#b23a2a"   # 紅(紅白でおめでたい)
   google_site_verification: "SC7yeTNVBtuerKfU-OZfA9tPcD6pXcqacd6m4AzjHY8"  # Search Console
   cf_analytics_token: "51a79abed12a41eea0d2cb216a642808"   # Cloudflare Web Analytics

@@ -1,9 +1,14 @@
-// Cloudflare Workers(静的アセットのみ)。Workers Builds で「ルートディレクトリ = sites/furusato」にする
+// Cloudflare Workers。Workers Builds で「ルートディレクトリ = sites/furusato」
+// 正式URL: https://furusato.otokuest.com (旧 furusato-kosupa.okomen.workers.dev は worker.js で301転送)
 {
   "name": "furusato-kosupa",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
+  "vars": { "CANONICAL_HOST": "furusato.otokuest.com" },
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   }
