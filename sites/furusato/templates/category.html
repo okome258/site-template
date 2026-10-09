@@ -4,15 +4,15 @@
 <script type="application/ld+json">{{ jsonld | tojson }}</script>
 {% endblock %}
 {% block content %}
-<h1>{{ cat.emoji }} {{ cat.name }}の量コスパランキング</h1>
-<p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順・{{ rank.ranked or 0 }}件を比較<br><span class="small">{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新{% endif %}</span></p>
+<h1>{{ cat.name }}の量コスパランキング</h1>
+<p class="lead">楽天ふるさと納税の{{ cat.name }}{{ rank.ranked or 0 }}件を、寄付1万円あたりの量（{{ cat.unit }}）が多い順に並べています。</p>
 {% set s = rank.summary or {} %}
 {% if s %}
-<section class="market" aria-label="相場">
-  <div><span>相場（中央値）</span><strong>{{ s.median_per10k | num(d) }}{{ cat.unit }}</strong><small>/ 1万円</small></div>
-  <div><span>1{{ cat.unit }}あたり寄付額</span><strong>{{ s.min_unit_price | yen }}〜{{ s.max_unit_price | yen }}</strong><small>中央値 {{ s.median_unit_price | yen }}</small></div>
-  <div><span>比較した返礼品</span><strong>{{ rank.ranked }}件</strong><small>{{ s.towns }}自治体</small></div>
-</section>
+<dl class="market" aria-label="相場">
+  <div><dt>相場（中央値）</dt><dd>{{ s.median_per10k | num(d) }}{{ cat.unit }}<small>/1万円</small></dd></div>
+  <div><dt>1{{ cat.unit }}あたりの寄付額</dt><dd>{{ s.min_unit_price | yen }}〜{{ s.max_unit_price | yen }}</dd></div>
+  <div><dt>比較した返礼品</dt><dd>{{ rank.ranked }}件<small>{{ s.towns }}自治体</small></dd></div>
+</dl>
 {% endif %}
 {% if rank["items"] %}{% set t1 = rank["items"][0] %}
 <p class="summary">
@@ -27,7 +27,8 @@
 {% if rank["items"] %}
 <ol class="rank-list">
 {% for it in rank["items"] %}
-  <li class="rank-item">
+  <li class="rank-item{% if loop.first %} first{% endif %}">
+    {% if loop.first %}<p class="pick-say"><img src="{{ page.root }}fukura-face.svg" alt="" width="28" height="28">いちばん量が多いのはこれチュン</p>{% endif %}
     <div class="rank-top">
       <a class="rank-thumb" href="{{ it.url }}" target="_blank" rel="sponsored noopener">
         {% if it.image %}<img class="rank-img" src="{{ it.image }}" alt="" loading="lazy" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}
@@ -37,7 +38,7 @@
         <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small>{% if it.vs_median %} <span class="vs {{ 'up' if it.vs_median >= 1 else 'down' }}">相場の{{ "%.1f" | format(it.vs_median) }}倍</span>{% endif %}</div>
         <p class="rank-name">{{ it.name }}</p>
         <div class="rank-meta">
-          {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}{{ it.shop }}{% if it.review_count %} ・ ★{{ it.review_avg }}（{{ it.review_count | num }}）{% endif %}
+          {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}<span>{{ it.shop }}</span>{% if it.review_count %}<span>★{{ it.review_avg }}（{{ it.review_count | num }}件）</span>{% endif %}
         </div>
       </div>
     </div>

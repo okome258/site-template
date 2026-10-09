@@ -1,41 +1,48 @@
 {% extends "_layout.html" %}
 {% block content %}
-<h1>ふるさと納税、量で選ぶならどれ？</h1>
-<p class="lead">楽天ふるさと納税の返礼品を<strong>寄付1万円あたりの量</strong>で毎日ランキング。{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新。{% endif %}</p>
+<section class="hero">
+  <img class="hero-bird" src="{{ page.root }}fukura.svg" alt="ふくら雀のふくすけ" width="170" height="153">
+  <div>
+    <h1>寄付1万円で、<br class="sp">いちばん多く届く返礼品は？</h1>
+    <p class="lead">楽天ふるさと納税の返礼品を、内容量 ÷ 寄付額で毎日ランキングしています。{{ cats | length }}カテゴリ。</p>
+    <p class="say">量で選ぶなら、まかせてチュン。</p>
+  </div>
+</section>
 
-<a class="sim-banner" href="{{ page.root }}simulator/"><span>🧮</span><span><b>いくらまで寄付できる？</b><br>年収を入れるだけ・控除上限額シミュレーター</span><span>→</span></a>
+<a class="sim-banner" href="{{ page.root }}simulator/">
+  <b>いくらまで寄付できる？</b>
+  <span>年収と家族構成を入れるだけで、控除上限額の目安と、その金額で選べる量コスパ1位が分かります</span>
+</a>
 
-<div class="grid">
-{% for c in cats %}
-  {% set r = data.categories.get(c.id, {"items": []}) %}
-  <section class="card">
-    <h2 style="margin:0">{{ c.emoji }} {{ c.name }}</h2>
-    {% if r["items"] %}
-    <div class="small">1万円あたり最大 <strong style="color:var(--accent)">{{ r["items"][0].per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}</strong></div>
-    <ol class="mini">
-      {% for it in r["items"][:3] %}
-      <li><span>{{ loop.index }}</span><span>{{ it.shop }}</span><span class="v">{{ it.per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}</span></li>
-      {% endfor %}
-    </ol>
-    {% else %}
-    <p class="small">集計中です。</p>
-    {% endif %}
-    <a class="more" href="{{ page.root }}c/{{ c.id }}/">ランキングを見る →</a>
-  </section>
-{% endfor %}
-</div>
+<h2 class="h-board">カテゴリ別の1位</h2>
+<table class="board">
+  <thead><tr><th>カテゴリ</th><th class="num">1万円あたり</th><th class="hide-sp">1位の自治体</th><th class="num hide-sp">相場との差</th></tr></thead>
+  <tbody>
+  {% for c in cats %}
+    {% set r = data.categories.get(c.id, {}) %}
+    {% set t1 = r["items"][0] if r.get("items") else None %}
+    <tr>
+      <th scope="row"><a href="{{ page.root }}c/{{ c.id }}/">{{ c.name }}</a></th>
+      <td class="num v">{{ best(c) or "集計中" }}</td>
+      <td class="hide-sp">{{ (t1.town or t1.shop) if t1 else "" }}</td>
+      <td class="num hide-sp">{% if t1 and t1.vs_median %}{{ "%.1f" | format(t1.vs_median) }}倍{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p class="small">「相場との差」は、そのカテゴリで比べた返礼品の中央値に対して、1位が何倍の量か。</p>
 
 {% set rl = data.ranking_links or {} %}
 <section class="popular">
   <h2>量ではなく「人気」で選ぶなら</h2>
-  <p class="small">寄付件数ベースの通常ランキングは、各ポータルの公式ページで見られます。</p>
+  <p class="small">寄付件数をもとにした通常のランキングは、各ポータルの公式ページで見られます。</p>
   <div class="pop-main">
     <a class="btn" href="{{ rl._total or 'https://event.rakuten.co.jp/furusato/ranking/' }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天ふるさと納税 総合ランキング</a>
     <a class="btn" href="https://www.satofull.jp/products/ranking.php" target="_blank" rel="noopener">さとふる 人気ランキング</a>
   </div>
   <div class="pop-genres">
+    <span class="small">楽天のジャンル別<span class="pr">PR</span></span>
     {% for slug, label in genres %}<a href="{{ rl['g_' ~ slug] or ('https://event.rakuten.co.jp/furusato/ranking/' ~ slug ~ '/') }}" target="_blank" rel="sponsored noopener">{{ label }}</a>{% endfor %}
-    <span class="small">（楽天・ジャンル別 <span class="pr">PR</span>）</span>
   </div>
 </section>
 

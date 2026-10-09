@@ -45,6 +45,8 @@ SITE_DEFAULTS = {
     "operator": "",
     "rakuten_referer": "https://okomen.workers.dev/",
     "theme_color": "#1f6f5c",
+    # Google Fonts の family 指定(css2?以降)。例: "family=Zen+Maru+Gothic:wght@700;900"
+    "fonts": "family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@700;900",
 }
 
 

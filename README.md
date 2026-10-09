@@ -54,3 +54,7 @@ Cloudflare 側(サイトごとに1回):
 
 GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`。コードやファイルには書かない。
 楽天アプリの許可Webサイトは `okomen.workers.dev`。API 呼び出し時はこれを Referer/Origin に付ける(`site.rakuten_referer` で変更可)。
+
+## ふるさと納税サイトのキャラクター
+
+マスコット「ふくすけ」(ふくら雀。福がふくらむ縁起物)。`sites/furusato/static/fukura.svg`(全身)と `fukura-face.svg`(顔・ロゴ/ファビコン用)。オリジナルなので自由に使える。

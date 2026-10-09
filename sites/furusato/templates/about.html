@@ -16,7 +16,7 @@
 
   <h2>対象カテゴリ</h2>
   <ul>
-    {% for c in cats %}<li>{{ c.emoji }} {{ c.name }}（単位: {{ c.unit }}）{% if c.note %} — {{ c.note }}{% endif %}</li>{% endfor %}
+    {% for c in cats %}<li>{{ c.name }}（単位: {{ c.unit }}）{% if c.note %} — {{ c.note }}{% endif %}</li>{% endfor %}
   </ul>
 
   <h2>注意</h2>

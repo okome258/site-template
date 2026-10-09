@@ -16,7 +16,9 @@
 {% if site.og_image and site.base_url %}<meta property="og:image" content="{{ site.base_url }}/{{ site.og_image }}">
 <meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
 <meta name="theme-color" content="{{ site.theme_color }}">
-<link rel="icon" href="{{ page.root }}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{{ page.root }}{{ site.favicon or 'favicon.svg' }}" type="image/svg+xml">
+{% if site.fonts %}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ site.fonts }}&display=swap">{% endif %}
 <link rel="stylesheet" href="{{ page.root }}base.css">
 <style>:root{--accent: {{ site.theme_color }};}</style>
 {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
@@ -27,16 +29,19 @@
 <div class="pr-bar" role="note"><span class="pr">PR</span>{{ site.pr_short }}</div>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="{{ page.root }}">{% if site.logo_mark %}<span class="logo-mark" aria-hidden="true">{{ site.logo_mark }}</span>{% endif %}{{ site.name }}</a>
+    <a class="logo" href="{{ page.root }}">{% if site.logo_img %}<img class="logo-img" src="{{ page.root }}{{ site.logo_img }}" alt="" width="44" height="44">{% elif site.logo_mark %}<span class="logo-mark" aria-hidden="true">{{ site.logo_mark }}</span>{% endif %}<span class="logo-text">{{ site.name }}</span></a>
     {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
     {% set upd = data.fetched_at if (data and data.fetched_at) else built_at %}
-    <span class="updated" data-ts="{{ upd }}">🕒 <b>{{ upd | jdate("%Y/%m/%d %H:%M") }}</b> 更新<span class="ago"></span></span>
+    <span class="updated" data-ts="{{ upd }}"><b>{{ upd | jdate("%Y/%m/%d %H:%M") }}</b> 更新<span class="ago"></span></span>
   </div>
 </header>
 {% block nav %}{% endblock %}
-<main class="wrap">
+<div class="wrap layout">
+{% block side %}{% endblock %}
+<main>
 {% block content %}{% endblock %}
 </main>
+</div>
 <footer class="site-footer">
   <div class="wrap">
     {% block footer_extra %}{% endblock %}

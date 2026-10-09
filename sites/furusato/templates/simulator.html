@@ -3,7 +3,7 @@
 <script type="application/ld+json">{{ faq | tojson }}</script>
 {% endblock %}
 {% block content %}
-<h1>ふるさと納税 控除上限額シミュレーター【{{ tax_year }}年（令和{{ tax_year - 2018 }}年）版】</h1>
+<h1>ふるさと納税 控除上限額シミュレーター<span class="h1-sub">{{ tax_year }}年（令和{{ tax_year - 2018 }}年）の税制に対応</span></h1>
 {% if tax_year > table_year %}<p class="note">※{{ tax_year }}年分の税制改正の反映を確認中です。現在は{{ table_year }}年分の税制で計算しています。</p>{% endif %}
 <p class="lead">年収と家族構成を入れると、自己負担2,000円で寄付できる上限額の目安がすぐ分かります。そのまま「上限内で一番量が多い返礼品」も表示します。</p>
 
@@ -32,6 +32,7 @@
 </form>
 
 <section class="result" aria-live="polite">
+  <img class="result-bird" src="{{ page.root }}fukura-face.svg" alt="" width="48" height="48">
   <div class="res-label">控除上限額の目安</div>
   <div class="res-num"><span id="lim">-</span><small>円</small></div>
   <div class="res-sub" id="sub"></div>
@@ -89,15 +90,15 @@
     var lim = shotokuwari>0 ? shotokuwari*0.2/(0.9-r*1.021)+2000 : 0;
     lim=Math.floor(lim/1000)*1000;
     $('lim').textContent = lim>2000 ? yen(lim) : '0';
-    $('sub').textContent = lim>2000 ? ('所得税率 '+Math.round(r*100)+'% ・ 住民税所得割 約'+yen(shotokuwari)+'円 で計算') : 'この条件では控除のメリットがほぼありません';
+    $('sub').textContent = lim>2000 ? ('所得税率 '+Math.round(r*100)+'%、住民税所得割 約'+yen(shotokuwari)+'円 で計算') : 'この条件では控除のメリットがほぼありません';
     var html='', shown=0;
     picks.forEach(function(c){
       var best=null; c.items.forEach(function(it){ if(it.price<=lim && (!best||it.per10k>best.per10k)) best=it; });
       if(!best||shown>=12) return; shown++;
-      html+='<section class="card pick"><div class="small">'+c.emoji+' '+c.name+'</div>'
+      html+='<section class="card pick"><div class="small">'+c.name+'</div>'
         +'<div class="rank-score">'+best.per10k_s+c.unit+'<small> / 1万円</small></div>'
         +'<p class="rank-name">'+best.name.replace(/[<>&]/g,'')+'</p>'
-        +'<div class="small">寄付 '+yen(best.price)+'円 ・ '+best.qty_s+c.unit+' ・ '+best.town+'</div>'
+        +'<div class="small">寄付 '+yen(best.price)+'円で'+best.qty_s+c.unit+'（'+best.town+'）</div>'
         +'<a class="btn btn-block" style="margin-top:8px" href="'+best.url+'" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天ふるさと納税で見る</a></section>';
     });
     $('picks').innerHTML = html || '<p class="small">上限内の返礼品がありません。</p>';
