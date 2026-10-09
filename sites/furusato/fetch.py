@@ -17,6 +17,8 @@ FURUSATO_SHOP = re.compile(r"^f\d{6}")
 PREF = re.compile(r"^(北海道|東京都|京都府|大阪府|.{2,3}県)")
 
 
+from core.japan import SLUGS, TILES, pref_of  # noqa: E402
+
 def _town(shop: str) -> str:
     """ショップ名「福井県小浜市」→「小浜市」(他サイト検索用)。形が違えばそのまま。"""
     s = re.sub(r"[\(（].*$", "", shop).strip()
@@ -194,6 +196,25 @@ def _season(cfg: dict, data: dict) -> dict | None:
     return None
 
 
+
+TOP_N_MAP = 10  # 地図で数える順位(各カテゴリの上位何位まで)
+
+
+def _by_pref(data: dict, cats: list) -> dict:
+    """都道府県 → そのカテゴリで最上位の返礼品の一覧(順位つき)"""
+    out: dict[str, list] = {}
+    for c in cats:
+        seen = set()
+        for i, it in enumerate(data["categories"].get(c["id"], {}).get("items", [])):
+            p = pref_of(it.get("shop"))
+            if p and p not in seen:
+                seen.add(p)
+                out.setdefault(p, []).append({"cat": c, "it": it, "rank": i + 1})
+    for rows in out.values():
+        rows.sort(key=lambda r: (r["rank"], -r["it"].get("vs_median", 0) or 0))
+    return out
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     allc = cfg["categories"]
     byid = {c["id"]: c for c in allc}
@@ -208,7 +229,10 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     season = _season(cfg, data)
     if season:
         season = {**season, "cats": [byid[i] for i in season["cats"] if i in byid]}
-    nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season}
+    bp = _by_pref(data, cats)
+    pref_counts = {p: sum(1 for r in rows if r["rank"] <= TOP_N_MAP) for p, rows in bp.items()}
+    nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
+           "pref_counts": pref_counts, "top_n_map": TOP_N_MAP}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
            "title": f"ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
     for c in cats:
@@ -237,6 +261,16 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     ps.append({"path": "other/index.html", "template": "other.html", "title": "その他のカテゴリ",
                "description": "日用品・果物・麺・飲み物など、定番以外のふるさと納税の返礼品も寄付1万円あたりの量で比較。",
                "context": {"cats": cats, "nav": nav}})
+    for p in TILES:
+        n = pref_counts.get(p, 0)
+        if not n:
+            continue
+        rows = [r for r in bp[p] if r["rank"] <= TOP_N_MAP]
+        names = "・".join(dict.fromkeys(r["cat"]["name"] for r in rows[:5]))
+        ps.append({"path": f"pref/{SLUGS[p]}/index.html", "template": "pref.html",
+                   "title": f"{p}のふるさと納税 量コスパ返礼品【{_ym(data)}】",
+                   "description": f"楽天ふるさと納税で{p}の返礼品が量コスパ上位{TOP_N_MAP}位に入ったカテゴリは{n}つ({names}など)。寄付1万円あたりの量で毎日自動ランキング。",
+                   "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows}})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats, "nav": nav}, "changefreq": "monthly"})
     return ps

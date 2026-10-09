@@ -240,3 +240,27 @@ br.sp { display: inline; }
 .jp-mini { width: 52px; height: 48px; flex: none; margin-right: 6px; color: #d8cab0; }
 .jp-mini .on { fill: var(--accent); stroke: var(--accent); stroke-width: 3; }
 .loc { display: inline-flex; align-items: center; }
+/* 大きい日本地図(都道府県ページへのリンク) */
+.map-box { margin: 10px 0 18px; }
+.jp-big { width: 100%; max-width: 520px; height: auto; display: block; margin: 0 auto; }
+.jp-big text { text-anchor: middle; font-family: var(--head); font-weight: 700; fill: #6b5d4a; pointer-events: none; }
+.jp-big rect { fill: #eee6d8; }
+.jp-big .lv1 rect, .lv.lv1 { fill: #f6d6cb; background: #f6d6cb; }
+.jp-big .lv2 rect, .lv.lv2 { fill: #eaa794; background: #eaa794; }
+.jp-big .lv3 rect, .lv.lv3 { fill: #d4705a; background: #d4705a; }
+.jp-big .lv4 rect, .lv.lv4 { fill: var(--accent); background: var(--accent); }
+.jp-big .lv3 text, .jp-big .lv4 text { fill: #fff; }
+.jp-big a:hover rect, .jp-big .cur rect { stroke: var(--ink); stroke-width: 1; }
+.map-legend { text-align: center; }
+.lv { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-left: 6px; }
+.pref-head { display: flex; gap: 10px; align-items: center; }
+.pref-head .jp-mini { width: 72px; height: 66px; }
+.pref-list { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 12px; }
+.pref-list li { border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.pref-cat { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+.pref-cat a { color: var(--accent); }
+.pref-rank { font-size: 12px; color: #fff; background: var(--gold); border-radius: 999px; padding: 1px 8px; }
+.pref-v { font: 900 22px/1.3 var(--head); color: var(--accent); margin: 4px 0; }
+.pref-v small { font-size: 12px; color: var(--muted); margin-left: 2px; }
+.pref-name { font-size: 13px; margin: 4px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media (min-width: 640px) { .pref-list { grid-template-columns: 1fr 1fr; } }

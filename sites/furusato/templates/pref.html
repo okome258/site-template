@@ -1,0 +1,26 @@
+{% extends "_layout.html" %}
+{% block content %}
+<p class="small"><a href="{{ page.root }}#map">地図で見る</a> › {{ pref }}</p>
+<div class="pref-head">
+  {{ jp_mini(pref) }}
+  <div>
+    <h1>{{ pref }}のふるさと納税 量コスパ返礼品</h1>
+    <p class="lead">{{ pref }}の返礼品が、カテゴリ別の量コスパで<b>上位{{ nav.top_n_map }}位</b>に入っているのは{{ rows | length }}カテゴリです。</p>
+  </div>
+</div>
+<ol class="pref-list">
+{% for r in rows %}
+  {% set c = r.cat %}{% set it = r.it %}
+  {% set d = 1 if (c.unit_kind != 'count' and c.scale is not defined) else 0 %}
+  <li>
+    <div class="pref-cat"><a href="{{ page.root }}c/{{ c.id }}/">{{ c.name }}</a><span class="pref-rank">{{ r.rank }}位</span></div>
+    <div class="pref-v">{{ it.per10k | num(d) }}{{ c.unit }}<small>/1万円</small></div>
+    <p class="pref-name">{{ it.name }}</p>
+    <p class="small">{{ it.shop }}・寄付{{ it.price | yen }}</p>
+    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天ふるさと納税で見る</a>
+  </li>
+{% endfor %}
+</ol>
+<h2>ほかの都道府県</h2>
+{% include "_map.html" %}
+{% endblock %}

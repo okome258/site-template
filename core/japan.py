@@ -54,3 +54,37 @@ def jp_mini(shop: str | None) -> Markup:
     hit = _rect(*TILES[p], ' class="on"')
     return Markup(f'<svg class="jp-mini" viewBox="0 0 {W} {H}" role="img" aria-label="{p}の位置">'
                   f'<use href="#jp"/>{hit}</svg>')
+
+
+# URL用のローマ字(TILES と同じ順)
+SLUGS = dict(zip(TILES, """hokkaido aomori akita iwate ishikawa toyama niigata yamagata miyagi shimane tottori
+fukui gifu nagano gunma tochigi fukushima yamaguchi hiroshima okayama hyogo kyoto shiga aichi yamanashi saitama
+ibaraki fukuoka kagawa osaka nara mie shizuoka tokyo chiba saga kumamoto oita ehime tokushima wakayama kanagawa
+nagasaki kagoshima miyazaki kochi okinawa""".split()))
+
+
+def short(pref: str) -> str:
+    return pref if pref == "北海道" else pref[:-1]
+
+
+def level(n: int) -> int:
+    """色の濃さ(0〜4)"""
+    return 0 if n <= 0 else 1 if n == 1 else 2 if n <= 3 else 3 if n <= 6 else 4
+
+
+def jp_big(counts: dict[str, int], root: str, current: str = "") -> Markup:
+    """都道府県ごとの件数で色分けした、押せる日本地図。件数0の県はリンクなし"""
+    parts = []
+    for p, (x, y, w, h) in TILES.items():
+        n = counts.get(p, 0)
+        name = short(p)
+        fs = 4.2 if len(name) <= 2 else 3.2
+        cls = f"lv{level(n)}" + (" cur" if p == current else "")
+        cx, cy = (x + w / 2) * T, (y + h / 2) * T + fs * 0.35
+        tile = (f'{_rect(x, y, w, h)}<text x="{cx:g}" y="{cy:g}" font-size="{fs}">{name}</text>')
+        if n:
+            parts.append(f'<a href="{root}pref/{SLUGS[p]}/" class="{cls}"><title>{p}:{n}件</title>{tile}</a>')
+        else:
+            parts.append(f'<g class="{cls}">{tile}</g>')
+    return Markup(f'<svg class="jp-big" viewBox="0 0 {W} {H}" role="img" aria-label="都道府県の地図">'
+                  f'{"".join(parts)}</svg>')
