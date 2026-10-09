@@ -544,21 +544,21 @@
     }
    ],
    "candidates": 165,
-   "ranked": 42,
+   "ranked": 41,
    "dropped": {
-    "選択式": 95,
+    "選択式": 96,
     "量が複数": 16,
     "対象外の商品": 11,
     "量なし": 1
    },
    "summary": {
     "median_per10k": 5.556,
-    "median_unit_price": 1900,
+    "median_unit_price": 1800,
     "min_unit_price": 1000,
     "max_unit_price": 4300,
     "towns": 26
    },
-   "popularity": 1938
+   "popularity": 1896
   },
   "beef": {
    "items": [
@@ -1116,7 +1116,7 @@
     "median_unit_price": 17037,
     "min_unit_price": 8750,
     "max_unit_price": 40000,
-    "towns": 49
+    "towns": 48
    },
    "popularity": 2057
   },
@@ -1698,7 +1698,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.56
+     "vs_median": 2.67
     },
     {
      "code": "f464040-nagashima:10000645",
@@ -1716,7 +1716,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.47
+     "vs_median": 2.57
     },
     {
      "code": "f434841-tsunagi:10000052",
@@ -1734,7 +1734,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.27
+     "vs_median": 2.36
     },
     {
      "code": "f464040-nagashima:10000644",
@@ -1752,7 +1752,7 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.19
+     "vs_median": 2.29
     },
     {
      "code": "f452025-miyakonojo:10007038",
@@ -1770,7 +1770,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.92
+     "vs_median": 2.0
     },
     {
      "code": "f462080-izumi:10000302",
@@ -1788,7 +1788,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.86
+     "vs_median": 1.94
     },
     {
      "code": "f442089-taketa:10000327",
@@ -1806,7 +1806,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.82
+     "vs_median": 1.89
     },
     {
      "code": "f452025-miyakonojo:10004095",
@@ -1824,7 +1824,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.77
+     "vs_median": 1.85
     },
     {
      "code": "f462063-akune:10000743",
@@ -1842,7 +1842,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.77
+     "vs_median": 1.85
     },
     {
      "code": "f452025-miyakonojo:10004700",
@@ -1860,7 +1860,7 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.57
+     "vs_median": 1.64
     },
     {
      "code": "f452025-miyakonojo:10004478",
@@ -1878,7 +1878,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.57
+     "vs_median": 1.64
     },
     {
      "code": "f464040-nagashima:10000636",
@@ -1896,7 +1896,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.54
+     "vs_median": 1.6
     },
     {
      "code": "f454028-shintomi:10001238",
@@ -1914,7 +1914,7 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.42
+     "vs_median": 1.48
     },
     {
      "code": "f453820-kunitomi:10000957",
@@ -1932,7 +1932,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.34
+     "vs_median": 1.39
     },
     {
      "code": "f442089-taketa:10000021",
@@ -1950,7 +1950,7 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.21
+     "vs_median": 1.26
     },
     {
      "code": "f422029-sasebo:10004651",
@@ -1968,7 +1968,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.2
     },
     {
      "code": "f452068-hyuga:10000841",
@@ -1986,7 +1986,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.2
     },
     {
      "code": "f442089-taketa:10000020",
@@ -2004,7 +2004,7 @@
      "review_avg": 4.54,
      "review_count": 181,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.09
     },
     {
      "code": "f452068-hyuga:10000838",
@@ -2022,25 +2022,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.05
-    },
-    {
-     "code": "f434841-tsunagi:10000055",
-     "name": "鶏肉 若鶏 むね肉 約2kg × 1袋 2袋(1袋あたり約300g×7枚前後) たっぷり大満足！《30日以内に出荷予定(土日祝除く)》熊本県 葦北郡 津奈木町 訳あり SDGs 定期 でない",
-     "price": 12100,
-     "qty": 2.1,
-     "evidence": "300g×7",
-     "per10k": 1.736,
-     "unit_price": 5762,
-     "shop": "熊本県津奈木町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u2x5o.ia330151.g00u2x5o.ia331613/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff434841-tsunagi%2F10000055%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff434841-tsunagi%2Fi%2F10000055%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "津奈木町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f434841-tsunagi/cabinet/koyufoods/tkygnmusku_01.jpg?_ex=240x240",
-     "review_avg": 4.67,
-     "review_count": 6,
-     "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.09
     },
     {
      "code": "f452076-kushima:10000700",
@@ -2058,7 +2040,7 @@
      "review_avg": 4.73,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0
     },
     {
      "code": "f342041-mihara:10000847",
@@ -2076,7 +2058,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0
     },
     {
      "code": "f342041-mihara:10000949",
@@ -2094,7 +2076,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0
     },
     {
      "code": "f212059-seki:10004151",
@@ -2112,7 +2094,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.93
     },
     {
      "code": "f342041-mihara:10000839",
@@ -2130,7 +2112,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.92
     },
     {
      "code": "f075485-katsurao:10000015",
@@ -2148,7 +2130,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.92
     },
     {
      "code": "f462187-kirishima:10001267",
@@ -2166,7 +2148,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.84
+     "vs_median": 0.87
     },
     {
      "code": "f342041-mihara:10000848",
@@ -2184,7 +2166,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.82
+     "vs_median": 0.86
     },
     {
      "code": "f212059-seki:10004159",
@@ -2202,7 +2184,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.76
+     "vs_median": 0.79
     },
     {
      "code": "f072133-date:10000403",
@@ -2220,26 +2202,44 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.74
+     "vs_median": 0.77
+    },
+    {
+     "code": "f352110-nagato:10000189",
+     "name": "長州どり もも肉 1.8kg（300g×6パック）【鶏肉 小分け もも カット もも肉 チキン モモ肉 とりにく 切り身 とり肉 国産 冷凍 精肉 カット済 小分けパック】",
+     "price": 14000,
+     "qty": 1.8,
+     "evidence": "300g×6",
+     "per10k": 1.286,
+     "unit_price": 7778,
+     "shop": "山口県長門市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpggo.ia330cfb.g00tpggo.ia331b7e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff352110-nagato%2F1006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff352110-nagato%2Fi%2F10000189%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "長門市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f352110-nagato/cabinet/07428829/imgrc0087924504.jpg?_ex=240x240",
+     "review_avg": 4.96,
+     "review_count": 24,
+     "wakeari": false,
+     "vs_median": 0.77
     }
    ],
-   "candidates": 167,
+   "candidates": 168,
    "ranked": 39,
    "dropped": {
     "対象外の商品": 76,
     "選択式": 45,
     "量なし": 4,
-    "量が複数": 2,
+    "量が複数": 3,
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 1.736,
-    "median_unit_price": 5762,
+    "median_per10k": 1.667,
+    "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 23
    },
-   "popularity": 1549
+   "popularity": 1543
   },
   "scallop": {
    "items": [
@@ -3345,14 +3345,14 @@
      "vs_median": 0.59
     }
    ],
-   "candidates": 141,
+   "candidates": 140,
    "ranked": 36,
    "dropped": {
     "選択式": 40,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 6
+    "量が範囲外": 5
    },
    "summary": {
     "median_per10k": 0.733,
@@ -4504,6 +4504,24 @@
      "vs_median": 0.63
     },
     {
+     "code": "f232319-tahara:10000042",
+     "name": "渥美プレミアムラスサーモン 刺身用 柵 500g 刺身 サーモン プレミアム 国産 海鮮 生食用 カルパッチョ 陸上養殖 魚 食品 お取り寄せ お取り寄せグルメ おつまみ 家飲み 送料無料 産地直送 ブロック",
+     "price": 13000,
+     "qty": 0.5,
+     "evidence": "500g",
+     "per10k": 0.385,
+     "unit_price": 26000,
+     "shop": "愛知県田原市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u8g2o.ia330004.g00u8g2o.ia331cf6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff232319-tahara%2F202242%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff232319-tahara%2Fi%2F10000042%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "田原市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f232319-tahara/cabinet/item/10030945/imgrc0120134613.jpg?_ex=240x240",
+     "review_avg": 4.33,
+     "review_count": 3,
+     "wakeari": false,
+     "vs_median": 0.61
+    },
+    {
      "code": "f242098-owase:10001179",
      "name": "サーモン ブロック&切り落とし600gセット 小分け 鮭 サーモン アトランティックサーモン さけ シャケ しゃけ sake カルパッチョ ソテー レアステーキ 人気 高級 大満足 生食用 刺身 お刺身 刺し身 魚介類 海鮮 冷凍 ob-f-22",
      "price": 16000,
@@ -4630,24 +4648,6 @@
      "vs_median": 0.45
     },
     {
-     "code": "f182087-awara:10000623",
-     "name": "ふくいサーモン 切り身 100g×6切 計600g ＜鮮度抜群！アレンジ自在！真空冷凍＞ ／サーモン さーもん 鮭 しゃけ サケ カルパッチョ 生食OK 焼き魚 刺身 国産 個包装 冷凍 海鮮 海鮮丼 福井県 あわら市",
-     "price": 22700,
-     "qty": 0.6,
-     "evidence": "計600g",
-     "per10k": 0.264,
-     "unit_price": 37833,
-     "shop": "福井県あわら市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tsoxo.ia330318.g00tsoxo.ia331d75/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182087-awara%2Fae38-r%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff182087-awara%2Fi%2F10000623%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "あわら市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f182087-awara/cabinet/img/aw002/aw002-b003-s.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 3,
-     "wakeari": false,
-     "vs_median": 0.42
-    },
-    {
      "code": "f182087-awara:10000624",
      "name": "ふくいサーモン 柵どり 150g×4パック 計600g ＜鮮度抜群！アレンジ自在！真空冷凍＞ ／サーモン さーもん 鮭 しゃけ サケ カルパッチョ 生食OK 刺身 国産 個包装 冷凍 海鮮 海鮮丼 福井県 あわら市",
      "price": 22700,
@@ -4671,16 +4671,15 @@
    "dropped": {
     "選択式": 73,
     "量なし": 20,
-    "量が複数": 7,
-    "対象外の商品": 24,
-    "量が範囲外": 1
+    "量が複数": 8,
+    "対象外の商品": 24
    },
    "summary": {
     "median_per10k": 0.636,
     "median_unit_price": 15714,
     "min_unit_price": 5625,
     "max_unit_price": 40000,
-    "towns": 21
+    "towns": 22
    },
    "popularity": 1238
   },
@@ -7112,8 +7111,8 @@
    "candidates": 165,
    "ranked": 56,
    "dropped": {
-    "選択式": 63,
-    "量が範囲外": 24,
+    "選択式": 64,
+    "量が範囲外": 23,
     "対象外の商品": 10,
     "量が複数": 3,
     "量なし": 9
@@ -8416,24 +8415,6 @@
   "mentaiko": {
    "items": [
     {
-     "code": "f083097-oarai:10001416",
-     "name": "☆食べやすいサイズ☆ 明太子 かねふく 訳あり 切れ子 1kg (1kg×1箱） 2kg (1kg×2箱） 規格外 不揃い 傷 訳アリ わけあり 切れ子 切子 辛子明太子めんたいこ 冷凍 小分け 魚介類 海鮮 魚卵 めんたいパーク 家庭用 ほぐし",
-     "price": 13000,
-     "qty": 2000.0,
-     "evidence": "2kg",
-     "per10k": 1538.462,
-     "unit_price": 6,
-     "shop": "茨城県大洗町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ti8ao.ia330bf4.g00ti8ao.ia331831/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff083097-oarai%2Fam064-065%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff083097-oarai%2Fi%2F10001416%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "大洗町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f083097-oarai/cabinet/08032059/08081485/am064-065_sku-1.jpg?_ex=240x240",
-     "review_avg": 4.46,
-     "review_count": 26,
-     "wakeari": true,
-     "vs_median": 2.15
-    },
-    {
      "code": "f402133-yukuhashi:10000635",
      "name": "【訳あり】辛子明太子切子1.5kg_AU-071",
      "price": 10000,
@@ -8954,24 +8935,42 @@
      "review_count": 102,
      "wakeari": false,
      "vs_median": 0.56
+    },
+    {
+     "code": "f402265-miyawaka:10000513",
+     "name": "〈ふくや〉家庭用明太子無着色レギュラー440g [M175-4] めんたい 明太 魚卵 海鮮 ご飯 おかず 小分け 切れ子 人気 便利 おすすめ ランキング 福岡 博多",
+     "price": 11000,
+     "qty": 440.0,
+     "evidence": "440g",
+     "per10k": 400.0,
+     "unit_price": 25,
+     "shop": "福岡県宮若市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbqdo.ia330f04.g00tbqdo.ia331993/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff402265-miyawaka%2Fm175%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff402265-miyawaka%2Fi%2F10000513%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "宮若市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402265-miyawaka/cabinet/10172981/12588861/m175-4_01s.jpg?_ex=240x240",
+     "review_avg": 4.88,
+     "review_count": 16,
+     "wakeari": false,
+     "vs_median": 0.56
     }
    ],
    "candidates": 93,
-   "ranked": 39,
+   "ranked": 38,
    "dropped": {
-    "量が複数": 4,
+    "量が複数": 5,
     "対象外の商品": 15,
     "選択式": 32,
     "量なし": 3
    },
    "summary": {
     "median_per10k": 714.286,
-    "median_unit_price": 14,
-    "min_unit_price": 6,
+    "median_unit_price": 16,
+    "min_unit_price": 7,
     "max_unit_price": 63,
-    "towns": 20
+    "towns": 19
    },
-   "popularity": 2254
+   "popularity": 2228
   },
   "tuna": {
    "items": [
@@ -12924,24 +12923,6 @@
   "udon": {
    "items": [
     {
-     "code": "f082015-mito:10000087",
-     "name": "麺のスナオシ リピーター続出！手打風うどん・田舎そばセット8kg（乾麺）うどん 饂飩 そば 蕎麦 麺 お取り寄せ 高評価 麺 即席麺 ストック 生活応援 非常食 簡単調理 長期保存 保存食 防災 人気 大容量 ローリングストック 水戸市 茨城県（BY-3）",
-     "price": 13000,
-     "qty": 8.0,
-     "evidence": "8kg",
-     "per10k": 6.154,
-     "unit_price": 1625,
-     "shop": "茨城県水戸市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00thf4o.ia330840.g00thf4o.ia3316ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff082015-mito%2F22313-30033296%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff082015-mito%2Fi%2F10000087%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "水戸市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f082015-mito/cabinet/by/by001-1.jpg?_ex=240x240",
-     "review_avg": 4.75,
-     "review_count": 139,
-     "wakeari": false,
-     "vs_median": 2.74
-    },
-    {
      "code": "f372056-kanonji:10001435",
      "name": "讃岐うどん さぬきうどん 乾麺 250g × 30袋 90人前 高原通商店 添加物不使用 小麦粉 食塩 コシ のどごし 歯ごたえ うどん 干しうどん うどん乾麺 麺類 天婦羅うどん 香川県 観音寺市　お届け：ご寄附（入金）確認後、約2週間程でお届けいたします。",
      "price": 15000,
@@ -12957,7 +12938,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.22
+     "vs_median": 2.5
     },
     {
      "code": "f372048-zentsuji:10000033",
@@ -12975,7 +12956,7 @@
      "review_avg": 2.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 2.1
+     "vs_median": 2.36
     },
     {
      "code": "f372056-kanonji:10001225",
@@ -12993,7 +12974,7 @@
      "review_avg": 4.17,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.85
+     "vs_median": 2.08
     },
     {
      "code": "f372056-kanonji:10001224",
@@ -13011,7 +12992,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.85
+     "vs_median": 2.08
     },
     {
      "code": "f372056-kanonji:10000135",
@@ -13029,7 +13010,7 @@
      "review_avg": 4.68,
      "review_count": 53,
      "wakeari": false,
-     "vs_median": 1.78
+     "vs_median": 2.0
     },
     {
      "code": "f424111-shinkamigoto:10000481",
@@ -13047,7 +13028,7 @@
      "review_avg": 4.96,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.74
+     "vs_median": 1.95
     },
     {
      "code": "f372056-kanonji:10000809",
@@ -13065,7 +13046,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.71
+     "vs_median": 1.92
     },
     {
      "code": "f372056-kanonji:10000755",
@@ -13083,7 +13064,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.52
+     "vs_median": 1.7
     },
     {
      "code": "f372056-kanonji:10000757",
@@ -13101,7 +13082,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.39
+     "vs_median": 1.56
     },
     {
      "code": "f052159-semboku:10001368",
@@ -13119,25 +13100,7 @@
      "review_avg": 4.42,
      "review_count": 118,
      "wakeari": true,
-     "vs_median": 1.38
-    },
-    {
-     "code": "f422142-minamisimabara:10000588",
-     "name": "＜嬉しい大容量＞島原手延そうめん 5kg(50g×100束) / そうめん 島原そうめん 手延べ 麺 素麺 長期保存 災害対策 わけあり そうめん 島原そうめん うどん そば ソバ 手延べ 麺 素麺 そうめん 素麺 ソウメン そうめん / 南島原市 / こじま製麺 [SAZ001]",
-     "price": 18000,
-     "qty": 5.0,
-     "evidence": "5kg",
-     "per10k": 2.778,
-     "unit_price": 3600,
-     "shop": "長崎県南島原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s8w3o.ia330eac.g00s8w3o.ia3318ac/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff422142-minamisimabara%2F5904-00000074%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff422142-minamisimabara%2Fi%2F10000588%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "南島原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f422142-minamisimabara/cabinet/item/saz/saz001.jpg?_ex=240x240",
-     "review_avg": 4.87,
-     "review_count": 213,
-     "wakeari": false,
-     "vs_median": 1.23
+     "vs_median": 1.55
     },
     {
      "code": "f374067-manno:10000038",
@@ -13155,7 +13118,7 @@
      "review_avg": 4.88,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.21
+     "vs_median": 1.36
     },
     {
      "code": "f374067-manno:10000043",
@@ -13173,7 +13136,7 @@
      "review_avg": 4.74,
      "review_count": 34,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.12
     },
     {
      "code": "f374067-manno:10000085",
@@ -13191,7 +13154,7 @@
      "review_avg": 4.64,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 1.0
     },
     {
      "code": "f052159-semboku:10001420",
@@ -13209,7 +13172,7 @@
      "review_avg": 4.81,
      "review_count": 16,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.97
     },
     {
      "code": "f424111-shinkamigoto:10000618",
@@ -13227,7 +13190,7 @@
      "review_avg": 4.89,
      "review_count": 36,
      "wakeari": true,
-     "vs_median": 0.83
+     "vs_median": 0.94
     },
     {
      "code": "f424111-shinkamigoto:10000484",
@@ -13245,7 +13208,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.74
+     "vs_median": 0.83
     },
     {
      "code": "f424111-shinkamigoto:10000041",
@@ -13263,7 +13226,7 @@
      "review_avg": 5.0,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 0.73
+     "vs_median": 0.82
     },
     {
      "code": "f374067-manno:10000084",
@@ -13281,7 +13244,7 @@
      "review_avg": 4.72,
      "review_count": 99,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.75
     },
     {
      "code": "f424111-shinkamigoto:10000619",
@@ -13299,7 +13262,7 @@
      "review_avg": 4.82,
      "review_count": 17,
      "wakeari": true,
-     "vs_median": 0.67
+     "vs_median": 0.75
     },
     {
      "code": "f424111-shinkamigoto:10000375",
@@ -13317,7 +13280,7 @@
      "review_avg": 4.75,
      "review_count": 48,
      "wakeari": false,
-     "vs_median": 0.61
+     "vs_median": 0.68
     },
     {
      "code": "f373877-ayagawa:10000017",
@@ -13335,7 +13298,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.56
+     "vs_median": 0.62
     },
     {
      "code": "f162051-himi:10000026",
@@ -13353,7 +13316,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.58
     },
     {
      "code": "f052078-yuzawa:10000618",
@@ -13371,7 +13334,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.48
+     "vs_median": 0.55
     },
     {
      "code": "f162051-himi:10000028",
@@ -13389,7 +13352,7 @@
      "review_avg": 4.86,
      "review_count": 44,
      "wakeari": false,
-     "vs_median": 0.44
+     "vs_median": 0.5
     },
     {
      "code": "f435104-sagara:10000922",
@@ -13407,83 +13370,29 @@
      "review_avg": 4.19,
      "review_count": 31,
      "wakeari": false,
-     "vs_median": 0.42
+     "vs_median": 0.47
     }
    ],
    "candidates": 93,
-   "ranked": 27,
+   "ranked": 25,
    "dropped": {
-    "選択式": 16,
-    "量なし": 25,
+    "選択式": 13,
+    "量なし": 22,
     "量が複数": 1,
-    "対象外の商品": 19,
-    "量が範囲外": 5
+    "対象外の商品": 28,
+    "量が範囲外": 4
    },
    "summary": {
-    "median_per10k": 2.25,
-    "median_unit_price": 4444,
-    "min_unit_price": 1625,
+    "median_per10k": 2.0,
+    "median_unit_price": 5000,
+    "min_unit_price": 2000,
     "max_unit_price": 10667,
-    "towns": 11
+    "towns": 9
    },
-   "popularity": 929
+   "popularity": 577
   },
   "soba": {
    "items": [
-    {
-     "code": "f082015-mito:10000087",
-     "name": "麺のスナオシ リピーター続出！手打風うどん・田舎そばセット8kg（乾麺）うどん 饂飩 そば 蕎麦 麺 お取り寄せ 高評価 麺 即席麺 ストック 生活応援 非常食 簡単調理 長期保存 保存食 防災 人気 大容量 ローリングストック 水戸市 茨城県（BY-3）",
-     "price": 13000,
-     "qty": 8.0,
-     "evidence": "8kg",
-     "per10k": 6.154,
-     "unit_price": 1625,
-     "shop": "茨城県水戸市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00thf4o.ia330840.g00thf4o.ia3316ff/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff082015-mito%2F22313-30033296%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff082015-mito%2Fi%2F10000087%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "水戸市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f082015-mito/cabinet/by/by001-1.jpg?_ex=240x240",
-     "review_avg": 4.75,
-     "review_count": 139,
-     "wakeari": false,
-     "vs_median": 5.13
-    },
-    {
-     "code": "f062103-tendo:10000020",
-     "name": "昭和 の 中華そば 24人前 ラーメン 中華 麺 乾麺 260g × 12 ご家庭用 のし 贈答 ギフト プレゼント ご当地 山形 お取り寄せグルメ 送料無料 昭和製麺 【 山形県 天童市 】",
-     "price": 11000,
-     "qty": 3.12,
-     "evidence": "260g×12",
-     "per10k": 2.836,
-     "unit_price": 3526,
-     "shop": "山形県天童市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00trrao.ia330120.g00trrao.ia33170a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff062103-tendo%2F02a4031%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff062103-tendo%2Fi%2F10000020%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "天童市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f062103-tendo/cabinet/banner/008/15-002-01r.jpg?_ex=240x240",
-     "review_avg": 3.4,
-     "review_count": 5,
-     "wakeari": false,
-     "vs_median": 2.36
-    },
-    {
-     "code": "f422142-minamisimabara:10000588",
-     "name": "＜嬉しい大容量＞島原手延そうめん 5kg(50g×100束) / そうめん 島原そうめん 手延べ 麺 素麺 長期保存 災害対策 わけあり そうめん 島原そうめん うどん そば ソバ 手延べ 麺 素麺 そうめん 素麺 ソウメン そうめん / 南島原市 / こじま製麺 [SAZ001]",
-     "price": 18000,
-     "qty": 5.0,
-     "evidence": "5kg",
-     "per10k": 2.778,
-     "unit_price": 3600,
-     "shop": "長崎県南島原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s8w3o.ia330eac.g00s8w3o.ia3318ac/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff422142-minamisimabara%2F5904-00000074%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff422142-minamisimabara%2Fi%2F10000588%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "南島原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f422142-minamisimabara/cabinet/item/saz/saz001.jpg?_ex=240x240",
-     "review_avg": 4.87,
-     "review_count": 213,
-     "wakeari": false,
-     "vs_median": 2.31
-    },
     {
      "code": "f033031-iwate:10000181",
      "name": "蕎麦 乾麺 2.7kg 27人前 土川そば 岩手名物 年越しそば ギフト お取り寄せ 田舎そば 玄そば 干しそば 簡易包装 業務用 ご家庭用 小分け 備蓄 長期保存 常温保存 ストック 簡単調理 贈答 プレゼント 国内製造 ご当地 グルメ 土産 名物 麺 東北 岩手県 岩手町",
@@ -13500,7 +13409,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 2.25
+     "vs_median": 2.3
     },
     {
      "code": "f062103-tendo:10000019",
@@ -13518,7 +13427,7 @@
      "review_avg": 4.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.12
+     "vs_median": 2.16
     },
     {
      "code": "f063215-kahoku:10001626",
@@ -13536,7 +13445,7 @@
      "review_avg": 4.64,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 2.0
+     "vs_median": 2.04
     },
     {
      "code": "f062014-yamagata:10000995",
@@ -13554,7 +13463,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.89
+     "vs_median": 1.93
     },
     {
      "code": "f032140-hachimantai:10000192",
@@ -13572,7 +13481,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.82
+     "vs_median": 1.86
     },
     {
      "code": "f016373-memuro:10000345",
@@ -13590,7 +13499,7 @@
      "review_avg": 4.5,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.43
+     "vs_median": 1.46
     },
     {
      "code": "f202088-komoro:10000665",
@@ -13608,7 +13517,7 @@
      "review_avg": 3.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.42
+     "vs_median": 1.45
     },
     {
      "code": "f442119-usa:10000047",
@@ -13626,7 +13535,7 @@
      "review_avg": 3.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.42
+     "vs_median": 1.45
     },
     {
      "code": "f202011-nagano:10001935",
@@ -13644,7 +13553,7 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.23
+     "vs_median": 1.26
     },
     {
      "code": "f203068-minamiaiki:10000013",
@@ -13662,7 +13571,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.16
     },
     {
      "code": "f152102-tokamachi:10001560",
@@ -13680,7 +13589,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.13
     },
     {
      "code": "f015636-oumu:10000002",
@@ -13698,7 +13607,7 @@
      "review_avg": 4.88,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.04
+     "vs_median": 1.06
     },
     {
      "code": "f152102-tokamachi:10001556",
@@ -13716,7 +13625,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.02
     },
     {
      "code": "f073687-minamiaizu:10000203",
@@ -13734,7 +13643,7 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 1.0
     },
     {
      "code": "f015636-oumu:10000041",
@@ -13752,7 +13661,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 1.0
     },
     {
      "code": "f182109-sakai:10000392",
@@ -13770,7 +13679,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.95
+     "vs_median": 0.97
     },
     {
      "code": "f062103-tendo:10000435",
@@ -13788,7 +13697,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.93
     },
     {
      "code": "f152102-tokamachi:10001557",
@@ -13806,7 +13715,7 @@
      "review_avg": 2.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.88
+     "vs_median": 0.89
     },
     {
      "code": "f412040-taku:10000704",
@@ -13824,7 +13733,7 @@
      "review_avg": 4.83,
      "review_count": 24,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.85
     },
     {
      "code": "f015636-oumu:10000000",
@@ -13842,7 +13751,7 @@
      "review_avg": 4.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.85
     },
     {
      "code": "f014729-horokanai:10000112",
@@ -13860,7 +13769,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.8
     },
     {
      "code": "f152102-tokamachi:10000946",
@@ -13878,7 +13787,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.76
+     "vs_median": 0.77
     },
     {
      "code": "f352152-shunan:10000322",
@@ -13896,7 +13805,7 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.76
+     "vs_median": 0.77
     },
     {
      "code": "f434442-kosa:10000262",
@@ -13914,7 +13823,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.74
+     "vs_median": 0.76
     },
     {
      "code": "f012025-hakodate:10000907",
@@ -13932,7 +13841,7 @@
      "review_avg": 4.36,
      "review_count": 28,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.68
     },
     {
      "code": "f216046-shirakawa:10000014",
@@ -13950,7 +13859,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.62
+     "vs_median": 0.64
     },
     {
      "code": "f015636-oumu:10000140",
@@ -13968,47 +13877,47 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.56
+     "vs_median": 0.57
+    },
+    {
+     "code": "f202011-nagano:10001715",
+     "name": "塩ぬき屋 食塩無添加 極み 十割そば 国産100% 200g×5袋セット | そば 食塩無添加 塩ぬき屋 人気 おすすめ 十割そば 国産 乾麺 無塩 減塩 健康 食材 グルメ 麺類 送料無料 長野県 長野市 信州 信濃 ふるさと納税",
+     "price": 16000,
+     "qty": 1.0,
+     "evidence": "200g×5",
+     "per10k": 0.625,
+     "unit_price": 16000,
+     "shop": "長野県長野市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t5q6o.ia330e9d.g00t5q6o.ia331d15/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff202011-nagano%2F55661566%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff202011-nagano%2Fi%2F10001715%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "長野市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f202011-nagano/cabinet/frp_goods/frp004/25647171.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.53
     }
    ],
    "candidates": 145,
-   "ranked": 31,
+   "ranked": 28,
    "dropped": {
-    "選択式": 43,
-    "対象外の商品": 25,
-    "量なし": 34,
-    "量が範囲外": 10,
+    "選択式": 39,
+    "対象外の商品": 44,
+    "量なし": 24,
+    "量が範囲外": 8,
     "量が複数": 2
    },
    "summary": {
-    "median_per10k": 1.2,
-    "median_unit_price": 8333,
-    "min_unit_price": 1625,
+    "median_per10k": 1.176,
+    "median_unit_price": 8500,
+    "min_unit_price": 3704,
     "max_unit_price": 16000,
-    "towns": 22
+    "towns": 20
    },
-   "popularity": 474
+   "popularity": 117
   },
   "sparkling": {
    "items": [
-    {
-     "code": "f212121-toki:10001765",
-     "name": "ソーダストリーム クイックコネクト ガスシリンダー 新規購入用 60L / SodaStream 炭酸水 水 ソーダ水[MDN001]",
-     "price": 18000,
-     "qty": 60.0,
-     "evidence": "60L",
-     "per10k": 33.333,
-     "unit_price": 300,
-     "shop": "岐阜県土岐市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u253o.ia3302c6.g00u253o.ia33140f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff212121-toki%2Fmdn001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff212121-toki%2Fi%2F10001765%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "土岐市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f212121-toki/cabinet/08564135/imgrc0116411058.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 6,
-     "wakeari": false,
-     "vs_median": 3.06
-    },
     {
      "code": "f412031-tosu:10002408",
      "name": "炭酸 CRYSTAL SPARK クリスタルスパーク 炭酸水 無糖 プレーン 500ml×72本 飲料 ※配送不可：沖縄、離島",
@@ -14025,25 +13934,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 2.64
-    },
-    {
-     "code": "f212121-toki:10003777",
-     "name": "ソーダストリーム クイックコネクト ガスシリンダー 新規購入用 60L 2本セット 炭酸水 水 ソーダ水[MDN005]",
-     "price": 26000,
-     "qty": 60.0,
-     "evidence": "60L",
-     "per10k": 23.077,
-     "unit_price": 433,
-     "shop": "岐阜県土岐市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u253o.ia3302c6.g00u253o.ia33140f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff212121-toki%2Fmdn005%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff212121-toki%2Fi%2F10003777%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "土岐市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f212121-toki/cabinet/item/mdn/mdn005.jpg?_ex=240x240",
-     "review_avg": 4.89,
-     "review_count": 9,
-     "wakeari": false,
-     "vs_median": 2.12
+     "vs_median": 3.84
     },
     {
      "code": "f222071-fujinomiya:10000060",
@@ -14061,7 +13952,7 @@
      "review_avg": 3.5,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.6
     },
     {
      "code": "f222071-fujinomiya:10000010",
@@ -14079,7 +13970,7 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.6
     },
     {
      "code": "f284432-fukusaki:10000416",
@@ -14097,7 +13988,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.45
     },
     {
      "code": "f462144-tarumizu:10002036",
@@ -14115,7 +14006,7 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 1.0
     },
     {
      "code": "f014605-kamifurano:10000611",
@@ -14133,7 +14024,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 1.0
     },
     {
      "code": "f014605-kamifurano:10000765",
@@ -14151,7 +14042,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 1.0
     },
     {
      "code": "f284432-fukusaki:10000417",
@@ -14169,7 +14060,7 @@
      "review_avg": 4.67,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.98
     },
     {
      "code": "f143642-yamakita:10000164",
@@ -14187,46 +14078,28 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.55
+     "vs_median": 0.8
     }
    ],
    "candidates": 95,
-   "ranked": 11,
+   "ranked": 9,
    "dropped": {
-    "対象外の商品": 56,
+    "対象外の商品": 58,
     "選択式": 16,
     "量が範囲外": 9,
     "量なし": 3
    },
    "summary": {
-    "median_per10k": 10.909,
-    "median_unit_price": 917,
-    "min_unit_price": 300,
+    "median_per10k": 7.5,
+    "median_unit_price": 1333,
+    "min_unit_price": 347,
     "max_unit_price": 1667,
-    "towns": 7
+    "towns": 6
    },
-   "popularity": 45
+   "popularity": 30
   },
   "tea": {
    "items": [
-    {
-     "code": "f392022-muroto:10002177",
-     "name": "純水　2L×12本セット 室戸海洋深層水 ペットボトル 硬度0 赤ちゃん コーヒー 飲料水 ミルク お茶 計24L　リットル 送料無料 ak015 ミネラル みず 水 生活用品 日用品 美容 熱中症対策 清浄 安全 クリーン ナトリウム",
-     "price": 11000,
-     "qty": 24.0,
-     "evidence": "計24L",
-     "per10k": 21.818,
-     "unit_price": 458,
-     "shop": "高知県室戸市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s9pbo.ia33002b.g00s9pbo.ia331d53/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff392022-muroto%2F10002177%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff392022-muroto%2Fi%2F10002177%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "室戸市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f392022-muroto/cabinet/04865216/06016642/10685993/ak015_01.jpg?_ex=240x240",
-     "review_avg": 4.0,
-     "review_count": 1,
-     "wakeari": false,
-     "vs_median": 1.82
-    },
     {
      "code": "f413411-kiyama:10003381",
      "name": "お～いお茶濃い茶 600ml×24本【伊藤園 おーいお茶 お茶 緑茶 機能性表示食品 健康飲料 ペットボトル 飲料 まとめ買い 備蓄 常備 箱買い ケース ストック 日用品 非常用 防災用品 災害 熱中症対策 水分補給 Tea Ocha 基山町 寄附額変更 食欲の秋】K071P006",
@@ -14296,24 +14169,6 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402061-tagawashi/cabinet/product/t063/cb03-ntr_00.jpg?_ex=240x240",
      "review_avg": 4.44,
      "review_count": 9,
-     "wakeari": false,
-     "vs_median": 1.43
-    },
-    {
-     "code": "f222267-makinohara:10001302",
-     "name": "健康ミネラル むぎ茶 2L × 6本 カフェインゼロ 防災備蓄 茶 ペットボトル 飲料 伊藤園 ノンカフェイン 麦茶 むぎちゃ 麦茶ペットボトル 夏 熱中症対策 水分補給 ノンアルコール 無糖 ミネラルウォーター 子供 赤ちゃん 牧之原市 静岡県",
-     "price": 7000,
-     "qty": 12.0,
-     "evidence": "2L×6",
-     "per10k": 17.143,
-     "unit_price": 583,
-     "shop": "静岡県牧之原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ssz2o.ia3309d0.g00ssz2o.ia331ff4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222267-makinohara%2F131-26%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222267-makinohara%2Fi%2F10001302%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "牧之原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222267-makinohara/cabinet/12002866/131-26__r_01.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 1,
      "wakeari": false,
      "vs_median": 1.43
     },
@@ -14748,25 +14603,61 @@
      "review_count": 4,
      "wakeari": false,
      "vs_median": 0.67
+    },
+    {
+     "code": "f252026-hikone:10000321",
+     "name": "生茶 ほうじ煎茶 525ml × 24本 ペットボトル キリン お茶 茶 おちゃ ドリンク 飲料 飲み物 ソフトドリンク ほうじ茶 煎茶 1ケース PET キャンプ 行事 イベント 常温 差し入れ 備蓄 KIRIN 麒麟 きりん 人気 おすすめ 滋賀 彦根",
+     "price": 16000,
+     "qty": 12.6,
+     "evidence": "525ml×24",
+     "per10k": 7.875,
+     "unit_price": 1270,
+     "shop": "滋賀県彦根市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tgp1o.ia330187.g00tgp1o.ia331a1a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff252026-hikone%2Fbb34-r%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff252026-hikone%2Fi%2F10000321%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "彦根市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f252026-hikone/cabinet/11953710/12140977/13136501/imgrc0338482323.jpg?_ex=240x240",
+     "review_avg": 4.29,
+     "review_count": 7,
+     "wakeari": false,
+     "vs_median": 0.66
+    },
+    {
+     "code": "f192058-yamanashi:10000674",
+     "name": "フレッシュハーブティー 350ml 24本 計8.4L サーフビバレッジ_ ふるさと納税 ふるさと ハーブティー ハーブ お茶 紅茶 ペットボトル 山梨県 山梨市 山梨 人気 送料無料【1294077】",
+     "price": 11000,
+     "qty": 8.4,
+     "evidence": "計8.4L",
+     "per10k": 7.636,
+     "unit_price": 1310,
+     "shop": "山梨県山梨市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tfito.ia3301f9.g00tfito.ia3315f7/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff192058-yamanashi%2F1294077%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff192058-yamanashi%2Fi%2F10000674%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "山梨市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f192058-yamanashi/cabinet/0175_1294077_01.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 1,
+     "wakeari": false,
+     "vs_median": 0.64
     }
    ],
-   "candidates": 85,
-   "ranked": 40,
+   "candidates": 86,
+   "ranked": 37,
    "dropped": {
     "量が範囲外": 18,
     "選択式": 15,
     "量なし": 4,
-    "対象外の商品": 7,
+    "対象外の商品": 11,
     "量が複数": 1
    },
    "summary": {
     "median_per10k": 12.0,
     "median_unit_price": 833,
-    "min_unit_price": 458,
+    "min_unit_price": 514,
     "max_unit_price": 3095,
-    "towns": 25
+    "towns": 24
    },
-   "popularity": 195
+   "popularity": 191
   },
   "sake": {
    "items": [
@@ -15768,8 +15659,8 @@
    "ranked": 24,
    "dropped": {
     "選択式": 18,
-    "量なし": 12,
-    "対象外の商品": 17,
+    "量なし": 11,
+    "対象外の商品": 18,
     "量が複数": 2
    },
    "summary": {
@@ -16054,11 +15945,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 76,
+   "candidates": 77,
    "ranked": 15,
    "dropped": {
     "選択式": 10,
-    "量なし": 26,
+    "量なし": 27,
     "対象外の商品": 24,
     "量が範囲外": 1
    },
@@ -16073,5 +15964,5 @@
   }
  },
  "errors": [],
- "fetched_at": "2026-10-09T13:41+09:00"
+ "fetched_at": "2026-10-09T13:46+09:00"
 }
