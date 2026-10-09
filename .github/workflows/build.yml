@@ -58,7 +58,14 @@ jobs:
             echo "変更なし"
           else
             git commit -m "サイト自動更新 $(TZ=Asia/Tokyo date +%Y-%m-%d)"
-            git push
+            # 実行中に main へ別のpushが入ると push が弾かれるので、取り込み直して最大3回やり直す
+            for i in 1 2 3; do
+              git push && exit 0
+              echo "push失敗($i回目)。最新のmainを取り込んで再試行"
+              git pull --rebase -X theirs origin main || { git rebase --abort; exit 1; }
+              sleep 5
+            done
+            exit 1
           fi
       - name: 生成に失敗したサイトがあれば赤にする
         if: steps.build.outcome == 'failure'
