@@ -1115,8 +1115,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 17037,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
-    "towns": 48
+    "max_unit_price": 37500,
+    "towns": 49
    },
    "popularity": 2055
   },
@@ -2223,10 +2223,10 @@
      "vs_median": 0.71
     }
    ],
-   "candidates": 163,
+   "candidates": 164,
    "ranked": 38,
    "dropped": {
-    "対象外の商品": 72,
+    "対象外の商品": 73,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
@@ -4283,7 +4283,7 @@
      "town": "佐渡市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152242-sado/cabinet/202607/195990-0001_1.jpg?_ex=240x240",
      "review_avg": 4.96,
-     "review_count": 54,
+     "review_count": 55,
      "wakeari": false,
      "vs_median": 1.57
     },
@@ -4681,7 +4681,7 @@
     "max_unit_price": 40000,
     "towns": 22
    },
-   "popularity": 1247
+   "popularity": 1248
   },
   "mikan": {
    "items": [
@@ -9096,7 +9096,7 @@
      "town": "焼津市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222127-yaizu/cabinet/09497948/y283-a10-1289-s-r-c.jpg?_ex=240x240",
      "review_avg": 4.51,
-     "review_count": 118,
+     "review_count": 119,
      "wakeari": false,
      "vs_median": 2.29
     },
@@ -9603,7 +9603,7 @@
     "max_unit_price": 82500,
     "towns": 27
    },
-   "popularity": 2712
+   "popularity": 2713
   },
   "oyster": {
    "items": [
@@ -10380,8 +10380,8 @@
      "portal": "楽天ふるさと納税",
      "town": "淡路市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f282260-awaji/cabinet/kakou2/ao05056s01b.jpg?_ex=240x240",
-     "review_avg": 4.69,
-     "review_count": 65,
+     "review_avg": 4.7,
+     "review_count": 66,
      "wakeari": false,
      "vs_median": 1.54
     },
@@ -10708,7 +10708,7 @@
     "max_unit_price": 30556,
     "towns": 18
    },
-   "popularity": 1663
+   "popularity": 1664
   },
   "gyoza": {
    "items": [
@@ -11541,7 +11541,7 @@
      "town": "小布施町",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f205419-obuse/cabinet/13154617/imgrc0126492365.jpg?_ex=240x240",
      "review_avg": 4.58,
-     "review_count": 215,
+     "review_count": 216,
      "wakeari": true,
      "vs_median": 1.5
     },
@@ -12047,7 +12047,7 @@
     "max_unit_price": 27273,
     "towns": 20
    },
-   "popularity": 858
+   "popularity": 859
   },
   "strawberry": {
    "items": [
@@ -14770,24 +14770,6 @@
      "vs_median": 1.67
     },
     {
-     "code": "f152269-minamiuonuma:10004694",
-     "name": "【魚沼地域限定】純米酒 八海山「魚沼で候」1800ml×3本【八海山 純米 魚沼で候 一升瓶 3本 セット 日本酒 1800ml 新潟 地酒 厳選 晩酌 熱燗 お酒 酒 さけ お中元 お歳暮 贈答】",
-     "price": 36000,
-     "qty": 5.4,
-     "evidence": "1800ml×3",
-     "per10k": 1.5,
-     "unit_price": 6667,
-     "shop": "新潟県南魚沼市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tobvo.ia330389.g00tobvo.ia331b7c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff152269-minamiuonuma%2Fcn441%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff152269-minamiuonuma%2Fi%2F10004694%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "南魚沼市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152269-minamiuonuma/cabinet/frp_goods/frp003/4502712.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 1,
-     "wakeari": false,
-     "vs_median": 1.67
-    },
-    {
      "code": "f444626-kusu:10000006",
      "name": "日本酒 亀の井 山廃仕込み 空河 純米酒 1800ml 一升瓶 亀の井 山廃 仕込み 清酒 純米酒 大分県 酒蔵 五百万石 地元産 万年山 伏流水 手造り 酒蔵 熱燗 ぬる燗 室温 中華料理 和食 明治 江戸 享保年間 創業三百余年 伝統製法 濃い旨味 亀の井酒造",
      "price": 12000,
@@ -15236,10 +15218,28 @@
      "review_count": 53,
      "wakeari": false,
      "vs_median": 1.0
+    },
+    {
+     "code": "f216046-shirakawa:10000575",
+     "name": "蓬莱 日本酒 純米吟醸 家伝手造り 720ml やや 辛口 渡辺酒造 金賞 受賞酒 ギフト 冬ギフト 贈り物 お酒 日本酒 飛騨 岐阜 地酒 世界遺産 白川郷 渡辺酒造店 地酒 8000円 [S864]",
+     "price": 8000,
+     "qty": 0.72,
+     "evidence": "720ml",
+     "per10k": 0.9,
+     "unit_price": 11111,
+     "shop": "岐阜県白川村",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpeuo.ia330357.g00tpeuo.ia331e76/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff216046-shirakawa%2Fs864%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff216046-shirakawa%2Fi%2F10000575%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "白川村",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f216046-shirakawa/cabinet/watanabe/r_s864_1.jpg?_ex=240x240",
+     "review_avg": 4.67,
+     "review_count": 15,
+     "wakeari": false,
+     "vs_median": 1.0
     }
    ],
-   "candidates": 167,
-   "ranked": 61,
+   "candidates": 166,
+   "ranked": 60,
    "dropped": {
     "対象外の商品": 74,
     "選択式": 19,
@@ -15254,7 +15254,7 @@
     "max_unit_price": 76389,
     "towns": 32
    },
-   "popularity": 442
+   "popularity": 441
   },
   "detergent": {
    "items": [
@@ -16047,5 +16047,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T02:19+09:00"
+ "fetched_at": "2026-10-10T02:59+09:00"
 }
