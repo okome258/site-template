@@ -546,8 +546,8 @@
    "candidates": 165,
    "ranked": 42,
    "dropped": {
-    "選択式": 95,
-    "量が複数": 16,
+    "選択式": 94,
+    "量が複数": 17,
     "対象外の商品": 11,
     "量なし": 1
    },
@@ -5247,6 +5247,24 @@
      "vs_median": 1.3
     },
     {
+     "code": "f205419-obuse:10000417",
+     "name": "【訳あり】 季節のりんご 約3kg ［新規就農者応援コース 幸作会］ りんご 林檎 リンゴ 不揃い 規格外 果物 フルーツ 長野 信州 3kg 産地直送 産直 数量限定 先行予約 生産者応援 支援 家庭用 お楽しみ 令和8年産 【2026年9月下旬～12月下旬発送】",
+     "price": 6000,
+     "qty": 3.0,
+     "evidence": "3kg",
+     "per10k": 5.0,
+     "unit_price": 2000,
+     "shop": "長野県小布施町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3eao.ia3304ec.g00t3eao.ia331935/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff205419-obuse%2Fkh-51%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff205419-obuse%2Fi%2F10000417%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "小布施町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f205419-obuse/cabinet/13302496/ringo_860x860.jpg?_ex=240x240",
+     "review_avg": 4.57,
+     "review_count": 42,
+     "wakeari": true,
+     "vs_median": 1.3
+    },
+    {
      "code": "f022021-hirosaki:10000360",
      "name": "【26年11月〜発送】りんご 旬のリンゴ詰め合わせ【家庭用】約10kg 糖度13度以上【先行受付】 [先行予約 アップル おいしい りんご 果実 果物 詰め合わせ 詰合 糖度 美味 林檎]",
      "price": 20000,
@@ -5626,21 +5644,21 @@
     }
    ],
    "candidates": 105,
-   "ranked": 26,
+   "ranked": 27,
    "dropped": {
     "選択式": 59,
     "量が複数": 5,
-    "量なし": 6,
+    "量なし": 5,
     "対象外の商品": 9
    },
    "summary": {
     "median_per10k": 3.846,
-    "median_unit_price": 2667,
+    "median_unit_price": 2600,
     "min_unit_price": 1400,
     "max_unit_price": 8000,
     "towns": 11
    },
-   "popularity": 999
+   "popularity": 1041
   },
   "toilet": {
    "items": [
@@ -10641,8 +10659,8 @@
    "candidates": 98,
    "ranked": 23,
    "dropped": {
-    "選択式": 33,
-    "対象外の商品": 28,
+    "選択式": 32,
+    "対象外の商品": 29,
     "量なし": 9,
     "量が複数": 3,
     "量が範囲外": 2
@@ -15619,11 +15637,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 73,
+   "candidates": 72,
    "ranked": 24,
    "dropped": {
     "選択式": 18,
-    "量なし": 11,
+    "量なし": 10,
     "対象外の商品": 18,
     "量が複数": 2
    },
@@ -15975,5 +15993,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-09T16:48+09:00"
+ "fetched_at": "2026-10-09T16:56+09:00"
 }
