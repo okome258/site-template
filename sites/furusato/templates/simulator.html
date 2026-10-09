@@ -7,6 +7,7 @@
 {% if tax_year > table_year %}<p class="note">※{{ tax_year }}年分の税制改正の反映を確認中です。現在は{{ table_year }}年分の税制で計算しています。</p>{% endif %}
 <p class="lead">年収と家族構成を入れると、自己負担2,000円で寄付できる上限額の目安がすぐ分かります。そのまま「上限内で一番量が多い返礼品」も表示します。</p>
 
+{% include "_countdown.html" %}
 <form class="sim card" id="sim" onsubmit="return false">
   <label>給与の年収（額面・税込）
     <span class="in"><input id="inc" type="number" inputmode="numeric" min="0" step="10" value="500"><em>万円</em></span>

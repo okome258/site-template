@@ -1,0 +1,22 @@
+{# 締め切りカウントダウン。日付は見た日で毎回計算(JST)。10〜12月と1/1〜1/10だけ表示 #}
+<div class="countdown" id="countdown" hidden>
+  <span class="cd-label"></span><b class="cd-days"></b><span class="cd-sub"></span>
+</div>
+<script>
+(function(){try{
+  var now=new Date(Date.now()+9*3600e3), y=now.getUTCFullYear(), m=now.getUTCMonth()+1, d=now.getUTCDate();
+  var today=Date.UTC(y,m-1,d), el=document.getElementById('countdown'); if(!el) return;
+  function days(t){return Math.round((t-today)/864e5);}
+  var label, n, sub;
+  if(m>=10){ n=days(Date.UTC(y,11,31)); label='今年のふるさと納税の締め切り（12/31）まで';
+    sub='ワンストップ特例の申請書は翌年1/10必着'; }
+  else if(m==1 && d<=10){ n=days(Date.UTC(y,0,10)); label='ワンストップ特例の申請期限（1/10必着）まで';
+    sub='間に合わない場合は確定申告で手続きできます'; }
+  else return;
+  el.querySelector('.cd-label').textContent=label;
+  el.querySelector('.cd-days').textContent= n<=0 ? '今日まで' : 'あと'+n+'日';
+  el.querySelector('.cd-sub').textContent=sub;
+  if(n<=14) el.classList.add('urgent');
+  el.hidden=false;
+}catch(e){}})();
+</script>
