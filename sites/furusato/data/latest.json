@@ -1115,8 +1115,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 17037,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
-    "towns": 48
+    "max_unit_price": 37500,
+    "towns": 49
    },
    "popularity": 2055
   },
@@ -2223,10 +2223,10 @@
      "vs_median": 0.71
     }
    ],
-   "candidates": 164,
+   "candidates": 163,
    "ranked": 38,
    "dropped": {
-    "対象外の商品": 73,
+    "対象外の商品": 72,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
@@ -3075,6 +3075,24 @@
      "vs_median": 1.03
     },
     {
+     "code": "f412040-taku:10000910",
+     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
+     "price": 12000,
+     "qty": 0.9,
+     "evidence": "合計900g",
+     "per10k": 0.75,
+     "unit_price": 13333,
+     "shop": "佐賀県多久市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "多久市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 1.03
+    },
+    {
      "code": "f232131-nishio:10000873",
      "name": "特大天然むきエビ (背ワタ処理済み) 1.1kg《配達不可エリア：北海道・沖縄・離島》・K131-150 【冷凍便】再入荷！数量限定！ 海老 剥き海老 えび 海鮮 海の幸 冷凍保存 プロ使用 業務用 バラ凍結 ばら凍結 むきえび むき海老 特大 下味付きMB",
      "price": 15000,
@@ -3325,41 +3343,23 @@
      "review_count": 2,
      "wakeari": false,
      "vs_median": 0.6
-    },
-    {
-     "code": "f184233-echizen:10001595",
-     "name": "殻むき不要！鮮度抜群「甘えび」（むき身）400g（200g × 2袋）〜 背わた処理済 【天然 日本海 越前町産 国産あまえび 甘エビ むきエビ 小分け えび エビ 海老 魚介類 魚貝類 福井県 海鮮 寿司 刺身 グルメ ギフト】aj",
-     "price": 10000,
-     "qty": 0.4,
-     "evidence": "400g",
-     "per10k": 0.4,
-     "unit_price": 25000,
-     "shop": "福井県越前町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00te7go.ia330c01.g00te7go.ia331c8f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff184233-echizen%2Fe15-a059%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff184233-echizen%2Fi%2F10001595%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "越前町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f184233-echizen/cabinet/img/e15/e15-a059_sku-s.jpg?_ex=240x240",
-     "review_avg": 4.5,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 0.55
     }
    ],
    "candidates": 142,
-   "ranked": 35,
+   "ranked": 36,
    "dropped": {
     "選択式": 41,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 25
+    "towns": 26
    },
    "popularity": 1148
   },
@@ -14770,6 +14770,24 @@
      "vs_median": 1.67
     },
     {
+     "code": "f152269-minamiuonuma:10004694",
+     "name": "【魚沼地域限定】純米酒 八海山「魚沼で候」1800ml×3本【八海山 純米 魚沼で候 一升瓶 3本 セット 日本酒 1800ml 新潟 地酒 厳選 晩酌 熱燗 お酒 酒 さけ お中元 お歳暮 贈答】",
+     "price": 36000,
+     "qty": 5.4,
+     "evidence": "1800ml×3",
+     "per10k": 1.5,
+     "unit_price": 6667,
+     "shop": "新潟県南魚沼市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tobvo.ia330389.g00tobvo.ia331b7c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff152269-minamiuonuma%2Fcn441%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff152269-minamiuonuma%2Fi%2F10004694%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "南魚沼市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152269-minamiuonuma/cabinet/frp_goods/frp003/4502712.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 1,
+     "wakeari": false,
+     "vs_median": 1.67
+    },
+    {
      "code": "f444626-kusu:10000006",
      "name": "日本酒 亀の井 山廃仕込み 空河 純米酒 1800ml 一升瓶 亀の井 山廃 仕込み 清酒 純米酒 大分県 酒蔵 五百万石 地元産 万年山 伏流水 手造り 酒蔵 熱燗 ぬる燗 室温 中華料理 和食 明治 江戸 享保年間 創業三百余年 伝統製法 濃い旨味 亀の井酒造",
      "price": 12000,
@@ -15218,28 +15236,10 @@
      "review_count": 53,
      "wakeari": false,
      "vs_median": 1.0
-    },
-    {
-     "code": "f216046-shirakawa:10000575",
-     "name": "蓬莱 日本酒 純米吟醸 家伝手造り 720ml やや 辛口 渡辺酒造 金賞 受賞酒 ギフト 冬ギフト 贈り物 お酒 日本酒 飛騨 岐阜 地酒 世界遺産 白川郷 渡辺酒造店 地酒 8000円 [S864]",
-     "price": 8000,
-     "qty": 0.72,
-     "evidence": "720ml",
-     "per10k": 0.9,
-     "unit_price": 11111,
-     "shop": "岐阜県白川村",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpeuo.ia330357.g00tpeuo.ia331e76/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff216046-shirakawa%2Fs864%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff216046-shirakawa%2Fi%2F10000575%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "白川村",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f216046-shirakawa/cabinet/watanabe/r_s864_1.jpg?_ex=240x240",
-     "review_avg": 4.67,
-     "review_count": 15,
-     "wakeari": false,
-     "vs_median": 1.0
     }
    ],
-   "candidates": 166,
-   "ranked": 60,
+   "candidates": 167,
+   "ranked": 61,
    "dropped": {
     "対象外の商品": 74,
     "選択式": 19,
@@ -15254,7 +15254,7 @@
     "max_unit_price": 76389,
     "towns": 32
    },
-   "popularity": 441
+   "popularity": 442
   },
   "detergent": {
    "items": [
@@ -16047,5 +16047,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T02:03+09:00"
+ "fetched_at": "2026-10-10T02:13+09:00"
 }
