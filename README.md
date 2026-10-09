@@ -57,4 +57,4 @@ GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`
 
 ## ふるさと納税サイトのキャラクター
 
-マスコット「ふくすけ」(ふくら雀。福がふくらむ縁起物)。`sites/furusato/static/fukura.svg`(全身)と `fukura-face.svg`(顔・ロゴ/ファビコン用)。オリジナルなので自由に使える。
+マスコット「ふくすけ」(ふくら雀。福がふくらむ縁起物)。おこめさん作のイラスト。`sites/furusato/static/fukusuke.webp`(全身・背景透過)、`fukusuke-face.png`(顔・ロゴ用)、`favicon-64.png` / `apple-touch-icon.png`。

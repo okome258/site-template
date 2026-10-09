@@ -28,7 +28,7 @@
 <ol class="rank-list">
 {% for it in rank["items"] %}
   <li class="rank-item{% if loop.first %} first{% endif %}">
-    {% if loop.first %}<p class="pick-say"><img src="{{ page.root }}fukura-face.svg" alt="" width="28" height="28">いちばん量が多いのはこれチュン</p>{% endif %}
+    {% if loop.first %}<p class="pick-say"><img src="{{ page.root }}fukusuke-face.png" alt="" width="28" height="28">いちばん量が多いのはこれチュン</p>{% endif %}
     <div class="rank-top">
       <a class="rank-thumb" href="{{ it.url }}" target="_blank" rel="sponsored noopener">
         {% if it.image %}<img class="rank-img" src="{{ it.image }}" alt="" loading="lazy" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}

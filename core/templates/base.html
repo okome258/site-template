@@ -16,7 +16,8 @@
 {% if site.og_image and site.base_url %}<meta property="og:image" content="{{ site.base_url }}/{{ site.og_image }}">
 <meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
 <meta name="theme-color" content="{{ site.theme_color }}">
-<link rel="icon" href="{{ page.root }}{{ site.favicon or 'favicon.svg' }}" type="image/svg+xml">
+<link rel="icon" href="{{ page.root }}{{ site.favicon or 'favicon.svg' }}" type="{{ 'image/png' if (site.favicon or '').endswith('.png') else 'image/svg+xml' }}">
+{% if site.apple_touch_icon %}<link rel="apple-touch-icon" href="{{ page.root }}{{ site.apple_touch_icon }}">{% endif %}
 {% if site.fonts %}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{{ site.fonts }}&display=swap">{% endif %}
 <link rel="stylesheet" href="{{ page.root }}base.css">

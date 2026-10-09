@@ -1,8 +1,9 @@
 site:
   name: "ふるさと納税 量コスパ比較"
   tagline: "寄付1万円あたり、どれだけ届く？"
-  logo_img: "fukura-face.svg"   # マスコット「ふくすけ」(ふくら雀)
-  favicon: "fukura-face.svg"
+  logo_img: "fukusuke-face.png"   # マスコット「ふくすけ」(ふくら雀)
+  favicon: "favicon-64.png"
+  apple_touch_icon: "apple-touch-icon.png"
   og_image: "ogp.png"   # SNSでシェアされた時の画像(static/ に置く)
   description: "楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。"
   base_url: "https://furusato-kosupa.okomen.workers.dev"
