@@ -262,15 +262,20 @@ def pages(cfg: dict, data: dict) -> list[dict]:
                "description": "日用品・果物・麺・飲み物など、定番以外のふるさと納税の返礼品も寄付1万円あたりの量で比較。",
                "context": {"cats": cats, "nav": nav}})
     for p in TILES:
+        # 全47県のページを常に作る(日によってページが消えないように)
         n = pref_counts.get(p, 0)
-        if not n:
-            continue
-        rows = [r for r in bp[p] if r["rank"] <= TOP_N_MAP]
-        names = "・".join(dict.fromkeys(r["cat"]["name"] for r in rows[:5]))
+        allrows = bp.get(p, [])
+        rows = [r for r in allrows if r["rank"] <= TOP_N_MAP]
+        near = [] if rows else allrows[:5]  # 上位に無い県は、順位が良い順に最大5件
+        if rows:
+            names = "・".join(dict.fromkeys(r["cat"]["name"] for r in rows[:5]))
+            desc = f"楽天ふるさと納税で{p}の返礼品が量コスパ上位{TOP_N_MAP}位に入ったカテゴリは{n}つ({names}など)。"
+        else:
+            desc = f"楽天ふるさと納税の{p}の返礼品を、寄付1万円あたりの量で比べたときの順位。"
         ps.append({"path": f"pref/{SLUGS[p]}/index.html", "template": "pref.html",
                    "title": f"{p}のふるさと納税 量コスパ返礼品【{_ym(data)}】",
-                   "description": f"楽天ふるさと納税で{p}の返礼品が量コスパ上位{TOP_N_MAP}位に入ったカテゴリは{n}つ({names}など)。寄付1万円あたりの量で毎日自動ランキング。",
-                   "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows}})
+                   "description": desc + "毎日自動更新。",
+                   "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near}})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats, "nav": nav}, "changefreq": "monthly"})
     return ps

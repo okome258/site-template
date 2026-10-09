@@ -73,7 +73,7 @@ def level(n: int) -> int:
 
 
 def jp_big(counts: dict[str, int], root: str, current: str = "") -> Markup:
-    """都道府県ごとの件数で色分けした、押せる日本地図。件数0の県はリンクなし"""
+    """都道府県ごとの件数で色分けした、押せる日本地図(全47県にリンク)"""
     parts = []
     for p, (x, y, w, h) in TILES.items():
         n = counts.get(p, 0)
@@ -82,9 +82,6 @@ def jp_big(counts: dict[str, int], root: str, current: str = "") -> Markup:
         cls = f"lv{level(n)}" + (" cur" if p == current else "")
         cx, cy = (x + w / 2) * T, (y + h / 2) * T + fs * 0.35
         tile = (f'{_rect(x, y, w, h)}<text x="{cx:g}" y="{cy:g}" font-size="{fs}">{name}</text>')
-        if n:
-            parts.append(f'<a href="{root}pref/{SLUGS[p]}/" class="{cls}"><title>{p}:{n}件</title>{tile}</a>')
-        else:
-            parts.append(f'<g class="{cls}">{tile}</g>')
+        parts.append(f'<a href="{root}pref/{SLUGS[p]}/" class="{cls}"><title>{p}:{n}件</title>{tile}</a>')
     return Markup(f'<svg class="jp-big" viewBox="0 0 {W} {H}" role="img" aria-label="都道府県の地図">'
                   f'{"".join(parts)}</svg>')
