@@ -23,7 +23,7 @@
     {% set r = data.categories.get(c.id, {}) %}
     {% set t1 = r["items"][0] if r.get("items") else None %}
     <li><a href="{{ page.root }}c/{{ c.id }}/">
-      {% if t1 and t1.image %}<img src="{{ t1.image }}" alt="" loading="lazy" width="64" height="64">{% else %}<span class="ph"></span>{% endif %}
+      {% if t1 and t1.image %}<img src="{{ t1.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="64" height="64">{% else %}<span class="ph"></span>{% endif %}
       <span class="sn">{{ c.name }}</span>
       <span class="sv">{{ best(c) }}<small>/1万円</small></span>
       {% if t1 %}<span class="st">{{ t1.town or t1.shop }}</span>{% endif %}
