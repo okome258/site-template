@@ -1115,10 +1115,10 @@
     "median_per10k": 0.587,
     "median_unit_price": 17037,
     "min_unit_price": 8750,
-    "max_unit_price": 37500,
-    "towns": 49
+    "max_unit_price": 40000,
+    "towns": 48
    },
-   "popularity": 2058
+   "popularity": 2057
   },
   "pork": {
    "items": [
@@ -1698,7 +1698,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.44
+     "vs_median": 2.67
     },
     {
      "code": "f464040-nagashima:10000645",
@@ -1716,7 +1716,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.36
+     "vs_median": 2.57
     },
     {
      "code": "f434841-tsunagi:10000052",
@@ -1734,7 +1734,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.17
+     "vs_median": 2.36
     },
     {
      "code": "f464040-nagashima:10000644",
@@ -1752,7 +1752,7 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.1
+     "vs_median": 2.29
     },
     {
      "code": "f452025-miyakonojo:10007038",
@@ -1770,7 +1770,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.83
+     "vs_median": 2.0
     },
     {
      "code": "f462080-izumi:10000302",
@@ -1788,7 +1788,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.77
+     "vs_median": 1.94
     },
     {
      "code": "f442089-taketa:10000327",
@@ -1806,7 +1806,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.74
+     "vs_median": 1.89
     },
     {
      "code": "f452025-miyakonojo:10004095",
@@ -1824,7 +1824,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.69
+     "vs_median": 1.85
     },
     {
      "code": "f462063-akune:10000743",
@@ -1842,7 +1842,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.69
+     "vs_median": 1.85
     },
     {
      "code": "f452025-miyakonojo:10004700",
@@ -1860,7 +1860,7 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.64
     },
     {
      "code": "f452025-miyakonojo:10004478",
@@ -1878,7 +1878,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.64
     },
     {
      "code": "f464040-nagashima:10000636",
@@ -1896,7 +1896,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.6
     },
     {
      "code": "f454028-shintomi:10001238",
@@ -1914,7 +1914,7 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.48
     },
     {
      "code": "f453820-kunitomi:10000957",
@@ -1932,7 +1932,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.28
+     "vs_median": 1.39
     },
     {
      "code": "f442089-taketa:10000021",
@@ -1950,7 +1950,7 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.16
+     "vs_median": 1.26
     },
     {
      "code": "f422029-sasebo:10004651",
@@ -1968,7 +1968,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.2
     },
     {
      "code": "f452068-hyuga:10000841",
@@ -1986,7 +1986,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.2
     },
     {
      "code": "f442089-taketa:10000020",
@@ -2004,7 +2004,7 @@
      "review_avg": 4.54,
      "review_count": 181,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.09
     },
     {
      "code": "f452068-hyuga:10000838",
@@ -2022,7 +2022,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.09
     },
     {
      "code": "f452076-kushima:10000700",
@@ -2040,7 +2040,7 @@
      "review_avg": 4.73,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 1.0
     },
     {
      "code": "f342041-mihara:10000847",
@@ -2058,7 +2058,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 1.0
     },
     {
      "code": "f342041-mihara:10000949",
@@ -2076,7 +2076,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 1.0
     },
     {
      "code": "f212059-seki:10004151",
@@ -2094,7 +2094,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.93
     },
     {
      "code": "f342041-mihara:10000839",
@@ -2112,7 +2112,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.92
     },
     {
      "code": "f075485-katsurao:10000015",
@@ -2130,7 +2130,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.92
     },
     {
      "code": "f462187-kirishima:10001267",
@@ -2148,7 +2148,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.87
     },
     {
      "code": "f342041-mihara:10000848",
@@ -2166,7 +2166,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.79
+     "vs_median": 0.86
     },
     {
      "code": "f212059-seki:10004159",
@@ -2184,7 +2184,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.72
+     "vs_median": 0.79
     },
     {
      "code": "f072133-date:10000403",
@@ -2202,7 +2202,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71
+     "vs_median": 0.77
     },
     {
      "code": "f352110-nagato:10000189",
@@ -2220,24 +2220,24 @@
      "review_avg": 4.96,
      "review_count": 24,
      "wakeari": false,
-     "vs_median": 0.71
+     "vs_median": 0.77
     }
    ],
    "candidates": 167,
-   "ranked": 38,
+   "ranked": 39,
    "dropped": {
-    "対象外の商品": 76,
+    "対象外の商品": 75,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 1.818,
+    "median_per10k": 1.667,
     "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 23
    },
    "popularity": 1543
   },
@@ -3345,14 +3345,14 @@
      "vs_median": 0.55
     }
    ],
-   "candidates": 140,
+   "candidates": 141,
    "ranked": 35,
    "dropped": {
     "選択式": 41,
-    "対象外の商品": 52,
+    "対象外の商品": 51,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 5
+    "量が範囲外": 7
    },
    "summary": {
     "median_per10k": 0.727,
@@ -4136,7 +4136,7 @@
      "shop": "岩手県大槌町 ふるさと納税",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7rto.ia3302d1.g00u7rto.ia331c7f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff034614-otsuchicho%2F0tsuchi01165%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff034614-otsuchicho%2Fi%2F10000423%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "岩手県大槌町 ふるさと納税",
+     "town": "大槌町",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f034614-otsuchicho/cabinet/09509871/imgrc0131653089.jpg?_ex=240x240",
      "review_avg": 4.82,
      "review_count": 71,
@@ -4442,7 +4442,7 @@
      "shop": "香川県さぬき市 ふるさと納税",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00u2cuo.ia330ff0.g00u2cuo.ia331198/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372064-sanukishi%2Fas006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372064-sanukishi%2Fi%2F10000003%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "香川県さぬき市 ふるさと納税",
+     "town": "さぬき市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372064-sanukishi/cabinet/frp_goods/frp003/19879649.jpg?_ex=240x240",
      "review_avg": 4.62,
      "review_count": 68,
@@ -4568,7 +4568,7 @@
      "shop": "香川県さぬき市 ふるさと納税",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00u2cuo.ia330ff0.g00u2cuo.ia331198/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372064-sanukishi%2Fas023%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372064-sanukishi%2Fi%2F10000542%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "香川県さぬき市 ふるさと納税",
+     "town": "さぬき市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372064-sanukishi/cabinet/frp_goods/frp003/19879672.jpg?_ex=240x240",
      "review_avg": 4.2,
      "review_count": 5,
@@ -15176,7 +15176,7 @@
      "shop": "新潟県魚沼市 ふるさと納税",
      "url": "https://hb.afl.rakuten.co.jp/hgc/g00txcho.ia33003e.g00txcho.ia3313a8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff152251-uonumashi%2F57620460%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff152251-uonumashi%2Fi%2F10000055%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "新潟県魚沼市 ふるさと納税",
+     "town": "魚沼市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152251-uonumashi/cabinet/d_202004/57620460_01_web_s.jpg?_ex=240x240",
      "review_avg": 4.72,
      "review_count": 53,
@@ -15637,11 +15637,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 72,
+   "candidates": 73,
    "ranked": 24,
    "dropped": {
     "選択式": 18,
-    "量なし": 10,
+    "量なし": 11,
     "対象外の商品": 18,
     "量が複数": 2
    },
@@ -15993,5 +15993,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-09T15:36+09:00"
+ "fetched_at": "2026-10-09T15:42+09:00"
 }
