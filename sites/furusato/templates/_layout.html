@@ -3,28 +3,46 @@
   {%- set r = data.categories.get(c.id, {}) -%}
   {%- if r.get("items") -%}{{ r["items"][0].per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}{%- endif -%}
 {%- endmacro %}
+{% set is_other = page.path == 'other/index.html' or (cat is defined and cat in nav.others) %}
 {% block nav %}
-{# スマホ: 横スクロールのタブ #}
+{# スマホ: 横スクロールのタブ(旬 → 定番10 → その他) #}
 <div class="tabs-wrap"><nav class="tabs" aria-label="カテゴリ">
   <a href="{{ page.root }}" {% if page.path == 'index.html' %}class="on"{% endif %}>総合</a>
-  <a href="{{ page.root }}simulator/" class="sim-tab{% if page.path == 'simulator/index.html' %} on{% endif %}">上限シミュレーター</a>
-  {% for c in cats %}
+  {% if nav.season %}<a href="{{ page.root }}#season" class="season-tab">{{ nav.season.name }}</a>{% endif %}
+  {% for c in nav.tops %}
   <a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}>{{ c.name }}</a>
   {% endfor %}
-  <a href="{{ page.root }}about/" {% if page.path == 'about/index.html' %}class="on"{% endif %}>計算方法</a>
+  <a href="{{ page.root }}other/" {% if is_other %}class="on"{% endif %}>その他{% if cat is defined and cat in nav.others %}（{{ cat.name }}）{% endif %}</a>
+  <a href="{{ page.root }}simulator/" class="sim-tab{% if page.path == 'simulator/index.html' %} on{% endif %}">上限シミュレーター</a>
 </nav></div>
 {% endblock %}
 {% block side %}
-{# PC: 左に固定のカテゴリ一覧(人気順・1位の量つき) #}
+{# PC: 左に固定のカテゴリ一覧 #}
 <aside class="side" aria-label="カテゴリ一覧">
   <a class="side-sim{% if page.path == 'simulator/index.html' %} on{% endif %}" href="{{ page.root }}simulator/">控除上限額を計算する</a>
-  <p class="side-h">カテゴリ（人気順）</p>
-  <ul class="side-list">
-    <li><a href="{{ page.root }}" {% if page.path == 'index.html' %}class="on"{% endif %}><span>総合</span></a></li>
-    {% for c in cats %}
+  {% if nav.season %}
+  <p class="side-h season-h">いまが旬　{{ nav.season.name }}</p>
+  <ul class="side-list season-list">
+    {% for c in nav.season.cats %}
     <li><a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}><span>{{ c.name }}</span><em>{{ best(c) }}</em></a></li>
     {% endfor %}
   </ul>
+  {% endif %}
+  <p class="side-h">定番カテゴリ</p>
+  <ul class="side-list">
+    <li><a href="{{ page.root }}" {% if page.path == 'index.html' %}class="on"{% endif %}><span>総合</span></a></li>
+    {% for c in nav.tops %}
+    <li><a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}><span>{{ c.name }}</span><em>{{ best(c) }}</em></a></li>
+    {% endfor %}
+  </ul>
+  <details class="side-more" {% if is_other %}open{% endif %}>
+    <summary>その他のカテゴリ（{{ nav.others | length }}）</summary>
+    <ul class="side-list">
+      {% for c in nav.others %}
+      <li><a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}><span>{{ c.name }}</span><em>{{ best(c) }}</em></a></li>
+      {% endfor %}
+    </ul>
+  </details>
   <p class="side-note">右の数字は1万円あたりの最大量</p>
   <a class="side-about" href="{{ page.root }}about/">計算方法とこのサイトについて</a>
 </aside>

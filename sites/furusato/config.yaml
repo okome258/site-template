@@ -24,9 +24,32 @@ fetch:
 # unit_kind: weight(kg) / volume(L) / count(count_units の個数)
 # scale: 表示単位への倍率(いくらを g で見せるなら 1000)
 # range: 1件あたりの総量として妥当な範囲(表示単位。外れたら読み違いとして捨てる)
-# サイト上の並び順は毎日データから自動で決まる(レビュー件数の合計が多い=人気順)
+# サイト上の並び順: top の10個を人気順に固定表示し、残りは「その他のカテゴリ」にグループ別で並べる
+# よく寄付される定番ジャンル(この順でタブ・一覧に出る)
+top: [rice, beef, pork, crab, scallop, ikura, unagi, chicken, toilet, beer]
+
+# 旬の特集。取得日の月で自動で切り替わる(目立つ枠で一番上に出す)
+seasons:
+  - name: 秋の味覚
+    months: [9, 10, 11]
+    lead: 新米・シャインマスカット・りんご・いくらが旬。
+    cats: [rice, shine, apple, ikura, salmon]
+  - name: 冬のごちそう
+    months: [12, 1, 2]
+    lead: カニ・牡蠣・みかん・いちごがおいしい季節。
+    cats: [crab, oyster, mikan, strawberry, ikura]
+  - name: 春の味覚
+    months: [3, 4, 5]
+    lead: いちごと、新生活に役立つ日用品。
+    cats: [strawberry, tuna, toilet, detergent, rice]
+  - name: 夏のごちそう
+    months: [6, 7, 8]
+    lead: 桃・メロン・土用のうなぎ、冷えたビール。
+    cats: [peach, melon, unagi, beer, sparkling]
+
 categories:
   - id: rice
+    group: お米
     rakuten_ranking: rice
     search_word: 米
     name: お米
@@ -37,6 +60,7 @@ categories:
     exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
     range: [2, 60]
   - id: beef
+    group: 肉
     rakuten_ranking: beef
     search_word: 牛肉
     name: 牛肉
@@ -47,6 +71,7 @@ categories:
     exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン", "味付", "タレ", "豚", "鶏", "バラエティ"]
     range: [0.3, 10]
   - id: pork
+    group: 肉
     rakuten_ranking: meat
     search_word: 豚肉
     name: 豚肉
@@ -57,6 +82,7 @@ categories:
     exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ", "味付", "タレ", "牛", "鶏"]
     range: [0.5, 15]
   - id: chicken
+    group: 肉
     rakuten_ranking: meat
     search_word: 鶏肉
     name: 鶏肉
@@ -67,6 +93,7 @@ categories:
     exclude: ["唐揚げ", "からあげ", "チキン南蛮", "焼き鳥", "焼鳥", "ハム", "サラダチキン", "つくね", "味付", "タレ", "牛", "豚"]
     range: [1, 20]
   - id: scallop
+    group: 海鮮
     rakuten_ranking: seafood
     name: ホタテ
     emoji: "🐚"
@@ -77,6 +104,7 @@ categories:
     require: ["ホタテ", "ほたて", "帆立"]
     range: [0.3, 10]
   - id: shrimp
+    group: 海鮮
     rakuten_ranking: seafood
     name: エビ
     emoji: "🦐"
@@ -87,6 +115,7 @@ categories:
     require: ["えび", "エビ", "海老"]
     range: [0.3, 10]
   - id: crab
+    group: 海鮮
     rakuten_ranking: seafood
     name: カニ
     emoji: "🦀"
@@ -97,6 +126,7 @@ categories:
     require: ["カニ", "かに", "蟹", "ガニ", "がに"]
     range: [0.3, 10]
   - id: ikura
+    group: 海鮮
     rakuten_ranking: seafood
     name: いくら
     emoji: "🟠"
@@ -108,6 +138,7 @@ categories:
     require: ["いくら", "イクラ"]
     range: [100, 3000]
   - id: salmon
+    group: 海鮮
     rakuten_ranking: seafood
     search_word: 鮭
     name: サーモン・鮭
@@ -119,6 +150,7 @@ categories:
     require: ["サーモン", "鮭", "しゃけ", "サケ"]
     range: [0.3, 10]
   - id: mikan
+    group: 果物
     rakuten_ranking: fruit
     name: みかん
     emoji: "🍊"
@@ -129,6 +161,7 @@ categories:
     require: ["みかん", "蜜柑", "ミカン"]
     range: [2, 30]
   - id: apple
+    group: 果物
     rakuten_ranking: fruit
     name: りんご
     emoji: "🍎"
@@ -139,6 +172,7 @@ categories:
     require: ["りんご", "リンゴ", "林檎"]
     range: [2, 30]
   - id: toilet
+    group: 日用品
     rakuten_ranking: toilet-paper
     name: トイレットペーパー
     emoji: "🧻"
@@ -150,6 +184,7 @@ categories:
     range: [12, 300]
     note: "シングル/ダブル・長さ(倍巻き)の違いは考慮していません。"
   - id: tissue
+    group: 日用品
     rakuten_ranking: tissue-paper
     search_word: ティッシュ
     name: ティッシュ
@@ -162,6 +197,7 @@ categories:
     range: [5, 200]
     note: "1箱あたりの枚数の違いは考慮していません。"
   - id: water
+    group: 飲み物
     rakuten_ranking: beverage
     search_word: 水
     name: 水
@@ -172,6 +208,7 @@ categories:
     exclude: ["炭酸", "ウォーターサーバー", "お茶", "ジュース", "サーバー"]
     range: [6, 200]
   - id: beer
+    group: 飲み物
     rakuten_ranking: beer
     name: ビール
     emoji: "🍺"
@@ -183,6 +220,7 @@ categories:
     range: [3, 60]
     note: "20歳未満の飲酒は法律で禁止されています。"
   - id: egg
+    group: 卵
     search_word: 卵
     name: 卵
     emoji: "🥚"
@@ -195,6 +233,7 @@ categories:
     range: [10, 400]
   # ---- 2026-10-09 追加分(並び順はデータの人気度で自動ソートされる) ----
   - id: unagi
+    group: 海鮮
     rakuten_ranking: kabayaki
     name: うなぎ
     emoji: "🐍"
@@ -206,6 +245,7 @@ categories:
     require: ["うなぎ", "鰻", "ウナギ"]
     range: [100, 5000]
   - id: mentaiko
+    group: 海鮮
     rakuten_ranking: seafood
     name: 明太子
     emoji: "🌶"
@@ -217,6 +257,7 @@ categories:
     require: ["明太子", "めんたいこ", "辛子明太"]
     range: [100, 5000]
   - id: tuna
+    group: 海鮮
     rakuten_ranking: seafood
     name: まぐろ
     emoji: "🍣"
@@ -227,6 +268,7 @@ categories:
     require: ["まぐろ", "マグロ", "鮪", "ネギトロ", "ねぎとろ"]
     range: [0.2, 10]
   - id: oyster
+    group: 海鮮
     rakuten_ranking: seafood
     name: 牡蠣
     emoji: "🦪"
@@ -237,6 +279,7 @@ categories:
     require: ["牡蠣", "カキ"]
     range: [0.3, 10]
   - id: gyutan
+    group: 肉
     rakuten_ranking: meat
     name: 牛タン
     emoji: "👅"
@@ -247,6 +290,7 @@ categories:
     require: ["牛タン", "牛たん"]
     range: [0.3, 10]
   - id: hamburg
+    group: 肉・惣菜
     rakuten_ranking: meat
     name: ハンバーグ
     emoji: "🍔"
@@ -257,6 +301,7 @@ categories:
     require: ["ハンバーグ"]
     range: [0.5, 15]
   - id: gyoza
+    group: 肉・惣菜
     rakuten_ranking: deli
     name: 餃子
     emoji: "🥟"
@@ -268,6 +313,7 @@ categories:
     require: ["餃子", "ぎょうざ", "ギョーザ"]
     range: [20, 1000]
   - id: sausage
+    group: 肉・惣菜
     rakuten_ranking: meat
     name: ウインナー
     emoji: "🌭"
@@ -278,6 +324,7 @@ categories:
     require: ["ウインナー", "ソーセージ", "ウィンナー"]
     range: [0.5, 15]
   - id: shine
+    group: 果物
     rakuten_ranking: grapes
     name: シャインマスカット
     emoji: "🍇"
@@ -288,6 +335,7 @@ categories:
     require: ["シャインマスカット"]
     range: [0.5, 10]
   - id: strawberry
+    group: 果物
     rakuten_ranking: fruit
     name: いちご
     emoji: "🍓"
@@ -298,6 +346,7 @@ categories:
     require: ["いちご", "苺", "イチゴ"]
     range: [0.3, 10]
   - id: peach
+    group: 果物
     rakuten_ranking: peach
     name: 桃
     emoji: "🍑"
@@ -308,6 +357,7 @@ categories:
     require: ["桃"]
     range: [1, 15]
   - id: melon
+    group: 果物
     rakuten_ranking: fruit
     name: メロン
     emoji: "🍈"
@@ -318,6 +368,7 @@ categories:
     require: ["メロン"]
     range: [1, 15]
   - id: udon
+    group: 麺
     rakuten_ranking: noodle
     name: うどん
     emoji: "🍜"
@@ -328,6 +379,7 @@ categories:
     require: ["うどん", "饂飩"]
     range: [0.5, 20]
   - id: soba
+    group: 麺
     rakuten_ranking: noodle
     name: そば
     emoji: "🥢"
@@ -338,6 +390,7 @@ categories:
     require: ["そば", "蕎麦"]
     range: [0.5, 20]
   - id: sparkling
+    group: 飲み物
     rakuten_ranking: beverage
     name: 炭酸水
     emoji: "🫧"
@@ -348,6 +401,7 @@ categories:
     require: ["炭酸水", "強炭酸", "スパークリングウォーター"]
     range: [6, 200]
   - id: tea
+    group: 飲み物
     rakuten_ranking: beverage
     name: お茶(ペットボトル)
     emoji: "🍵"
@@ -358,6 +412,7 @@ categories:
     require: ["茶"]
     range: [6, 200]
   - id: sake
+    group: 飲み物
     rakuten_ranking: sake
     name: 日本酒
     emoji: "🍶"
@@ -369,6 +424,7 @@ categories:
     range: [0.7, 30]
     note: "20歳未満の飲酒は法律で禁止されています。"
   - id: detergent
+    group: 日用品
     rakuten_ranking: daily
     name: 洗濯洗剤
     emoji: "🧺"
@@ -380,6 +436,7 @@ categories:
     range: [0.5, 30]
     note: "g表記の商品のみ比較しています(ml表記・ジェルボールは対象外)。"
   - id: kitchen
+    group: 日用品
     rakuten_ranking: daily
     name: キッチンペーパー
     emoji: "🧻"

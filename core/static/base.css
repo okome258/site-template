@@ -70,6 +70,21 @@ br.sp { display: inline; }
 .sim-banner span { font-size: 13px; color: var(--muted); }
 .sim-banner:hover { background: var(--soft); }
 
+/* 旬の特集: ページで一番目立たせる枠(金の縁) */
+.season { margin: 18px 0 8px; border: 2px solid var(--gold); border-radius: 14px; padding: 14px 14px 10px; background: #fffaf0; }
+.season-head h2 { margin: 0; font-size: 24px; color: #7a5410; }
+.season-label { display: inline-block; margin: 0 0 4px; font-size: 12px; font-weight: 700; color: #fff; background: var(--gold); border-radius: 4px; padding: 1px 8px; }
+.season-list-main { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.season-list-main a { display: grid; grid-template-columns: 56px 1fr auto; grid-template-rows: auto auto; column-gap: 10px; align-items: center; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid #ecdcb4; border-radius: 10px; padding: 8px; }
+.season-list-main a:hover { border-color: var(--gold); }
+.season-list-main img, .season-list-main .ph { grid-row: span 2; width: 56px; height: 56px; object-fit: cover; border-radius: 8px; background: var(--panel); }
+.season-list-main .sn { font-weight: 700; font-family: var(--head); font-size: 16px; }
+.season-list-main .sv { grid-row: span 2; font: 900 18px/1.2 var(--head); color: var(--accent); text-align: right; }
+.season-list-main .sv small { display: block; font-size: 11px; color: var(--muted); font-weight: 700; }
+.season-list-main .st { font-size: 12px; color: var(--muted); }
+.tabs a.season-tab { border-color: var(--gold); color: #7a5410; font-weight: 700; background: #fffaf0; }
+.more-cats { font-size: 13px; line-height: 2; }
+.more-cats a { margin-right: 12px; white-space: nowrap; }
 /* カテゴリ別1位の一覧表(トップ) */
 .h-board { margin-top: 28px; }
 .board { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -195,6 +210,11 @@ br.sp { display: inline; }
   .side-list a.on em { color: var(--accent); }
   .side-note { font-size: 11px; color: var(--muted); margin: 6px 0 0; }
   .side-about { display: block; margin-top: 14px; font-size: 13px; }
+  .season-h { color: #7a5410 !important; font-weight: 700; }
+  .season-list { border-top-color: var(--gold) !important; background: #fffaf0; }
+  .side-more { margin-top: 14px; }
+  .side-more summary { cursor: pointer; font-size: 13px; font-weight: 700; padding: 4px 0; }
+  .season-list-main { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 
   .rank-item { display: grid; grid-template-columns: minmax(0, 1fr) 290px 190px; column-gap: 20px; align-items: center; }
   .rank-item .btn { white-space: nowrap; font-size: 13px; padding: 9px 10px; }

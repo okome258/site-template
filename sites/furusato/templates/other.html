@@ -1,0 +1,10 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h1>その他のカテゴリ</h1>
+<p class="lead">定番以外のカテゴリも、寄付1万円あたりの量で比べています。</p>
+{% for gname, list in nav.groups %}
+<h2>{{ gname }}</h2>
+{% include "_board.html" %}
+{% endfor %}
+<p class="small" style="margin-top:16px">「相場との差」は、そのカテゴリで比べた返礼品の中央値に対して、1位が何倍の量か。</p>
+{% endblock %}

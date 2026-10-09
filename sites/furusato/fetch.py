@@ -21,7 +21,8 @@ def _town(shop: str) -> str:
     """ショップ名「福井県小浜市」→「小浜市」(他サイト検索用)。形が違えばそのまま。"""
     s = re.sub(r"[\(（].*$", "", shop).strip()
     s2 = PREF.sub("", s)
-    return s2 if re.search(r"[市町村区]$", s2) else s  # 楽天ふるさと納税の自治体ショップ(f + 自治体コード)
+    m = re.match(r"(.{1,8}?[市町村区])(?:$|[\s　_\-])", s2)
+    return m.group(1) if m else s  # 楽天ふるさと納税の自治体ショップ(f + 自治体コード)
 
 
 def _image(it: dict) -> str:
@@ -185,12 +186,30 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
             "context": {"cats": cats, "tax_year": year, "table_year": table_year, "picks": picks, "faq": faq}}
 
 
+def _season(cfg: dict, data: dict) -> dict | None:
+    month = int((data.get("fetched_at") or "2026-10")[5:7])
+    for s in cfg.get("seasons", []):
+        if month in s["months"]:
+            return s
+    return None
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
-    # カテゴリはレビュー件数の合計が多い順(=人気順)。データが無いものは最後
-    pop = {k: v.get("popularity", 0) for k, v in data.get("categories", {}).items()}
-    order = {c["id"]: i for i, c in enumerate(cfg["categories"])}
-    cats = sorted(cfg["categories"], key=lambda c: (-pop.get(c["id"], -1), order[c["id"]]))
-    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "genres": GENRE_RANKINGS},
+    allc = cfg["categories"]
+    byid = {c["id"]: c for c in allc}
+    top_ids = [i for i in cfg.get("top", []) if i in byid]
+    # 並び: 定番トップ → 残りは設定順(グループごとに見せる)
+    cats = [byid[i] for i in top_ids] + [c for c in allc if c["id"] not in top_ids]
+    tops = [byid[i] for i in top_ids]
+    others = [c for c in allc if c["id"] not in top_ids]
+    groups = {}
+    for c in others:
+        groups.setdefault(c.get("group", "その他"), []).append(c)
+    season = _season(cfg, data)
+    if season:
+        season = {**season, "cats": [byid[i] for i in season["cats"] if i in byid]}
+    nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season}
+    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
            "title": f"ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})
@@ -205,14 +224,19 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             "template": "category.html",
             "title": f"{c['name']}のふるさと納税 量コスパランキング【{ym}】",
             "description": desc,
-            "context": {"cats": cats, "cat": c, "rank": r, "ym": ym, "jsonld": {
+            "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym, "jsonld": {
                 "@context": "https://schema.org", "@type": "ItemList",
                 "name": f"{c['name']}のふるさと納税 量コスパランキング",
                 "itemListElement": [
                     {"@type": "ListItem", "position": i + 1, "name": it["name"][:100], "url": it["url"]}
                     for i, it in enumerate(r.get("items", [])[:10])]}},
         })
-    ps.append(_simulator_page(cfg, data, cats))
+    sim = _simulator_page(cfg, data, cats)
+    sim["context"]["nav"] = nav
+    ps.append(sim)
+    ps.append({"path": "other/index.html", "template": "other.html", "title": "その他のカテゴリ",
+               "description": "日用品・果物・麺・飲み物など、定番以外のふるさと納税の返礼品も寄付1万円あたりの量で比較。",
+               "context": {"cats": cats, "nav": nav}})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
-               "context": {"cats": cats}, "changefreq": "monthly"})
+               "context": {"cats": cats, "nav": nav}, "changefreq": "monthly"})
     return ps

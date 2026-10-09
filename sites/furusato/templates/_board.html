@@ -1,0 +1,16 @@
+{# カテゴリごとの1位を並べる表。引数: list, show_head #}
+<table class="board">
+  <thead><tr><th>カテゴリ</th><th class="num">1万円あたり</th><th class="hide-sp">1位の自治体</th><th class="num hide-sp">相場との差</th></tr></thead>
+  <tbody>
+  {% for c in list %}
+    {% set r = data.categories.get(c.id, {}) %}
+    {% set t1 = r["items"][0] if r.get("items") else None %}
+    <tr>
+      <th scope="row"><a href="{{ page.root }}c/{{ c.id }}/">{{ c.name }}</a></th>
+      <td class="num v">{{ best(c) or "集計中" }}</td>
+      <td class="hide-sp">{{ (t1.town or t1.shop) if t1 else "" }}</td>
+      <td class="num hide-sp">{% if t1 and t1.vs_median %}{{ "%.1f" | format(t1.vs_median) }}倍{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
