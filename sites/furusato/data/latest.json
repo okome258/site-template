@@ -1115,8 +1115,8 @@
     "median_per10k": 0.588,
     "median_unit_price": 17037,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
-    "towns": 49
+    "max_unit_price": 37500,
+    "towns": 50
    },
    "popularity": 2075
   },
@@ -1698,7 +1698,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.67
+     "vs_median": 2.44
     },
     {
      "code": "f464040-nagashima:10000645",
@@ -1716,7 +1716,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.57
+     "vs_median": 2.36
     },
     {
      "code": "f434841-tsunagi:10000052",
@@ -1734,7 +1734,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.36
+     "vs_median": 2.17
     },
     {
      "code": "f464040-nagashima:10000644",
@@ -1752,7 +1752,7 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.29
+     "vs_median": 2.1
     },
     {
      "code": "f452025-miyakonojo:10007038",
@@ -1770,7 +1770,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 2.0
+     "vs_median": 1.83
     },
     {
      "code": "f462080-izumi:10000302",
@@ -1788,7 +1788,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.94
+     "vs_median": 1.77
     },
     {
      "code": "f442089-taketa:10000327",
@@ -1806,7 +1806,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.89
+     "vs_median": 1.74
     },
     {
      "code": "f452025-miyakonojo:10004095",
@@ -1824,7 +1824,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.85
+     "vs_median": 1.69
     },
     {
      "code": "f462063-akune:10000743",
@@ -1842,7 +1842,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.85
+     "vs_median": 1.69
     },
     {
      "code": "f452025-miyakonojo:10004700",
@@ -1860,7 +1860,7 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.64
+     "vs_median": 1.5
     },
     {
      "code": "f452025-miyakonojo:10004478",
@@ -1878,7 +1878,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.64
+     "vs_median": 1.5
     },
     {
      "code": "f464040-nagashima:10000636",
@@ -1896,7 +1896,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.6
+     "vs_median": 1.47
     },
     {
      "code": "f454028-shintomi:10001238",
@@ -1914,7 +1914,7 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.48
+     "vs_median": 1.35
     },
     {
      "code": "f453820-kunitomi:10000957",
@@ -1932,7 +1932,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.39
+     "vs_median": 1.28
     },
     {
      "code": "f442089-taketa:10000021",
@@ -1950,7 +1950,7 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.26
+     "vs_median": 1.16
     },
     {
      "code": "f422029-sasebo:10004651",
@@ -1968,7 +1968,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.1
     },
     {
      "code": "f452068-hyuga:10000841",
@@ -1986,7 +1986,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.1
     },
     {
      "code": "f442089-taketa:10000020",
@@ -2004,7 +2004,7 @@
      "review_avg": 4.54,
      "review_count": 181,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.0
     },
     {
      "code": "f452068-hyuga:10000838",
@@ -2022,7 +2022,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.0
     },
     {
      "code": "f452076-kushima:10000700",
@@ -2040,7 +2040,7 @@
      "review_avg": 4.73,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.92
     },
     {
      "code": "f342041-mihara:10000847",
@@ -2058,7 +2058,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.92
     },
     {
      "code": "f342041-mihara:10000949",
@@ -2076,7 +2076,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.92
     },
     {
      "code": "f212059-seki:10004151",
@@ -2094,7 +2094,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.86
     },
     {
      "code": "f342041-mihara:10000839",
@@ -2112,7 +2112,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.85
     },
     {
      "code": "f075485-katsurao:10000015",
@@ -2130,7 +2130,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.85
     },
     {
      "code": "f462187-kirishima:10001267",
@@ -2148,7 +2148,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.87
+     "vs_median": 0.8
     },
     {
      "code": "f342041-mihara:10000848",
@@ -2166,7 +2166,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.79
     },
     {
      "code": "f212059-seki:10004159",
@@ -2184,7 +2184,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.79
+     "vs_median": 0.72
     },
     {
      "code": "f072133-date:10000403",
@@ -2202,7 +2202,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.77
+     "vs_median": 0.71
     },
     {
      "code": "f352110-nagato:10000189",
@@ -2220,24 +2220,24 @@
      "review_avg": 4.96,
      "review_count": 24,
      "wakeari": false,
-     "vs_median": 0.77
+     "vs_median": 0.71
     }
    ],
-   "candidates": 166,
-   "ranked": 39,
+   "candidates": 167,
+   "ranked": 38,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 76,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 1.667,
+    "median_per10k": 1.818,
     "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 23
+    "towns": 22
    },
    "popularity": 1543
   },
@@ -3349,10 +3349,10 @@
    "ranked": 35,
    "dropped": {
     "選択式": 41,
-    "対象外の商品": 51,
+    "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
@@ -15927,11 +15927,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 76,
+   "candidates": 77,
    "ranked": 15,
    "dropped": {
     "選択式": 10,
-    "量なし": 26,
+    "量なし": 27,
     "対象外の商品": 24,
     "量が範囲外": 1
    },
@@ -15993,5 +15993,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-09T18:47+09:00"
+ "fetched_at": "2026-10-09T18:55+09:00"
 }
