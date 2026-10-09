@@ -79,3 +79,8 @@ def test_two_pack_variants_rejected():
 def test_same_total_written_two_ways_ok():
     q, _ = parse_quantity("豚こま 250g×8 500g×4 2kg", "weight")
     assert q == pytest.approx(2)
+
+
+def test_variant_with_times_one_rejected():
+    q, _ = parse_quantity("明太子 切れ子 1kg (1kg×1箱） 2kg (1kg×2箱）", "weight")
+    assert q is None

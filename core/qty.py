@@ -72,7 +72,7 @@ def parse_quantity(name: str, kind: str, count_units: list[str] | None = None):
             nets.append((q, nm.group(1) + text))
         elif (tm := TOTAL_MARK.search(before)):
             totals.append((q, tm.group(1) + text))
-        elif mult > 1:
+        elif "×" in text:  # 「1kg×1箱」も掛け算表記として扱う(容量違い併記の検出のため)
             multiplied.add((q, text))
         else:
             standalone.add((q, text))
