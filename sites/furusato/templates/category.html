@@ -38,7 +38,7 @@
         <div class="rank-score">{{ it.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small>{% if it.vs_median %} <span class="vs {{ 'up' if it.vs_median >= 1 else 'down' }}">相場の{{ "%.1f" | format(it.vs_median) }}倍</span>{% endif %}</div>
         <p class="rank-name">{{ it.name }}</p>
         <div class="rank-meta">
-          {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}<span>{{ it.shop }}</span>{% if it.review_count %}<span>★{{ it.review_avg }}（{{ it.review_count | num }}件）</span>{% endif %}
+          {% if it.wakeari %}<span class="badge">訳あり</span>{% endif %}<span class="loc">{{ jp_mini(it.shop) }}{{ it.shop }}</span>{% if it.review_count %}<span>★{{ it.review_avg }}（{{ it.review_count | num }}件）</span>{% endif %}
         </div>
       </div>
     </div>

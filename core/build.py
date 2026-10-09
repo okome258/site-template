@@ -26,6 +26,9 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from core.japan import jp_mini, jp_symbol  # noqa: E402
+
 import yaml
 from jinja2 import ChoiceLoader, Environment, FileSystemLoader, select_autoescape
 
@@ -120,6 +123,7 @@ def make_env(cfg: dict) -> Environment:
         trim_blocks=True, lstrip_blocks=True,
     )
     env.filters.update(yen=_yen, num=_num, jdate=_date)
+    env.globals.update(jp_symbol=jp_symbol, jp_mini=jp_mini)  # 日本のタイル地図
     return env
 
 
