@@ -64,7 +64,11 @@ main { min-width: 0; }
 .say { display: inline-block; margin: 8px 0 0; font-size: 13px; color: var(--ink); background: var(--panel); border-radius: 12px 12px 12px 2px; padding: 4px 12px; }
 br.sp { display: inline; }
 
-/* シミュレーターへの入口 */
+/* シミュレーターへの入口(トップは細い帯) */
+.sim-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; text-decoration: none; color: var(--ink); border: 2px solid var(--accent); border-radius: 10px; padding: 8px 14px; margin: 0 0 4px; }
+.sim-strip b { font-family: var(--head); color: var(--accent); font-size: 16px; }
+.sim-strip span { font-size: 13px; color: var(--muted); }
+.sim-strip:hover { background: var(--soft); }
 .sim-banner { display: block; text-decoration: none; color: var(--ink); border: 2px solid var(--accent); border-radius: 12px; padding: 12px 16px; margin: 0 0 8px; }
 .sim-banner b { display: block; font-family: var(--head); font-size: 18px; color: var(--accent); }
 .sim-banner span { font-size: 13px; color: var(--muted); }
