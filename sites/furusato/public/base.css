@@ -34,11 +34,13 @@ h2 { font-size: 19px; font-weight: 700; margin: 36px 0 10px; word-break: auto-ph
 .site-header { background: var(--accent); color: #fff; }
 .site-header .wrap { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 10px; padding-top: 12px; padding-bottom: 12px; }
 .logo { grid-row: span 2; display: contents; color: #fff; text-decoration: none; }
-.logo-img { grid-row: span 2; width: 44px; height: 44px; background: #fff; border-radius: 50%; padding: 2px; }
+.logo-img { grid-row: span 2; width: 44px; height: 44px; background: #fff; border-radius: 50%; padding: 2px; object-fit: cover; }
 .logo-mark { grid-row: span 2; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.2); display: grid; place-items: center; font-size: 20px; }
 .logo-text { font-size: 22px; font-weight: 900; line-height: 1.25; color: #fff; letter-spacing: .02em; }
 .tagline { color: rgba(255,255,255,.88); font-size: 12px; }
-.updated { grid-column: 1 / -1; justify-self: start; margin-top: 8px; background: #fff; color: var(--accent); font-size: 13px; border-radius: 999px; padding: 2px 12px; font-weight: 500; }
+.hdr-info { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-top: 8px; }
+.deadline { font-size: 12px; color: rgba(255,255,255,.92); }
+.updated { background: #fff; color: var(--accent); font-size: 13px; border-radius: 999px; padding: 2px 12px; font-weight: 500; }
 .updated b { font-weight: 700; font-family: var(--head); }
 .updated.old { background: #fff3cd; color: #8a5a00; }
 
@@ -58,19 +60,12 @@ main { min-width: 0; }
 
 /* トップの導入 */
 .hero { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; margin: 4px 0 18px; }
-.hero-bird { width: 96px; height: auto; }
+.hero-bird { width: 104px; height: auto; }
 .hero h1 { margin: 0 0 6px; }
 .hero .lead { margin: 0; }
 .say { display: inline-block; margin: 8px 0 0; font-size: 13px; color: var(--ink); background: var(--panel); border-radius: 12px 12px 12px 2px; padding: 4px 12px; }
 br.sp { display: inline; }
 
-/* 締め切りカウントダウン */
-.countdown { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin: 0 0 10px; padding: 8px 14px; border-radius: 10px; background: var(--ink); color: #fff; }
-.countdown .cd-label { font-size: 13px; }
-.countdown .cd-days { font: 900 24px/1.2 var(--head); color: #ffd36b; }
-.countdown .cd-sub { width: 100%; font-size: 11px; opacity: .8; }
-.countdown.urgent { background: var(--accent); }
-.countdown.urgent .cd-days { color: #fff; }
 /* シミュレーターへの入口(トップは細い帯) */
 .sim-strip { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; text-decoration: none; color: var(--ink); border: 2px solid var(--accent); border-radius: 10px; padding: 8px 14px; margin: 0 0 4px; }
 .sim-strip b { font-family: var(--head); color: var(--accent); font-size: 16px; }
@@ -193,12 +188,13 @@ br.sp { display: inline; }
   h1 { font-size: 28px; }
   br.sp { display: none; }
   .hero { grid-template-columns: 150px 1fr; gap: 20px; }
-  .hero-bird { width: 150px; }
+  .hero-bird { width: 170px; }
   .site-header .wrap { grid-template-columns: auto auto 1fr auto; padding-top: 14px; padding-bottom: 14px; }
   .logo-img { grid-row: auto; width: 52px; height: 52px; }
   .logo-text { font-size: 30px; }
   .tagline { font-size: 13px; align-self: end; padding-bottom: 6px; }
-  .updated { grid-column: auto; justify-self: end; margin: 0; font-size: 14px; }
+  .hdr-info { grid-column: auto; justify-self: end; margin: 0; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .updated { font-size: 14px; }
   .hide-sp { display: table-cell; }
   .pop-main { grid-template-columns: 1fr 1fr; }
   .rank-top { grid-template-columns: 96px 1fr; }

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【2026年10月最新】</title>
 <meta name="description" content="楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。">
-<link rel="canonical" href="https://furusato-kosupa.okomen.workers.dev/"><meta property="og:title" content="ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【2026年10月最新】">
+<link rel="canonical" href="https://furusato.otokuest.com/"><meta property="og:title" content="ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【2026年10月最新】">
 <meta property="og:description" content="楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://furusato-kosupa.okomen.workers.dev/"><meta property="og:site_name" content="ふるさと納税 量コスパ比較">
-<meta property="og:image" content="https://furusato-kosupa.okomen.workers.dev/ogp.png">
+<meta property="og:url" content="https://furusato.otokuest.com/"><meta property="og:site_name" content="ふるさと納税 量コスパ比較">
+<meta property="og:image" content="https://furusato.otokuest.com/ogp.png">
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#b23a2a">
-<link rel="icon" href="./fukura-face.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="./favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=Zen+Maru+Gothic:wght@700;900&display=swap"><link rel="stylesheet" href="./base.css">
 <style>:root{--accent: #b23a2a;}</style>
 <meta name="google-site-verification" content="SC7yeTNVBtuerKfU-OZfA9tPcD6pXcqacd6m4AzjHY8"></head>
@@ -20,8 +20,20 @@
 <div class="pr-bar" role="note"><span class="pr">PR</span>本ページは広告（アフィリエイト）を含みます</div>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="./"><img class="logo-img" src="./fukura-face.svg" alt="" width="44" height="44"><span class="logo-text">ふるさと納税 量コスパ比較</span></a>
-<span class="tagline">寄付1万円あたり、どれだけ届く？</span>    <span class="updated" data-ts="2026-10-09T16:09+09:00"><b>2026/10/09 16:09</b> 更新<span class="ago"></span></span>
+    <a class="logo" href="./"><img class="logo-img" src="./fukusuke-face.png" alt="" width="44" height="44"><span class="logo-text">ふるさと納税 量コスパ比較</span></a>
+<span class="tagline">寄付1万円あたり、どれだけ届く？</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-09T16:48+09:00"><b>2026/10/09 16:48</b> 更新<span class="ago"></span></span><span class="deadline" id="deadline" hidden></span>
+<script>
+(function(){try{
+  var now=new Date(Date.now()+9*3600e3), y=now.getUTCFullYear(), m=now.getUTCMonth()+1, d=now.getUTCDate();
+  var today=Date.UTC(y,m-1,d), el=document.getElementById('deadline'); if(!el) return;
+  function days(t){return Math.round((t-today)/864e5);}
+  var txt;
+  if(m>=10){ var n=days(Date.UTC(y,11,31)); txt= n<=0 ? '今年の締め切りは今日まで' : '今年の締め切り12/31まであと'+n+'日'; }
+  else if(m==1 && d<=10){ var n2=days(Date.UTC(y,0,10)); txt= n2<=0 ? 'ワンストップ特例は今日必着' : 'ワンストップ特例の申請は1/10必着（あと'+n2+'日）'; }
+  else return;
+  el.textContent=txt; el.hidden=false;
+}catch(e){}})();
+</script></span>
   </div>
 </header>
 <div class="tabs-wrap"><nav class="tabs" aria-label="カテゴリ">
@@ -99,7 +111,7 @@
 </aside>
 <main>
 <section class="hero">
-  <img class="hero-bird" src="./fukura.svg" alt="ふくら雀のふくすけ" width="170" height="153">
+  <img class="hero-bird" src="./fukusuke.webp" alt="ふくら雀のふくすけ" width="170" height="168">
   <div>
     <h1>寄付1万円で、<br class="sp">いちばん多く届く返礼品は？</h1>
     <p class="lead">楽天ふるさと納税の返礼品を、内容量 ÷ 寄付額で毎日ランキングしています。全35カテゴリ。</p>
@@ -107,27 +119,7 @@
   </div>
 </section>
 
-<div class="countdown" id="countdown" hidden>
-  <span class="cd-label"></span><b class="cd-days"></b><span class="cd-sub"></span>
-</div>
-<script>
-(function(){try{
-  var now=new Date(Date.now()+9*3600e3), y=now.getUTCFullYear(), m=now.getUTCMonth()+1, d=now.getUTCDate();
-  var today=Date.UTC(y,m-1,d), el=document.getElementById('countdown'); if(!el) return;
-  function days(t){return Math.round((t-today)/864e5);}
-  var label, n, sub;
-  if(m>=10){ n=days(Date.UTC(y,11,31)); label='今年のふるさと納税の締め切り（12/31）まで';
-    sub='ワンストップ特例の申請書は翌年1/10必着'; }
-  else if(m==1 && d<=10){ n=days(Date.UTC(y,0,10)); label='ワンストップ特例の申請期限（1/10必着）まで';
-    sub='間に合わない場合は確定申告で手続きできます'; }
-  else return;
-  el.querySelector('.cd-label').textContent=label;
-  el.querySelector('.cd-days').textContent= n<=0 ? '今日まで' : 'あと'+n+'日';
-  el.querySelector('.cd-sub').textContent=sub;
-  if(n<=14) el.classList.add('urgent');
-  el.hidden=false;
-}catch(e){}})();
-</script><a class="sim-strip" href="./simulator/"><b>いくらまで寄付できる？</b><span>年収を入れるだけで控除上限額を計算</span></a>
+<a class="sim-strip" href="./simulator/"><b>いくらまで寄付できる？</b><span>年収を入れるだけで控除上限額を計算</span></a>
 
 <section class="season" id="season">
   <div class="season-head">
@@ -253,7 +245,7 @@
   <div class="wrap">
 <p class="small">「1万円あたりの量」は商品名に書かれた内容量 ÷ 寄付額で機械的に計算しています。<a href="./about/">計算方法</a></p>
     <p class="small">当サイトはアフィリエイト広告（楽天アフィリエイト等）を利用しています。リンク先での購入・寄付により当サイトに収益が発生する場合があります。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/09 16:09</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/09 16:48</p>
     <p class="small"><a href="https://developers.rakuten.com/" target="_blank" rel="noopener">Supported by Rakuten Developers</a></p>
     <p class="small">&copy; 2026 ふるさと納税 量コスパ比較</p>
   </div>
