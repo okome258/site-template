@@ -1683,6 +1683,24 @@
   "chicken": {
    "items": [
     {
+     "code": "f454010-takanabe:10001215",
+     "name": "【小分け】【大容量】＜鶏もも肉・鶏むね肉セット 各250g（各7パック 計3.5kg/各14パック 計7.0kg/各21パック 計10.5kg）＞翌月末迄に順次出荷 鶏肉 モモ肉 ムネ肉 冷凍 宮崎県産 国産 宮崎県 高鍋町 送料無料",
+     "price": 18000,
+     "qty": 10.5,
+     "evidence": "計10.5kg",
+     "per10k": 5.833,
+     "unit_price": 1714,
+     "shop": "宮崎県高鍋町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sj6go.ia33055a.g00sj6go.ia331cf9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff454010-takanabe%2Fkf_10%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff454010-takanabe%2Fi%2F10001215%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高鍋町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f454010-takanabe/cabinet/11698978/imgrc0102226341.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 3.21
+    },
+    {
      "code": "f032140-hachimantai:10001035",
      "name": "鶏肉 岩手県産 菜彩鶏 むね肉 4kgセット（1kg×4 計4kg）／ 国産 国産鶏 ブランド鶏 ブランド肉 お肉 鶏むね 鶏 もも 鳥肉 とりにく ムネ 冷凍 さいさいどり おすすめ 岩手県 八幡平市 送料無料 十文字 チキン カンパニー 八幡平工場",
      "price": 9000,
@@ -2203,30 +2221,12 @@
      "review_count": 0,
      "wakeari": false,
      "vs_median": 0.71
-    },
-    {
-     "code": "f352110-nagato:10000189",
-     "name": "長州どり もも肉 1.8kg（300g×6パック）【鶏肉 小分け もも カット もも肉 チキン モモ肉 とりにく 切り身 とり肉 国産 冷凍 精肉 カット済 小分けパック】",
-     "price": 14000,
-     "qty": 1.8,
-     "evidence": "300g×6",
-     "per10k": 1.286,
-     "unit_price": 7778,
-     "shop": "山口県長門市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpggo.ia330cfb.g00tpggo.ia331b7e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff352110-nagato%2F1006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff352110-nagato%2Fi%2F10000189%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "長門市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f352110-nagato/cabinet/07428829/imgrc0087924504.jpg?_ex=240x240",
-     "review_avg": 4.96,
-     "review_count": 24,
-     "wakeari": false,
-     "vs_median": 0.71
     }
    ],
    "candidates": 167,
-   "ranked": 38,
+   "ranked": 40,
    "dropped": {
-    "対象外の商品": 76,
+    "対象外の商品": 74,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
@@ -2235,9 +2235,9 @@
    "summary": {
     "median_per10k": 1.818,
     "median_unit_price": 6000,
-    "min_unit_price": 2250,
+    "min_unit_price": 1714,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 24
    },
    "popularity": 1543
   },
@@ -3349,10 +3349,10 @@
    "ranked": 35,
    "dropped": {
     "選択式": 41,
-    "対象外の商品": 52,
+    "対象外の商品": 51,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 6
+    "量が範囲外": 7
    },
    "summary": {
     "median_per10k": 0.727,
@@ -7453,10 +7453,10 @@
      "vs_median": 0.73
     }
    ],
-   "candidates": 123,
+   "candidates": 124,
    "ranked": 16,
    "dropped": {
-    "対象外の商品": 70,
+    "対象外の商品": 71,
     "選択式": 13,
     "量が範囲外": 18,
     "量が複数": 2,
@@ -10275,7 +10275,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 2.19
+     "vs_median": 2.22
     },
     {
      "code": "f282243-minamiawaji:10003501",
@@ -10293,7 +10293,7 @@
      "review_avg": 4.8,
      "review_count": 46,
      "wakeari": false,
-     "vs_median": 2.02
+     "vs_median": 2.05
     },
     {
      "code": "f412040-taku:10000336",
@@ -10311,7 +10311,7 @@
      "review_avg": 4.43,
      "review_count": 383,
      "wakeari": false,
-     "vs_median": 1.97
+     "vs_median": 2.0
     },
     {
      "code": "f412040-taku:10000676",
@@ -10329,7 +10329,7 @@
      "review_avg": 4.47,
      "review_count": 98,
      "wakeari": false,
-     "vs_median": 1.97
+     "vs_median": 2.0
     },
     {
      "code": "f452025-miyakonojo:10000011",
@@ -10347,7 +10347,7 @@
      "review_avg": 4.28,
      "review_count": 185,
      "wakeari": false,
-     "vs_median": 1.63
+     "vs_median": 1.65
     },
     {
      "code": "f282260-awaji:10002041",
@@ -10365,7 +10365,7 @@
      "review_avg": 4.69,
      "review_count": 65,
      "wakeari": false,
-     "vs_median": 1.52
+     "vs_median": 1.54
     },
     {
      "code": "f282260-awaji:10001401",
@@ -10383,7 +10383,7 @@
      "review_avg": 4.83,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 1.41
+     "vs_median": 1.43
     },
     {
      "code": "f016438-makubetsu:10000474",
@@ -10401,7 +10401,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.17
+     "vs_median": 1.19
     },
     {
      "code": "f434230-minamioguni:10000256",
@@ -10419,7 +10419,7 @@
      "review_avg": 4.58,
      "review_count": 146,
      "wakeari": false,
-     "vs_median": 1.13
+     "vs_median": 1.15
     },
     {
      "code": "f282260-awaji:10000854",
@@ -10437,7 +10437,7 @@
      "review_avg": 4.66,
      "review_count": 157,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.04
     },
     {
      "code": "f062065-sagae:10000823",
@@ -10455,7 +10455,7 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.02
     },
     {
      "code": "f252026-hikone:10000825",
@@ -10473,7 +10473,7 @@
      "review_avg": 4.77,
      "review_count": 98,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 1.0
     },
     {
      "code": "f015431-bihoro:10000382",
@@ -10491,7 +10491,7 @@
      "review_avg": 4.6,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.88
+     "vs_median": 0.89
     },
     {
      "code": "f412040-taku:10000185",
@@ -10509,7 +10509,7 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.82
+     "vs_median": 0.83
     },
     {
      "code": "f412040-taku:10000530",
@@ -10527,7 +10527,7 @@
      "review_avg": 4.82,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.75
+     "vs_median": 0.76
     },
     {
      "code": "f393070-geisei:10001139",
@@ -10545,7 +10545,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.7
+     "vs_median": 0.71
     },
     {
      "code": "f464040-nagashima:10001154",
@@ -10563,7 +10563,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.64
+     "vs_median": 0.65
     },
     {
      "code": "f253847-ryuo:10001410",
@@ -10580,6 +10580,24 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f253847-ryuo/cabinet/09876757/am019_021r_sku.jpg?_ex=240x240",
      "review_avg": 4.62,
      "review_count": 253,
+     "wakeari": false,
+     "vs_median": 0.64
+    },
+    {
+     "code": "f172120-nonoichi:10000088",
+     "name": "【温めるだけ!】石川県ブランド「能登牛&能登豚」和風おろしとデミグラスハンバーグ 120g x 8個_ ハンバーグ 能登牛 ブランド牛 冷凍 惣菜 おかず 美味しい グルメ デミグラス 和風 おろし 人気 おすすめ 送料無料 ご当地 【配送不可地域：離島】【1367319】",
+     "price": 17000,
+     "qty": 0.96,
+     "evidence": "120g×8",
+     "per10k": 0.565,
+     "unit_price": 17708,
+     "shop": "石川県野々市市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tqbqo.ia330361.g00tqbqo.ia331fd4/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff172120-nonoichi%2F1367319%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff172120-nonoichi%2Fi%2F10000088%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "野々市市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f172120-nonoichi/cabinet/0829_1367319_01.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 3,
      "wakeari": false,
      "vs_median": 0.63
     },
@@ -10617,7 +10635,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.45
+     "vs_median": 0.46
     },
     {
      "code": "f402052-iizuka:10002144",
@@ -10635,7 +10653,7 @@
      "review_avg": 4.23,
      "review_count": 13,
      "wakeari": false,
-     "vs_median": 0.36
+     "vs_median": 0.37
     },
     {
      "code": "f462195-itikikusikino:10000066",
@@ -10657,22 +10675,22 @@
     }
    ],
    "candidates": 98,
-   "ranked": 22,
+   "ranked": 23,
    "dropped": {
-    "選択式": 32,
+    "選択式": 31,
     "対象外の商品": 30,
     "量なし": 9,
     "量が複数": 3,
     "量が範囲外": 2
    },
    "summary": {
-    "median_per10k": 0.914,
+    "median_per10k": 0.9,
     "median_unit_price": 11111,
     "min_unit_price": 5000,
     "max_unit_price": 30556,
-    "towns": 17
+    "towns": 18
    },
-   "popularity": 1660
+   "popularity": 1663
   },
   "gyoza": {
    "items": [
@@ -15637,11 +15655,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 72,
+   "candidates": 73,
    "ranked": 24,
    "dropped": {
     "選択式": 18,
-    "量なし": 11,
+    "量なし": 12,
     "対象外の商品": 17,
     "量が複数": 2
    },
@@ -15927,11 +15945,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 77,
+   "candidates": 76,
    "ranked": 15,
    "dropped": {
     "選択式": 10,
-    "量なし": 27,
+    "量なし": 26,
     "対象外の商品": 24,
     "量が範囲外": 1
    },
@@ -15993,5 +16011,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-09T18:55+09:00"
+ "fetched_at": "2026-10-09T19:03+09:00"
 }
