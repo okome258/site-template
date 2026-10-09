@@ -96,9 +96,8 @@ br.sp { display: inline; }
 .board { width: 100%; border-collapse: collapse; font-size: 14px; }
 .board th, .board td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; font-weight: 400; }
 .board thead th { font-size: 12px; color: var(--muted); border-bottom: 2px solid var(--ink); }
-.board tbody tr { position: relative; cursor: pointer; }
 .board tbody th a { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-.board tbody th a::after { content: ""; position: absolute; inset: 0; } /* 行全体をタップ可能に */
+.board tbody th a { display: block; } /* カテゴリ名のマス全体をタップ可能に */
 .board tbody td.v::after { content: "›"; margin-left: 8px; color: var(--muted); font-weight: 400; }
 .board tbody tr:hover { background: var(--panel); }
 .season-list-main a { position: relative; padding-right: 22px; }
