@@ -22,7 +22,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../"><img class="logo-img" src="../fukura-face.svg" alt="" width="44" height="44"><span class="logo-text">ふるさと納税 量コスパ比較</span></a>
-<span class="tagline">寄付1万円あたり、どれだけ届く？</span>    <span class="updated" data-ts="2026-10-09T16:02+09:00"><b>2026/10/09 16:02</b> 更新<span class="ago"></span></span>
+<span class="tagline">寄付1万円あたり、どれだけ届く？</span>    <span class="updated" data-ts="2026-10-09T16:09+09:00"><b>2026/10/09 16:09</b> 更新<span class="ago"></span></span>
   </div>
 </header>
 <div class="tabs-wrap"><nav class="tabs" aria-label="カテゴリ">
@@ -102,7 +102,27 @@
 <h1>ふるさと納税 控除上限額シミュレーター<span class="h1-sub">2026年（令和8年）の税制に対応</span></h1>
 <p class="lead">年収と家族構成を入れると、自己負担2,000円で寄付できる上限額の目安がすぐ分かります。そのまま「上限内で一番量が多い返礼品」も表示します。</p>
 
-<form class="sim card" id="sim" onsubmit="return false">
+<div class="countdown" id="countdown" hidden>
+  <span class="cd-label"></span><b class="cd-days"></b><span class="cd-sub"></span>
+</div>
+<script>
+(function(){try{
+  var now=new Date(Date.now()+9*3600e3), y=now.getUTCFullYear(), m=now.getUTCMonth()+1, d=now.getUTCDate();
+  var today=Date.UTC(y,m-1,d), el=document.getElementById('countdown'); if(!el) return;
+  function days(t){return Math.round((t-today)/864e5);}
+  var label, n, sub;
+  if(m>=10){ n=days(Date.UTC(y,11,31)); label='今年のふるさと納税の締め切り（12/31）まで';
+    sub='ワンストップ特例の申請書は翌年1/10必着'; }
+  else if(m==1 && d<=10){ n=days(Date.UTC(y,0,10)); label='ワンストップ特例の申請期限（1/10必着）まで';
+    sub='間に合わない場合は確定申告で手続きできます'; }
+  else return;
+  el.querySelector('.cd-label').textContent=label;
+  el.querySelector('.cd-days').textContent= n<=0 ? '今日まで' : 'あと'+n+'日';
+  el.querySelector('.cd-sub').textContent=sub;
+  if(n<=14) el.classList.add('urgent');
+  el.hidden=false;
+}catch(e){}})();
+</script><form class="sim card" id="sim" onsubmit="return false">
   <label>給与の年収（額面・税込）
     <span class="in"><input id="inc" type="number" inputmode="numeric" min="0" step="10" value="500"><em>万円</em></span>
   </label>
@@ -134,7 +154,7 @@
 </section>
 
 <h2>この金額で寄付できる「量コスパ1位」</h2>
-<p class="small">各カテゴリで、寄付額が上限以内のうち「1万円あたりの量」が一番多い返礼品です（2026/10/09 16:02 時点）。</p>
+<p class="small">各カテゴリで、寄付額が上限以内のうち「1万円あたりの量」が一番多い返礼品です（2026/10/09 16:09 時点）。</p>
 <div class="grid" id="picks"></div>
 
 <h2>計算のしかた</h2>
@@ -210,7 +230,7 @@
   <div class="wrap">
 <p class="small">「1万円あたりの量」は商品名に書かれた内容量 ÷ 寄付額で機械的に計算しています。<a href="../about/">計算方法</a></p>
     <p class="small">当サイトはアフィリエイト広告（楽天アフィリエイト等）を利用しています。リンク先での購入・寄付により当サイトに収益が発生する場合があります。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/09 16:02</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/09 16:09</p>
     <p class="small"><a href="https://developers.rakuten.com/" target="_blank" rel="noopener">Supported by Rakuten Developers</a></p>
     <p class="small">&copy; 2026 ふるさと納税 量コスパ比較</p>
   </div>
