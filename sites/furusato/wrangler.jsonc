@@ -4,6 +4,7 @@
   "name": "furusato-kosupa",
   "main": "worker.js",
   "compatibility_date": "2026-10-01",
+  "workers_dev": true,
   "vars": { "CANONICAL_HOST": "furusato.otokuest.com" },
   "assets": {
     "directory": "./public",
