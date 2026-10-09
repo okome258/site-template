@@ -31,7 +31,7 @@
     {% if loop.first %}<p class="pick-say"><img src="{{ page.root }}fukusuke-face.png" alt="" width="28" height="28">いちばん量が多いのはこれチュン</p>{% endif %}
     <div class="rank-top">
       <a class="rank-thumb" href="{{ it.url }}" target="_blank" rel="sponsored noopener">
-        {% if it.image %}<img class="rank-img" src="/_img?u={{ it.image | urlencode }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}
+        {% if it.image %}<img class="rank-img" src="/i/{{ it.image | replace('https://thumbnail.image.rakuten.co.jp/', '') }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}
         <span class="rank-no">{{ loop.index }}</span>
       </a>
       <div class="rank-body">

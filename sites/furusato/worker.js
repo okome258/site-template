@@ -12,14 +12,11 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
     // 楽天の商品画像を自サイト経由で配信(直リンクだと表示されないため)。楽天の画像サーバーだけ許可
-    if (url.pathname === "/_img") {
-      const src = url.searchParams.get("u") || "";
-      let target;
-      try { target = new URL(src); } catch { return new Response("bad", { status: 400 }); }
-      if (target.protocol !== "https:" || target.hostname !== "thumbnail.image.rakuten.co.jp") {
-        return new Response("forbidden", { status: 403 });
-      }
-      const res = await fetch(target.toString(), {
+    // 楽天の商品画像を自サイト経由で配信(直リンクや広告ブロックで表示されないため)。
+    // /i/<楽天の画像パス>?<クエリ> → https://thumbnail.image.rakuten.co.jp/<画像パス>
+    if (url.pathname.startsWith("/i/")) {
+      const target = "https://thumbnail.image.rakuten.co.jp/" + url.pathname.slice(3) + url.search;
+      const res = await fetch(target, {
         headers: { "User-Agent": "Mozilla/5.0" },
         cf: { cacheTtl: 86400, cacheEverything: true },
       });
