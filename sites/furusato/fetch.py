@@ -88,8 +88,10 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
                    "towns": len({r["shop"] for r in rows})}
         for r in rows:
             r["vs_median"] = round(r["per10k"] / med, 2) if med else None
+    # 人気度 = 比較対象のレビュー件数の合計(カテゴリの並び順に使う)
+    popularity = sum(r["review_count"] for r in rows)
     return {"items": rows[:top_n], "candidates": len(seen), "ranked": len(rows), "dropped": dropped,
-            "summary": summary}
+            "summary": summary, "popularity": popularity}
 
 
 def fetch(cfg: dict) -> dict:
@@ -124,7 +126,10 @@ def fetch(cfg: dict) -> dict:
 
 
 def pages(cfg: dict, data: dict) -> list[dict]:
-    cats = cfg["categories"]
+    # カテゴリはレビュー件数の合計が多い順(=人気順)。データが無いものは最後
+    pop = {k: v.get("popularity", 0) for k, v in data.get("categories", {}).items()}
+    order = {c["id"]: i for i, c in enumerate(cfg["categories"])}
+    cats = sorted(cfg["categories"], key=lambda c: (-pop.get(c["id"], -1), order[c["id"]]))
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats}}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})

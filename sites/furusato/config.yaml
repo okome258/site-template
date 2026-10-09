@@ -21,7 +21,7 @@ fetch:
 # unit_kind: weight(kg) / volume(L) / count(count_units の個数)
 # scale: 表示単位への倍率(いくらを g で見せるなら 1000)
 # range: 1件あたりの総量として妥当な範囲(表示単位。外れたら読み違いとして捨てる)
-# 並び順 = サイトに出る順。楽天ふるさと納税で人気のジャンル順にしている
+# サイト上の並び順は毎日データから自動で決まる(レビュー件数の合計が多い=人気順)
 categories:
   - id: rice
     search_word: 米
@@ -175,3 +175,180 @@ categories:
     exclude: ["プリン", "カステラ", "燻製", "ピータン", "うずら", "マヨネーズ", "卵焼き"]
     require: ["卵", "たまご", "玉子", "タマゴ"]
     range: [10, 400]
+  # ---- 2026-10-09 追加分(並び順はデータの人気度で自動ソートされる) ----
+  - id: unagi
+    name: うなぎ
+    emoji: "🐍"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 うなぎ 蒲焼"]
+    exclude: ["たれのみ", "タレのみ", "山椒のみ", "パイ", "食べ比べ"]
+    require: ["うなぎ", "鰻", "ウナギ"]
+    range: [0.1, 5]
+  - id: mentaiko
+    name: 明太子
+    emoji: "🌶"
+    unit_kind: weight
+    scale: 1000
+    unit: g
+    keywords: ["ふるさと納税 明太子"]
+    exclude: ["パスタ", "ソース", "マヨ", "せんべい", "おにぎり", "フランス", "チューブ", "食べ比べ"]
+    require: ["明太子", "めんたいこ", "辛子明太"]
+    range: [100, 5000]
+  - id: tuna
+    name: まぐろ
+    emoji: "🍣"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 まぐろ 刺身", "ふるさと納税 ネギトロ"]
+    exclude: ["缶", "ツナ", "フレーク", "ジャーキー", "丼の具", "食べ比べ"]
+    require: ["まぐろ", "マグロ", "鮪", "ネギトロ", "ねぎとろ"]
+    range: [0.2, 10]
+  - id: oyster
+    name: 牡蠣
+    emoji: "🦪"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 牡蠣 冷凍"]
+    exclude: ["燻製", "缶", "オイル漬", "フライ", "オイスターソース", "食べ比べ"]
+    require: ["牡蠣", "カキ"]
+    range: [0.3, 10]
+  - id: gyutan
+    name: 牛タン
+    emoji: "👅"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 牛タン"]
+    exclude: ["シチュー", "カレー", "ジャーキー", "缶", "つくね", "食べ比べ"]
+    require: ["牛タン", "牛たん"]
+    range: [0.3, 10]
+  - id: hamburg
+    name: ハンバーグ
+    emoji: "🍔"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 ハンバーグ"]
+    exclude: ["ソースのみ", "カレー", "弁当", "食べ比べ"]
+    require: ["ハンバーグ"]
+    range: [0.5, 15]
+  - id: gyoza
+    name: 餃子
+    emoji: "🥟"
+    unit_kind: count
+    count_units: ["個"]
+    unit: 個
+    keywords: ["ふるさと納税 餃子"]
+    exclude: ["たれのみ", "タレのみ", "皮のみ", "鍋", "食べ比べ"]
+    require: ["餃子", "ぎょうざ", "ギョーザ"]
+    range: [20, 1000]
+  - id: sausage
+    name: ウインナー
+    emoji: "🌭"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 ウインナー", "ふるさと納税 ソーセージ"]
+    exclude: ["ハム", "ベーコン", "詰め合わせ", "ギフト"]
+    require: ["ウインナー", "ソーセージ", "ウィンナー"]
+    range: [0.5, 15]
+  - id: shine
+    name: シャインマスカット
+    emoji: "🍇"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 シャインマスカット"]
+    exclude: ["ゼリー", "ジュース", "ドライ", "レーズン", "ワイン", "食べ比べ", "詰め合わせ"]
+    require: ["シャインマスカット"]
+    range: [0.5, 10]
+  - id: strawberry
+    name: いちご
+    emoji: "🍓"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 いちご"]
+    exclude: ["ジャム", "ゼリー", "ジュース", "大福", "ドライ", "アイス", "ケーキ", "フリーズ", "ソース", "ミルク"]
+    require: ["いちご", "苺", "イチゴ"]
+    range: [0.3, 10]
+  - id: peach
+    name: 桃
+    emoji: "🍑"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 桃"]
+    exclude: ["ゼリー", "ジュース", "缶", "ジャム", "ネクター", "鶏", "もも肉", "ドライ", "コンポート"]
+    require: ["桃"]
+    range: [1, 15]
+  - id: melon
+    name: メロン
+    emoji: "🍈"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 メロン"]
+    exclude: ["パン", "ゼリー", "アイス", "ジュース", "ソーダ", "ドライ", "ケーキ"]
+    require: ["メロン"]
+    range: [1, 15]
+  - id: udon
+    name: うどん
+    emoji: "🍜"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 うどん"]
+    exclude: ["つゆのみ", "スープのみ", "食べ比べ", "鍋"]
+    require: ["うどん", "饂飩"]
+    range: [0.5, 20]
+  - id: soba
+    name: そば
+    emoji: "🥢"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 そば 乾麺", "ふるさと納税 蕎麦"]
+    exclude: ["焼きそば", "焼そば", "そば茶", "そば粉", "枕", "つゆのみ", "食べ比べ"]
+    require: ["そば", "蕎麦"]
+    range: [0.5, 20]
+  - id: sparkling
+    name: 炭酸水
+    emoji: "🫧"
+    unit_kind: volume
+    unit: L
+    keywords: ["ふるさと納税 炭酸水"]
+    exclude: ["ジュース", "サーバー", "レモンサワー", "ハイボール", "チューハイ"]
+    require: ["炭酸水", "強炭酸", "スパークリングウォーター"]
+    range: [6, 200]
+  - id: tea
+    name: お茶(ペットボトル)
+    emoji: "🍵"
+    unit_kind: volume
+    unit: L
+    keywords: ["ふるさと納税 お茶 ペットボトル"]
+    exclude: ["ティーバッグ", "茶葉", "抹茶", "粉末", "スティック", "急須", "リーフ"]
+    require: ["茶"]
+    range: [6, 200]
+  - id: sake
+    name: 日本酒
+    emoji: "🍶"
+    unit_kind: volume
+    unit: L
+    keywords: ["ふるさと納税 日本酒 一升瓶", "ふるさと納税 日本酒 純米"]
+    exclude: ["酒粕", "飲み比べ", "おちょこ", "グラス", "ケーキ", "化粧", "石鹸"]
+    require: ["日本酒", "純米", "吟醸", "本醸造"]
+    range: [0.7, 30]
+    note: "20歳未満の飲酒は法律で禁止されています。"
+  - id: detergent
+    name: 洗濯洗剤
+    emoji: "🧺"
+    unit_kind: weight
+    unit: kg
+    keywords: ["ふるさと納税 洗濯洗剤 詰め替え"]
+    exclude: ["柔軟剤", "漂白", "食器", "ボトル本体のみ"]
+    require: ["洗剤"]
+    range: [0.5, 30]
+    note: "g表記の商品のみ比較しています(ml表記・ジェルボールは対象外)。"
+  - id: kitchen
+    name: キッチンペーパー
+    emoji: "🧻"
+    unit_kind: count
+    count_units: ["ロール"]
+    unit: ロール
+    keywords: ["ふるさと納税 キッチンペーパー"]
+    exclude: ["トイレットペーパー", "ティッシュ", "ホルダー"]
+    require: ["キッチン"]
+    range: [4, 200]

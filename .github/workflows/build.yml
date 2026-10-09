@@ -2,7 +2,10 @@ name: 毎日のサイト更新
 
 on:
   schedule:
-    - cron: "10 20 * * *"   # 毎日 5:10 JST(UTC 20:10)
+    # GitHub の定時実行は混雑で数時間遅れることがある。
+    # 対策: ①混む「0分・30分」を避けた半端な分 ②時間をずらして2回動かす(どちらかが遅れても朝に間に合う)
+    - cron: "23 18 * * *"   # 3:23 JST
+    - cron: "47 20 * * *"   # 5:47 JST(予備。データが同じなら変更なしで終わる)
   push:
     branches: [main]
     paths-ignore: ["sites/*/public/**", "sites/*/data/**", "**.md"]
