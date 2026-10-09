@@ -1,6 +1,8 @@
 site:
   name: "ふるさと納税 量コスパ比較"
   tagline: "寄付1万円あたり、どれだけ届く？"
+  logo_mark: "⚖"
+  og_image: "ogp.png"   # SNSでシェアされた時の画像(static/ に置く)
   description: "楽天ふるさと納税の返礼品を「寄付1万円あたりの量」で毎日自動ランキング。お米・肉・海鮮・トイレットペーパー・水など、量で選びたい人のための比較サイト。"
   base_url: "https://furusato-kosupa.okomen.workers.dev"
   theme_color: "#1f6f5c"
@@ -180,11 +182,12 @@ categories:
     name: うなぎ
     emoji: "🐍"
     unit_kind: weight
-    unit: kg
+    scale: 1000
+    unit: g
     keywords: ["ふるさと納税 うなぎ 蒲焼"]
     exclude: ["たれのみ", "タレのみ", "山椒のみ", "パイ", "食べ比べ"]
     require: ["うなぎ", "鰻", "ウナギ"]
-    range: [0.1, 5]
+    range: [100, 5000]
   - id: mentaiko
     name: 明太子
     emoji: "🌶"

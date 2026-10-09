@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% set full_title = (page.title ~ "｜" ~ site.name) if page.title else site.name %}
+{% set full_title = page.title if (page.title and page.path == 'index.html') else ((page.title ~ "｜" ~ site.name) if page.title else site.name) %}
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ page.description }}">
 {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
@@ -13,7 +13,8 @@
 <meta property="og:type" content="{{ 'website' if page.path == 'index.html' else 'article' }}">
 {% if site.base_url %}<meta property="og:url" content="{{ page.url }}">{% endif %}
 <meta property="og:site_name" content="{{ site.name }}">
-<meta name="twitter:card" content="summary">
+{% if site.og_image and site.base_url %}<meta property="og:image" content="{{ site.base_url }}/{{ site.og_image }}">
+<meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
 <meta name="theme-color" content="{{ site.theme_color }}">
 <link rel="icon" href="{{ page.root }}favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{{ page.root }}base.css">
@@ -26,7 +27,7 @@
 <div class="pr-bar" role="note"><span class="pr">PR</span>{{ site.pr_short }}</div>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="{{ page.root }}">{{ site.name }}</a>
+    <a class="logo" href="{{ page.root }}">{% if site.logo_mark %}<span class="logo-mark" aria-hidden="true">{{ site.logo_mark }}</span>{% endif %}{{ site.name }}</a>
     {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
   </div>
 </header>

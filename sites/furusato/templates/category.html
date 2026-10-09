@@ -1,5 +1,8 @@
 {% extends "_layout.html" %}
 {% set d = 1 if (cat.unit_kind != 'count' and cat.scale is not defined) else 0 %}
+{% block head %}
+<script type="application/ld+json">{{ jsonld | tojson }}</script>
+{% endblock %}
 {% block content %}
 <h1>{{ cat.emoji }} {{ cat.name }}の量コスパランキング</h1>
 <p class="lead">寄付1万円あたりの量（{{ cat.unit }}）が多い順・{{ rank.ranked or 0 }}件を比較<br><span class="small">{% if data.fetched_at %}{{ data.fetched_at | jdate }} 更新{% endif %}</span></p>
@@ -10,6 +13,14 @@
   <div><span>1{{ cat.unit }}あたり寄付額</span><strong>{{ s.min_unit_price | yen }}〜{{ s.max_unit_price | yen }}</strong><small>中央値 {{ s.median_unit_price | yen }}</small></div>
   <div><span>比較した返礼品</span><strong>{{ rank.ranked }}件</strong><small>{{ s.towns }}自治体</small></div>
 </section>
+{% endif %}
+{% if rank["items"] %}{% set t1 = rank["items"][0] %}
+<p class="summary">
+  {{ ym }}の楽天ふるさと納税で、{{ cat.name }}を<strong>寄付1万円あたりの量</strong>で比べると、
+  1位は{{ t1.town or t1.shop }}の返礼品で<strong>{{ t1.per10k | num(d) }}{{ cat.unit }}</strong>（寄付{{ t1.price | yen }}で{{ "%g" | format(t1.qty) }}{{ cat.unit }}）。
+  {% if s %}比較した{{ rank.ranked }}件の相場（中央値）は{{ s.median_per10k | num(d) }}{{ cat.unit }}なので、{% if t1.vs_median %}相場の約{{ "%.1f" | format(t1.vs_median) }}倍の量になります。{% endif %}
+  1{{ cat.unit }}あたりの寄付額は{{ s.min_unit_price | yen }}〜{{ s.max_unit_price | yen }}と、同じ{{ cat.name }}でも返礼品によって大きく差があります。{% endif %}
+</p>
 {% endif %}
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
 

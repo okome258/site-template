@@ -125,20 +125,41 @@ def fetch(cfg: dict) -> dict:
     return {"categories": out, "errors": errors[:10]}
 
 
+def _ym(data: dict) -> str:
+    s = data.get("fetched_at", "")
+    return f"{int(s[:4])}年{int(s[5:7])}月最新" if len(s) >= 7 else "最新"
+
+
+def _fmt(v: float) -> str:
+    return f"{v:g}"
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     # カテゴリはレビュー件数の合計が多い順(=人気順)。データが無いものは最後
     pop = {k: v.get("popularity", 0) for k, v in data.get("categories", {}).items()}
     order = {c["id"]: i for i, c in enumerate(cfg["categories"])}
     cats = sorted(cfg["categories"], key=lambda c: (-pop.get(c["id"], -1), order[c["id"]]))
-    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats}}]
+    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats},
+           "title": f"ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})
+        ym = _ym(data)
+        top = r["items"][0] if r.get("items") else None
+        desc = f"楽天ふるさと納税の{c['name']}{r.get('ranked', 0)}件を「寄付1万円あたりの量」で比較。"
+        if top:
+            desc += f"1位は{top['town'] or top['shop']}の{_fmt(top['qty'])}{c['unit']}・寄付{top['price']:,}円。"
+        desc += "毎日自動更新。"
         ps.append({
             "path": f"c/{c['id']}/index.html",
             "template": "category.html",
-            "title": f"{c['name']}の量コスパランキング",
-            "description": f"楽天ふるさと納税の{c['name']}を寄付1万円あたりの量({c['unit']})で比較。毎日自動更新。",
-            "context": {"cats": cats, "cat": c, "rank": r},
+            "title": f"{c['name']}のふるさと納税 量コスパランキング【{ym}】",
+            "description": desc,
+            "context": {"cats": cats, "cat": c, "rank": r, "ym": ym, "jsonld": {
+                "@context": "https://schema.org", "@type": "ItemList",
+                "name": f"{c['name']}のふるさと納税 量コスパランキング",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": i + 1, "name": it["name"][:100], "url": it["url"]}
+                    for i, it in enumerate(r.get("items", [])[:10])]}},
         })
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats}, "changefreq": "monthly"})
