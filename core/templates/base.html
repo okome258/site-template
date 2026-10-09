@@ -33,7 +33,7 @@
     <a class="logo" href="{{ page.root }}">{% if site.logo_img %}<img class="logo-img" src="{{ page.root }}{{ site.logo_img }}" alt="" width="44" height="44">{% elif site.logo_mark %}<span class="logo-mark" aria-hidden="true">{{ site.logo_mark }}</span>{% endif %}<span class="logo-text">{{ site.name }}</span></a>
     {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
     {% set upd = data.fetched_at if (data and data.fetched_at) else built_at %}
-    <span class="updated" data-ts="{{ upd }}"><b>{{ upd | jdate("%Y/%m/%d %H:%M") }}</b> 更新<span class="ago"></span></span>
+    <span class="hdr-info"><span class="updated" data-ts="{{ upd }}"><b>{{ upd | jdate("%Y/%m/%d %H:%M") }}</b> 更新<span class="ago"></span></span>{% block header_extra %}{% endblock %}</span>
   </div>
 </header>
 {% block nav %}{% endblock %}

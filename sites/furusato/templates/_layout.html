@@ -4,6 +4,7 @@
   {%- if r.get("items") -%}{{ r["items"][0].per10k | num(1 if (c.unit_kind != 'count' and c.scale is not defined) else 0) }}{{ c.unit }}{%- endif -%}
 {%- endmacro %}
 {% set is_other = page.path == 'other/index.html' or (cat is defined and cat in nav.others) %}
+{% block header_extra %}{% include "_countdown.html" %}{% endblock %}
 {% block nav %}
 {# スマホ: 横スクロールのタブ(旬 → 定番10 → その他) #}
 <div class="tabs-wrap"><nav class="tabs" aria-label="カテゴリ">
