@@ -2,6 +2,7 @@
 {% block nav %}
 <div class="tabs-wrap"><nav class="tabs" aria-label="カテゴリ">
   <a href="{{ page.root }}" {% if page.path == 'index.html' %}class="on"{% endif %}>総合</a>
+  <a href="{{ page.root }}simulator/" class="sim-tab{% if page.path == 'simulator/index.html' %} on{% endif %}">🧮 上限シミュレーター</a>
   {% for c in cats %}
   <a href="{{ page.root }}c/{{ c.id }}/" {% if cat is defined and cat.id == c.id %}class="on"{% endif %}>{{ c.emoji }} {{ c.name }}</a>
   {% endfor %}

@@ -69,6 +69,9 @@ def load_site(slug: str) -> tuple[dict, object]:
     return cfg, mod
 
 
+STALE: list[str] = []  # 取得に失敗し前回データで作ったサイト(最後にエラー終了して通知させる)
+
+
 def get_data(cfg: dict, mod, offline: bool) -> dict:
     """データを取得する。失敗したら前回のデータで続行(サイトを空にしない)。"""
     path = cfg["_dir"] / "data" / "latest.json"
@@ -87,7 +90,8 @@ def get_data(cfg: dict, mod, offline: bool) -> dict:
         traceback.print_exc()
         if prev is None:
             raise
-        print("::warning::データ取得に失敗したため、前回のデータで生成します")
+        print("::error::データ取得に失敗したため、前回のデータで生成しました(サイトは古いまま表示中)")
+        STALE.append(cfg["site"]["slug"])
         return prev
 
 
@@ -205,8 +209,10 @@ def main(argv: list[str] | None = None) -> int:
             failed.append(s)
     if failed:
         print("失敗したサイト:", ", ".join(failed))
-        return 1
-    return 0
+    if STALE:
+        print("データが更新できなかったサイト:", ", ".join(STALE))
+    # どちらでもエラー終了 → Actions が赤になり GitHub から通知メールが届く(生成物のコミットは先に済む)
+    return 1 if (failed or STALE) else 0
 
 
 if __name__ == "__main__":

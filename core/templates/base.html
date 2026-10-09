@@ -29,6 +29,8 @@
   <div class="wrap">
     <a class="logo" href="{{ page.root }}">{% if site.logo_mark %}<span class="logo-mark" aria-hidden="true">{{ site.logo_mark }}</span>{% endif %}{{ site.name }}</a>
     {% if site.tagline %}<span class="tagline">{{ site.tagline }}</span>{% endif %}
+    {% set upd = data.fetched_at if (data and data.fetched_at) else built_at %}
+    <span class="updated" data-ts="{{ upd }}">🕒 <b>{{ upd | jdate("%Y/%m/%d %H:%M") }}</b> 更新<span class="ago"></span></span>
   </div>
 </header>
 {% block nav %}{% endblock %}
@@ -46,6 +48,10 @@
     <p class="small">&copy; {{ built_at[:4] }} {{ site.operator or site.name }}</p>
   </div>
 </footer>
+<script>/* 更新からの経過を「今日/昨日/◯日前」で表示。2日以上古いと警告色 */
+try{var u=document.querySelector('.updated');if(u){var d=new Date(u.dataset.ts),n=new Date();
+var dd=Math.round((new Date(n.getFullYear(),n.getMonth(),n.getDate())-new Date(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
+u.querySelector('.ago').textContent=dd<=0?'（今日）':dd==1?'（昨日）':'（'+dd+'日前）';if(dd>=2)u.classList.add('old');}}catch(e){}</script>
 <script>/* 選択中のタブが画面外なら見える位置へ */try{var o=document.querySelector('.tabs .on');if(o)o.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}</script>
 {# Cloudflare Web Analytics: config.yaml の site.cf_analytics_token を入れると有効 #}
 {% if site.cf_analytics_token %}

@@ -134,6 +134,40 @@ def _fmt(v: float) -> str:
     return f"{v:g}"
 
 
+def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
+    """控除上限額シミュレーター。税制の年は寄付する年(取得日の年)。"""
+    year = int((data.get("fetched_at") or "2026")[:4])
+    picks = []
+    for c in cats:
+        r = data["categories"].get(c["id"], {})
+        d = 0 if (c["unit_kind"] == "count" or c.get("scale")) else 1
+        items = [{"name": it["name"][:60], "price": it["price"], "per10k": it["per10k"],
+                  "per10k_s": f"{it['per10k']:,.{d}f}", "qty_s": f"{it['qty']:g}",
+                  "town": it.get("town") or it["shop"], "url": it["url"]}
+                 for it in r.get("items", [])]
+        # 上限額ごとの1位だけ分かればよいので「より安くて量コスパが上の品が無いもの」だけ残す(ページを軽く)
+        front, best = [], -1.0
+        for it in sorted(items, key=lambda x: (x["price"], -x["per10k"])):
+            if it["per10k"] > best:
+                front.append(it); best = it["per10k"]
+        items = front
+        if items:
+            picks.append({"name": c["name"], "emoji": c["emoji"], "unit": c["unit"], "items": items})
+    qa = [
+        ("控除上限額とは何ですか？", "自己負担2,000円だけで、残りが所得税・住民税から控除される寄付額の上限です。超えた分は自己負担になります。"),
+        ("年収はいつの分で計算しますか？", f"寄付する年（{year}年）の1月〜12月の給与収入で決まります。見込みで計算し、年末に近づいたら源泉徴収票の金額で確認すると安全です。"),
+        ("共働きの場合はどうなりますか？", "配偶者の年収が123万円を超える場合は「配偶者控除なし」を選んでください。夫婦それぞれが自分の年収で上限額を計算します。"),
+        ("住宅ローン控除があると上限は下がりますか？", "住宅ローン控除が所得税から引ききれない場合などは、上限額が下がることがあります。このシミュレーターでは考慮していないので、目安として使ってください。"),
+        ("ワンストップ特例と確定申告で上限額は変わりますか？", "上限額そのものは変わりません。寄付先が5自治体以内で確定申告が不要な会社員なら、ワンストップ特例で手続きできます。"),
+    ]
+    faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    return {"path": "simulator/index.html", "template": "simulator.html",
+            "title": f"ふるさと納税 控除上限額シミュレーター【{year}年版】年収と家族構成ですぐ計算",
+            "description": f"{year}年の税制(基礎控除・給与所得控除の改正)に対応。年収と家族構成を入れるだけで、ふるさと納税の控除上限額の目安を計算し、上限内で量が一番多い返礼品も表示します。",
+            "context": {"cats": cats, "tax_year": year, "picks": picks, "faq": faq}}
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     # カテゴリはレビュー件数の合計が多い順(=人気順)。データが無いものは最後
     pop = {k: v.get("popularity", 0) for k, v in data.get("categories", {}).items()}
@@ -161,6 +195,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
                     {"@type": "ListItem", "position": i + 1, "name": it["name"][:100], "url": it["url"]}
                     for i, it in enumerate(r.get("items", [])[:10])]}},
         })
+    ps.append(_simulator_page(cfg, data, cats))
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats}, "changefreq": "monthly"})
     return ps
