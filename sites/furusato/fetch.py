@@ -7,6 +7,12 @@ import re
 from core.qty import parse_quantity
 from core.rakuten import Rakuten, RakutenError
 
+TAX_TABLE_YEAR = 2026  # シミュレーターの税制(国税庁 No.1199/No.1410)を確認した年
+
+# 楽天ふるさと納税の公式ジャンル別ランキング(総合ページの「通常ランキング」枠に並べる)
+GENRE_RANKINGS = [("meat", "肉"), ("seafood", "海鮮"), ("rice", "お米"), ("fruit", "フルーツ"),
+                  ("sweet", "スイーツ"), ("beer", "ビール"), ("sake", "お酒"), ("daily", "日用品"),
+                  ("appliance", "家電"), ("travel-coupon", "旅行")]
 FURUSATO_SHOP = re.compile(r"^f\d{6}")
 PREF = re.compile(r"^(北海道|東京都|京都府|大阪府|.{2,3}県)")
 
@@ -122,7 +128,16 @@ def fetch(cfg: dict) -> dict:
     if all(not v["items"] for v in out.values()):
         # 全カテゴリ空=取得失敗とみなし、前回データで生成させる
         raise RakutenError("全カテゴリで0件でした: " + " / ".join(errors[:3]))
-    return {"categories": out, "errors": errors[:10]}
+    # 量ではない「通常の人気ランキング」(楽天公式)への入口。アフィリエイトリンクにしておく
+    rk = "https://event.rakuten.co.jp/furusato/ranking/"
+    links = {"_total": api.affiliate_link(rk)}
+    for cat in cfg["categories"]:
+        slug = cat.get("rakuten_ranking")
+        if slug:
+            links[cat["id"]] = api.affiliate_link(f"{rk}{slug}/")
+    for slug, label in GENRE_RANKINGS:
+        links["g_" + slug] = api.affiliate_link(f"{rk}{slug}/")
+    return {"categories": out, "errors": errors[:10], "ranking_links": links}
 
 
 def _ym(data: dict) -> str:
@@ -137,6 +152,8 @@ def _fmt(v: float) -> str:
 def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
     """控除上限額シミュレーター。税制の年は寄付する年(取得日の年)。"""
     year = int((data.get("fetched_at") or "2026")[:4])
+    # 税制の表を確認済みの最新年。新しい年の表を入れたらここを上げる(毎年1月に要確認)
+    table_year = TAX_TABLE_YEAR
     picks = []
     for c in cats:
         r = data["categories"].get(c["id"], {})
@@ -165,7 +182,7 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
     return {"path": "simulator/index.html", "template": "simulator.html",
             "title": f"ふるさと納税 控除上限額シミュレーター【{year}年版】年収と家族構成ですぐ計算",
             "description": f"{year}年の税制(基礎控除・給与所得控除の改正)に対応。年収と家族構成を入れるだけで、ふるさと納税の控除上限額の目安を計算し、上限内で量が一番多い返礼品も表示します。",
-            "context": {"cats": cats, "tax_year": year, "picks": picks, "faq": faq}}
+            "context": {"cats": cats, "tax_year": year, "table_year": table_year, "picks": picks, "faq": faq}}
 
 
 def pages(cfg: dict, data: dict) -> list[dict]:
@@ -173,7 +190,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     pop = {k: v.get("popularity", 0) for k, v in data.get("categories", {}).items()}
     order = {c["id"]: i for i, c in enumerate(cfg["categories"])}
     cats = sorted(cfg["categories"], key=lambda c: (-pop.get(c["id"], -1), order[c["id"]]))
-    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats},
+    ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "genres": GENRE_RANKINGS},
            "title": f"ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})

@@ -4,6 +4,7 @@
 {% endblock %}
 {% block content %}
 <h1>ふるさと納税 控除上限額シミュレーター【{{ tax_year }}年（令和{{ tax_year - 2018 }}年）版】</h1>
+{% if tax_year > table_year %}<p class="note">※{{ tax_year }}年分の税制改正の反映を確認中です。現在は{{ table_year }}年分の税制で計算しています。</p>{% endif %}
 <p class="lead">年収と家族構成を入れると、自己負担2,000円で寄付できる上限額の目安がすぐ分かります。そのまま「上限内で一番量が多い返礼品」も表示します。</p>
 
 <form class="sim card" id="sim" onsubmit="return false">
@@ -60,7 +61,7 @@
 <script id="picks-data" type="application/json">{{ picks | tojson }}</script>
 <script>
 (function(){
-  var Y={{ tax_year }};
+  var Y={{ [tax_year, table_year] | min }};
   // 給与所得控除(所得税) 国税庁 No.1410
   function kyuyoKojoIT(x){ if(Y>=2026){ if(x<=2200000) return Math.min(x,740000); } else { if(x<=1900000) return Math.min(x,650000); }
     if(x<=3600000) return x*0.3+80000; if(x<=6600000) return x*0.2+440000; if(x<=8500000) return x*0.1+1100000; return 1950000; }

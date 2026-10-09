@@ -25,6 +25,20 @@
 {% endfor %}
 </div>
 
+{% set rl = data.ranking_links or {} %}
+<section class="popular">
+  <h2>量ではなく「人気」で選ぶなら</h2>
+  <p class="small">寄付件数ベースの通常ランキングは、各ポータルの公式ページで見られます。</p>
+  <div class="pop-main">
+    <a class="btn" href="{{ rl._total or 'https://event.rakuten.co.jp/furusato/ranking/' }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天ふるさと納税 総合ランキング</a>
+    <a class="btn" href="https://www.satofull.jp/products/ranking.php" target="_blank" rel="noopener">さとふる 人気ランキング</a>
+  </div>
+  <div class="pop-genres">
+    {% for slug, label in genres %}<a href="{{ rl['g_' ~ slug] or ('https://event.rakuten.co.jp/furusato/ranking/' ~ slug ~ '/') }}" target="_blank" rel="sponsored noopener">{{ label }}</a>{% endfor %}
+    <span class="small">（楽天・ジャンル別 <span class="pr">PR</span>）</span>
+  </div>
+</section>
+
 <h2>このランキングの見方</h2>
 <div class="note">
   量 ÷ 寄付額 で「寄付1万円でどれだけ届くか」を出しています。味・品質・送料込みかどうかは比べていません。

@@ -104,6 +104,13 @@ h2 { font-size: 19px; margin: 32px 0 10px; }
 .sim-banner span:last-child { margin-left: auto; font-weight: 800; color: var(--accent); }
 .tabs a.sim-tab { border-color: var(--accent); color: var(--accent); font-weight: 700; }
 .tabs a.sim-tab.on { color: #fff; }
+/* 通常ランキングへの別枠 */
+.popular { margin-top: 28px; background: var(--card); border: 1px dashed var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.popular h2 { margin: 0 0 4px; font-size: 17px; }
+.pop-main { display: grid; gap: 8px; margin: 10px 0; }
+.pop-genres { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pop-genres a { font-size: 13px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; text-decoration: none; }
+@media (min-width: 640px) { .pop-main { grid-template-columns: 1fr 1fr; } }
 /* 自動の要約文 */
 .summary { font-size: 14px; line-height: 1.8; margin: 0 0 16px; color: var(--ink); }
 .summary strong { color: var(--accent); }

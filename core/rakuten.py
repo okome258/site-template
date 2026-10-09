@@ -68,6 +68,13 @@ class Rakuten:
             return body
         raise RakutenError("リトライ上限に達しました")
 
+    def affiliate_link(self, url: str) -> str:
+        """任意の楽天ページURLをアフィリエイトリンクにする(IDが無ければそのまま返す)。"""
+        if not self.affiliate_id:
+            return url
+        from urllib.parse import quote
+        return f"https://hb.afl.rakuten.co.jp/hgc/{self.affiliate_id}/?pc={quote(url, safe='')}"
+
     def search_items(self, keyword: str, **params) -> list[dict]:
         """市場商品検索。formatVersion=2 なので Items は商品dictのリスト。"""
         last = None

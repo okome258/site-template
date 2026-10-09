@@ -26,6 +26,7 @@ fetch:
 # サイト上の並び順は毎日データから自動で決まる(レビュー件数の合計が多い=人気順)
 categories:
   - id: rice
+    rakuten_ranking: rice
     search_word: 米
     name: お米
     emoji: "🍚"
@@ -35,6 +36,7 @@ categories:
     exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
     range: [2, 60]
   - id: beef
+    rakuten_ranking: beef
     search_word: 牛肉
     name: 牛肉
     emoji: "🐄"
@@ -44,6 +46,7 @@ categories:
     exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン", "味付", "タレ", "豚", "鶏", "バラエティ"]
     range: [0.3, 10]
   - id: pork
+    rakuten_ranking: meat
     search_word: 豚肉
     name: 豚肉
     emoji: "🐖"
@@ -53,6 +56,7 @@ categories:
     exclude: ["ハンバーグ", "ウインナー", "ソーセージ", "餃子", "ハム", "ベーコン", "焼売", "メンチ", "とんかつ", "味付", "タレ", "牛", "鶏"]
     range: [0.5, 15]
   - id: chicken
+    rakuten_ranking: meat
     search_word: 鶏肉
     name: 鶏肉
     emoji: "🐔"
@@ -62,6 +66,7 @@ categories:
     exclude: ["唐揚げ", "からあげ", "チキン南蛮", "焼き鳥", "焼鳥", "ハム", "サラダチキン", "つくね", "味付", "タレ", "牛", "豚"]
     range: [1, 20]
   - id: scallop
+    rakuten_ranking: seafood
     name: ホタテ
     emoji: "🐚"
     unit_kind: weight
@@ -71,6 +76,7 @@ categories:
     require: ["ホタテ", "ほたて", "帆立"]
     range: [0.3, 10]
   - id: shrimp
+    rakuten_ranking: seafood
     name: エビ
     emoji: "🦐"
     unit_kind: weight
@@ -80,6 +86,7 @@ categories:
     require: ["えび", "エビ", "海老"]
     range: [0.3, 10]
   - id: crab
+    rakuten_ranking: seafood
     name: カニ
     emoji: "🦀"
     unit_kind: weight
@@ -89,6 +96,7 @@ categories:
     require: ["カニ", "かに", "蟹", "ガニ", "がに"]
     range: [0.3, 10]
   - id: ikura
+    rakuten_ranking: seafood
     name: いくら
     emoji: "🟠"
     unit_kind: weight
@@ -99,6 +107,7 @@ categories:
     require: ["いくら", "イクラ"]
     range: [100, 3000]
   - id: salmon
+    rakuten_ranking: seafood
     search_word: 鮭
     name: サーモン・鮭
     emoji: "🐟"
@@ -109,6 +118,7 @@ categories:
     require: ["サーモン", "鮭", "しゃけ", "サケ"]
     range: [0.3, 10]
   - id: mikan
+    rakuten_ranking: fruit
     name: みかん
     emoji: "🍊"
     unit_kind: weight
@@ -118,6 +128,7 @@ categories:
     require: ["みかん", "蜜柑", "ミカン"]
     range: [2, 30]
   - id: apple
+    rakuten_ranking: fruit
     name: りんご
     emoji: "🍎"
     unit_kind: weight
@@ -127,6 +138,7 @@ categories:
     require: ["りんご", "リンゴ", "林檎"]
     range: [2, 30]
   - id: toilet
+    rakuten_ranking: toilet-paper
     name: トイレットペーパー
     emoji: "🧻"
     unit_kind: count
@@ -137,6 +149,7 @@ categories:
     range: [12, 300]
     note: "シングル/ダブル・長さ(倍巻き)の違いは考慮していません。"
   - id: tissue
+    rakuten_ranking: tissue-paper
     search_word: ティッシュ
     name: ティッシュ
     emoji: "📦"
@@ -148,6 +161,7 @@ categories:
     range: [5, 200]
     note: "1箱あたりの枚数の違いは考慮していません。"
   - id: water
+    rakuten_ranking: beverage
     search_word: 水
     name: 水
     emoji: "💧"
@@ -157,6 +171,7 @@ categories:
     exclude: ["炭酸", "ウォーターサーバー", "お茶", "ジュース", "サーバー"]
     range: [6, 200]
   - id: beer
+    rakuten_ranking: beer
     name: ビール
     emoji: "🍺"
     unit_kind: volume
@@ -179,6 +194,7 @@ categories:
     range: [10, 400]
   # ---- 2026-10-09 追加分(並び順はデータの人気度で自動ソートされる) ----
   - id: unagi
+    rakuten_ranking: kabayaki
     name: うなぎ
     emoji: "🐍"
     unit_kind: weight
@@ -189,6 +205,7 @@ categories:
     require: ["うなぎ", "鰻", "ウナギ"]
     range: [100, 5000]
   - id: mentaiko
+    rakuten_ranking: seafood
     name: 明太子
     emoji: "🌶"
     unit_kind: weight
@@ -199,6 +216,7 @@ categories:
     require: ["明太子", "めんたいこ", "辛子明太"]
     range: [100, 5000]
   - id: tuna
+    rakuten_ranking: seafood
     name: まぐろ
     emoji: "🍣"
     unit_kind: weight
@@ -208,6 +226,7 @@ categories:
     require: ["まぐろ", "マグロ", "鮪", "ネギトロ", "ねぎとろ"]
     range: [0.2, 10]
   - id: oyster
+    rakuten_ranking: seafood
     name: 牡蠣
     emoji: "🦪"
     unit_kind: weight
@@ -217,6 +236,7 @@ categories:
     require: ["牡蠣", "カキ"]
     range: [0.3, 10]
   - id: gyutan
+    rakuten_ranking: meat
     name: 牛タン
     emoji: "👅"
     unit_kind: weight
@@ -226,6 +246,7 @@ categories:
     require: ["牛タン", "牛たん"]
     range: [0.3, 10]
   - id: hamburg
+    rakuten_ranking: meat
     name: ハンバーグ
     emoji: "🍔"
     unit_kind: weight
@@ -235,6 +256,7 @@ categories:
     require: ["ハンバーグ"]
     range: [0.5, 15]
   - id: gyoza
+    rakuten_ranking: deli
     name: 餃子
     emoji: "🥟"
     unit_kind: count
@@ -245,6 +267,7 @@ categories:
     require: ["餃子", "ぎょうざ", "ギョーザ"]
     range: [20, 1000]
   - id: sausage
+    rakuten_ranking: meat
     name: ウインナー
     emoji: "🌭"
     unit_kind: weight
@@ -254,6 +277,7 @@ categories:
     require: ["ウインナー", "ソーセージ", "ウィンナー"]
     range: [0.5, 15]
   - id: shine
+    rakuten_ranking: grapes
     name: シャインマスカット
     emoji: "🍇"
     unit_kind: weight
@@ -263,6 +287,7 @@ categories:
     require: ["シャインマスカット"]
     range: [0.5, 10]
   - id: strawberry
+    rakuten_ranking: fruit
     name: いちご
     emoji: "🍓"
     unit_kind: weight
@@ -272,6 +297,7 @@ categories:
     require: ["いちご", "苺", "イチゴ"]
     range: [0.3, 10]
   - id: peach
+    rakuten_ranking: peach
     name: 桃
     emoji: "🍑"
     unit_kind: weight
@@ -281,6 +307,7 @@ categories:
     require: ["桃"]
     range: [1, 15]
   - id: melon
+    rakuten_ranking: fruit
     name: メロン
     emoji: "🍈"
     unit_kind: weight
@@ -290,6 +317,7 @@ categories:
     require: ["メロン"]
     range: [1, 15]
   - id: udon
+    rakuten_ranking: noodle
     name: うどん
     emoji: "🍜"
     unit_kind: weight
@@ -299,6 +327,7 @@ categories:
     require: ["うどん", "饂飩"]
     range: [0.5, 20]
   - id: soba
+    rakuten_ranking: noodle
     name: そば
     emoji: "🥢"
     unit_kind: weight
@@ -308,6 +337,7 @@ categories:
     require: ["そば", "蕎麦"]
     range: [0.5, 20]
   - id: sparkling
+    rakuten_ranking: beverage
     name: 炭酸水
     emoji: "🫧"
     unit_kind: volume
@@ -317,6 +347,7 @@ categories:
     require: ["炭酸水", "強炭酸", "スパークリングウォーター"]
     range: [6, 200]
   - id: tea
+    rakuten_ranking: beverage
     name: お茶(ペットボトル)
     emoji: "🍵"
     unit_kind: volume
@@ -326,6 +357,7 @@ categories:
     require: ["茶"]
     range: [6, 200]
   - id: sake
+    rakuten_ranking: sake
     name: 日本酒
     emoji: "🍶"
     unit_kind: volume
@@ -336,6 +368,7 @@ categories:
     range: [0.7, 30]
     note: "20歳未満の飲酒は法律で禁止されています。"
   - id: detergent
+    rakuten_ranking: daily
     name: 洗濯洗剤
     emoji: "🧺"
     unit_kind: weight
@@ -346,6 +379,7 @@ categories:
     range: [0.5, 30]
     note: "g表記の商品のみ比較しています(ml表記・ジェルボールは対象外)。"
   - id: kitchen
+    rakuten_ranking: daily
     name: キッチンペーパー
     emoji: "🧻"
     unit_kind: count
