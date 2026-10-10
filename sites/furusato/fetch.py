@@ -166,6 +166,11 @@ def fetch(cfg: dict) -> dict:
         raise RakutenError("全カテゴリで0件でした: " + " / ".join(errors[:3]))
     today = datetime.now(timezone(timedelta(hours=9))).date().isoformat()
     update_history(cfg["_dir"] / "data" / "history.json", out, today)
+    try:  # 市販価格(e-Stat)。失敗してもランキングは出す
+        import market
+        market.discover(cfg["_dir"] / "data")
+    except Exception as e:  # noqa: BLE001
+        print(f"::warning::市販価格の取得に失敗: {type(e).__name__}")
     # 量ではない「通常の人気ランキング」(楽天公式)への入口。アフィリエイトリンクにしておく
     rk = "https://event.rakuten.co.jp/furusato/ranking/"
     links = {"_total": api.affiliate_link(rk)}
