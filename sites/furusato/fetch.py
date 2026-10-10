@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import json
 import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
@@ -106,6 +108,34 @@ def rank_category(cat: dict, raw: list[dict], top_n: int) -> dict:
             "summary": summary, "popularity": popularity}
 
 
+HISTORY_KEEP_DAYS = 400  # この日数見かけなかった返礼品は履歴から消す(ファイルを太らせない)
+
+
+def update_history(path: Path, out: dict, today: str) -> None:
+    """返礼品ごとに寄付額と内容量の記録を残し、前回から変わったものに印をつける。
+
+    履歴は値が変わった日だけ追記する(毎日同じ値なら増えない)。
+    item["change"] = {"price": 旧寄付額, "qty": 旧内容量, "since": 変わる前の記録日, "per10k_pct": 量コスパの増減%}
+    """
+    hist = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    for cid, r in out.items():
+        for it in r.get("items", []):
+            h = hist.setdefault(it["code"], {"cat": cid, "first": today, "h": []})
+            h["cat"], h["name"], h["last"] = cid, it["name"][:80], today
+            rec = [today, it["price"], it["qty"]]
+            if not h["h"] or h["h"][-1][1:] != rec[1:]:
+                h["h"].append(rec)
+            if len(h["h"]) >= 2:
+                d0, p0, q0 = h["h"][-2]
+                old = q0 / p0 * 10000 if p0 else 0
+                it["change"] = {"price": p0, "qty": q0, "since": d0, "changed": h["h"][-1][0],
+                                "per10k_pct": round((it["per10k"] / old - 1) * 100) if old else None}
+    cut = (datetime.fromisoformat(today) - timedelta(days=HISTORY_KEEP_DAYS)).date().isoformat()
+    hist = {k: v for k, v in hist.items() if v.get("last", today) >= cut}
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(hist, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def fetch(cfg: dict) -> dict:
     f = cfg["fetch"]
     api = Rakuten(referer=cfg["site"]["rakuten_referer"])
@@ -134,6 +164,8 @@ def fetch(cfg: dict) -> dict:
     if all(not v["items"] for v in out.values()):
         # 全カテゴリ空=取得失敗とみなし、前回データで生成させる
         raise RakutenError("全カテゴリで0件でした: " + " / ".join(errors[:3]))
+    today = datetime.now(timezone(timedelta(hours=9))).date().isoformat()
+    update_history(cfg["_dir"] / "data" / "history.json", out, today)
     # 量ではない「通常の人気ランキング」(楽天公式)への入口。アフィリエイトリンクにしておく
     rk = "https://event.rakuten.co.jp/furusato/ranking/"
     links = {"_total": api.affiliate_link(rk)}
