@@ -327,20 +327,27 @@ def fetch_db_pref(api, cfg: dict) -> list[dict]:
     prefer = list(cfg.get("fixed_prefer", [])) + ["産業計", "Ｔ１ 産業計", "T1 産業計"]
     fixed = {cid: total_code(c, prefer) for cid, c in classes.items()
              if cid not in (item_cls, "area", "time")}
-    filters = {param_name(item_cls): ",".join(items.values())}
+    # 同じ名前の表章項目が年によって別コードで入っているので、同名のコードをまとめて取る
+    tab = classes[item_cls]
+    key_of = {}
+    for k, code in items.items():
+        want = industries.norm(tab["items"][code])
+        for c2, nm in tab["items"].items():
+            if industries.norm(nm) == want:
+                key_of[c2] = k
+    filters = {param_name(item_cls): ",".join(key_of)}
     filters.update({param_name(cid): code for cid, code in fixed.items()})
     data = api.get_data(t["id"], **filters)
     area = {code: pref_name(nm) for code, nm in classes["area"]["items"].items()}
     tyear = time_years(classes)
     code_year = {v: k for k, v in tyear.items()}
-    key_of = {v: k for k, v in items.items()}
     acc: dict[str, dict[str, dict]] = {}
     for r in data["values"]:
         if r["value"] is None or any(r.get(cid) not in (None, c) for cid, c in fixed.items()):
             continue
         p, y, k = area.get(r.get("area")), code_year.get(r.get("time")), key_of.get(r.get(item_cls))
         if p and y and k:
-            acc.setdefault(y, {}).setdefault(p, {})[k] = r["value"]
+            acc.setdefault(y, {}).setdefault(p, {}).setdefault(k, r["value"])
     DEBUG.append({"pref_db": t["id"], "fixed": fixed, "n_values": len(data["values"]),
                   "classes": {cid: {"name": c["name"], "n": len(c["order"]),
                                     "head": [c["items"][x] for x in c["order"][:5]]}
