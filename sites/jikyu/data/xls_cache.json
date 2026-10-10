@@ -38561,6 +38561,1406 @@
 }
 }
 ],
+"000010470873@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ０９食料品製造業"
+},
+"raw": {
+"age": 44.0,
+"bonus": 567.0,
+"hours_over": 15.0,
+"hours_sched": 166.0,
+"monthly": 281.8,
+"sched_pay": 251.0,
+"tenure": 11.8,
+"workers": 80473.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１０飲料・たばこ・飼料製造業"
+},
+"raw": {
+"age": 43.4,
+"bonus": 1019.0,
+"hours_over": 12.0,
+"hours_sched": 161.0,
+"monthly": 346.3,
+"sched_pay": 313.9,
+"tenure": 13.7,
+"workers": 7778.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１１繊維工業"
+},
+"raw": {
+"age": 45.7,
+"bonus": 555.7,
+"hours_over": 8.0,
+"hours_sched": 167.0,
+"monthly": 262.0,
+"sched_pay": 245.3,
+"tenure": 13.7,
+"workers": 17078.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１２木材・木製品製造業（家具を除く）"
+},
+"raw": {
+"age": 45.4,
+"bonus": 711.8,
+"hours_over": 10.0,
+"hours_sched": 170.0,
+"monthly": 297.0,
+"sched_pay": 274.5,
+"tenure": 13.5,
+"workers": 6539.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１３家具・装備品製造業"
+},
+"raw": {
+"age": 44.9,
+"bonus": 803.8,
+"hours_over": 10.0,
+"hours_sched": 165.0,
+"monthly": 319.7,
+"sched_pay": 298.6,
+"tenure": 15.1,
+"workers": 6520.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１４パルプ・紙・紙加工品製造業"
+},
+"raw": {
+"age": 44.1,
+"bonus": 933.1,
+"hours_over": 11.0,
+"hours_sched": 163.0,
+"monthly": 327.2,
+"sched_pay": 295.7,
+"tenure": 15.2,
+"workers": 14499.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１５印刷・同関連業"
+},
+"raw": {
+"age": 45.7,
+"bonus": 653.8,
+"hours_over": 12.0,
+"hours_sched": 162.0,
+"monthly": 339.0,
+"sched_pay": 308.9,
+"tenure": 16.4,
+"workers": 19374.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１６化学工業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1614.1,
+"hours_over": 11.0,
+"hours_sched": 154.0,
+"monthly": 427.5,
+"sched_pay": 390.6,
+"tenure": 15.6,
+"workers": 37269.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１７石油製品・石炭製品製造業"
+},
+"raw": {
+"age": 42.6,
+"bonus": 1518.1,
+"hours_over": 26.0,
+"hours_sched": 159.0,
+"monthly": 483.8,
+"sched_pay": 401.5,
+"tenure": 15.2,
+"workers": 2060.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１８プラスチック製品製造業（別掲を除く）"
+},
+"raw": {
+"age": 43.7,
+"bonus": 869.6,
+"hours_over": 14.0,
+"hours_sched": 163.0,
+"monthly": 334.5,
+"sched_pay": 298.4,
+"tenure": 14.7,
+"workers": 37355.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１９ゴム製品製造業"
+},
+"raw": {
+"age": 43.6,
+"bonus": 1186.3,
+"hours_over": 14.0,
+"hours_sched": 156.0,
+"monthly": 358.2,
+"sched_pay": 318.3,
+"tenure": 15.6,
+"workers": 9610.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２０なめし革・同製品・毛皮製造業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 579.5,
+"hours_over": 5.0,
+"hours_sched": 167.0,
+"monthly": 291.4,
+"sched_pay": 281.4,
+"tenure": 10.2,
+"workers": 1535.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２１窯業・土石製品製造業"
+},
+"raw": {
+"age": 46.1,
+"bonus": 1016.1,
+"hours_over": 11.0,
+"hours_sched": 164.0,
+"monthly": 339.2,
+"sched_pay": 312.8,
+"tenure": 14.8,
+"workers": 17389.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２２鉄鋼業"
+},
+"raw": {
+"age": 42.5,
+"bonus": 1434.9,
+"hours_over": 16.0,
+"hours_sched": 159.0,
+"monthly": 391.8,
+"sched_pay": 343.0,
+"tenure": 15.3,
+"workers": 19423.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２３非鉄金属製造業"
+},
+"raw": {
+"age": 43.7,
+"bonus": 1128.5,
+"hours_over": 14.0,
+"hours_sched": 161.0,
+"monthly": 369.9,
+"sched_pay": 326.4,
+"tenure": 16.1,
+"workers": 12704.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２４金属製品製造業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 822.5,
+"hours_over": 13.0,
+"hours_sched": 168.0,
+"monthly": 318.9,
+"sched_pay": 289.4,
+"tenure": 13.4,
+"workers": 48059.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２５はん用機械器具製造業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1328.3,
+"hours_over": 12.0,
+"hours_sched": 161.0,
+"monthly": 375.5,
+"sched_pay": 341.1,
+"tenure": 15.4,
+"workers": 26577.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２６生産用機械器具製造業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1352.0,
+"hours_over": 15.0,
+"hours_sched": 162.0,
+"monthly": 378.0,
+"sched_pay": 340.2,
+"tenure": 13.6,
+"workers": 57813.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２７業務用機械器具製造業"
+},
+"raw": {
+"age": 44.5,
+"bonus": 1349.0,
+"hours_over": 11.0,
+"hours_sched": 158.0,
+"monthly": 380.6,
+"sched_pay": 352.0,
+"tenure": 16.4,
+"workers": 19822.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２８電子部品・デバイス・電子回路製造業"
+},
+"raw": {
+"age": 44.1,
+"bonus": 1321.3,
+"hours_over": 12.0,
+"hours_sched": 158.0,
+"monthly": 373.3,
+"sched_pay": 338.4,
+"tenure": 16.7,
+"workers": 36932.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２９電気機械器具製造業"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1405.7,
+"hours_over": 12.0,
+"hours_sched": 159.0,
+"monthly": 378.5,
+"sched_pay": 344.6,
+"tenure": 16.3,
+"workers": 46271.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３０情報通信機械器具製造業"
+},
+"raw": {
+"age": 45.1,
+"bonus": 1333.9,
+"hours_over": 12.0,
+"hours_sched": 159.0,
+"monthly": 388.1,
+"sched_pay": 355.7,
+"tenure": 18.4,
+"workers": 12006.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３１輸送用機械器具製造業"
+},
+"raw": {
+"age": 42.5,
+"bonus": 1287.5,
+"hours_over": 17.0,
+"hours_sched": 156.0,
+"monthly": 391.0,
+"sched_pay": 338.2,
+"tenure": 16.5,
+"workers": 79619.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３２その他の製造業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 947.6,
+"hours_over": 12.0,
+"hours_sched": 163.0,
+"monthly": 358.0,
+"sched_pay": 329.1,
+"tenure": 14.0,
+"workers": 12828.0
+}
+}
+],
+"000010470874@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３３電気業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1414.1,
+"hours_over": 18.0,
+"hours_sched": 151.0,
+"monthly": 545.4,
+"sched_pay": 472.1,
+"tenure": 19.5,
+"workers": 9464.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３４ガス業"
+},
+"raw": {
+"age": 41.5,
+"bonus": 2015.4,
+"hours_over": 10.0,
+"hours_sched": 152.0,
+"monthly": 438.9,
+"sched_pay": 397.6,
+"tenure": 17.3,
+"workers": 2362.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３５熱供給業"
+},
+"raw": {
+"age": 45.7,
+"bonus": 1247.3,
+"hours_over": 13.0,
+"hours_sched": 147.0,
+"monthly": 397.3,
+"sched_pay": 353.0,
+"tenure": 11.7,
+"workers": 124.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３６水道業"
+},
+"raw": {
+"age": 46.1,
+"bonus": 1068.2,
+"hours_over": 6.0,
+"hours_sched": 158.0,
+"monthly": 317.4,
+"sched_pay": 301.9,
+"tenure": 12.3,
+"workers": 1640.0
+}
+}
+],
+"000010470875@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３７通信業"
+},
+"raw": {
+"age": 48.1,
+"bonus": 1644.4,
+"hours_over": 16.0,
+"hours_sched": 147.0,
+"monthly": 462.3,
+"sched_pay": 411.7,
+"tenure": 10.5,
+"workers": 13448.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３８放送業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1808.2,
+"hours_over": 14.0,
+"hours_sched": 151.0,
+"monthly": 449.5,
+"sched_pay": 409.6,
+"tenure": 15.5,
+"workers": 3433.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３９情報サービス業"
+},
+"raw": {
+"age": 40.2,
+"bonus": 1291.5,
+"hours_over": 11.0,
+"hours_sched": 155.0,
+"monthly": 404.8,
+"sched_pay": 376.7,
+"tenure": 12.6,
+"workers": 110749.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ４０インターネット附随サービス業"
+},
+"raw": {
+"age": 36.8,
+"bonus": 776.7,
+"hours_over": 4.0,
+"hours_sched": 160.0,
+"monthly": 453.3,
+"sched_pay": 441.2,
+"tenure": 5.6,
+"workers": 17322.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ４１映像・音声・文字情報制作業"
+},
+"raw": {
+"age": 42.4,
+"bonus": 1381.5,
+"hours_over": 9.0,
+"hours_sched": 154.0,
+"monthly": 444.9,
+"sched_pay": 411.2,
+"tenure": 13.6,
+"workers": 18489.0
+}
+}
+],
+"000010470876@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４２鉄道業"
+},
+"raw": {
+"age": 42.4,
+"bonus": 1560.0,
+"hours_over": 16.0,
+"hours_sched": 153.0,
+"monthly": 433.0,
+"sched_pay": 377.6,
+"tenure": 19.4,
+"workers": 14942.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４３道路旅客運送業"
+},
+"raw": {
+"age": 57.2,
+"bonus": 403.9,
+"hours_over": 22.0,
+"hours_sched": 171.0,
+"monthly": 327.9,
+"sched_pay": 276.1,
+"tenure": 12.1,
+"workers": 26999.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４４道路貨物運送業"
+},
+"raw": {
+"age": 48.6,
+"bonus": 481.4,
+"hours_over": 27.0,
+"hours_sched": 170.0,
+"monthly": 342.5,
+"sched_pay": 282.8,
+"tenure": 12.9,
+"workers": 126912.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４５水運業"
+},
+"raw": {
+"age": 42.9,
+"bonus": 2059.2,
+"hours_over": 11.0,
+"hours_sched": 157.0,
+"monthly": 466.2,
+"sched_pay": 431.9,
+"tenure": 13.1,
+"workers": 2363.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４６航空運輸業"
+},
+"raw": {
+"age": 38.3,
+"bonus": 1268.8,
+"hours_over": 5.0,
+"hours_sched": 154.0,
+"monthly": 652.0,
+"sched_pay": 623.9,
+"tenure": 11.3,
+"workers": 4555.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４７倉庫業"
+},
+"raw": {
+"age": 44.9,
+"bonus": 720.9,
+"hours_over": 16.0,
+"hours_sched": 160.0,
+"monthly": 311.0,
+"sched_pay": 275.6,
+"tenure": 11.9,
+"workers": 11601.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４８運輸に附帯するサービス業"
+},
+"raw": {
+"age": 44.8,
+"bonus": 1168.2,
+"hours_over": 13.0,
+"hours_sched": 157.0,
+"monthly": 378.2,
+"sched_pay": 330.3,
+"tenure": 15.1,
+"workers": 37952.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４９郵便業（信書便事業を含む）"
+},
+"raw": {
+"age": 46.6,
+"bonus": 1019.2,
+"hours_over": 13.0,
+"hours_sched": 158.0,
+"monthly": 352.0,
+"sched_pay": 322.1,
+"tenure": 15.4,
+"workers": 3434.0
+}
+}
+],
+"000010470877@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ50～55卸売業"
+},
+"raw": {
+"age": 44.0,
+"bonus": 1391.4,
+"hours_over": 8.0,
+"hours_sched": 160.0,
+"monthly": 406.8,
+"sched_pay": 385.6,
+"tenure": 14.4,
+"workers": 250655.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５０各種商品卸売業"
+},
+"raw": {
+"age": 44.0,
+"bonus": 4028.1,
+"hours_over": 9.0,
+"hours_sched": 154.0,
+"monthly": 519.9,
+"sched_pay": 491.2,
+"tenure": 16.1,
+"workers": 3682.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５１繊維・衣服等卸売業"
+},
+"raw": {
+"age": 46.2,
+"bonus": 920.7,
+"hours_over": 5.0,
+"hours_sched": 161.0,
+"monthly": 346.2,
+"sched_pay": 335.1,
+"tenure": 14.4,
+"workers": 9734.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５２飲食料品卸売業"
+},
+"raw": {
+"age": 42.6,
+"bonus": 840.4,
+"hours_over": 10.0,
+"hours_sched": 164.0,
+"monthly": 345.0,
+"sched_pay": 321.6,
+"tenure": 12.2,
+"workers": 50115.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５３建築材料，鉱物・金属材料等卸売業"
+},
+"raw": {
+"age": 44.5,
+"bonus": 1331.2,
+"hours_over": 8.0,
+"hours_sched": 160.0,
+"monthly": 391.8,
+"sched_pay": 372.0,
+"tenure": 14.3,
+"workers": 47512.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５４機械器具卸売業"
+},
+"raw": {
+"age": 44.3,
+"bonus": 1738.3,
+"hours_over": 9.0,
+"hours_sched": 158.0,
+"monthly": 468.4,
+"sched_pay": 444.3,
+"tenure": 15.8,
+"workers": 89554.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５５その他の卸売業"
+},
+"raw": {
+"age": 43.9,
+"bonus": 1277.0,
+"hours_over": 6.0,
+"hours_sched": 161.0,
+"monthly": 376.5,
+"sched_pay": 359.8,
+"tenure": 14.2,
+"workers": 50058.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ56～61小売業"
+},
+"raw": {
+"age": 42.9,
+"bonus": 659.2,
+"hours_over": 9.0,
+"hours_sched": 163.0,
+"monthly": 311.1,
+"sched_pay": 291.5,
+"tenure": 12.6,
+"workers": 202621.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５６各種商品小売業"
+},
+"raw": {
+"age": 47.1,
+"bonus": 573.2,
+"hours_over": 5.0,
+"hours_sched": 157.0,
+"monthly": 293.6,
+"sched_pay": 282.0,
+"tenure": 16.0,
+"workers": 12812.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５７織物・衣服・身の回り品小売業"
+},
+"raw": {
+"age": 39.5,
+"bonus": 514.0,
+"hours_over": 7.0,
+"hours_sched": 158.0,
+"monthly": 305.6,
+"sched_pay": 290.5,
+"tenure": 9.5,
+"workers": 11715.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５８飲食料品小売業"
+},
+"raw": {
+"age": 44.6,
+"bonus": 435.9,
+"hours_over": 10.0,
+"hours_sched": 165.0,
+"monthly": 276.5,
+"sched_pay": 257.4,
+"tenure": 12.2,
+"workers": 59144.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５９機械器具小売業"
+},
+"raw": {
+"age": 41.8,
+"bonus": 1054.4,
+"hours_over": 12.0,
+"hours_sched": 165.0,
+"monthly": 360.7,
+"sched_pay": 335.0,
+"tenure": 15.3,
+"workers": 48188.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ６０その他の小売業"
+},
+"raw": {
+"age": 41.9,
+"bonus": 556.5,
+"hours_over": 7.0,
+"hours_sched": 161.0,
+"monthly": 304.4,
+"sched_pay": 288.3,
+"tenure": 10.8,
+"workers": 50750.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ６１無店舗小売業"
+},
+"raw": {
+"age": 42.4,
+"bonus": 768.1,
+"hours_over": 9.0,
+"hours_sched": 162.0,
+"monthly": 325.4,
+"sched_pay": 302.8,
+"tenure": 11.6,
+"workers": 20012.0
+}
+}
+],
+"000010470878@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６２銀行業"
+},
+"raw": {
+"age": 41.3,
+"bonus": 1601.7,
+"hours_over": 17.0,
+"hours_sched": 151.0,
+"monthly": 443.3,
+"sched_pay": 394.8,
+"tenure": 14.7,
+"workers": 25178.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６３協同組織金融業"
+},
+"raw": {
+"age": 41.4,
+"bonus": 1336.8,
+"hours_over": 8.0,
+"hours_sched": 151.0,
+"monthly": 369.6,
+"sched_pay": 348.6,
+"tenure": 17.0,
+"workers": 11876.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６４貸金業，クレジットカード業等非預金信用機関"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1549.0,
+"hours_over": 15.0,
+"hours_sched": 147.0,
+"monthly": 452.6,
+"sched_pay": 410.0,
+"tenure": 15.0,
+"workers": 6761.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６５金融商品取引業，商品先物取引業"
+},
+"raw": {
+"age": 42.3,
+"bonus": 2859.3,
+"hours_over": 12.0,
+"hours_sched": 152.0,
+"monthly": 688.3,
+"sched_pay": 652.9,
+"tenure": 12.6,
+"workers": 7489.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６６補助的金融業等"
+},
+"raw": {
+"age": 44.3,
+"bonus": 1526.6,
+"hours_over": 11.0,
+"hours_sched": 148.0,
+"monthly": 434.0,
+"sched_pay": 404.1,
+"tenure": 12.0,
+"workers": 2317.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６７保険業（保険媒介代理業，保険サービス業を含む）"
+},
+"raw": {
+"age": 46.0,
+"bonus": 1079.0,
+"hours_over": 7.0,
+"hours_sched": 142.0,
+"monthly": 413.1,
+"sched_pay": 394.8,
+"tenure": 12.7,
+"workers": 41739.0
+}
+}
+],
+"000010470880@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７１学術・開発研究機関"
+},
+"raw": {
+"age": 44.0,
+"bonus": 1985.7,
+"hours_over": 12.0,
+"hours_sched": 154.0,
+"monthly": 488.4,
+"sched_pay": 451.2,
+"tenure": 14.7,
+"workers": 23242.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７２専門サービス業（他に分類されないもの）"
+},
+"raw": {
+"age": 41.9,
+"bonus": 1272.1,
+"hours_over": 10.0,
+"hours_sched": 158.0,
+"monthly": 437.8,
+"sched_pay": 409.7,
+"tenure": 10.2,
+"workers": 31533.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７３広告業"
+},
+"raw": {
+"age": 39.5,
+"bonus": 975.1,
+"hours_over": 8.0,
+"hours_sched": 160.0,
+"monthly": 440.4,
+"sched_pay": 417.2,
+"tenure": 10.3,
+"workers": 9233.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７４技術サービス業（他に分類されないもの）"
+},
+"raw": {
+"age": 43.6,
+"bonus": 1260.6,
+"hours_over": 13.0,
+"hours_sched": 159.0,
+"monthly": 410.1,
+"sched_pay": 375.5,
+"tenure": 13.7,
+"workers": 58760.0
+}
+}
+],
+"000010470881@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７５宿泊業"
+},
+"raw": {
+"age": 42.7,
+"bonus": 400.8,
+"hours_over": 10.0,
+"hours_sched": 166.0,
+"monthly": 291.8,
+"sched_pay": 269.7,
+"tenure": 8.8,
+"workers": 26396.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７６飲食店"
+},
+"raw": {
+"age": 42.3,
+"bonus": 323.4,
+"hours_over": 16.0,
+"hours_sched": 170.0,
+"monthly": 304.7,
+"sched_pay": 271.9,
+"tenure": 9.7,
+"workers": 38568.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７７持ち帰り・配達飲食サービス業"
+},
+"raw": {
+"age": 44.5,
+"bonus": 482.9,
+"hours_over": 14.0,
+"hours_sched": 164.0,
+"monthly": 293.9,
+"sched_pay": 263.1,
+"tenure": 9.6,
+"workers": 15525.0
+}
+}
+],
+"000010470883@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ８１学校教育"
+},
+"raw": {
+"age": 44.3,
+"bonus": 1400.3,
+"hours_over": 4.0,
+"hours_sched": 159.0,
+"monthly": 406.3,
+"sched_pay": 393.6,
+"tenure": 11.9,
+"workers": 68482.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ８２その他の教育，学習支援業"
+},
+"raw": {
+"age": 44.1,
+"bonus": 1010.7,
+"hours_over": 11.0,
+"hours_sched": 158.0,
+"monthly": 355.6,
+"sched_pay": 329.0,
+"tenure": 13.5,
+"workers": 25151.0
+}
+}
+],
+"000010470884@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８３医療業"
+},
+"raw": {
+"age": 41.5,
+"bonus": 767.7,
+"hours_over": 7.0,
+"hours_sched": 157.0,
+"monthly": 373.6,
+"sched_pay": 342.6,
+"tenure": 9.5,
+"workers": 222105.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８４保健衛生"
+},
+"raw": {
+"age": 43.6,
+"bonus": 867.6,
+"hours_over": 17.0,
+"hours_sched": 147.0,
+"monthly": 322.9,
+"sched_pay": 289.3,
+"tenure": 10.6,
+"workers": 2867.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８５社会保険・社会福祉・介護事業"
+},
+"raw": {
+"age": 45.2,
+"bonus": 628.1,
+"hours_over": 4.0,
+"hours_sched": 162.0,
+"monthly": 285.3,
+"sched_pay": 272.4,
+"tenure": 9.3,
+"workers": 234883.0
+}
+}
+],
+"000010470886@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ８８廃棄物処理業"
+},
+"raw": {
+"age": 48.2,
+"bonus": 644.6,
+"hours_over": 10.0,
+"hours_sched": 167.0,
+"monthly": 325.8,
+"sched_pay": 301.9,
+"tenure": 11.4,
+"workers": 18366.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ８９自動車整備業"
+},
+"raw": {
+"age": 46.0,
+"bonus": 816.2,
+"hours_over": 12.0,
+"hours_sched": 167.0,
+"monthly": 342.5,
+"sched_pay": 315.4,
+"tenure": 14.5,
+"workers": 6781.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９０機械等修理業（別掲を除く）"
+},
+"raw": {
+"age": 44.6,
+"bonus": 1456.7,
+"hours_over": 15.0,
+"hours_sched": 156.0,
+"monthly": 402.2,
+"sched_pay": 358.6,
+"tenure": 16.3,
+"workers": 14996.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９１職業紹介・労働者派遣業"
+},
+"raw": {
+"age": 41.6,
+"bonus": 214.1,
+"hours_over": 9.0,
+"hours_sched": 155.0,
+"monthly": 291.3,
+"sched_pay": 270.1,
+"tenure": 5.2,
+"workers": 95595.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９２その他の事業サービス業"
+},
+"raw": {
+"age": 48.6,
+"bonus": 561.4,
+"hours_over": 11.0,
+"hours_sched": 160.0,
+"monthly": 305.2,
+"sched_pay": 279.5,
+"tenure": 10.3,
+"workers": 119283.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９３政治・経済・文化団体"
+},
+"raw": {
+"age": 47.9,
+"bonus": 1055.4,
+"hours_over": 6.0,
+"hours_sched": 150.0,
+"monthly": 364.0,
+"sched_pay": 348.6,
+"tenure": 12.5,
+"workers": 9803.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９４宗教"
+},
+"raw": {
+"age": 46.7,
+"bonus": 980.5,
+"hours_over": 4.0,
+"hours_sched": 160.0,
+"monthly": 329.4,
+"sched_pay": 318.6,
+"tenure": 14.3,
+"workers": 2360.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９５その他のサービス業"
+},
+"raw": {
+"age": 47.5,
+"bonus": 735.5,
+"hours_over": 7.0,
+"hours_sched": 154.0,
+"monthly": 294.7,
+"sched_pay": 277.1,
+"tenure": 10.5,
+"workers": 1872.0
+}
+}
+],
+"000010470887@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３３電気業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1415.9,
+"hours_over": 18.0,
+"hours_sched": 151.0,
+"monthly": 543.2,
+"sched_pay": 470.3,
+"tenure": 19.5,
+"workers": 9632.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３４ガス業"
+},
+"raw": {
+"age": 41.6,
+"bonus": 2007.5,
+"hours_over": 10.0,
+"hours_sched": 152.0,
+"monthly": 438.7,
+"sched_pay": 397.8,
+"tenure": 17.4,
+"workers": 2410.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３６水道業"
+},
+"raw": {
+"age": 45.2,
+"bonus": 1439.3,
+"hours_over": 9.0,
+"hours_sched": 149.0,
+"monthly": 372.7,
+"sched_pay": 348.2,
+"tenure": 17.2,
+"workers": 4812.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ４２鉄道業"
+},
+"raw": {
+"age": 42.7,
+"bonus": 1563.2,
+"hours_over": 16.0,
+"hours_sched": 153.0,
+"monthly": 434.1,
+"sched_pay": 377.5,
+"tenure": 19.6,
+"workers": 15926.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ４３道路旅客運送業"
+},
+"raw": {
+"age": 57.1,
+"bonus": 419.3,
+"hours_over": 22.0,
+"hours_sched": 171.0,
+"monthly": 329.2,
+"sched_pay": 276.9,
+"tenure": 12.2,
+"workers": 27398.0
+}
+}
+],
 "000010470997@2025-03-17": [
 {
 "labels": {
@@ -77136,6 +78536,1406 @@
 "sched_pay": 313.4,
 "tenure": 13.0,
 "workers": 225711.0
+}
+}
+],
+"000010817944@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ０９食料品製造業"
+},
+"raw": {
+"age": 43.7,
+"bonus": 637.1,
+"hours_over": 14.0,
+"hours_sched": 165.0,
+"monthly": 295.0,
+"sched_pay": 264.3,
+"tenure": 12.0,
+"workers": 78587.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１０飲料・たばこ・飼料製造業"
+},
+"raw": {
+"age": 44.0,
+"bonus": 1030.8,
+"hours_over": 12.0,
+"hours_sched": 162.0,
+"monthly": 348.5,
+"sched_pay": 312.8,
+"tenure": 14.1,
+"workers": 8332.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１１繊維工業"
+},
+"raw": {
+"age": 45.3,
+"bonus": 549.7,
+"hours_over": 7.0,
+"hours_sched": 165.0,
+"monthly": 269.4,
+"sched_pay": 254.6,
+"tenure": 13.8,
+"workers": 17268.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１２木材・木製品製造業（家具を除く）"
+},
+"raw": {
+"age": 45.5,
+"bonus": 668.2,
+"hours_over": 12.0,
+"hours_sched": 169.0,
+"monthly": 308.3,
+"sched_pay": 280.5,
+"tenure": 13.8,
+"workers": 6418.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１３家具・装備品製造業"
+},
+"raw": {
+"age": 45.2,
+"bonus": 757.3,
+"hours_over": 9.0,
+"hours_sched": 168.0,
+"monthly": 325.0,
+"sched_pay": 306.4,
+"tenure": 15.2,
+"workers": 6118.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１４パルプ・紙・紙加工品製造業"
+},
+"raw": {
+"age": 44.7,
+"bonus": 818.1,
+"hours_over": 14.0,
+"hours_sched": 165.0,
+"monthly": 334.7,
+"sched_pay": 294.6,
+"tenure": 14.6,
+"workers": 14752.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１５印刷・同関連業"
+},
+"raw": {
+"age": 45.3,
+"bonus": 689.3,
+"hours_over": 14.0,
+"hours_sched": 167.0,
+"monthly": 335.3,
+"sched_pay": 301.8,
+"tenure": 16.4,
+"workers": 18774.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１６化学工業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1492.3,
+"hours_over": 10.0,
+"hours_sched": 157.0,
+"monthly": 443.1,
+"sched_pay": 409.9,
+"tenure": 16.1,
+"workers": 38068.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１７石油製品・石炭製品製造業"
+},
+"raw": {
+"age": 45.1,
+"bonus": 1463.7,
+"hours_over": 17.0,
+"hours_sched": 155.0,
+"monthly": 437.1,
+"sched_pay": 376.5,
+"tenure": 15.9,
+"workers": 1668.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１８プラスチック製品製造業（別掲を除く）"
+},
+"raw": {
+"age": 43.8,
+"bonus": 953.5,
+"hours_over": 14.0,
+"hours_sched": 165.0,
+"monthly": 339.9,
+"sched_pay": 303.4,
+"tenure": 14.7,
+"workers": 31442.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ１９ゴム製品製造業"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1158.1,
+"hours_over": 13.0,
+"hours_sched": 158.0,
+"monthly": 371.1,
+"sched_pay": 331.0,
+"tenure": 16.2,
+"workers": 10012.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２０なめし革・同製品・毛皮製造業"
+},
+"raw": {
+"age": 45.5,
+"bonus": 455.5,
+"hours_over": 5.0,
+"hours_sched": 169.0,
+"monthly": 278.7,
+"sched_pay": 268.3,
+"tenure": 12.8,
+"workers": 1178.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２１窯業・土石製品製造業"
+},
+"raw": {
+"age": 46.4,
+"bonus": 1078.3,
+"hours_over": 11.0,
+"hours_sched": 165.0,
+"monthly": 349.2,
+"sched_pay": 320.9,
+"tenure": 15.4,
+"workers": 19094.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２２鉄鋼業"
+},
+"raw": {
+"age": 42.9,
+"bonus": 1486.9,
+"hours_over": 17.0,
+"hours_sched": 161.0,
+"monthly": 414.4,
+"sched_pay": 358.5,
+"tenure": 16.2,
+"workers": 20058.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２３非鉄金属製造業"
+},
+"raw": {
+"age": 44.2,
+"bonus": 1291.1,
+"hours_over": 14.0,
+"hours_sched": 160.0,
+"monthly": 391.2,
+"sched_pay": 343.5,
+"tenure": 16.3,
+"workers": 13777.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２４金属製品製造業"
+},
+"raw": {
+"age": 45.4,
+"bonus": 870.5,
+"hours_over": 11.0,
+"hours_sched": 166.0,
+"monthly": 328.4,
+"sched_pay": 300.4,
+"tenure": 14.7,
+"workers": 47234.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２５はん用機械器具製造業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1490.5,
+"hours_over": 13.0,
+"hours_sched": 164.0,
+"monthly": 403.1,
+"sched_pay": 366.6,
+"tenure": 15.9,
+"workers": 31703.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２６生産用機械器具製造業"
+},
+"raw": {
+"age": 44.2,
+"bonus": 1299.2,
+"hours_over": 14.0,
+"hours_sched": 165.0,
+"monthly": 380.4,
+"sched_pay": 345.9,
+"tenure": 15.8,
+"workers": 50208.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２７業務用機械器具製造業"
+},
+"raw": {
+"age": 43.7,
+"bonus": 1408.2,
+"hours_over": 11.0,
+"hours_sched": 161.0,
+"monthly": 403.7,
+"sched_pay": 371.6,
+"tenure": 16.2,
+"workers": 20251.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２８電子部品・デバイス・電子回路製造業"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1316.6,
+"hours_over": 13.0,
+"hours_sched": 159.0,
+"monthly": 392.5,
+"sched_pay": 354.7,
+"tenure": 17.0,
+"workers": 34484.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ２９電気機械器具製造業"
+},
+"raw": {
+"age": 44.9,
+"bonus": 1284.1,
+"hours_over": 12.0,
+"hours_sched": 162.0,
+"monthly": 384.5,
+"sched_pay": 349.9,
+"tenure": 16.6,
+"workers": 38979.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３０情報通信機械器具製造業"
+},
+"raw": {
+"age": 45.5,
+"bonus": 1596.8,
+"hours_over": 12.0,
+"hours_sched": 162.0,
+"monthly": 420.5,
+"sched_pay": 383.8,
+"tenure": 18.8,
+"workers": 14112.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３１輸送用機械器具製造業"
+},
+"raw": {
+"age": 42.7,
+"bonus": 1440.2,
+"hours_over": 18.0,
+"hours_sched": 162.0,
+"monthly": 406.0,
+"sched_pay": 351.2,
+"tenure": 16.2,
+"workers": 78943.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ３２その他の製造業"
+},
+"raw": {
+"age": 43.6,
+"bonus": 1062.2,
+"hours_over": 10.0,
+"hours_sched": 163.0,
+"monthly": 345.8,
+"sched_pay": 320.0,
+"tenure": 14.0,
+"workers": 13705.0
+}
+}
+],
+"000010817945@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３３電気業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1415.8,
+"hours_over": 18.0,
+"hours_sched": 150.0,
+"monthly": 556.4,
+"sched_pay": 480.2,
+"tenure": 19.4,
+"workers": 9164.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３４ガス業"
+},
+"raw": {
+"age": 41.0,
+"bonus": 1888.9,
+"hours_over": 11.0,
+"hours_sched": 157.0,
+"monthly": 448.2,
+"sched_pay": 398.8,
+"tenure": 14.9,
+"workers": 2763.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３５熱供給業"
+},
+"raw": {
+"age": 47.1,
+"bonus": 1508.0,
+"hours_over": 11.0,
+"hours_sched": 154.0,
+"monthly": 413.8,
+"sched_pay": 373.9,
+"tenure": 14.2,
+"workers": 77.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ３６水道業"
+},
+"raw": {
+"age": 46.8,
+"bonus": 990.5,
+"hours_over": 6.0,
+"hours_sched": 158.0,
+"monthly": 339.3,
+"sched_pay": 320.5,
+"tenure": 12.3,
+"workers": 1634.0
+}
+}
+],
+"000010817946@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３７通信業"
+},
+"raw": {
+"age": 46.1,
+"bonus": 1539.6,
+"hours_over": 17.0,
+"hours_sched": 154.0,
+"monthly": 435.0,
+"sched_pay": 384.7,
+"tenure": 16.0,
+"workers": 7953.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３８放送業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1440.9,
+"hours_over": 14.0,
+"hours_sched": 155.0,
+"monthly": 474.4,
+"sched_pay": 431.9,
+"tenure": 15.9,
+"workers": 5004.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ３９情報サービス業"
+},
+"raw": {
+"age": 39.7,
+"bonus": 1507.8,
+"hours_over": 11.0,
+"hours_sched": 161.0,
+"monthly": 432.3,
+"sched_pay": 400.6,
+"tenure": 12.3,
+"workers": 121275.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ４０インターネット附随サービス業"
+},
+"raw": {
+"age": 37.7,
+"bonus": 998.6,
+"hours_over": 7.0,
+"hours_sched": 164.0,
+"monthly": 506.0,
+"sched_pay": 484.9,
+"tenure": 5.8,
+"workers": 12973.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ４１映像・音声・文字情報制作業"
+},
+"raw": {
+"age": 41.8,
+"bonus": 1065.1,
+"hours_over": 9.0,
+"hours_sched": 159.0,
+"monthly": 425.8,
+"sched_pay": 387.4,
+"tenure": 14.3,
+"workers": 18286.0
+}
+}
+],
+"000010817947@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４２鉄道業"
+},
+"raw": {
+"age": 41.2,
+"bonus": 1809.3,
+"hours_over": 18.0,
+"hours_sched": 152.0,
+"monthly": 471.1,
+"sched_pay": 403.5,
+"tenure": 18.5,
+"workers": 17860.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４３道路旅客運送業"
+},
+"raw": {
+"age": 54.9,
+"bonus": 398.6,
+"hours_over": 23.0,
+"hours_sched": 169.0,
+"monthly": 344.5,
+"sched_pay": 292.0,
+"tenure": 10.5,
+"workers": 31806.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４４道路貨物運送業"
+},
+"raw": {
+"age": 50.0,
+"bonus": 441.2,
+"hours_over": 26.0,
+"hours_sched": 172.0,
+"monthly": 353.8,
+"sched_pay": 294.4,
+"tenure": 12.8,
+"workers": 121625.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４５水運業"
+},
+"raw": {
+"age": 44.7,
+"bonus": 1712.6,
+"hours_over": 12.0,
+"hours_sched": 160.0,
+"monthly": 465.2,
+"sched_pay": 426.5,
+"tenure": 12.3,
+"workers": 1676.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４６航空運輸業"
+},
+"raw": {
+"age": 39.7,
+"bonus": 1380.8,
+"hours_over": 5.0,
+"hours_sched": 153.0,
+"monthly": 619.6,
+"sched_pay": 592.9,
+"tenure": 12.2,
+"workers": 4636.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４７倉庫業"
+},
+"raw": {
+"age": 45.2,
+"bonus": 625.8,
+"hours_over": 17.0,
+"hours_sched": 162.0,
+"monthly": 315.2,
+"sched_pay": 280.6,
+"tenure": 11.1,
+"workers": 15092.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４８運輸に附帯するサービス業"
+},
+"raw": {
+"age": 44.7,
+"bonus": 955.0,
+"hours_over": 17.0,
+"hours_sched": 158.0,
+"monthly": 362.8,
+"sched_pay": 319.2,
+"tenure": 13.1,
+"workers": 26711.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ４９郵便業（信書便事業を含む）"
+},
+"raw": {
+"age": 47.2,
+"bonus": 1036.3,
+"hours_over": 14.0,
+"hours_sched": 158.0,
+"monthly": 367.3,
+"sched_pay": 334.1,
+"tenure": 16.1,
+"workers": 4062.0
+}
+}
+],
+"000010817948@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ50～55卸売業"
+},
+"raw": {
+"age": 45.1,
+"bonus": 1581.4,
+"hours_over": 8.0,
+"hours_sched": 162.0,
+"monthly": 414.5,
+"sched_pay": 391.9,
+"tenure": 16.1,
+"workers": 239733.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５０各種商品卸売業"
+},
+"raw": {
+"age": 44.4,
+"bonus": 3214.5,
+"hours_over": 8.0,
+"hours_sched": 155.0,
+"monthly": 486.4,
+"sched_pay": 458.7,
+"tenure": 15.7,
+"workers": 3571.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５１繊維・衣服等卸売業"
+},
+"raw": {
+"age": 44.3,
+"bonus": 883.9,
+"hours_over": 5.0,
+"hours_sched": 166.0,
+"monthly": 359.9,
+"sched_pay": 346.7,
+"tenure": 13.7,
+"workers": 12598.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５２飲食料品卸売業"
+},
+"raw": {
+"age": 47.2,
+"bonus": 1979.9,
+"hours_over": 10.0,
+"hours_sched": 163.0,
+"monthly": 426.6,
+"sched_pay": 401.0,
+"tenure": 18.6,
+"workers": 51419.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５３建築材料，鉱物・金属材料等卸売業"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1423.1,
+"hours_over": 8.0,
+"hours_sched": 163.0,
+"monthly": 392.0,
+"sched_pay": 370.3,
+"tenure": 14.4,
+"workers": 39468.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５４機械器具卸売業"
+},
+"raw": {
+"age": 44.5,
+"bonus": 1657.7,
+"hours_over": 9.0,
+"hours_sched": 161.0,
+"monthly": 435.1,
+"sched_pay": 409.1,
+"tenure": 16.3,
+"workers": 86483.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５５その他の卸売業"
+},
+"raw": {
+"age": 45.0,
+"bonus": 1194.4,
+"hours_over": 6.0,
+"hours_sched": 162.0,
+"monthly": 391.0,
+"sched_pay": 375.3,
+"tenure": 14.8,
+"workers": 46194.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ56～61小売業"
+},
+"raw": {
+"age": 43.3,
+"bonus": 682.8,
+"hours_over": 9.0,
+"hours_sched": 162.0,
+"monthly": 316.5,
+"sched_pay": 296.8,
+"tenure": 12.5,
+"workers": 196596.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５６各種商品小売業"
+},
+"raw": {
+"age": 47.5,
+"bonus": 650.5,
+"hours_over": 5.0,
+"hours_sched": 156.0,
+"monthly": 306.0,
+"sched_pay": 293.0,
+"tenure": 15.2,
+"workers": 12061.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５７織物・衣服・身の回り品小売業"
+},
+"raw": {
+"age": 41.3,
+"bonus": 616.4,
+"hours_over": 5.0,
+"hours_sched": 160.0,
+"monthly": 343.4,
+"sched_pay": 331.2,
+"tenure": 10.5,
+"workers": 12526.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５８飲食料品小売業"
+},
+"raw": {
+"age": 45.3,
+"bonus": 476.7,
+"hours_over": 10.0,
+"hours_sched": 163.0,
+"monthly": 280.8,
+"sched_pay": 260.2,
+"tenure": 12.4,
+"workers": 59524.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ５９機械器具小売業"
+},
+"raw": {
+"age": 41.3,
+"bonus": 1080.6,
+"hours_over": 12.0,
+"hours_sched": 164.0,
+"monthly": 356.6,
+"sched_pay": 328.7,
+"tenure": 15.1,
+"workers": 43403.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ６０その他の小売業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 618.3,
+"hours_over": 7.0,
+"hours_sched": 162.0,
+"monthly": 302.0,
+"sched_pay": 286.3,
+"tenure": 11.2,
+"workers": 45875.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ６１無店舗小売業"
+},
+"raw": {
+"age": 41.4,
+"bonus": 647.6,
+"hours_over": 8.0,
+"hours_sched": 161.0,
+"monthly": 352.2,
+"sched_pay": 335.1,
+"tenure": 10.5,
+"workers": 23206.0
+}
+}
+],
+"000010817949@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６２銀行業"
+},
+"raw": {
+"age": 41.4,
+"bonus": 1676.9,
+"hours_over": 15.0,
+"hours_sched": 154.0,
+"monthly": 449.1,
+"sched_pay": 406.0,
+"tenure": 15.4,
+"workers": 20694.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６３協同組織金融業"
+},
+"raw": {
+"age": 40.7,
+"bonus": 1442.7,
+"hours_over": 9.0,
+"hours_sched": 157.0,
+"monthly": 379.8,
+"sched_pay": 356.9,
+"tenure": 16.7,
+"workers": 11097.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６４貸金業，クレジットカード業等非預金信用機関"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1726.2,
+"hours_over": 18.0,
+"hours_sched": 150.0,
+"monthly": 476.4,
+"sched_pay": 427.6,
+"tenure": 14.9,
+"workers": 6592.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６５金融商品取引業，商品先物取引業"
+},
+"raw": {
+"age": 43.3,
+"bonus": 3440.0,
+"hours_over": 11.0,
+"hours_sched": 154.0,
+"monthly": 679.0,
+"sched_pay": 644.6,
+"tenure": 13.4,
+"workers": 7530.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６６補助的金融業等"
+},
+"raw": {
+"age": 45.8,
+"bonus": 1774.3,
+"hours_over": 7.0,
+"hours_sched": 153.0,
+"monthly": 457.2,
+"sched_pay": 439.1,
+"tenure": 12.8,
+"workers": 2192.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ６７保険業（保険媒介代理業，保険サービス業を含む）"
+},
+"raw": {
+"age": 46.0,
+"bonus": 1502.9,
+"hours_over": 6.0,
+"hours_sched": 144.0,
+"monthly": 453.8,
+"sched_pay": 437.4,
+"tenure": 14.1,
+"workers": 57585.0
+}
+}
+],
+"000010817951@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７１学術・開発研究機関"
+},
+"raw": {
+"age": 44.5,
+"bonus": 1870.0,
+"hours_over": 9.0,
+"hours_sched": 158.0,
+"monthly": 506.9,
+"sched_pay": 478.9,
+"tenure": 14.5,
+"workers": 25687.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７２専門サービス業（他に分類されないもの）"
+},
+"raw": {
+"age": 40.9,
+"bonus": 1528.6,
+"hours_over": 9.0,
+"hours_sched": 161.0,
+"monthly": 521.2,
+"sched_pay": 495.9,
+"tenure": 9.0,
+"workers": 34062.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７３広告業"
+},
+"raw": {
+"age": 39.1,
+"bonus": 919.9,
+"hours_over": 8.0,
+"hours_sched": 166.0,
+"monthly": 513.3,
+"sched_pay": 488.0,
+"tenure": 9.4,
+"workers": 10390.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ７４技術サービス業（他に分類されないもの）"
+},
+"raw": {
+"age": 44.1,
+"bonus": 1373.3,
+"hours_over": 14.0,
+"hours_sched": 159.0,
+"monthly": 414.8,
+"sched_pay": 376.8,
+"tenure": 13.4,
+"workers": 53282.0
+}
+}
+],
+"000010817952@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７５宿泊業"
+},
+"raw": {
+"age": 43.2,
+"bonus": 462.9,
+"hours_over": 10.0,
+"hours_sched": 167.0,
+"monthly": 305.3,
+"sched_pay": 281.8,
+"tenure": 9.6,
+"workers": 26152.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７６飲食店"
+},
+"raw": {
+"age": 41.9,
+"bonus": 377.4,
+"hours_over": 13.0,
+"hours_sched": 170.0,
+"monthly": 311.4,
+"sched_pay": 282.8,
+"tenure": 9.8,
+"workers": 35525.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ７７持ち帰り・配達飲食サービス業"
+},
+"raw": {
+"age": 46.1,
+"bonus": 277.4,
+"hours_over": 12.0,
+"hours_sched": 165.0,
+"monthly": 275.9,
+"sched_pay": 253.2,
+"tenure": 9.2,
+"workers": 13219.0
+}
+}
+],
+"000010817954@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ８１学校教育"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1377.5,
+"hours_over": 4.0,
+"hours_sched": 163.0,
+"monthly": 408.3,
+"sched_pay": 396.6,
+"tenure": 11.7,
+"workers": 64846.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ８２その他の教育，学習支援業"
+},
+"raw": {
+"age": 43.6,
+"bonus": 811.3,
+"hours_over": 10.0,
+"hours_sched": 160.0,
+"monthly": 341.7,
+"sched_pay": 317.6,
+"tenure": 11.7,
+"workers": 18019.0
+}
+}
+],
+"000010817955@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８３医療業"
+},
+"raw": {
+"age": 42.2,
+"bonus": 784.1,
+"hours_over": 7.0,
+"hours_sched": 157.0,
+"monthly": 381.3,
+"sched_pay": 348.9,
+"tenure": 10.1,
+"workers": 234260.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８４保健衛生"
+},
+"raw": {
+"age": 45.0,
+"bonus": 1089.7,
+"hours_over": 7.0,
+"hours_sched": 159.0,
+"monthly": 382.9,
+"sched_pay": 364.8,
+"tenure": 14.9,
+"workers": 7242.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ８５社会保険・社会福祉・介護事業"
+},
+"raw": {
+"age": 46.0,
+"bonus": 666.1,
+"hours_over": 4.0,
+"hours_sched": 162.0,
+"monthly": 290.2,
+"sched_pay": 278.7,
+"tenure": 9.6,
+"workers": 219791.0
+}
+}
+],
+"000010817957@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ８８廃棄物処理業"
+},
+"raw": {
+"age": 48.4,
+"bonus": 637.0,
+"hours_over": 11.0,
+"hours_sched": 167.0,
+"monthly": 331.8,
+"sched_pay": 304.3,
+"tenure": 11.4,
+"workers": 18451.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ８９自動車整備業"
+},
+"raw": {
+"age": 45.6,
+"bonus": 843.9,
+"hours_over": 12.0,
+"hours_sched": 168.0,
+"monthly": 344.5,
+"sched_pay": 317.5,
+"tenure": 14.2,
+"workers": 6873.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９０機械等修理業（別掲を除く）"
+},
+"raw": {
+"age": 44.0,
+"bonus": 1450.7,
+"hours_over": 16.0,
+"hours_sched": 158.0,
+"monthly": 413.0,
+"sched_pay": 367.9,
+"tenure": 16.0,
+"workers": 12718.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９１職業紹介・労働者派遣業"
+},
+"raw": {
+"age": 42.3,
+"bonus": 220.6,
+"hours_over": 11.0,
+"hours_sched": 158.0,
+"monthly": 297.6,
+"sched_pay": 270.6,
+"tenure": 5.7,
+"workers": 100595.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９２その他の事業サービス業"
+},
+"raw": {
+"age": 48.3,
+"bonus": 527.6,
+"hours_over": 13.0,
+"hours_sched": 160.0,
+"monthly": 307.4,
+"sched_pay": 277.7,
+"tenure": 10.5,
+"workers": 125076.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９３政治・経済・文化団体"
+},
+"raw": {
+"age": 48.4,
+"bonus": 1139.5,
+"hours_over": 6.0,
+"hours_sched": 154.0,
+"monthly": 357.2,
+"sched_pay": 342.5,
+"tenure": 13.0,
+"workers": 9484.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９４宗教"
+},
+"raw": {
+"age": 46.3,
+"bonus": 1115.3,
+"hours_over": 3.0,
+"hours_sched": 163.0,
+"monthly": 352.2,
+"sched_pay": 342.8,
+"tenure": 15.1,
+"workers": 2725.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒ９５その他のサービス業"
+},
+"raw": {
+"age": 47.4,
+"bonus": 786.9,
+"hours_over": 7.0,
+"hours_sched": 158.0,
+"monthly": 301.6,
+"sched_pay": 285.6,
+"tenure": 12.1,
+"workers": 1459.0
+}
+}
+],
+"000010817958@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３３電気業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1426.7,
+"hours_over": 18.0,
+"hours_sched": 150.0,
+"monthly": 551.7,
+"sched_pay": 477.0,
+"tenure": 19.5,
+"workers": 9499.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３４ガス業"
+},
+"raw": {
+"age": 41.2,
+"bonus": 1879.8,
+"hours_over": 11.0,
+"hours_sched": 157.0,
+"monthly": 447.7,
+"sched_pay": 399.0,
+"tenure": 15.1,
+"workers": 2866.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ３６水道業"
+},
+"raw": {
+"age": 45.0,
+"bonus": 1456.9,
+"hours_over": 8.0,
+"hours_sched": 153.0,
+"monthly": 386.7,
+"sched_pay": 362.6,
+"tenure": 17.0,
+"workers": 4806.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ４２鉄道業"
+},
+"raw": {
+"age": 41.4,
+"bonus": 1804.6,
+"hours_over": 19.0,
+"hours_sched": 152.0,
+"monthly": 470.7,
+"sched_pay": 402.5,
+"tenure": 18.5,
+"workers": 18906.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ４３道路旅客運送業"
+},
+"raw": {
+"age": 54.8,
+"bonus": 440.7,
+"hours_over": 23.0,
+"hours_sched": 168.0,
+"monthly": 347.9,
+"sched_pay": 295.0,
+"tenure": 10.9,
+"workers": 32981.0
 }
 }
 ],
