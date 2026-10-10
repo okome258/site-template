@@ -1989,24 +1989,6 @@
      "vs_median": 1.1
     },
     {
-     "code": "f442054-saiki:10002658",
-     "name": "【試食用チキンカツ付】時短おかず 揚げるだけ サクサク！ジューシー！チキンカツ(計1.2kg・400g×3袋) 国産 鶏むね肉 肉 チキンカツ 冷凍 惣菜 お弁当 小分け 簡単 時短 大分県 佐伯市【DH289】【ネクサ】",
-     "price": 6000,
-     "qty": 1.2,
-     "evidence": "計1.2kg",
-     "per10k": 2.0,
-     "unit_price": 5000,
-     "shop": "大分県佐伯市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sq38o.ia330c83.g00sq38o.ia3318ee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff442054-saiki%2Fdh289%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff442054-saiki%2Fi%2F10002658%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "佐伯市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f442054-saiki/cabinet/lr/13118952/imgrc0120430277.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.1
-    },
-    {
      "code": "f442089-taketa:10000020",
      "name": "【10営業日以内発送】大分県産 ハーブ鶏 もも肉 2kgセット 大分県 竹田市 2kg 鶏肉 セット",
      "price": 11000,
@@ -2221,10 +2203,28 @@
      "review_count": 24,
      "wakeari": false,
      "vs_median": 0.71
+    },
+    {
+     "code": "f462187-kirishima:10000863",
+     "name": "国産！高原鶏 鶏刺し一羽セット(未カット)合計約1.4kg超え！ 鶏 鶏肉 鳥肉 モモ ムネ ササミ もも肉 むね肉 胸肉 真空パック 醤油付き 鳥刺し タタキ 刺身 おつまみ 冷凍【ワタセ食鳥】",
+     "price": 11000,
+     "qty": 1.4,
+     "evidence": "1.4kg",
+     "per10k": 1.273,
+     "unit_price": 7857,
+     "shop": "鹿児島県霧島市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3qro.ia330ec5.g00t3qro.ia331084/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462187-kirishima%2Fa0-278%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462187-kirishima%2Fi%2F10000863%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "霧島市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462187-kirishima/cabinet/img01/a0-278_smn_new.jpg?_ex=240x240",
+     "review_avg": 4.61,
+     "review_count": 118,
+     "wakeari": false,
+     "vs_median": 0.7
     }
    ],
-   "candidates": 166,
-   "ranked": 37,
+   "candidates": 165,
+   "ranked": 36,
    "dropped": {
     "対象外の商品": 75,
     "選択式": 45,
@@ -2237,7 +2237,7 @@
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 23
+    "towns": 21
    },
    "popularity": 1476
   },
@@ -8505,6 +8505,24 @@
      "vs_median": 1.41
     },
     {
+     "code": "f401307-fukuoka:10001520",
+     "name": "【1週間以内に発送】(7パック分）博多辛子明太子1050g(特選切子)(無着色)小分け便利！ | 明太子 訳あり 辛子明太子 めんたいこ 切子 家庭用 冷凍 冷凍食品 海鮮 大容量 小分け 人気 便利 おすすめ ランキング 魚卵 福岡県 福岡市 博多",
+     "price": 12000,
+     "qty": 1050.0,
+     "evidence": "1050g",
+     "per10k": 875.0,
+     "unit_price": 11,
+     "shop": "福岡県福岡市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tw6fo.ia3301a7.g00tw6fo.ia331ef6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff401307-fukuoka%2Fsn001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff401307-fukuoka%2Fi%2F10001520%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "福岡市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f401307-fukuoka/cabinet/d_202507/sku_184599_01_web_s.jpg?_ex=240x240",
+     "review_avg": 4.63,
+     "review_count": 16,
+     "wakeari": true,
+     "vs_median": 1.37
+    },
+    {
      "code": "f402028-omuta:10000462",
      "name": "「博多あごおとし」無着色辛子明太子120g×9個(1,080g)(大牟田市)_ 明太子 めんたいこ パック 小分け 無着色 セット お土産 お裾分け おすそわけ 福岡県 大牟田市 冷凍 送料無料 【配送不可地域：離島】【1569305】",
      "price": 12500,
@@ -8827,28 +8845,10 @@
      "review_count": 117,
      "wakeari": true,
      "vs_median": 0.49
-    },
-    {
-     "code": "f403431-shime:10000032",
-     "name": "博多若杉 国産 もつ鍋 + 明太子 セット 国産 醤油味 無着色辛子明太子 切れ子 500g 老舗 高級 食品 食べ物 グルメ 博多 九州 送料無料 ギフト プレゼント 人気",
-     "price": 16500,
-     "qty": 500.0,
-     "evidence": "500g",
-     "per10k": 303.03,
-     "unit_price": 33,
-     "shop": "福岡県志免町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00slbmo.ia33091d.g00slbmo.ia3314d2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff403431-shime%2Fitem0028%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff403431-shime%2Fi%2F10000032%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "志免町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f403431-shime/cabinet/hsm035/hsm035-0004_00_v2.jpg?_ex=240x240",
-     "review_avg": 4.71,
-     "review_count": 197,
-     "wakeari": false,
-     "vs_median": 0.48
     }
    ],
-   "candidates": 90,
-   "ranked": 34,
+   "candidates": 91,
+   "ranked": 35,
    "dropped": {
     "対象外の商品": 15,
     "量が複数": 5,
@@ -8862,7 +8862,7 @@
     "max_unit_price": 63,
     "towns": 18
    },
-   "popularity": 2153
+   "popularity": 2169
   },
   "tuna": {
    "items": [
@@ -12615,11 +12615,11 @@
      "vs_median": 0.86
     }
    ],
-   "candidates": 94,
+   "candidates": 93,
    "ranked": 7,
    "dropped": {
     "量なし": 27,
-    "選択式": 49,
+    "選択式": 48,
     "量が複数": 1,
     "対象外の商品": 10
    },
@@ -15759,5 +15759,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T22:51+09:00"
+ "fetched_at": "2026-10-10T22:57+09:00"
 }
