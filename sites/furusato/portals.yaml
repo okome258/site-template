@@ -95,3 +95,19 @@ portals:
     checked: 2026-10-10
     source_type: official
     source: https://origin.digitalpr.jp/pdf.php?r=117011
+
+  - id: amazon
+    url: https://www.amazon.co.jp/s?k=ふるさと納税
+    name: Amazonふるさと納税
+    standing: 寄付に応じたポイントはつかない。いつものAmazonアカウントで寄付でき、最短翌日に届く返礼品があるのが強み
+    campaign: 2026年9月24日〜10月19日の「ふるさとまつり」は、エントリーすると抽選で最大12,000ポイント(寄付しなくても参加できる抽選)
+    merit:
+      - Amazonのアカウント・住所・支払い方法のまま寄付できて手軽
+      - 最短翌日配送の返礼品があり、届くのが早い
+    demerit:
+      - ポイントはもらえない。キャンペーンも抽選なので必ず得するわけではない
+      - お届け日を指定できるかは返礼品ごとに違う
+    suited: Amazonをよく使っていて、早く届けてほしい人
+    checked: 2026-10-11
+    source_type: secondary
+    source: https://appllio.com/amazon-primeappreciation-furusatomatsuri-week

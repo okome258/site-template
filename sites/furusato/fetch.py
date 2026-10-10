@@ -248,7 +248,7 @@ def _portals_page(data: dict) -> dict:
     checked = max((str(p.get("checked", "")) for p in portals), default="")
     return {"path": "portals/index.html", "template": "portals.html",
             "title": "ふるさと納税サイト比較｜ポイント禁止後の代わりの特典とメリット・デメリット",
-            "description": "2025年10月のポイント禁止後、楽天・ふるなび・au PAY・Yahoo!・ふるさとチョイス・さとふるがポイントの代わりにやっていること(決済の増量・カード還元など)を、メリット・デメリット付きで比較。",
+            "description": "2025年10月のポイント禁止後、楽天・ふるなび・au PAY・Yahoo!・ふるさとチョイス・さとふる・Amazonがポイントの代わりにやっていること(決済の増量・カード還元など)を、メリット・デメリット付きで比較。",
             "context": {"portals": portals, "checked": checked}, "changefreq": "weekly"}
 
 
