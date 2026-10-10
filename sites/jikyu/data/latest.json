@@ -1,5 +1,159 @@
 {
- "status": "no_key",
- "years": [],
- "fetched_at": "2026-10-10T14:01+09:00"
+ "status": "ok",
+ "years": [
+  {
+   "year": "2008",
+   "table": {
+    "id": "0003130276",
+    "title": "平成20年 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 一般労働者 産業大分類",
+    "open_date": "2016-03-31"
+   },
+   "all": {
+    "age": 40.9,
+    "tenure": 11.6,
+    "hours_sched": 165.0,
+    "hours_over": 14.0,
+    "monthly": 328.8,
+    "sched_pay": 299.1,
+    "bonus": 915.0,
+    "workers": 2145511.0,
+    "annual_man": 486.1,
+    "hours_month": 179.0,
+    "hourly": 2263
+   },
+   "rows": {
+    "construction": {
+     "age": 43.2,
+     "tenure": 13.2,
+     "hours_sched": 170.0,
+     "hours_over": 13.0,
+     "monthly": 342.2,
+     "sched_pay": 316.7,
+     "bonus": 713.7,
+     "workers": 140488.0,
+     "annual_man": 482.0,
+     "hours_month": 183.0,
+     "hourly": 2195
+    },
+    "manufacturing": {
+     "age": 41.5,
+     "tenure": 13.9,
+     "hours_sched": 164.0,
+     "hours_over": 18.0,
+     "monthly": 332.4,
+     "sched_pay": 293.4,
+     "bonus": 1058.3,
+     "workers": 601391.0,
+     "annual_man": 504.7,
+     "hours_month": 182.0,
+     "hourly": 2311
+    },
+    "utilities": {
+     "age": 40.3,
+     "tenure": 18.4,
+     "hours_sched": 151.0,
+     "hours_over": 14.0,
+     "monthly": 449.1,
+     "sched_pay": 398.7,
+     "bonus": 1648.4,
+     "workers": 14782.0,
+     "annual_man": 703.8,
+     "hours_month": 165.0,
+     "hourly": 3554
+    },
+    "it": {
+     "age": 37.1,
+     "tenure": 11.3,
+     "hours_sched": 159.0,
+     "hours_over": 17.0,
+     "monthly": 393.2,
+     "sched_pay": 355.0,
+     "bonus": 1204.7,
+     "workers": 99352.0,
+     "annual_man": 592.3,
+     "hours_month": 176.0,
+     "hourly": 2804
+    },
+    "transport": {
+     "age": 44.4,
+     "tenure": 12.1,
+     "hours_sched": 170.0,
+     "hours_over": 27.0,
+     "monthly": 321.1,
+     "sched_pay": 275.7,
+     "bonus": 619.7,
+     "workers": 172324.0,
+     "annual_man": 447.3,
+     "hours_month": 197.0,
+     "hourly": 1892
+    },
+    "realestate": {
+     "age": 42.8,
+     "tenure": 8.5,
+     "hours_sched": 164.0,
+     "hours_over": 10.0,
+     "monthly": 347.7,
+     "sched_pay": 327.0,
+     "bonus": 1056.3,
+     "workers": 18720.0,
+     "annual_man": 522.9,
+     "hours_month": 174.0,
+     "hourly": 2504
+    },
+    "medical": {
+     "age": 38.9,
+     "tenure": 7.8,
+     "hours_sched": 163.0,
+     "hours_over": 6.0,
+     "monthly": 295.5,
+     "sched_pay": 273.9,
+     "bonus": 748.9,
+     "workers": 258359.0,
+     "annual_man": 429.5,
+     "hours_month": 169.0,
+     "hourly": 2118
+    },
+    "education": {
+     "age": 41.9,
+     "tenure": 12.1,
+     "hours_sched": 164.0,
+     "hours_over": 6.0,
+     "monthly": 390.0,
+     "sched_pay": 376.8,
+     "bonus": 1464.5,
+     "workers": 59843.0,
+     "annual_man": 614.5,
+     "hours_month": 170.0,
+     "hourly": 3012
+    },
+    "compound": {
+     "age": 41.6,
+     "tenure": 15.7,
+     "hours_sched": 159.0,
+     "hours_over": 7.0,
+     "monthly": 299.6,
+     "sched_pay": 287.1,
+     "bonus": 1010.1,
+     "workers": 24959.0,
+     "annual_man": 460.5,
+     "hours_month": 166.0,
+     "hourly": 2312
+    },
+    "services": {
+     "age": 40.9,
+     "tenure": 8.7,
+     "hours_sched": 164.0,
+     "hours_over": 13.0,
+     "monthly": 303.0,
+     "sched_pay": 277.5,
+     "bonus": 691.0,
+     "workers": 271291.0,
+     "annual_man": 432.7,
+     "hours_month": 177.0,
+     "hourly": 2037
+    }
+   }
+  }
+ ],
+ "fetched_at": "2026-10-10T18:29+09:00"
 }
