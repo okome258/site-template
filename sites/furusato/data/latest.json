@@ -1235,8 +1235,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
-    "towns": 47
+    "max_unit_price": 37500,
+    "towns": 48
    },
    "popularity": 2047
   },
@@ -2464,9 +2464,9 @@
     }
    ],
    "candidates": 165,
-   "ranked": 37,
+   "ranked": 36,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 75,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -2477,7 +2477,7 @@
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 21
    },
    "popularity": 1476
   },
@@ -6486,8 +6486,8 @@
    "candidates": 87,
    "ranked": 22,
    "dropped": {
-    "量が複数": 8,
-    "選択式": 40,
+    "量が複数": 7,
+    "選択式": 41,
     "量なし": 1,
     "量が範囲外": 9,
     "対象外の商品": 7
@@ -15217,12 +15217,12 @@
      "vs_median": 0.64
     }
    ],
-   "candidates": 86,
+   "candidates": 85,
    "ranked": 37,
    "dropped": {
     "量が範囲外": 18,
     "選択式": 15,
-    "対象外の商品": 11,
+    "対象外の商品": 10,
     "量なし": 4,
     "量が複数": 1
    },
@@ -16739,5 +16739,5 @@
    }
   }
  },
- "fetched_at": "2026-10-10T23:54+09:00"
+ "fetched_at": "2026-10-10T23:59+09:00"
 }
