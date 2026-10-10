@@ -136,6 +136,8 @@ def fetch(cfg: dict) -> dict:
         if y.isdigit():
             by_year.setdefault(y, []).append(t)
     print(f"候補の表: {len(tables)}件 / 年: {sorted(by_year)}")
+    debug = [{"id": t["id"], "date": t["survey_date"], "title": t["title"][:90]}
+             for t in sorted(tables.values(), key=lambda t: t["survey_date"], reverse=True)][:80]
 
     years = []
     for y in sorted(by_year, reverse=True):
@@ -164,8 +166,9 @@ def fetch(cfg: dict) -> dict:
                                            "open_date": t["open_date"]},
                       "all": rows.pop("_all", {}), "rows": rows})
     if not years:
+        return {"status": "no_table", "years": [], "debug_tables": debug}
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
-    return {"status": "ok", "years": years}
+    return {"status": "ok", "years": years, "debug_tables": debug}
 
 
 # ---------------- ページ ----------------
