@@ -60,6 +60,7 @@
       <a href="https://www.furusato-tax.jp/search?q={{ q | urlencode }}" target="_blank" rel="noopener">ふるさとチョイス</a>
       <a href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="noopener">ふるなび</a>
       <a href="https://shopping.yahoo.co.jp/search?p={{ ('ふるさと納税 ' ~ q) | urlencode }}" target="_blank" rel="noopener">Yahoo!</a>
+      {% set amz = "https://www.amazon.co.jp/s?i=jpdonation&k=" ~ (q | urlencode) %}{% if site.amazon_tag %}<a href="{{ amz }}&tag={{ site.amazon_tag }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>Amazon</a>{% else %}<a href="{{ amz }}" target="_blank" rel="noopener">Amazon</a>{% endif %}
     </div>
   </li>
 {% endfor %}
