@@ -607,8 +607,8 @@
    "ranked": 39,
    "dropped": {
     "対象外の商品": 8,
-    "選択式": 96,
     "量が複数": 15,
+    "選択式": 96,
     "量なし": 1
    },
    "summary": {
@@ -1235,8 +1235,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 37500,
-    "towns": 48
+    "max_unit_price": 40000,
+    "towns": 47
    },
    "popularity": 2047
   },
@@ -13054,13 +13054,13 @@
      "market_pct": 1
     }
    ],
-   "candidates": 107,
+   "candidates": 108,
    "ranked": 23,
    "dropped": {
     "選択式": 35,
     "量なし": 14,
     "対象外の商品": 31,
-    "量が複数": 3,
+    "量が複数": 4,
     "量が範囲外": 1
    },
    "summary": {
@@ -13371,24 +13371,6 @@
      "vs_median": 1.11
     },
     {
-     "code": "f012297-furano:10000481",
-     "name": "【2027年発送】北海道富良野メロン『厳選』BIGサイズ1玉(約2.5kg)_ メロン 果物 くだもの フルーツ 北海道 富良野 赤肉 大玉 富良野メロン 贈答 ギフト 送料無料 お取り寄せ 人気 おすすめ 【1286284】",
-     "price": 12000,
-     "qty": 2.5,
-     "evidence": "2.5kg",
-     "per10k": 2.083,
-     "unit_price": 4800,
-     "shop": "北海道富良野市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tw2oo.ia330b51.g00tw2oo.ia331edf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012297-furano%2F1286284%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012297-furano%2Fi%2F10000481%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "富良野市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012297-furano/cabinet/09648100/imgrc0093853248.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 1.04
-    },
-    {
      "code": "f423831-ojika:10000211",
      "name": "【先行予約】アールスメロン 約4kg（2玉）【2026年12月より順次発送】《小値賀町》【ながさき西海農協小値賀地区園芸部会】[DAT002] メロン マスクメロン めろん フルーツ 果物 国産 数量限定 冬 冬メロン 先行予約 新着",
      "price": 20000,
@@ -13462,21 +13444,21 @@
     }
    ],
    "candidates": 93,
-   "ranked": 7,
+   "ranked": 6,
    "dropped": {
-    "量なし": 27,
+    "量なし": 28,
     "選択式": 48,
     "量が複数": 1,
     "対象外の商品": 10
    },
    "summary": {
     "median_per10k": 2.0,
-    "median_unit_price": 5000,
+    "median_unit_price": 5125,
     "min_unit_price": 4500,
     "max_unit_price": 5800,
     "towns": 4
    },
-   "popularity": 79
+   "popularity": 77
   },
   "udon": {
    "items": [
@@ -16739,5 +16721,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T00:21+09:00"
+ "fetched_at": "2026-10-11T00:31+09:00"
 }

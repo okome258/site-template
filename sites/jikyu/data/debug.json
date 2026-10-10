@@ -53,7 +53,7 @@
     "cat03": "01",
     "cat04": "01"
    },
-   "n_values": 752,
+   "n_values": 1504,
    "classes": {
     "tab": {
      "name": "表章項目",
@@ -131,132 +131,10 @@
    },
    "per_year": {
     "2022": 47,
-    "2021": 47
+    "2021": 47,
+    "2023": 47,
+    "2020": 47
    }
-  },
-  {
-   "pref_xls_error": "特別給与額_北海道・青森",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_岩手・宮城",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_秋田・山形",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_福島・茨城",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_栃木・群馬",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_埼玉・千葉",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "特別給与額_東京・神奈川",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_新潟・富山",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_石川・福井",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_山梨・長野",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_岐阜・静岡",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_愛知・三重",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_滋賀・京都",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_大阪・兵庫",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "特別給与額_奈良・和歌山",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_鳥取・島根",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_岡山・広島",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_山口・徳島",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_香川・愛媛",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_高知・福岡",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_佐賀・長崎",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "他特別給与額_熊本・大分",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "特別給与額_宮崎・鹿児島",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_error": "与その他特別給与額_沖縄",
-   "year": 2023,
-   "error": "MissingSchema: Invalid URL '0003426933': No scheme supplied. Perhaps you meant https://0003426933?"
-  },
-  {
-   "pref_xls_year": 2023,
-   "ok": true
   },
   {
    "pref_xls_year": 2024,
