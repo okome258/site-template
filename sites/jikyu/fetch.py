@@ -138,6 +138,17 @@ def is_candidate(ec: dict, title: str) -> bool:
 
 
 # ---------------- 取得 ----------------
+DEBUG: list = []
+
+
+def _dump(cfg: dict, obj: dict) -> None:
+    """どの表をどう読んだかを data/debug.json に残す(取得に失敗しても残る)。"""
+    import json
+    path = cfg["_dir"] / "data" / "debug.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def fetch(cfg: dict) -> dict:
     api = EStat()
     if not api.ready:
@@ -162,7 +173,11 @@ def fetch(cfg: dict) -> dict:
         if not yrs and t["survey_date"][:4].isdigit():
             yrs = {t["survey_date"][:4]: None}
         checked.append({"id": t["id"], "title": t["title"][:80], "ok": bool(plan),
-                        "years": sorted(yrs)[:1] + sorted(yrs)[-1:]})
+                        "years": sorted(yrs)[:1] + sorted(yrs)[-1:],
+                        "classes": {cid: {"name": c["name"], "n": len(c["order"]),
+                                          "head": [c["items"][x] for x in c["order"][:6]]}
+                                    for cid, c in meta["classes"].items()},
+                        "plan": plan and {k: plan[k] for k in ("item_cls", "ind_cls", "fixed", "items")}})
         if not plan:
             continue
         n_ind = sum(1 for v in plan["inds"].values() if v != "_all")
@@ -185,6 +200,8 @@ def fetch(cfg: dict) -> dict:
         if codes:
             filters["cdTime"] = ",".join(codes)
         data = api.get_data(tid, **filters)
+        DEBUG.append({"id": tid, "filters": filters, "n_values": len(data["values"]),
+                      "sample": data["values"][:5]})
         for y in ys:
             rows = extract(data["values"], plan, best[y][3])
             if sum(1 for s in rows if s != "_all") < 10:
@@ -194,7 +211,9 @@ def fetch(cfg: dict) -> dict:
             years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
                           "all": rows.pop("_all", {}), "rows": rows})
     years.sort(key=lambda y: y["year"], reverse=True)
+    _dump(cfg, {"checked": checked, "fetched": DEBUG})
     if not years:
+        _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
     return {"status": "ok", "years": years, "checked_tables": checked}
 
