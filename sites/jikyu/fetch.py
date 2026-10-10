@@ -10,6 +10,8 @@
 
 from __future__ import annotations
 
+import re
+
 from core import industries
 from core.estat import EStat
 
@@ -97,10 +99,21 @@ def metrics(raw: dict) -> dict:
     return m
 
 
-def extract(meta_classes: dict, rows: list[dict], plan: dict, year: str) -> dict:
-    """値の一覧から、業界ごとの数値を組み立てる。"""
-    times = meta_classes.get("time", {"items": {}, "order": []})
-    tcode = next((c for c in times["order"] if year in times["items"][c]), None)
+def time_years(classes: dict) -> dict[str, str]:
+    """時間軸の分類から {西暦年: コード}。名前に4桁の年がなければコードの先頭4桁。"""
+    out = {}
+    tc = classes.get("time")
+    if not tc:
+        return out
+    for code in tc["order"]:
+        m = re.search(r"(19|20)\d{2}", tc["items"][code]) or re.match(r"(19|20)\d{2}", code)
+        if m:
+            out.setdefault(m.group(0), code)
+    return out
+
+
+def extract(rows: list[dict], plan: dict, tcode: str | None) -> dict:
+    """値の一覧から、ある年の業界ごとの数値を組み立てる。"""
     code_to_key = {v: k for k, v in plan["items"].items()}
     out: dict[str, dict] = {}
     for r in rows:
@@ -117,6 +130,13 @@ def extract(meta_classes: dict, rows: list[dict], plan: dict, year: str) -> dict
     return {slug: metrics(raw) for slug, raw in out.items()}
 
 
+def is_candidate(ec: dict, title: str) -> bool:
+    """産業を並べて比べられる表だけ(産業別に1表ずつ分かれた表は除く)。"""
+    if any(x in title for x in ec["title_exclude"]):
+        return False
+    return any(x in title for x in ec["title_require"])
+
+
 # ---------------- 取得 ----------------
 def fetch(cfg: dict) -> dict:
     api = EStat()
@@ -128,47 +148,55 @@ def fetch(cfg: dict) -> dict:
     tables = {}
     for w in ec["search_words"]:
         for t in api.list_tables(ec["stats_code"], w):
-            if not any(x in t["title"] for x in ec["title_exclude"]):
+            if is_candidate(ec, t["title"]):
                 tables[t["id"]] = t
-    by_year: dict[str, list[dict]] = {}
-    for t in tables.values():
-        y = t["survey_date"][:4]
-        if y.isdigit():
-            by_year.setdefault(y, []).append(t)
-    print(f"候補の表: {len(tables)}件 / 年: {sorted(by_year)}")
-    debug = [{"id": t["id"], "date": t["survey_date"], "title": t["title"][:90]}
-             for t in sorted(tables.values(), key=lambda t: t["survey_date"], reverse=True)][:80]
+    cands = sorted(tables.values(), key=lambda t: t["id"], reverse=True)[: ec["max_candidates"]]
+    print(f"候補の表: {len(tables)}件(中身を確認するのは {len(cands)}件)")
+
+    # 表ごとに中身を確かめ、年ごとに一番よい表を選ぶ(業界が多くそろう → 分類が少ない → IDが新しい)
+    checked, best = [], {}
+    for t in cands:
+        meta = api.get_data(t["id"], limit=1)
+        plan = inspect(cfg, meta)
+        yrs = time_years(meta["classes"])
+        if not yrs and t["survey_date"][:4].isdigit():
+            yrs = {t["survey_date"][:4]: None}
+        checked.append({"id": t["id"], "title": t["title"][:80], "ok": bool(plan),
+                        "years": sorted(yrs)[:1] + sorted(yrs)[-1:]})
+        if not plan:
+            continue
+        n_ind = sum(1 for v in plan["inds"].values() if v != "_all")
+        score = (n_ind, -plan["n_classes"], t["id"])
+        for y, code in yrs.items():
+            if y not in best or score > best[y][0]:
+                best[y] = (score, t, plan, code)
+
+    want = sorted(best, reverse=True)[: ec["years"]]
+    by_table: dict[str, list[str]] = {}
+    for y in want:
+        by_table.setdefault(best[y][1]["id"], []).append(y)
 
     years = []
-    for y in sorted(by_year, reverse=True):
-        if len(years) >= ec["years"]:
-            break
-        best = None
-        cands = sorted(by_year[y], key=lambda t: len(t["title"]))[: ec["max_candidates"]]
-        for t in cands:
-            meta = api.get_data(t["id"], limit=1)
-            plan = inspect(cfg, meta)
-            if plan and (best is None or plan["n_classes"] < best[1]["n_classes"]):
-                best = (t, plan, meta)
-        if not best:
-            print(f"::warning::{y}年: 使える表が見つからない(候補 {len(cands)}件)")
-            continue
-        t, plan, meta = best
+    for tid, ys in by_table.items():
+        _, t, plan, _ = best[ys[0]]
         filters = {param_name(plan["item_cls"]): ",".join(plan["items"].values())}
         filters.update({param_name(cid): code for cid, code in plan["fixed"].items()})
-        data = api.get_data(t["id"], **filters)
-        rows = extract(meta["classes"], data["values"], plan, y)
-        if sum(1 for s in rows if s != "_all") < 10:
-            print(f"::warning::{y}年: 値が少なすぎるので使わない({t['id']})")
-            continue
-        print(f"{y}年: {t['id']} {t['title']} → {len(rows)}業界")
-        years.append({"year": y, "table": {"id": t["id"], "title": t["title"],
-                                           "open_date": t["open_date"]},
-                      "all": rows.pop("_all", {}), "rows": rows})
+        codes = [best[y][3] for y in ys if best[y][3]]
+        if codes:
+            filters["cdTime"] = ",".join(codes)
+        data = api.get_data(tid, **filters)
+        for y in ys:
+            rows = extract(data["values"], plan, best[y][3])
+            if sum(1 for s in rows if s != "_all") < 10:
+                print(f"::warning::{y}年: 値が少なすぎるので使わない({tid})")
+                continue
+            print(f"{y}年: {tid} {t['title']} → {len(rows)}業界")
+            years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
+                          "all": rows.pop("_all", {}), "rows": rows})
+    years.sort(key=lambda y: y["year"], reverse=True)
     if not years:
-        return {"status": "no_table", "years": [], "debug_tables": debug}
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
-    return {"status": "ok", "years": years, "debug_tables": debug}
+    return {"status": "ok", "years": years, "checked_tables": checked}
 
 
 # ---------------- ページ ----------------

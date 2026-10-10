@@ -64,7 +64,7 @@ def test_parse_and_extract():
     assert plan and plan["ind_cls"] == "cat02" and plan["item_cls"] == "tab"
     assert plan["fixed"] == {"cat01": "1", "cat03": "01"}
     assert mod.param_name("cat01") == "cdCat01" and mod.param_name("tab") == "cdTab"
-    rows = mod.extract(meta["classes"], meta["values"], plan, "2025")
+    rows = mod.extract(meta["values"], plan, mod.time_years(meta["classes"])["2025"])
     assert len(rows) == 17 and "_all" in rows
     m = rows["construction"]  # k=2
     annual = 316 * 12 + 860
@@ -84,7 +84,7 @@ def test_pages_render(tmp_path):
     for y in ("2025", "2024"):
         meta = parse_stats_data(fake_body(y))
         plan = mod.inspect(cfg, meta)
-        rows = mod.extract(meta["classes"], meta["values"], plan, y)
+        rows = mod.extract(meta["values"], plan, mod.time_years(meta["classes"])[y])
         years.append({"year": y, "table": {"id": "x", "title": "t", "open_date": ""},
                       "all": rows.pop("_all"), "rows": rows})
     env = make_env(cfg)
