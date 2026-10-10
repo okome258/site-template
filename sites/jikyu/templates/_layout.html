@@ -13,9 +13,16 @@
 .trend text{font-size:11px;fill:var(--muted)}.trend .val{fill:var(--ink);font-weight:700}
 .trend rect{fill:var(--accent)}.trend .avg{stroke:var(--muted);stroke-dasharray:4 3}
 .jobs a{margin:4px 6px 4px 0}
+.sub{display:block;font-size:12px;font-weight:400;color:var(--muted);font-family:inherit}
+@media(min-width:640px){.sub.sp{display:none}}
+.navs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.navs a{flex:1 1 140px;display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);background:var(--panel)}
+.navs a b{display:block;color:var(--accent)}.navs a small{color:var(--muted)}
+.board.compact th,.board.compact td{padding:8px 5px}
+.wrap-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
 </style>
 {% endblock %}
 {% block footer_extra %}
 <p class="small"><a href="{{ page.root }}about/">このサイトについて・計算方法</a></p>
-<p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・民営事業所・企業規模10人以上・男女計)を加工して作成。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
+<p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
 {% endblock %}

@@ -27,10 +27,21 @@
 <text x="{{ (x + bw / 2) | round(1) }}" y="{{ h - 6 }}" text-anchor="middle">{{ p.year }}</text>
 {% endfor %}
 </svg>
-<table class="board">
+<div class="wrap-x"><table class="board compact">
 <thead><tr><th>年</th><th class="num">実質時給</th><th class="num">年収</th><th class="num">月の労働時間</th></tr></thead>
 <tbody>{% for p in hist | reverse %}<tr><td>{{ p.year }}</td><td class="num">{{ p.hourly | num }}円</td><td class="num">{{ p.annual_man | num }}万円</td><td class="num">{{ p.hours_month }}h</td></tr>{% endfor %}</tbody>
-</table>
+</table></div>
+{% endif %}
+
+{% if row.fc %}
+<h2>{{ to_year }}年の予想（このペースが続いたら）</h2>
+<dl class="kpi">
+<div><dt>{{ to_year }}年の実質時給</dt><dd>{{ row.fc.hourly | num }}<small>円</small></dd></div>
+<div><dt>{{ to_year }}年の年収</dt><dd>{{ row.fc.annual | num }}<small>万円</small></dd></div>
+<div><dt>時給の伸び</dt><dd class="{{ 'up' if row.fc.pace > 0 else 'down' }}">{{ '+' if row.fc.pace > 0 else '' }}{{ row.fc.pace | num }}<small>円/年</small></dd></div>
+<div><dt>年収の伸び</dt><dd class="{{ 'up' if row.fc.annual_pace > 0 else 'down' }}">{{ '+' if row.fc.annual_pace > 0 else '' }}{{ row.fc.annual_pace | num(1) }}<small>万円/年</small></dd></div>
+</dl>
+<p class="small muted">{{ row.fc.first }}〜{{ latest.year }}年の{{ row.fc.n }}年分に直線を当てはめて延ばした値です。景気・物価・AIの普及などで実際は変わります。<a href="{{ page.root }}yosoku/">全業界の予想を見る</a></p>
 {% endif %}
 
 {% if cfg.job_links %}

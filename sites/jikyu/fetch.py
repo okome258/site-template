@@ -143,97 +143,6 @@ def is_candidate(ec: dict, title: str) -> bool:
 
 # ---------------- 取得 ----------------
 DEBUG: list = []
-WATCH: list = []
-
-
-def probe(cfg, api, ec) -> None:
-    """(調査用・一時)新しい年の Excel の形を data/xls_probe.json に残す。"""
-    import json
-    import xls
-    out = {}
-    try:
-        for word, want in (("令和７年 一般労働者 産業大分類", "産業計・産業別"),
-                           ("令和７年 一般労働者 都道府県別", "1_")):
-            files = xls.catalog(api, ec["stats_code"], word)
-            out[word] = [{k: f[k] for k in ("dataset", "no", "name", "url")} for f in files][:80]
-            hit = [f for f in files if want in f["name"]][:1]
-            for f in hit:
-                book = xls.read_book(xls.download(f["url"]))
-                out[word + " :: " + f["name"]] = {
-                    sh: {"n": len(rows), "head": [[str(c)[:24] if c is not None else "" for c in r[:30]]
-                                                  for r in rows[:45]]}
-                    for sh, rows in list(book.items())[:3]}
-    except Exception as e:
-        out["error"] = f"{type(e).__name__}: {e}"[:300]
-    (cfg["_dir"] / "data" / "xls_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
-                                                          encoding="utf-8")
-
-
-def catalog_files(api, ec: dict, latest: int) -> list[dict]:
-    """e-Stat のファイル(Excel)一覧から、最新年より後に公開されたものを探す。"""
-    out = []
-    for w in ec.get("catalog_words", ["令和７年 一般労働者 産業", "令和６年 一般労働者 産業", "産業大分類"]):
-        try:
-            body = api._get("getDataCatalog", "GET_DATA_CATALOG", statsCode=ec["stats_code"],
-                            searchWord=w, limit=100)
-        except Exception as e:
-            out.append({"word": w, "error": str(e)})
-            continue
-        cats = body.get("DATA_CATALOG_LIST_INF", {}).get("DATA_CATALOG_INF") or []
-        cats = cats if isinstance(cats, list) else [cats]
-        n = 0
-        for c in cats:
-            ds = c.get("DATASET", {})
-            res = (c.get("RESOURCES") or {}).get("RESOURCE") or []
-            res = res if isinstance(res, list) else [res]
-            for r in res:
-                n += 1
-                rd = str(r.get("RELEASE_DATE", ""))
-                if rd[:4].isdigit() and int(rd[:4]) <= latest + 1:
-                    continue
-                t = r.get("TITLE", {})
-                out.append({"word": w, "id": r.get("@id"), "release": rd, "format": r.get("FORMAT"),
-                            "url": r.get("URL"),
-                            "survey": str(ds.get("SURVEY_DATE", "")),
-                            "dataset": str((ds.get("TITLE") or {}).get("NAME", ""))[:80],
-                            "name": str(t.get("NAME", ""))[:100], "no": str(t.get("TABLE_NO", ""))})
-        out.append({"word": w, "n_resources": n})
-    return out[:400]
-
-
-def find_newer(api, ec: dict, latest: int) -> list[dict]:
-    """使っている最新年より新しい年の表があるかを広く探して記録する(取り込みは別)。
-
-    DB表(全年まとめ)は更新が遅いので、新しい年が年ごとの表で先に出ていないかを見張る。
-    見つかったら Actions の警告に出し、data/debug.json に表題とIDを残す。
-    """
-    found: dict[str, dict] = {}
-    stats = []
-    for w in ec.get("watch_words", ["一般労働者", "産業大分類", "産業"]):
-        try:
-            tables = api.list_tables(ec["stats_code"], w, limit=2000)
-        except Exception as e:  # 見張りの失敗でサイト更新は止めない
-            print(f"::warning::新しい年の表の確認に失敗: {e}")
-            continue
-        ods = sorted({t["open_date"][:7] for t in tables})
-        stats.append({"word": w, "n": len(tables), "open_dates": ods[-6:]})
-        for t in tables:
-            # 調査年(survey_date)は空のことが多いので、公開日が「最新年の翌年以降」の表を拾う
-            # (例: 2023年分の公開は2024年3月なので、2025年以降に出た表は2024年分以降の可能性)
-            od = t["open_date"][:4]
-            if not od.isdigit() or int(od) <= latest + 1:
-                continue
-            if any(x in t["title"] for x in ("短時間", "職種", "都道府県")):
-                continue
-            found[t["id"]] = {k: t[k] for k in ("id", "title", "survey_date", "open_date")}
-    print(f"表の検索結果: {stats}")
-    WATCH.extend(stats)
-    WATCH.append({"catalog": catalog_files(api, ec, latest)})
-    out = sorted(found.values(), key=lambda t: t["id"], reverse=True)[:200]
-    if out:
-        print(f"::warning::{latest}年より新しい表が {len(out)}件あります(まだ取り込めていません)。"
-              "data/debug.json の newer_tables を確認")
-    return out
 
 
 def _dump(cfg: dict, obj: dict) -> None:
@@ -244,12 +153,8 @@ def _dump(cfg: dict, obj: dict) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def fetch(cfg: dict) -> dict:
-    api = EStat()
-    if not api.ready:
-        print("::warning::ESTAT_APP_ID が未設定なので、準備中ページだけ生成します")
-        return {"status": "no_key", "years": []}
-
+def fetch_db_years(api, cfg: dict, checked: list) -> list[dict]:
+    """e-Stat データベース(全年まとめの表)から業界別の年を取る。2020〜2023年はこちら。"""
     ec = cfg["estat"]
     tables = {}
     for w in ec["search_words"]:
@@ -260,7 +165,7 @@ def fetch(cfg: dict) -> dict:
     print(f"候補の表: {len(tables)}件(中身を確認するのは {len(cands)}件)")
 
     # 表ごとに中身を確かめ、年ごとに一番よい表を選ぶ(業界が多くそろう → 分類が少ない → IDが新しい)
-    checked, best = [], {}
+    best = {}
     for t in cands:
         meta = api.get_data(t["id"], limit=1)
         plan = inspect(cfg, meta)
@@ -269,9 +174,6 @@ def fetch(cfg: dict) -> dict:
             yrs = {t["survey_date"][:4]: None}
         checked.append({"id": t["id"], "title": t["title"][:80], "ok": bool(plan),
                         "years": sorted(yrs)[:1] + sorted(yrs)[-1:],
-                        "classes": {cid: {"name": c["name"], "n": len(c["order"]),
-                                          "head": [c["items"][x] for x in c["order"][:6]]}
-                                    for cid, c in meta["classes"].items()},
                         "plan": plan and {k: plan[k] for k in ("item_cls", "ind_cls", "fixed", "items")}})
         if not plan:
             continue
@@ -281,7 +183,7 @@ def fetch(cfg: dict) -> dict:
             if y not in best or score > best[y][0]:
                 best[y] = (score, t, plan, code)
 
-    want = sorted((y for y in best if int(y) >= ec.get("min_year", 0)), reverse=True)[: ec["years"]]
+    want = sorted((y for y in best if int(y) >= ec.get("min_year", 0)), reverse=True)
     by_table: dict[str, list[str]] = {}
     for y in want:
         by_table.setdefault(best[y][1]["id"], []).append(y)
@@ -295,8 +197,7 @@ def fetch(cfg: dict) -> dict:
         if codes:
             filters["cdTime"] = ",".join(codes)
         data = api.get_data(tid, **filters)
-        DEBUG.append({"id": tid, "filters": filters, "n_values": len(data["values"]),
-                      "sample": data["values"][:5]})
+        DEBUG.append({"id": tid, "filters": filters, "n_values": len(data["values"])})
         for y in ys:
             rows = extract(data["values"], plan, best[y][3])
             if sum(1 for s in rows if s != "_all") < 10:
@@ -305,17 +206,219 @@ def fetch(cfg: dict) -> dict:
             print(f"{y}年: {tid} {t['title']} → {len(rows)}業界")
             years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
                           "all": rows.pop("_all", {}), "rows": rows})
+    return years
+
+
+# ---- 2024年分以降: 年ごとの Excel ----
+def load_cache(cfg: dict) -> dict:
+    import json
+    p = cfg["_dir"] / "data" / "xls_cache.json"
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def save_cache(cfg: dict, cache: dict) -> None:
+    import json
+    p = cfg["_dir"] / "data" / "xls_cache.json"
+    p.write_text(json.dumps(cache, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
+
+
+def read_file(cache: dict, f: dict) -> list[dict]:
+    """Excel 1ファイルを読み、シートごとの結果を返す。一度読んだファイルはキャッシュから。"""
+    import xls
+    key = f["id"] + "@" + f["release"]
+    if key not in cache:
+        book = xls.read_book(xls.download(f["url"]))
+        cache[key] = [r for r in (xls.parse_sheet(rows) for rows in book.values()) if r]
+        print(f"  Excel 読み込み: {f['name'][:50]} → {len(cache[key])}シート")
+    return cache[key]
+
+
+def xls_files(api, ec: dict, year: int, kind: str) -> list[dict]:
+    """その年の Excel 一覧(kind: 産業大分類 / 都道府県別)。表題の年は和暦の全角数字。"""
+    import re
+    import xls
+    word = f"令和{xls.zen(year - 2018)}年 一般労働者 {kind}"
+    files = xls.catalog(api, ec["stats_code"], word)
+    pat = re.compile(rf"一般労働者_{kind}_{year}年")
+    return [f for f in files if pat.search(f["dataset"]) and f["url"]]
+
+
+def fetch_xls_industry(api, cfg: dict, year: int, cache: dict) -> dict | None:
+    ec = cfg["estat"]
+    files = [f for f in xls_files(api, ec, year, "産業大分類")
+             if f["name"].startswith("1_") and "産業計・産業別" in f["name"]]
+    if not files:
+        return None
+    f = max(files, key=lambda x: x["release"])
+    rows: dict[str, dict] = {}
+    for sh in read_file(cache, f):
+        lb = sh["labels"]
+        if "民営" not in lb.get("民公区分", "民営") or "公営" in lb.get("民公区分", ""):
+            continue
+        name = lb.get("産業", "")
+        slug = "_all" if industries.norm(name).endswith("産業計") else (industries.match(name) or {}).get("slug")
+        if slug and slug not in rows:
+            rows[slug] = metrics(sh["raw"])
+    if sum(1 for s in rows if s != "_all") < 10:
+        print(f"::warning::{year}年の Excel から業界が{len(rows)}件しか読めませんでした(形が変わった可能性)")
+        return None
+    return {"year": str(year), "source": "excel",
+            "table": {"id": f["id"], "title": f["dataset"].split("_", 1)[-1] + "（Excel）",
+                      "open_date": f["release"]},
+            "all": rows.pop("_all", {}), "rows": rows}
+
+
+PREF_ALIAS = {"東京": "東京都", "京都": "京都府", "大阪": "大阪府", "北海道": "北海道"}
+
+
+def pref_name(name: str) -> str | None:
+    from core.japan import TILES
+    n = industries.norm(name)
+    n = re.sub(r"^\d+", "", n)
+    for cand in (n, PREF_ALIAS.get(n, ""), n + "県"):
+        if cand in TILES:
+            return cand
+    return None
+
+
+def fetch_xls_pref(api, cfg: dict, year: int, cache: dict) -> dict | None:
+    ec = cfg["estat"]
+    files = [f for f in xls_files(api, ec, year, "都道府県別")
+             if f["name"].startswith("1_都道府県、年齢階級別") and "5～9人" not in f["name"]]
+    rows = {}
+    for f in files:
+        for sh in read_file(cache, f):
+            lb = sh["labels"]
+            if not industries.norm(lb.get("産業", "")).endswith("産業計"):
+                continue
+            p = pref_name(lb.get("都道府県", ""))
+            if p and p not in rows:
+                rows[p] = metrics(sh["raw"])
+    if len(rows) < 40:
+        if files:
+            print(f"::warning::{year}年の都道府県 Excel が{len(rows)}県分しか読めませんでした")
+        return None
+    return {"year": str(year), "source": "excel", "rows": rows}
+
+
+def fetch_db_pref(api, cfg: dict) -> list[dict]:
+    """都道府県別の全年まとめの表(2020〜2023年)。"""
+    ec = cfg["estat"]
+    tabs = [t for t in api.list_tables(ec["stats_code"], "都道府県別 年齢階級別")
+            if "一般_都道府県別_年齢階級別DB" in t["title"]]
+    if not tabs:
+        print("::warning::都道府県別のDB表が見つかりません")
+        return []
+    t = max(tabs, key=lambda x: x["id"])
+    meta = api.get_data(t["id"], limit=1)
+    classes = meta["classes"]
+    item_cls, items = find_item_class(classes, cfg["items"])
+    if not item_cls or any(k not in items for k in cfg["required"]) or "area" not in classes:
+        print("::warning::都道府県別のDB表の形が想定と違います")
+        return []
+    prefer = list(cfg.get("fixed_prefer", [])) + ["産業計", "Ｔ１ 産業計", "T1 産業計"]
+    fixed = {cid: total_code(c, prefer) for cid, c in classes.items()
+             if cid not in (item_cls, "area", "time")}
+    filters = {param_name(item_cls): ",".join(items.values())}
+    filters.update({param_name(cid): code for cid, code in fixed.items()})
+    data = api.get_data(t["id"], **filters)
+    area = {code: pref_name(nm) for code, nm in classes["area"]["items"].items()}
+    tyear = time_years(classes)
+    code_year = {v: k for k, v in tyear.items()}
+    key_of = {v: k for k, v in items.items()}
+    acc: dict[str, dict[str, dict]] = {}
+    for r in data["values"]:
+        if r["value"] is None or any(r.get(cid) not in (None, c) for cid, c in fixed.items()):
+            continue
+        p, y, k = area.get(r.get("area")), code_year.get(r.get("time")), key_of.get(r.get(item_cls))
+        if p and y and k:
+            acc.setdefault(y, {}).setdefault(p, {})[k] = r["value"]
+    DEBUG.append({"pref_db": t["id"], "fixed": fixed, "n_values": len(data["values"])})
+    return [{"year": y, "source": "db", "table": {"id": t["id"], "title": t["title"]},
+             "rows": {p: metrics(raw) for p, raw in v.items()}}
+            for y, v in sorted(acc.items(), reverse=True) if len(v) >= 40]
+
+
+def fetch(cfg: dict) -> dict:
+    from datetime import date
+    api = EStat()
+    if not api.ready:
+        print("::warning::ESTAT_APP_ID が未設定なので、準備中ページだけ生成します")
+        return {"status": "no_key", "years": []}
+
+    ec = cfg["estat"]
+    checked: list = []
+    years = fetch_db_years(api, cfg, checked)
+    db_latest = max((int(y["year"]) for y in years), default=ec.get("min_year", 2020) - 1)
+
+    # DB に入っていない新しい年は、年ごとの Excel から取る(毎年3月ごろ公表)
+    cache = load_cache(cfg)
+    for y in range(db_latest + 1, date.today().year + 1):
+        try:
+            got = fetch_xls_industry(api, cfg, y, cache)
+        except Exception as e:  # Excel の失敗でサイト全体は止めない
+            print(f"::warning::{y}年の Excel 取得に失敗: {type(e).__name__}")
+            got = None
+        if got:
+            print(f"{y}年: Excel から {len(got['rows'])}業界")
+            years.append(got)
     years.sort(key=lambda y: y["year"], reverse=True)
-    newer = find_newer(api, ec, int(years[0]["year"]) if years else ec.get("min_year", 2020))
-    _dump(cfg, {"checked": checked, "fetched": DEBUG, "newer_tables": newer, "watch": WATCH})
-    probe(cfg, api, ec)
     if not years:
         _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
-    return {"status": "ok", "years": years, "checked_tables": checked}
+
+    # 都道府県別
+    prefs = []
+    try:
+        prefs = fetch_db_pref(api, cfg)
+        p_latest = max((int(p["year"]) for p in prefs), default=ec.get("min_year", 2020) - 1)
+        for y in range(p_latest + 1, date.today().year + 1):
+            got = fetch_xls_pref(api, cfg, y, cache)
+            if got:
+                print(f"{y}年: 都道府県 Excel から {len(got['rows'])}県")
+                prefs.append(got)
+    except Exception as e:
+        print(f"::warning::都道府県別の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
+    prefs.sort(key=lambda y: y["year"], reverse=True)
+    save_cache(cfg, cache)
+
+    newest = years[0]["year"]
+    if int(newest) < date.today().year - 2 + (1 if date.today().month >= 4 else 0):
+        print(f"::warning::最新が{newest}年のままです。新しい年の公表を確認してください")
+    _dump(cfg, {"checked": checked, "fetched": DEBUG})
+    return {"status": "ok", "years": years, "prefs": prefs[: ec["years"]], "checked_tables": checked}
 
 
 # ---------------- ページ ----------------
+def trend(points: list[tuple[int, float]], to_year: int) -> dict | None:
+    """年と値の並びに直線を当てはめ(最小二乗法)、to_year の値を出す。3年分以上ないときは出さない。"""
+    pts = [(x, y) for x, y in points if y]
+    if len(pts) < 3:
+        return None
+    n = len(pts)
+    mx = sum(x for x, _ in pts) / n
+    my = sum(y for _, y in pts) / n
+    sxx = sum((x - mx) ** 2 for x, _ in pts)
+    if not sxx:
+        return None
+    slope = sum((x - mx) * (y - my) for x, y in pts) / sxx
+    last = pts[-1][1]
+    pred = my + slope * (to_year - mx)
+    return {"slope": slope, "pred": pred, "rate": slope / last * 100 if last else None}
+
+
+def add_forecast(r: dict, hist: list[dict], to_year: int) -> None:
+    th = trend([(int(p["year"]), p.get("hourly")) for p in hist], to_year)
+    ta = trend([(int(p["year"]), p.get("annual_man")) for p in hist], to_year)
+    if th and ta:
+        r["fc"] = {"hourly": round(th["pred"]), "pace": round(th["slope"]), "rate": th["rate"],
+                   "annual": round(ta["pred"], 1), "annual_pace": round(ta["slope"], 1),
+                   "first": hist[0]["year"], "n": len(hist)}
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     about = {"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
              "changefreq": "monthly"}
@@ -326,21 +429,61 @@ def pages(cfg: dict, data: dict) -> list[dict]:
 
     latest = years[0]
     prev = years[1] if len(years) > 1 else None
+    to_year = int(latest["year"]) + 5
     master = industries.by_slug()
     ranking = sorted(
         ({"ind": master[s], **m,
           "diff": (m.get("hourly") - prev["rows"][s]["hourly"])
           if prev and prev["rows"].get(s, {}).get("hourly") and m.get("hourly") else None}
-         for s, m in latest["rows"].items() if m.get("hourly")),
+         for s, m in latest["rows"].items() if m.get("hourly") and s in master),
         key=lambda r: -r["hourly"])
     history = {s: [{"year": y["year"], **y["rows"][s]} for y in reversed(years) if s in y["rows"]]
                for s in latest["rows"]}
+    for r in ranking:
+        add_forecast(r, history[r["ind"]["slug"]], to_year)
+    all_hist = [{"year": y["year"], **y["all"]} for y in reversed(years) if y.get("all")]
+    all_row = dict(latest["all"])
+    add_forecast(all_row, all_hist, to_year)
+    sources = [{"year": y["year"], **y["table"]} for y in years]
+
+    # 都道府県
+    prefs = data.get("prefs") or []
+    pref_rank = []
+    if prefs:
+        pl, pp = prefs[0], (prefs[1] if len(prefs) > 1 else None)
+        for p, m in pl["rows"].items():
+            if not m.get("hourly"):
+                continue
+            hist = [{"year": y["year"], **y["rows"][p]} for y in reversed(prefs) if p in y["rows"]]
+            row = {"name": p, **m, "hist": hist,
+                   "diff": (m["hourly"] - pp["rows"][p]["hourly"])
+                   if pp and pp["rows"].get(p, {}).get("hourly") else None}
+            add_forecast(row, hist, to_year)
+            pref_rank.append(row)
+        pref_rank.sort(key=lambda r: -r["hourly"])
+
+    fc_rank = sorted((r for r in ranking if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     common = {"latest": latest, "prev": prev, "ranking": ranking, "industries": master,
-              "max_hourly": max(r["hourly"] for r in ranking), "ready": True}
+              "max_hourly": max(r["hourly"] for r in ranking), "ready": True, "all_row": all_row,
+              "to_year": to_year, "first_year": years[-1]["year"], "sources": sources,
+              "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
+              "fc_rank": fc_rank}
 
     out = [{"path": "index.html", "template": "index.html",
             "title": f"業界別 実質時給ランキング{latest['year']}｜年収÷労働時間で比べる",
             "context": common}]
+    if fc_rank:
+        out.append({"path": "yosoku/index.html", "template": "forecast.html",
+                    "title": f"{to_year}年の年収・時給予想｜業界別、このペースが続いたら（AI時代の伸び方）",
+                    "description": (f"賃金構造基本統計調査の{years[-1]['year']}〜{latest['year']}年の推移から、"
+                                    f"業界ごとの{to_year}年の年収・実質時給を直線で延ばして予想。伸びている業界・伸び悩む業界がわかります。"),
+                    "context": common})
+    if pref_rank:
+        out.append({"path": "chiiki/index.html", "template": "pref.html",
+                    "title": f"都道府県別 実質時給・年収ランキング{prefs[0]['year']}｜地域で比べる",
+                    "description": (f"47都道府県の年収と労働時間から実質時給を計算してランキング。"
+                                    f"{prefs[0]['year']}年は1位{pref_rank[0]['name']}{pref_rank[0]['hourly']:,.0f}円。"),
+                    "context": common})
     for i, r in enumerate(ranking, 1):
         s = r["ind"]["slug"]
         out.append({
@@ -348,7 +491,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             "title": f"{r['ind']['short']}業界の実質時給・年収・残業時間（{latest['year']}年）",
             "description": (f"{r['ind']['name']}の実質時給は{r['hourly']:,.0f}円で全{len(ranking)}業界中{i}位。"
                             f"平均年収{r.get('annual_man', 0):,.0f}万円、月の労働時間{r.get('hours_month', 0)}時間。"
-                            "賃金構造基本統計調査から計算し、年ごとの推移も掲載。"),
+                            "賃金構造基本統計調査から計算し、年ごとの推移と今後の予想も掲載。"),
             "context": {**common, "row": r, "rank": i, "hist": history[s]},
         })
     out.append({**about, "context": common})

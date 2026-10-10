@@ -1,0 +1,48 @@
+{% extends "_layout.html" %}
+{% block content %}
+<p class="small"><a href="{{ page.root }}">ランキング</a> › {{ to_year }}年の予想</p>
+<h1>{{ to_year }}年の年収・時給予想 <small class="muted">業界別</small></h1>
+<p class="lead">{{ first_year }}〜{{ latest.year }}年の実際の数字に直線を当てはめ、「このペースが続いたら{{ to_year }}年にどうなるか」を業界ごとに出しました。</p>
+{% if all_row.fc %}
+<dl class="kpi">
+<div><dt>全産業 {{ latest.year }}年の時給</dt><dd>{{ all_row.hourly | num }}<small>円</small></dd></div>
+<div><dt>全産業 {{ to_year }}年の予想</dt><dd>{{ all_row.fc.hourly | num }}<small>円</small></dd></div>
+<div><dt>{{ latest.year }}年の年収</dt><dd>{{ all_row.annual_man | num }}<small>万円</small></dd></div>
+<div><dt>{{ to_year }}年の年収予想</dt><dd>{{ all_row.fc.annual | num }}<small>万円</small></dd></div>
+</dl>
+{% endif %}
+
+{% set fast = fc_rank | sort(attribute='fc.rate', reverse=true) | list %}
+<h2>伸びている業界・伸び悩む業界</h2>
+<p>1年あたりの時給の伸び率がいちばん大きいのは<b>{{ fast[0].ind.short }}</b>（年{{ fast[0].fc.rate | num(1) }}%）、次いで{{ fast[1].ind.short }}・{{ fast[2].ind.short }}。いちばん小さいのは<b>{{ fast[-1].ind.short }}</b>（年{{ fast[-1].fc.rate | num(1) }}%）です。</p>
+
+<h2>{{ to_year }}年の実質時給 予想ランキング</h2>
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>#</th><th>業界</th><th class="num">{{ latest.year }}年</th><th class="num">{{ to_year }}年予想</th><th class="num">伸び/年</th></tr></thead>
+<tbody>
+{% for r in fc_rank %}
+<tr>
+<td>{{ loop.index }}</td>
+<th><a href="{{ page.root }}gyokai/{{ r.ind.slug }}/">{{ r.ind.short }}</a></th>
+<td class="num">{{ r.hourly | num }}円<span class="sub">{{ r.annual_man | num }}万</span></td>
+<td class="num v">{{ r.fc.hourly | num }}円<span class="sub">{{ r.fc.annual | num }}万</span></td>
+<td class="num {{ 'up' if r.fc.pace > 0 else 'down' }}">{{ '+' if r.fc.pace > 0 else '' }}{{ r.fc.pace | num }}円<span class="sub">{{ r.fc.rate | num(1) }}%</span></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<p class="small muted">上の段が実質時給、下の段が年収（万円）。伸び/年は1年あたりの時給の増え方と、その伸び率です。</p>
+
+<h2>AI時代の見方</h2>
+<p>AIで定型的な作業が減ると、同じ給料で労働時間が短くなって<b>実質時給が上がる業界</b>と、仕事そのものが減って<b>給料が伸びにくくなる業界</b>に分かれていく可能性があります。このページの予想は過去の流れをそのまま延ばしたものなので、そうした変化はまだ入っていません。</p>
+<p>新しい年の統計が出るたびに自動で作り直すので、予想と実際のずれが出てきたら、それが「AIなどで流れが変わったサイン」として読めます。</p>
+
+<h2>予想の作り方</h2>
+<ul>
+<li>{{ first_year }}〜{{ latest.year }}年の業界ごとの実質時給と年収に、それぞれ直線（最小二乗法）を当てはめています。</li>
+<li>景気の波・物価・最低賃金・制度変更などは考えていません。あくまで「このペースが続いたら」の目安です。</li>
+<li>統計の平均値なので、個人の年収の予想ではありません。</li>
+</ul>
+{% endblock %}

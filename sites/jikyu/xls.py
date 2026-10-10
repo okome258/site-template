@@ -56,3 +56,64 @@ def read_book(blob: bytes) -> dict[str, list[list]]:
     import xlrd
     wb = xlrd.open_workbook(file_contents=blob)
     return {sh.name: [sh.row_values(i) for i in range(sh.nrows)] for sh in wb.sheets()}
+
+
+# ---------------- 表を読む ----------------
+COLS = ["age", "tenure", "hours_sched", "hours_over", "monthly", "sched_pay", "bonus", "workers"]
+# 見出しに必ず入っている言葉(列ずれ検知用)。monthly の次の sched_pay は見出しが下の行にある
+CHECK = {"hours_sched": "所定内", "hours_over": "超過", "monthly": "きまって", "bonus": "賞与"}
+
+
+def _s(v) -> str:
+    return "" if v is None else str(v).replace("\n", "").replace(" ", "").replace("　", "")
+
+
+def _num(v):
+    try:
+        return float(str(v).replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+
+
+def parse_sheet(rows: list[list]) -> dict | None:
+    """賃金構造基本統計調査の「第1表」形式のシートから、企業規模計・男女計・全年齢の行を読む。
+
+    返り値: {"labels": {"産業": ..., "民公区分": ..., "都道府県": ...}, "raw": {age: .., ...}}
+    形が想定と違えば None(列ずれした値を載せないため)。
+    """
+    unit_i = c0 = None
+    for i, r in enumerate(rows[:40]):
+        cells = [_s(c) for c in r]
+        if "歳" in cells:
+            j = cells.index("歳")
+            if cells[j + 1:j + 4] == ["年", "時間", "時間"]:
+                unit_i, c0 = i, j
+                break
+    if unit_i is None:
+        return None
+    head = {}
+    for k, w in CHECK.items():
+        col = c0 + COLS.index(k)
+        text = "".join(_s(rows[i][col]) for i in range(max(0, unit_i - 3), unit_i) if col < len(rows[i]))
+        if w not in text:
+            return None
+        head[k] = text
+    labels = {}
+    for r in rows[:unit_i]:
+        cells = [_s(c) for c in r]
+        for j, c in enumerate(cells[:4]):
+            if c in ("産業", "民公区分", "都道府県"):
+                rest = [x for x in cells[j + 1:] if x]
+                if rest:
+                    labels[c] = rest[0]
+    for r in rows[unit_i + 1:unit_i + 6]:
+        vals = [_num(r[c0 + n]) if c0 + n < len(r) else None for n in range(len(COLS))]
+        label = "".join(_s(c) for c in r[:c0])
+        if vals[COLS.index("monthly")] is not None and "計" in label:
+            return {"labels": labels, "raw": {k: v for k, v in zip(COLS, vals) if v is not None}}
+    return None
+
+
+def zen(n: int) -> str:
+    """7 → ７(e-Stat の表題は全角数字)"""
+    return str(n).translate(str.maketrans("0123456789", "０１２３４５６７８９"))
