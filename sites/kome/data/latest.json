@@ -2993,28 +2993,6 @@
    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qehho.ia33090b.g00qehho.ia331db7/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkimsho%2Ffukubukuro-10%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkimsho%2Fi%2F10000695%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
   },
   {
-   "code": "sakekasu:10000385",
-   "kind": "hakumai",
-   "option": "",
-   "name": "【令和7年度産】コシヒカリ 5kg 茨城県産 令和7年産 送料無料 こしひかり 単一原料米 5kg 米 コメ こめ 白米 5キロ 精米",
-   "short": "コシヒカリ 5kg 茨城県産 令和7年産 送料無料 こしひかり 単一原料米 5kg 米 コメ こめ 白米 5キロ 精米",
-   "brand": "コシヒカリ",
-   "blend": false,
-   "crop": "令和7年産",
-   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/sakekasu/cabinet/goods/rice/koshihikari_5kg2.jpg?_ex=240x240",
-   "price": 2870,
-   "qty_kg": 5.0,
-   "evidence": "5キロ",
-   "per_kg": 574,
-   "postage_included": true,
-   "point_rate": 1,
-   "review_count": 69,
-   "review_avg": 4.43,
-   "available": true,
-   "shop": "米と酒粕、うまいもの本舗「竹屋」",
-   "url": "https://hb.afl.rakuten.co.jp/hgc/g00rixzo.ia330339.g00rixzo.ia331c38/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsakekasu%2Fkoshihikari_5%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fsakekasu%2Fi%2F10000385%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
-  },
-  {
    "code": "hseason:10000260",
    "kind": "musen",
    "option": "",
@@ -6538,11 +6516,11 @@
  "dropped": {
   "量が複数": 51,
   "選択式": 50,
-  "対象外": 54,
-  "量なし": 30,
+  "対象外": 55,
+  "量なし": 29,
   "米以外": 5,
   "量が範囲外": 4
  },
  "errors": [],
- "fetched_at": "2026-10-10T23:49+09:00"
+ "fetched_at": "2026-10-10T23:55+09:00"
 }

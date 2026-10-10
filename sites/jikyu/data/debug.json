@@ -230,6 +230,18 @@
     "2020-09",
     "2024-11"
    ]
+  },
+  {
+   "catalog": [
+    {
+     "word": "一般労働者 産業",
+     "error": "getDataCatalog: レコード行数（limit）の値が正しくありません。"
+    },
+    {
+     "word": "産業大分類",
+     "error": "getDataCatalog: レコード行数（limit）の値が正しくありません。"
+    }
+   ]
   }
  ]
 }

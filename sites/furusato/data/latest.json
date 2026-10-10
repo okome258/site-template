@@ -2283,26 +2283,6 @@
      "market_pct": 27
     },
     {
-     "code": "f342041-mihara:10000949",
-     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉・皮無しミンチ 合計3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ 鶏肉 むねにく 鶏むね肉 むね肉 皮なし 鶏 ミンチ 小分け 広島県産 神明鶏 012021",
-     "price": 18000,
-     "qty": 3.0,
-     "evidence": "合計3kg",
-     "per10k": 1.667,
-     "unit_price": 6000,
-     "shop": "広島県三原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110895%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000949%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "三原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f59ba7cedd88078810.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.92,
-     "market_yen": 4860.0,
-     "market_pct": 27
-    },
-    {
      "code": "f212059-seki:10004151",
      "name": "恵那どり むねミンチ肉 4.2kg バラ凍　(420g×10パック)　冷凍 鶏肉 ひき肉 むね肉 とり肉 鶏むね肉 業務用 原料肉 銘柄鶏 胸 パラパラ ミンチ肉 鶏ミンチ くっつかない 小分け 大容量【配送不可地域：離島・一部山間部等】",
      "price": 27000,
@@ -2461,10 +2441,30 @@
      "vs_median": 0.71,
      "market_yen": 2920.0,
      "market_pct": 21
+    },
+    {
+     "code": "f462187-kirishima:10000863",
+     "name": "国産！高原鶏 鶏刺し一羽セット(未カット)合計約1.4kg超え！ 鶏 鶏肉 鳥肉 モモ ムネ ササミ もも肉 むね肉 胸肉 真空パック 醤油付き 鳥刺し タタキ 刺身 おつまみ 冷凍【ワタセ食鳥】",
+     "price": 11000,
+     "qty": 1.4,
+     "evidence": "1.4kg",
+     "per10k": 1.273,
+     "unit_price": 7857,
+     "shop": "鹿児島県霧島市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3qro.ia330ec5.g00t3qro.ia331084/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462187-kirishima%2Fa0-278%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462187-kirishima%2Fi%2F10000863%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "霧島市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462187-kirishima/cabinet/img01/a0-278_smn_new.jpg?_ex=240x240",
+     "review_avg": 4.61,
+     "review_count": 118,
+     "wakeari": false,
+     "vs_median": 0.7,
+     "market_yen": 2270.0,
+     "market_pct": 21
     }
    ],
-   "candidates": 166,
-   "ranked": 38,
+   "candidates": 165,
+   "ranked": 37,
    "dropped": {
     "対象外の商品": 74,
     "選択式": 45,
@@ -2474,7 +2474,7 @@
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 6000,
+    "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
     "towns": 22
@@ -3425,6 +3425,26 @@
      "market_pct": 29
     },
     {
+     "code": "f412040-taku:10000910",
+     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
+     "price": 12000,
+     "qty": 0.9,
+     "evidence": "合計900g",
+     "per10k": 0.75,
+     "unit_price": 13333,
+     "shop": "佐賀県多久市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "多久市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 1.03,
+     "market_yen": 3430.0,
+     "market_pct": 29
+    },
+    {
      "code": "f232131-nishio:10000873",
      "name": "特大天然むきエビ (背ワタ処理済み) 1.1kg《配達不可エリア：北海道・沖縄・離島》・K131-150 【冷凍便】再入荷！数量限定！ 海老 剥き海老 えび 海鮮 海の幸 冷凍保存 プロ使用 業務用 バラ凍結 ばら凍結 むきえび むき海老 特大 下味付きMB",
      "price": 15000,
@@ -3683,33 +3703,13 @@
      "vs_median": 0.63,
      "market_yen": 1900.0,
      "market_pct": 17
-    },
-    {
-     "code": "f372013-takamatsu:10001604",
-     "name": "海老乃家のむき海老ギフトセット125g×8袋(1kg) | 天然 むき海老 海老専門店 刺身 海鮮 魚介 専門店 プリプリ 料理 時短料理 簡単調理 食卓 冷凍 食品 人気 おすすめ お取り寄せ お取り寄せグルメ 送料無料",
-     "price": 23000,
-     "qty": 1.0,
-     "evidence": "1kg",
-     "per10k": 0.435,
-     "unit_price": 23000,
-     "shop": "香川県高松市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tiddo.ia33010c.g00tiddo.ia331b91/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372013-takamatsu%2Ft124-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372013-takamatsu%2Fi%2F10001604%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "高松市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372013-takamatsu/cabinet/frp_goods/frp006/23666074.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 0.6,
-     "market_yen": 3810.0,
-     "market_pct": 17
     }
    ],
    "candidates": 143,
-   "ranked": 36,
+   "ranked": 37,
    "dropped": {
     "選択式": 42,
-    "対象外の商品": 52,
+    "対象外の商品": 51,
     "量なし": 5,
     "量が複数": 2,
     "量が範囲外": 6
@@ -3719,7 +3719,7 @@
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 26
+    "towns": 27
    },
    "popularity": 1149
   },
@@ -4489,8 +4489,8 @@
    "candidates": 108,
    "ranked": 10,
    "dropped": {
-    "選択式": 17,
-    "対象外の商品": 78,
+    "選択式": 16,
+    "対象外の商品": 79,
     "量が複数": 2,
     "量なし": 1
    },
@@ -6486,8 +6486,8 @@
    "candidates": 87,
    "ranked": 22,
    "dropped": {
-    "選択式": 40,
     "量が複数": 8,
+    "選択式": 40,
     "量なし": 1,
     "量が範囲外": 9,
     "対象外の商品": 7
@@ -8918,8 +8918,8 @@
    "candidates": 97,
    "ranked": 18,
    "dropped": {
-    "選択式": 44,
-    "量なし": 32,
+    "選択式": 46,
+    "量なし": 30,
     "対象外の商品": 2,
     "量が複数": 1
    },
@@ -12577,8 +12577,8 @@
    "candidates": 94,
    "ranked": 33,
    "dropped": {
-    "選択式": 29,
     "量なし": 15,
+    "選択式": 29,
     "対象外の商品": 7,
     "量が複数": 10
    },
@@ -16739,5 +16739,5 @@
    }
   }
  },
- "fetched_at": "2026-10-10T23:49+09:00"
+ "fetched_at": "2026-10-10T23:54+09:00"
 }
