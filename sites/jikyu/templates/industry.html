@@ -21,6 +21,11 @@
 {% if latest.all.hourly %}<div><dt>全産業平均との差</dt><dd class="{{ 'up' if row.hourly > latest.all.hourly else 'down' }}">{{ '+' if row.hourly > latest.all.hourly else '' }}{{ (row.hourly - latest.all.hourly) | num }}<small>円</small></dd></div>{% endif %}
 </dl>
 
+{% if row.hours_month and row.hours_month >= 180 %}
+<div class="yc-say"><img src="{{ page.root }}yc-tired.webp" alt="" width="80" height="60"><p><b class="nm">ヤドキャリ</b>月{{ row.hours_month | num }}時間…。労働時間が長いぶん、年収のわりに時給は下がりやすいんだ。</p></div>
+{% elif latest.all.hourly and row.hourly > latest.all.hourly * 1.25 %}
+<div class="yc-say"><img src="{{ page.root }}yc-yatta.webp" alt="" width="80" height="75"><p><b class="nm">ヤドキャリ</b>全産業の平均より時給がかなり高い殻（業界）だね！</p></div>
+{% endif %}
 {% if is_focus and parent_row %}
 <p class="note">{{ row.ind.parent.short }}業界全体の平均は 実質時給{{ parent_row.hourly | num }}円・年収{{ parent_row.annual_man | num }}万円。{{ row.ind.short }}はそれより<b class="{{ 'up' if row.hourly > parent_row.hourly else 'down' }}">時給で{{ '+' if row.hourly > parent_row.hourly else '' }}{{ (row.hourly - parent_row.hourly) | num }}円、年収で{{ '+' if row.annual_man > parent_row.annual_man else '' }}{{ (row.annual_man - parent_row.annual_man) | num }}万円</b>です。<a href="{{ page.root }}gyokai/{{ row.ind.parent.slug }}/">{{ row.ind.parent.short }}業界を見る</a></p>
 {% endif %}

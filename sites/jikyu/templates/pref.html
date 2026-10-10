@@ -4,6 +4,7 @@
 <h1>都道府県別 実質時給ランキング <small class="muted">{{ pref_year }}年</small></h1>
 <p class="lead">47都道府県の年収（月給×12＋ボーナス）を、残業込みの年間労働時間で割った「実質時給」で比べます。全産業・男女計・企業規模10人以上の平均です。</p>
 {% set top = pref_rank[0] %}{% set low = pref_rank[-1] %}
+<div class="yc-say"><img src="{{ page.root }}yc-wink.webp" alt="" width="80" height="70"><p><b class="nm">ヤドキャリ</b>同じ仕事でも、住む場所で時給はこんなに違うんだ。濃い青ほど時給が高い県だよ。</p></div>
 <p class="note">1位は<b>{{ top.name }} {{ top.hourly | num }}円</b>、最下位は{{ low.name }} {{ low.hourly | num }}円で、差は{{ (top.hourly - low.hourly) | num }}円（約{{ (top.hourly / low.hourly) | round(2) }}倍）です。</p>
 <div class="map-box">
 {{ pref_map }}

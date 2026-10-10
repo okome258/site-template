@@ -5,8 +5,14 @@
 <p class="lead">{{ site.description }}</p>
 <p class="note">ただいま準備中です。統計データの取得設定が終わりしだい公開します。</p>
 {% else %}
+<div class="yc-hero">
+<div>
 <h1>業界別 実質時給ランキング <small class="muted">{{ latest.year }}年</small></h1>
 <p class="lead">年収（月給×12＋ボーナス）を、残業も含めた年間の労働時間で割った「実質時給」で業界を比べます。年収が高くても長時間労働なら時給は下がります。</p>
+</div>
+<img src="{{ page.root }}yc-walk.webp" alt="スーツ姿のヤドカリ「ヤドキャリ」" width="360" height="376">
+</div>
+<div class="yc-say"><img src="{{ page.root }}yc-greet.webp" alt="" width="76" height="78"><p><b class="nm">ヤドキャリ</b>殻（会社）を住み替える前に、年収だけじゃなく「1時間あたりいくらもらえるか」も見ておこう。</p></div>
 {% if latest.all.hourly %}
 <p class="note">全産業の平均は <b>{{ latest.all.hourly | num }}円</b>（年収 {{ latest.all.annual_man | num }}万円・月 {{ latest.all.hours_month }}時間）。</p>
 {% endif %}

@@ -29,6 +29,15 @@
 .jp-big text{fill:#334}
 .legend .lv{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
 tr:target{background:#fff4c4}
+/* マスコット「ヤドキャリ」のふきだし */
+.yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
+.yc-say img{flex:none;height:auto}
+.yc-say p{position:relative;margin:0 0 12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.7}
+.yc-say p::before{content:"";position:absolute;left:-7px;bottom:14px;width:12px;height:12px;background:var(--panel);border-left:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
+.yc-say b.nm{display:block;font-size:12px;color:var(--accent)}
+.yc-hero{display:flex;align-items:center;gap:12px}
+.yc-hero img{width:110px;height:auto;flex:none}
+@media(min-width:640px){.yc-hero img{width:150px}}
 html{scroll-padding-top:60px}
 </style>
 {% endblock %}

@@ -3,6 +3,7 @@
 <p class="small"><a href="{{ page.root }}">ランキング</a> › {{ to_year }}年の予想</p>
 <h1>{{ to_year }}年の年収・時給予想 <small class="muted">業界別</small></h1>
 <p class="lead">{{ first_year }}〜{{ latest.year }}年の実際の数字に直線を当てはめ、「このペースが続いたら{{ to_year }}年にどうなるか」を業界ごとに出しました。</p>
+<div class="yc-say"><img src="{{ page.root }}yc-hatena.webp" alt="" width="80" height="85"><p><b class="nm">ヤドキャリ</b>この先、どの殻（業界）に住むと得なんだろう？ 過去のペースのまま進んだらどうなるか、見てみよう。</p></div>
 {% if all_row.fc %}
 <dl class="kpi">
 <div><dt>全産業 {{ latest.year }}年の時給</dt><dd>{{ all_row.hourly | num }}<small>円</small></dd></div>
@@ -55,6 +56,7 @@
 <p class="small muted">上の段が実質時給、下の段が年収（万円）。伸び/年は1年あたりの時給の増え方と、その伸び率です。</p>
 
 <h2>AI時代の見方</h2>
+<div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>AIで仕事のやり方はどんどん変わっていくよ。数字が毎年どう動くか、一緒に追いかけよう。</p></div>
 <p>AIで定型的な作業が減ると、同じ給料で労働時間が短くなって<b>実質時給が上がる業界</b>と、仕事そのものが減って<b>給料が伸びにくくなる業界</b>に分かれていく可能性があります。このページの予想は過去の流れをそのまま延ばしたものなので、そうした変化はまだ入っていません。</p>
 <p>新しい年の統計が出るたびに自動で作り直すので、予想と実際のずれが出てきたら、それが「AIなどで流れが変わったサイン」として読めます。</p>
 

@@ -15,6 +15,8 @@
 <p>予想ページの数字は、過去の実質時給・年収に直線を当てはめて延ばしたものです。景気や物価、AIの普及などは考えていないので、目安としてご覧ください。</p>
 <h2>使っている表</h2>
 <ul>{% for s in sources %}<li>{{ s.year }}年: {{ s.title }}（{{ s.id }}）</li>{% endfor %}</ul>
+<h2>マスコット「ヤドキャリ」</h2>
+<div class="yc-say"><img src="{{ page.root }}yc-greet.webp" alt="" width="90" height="92"><p><b class="nm">ヤドキャリ</b>ヤドカリ＋キャリアで「ヤドキャリ」。ヤドカリは大きくなると殻を住み替えるよ。会社を住み替える転職と同じだね。</p></div>
 <h2>広告について</h2>
 <p>{{ site.pr_note }}</p>
 {% endblock %}

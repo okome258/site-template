@@ -7,10 +7,16 @@ site:
   description: "厚生労働省の賃金構造基本統計調査をもとに、業界ごとの年収を残業込みの労働時間で割った「実質時給」をランキング。年ごとの推移も毎年自動で更新します。"
   base_url: "https://jikyu.otokuest.com"
   theme_color: "#2f5d8a"
+  favicon: "favicon-64.png"
+  apple_touch_icon: "apple-touch-icon.png"
+  og_image: "ogp.png"
   cf_analytics_token: "fedd367efe1c40b6acef2c76fb555828"
   operator: "業界別 実質時給ランキング"
   rakuten_credit: false
   pr_note: "当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。"
+
+# マスコット: スーツのヤドカリ「ヤドキャリ」(ヤドカリ＋キャリア)。殻＝会社を住み替える＝転職。画像は static/yc-*.webp
+mascot: "ヤドキャリ"
 
 # e-Stat から表を探す設定
 estat:
