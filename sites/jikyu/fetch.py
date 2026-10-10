@@ -418,6 +418,28 @@ def fetch_db_pref(api, cfg: dict) -> list[dict]:
             for y, v in sorted(acc.items(), reverse=True) if len(v) >= 40]
 
 
+def probe_jobs(cfg: dict, api) -> None:
+    """(調査用・一時)職業別の求人統計の表を探して data/jobs_probe.json に残す。"""
+    import json
+    out = {}
+    try:
+        for code, word in (("00450222", "職業別"), ("00450222", "職業")):
+            ts = api.list_tables(code, word, limit=300)
+            out[f"{code}:{word}"] = [{k: t[k] for k in ("id", "title", "survey_date", "open_date", "statistics_name")}
+                                    for t in ts][:300]
+        cands = [t for t in out.get("00450222:職業別", []) if "職業" in t["title"]][:6]
+        for t in cands:
+            meta = api.get_data(t["id"], limit=3)
+            out["meta:" + t["id"]] = {cid: {"name": c["name"], "n": len(c["order"]),
+                                            "head": [c["items"][x] for x in c["order"][:40]],
+                                            "tail": [c["items"][x] for x in c["order"][-3:]]}
+                                      for cid, c in meta["classes"].items()}
+    except Exception as e:
+        out["error"] = f"{type(e).__name__}: {str(e)[:200]}"
+    (cfg["_dir"] / "data" / "jobs_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
+                                                           encoding="utf-8")
+
+
 def fetch(cfg: dict) -> dict:
     from datetime import date
     api = EStat()
@@ -472,6 +494,7 @@ def fetch(cfg: dict) -> dict:
     if int(newest) < date.today().year - 2 + (1 if date.today().month >= 4 else 0):
         print(f"::warning::最新が{newest}年のままです。新しい年の公表を確認してください")
     _dump(cfg, {"checked": checked, "fetched": DEBUG})
+    probe_jobs(cfg, api)
     return {"status": "ok", "years": years, "prefs": prefs[: ec["years"]], "checked_tables": checked}
 
 
