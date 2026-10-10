@@ -139,7 +139,6 @@ def is_candidate(ec: dict, title: str) -> bool:
 
 # ---------------- 取得 ----------------
 DEBUG: list = []
-EXPLORE: list = []
 
 
 def _dump(cfg: dict, obj: dict) -> None:
@@ -162,16 +161,6 @@ def fetch(cfg: dict) -> dict:
         for t in api.list_tables(ec["stats_code"], w):
             if is_candidate(ec, t["title"]):
                 tables[t["id"]] = t
-    # 調査用: 新しい年の表名を確かめる
-    for word, extra in [("令和5年", {}), ("令和6年", {}), ("2023", {}), ("", {"surveyYears": "2023"}),
-                        ("", {"openYears": "2025"}), ("一般労働者 第1表", {})]:
-        try:
-            recent = api.list_tables(ec["stats_code"], word, **extra)
-            EXPLORE.append({"q": word, "extra": extra, "n": len(recent)})
-            EXPLORE.extend([{"id": r["id"], "date": r["survey_date"], "title": r["title"][:100]}
-                            for r in recent if "産業" in r["title"] and "都道府県" not in r["title"]][:40])
-        except Exception as e:
-            EXPLORE.append({"q": word, "error": str(e)})
     cands = sorted(tables.values(), key=lambda t: t["id"], reverse=True)[: ec["max_candidates"]]
     print(f"候補の表: {len(tables)}件(中身を確認するのは {len(cands)}件)")
 
@@ -222,9 +211,9 @@ def fetch(cfg: dict) -> dict:
             years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
                           "all": rows.pop("_all", {}), "rows": rows})
     years.sort(key=lambda y: y["year"], reverse=True)
-    _dump(cfg, {"checked": checked, "fetched": DEBUG, "explore": EXPLORE[:200]})
+    _dump(cfg, {"checked": checked, "fetched": DEBUG})
     if not years:
-        _dump(cfg, {"checked": checked, "fetched": DEBUG, "explore": EXPLORE[:200]})
+        _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
     return {"status": "ok", "years": years, "checked_tables": checked}
 
