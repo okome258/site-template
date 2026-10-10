@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>都道府県別 実質時給・年収ランキング2022｜地域で比べる｜業界別 実質時給ランキング</title>
+<meta name="description" content="47都道府県の年収と労働時間から実質時給を計算してランキング。2022年は1位東京都2,836円。">
+<link rel="canonical" href="https://jikyu.otokuest.com/chiiki/"><meta property="og:title" content="都道府県別 実質時給・年収ランキング2022｜地域で比べる｜業界別 実質時給ランキング">
+<meta property="og:description" content="47都道府県の年収と労働時間から実質時給を計算してランキング。2022年は1位東京都2,836円。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jikyu.otokuest.com/chiiki/"><meta property="og:site_name" content="業界別 実質時給ランキング">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#2f5d8a">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=Zen+Maru+Gothic:wght@700;900&display=swap"><link rel="stylesheet" href="../base.css">
+<style>:root{--accent: #2f5d8a;}</style>
+<style>
+.bar{position:relative;height:8px;background:var(--panel);border-radius:4px;margin-top:4px;min-width:60px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:4px}
+.up{color:#b4442d}.down{color:#2f6f9a}.muted{color:var(--muted)}
+.kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
+.kpi div{background:var(--panel);border-radius:10px;padding:10px 12px}
+.kpi dt{font-size:12px;color:var(--muted)}.kpi dd{margin:2px 0 0;font-size:20px;font-weight:900;font-family:var(--head)}
+.kpi dd small{font-size:12px;font-weight:400;margin-left:2px}
+@media(min-width:640px){.kpi{grid-template-columns:repeat(4,1fr)}}
+.trend{width:100%;max-width:560px;height:auto}
+.trend text{font-size:11px;fill:var(--muted)}.trend .val{fill:var(--ink);font-weight:700}
+.trend rect{fill:var(--accent)}.trend .avg{stroke:var(--muted);stroke-dasharray:4 3}
+.jobs a{margin:4px 6px 4px 0}
+.sub{display:block;font-size:12px;font-weight:400;color:var(--muted);font-family:inherit}
+@media(min-width:640px){.sub.sp{display:none}}
+.navs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.navs a{flex:1 1 140px;display:block;padding:10px 12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);background:var(--panel)}
+.navs a b{display:block;color:var(--accent)}.navs a small{color:var(--muted)}
+.board.compact th,.board.compact td{padding:8px 5px}
+.wrap-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="jp" viewBox="0 0 130 120"><g fill="currentColor"><rect x="111" y="1" width="18" height="18" rx="2"/><rect x="111" y="21" width="18" height="8" rx="2"/><rect x="111" y="31" width="8" height="8" rx="2"/><rect x="121" y="31" width="8" height="8" rx="2"/><rect x="81" y="41" width="8" height="8" rx="2"/><rect x="91" y="41" width="8" height="8" rx="2"/><rect x="101" y="41" width="8" height="8" rx="2"/><rect x="111" y="41" width="8" height="8" rx="2"/><rect x="121" y="41" width="8" height="8" rx="2"/><rect x="31" y="51" width="8" height="8" rx="2"/><rect x="41" y="51" width="8" height="8" rx="2"/><rect x="71" y="51" width="8" height="8" rx="2"/><rect x="81" y="51" width="8" height="8" rx="2"/><rect x="91" y="51" width="8" height="8" rx="2"/><rect x="101" y="51" width="8" height="8" rx="2"/><rect x="111" y="51" width="8" height="8" rx="2"/><rect x="121" y="51" width="8" height="8" rx="2"/><rect x="21" y="61" width="8" height="8" rx="2"/><rect x="31" y="61" width="8" height="8" rx="2"/><rect x="41" y="61" width="8" height="8" rx="2"/><rect x="51" y="61" width="8" height="8" rx="2"/><rect x="61" y="61" width="8" height="8" rx="2"/><rect x="71" y="61" width="8" height="8" rx="2"/><rect x="81" y="61" width="8" height="8" rx="2"/><rect x="91" y="61" width="8" height="8" rx="2"/><rect x="101" y="61" width="8" height="8" rx="2"/><rect x="111" y="61" width="8" height="8" rx="2"/><rect x="11" y="71" width="8" height="8" rx="2"/><rect x="41" y="71" width="8" height="8" rx="2"/><rect x="51" y="71" width="8" height="8" rx="2"/><rect x="61" y="71" width="8" height="8" rx="2"/><rect x="71" y="71" width="8" height="8" rx="2"/><rect x="91" y="71" width="8" height="8" rx="2"/><rect x="101" y="71" width="8" height="8" rx="2"/><rect x="111" y="71" width="8" height="8" rx="2"/><rect x="1" y="81" width="8" height="8" rx="2"/><rect x="11" y="81" width="8" height="8" rx="2"/><rect x="21" y="81" width="8" height="8" rx="2"/><rect x="31" y="81" width="8" height="8" rx="2"/><rect x="41" y="81" width="8" height="8" rx="2"/><rect x="61" y="81" width="8" height="8" rx="2"/><rect x="101" y="81" width="8" height="8" rx="2"/><rect x="1" y="91" width="8" height="8" rx="2"/><rect x="11" y="91" width="8" height="8" rx="2"/><rect x="21" y="91" width="8" height="8" rx="2"/><rect x="31" y="91" width="8" height="8" rx="2"/><rect x="1" y="111" width="8" height="8" rx="2"/></g></symbol></svg>
+<div class="pr-bar" role="note"><span class="pr">PR</span>本ページは広告（アフィリエイト）を含みます</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="../"><span class="logo-text">業界別 実質時給ランキング</span></a>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T00:16+09:00"><b>2026/10/11 00:16</b> 更新<span class="ago"></span></span></span>
+  </div>
+</header>
+<div class="wrap layout">
+<main>
+<p class="small"><a href="../">ランキング</a> › 都道府県別</p>
+<h1>都道府県別 実質時給ランキング <small class="muted">2022年</small></h1>
+<p class="lead">47都道府県の年収（月給×12＋ボーナス）を、残業込みの年間労働時間で割った「実質時給」で比べます。全産業・男女計・企業規模10人以上の平均です。</p>
+<p class="note">1位は<b>東京都 2,836円</b>、最下位は青森県 1,780円で、差は1,056円（約1.59倍）です。</p>
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>#</th><th>都道府県</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th></tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<th>東京都</th>
+<td class="num v">2,836円<span class="sub sp">年収599万・176.0h</span></td>
+<td class="num hide-sp">599万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+18円</td>
+</tr>
+<tr>
+<td>2</td>
+<th>神奈川県</th>
+<td class="num v">2,539円<span class="sub sp">年収539万・177.0h</span></td>
+<td class="num hide-sp">539万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-11円</td>
+</tr>
+<tr>
+<td>3</td>
+<th>大阪府</th>
+<td class="num v">2,482円<span class="sub sp">年収524万・176.0h</span></td>
+<td class="num hide-sp">524万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+45円</td>
+</tr>
+<tr>
+<td>4</td>
+<th>愛知県</th>
+<td class="num v">2,404円<span class="sub sp">年収519万・180.0h</span></td>
+<td class="num hide-sp">519万円</td>
+<td class="num hide-sp">180.0h</td>
+<td class="num down">-9円</td>
+</tr>
+<tr>
+<td>5</td>
+<th>兵庫県</th>
+<td class="num v">2,350円<span class="sub sp">年収502万・178.0h</span></td>
+<td class="num hide-sp">502万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num down">-8円</td>
+</tr>
+<tr>
+<td>6</td>
+<th>滋賀県</th>
+<td class="num v">2,321円<span class="sub sp">年収496万・178.0h</span></td>
+<td class="num hide-sp">496万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+60円</td>
+</tr>
+<tr>
+<td>7</td>
+<th>千葉県</th>
+<td class="num v">2,301円<span class="sub sp">年収486万・176.0h</span></td>
+<td class="num hide-sp">486万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+83円</td>
+</tr>
+<tr>
+<td>8</td>
+<th>奈良県</th>
+<td class="num v">2,291円<span class="sub sp">年収484万・176.0h</span></td>
+<td class="num hide-sp">484万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+186円</td>
+</tr>
+<tr>
+<td>9</td>
+<th>茨城県</th>
+<td class="num v">2,289円<span class="sub sp">年収489万・178.0h</span></td>
+<td class="num hide-sp">489万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+34円</td>
+</tr>
+<tr>
+<td>10</td>
+<th>静岡県</th>
+<td class="num v">2,250円<span class="sub sp">年収478万・177.0h</span></td>
+<td class="num hide-sp">478万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+89円</td>
+</tr>
+<tr>
+<td>11</td>
+<th>京都府</th>
+<td class="num v">2,243円<span class="sub sp">年収479万・178.0h</span></td>
+<td class="num hide-sp">479万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num down">-88円</td>
+</tr>
+<tr>
+<td>12</td>
+<th>広島県</th>
+<td class="num v">2,242円<span class="sub sp">年収482万・179.0h</span></td>
+<td class="num hide-sp">482万円</td>
+<td class="num hide-sp">179.0h</td>
+<td class="num up">+54円</td>
+</tr>
+<tr>
+<td>13</td>
+<th>三重県</th>
+<td class="num v">2,213円<span class="sub sp">年収481万・181.0h</span></td>
+<td class="num hide-sp">481万円</td>
+<td class="num hide-sp">181.0h</td>
+<td class="num down">-28円</td>
+</tr>
+<tr>
+<td>14</td>
+<th>栃木県</th>
+<td class="num v">2,211円<span class="sub sp">年収475万・179.0h</span></td>
+<td class="num hide-sp">475万円</td>
+<td class="num hide-sp">179.0h</td>
+<td class="num up">+38円</td>
+</tr>
+<tr>
+<td>15</td>
+<th>埼玉県</th>
+<td class="num v">2,210円<span class="sub sp">年収480万・181.0h</span></td>
+<td class="num hide-sp">480万円</td>
+<td class="num hide-sp">181.0h</td>
+<td class="num down">-22円</td>
+</tr>
+<tr>
+<td>16</td>
+<th>岐阜県</th>
+<td class="num v">2,209円<span class="sub sp">年収472万・178.0h</span></td>
+<td class="num hide-sp">472万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+47円</td>
+</tr>
+<tr>
+<td>17</td>
+<th>福岡県</th>
+<td class="num v">2,206円<span class="sub sp">年収471万・178.0h</span></td>
+<td class="num hide-sp">471万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+58円</td>
+</tr>
+<tr>
+<td>18</td>
+<th>和歌山県</th>
+<td class="num v">2,158円<span class="sub sp">年収458万・177.0h</span></td>
+<td class="num hide-sp">458万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+117円</td>
+</tr>
+<tr>
+<td>19</td>
+<th>福井県</th>
+<td class="num v">2,151円<span class="sub sp">年収454万・176.0h</span></td>
+<td class="num hide-sp">454万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+80円</td>
+</tr>
+<tr>
+<td>20</td>
+<th>山口県</th>
+<td class="num v">2,142円<span class="sub sp">年収455万・177.0h</span></td>
+<td class="num hide-sp">455万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-22円</td>
+</tr>
+<tr>
+<td>21</td>
+<th>岡山県</th>
+<td class="num v">2,128円<span class="sub sp">年収455万・178.0h</span></td>
+<td class="num hide-sp">455万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+59円</td>
+</tr>
+<tr>
+<td>22</td>
+<th>宮城県</th>
+<td class="num v">2,127円<span class="sub sp">年収454万・178.0h</span></td>
+<td class="num hide-sp">454万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+53円</td>
+</tr>
+<tr>
+<td>23</td>
+<th>山梨県</th>
+<td class="num v">2,126円<span class="sub sp">年収454万・178.0h</span></td>
+<td class="num hide-sp">454万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+63円</td>
+</tr>
+<tr>
+<td>24</td>
+<th>長野県</th>
+<td class="num v">2,123円<span class="sub sp">年収451万・177.0h</span></td>
+<td class="num hide-sp">451万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+11円</td>
+</tr>
+<tr>
+<td>25</td>
+<th>群馬県</th>
+<td class="num v">2,119円<span class="sub sp">年収455万・179.0h</span></td>
+<td class="num hide-sp">455万円</td>
+<td class="num hide-sp">179.0h</td>
+<td class="num down">-11円</td>
+</tr>
+<tr>
+<td>26</td>
+<th>石川県</th>
+<td class="num v">2,112円<span class="sub sp">年収449万・177.0h</span></td>
+<td class="num hide-sp">449万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-50円</td>
+</tr>
+<tr>
+<td>27</td>
+<th>富山県</th>
+<td class="num v">2,099円<span class="sub sp">年収443万・176.0h</span></td>
+<td class="num hide-sp">443万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+37円</td>
+</tr>
+<tr>
+<td>28</td>
+<th>徳島県</th>
+<td class="num v">2,095円<span class="sub sp">年収435万・173.0h</span></td>
+<td class="num hide-sp">435万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+58円</td>
+</tr>
+<tr>
+<td>29</td>
+<th>香川県</th>
+<td class="num v">2,086円<span class="sub sp">年収446万・178.0h</span></td>
+<td class="num hide-sp">446万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num down">-13円</td>
+</tr>
+<tr>
+<td>30</td>
+<th>大分県</th>
+<td class="num v">2,042円<span class="sub sp">年収431万・176.0h</span></td>
+<td class="num hide-sp">431万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+76円</td>
+</tr>
+<tr>
+<td>31</td>
+<th>新潟県</th>
+<td class="num v">2,036円<span class="sub sp">年収428万・175.0h</span></td>
+<td class="num hide-sp">428万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+27円</td>
+</tr>
+<tr>
+<td>32</td>
+<th>熊本県</th>
+<td class="num v">1,994円<span class="sub sp">年収424万・177.0h</span></td>
+<td class="num hide-sp">424万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+71円</td>
+</tr>
+<tr>
+<td>33</td>
+<th>福島県</th>
+<td class="num v">1,974円<span class="sub sp">年収417万・176.0h</span></td>
+<td class="num hide-sp">417万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num down">-6円</td>
+</tr>
+<tr>
+<td>34</td>
+<th>高知県</th>
+<td class="num v">1,973円<span class="sub sp">年収414万・175.0h</span></td>
+<td class="num hide-sp">414万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+2円</td>
+</tr>
+<tr>
+<td>35</td>
+<th>愛媛県</th>
+<td class="num v">1,968円<span class="sub sp">年収418万・177.0h</span></td>
+<td class="num hide-sp">418万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-18円</td>
+</tr>
+<tr>
+<td>36</td>
+<th>島根県</th>
+<td class="num v">1,956円<span class="sub sp">年収411万・175.0h</span></td>
+<td class="num hide-sp">411万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+18円</td>
+</tr>
+<tr>
+<td>37</td>
+<th>長崎県</th>
+<td class="num v">1,953円<span class="sub sp">年収417万・178.0h</span></td>
+<td class="num hide-sp">417万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+10円</td>
+</tr>
+<tr>
+<td>38</td>
+<th>北海道</th>
+<td class="num v">1,952円<span class="sub sp">年収415万・177.0h</span></td>
+<td class="num hide-sp">415万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-71円</td>
+</tr>
+<tr>
+<td>39</td>
+<th>佐賀県</th>
+<td class="num v">1,943円<span class="sub sp">年収422万・181.0h</span></td>
+<td class="num hide-sp">422万円</td>
+<td class="num hide-sp">181.0h</td>
+<td class="num up">+49円</td>
+</tr>
+<tr>
+<td>40</td>
+<th>鳥取県</th>
+<td class="num v">1,931円<span class="sub sp">年収403万・174.0h</span></td>
+<td class="num hide-sp">403万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+108円</td>
+</tr>
+<tr>
+<td>41</td>
+<th>鹿児島県</th>
+<td class="num v">1,870円<span class="sub sp">年収397万・177.0h</span></td>
+<td class="num hide-sp">397万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-30円</td>
+</tr>
+<tr>
+<td>42</td>
+<th>秋田県</th>
+<td class="num v">1,863円<span class="sub sp">年収396万・177.0h</span></td>
+<td class="num hide-sp">396万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+58円</td>
+</tr>
+<tr>
+<td>43</td>
+<th>山形県</th>
+<td class="num v">1,845円<span class="sub sp">年収392万・177.0h</span></td>
+<td class="num hide-sp">392万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num down">-57円</td>
+</tr>
+<tr>
+<td>44</td>
+<th>岩手県</th>
+<td class="num v">1,843円<span class="sub sp">年収392万・177.0h</span></td>
+<td class="num hide-sp">392万円</td>
+<td class="num hide-sp">177.0h</td>
+<td class="num up">+15円</td>
+</tr>
+<tr>
+<td>45</td>
+<th>宮崎県</th>
+<td class="num v">1,814円<span class="sub sp">年収383万・176.0h</span></td>
+<td class="num hide-sp">383万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+59円</td>
+</tr>
+<tr>
+<td>46</td>
+<th>沖縄県</th>
+<td class="num v">1,798円<span class="sub sp">年収375万・174.0h</span></td>
+<td class="num hide-sp">375万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+29円</td>
+</tr>
+<tr>
+<td>47</td>
+<th>青森県</th>
+<td class="num v">1,780円<span class="sub sp">年収380万・178.0h</span></td>
+<td class="num hide-sp">380万円</td>
+<td class="num hide-sp">178.0h</td>
+<td class="num up">+17円</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="small muted">産業計・男女計・全年齢・企業規模10人以上。2030年予想は過去の推移を直線で延ばした目安です。</p>
+<p><a href="../">業界別のランキングへ</a>　<a href="../yosoku/">2030年の業界別予想へ</a></p>
+</main>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+<p class="small"><a href="../about/">このサイトについて・計算方法</a></p>
+<p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
+    <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 00:16</p>
+    <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
+  </div>
+</footer>
+<script>/* 更新からの経過を「今日/昨日/◯日前」で表示。2日以上古いと警告色 */
+try{var u=document.querySelector('.updated');if(u){var d=new Date(u.dataset.ts),n=new Date();
+var dd=Math.round((new Date(n.getFullYear(),n.getMonth(),n.getDate())-new Date(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
+u.querySelector('.ago').textContent=dd<=0?'（今日）':dd==1?'（昨日）':'（'+dd+'日前）';if(dd>=2)u.classList.add('old');}}catch(e){}</script>
+<script>/* 選択中のタブが画面外なら見える位置へ */try{var o=document.querySelector('.tabs .on');if(o)o.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fedd367efe1c40b6acef2c76fb555828"}'></script>
+</body>
+</html>

@@ -1235,8 +1235,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 37500,
-    "towns": 48
+    "max_unit_price": 40000,
+    "towns": 47
    },
    "popularity": 2047
   },
@@ -15670,24 +15670,6 @@
      "vs_median": 1.21
     },
     {
-     "code": "f322067-yasugi:10000317",
-     "name": "月山 純米 飲みくらべ 720ml × 3本 セット ／ 純米酒 辛口 日本酒 地酒 食中酒 吉田酒造 老舗 美味しい セット すっきり フルーティー 優しい 香り シャープ 旨口 ギフト 贈り物 ご自宅用 島根県 安来市【価格改定】",
-     "price": 20000,
-     "qty": 2.16,
-     "evidence": "720ml×3",
-     "per10k": 1.08,
-     "unit_price": 9259,
-     "shop": "島根県安来市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00siy5o.ia330dfc.g00siy5o.ia331fc5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff322067-yasugi%2F10000317%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff322067-yasugi%2Fi%2F10000317%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "安来市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f322067-yasugi/cabinet/henreihin/06108307/25.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 3,
-     "wakeari": false,
-     "vs_median": 1.2
-    },
-    {
      "code": "f152269-minamiuonuma:10004546",
      "name": "日本酒 八海山 本醸造・大吟醸・純米大吟醸 1800ml×3本【八海山 本醸造 大吟醸 純米大吟醸 一升瓶 3本 セット 日本酒 1800ml 新潟 地酒 厳選 晩酌 熱燗 お酒 酒 さけ お中元 お歳暮 贈答】",
      "price": 53000,
@@ -15776,10 +15758,28 @@
      "review_count": 0,
      "wakeari": false,
      "vs_median": 1.05
+    },
+    {
+     "code": "f152251-uonumashi:10000055",
+     "name": "日本酒 セット 金賞 プラチナ賞 計7冠受賞 純米大吟醸 目黒五郎助 純米吟醸 越乃雪蔵 1.8L 2本 セット 日本酒 清酒 地酒 新潟 魚沼市　お届け：寄附入金確認後、約2週間～1ヶ月ほどでお届け",
+     "price": 20000,
+     "qty": 1.8,
+     "evidence": "1.8L",
+     "per10k": 0.9,
+     "unit_price": 11111,
+     "shop": "新潟県魚沼市 ふるさと納税",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00txcho.ia33003e.g00txcho.ia3313a8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff152251-uonumashi%2F57620460%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff152251-uonumashi%2Fi%2F10000055%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "魚沼市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152251-uonumashi/cabinet/d_202004/57620460_01_web_s.jpg?_ex=240x240",
+     "review_avg": 4.72,
+     "review_count": 53,
+     "wakeari": false,
+     "vs_median": 1.0
     }
    ],
-   "candidates": 165,
-   "ranked": 62,
+   "candidates": 164,
+   "ranked": 61,
    "dropped": {
     "対象外の商品": 72,
     "選択式": 19,
@@ -15794,7 +15794,7 @@
     "max_unit_price": 76389,
     "towns": 32
    },
-   "popularity": 444
+   "popularity": 441
   },
   "detergent": {
    "items": [
@@ -16739,5 +16739,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T00:06+09:00"
+ "fetched_at": "2026-10-11T00:15+09:00"
 }

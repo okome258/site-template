@@ -326,8 +326,8 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,okomeabe:10000023,hakumai,8480,20.0,True,1,2566,4.68,True,阿部ベイコク
 2026-10-11,anzai-rice:10000527,genmai,4280,10.0,True,1,433,4.68,True,まんま屋
 2026-10-11,komean-sugasawa:10000004,genmai,8590,20.0,True,1,424,4.63,True,こめ庵
-2026-10-11,fuchigami:10000519,hakumai,4380,10.0,True,1,871,4.65,True,こめたつ
 2026-10-11,fuchigami:10000276,hakumai,4380,10.0,True,1,1512,4.65,True,こめたつ
+2026-10-11,fuchigami:10000519,hakumai,4380,10.0,True,1,871,4.65,True,こめたつ
 2026-10-11,auc-tokuichi:10000351,genmai,13180,30.0,True,1,7,4.0,True,会津の米蔵とくいち
 2026-10-11,okomeabe:10000022,hakumai,4480,10.0,True,1,7486,4.56,True,阿部ベイコク
 2026-10-11,kougobeikoku:10000358,hakumai,8970,20.0,True,1,5,5.0,True,お米の向後米穀楽天市場店
@@ -525,7 +525,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,yokogoshi:10001026,hakumai,6980,10.0,False,1,613,4.46,True,越後雪国地酒連峰(新潟店)
 2026-10-11,oga-tama:10000067,genmai,7000,10.0,True,1,6,4.33,True,小川の玉手箱「おがたま」
 2026-10-11,komean-sugasawa:10000092,mochi,6999,10.0,True,1,3,5.0,True,こめ庵
-2026-10-11,rakuten24:11405896,musen,3513,5.0,True,1,0,0,True,楽天24
 2026-10-11,komedokoro:10000043,mochi,19000,27.0,True,1,26,4.62,True,米処 稲穂屋
 2026-10-11,okome-nakano:10000065,mochi,7150,10.0,True,1,6,5.0,True,お米の専門店中野商店
 2026-10-11,rice-akita:10000024,mochi,3580,5.0,True,1,468,4.79,True,ライス秋田

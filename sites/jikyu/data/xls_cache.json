@@ -1,0 +1,2280 @@
+{
+"000010328311@2024-03-27": [
+{
+"labels": {
+"産業": "産業計",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.4,
+"bonus": 761.6,
+"hours_over": 11.0,
+"hours_sched": 167.0,
+"monthly": 312.3,
+"sched_pay": 288.5,
+"tenure": 12.0,
+"workers": 108849.0
+}
+},
+{
+"labels": {
+"産業": "Ｃ鉱業，採石業，砂利採取業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 51.0,
+"bonus": 646.7,
+"hours_over": 21.0,
+"hours_sched": 165.0,
+"monthly": 336.0,
+"sched_pay": 288.8,
+"tenure": 17.7,
+"workers": 90.0
+}
+},
+{
+"labels": {
+"産業": "Ｄ建設業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 47.8,
+"bonus": 858.4,
+"hours_over": 13.0,
+"hours_sched": 172.0,
+"monthly": 355.2,
+"sched_pay": 326.3,
+"tenure": 12.5,
+"workers": 13130.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.3,
+"bonus": 866.7,
+"hours_over": 13.0,
+"hours_sched": 166.0,
+"monthly": 300.5,
+"sched_pay": 270.2,
+"tenure": 14.5,
+"workers": 12339.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ０９食料品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.5,
+"bonus": 757.5,
+"hours_over": 14.0,
+"hours_sched": 162.0,
+"monthly": 281.4,
+"sched_pay": 252.9,
+"tenure": 14.0,
+"workers": 5536.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１０飲料・たばこ・飼料製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 41.9,
+"bonus": 840.1,
+"hours_over": 15.0,
+"hours_sched": 160.0,
+"monthly": 331.1,
+"sched_pay": 296.1,
+"tenure": 13.6,
+"workers": 341.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１１繊維工業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 48.9,
+"bonus": 173.9,
+"hours_over": 8.0,
+"hours_sched": 170.0,
+"monthly": 194.7,
+"sched_pay": 183.7,
+"tenure": 13.0,
+"workers": 178.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１２木材・木製品製造業（家具を除く）",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.8,
+"bonus": 886.1,
+"hours_over": 7.0,
+"hours_sched": 175.0,
+"monthly": 280.1,
+"sched_pay": 266.0,
+"tenure": 14.3,
+"workers": 433.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１３家具・装備品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.2,
+"bonus": 260.1,
+"hours_over": 13.0,
+"hours_sched": 172.0,
+"monthly": 254.8,
+"sched_pay": 233.3,
+"tenure": 15.1,
+"workers": 216.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１４パルプ・紙・紙加工品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 47.1,
+"bonus": 1094.3,
+"hours_over": 13.0,
+"hours_sched": 160.0,
+"monthly": 335.2,
+"sched_pay": 296.2,
+"tenure": 19.4,
+"workers": 452.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１５印刷・同関連業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.9,
+"bonus": 670.0,
+"hours_over": 10.0,
+"hours_sched": 168.0,
+"monthly": 305.8,
+"sched_pay": 282.5,
+"tenure": 17.6,
+"workers": 552.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１６化学工業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.8,
+"bonus": 1009.8,
+"hours_over": 9.0,
+"hours_sched": 162.0,
+"monthly": 353.6,
+"sched_pay": 330.7,
+"tenure": 15.8,
+"workers": 264.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１８プラスチック製品製造業（別掲を除く）",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 48.9,
+"bonus": 462.0,
+"hours_over": 7.0,
+"hours_sched": 168.0,
+"monthly": 247.7,
+"sched_pay": 228.5,
+"tenure": 12.4,
+"workers": 281.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１９ゴム製品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.4,
+"bonus": 770.8,
+"hours_over": 7.0,
+"hours_sched": 172.0,
+"monthly": 289.5,
+"sched_pay": 273.1,
+"tenure": 15.1,
+"workers": 44.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２１窯業・土石製品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 47.7,
+"bonus": 744.0,
+"hours_over": 9.0,
+"hours_sched": 169.0,
+"monthly": 282.2,
+"sched_pay": 265.2,
+"tenure": 14.3,
+"workers": 286.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２２鉄鋼業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 42.5,
+"bonus": 1483.0,
+"hours_over": 17.0,
+"hours_sched": 165.0,
+"monthly": 342.6,
+"sched_pay": 296.3,
+"tenure": 15.9,
+"workers": 500.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２３非鉄金属製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.3,
+"bonus": 1006.4,
+"hours_over": 25.0,
+"hours_sched": 159.0,
+"monthly": 328.3,
+"sched_pay": 271.9,
+"tenure": 16.2,
+"workers": 41.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２４金属製品製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.9,
+"bonus": 951.2,
+"hours_over": 20.0,
+"hours_sched": 181.0,
+"monthly": 329.3,
+"sched_pay": 289.4,
+"tenure": 12.3,
+"workers": 980.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２５はん用機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.1,
+"bonus": 852.9,
+"hours_over": 8.0,
+"hours_sched": 159.0,
+"monthly": 273.6,
+"sched_pay": 254.6,
+"tenure": 15.7,
+"workers": 200.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２６生産用機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.2,
+"bonus": 939.2,
+"hours_over": 9.0,
+"hours_sched": 177.0,
+"monthly": 304.8,
+"sched_pay": 286.3,
+"tenure": 15.4,
+"workers": 409.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２７業務用機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 40.2,
+"bonus": 1212.9,
+"hours_over": 13.0,
+"hours_sched": 164.0,
+"monthly": 328.8,
+"sched_pay": 302.7,
+"tenure": 11.1,
+"workers": 44.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２８電子部品・デバイス・電子回路製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.5,
+"bonus": 1462.8,
+"hours_over": 6.0,
+"hours_sched": 160.0,
+"monthly": 369.0,
+"sched_pay": 328.0,
+"tenure": 16.8,
+"workers": 388.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２９電気機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.2,
+"bonus": 954.3,
+"hours_over": 14.0,
+"hours_sched": 174.0,
+"monthly": 318.1,
+"sched_pay": 290.3,
+"tenure": 15.4,
+"workers": 275.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３０情報通信機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 47.4,
+"bonus": 1216.8,
+"hours_over": 12.0,
+"hours_sched": 161.0,
+"monthly": 343.4,
+"sched_pay": 316.2,
+"tenure": 19.7,
+"workers": 100.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３１輸送用機械器具製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 39.0,
+"bonus": 1229.3,
+"hours_over": 19.0,
+"hours_sched": 168.0,
+"monthly": 357.6,
+"sched_pay": 296.1,
+"tenure": 12.4,
+"workers": 632.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３２その他の製造業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.0,
+"bonus": 1113.3,
+"hours_over": 7.0,
+"hours_sched": 174.0,
+"monthly": 266.3,
+"sched_pay": 252.1,
+"tenure": 14.1,
+"workers": 127.0
+}
+},
+{
+"labels": {
+"産業": "Ｆ電気・ガス・熱供給・水道業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1377.7,
+"hours_over": 19.0,
+"hours_sched": 157.0,
+"monthly": 423.2,
+"sched_pay": 362.9,
+"tenure": 19.1,
+"workers": 628.0
+}
+},
+{
+"labels": {
+"産業": "Ｇ情報通信業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 39.5,
+"bonus": 1077.7,
+"hours_over": 8.0,
+"hours_sched": 160.0,
+"monthly": 366.4,
+"sched_pay": 344.8,
+"tenure": 11.8,
+"workers": 3199.0
+}
+},
+{
+"labels": {
+"産業": "Ｇ３９情報サービス業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 38.8,
+"bonus": 1086.6,
+"hours_over": 10.0,
+"hours_sched": 158.0,
+"monthly": 329.7,
+"sched_pay": 306.5,
+"tenure": 12.2,
+"workers": 2040.0
+}
+},
+{
+"labels": {
+"産業": "Ｈ運輸業，郵便業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 50.5,
+"bonus": 481.5,
+"hours_over": 24.0,
+"hours_sched": 173.0,
+"monthly": 312.1,
+"sched_pay": 266.8,
+"tenure": 12.7,
+"workers": 11038.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ卸売業，小売業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.9,
+"bonus": 945.7,
+"hours_over": 10.0,
+"hours_sched": 171.0,
+"monthly": 304.2,
+"sched_pay": 285.2,
+"tenure": 14.2,
+"workers": 17921.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ50～55卸売業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.4,
+"bonus": 1366.5,
+"hours_over": 8.0,
+"hours_sched": 173.0,
+"monthly": 338.6,
+"sched_pay": 321.0,
+"tenure": 15.2,
+"workers": 7804.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ56～61小売業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.5,
+"bonus": 621.2,
+"hours_over": 11.0,
+"hours_sched": 170.0,
+"monthly": 277.6,
+"sched_pay": 257.6,
+"tenure": 13.4,
+"workers": 10117.0
+}
+},
+{
+"labels": {
+"産業": "Ｊ金融業，保険業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.8,
+"bonus": 1093.0,
+"hours_over": 7.0,
+"hours_sched": 153.0,
+"monthly": 359.8,
+"sched_pay": 339.6,
+"tenure": 14.3,
+"workers": 3465.0
+}
+},
+{
+"labels": {
+"産業": "Ｋ不動産業，物品賃貸業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.3,
+"bonus": 718.6,
+"hours_over": 6.0,
+"hours_sched": 163.0,
+"monthly": 300.3,
+"sched_pay": 285.3,
+"tenure": 9.1,
+"workers": 1839.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ学術研究，専門・技術サービス業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.9,
+"bonus": 1093.0,
+"hours_over": 10.0,
+"hours_sched": 167.0,
+"monthly": 350.9,
+"sched_pay": 332.3,
+"tenure": 14.9,
+"workers": 3461.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ７２専門サービス業（他に分類されないもの）",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 49.3,
+"bonus": 750.0,
+"hours_over": 5.0,
+"hours_sched": 165.0,
+"monthly": 350.3,
+"sched_pay": 338.6,
+"tenure": 13.1,
+"workers": 663.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ７３広告業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 40.7,
+"bonus": 403.7,
+"hours_over": 7.0,
+"hours_sched": 165.0,
+"monthly": 284.3,
+"sched_pay": 272.1,
+"tenure": 8.4,
+"workers": 184.0
+}
+},
+{
+"labels": {
+"産業": "Ｍ宿泊業，飲食サービス業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.4,
+"bonus": 331.2,
+"hours_over": 14.0,
+"hours_sched": 169.0,
+"monthly": 262.5,
+"sched_pay": 238.0,
+"tenure": 8.4,
+"workers": 4324.0
+}
+},
+{
+"labels": {
+"産業": "Ｍ７５宿泊業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 42.7,
+"bonus": 161.9,
+"hours_over": 14.0,
+"hours_sched": 171.0,
+"monthly": 258.4,
+"sched_pay": 236.6,
+"tenure": 7.7,
+"workers": 1852.0
+}
+},
+{
+"labels": {
+"産業": "Ｎ生活関連サービス業，娯楽業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.9,
+"bonus": 354.9,
+"hours_over": 6.0,
+"hours_sched": 165.0,
+"monthly": 255.7,
+"sched_pay": 244.6,
+"tenure": 10.7,
+"workers": 3250.0
+}
+},
+{
+"labels": {
+"産業": "Ｎ８０娯楽業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 48.3,
+"bonus": 367.5,
+"hours_over": 5.0,
+"hours_sched": 165.0,
+"monthly": 257.5,
+"sched_pay": 247.5,
+"tenure": 10.8,
+"workers": 1730.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ教育，学習支援業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.0,
+"bonus": 995.1,
+"hours_over": 6.0,
+"hours_sched": 168.0,
+"monthly": 351.7,
+"sched_pay": 337.9,
+"tenure": 11.0,
+"workers": 3062.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ８１学校教育",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.9,
+"bonus": 1080.1,
+"hours_over": 4.0,
+"hours_sched": 169.0,
+"monthly": 361.8,
+"sched_pay": 350.4,
+"tenure": 11.2,
+"workers": 2544.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ８２その他の教育，学習支援業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.5,
+"bonus": 577.5,
+"hours_over": 15.0,
+"hours_sched": 167.0,
+"monthly": 302.2,
+"sched_pay": 276.2,
+"tenure": 10.5,
+"workers": 518.0
+}
+},
+{
+"labels": {
+"産業": "Ｐ医療，福祉",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 43.1,
+"bonus": 667.5,
+"hours_over": 5.0,
+"hours_sched": 163.0,
+"monthly": 306.3,
+"sched_pay": 290.5,
+"tenure": 8.8,
+"workers": 20778.0
+}
+},
+{
+"labels": {
+"産業": "Ｐ８３医療業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 41.9,
+"bonus": 754.4,
+"hours_over": 5.0,
+"hours_sched": 161.0,
+"monthly": 348.2,
+"sched_pay": 328.2,
+"tenure": 8.6,
+"workers": 10461.0
+}
+},
+{
+"labels": {
+"産業": "Ｑ複合サービス事業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 44.7,
+"bonus": 1091.5,
+"hours_over": 8.0,
+"hours_sched": 162.0,
+"monthly": 305.3,
+"sched_pay": 289.7,
+"tenure": 15.9,
+"workers": 2261.0
+}
+},
+{
+"labels": {
+"産業": "Ｒサービス業（他に分類されないもの）",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.8,
+"bonus": 427.0,
+"hours_over": 11.0,
+"hours_sched": 162.0,
+"monthly": 266.3,
+"sched_pay": 244.4,
+"tenure": 9.2,
+"workers": 8066.0
+}
+},
+{
+"labels": {
+"産業": "Ｒ９１職業紹介・労働者派遣業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 45.3,
+"bonus": 96.6,
+"hours_over": 9.0,
+"hours_sched": 163.0,
+"monthly": 244.8,
+"sched_pay": 229.3,
+"tenure": 6.0,
+"workers": 1023.0
+}
+},
+{
+"labels": {
+"産業": "Ｒ９２その他の事業サービス業",
+"都道府県": "北海道"
+},
+"raw": {
+"age": 46.9,
+"bonus": 373.5,
+"hours_over": 12.0,
+"hours_sched": 161.0,
+"monthly": 260.1,
+"sched_pay": 236.4,
+"tenure": 8.6,
+"workers": 5047.0
+}
+},
+{
+"labels": {
+"産業": "産業計",
+"都道府県": "青森"
+},
+"raw": {
+"age": 45.4,
+"bonus": 575.6,
+"hours_over": 10.0,
+"hours_sched": 166.0,
+"monthly": 271.9,
+"sched_pay": 249.9,
+"tenure": 13.0,
+"workers": 23033.0
+}
+},
+{
+"labels": {
+"産業": "Ｃ鉱業，採石業，砂利採取業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 47.5,
+"bonus": 887.1,
+"hours_over": 10.0,
+"hours_sched": 165.0,
+"monthly": 317.1,
+"sched_pay": 295.3,
+"tenure": 13.8,
+"workers": 15.0
+}
+},
+{
+"labels": {
+"産業": "Ｄ建設業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 47.7,
+"bonus": 577.0,
+"hours_over": 17.0,
+"hours_sched": 169.0,
+"monthly": 301.3,
+"sched_pay": 262.9,
+"tenure": 15.8,
+"workers": 3304.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 45.8,
+"bonus": 608.2,
+"hours_over": 11.0,
+"hours_sched": 166.0,
+"monthly": 254.9,
+"sched_pay": 231.6,
+"tenure": 14.2,
+"workers": 3733.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ０９食料品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 50.5,
+"bonus": 297.3,
+"hours_over": 7.0,
+"hours_sched": 165.0,
+"monthly": 211.3,
+"sched_pay": 201.3,
+"tenure": 10.0,
+"workers": 899.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１０飲料・たばこ・飼料製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 46.2,
+"bonus": 886.9,
+"hours_over": 8.0,
+"hours_sched": 157.0,
+"monthly": 301.7,
+"sched_pay": 285.8,
+"tenure": 15.1,
+"workers": 101.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１１繊維工業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.8,
+"bonus": 180.6,
+"hours_over": 6.0,
+"hours_sched": 175.0,
+"monthly": 184.1,
+"sched_pay": 177.6,
+"tenure": 16.1,
+"workers": 221.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１２木材・木製品製造業（家具を除く）",
+"都道府県": "青森"
+},
+"raw": {
+"age": 49.9,
+"bonus": 314.1,
+"hours_over": 2.0,
+"hours_sched": 176.0,
+"monthly": 232.7,
+"sched_pay": 228.6,
+"tenure": 14.1,
+"workers": 43.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１３家具・装備品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 50.0,
+"bonus": 641.1,
+"hours_over": 8.0,
+"hours_sched": 167.0,
+"monthly": 289.4,
+"sched_pay": 267.9,
+"tenure": 19.6,
+"workers": 14.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１４パルプ・紙・紙加工品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 47.3,
+"bonus": 721.2,
+"hours_over": 23.0,
+"hours_sched": 157.0,
+"monthly": 330.7,
+"sched_pay": 269.4,
+"tenure": 19.2,
+"workers": 92.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１５印刷・同関連業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 48.3,
+"bonus": 181.6,
+"hours_over": 8.0,
+"hours_sched": 167.0,
+"monthly": 200.5,
+"sched_pay": 188.6,
+"tenure": 16.1,
+"workers": 105.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１６化学工業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.4,
+"bonus": 1236.5,
+"hours_over": 11.0,
+"hours_sched": 150.0,
+"monthly": 343.7,
+"sched_pay": 301.2,
+"tenure": 17.3,
+"workers": 46.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１８プラスチック製品製造業（別掲を除く）",
+"都道府県": "青森"
+},
+"raw": {
+"age": 41.6,
+"bonus": 399.9,
+"hours_over": 8.0,
+"hours_sched": 169.0,
+"monthly": 236.9,
+"sched_pay": 217.1,
+"tenure": 13.9,
+"workers": 82.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ１９ゴム製品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 46.2,
+"bonus": 284.0,
+"hours_over": 0.0,
+"hours_sched": 157.0,
+"monthly": 281.2,
+"sched_pay": 279.4,
+"tenure": 19.1,
+"workers": 6.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２１窯業・土石製品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 56.4,
+"bonus": 401.6,
+"hours_over": 14.0,
+"hours_sched": 160.0,
+"monthly": 249.1,
+"sched_pay": 226.7,
+"tenure": 19.4,
+"workers": 109.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２２鉄鋼業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.3,
+"bonus": 834.4,
+"hours_over": 14.0,
+"hours_sched": 163.0,
+"monthly": 314.9,
+"sched_pay": 281.6,
+"tenure": 15.6,
+"workers": 132.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２３非鉄金属製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 41.2,
+"bonus": 1328.0,
+"hours_over": 22.0,
+"hours_sched": 159.0,
+"monthly": 405.6,
+"sched_pay": 343.2,
+"tenure": 16.2,
+"workers": 256.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２４金属製品製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.7,
+"bonus": 856.7,
+"hours_over": 5.0,
+"hours_sched": 172.0,
+"monthly": 270.3,
+"sched_pay": 256.9,
+"tenure": 15.3,
+"workers": 191.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２５はん用機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 39.7,
+"bonus": 1153.2,
+"hours_over": 11.0,
+"hours_sched": 166.0,
+"monthly": 311.6,
+"sched_pay": 289.5,
+"tenure": 10.8,
+"workers": 30.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２６生産用機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.3,
+"bonus": 811.7,
+"hours_over": 20.0,
+"hours_sched": 162.0,
+"monthly": 271.7,
+"sched_pay": 237.7,
+"tenure": 15.5,
+"workers": 134.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２７業務用機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.6,
+"bonus": 933.1,
+"hours_over": 10.0,
+"hours_sched": 166.0,
+"monthly": 258.0,
+"sched_pay": 231.3,
+"tenure": 15.5,
+"workers": 253.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２８電子部品・デバイス・電子回路製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.1,
+"bonus": 535.0,
+"hours_over": 12.0,
+"hours_sched": 167.0,
+"monthly": 230.7,
+"sched_pay": 209.1,
+"tenure": 14.2,
+"workers": 510.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ２９電気機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.3,
+"bonus": 776.8,
+"hours_over": 10.0,
+"hours_sched": 166.0,
+"monthly": 241.8,
+"sched_pay": 224.8,
+"tenure": 14.1,
+"workers": 193.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３０情報通信機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.4,
+"bonus": 855.7,
+"hours_over": 9.0,
+"hours_sched": 161.0,
+"monthly": 269.0,
+"sched_pay": 230.8,
+"tenure": 19.2,
+"workers": 163.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３１輸送用機械器具製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 42.1,
+"bonus": 582.3,
+"hours_over": 27.0,
+"hours_sched": 175.0,
+"monthly": 312.5,
+"sched_pay": 267.5,
+"tenure": 11.7,
+"workers": 123.0
+}
+},
+{
+"labels": {
+"産業": "Ｅ３２その他の製造業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 46.7,
+"bonus": 89.1,
+"hours_over": 13.0,
+"hours_sched": 172.0,
+"monthly": 192.2,
+"sched_pay": 175.8,
+"tenure": 10.8,
+"workers": 27.0
+}
+},
+{
+"labels": {
+"産業": "Ｆ電気・ガス・熱供給・水道業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 40.3,
+"bonus": 1478.0,
+"hours_over": 14.0,
+"hours_sched": 144.0,
+"monthly": 426.0,
+"sched_pay": 382.8,
+"tenure": 18.8,
+"workers": 114.0
+}
+},
+{
+"labels": {
+"産業": "Ｇ情報通信業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 41.6,
+"bonus": 898.0,
+"hours_over": 10.0,
+"hours_sched": 163.0,
+"monthly": 320.9,
+"sched_pay": 297.8,
+"tenure": 14.5,
+"workers": 360.0
+}
+},
+{
+"labels": {
+"産業": "Ｇ３９情報サービス業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 40.4,
+"bonus": 753.8,
+"hours_over": 10.0,
+"hours_sched": 167.0,
+"monthly": 285.1,
+"sched_pay": 265.5,
+"tenure": 13.4,
+"workers": 214.0
+}
+},
+{
+"labels": {
+"産業": "Ｈ運輸業，郵便業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 48.8,
+"bonus": 462.5,
+"hours_over": 24.0,
+"hours_sched": 168.0,
+"monthly": 288.7,
+"sched_pay": 246.7,
+"tenure": 13.6,
+"workers": 1603.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ卸売業，小売業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.4,
+"bonus": 610.9,
+"hours_over": 8.0,
+"hours_sched": 165.0,
+"monthly": 252.0,
+"sched_pay": 237.4,
+"tenure": 13.8,
+"workers": 3025.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ50～55卸売業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 45.3,
+"bonus": 666.8,
+"hours_over": 9.0,
+"hours_sched": 166.0,
+"monthly": 275.2,
+"sched_pay": 259.4,
+"tenure": 15.1,
+"workers": 1287.0
+}
+},
+{
+"labels": {
+"産業": "Ｉ56～61小売業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.7,
+"bonus": 569.4,
+"hours_over": 7.0,
+"hours_sched": 164.0,
+"monthly": 234.8,
+"sched_pay": 221.0,
+"tenure": 12.8,
+"workers": 1737.0
+}
+},
+{
+"labels": {
+"産業": "Ｊ金融業，保険業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.1,
+"bonus": 914.8,
+"hours_over": 6.0,
+"hours_sched": 155.0,
+"monthly": 315.7,
+"sched_pay": 302.2,
+"tenure": 14.1,
+"workers": 742.0
+}
+},
+{
+"labels": {
+"産業": "Ｋ不動産業，物品賃貸業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.2,
+"bonus": 844.7,
+"hours_over": 7.0,
+"hours_sched": 167.0,
+"monthly": 293.5,
+"sched_pay": 277.7,
+"tenure": 11.4,
+"workers": 217.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ学術研究，専門・技術サービス業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 42.2,
+"bonus": 974.6,
+"hours_over": 8.0,
+"hours_sched": 163.0,
+"monthly": 317.4,
+"sched_pay": 299.5,
+"tenure": 12.3,
+"workers": 601.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ７２専門サービス業（他に分類されないもの）",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1148.0,
+"hours_over": 5.0,
+"hours_sched": 162.0,
+"monthly": 314.4,
+"sched_pay": 305.2,
+"tenure": 14.8,
+"workers": 109.0
+}
+},
+{
+"labels": {
+"産業": "Ｌ７３広告業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 33.4,
+"bonus": 0.0,
+"hours_over": 4.0,
+"hours_sched": 164.0,
+"monthly": 195.8,
+"sched_pay": 190.4,
+"tenure": 1.9,
+"workers": 41.0
+}
+},
+{
+"labels": {
+"産業": "Ｍ宿泊業，飲食サービス業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.2,
+"bonus": 54.7,
+"hours_over": 15.0,
+"hours_sched": 170.0,
+"monthly": 229.1,
+"sched_pay": 205.5,
+"tenure": 10.6,
+"workers": 803.0
+}
+},
+{
+"labels": {
+"産業": "Ｍ７５宿泊業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 47.7,
+"bonus": 55.5,
+"hours_over": 12.0,
+"hours_sched": 177.0,
+"monthly": 235.4,
+"sched_pay": 215.7,
+"tenure": 12.4,
+"workers": 340.0
+}
+},
+{
+"labels": {
+"産業": "Ｎ生活関連サービス業，娯楽業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 43.5,
+"bonus": 209.1,
+"hours_over": 7.0,
+"hours_sched": 166.0,
+"monthly": 231.1,
+"sched_pay": 220.6,
+"tenure": 11.2,
+"workers": 708.0
+}
+},
+{
+"labels": {
+"産業": "Ｎ８０娯楽業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 41.2,
+"bonus": 364.4,
+"hours_over": 6.0,
+"hours_sched": 166.0,
+"monthly": 240.0,
+"sched_pay": 228.5,
+"tenure": 12.0,
+"workers": 261.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ教育，学習支援業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.7,
+"bonus": 700.8,
+"hours_over": 3.0,
+"hours_sched": 170.0,
+"monthly": 294.8,
+"sched_pay": 289.2,
+"tenure": 12.6,
+"workers": 954.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ８１学校教育",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.6,
+"bonus": 762.8,
+"hours_over": 1.0,
+"hours_sched": 170.0,
+"monthly": 303.3,
+"sched_pay": 300.4,
+"tenure": 12.7,
+"workers": 740.0
+}
+},
+{
+"labels": {
+"産業": "Ｏ８２その他の教育，学習支援業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 45.1,
+"bonus": 485.6,
+"hours_over": 9.0,
+"hours_sched": 168.0,
+"monthly": 265.3,
+"sched_pay": 250.4,
+"tenure": 12.4,
+"workers": 213.0
+}
+},
+{
+"labels": {
+"産業": "Ｐ医療，福祉",
+"都道府県": "青森"
+},
+"raw": {
+"age": 44.2,
+"bonus": 553.8,
+"hours_over": 4.0,
+"hours_sched": 167.0,
+"monthly": 269.4,
+"sched_pay": 253.9,
+"tenure": 10.4,
+"workers": 4948.0
+}
+},
+{
+"labels": {
+"産業": "Ｐ８３医療業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 42.7,
+"bonus": 624.7,
+"hours_over": 5.0,
+"hours_sched": 165.0,
+"monthly": 331.1,
+"sched_pay": 303.5,
+"tenure": 12.1,
+"workers": 1904.0
+}
+},
+{
+"labels": {
+"産業": "Ｑ複合サービス事業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 45.4,
+"bonus": 970.7,
+"hours_over": 11.0,
+"hours_sched": 168.0,
+"monthly": 298.6,
+"sched_pay": 279.9,
+"tenure": 17.2,
+"workers": 350.0
+}
+},
+{
+"labels": {
+"産業": "Ｒサービス業（他に分類されないもの）",
+"都道府県": "青森"
+},
+"raw": {
+"age": 48.3,
+"bonus": 385.6,
+"hours_over": 10.0,
+"hours_sched": 166.0,
+"monthly": 236.0,
+"sched_pay": 217.9,
+"tenure": 10.5,
+"workers": 1557.0
+}
+},
+{
+"labels": {
+"産業": "Ｒ９１職業紹介・労働者派遣業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 46.7,
+"bonus": 61.5,
+"hours_over": 10.0,
+"hours_sched": 162.0,
+"monthly": 221.8,
+"sched_pay": 200.6,
+"tenure": 4.0,
+"workers": 160.0
+}
+},
+{
+"labels": {
+"産業": "Ｒ９２その他の事業サービス業",
+"都道府県": "青森"
+},
+"raw": {
+"age": 49.2,
+"bonus": 338.1,
+"hours_over": 11.0,
+"hours_sched": 164.0,
+"monthly": 222.9,
+"sched_pay": 205.3,
+"tenure": 10.8,
+"workers": 1004.0
+}
+}
+],
+"000010470731@2025-03-17": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "産業計"
+},
+"raw": {
+"age": 44.1,
+"bonus": 954.7,
+"hours_over": 11.0,
+"hours_sched": 160.0,
+"monthly": 359.6,
+"sched_pay": 330.4,
+"tenure": 12.4,
+"workers": 2925146.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｃ鉱業，採石業，砂利採取業"
+},
+"raw": {
+"age": 48.0,
+"bonus": 1399.2,
+"hours_over": 13.0,
+"hours_sched": 158.0,
+"monthly": 406.7,
+"sched_pay": 372.3,
+"tenure": 14.1,
+"workers": 1132.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｄ建設業"
+},
+"raw": {
+"age": 45.3,
+"bonus": 1045.7,
+"hours_over": 11.0,
+"hours_sched": 164.0,
+"monthly": 383.9,
+"sched_pay": 352.6,
+"tenure": 13.4,
+"workers": 178550.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ製造業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1098.2,
+"hours_over": 13.0,
+"hours_sched": 161.0,
+"monthly": 354.4,
+"sched_pay": 318.6,
+"tenure": 14.9,
+"workers": 629534.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ電気・ガス・熱供給・水道業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1475.4,
+"hours_over": 15.0,
+"hours_sched": 152.0,
+"monthly": 498.0,
+"sched_pay": 437.5,
+"tenure": 18.2,
+"workers": 13590.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ情報通信業"
+},
+"raw": {
+"age": 40.8,
+"bonus": 1287.0,
+"hours_over": 10.0,
+"hours_sched": 155.0,
+"monthly": 420.2,
+"sched_pay": 391.0,
+"tenure": 11.9,
+"workers": 163441.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ運輸業，郵便業"
+},
+"raw": {
+"age": 48.1,
+"bonus": 708.8,
+"hours_over": 22.0,
+"hours_sched": 166.0,
+"monthly": 358.6,
+"sched_pay": 304.7,
+"tenure": 13.5,
+"workers": 228757.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ卸売業，小売業"
+},
+"raw": {
+"age": 43.5,
+"bonus": 1064.1,
+"hours_over": 9.0,
+"hours_sched": 161.0,
+"monthly": 364.0,
+"sched_pay": 343.6,
+"tenure": 13.6,
+"workers": 453276.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ金融業，保険業"
+},
+"raw": {
+"age": 43.7,
+"bonus": 1433.1,
+"hours_over": 11.0,
+"hours_sched": 147.0,
+"monthly": 440.6,
+"sched_pay": 410.6,
+"tenure": 13.9,
+"workers": 95362.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｋ不動産業，物品賃貸業"
+},
+"raw": {
+"age": 43.3,
+"bonus": 1220.7,
+"hours_over": 10.0,
+"hours_sched": 158.0,
+"monthly": 396.4,
+"sched_pay": 371.6,
+"tenure": 10.4,
+"workers": 55593.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ学術研究，専門・技術サービス業"
+},
+"raw": {
+"age": 42.9,
+"bonus": 1379.3,
+"hours_over": 12.0,
+"hours_sched": 158.0,
+"monthly": 434.3,
+"sched_pay": 401.8,
+"tenure": 12.7,
+"workers": 122767.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ宿泊業，飲食サービス業"
+},
+"raw": {
+"age": 42.8,
+"bonus": 379.5,
+"hours_over": 14.0,
+"hours_sched": 168.0,
+"monthly": 298.4,
+"sched_pay": 269.5,
+"tenure": 9.4,
+"workers": 80489.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｎ生活関連サービス業，娯楽業"
+},
+"raw": {
+"age": 42.7,
+"bonus": 461.2,
+"hours_over": 8.0,
+"hours_sched": 164.0,
+"monthly": 303.1,
+"sched_pay": 285.7,
+"tenure": 10.8,
+"workers": 56319.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ教育，学習支援業"
+},
+"raw": {
+"age": 44.3,
+"bonus": 1295.7,
+"hours_over": 6.0,
+"hours_sched": 159.0,
+"monthly": 392.7,
+"sched_pay": 376.2,
+"tenure": 12.3,
+"workers": 93634.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ医療，福祉"
+},
+"raw": {
+"age": 43.4,
+"bonus": 697.0,
+"hours_over": 6.0,
+"hours_sched": 160.0,
+"monthly": 328.2,
+"sched_pay": 306.4,
+"tenure": 9.4,
+"workers": 459856.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｑ複合サービス事業"
+},
+"raw": {
+"age": 45.0,
+"bonus": 1058.9,
+"hours_over": 9.0,
+"hours_sched": 155.0,
+"monthly": 326.3,
+"sched_pay": 306.9,
+"tenure": 16.5,
+"workers": 23788.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒサービス業(他に分類されないもの)"
+},
+"raw": {
+"age": 45.7,
+"bonus": 522.9,
+"hours_over": 11.0,
+"hours_sched": 158.0,
+"monthly": 310.3,
+"sched_pay": 285.8,
+"tenure": 9.1,
+"workers": 269057.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "産業計"
+},
+"raw": {
+"age": 44.1,
+"bonus": 957.3,
+"hours_over": 11.0,
+"hours_sched": 160.0,
+"monthly": 360.1,
+"sched_pay": 330.8,
+"tenure": 12.4,
+"workers": 2941040.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ電気・ガス・熱供給・水道業"
+},
+"raw": {
+"age": 43.8,
+"bonus": 1505.2,
+"hours_over": 14.0,
+"hours_sched": 151.0,
+"monthly": 479.0,
+"sched_pay": 424.5,
+"tenure": 18.5,
+"workers": 16976.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ運輸業，郵便業"
+},
+"raw": {
+"age": 48.1,
+"bonus": 714.1,
+"hours_over": 22.0,
+"hours_sched": 166.0,
+"monthly": 359.1,
+"sched_pay": 305.0,
+"tenure": 13.6,
+"workers": 230168.0
+}
+}
+],
+"000010817542@2026-03-24": [
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "産業計"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1009.6,
+"hours_over": 11.0,
+"hours_sched": 162.0,
+"monthly": 370.5,
+"sched_pay": 340.6,
+"tenure": 12.7,
+"workers": 2892371.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｃ鉱業，採石業，砂利採取業"
+},
+"raw": {
+"age": 48.5,
+"bonus": 1443.8,
+"hours_over": 11.0,
+"hours_sched": 163.0,
+"monthly": 420.0,
+"sched_pay": 388.3,
+"tenure": 13.9,
+"workers": 1053.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｄ建設業"
+},
+"raw": {
+"age": 45.5,
+"bonus": 1163.4,
+"hours_over": 11.0,
+"hours_sched": 165.0,
+"monthly": 396.5,
+"sched_pay": 366.3,
+"tenure": 13.7,
+"workers": 179363.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｅ製造業"
+},
+"raw": {
+"age": 44.1,
+"bonus": 1137.9,
+"hours_over": 13.0,
+"hours_sched": 163.0,
+"monthly": 366.5,
+"sched_pay": 330.0,
+"tenure": 15.3,
+"workers": 615166.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｆ電気・ガス・熱供給・水道業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 1461.2,
+"hours_over": 15.0,
+"hours_sched": 153.0,
+"monthly": 507.7,
+"sched_pay": 444.0,
+"tenure": 17.6,
+"workers": 13638.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｇ情報通信業"
+},
+"raw": {
+"age": 40.2,
+"bonus": 1418.5,
+"hours_over": 11.0,
+"hours_sched": 160.0,
+"monthly": 438.8,
+"sched_pay": 406.0,
+"tenure": 12.3,
+"workers": 165492.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｈ運輸業，郵便業"
+},
+"raw": {
+"age": 48.7,
+"bonus": 658.2,
+"hours_over": 23.0,
+"hours_sched": 167.0,
+"monthly": 366.9,
+"sched_pay": 312.7,
+"tenure": 12.9,
+"workers": 223468.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｉ卸売業，小売業"
+},
+"raw": {
+"age": 44.3,
+"bonus": 1176.5,
+"hours_over": 8.0,
+"hours_sched": 162.0,
+"monthly": 370.3,
+"sched_pay": 349.1,
+"tenure": 14.5,
+"workers": 436329.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｊ金融業，保険業"
+},
+"raw": {
+"age": 44.2,
+"bonus": 1688.2,
+"hours_over": 9.0,
+"hours_sched": 149.0,
+"monthly": 462.6,
+"sched_pay": 437.0,
+"tenure": 14.6,
+"workers": 105690.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｋ不動産業，物品賃貸業"
+},
+"raw": {
+"age": 43.9,
+"bonus": 1252.7,
+"hours_over": 11.0,
+"hours_sched": 161.0,
+"monthly": 389.0,
+"sched_pay": 360.1,
+"tenure": 10.7,
+"workers": 53660.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｌ学術研究，専門・技術サービス業"
+},
+"raw": {
+"age": 42.9,
+"bonus": 1481.4,
+"hours_over": 11.0,
+"hours_sched": 160.0,
+"monthly": 471.6,
+"sched_pay": 440.3,
+"tenure": 12.1,
+"workers": 123421.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｍ宿泊業，飲食サービス業"
+},
+"raw": {
+"age": 43.1,
+"bonus": 389.6,
+"hours_over": 12.0,
+"hours_sched": 168.0,
+"monthly": 303.0,
+"sched_pay": 277.2,
+"tenure": 9.6,
+"workers": 74896.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｎ生活関連サービス業，娯楽業"
+},
+"raw": {
+"age": 42.3,
+"bonus": 547.8,
+"hours_over": 8.0,
+"hours_sched": 164.0,
+"monthly": 313.6,
+"sched_pay": 295.2,
+"tenure": 10.6,
+"workers": 54908.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｏ教育，学習支援業"
+},
+"raw": {
+"age": 44.2,
+"bonus": 1254.4,
+"hours_over": 5.0,
+"hours_sched": 162.0,
+"monthly": 393.8,
+"sched_pay": 379.4,
+"tenure": 11.7,
+"workers": 82865.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｐ医療，福祉"
+},
+"raw": {
+"age": 44.0,
+"bonus": 732.7,
+"hours_over": 6.0,
+"hours_sched": 159.0,
+"monthly": 337.9,
+"sched_pay": 315.7,
+"tenure": 9.9,
+"workers": 461292.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｑ複合サービス事業"
+},
+"raw": {
+"age": 44.9,
+"bonus": 1095.0,
+"hours_over": 9.0,
+"hours_sched": 157.0,
+"monthly": 339.2,
+"sched_pay": 319.0,
+"tenure": 16.8,
+"workers": 23747.0
+}
+},
+{
+"labels": {
+"民公区分": "民営事業所",
+"産業": "Ｒサービス業（他に分類されないもの）"
+},
+"raw": {
+"age": 45.9,
+"bonus": 501.7,
+"hours_over": 12.0,
+"hours_sched": 160.0,
+"monthly": 313.3,
+"sched_pay": 284.9,
+"tenure": 9.3,
+"workers": 277381.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "産業計"
+},
+"raw": {
+"age": 44.4,
+"bonus": 1013.1,
+"hours_over": 11.0,
+"hours_sched": 162.0,
+"monthly": 371.1,
+"sched_pay": 341.0,
+"tenure": 12.7,
+"workers": 2912246.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｆ電気・ガス・熱供給・水道業"
+},
+"raw": {
+"age": 43.4,
+"bonus": 1510.8,
+"hours_over": 14.0,
+"hours_sched": 152.0,
+"monthly": 487.8,
+"sched_pay": 431.7,
+"tenure": 18.0,
+"workers": 17248.0
+}
+},
+{
+"labels": {
+"民公区分": "民営＋公営",
+"産業": "Ｈ運輸業，郵便業"
+},
+"raw": {
+"age": 48.7,
+"bonus": 668.1,
+"hours_over": 23.0,
+"hours_sched": 167.0,
+"monthly": 367.7,
+"sched_pay": 313.4,
+"tenure": 13.0,
+"workers": 225711.0
+}
+}
+]
+}
