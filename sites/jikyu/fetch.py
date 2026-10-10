@@ -143,6 +143,7 @@ def is_candidate(ec: dict, title: str) -> bool:
 
 # ---------------- 取得 ----------------
 DEBUG: list = []
+WATCH: list = []
 
 
 def find_newer(api, ec: dict, latest: int) -> list[dict]:
@@ -151,19 +152,25 @@ def find_newer(api, ec: dict, latest: int) -> list[dict]:
     DB表(全年まとめ)は更新が遅いので、新しい年が年ごとの表で先に出ていないかを見張る。
     見つかったら Actions の警告に出し、data/debug.json に表題とIDを残す。
     """
-    from datetime import date
     found: dict[str, dict] = {}
-    span = f"{latest + 1}-{date.today().year}"
-    for w in ec.get("watch_words", ["一般労働者 産業"]):
+    stats = []
+    for w in ec.get("watch_words", ["一般労働者", "産業大分類", "産業"]):
         try:
-            tables = api.list_tables(ec["stats_code"], w, surveyYears=span, limit=300)
+            tables = api.list_tables(ec["stats_code"], w, limit=2000)
         except Exception as e:  # 見張りの失敗でサイト更新は止めない
             print(f"::warning::新しい年の表の確認に失敗: {e}")
             continue
+        yrs = sorted({t["survey_date"][:4] for t in tables if t["survey_date"][:4].isdigit()})
+        stats.append({"word": w, "n": len(tables), "years": yrs[-4:]})
         for t in tables:
+            y = t["survey_date"][:4]
+            if not y.isdigit() or int(y) <= latest:
+                continue
             if any(x in t["title"] for x in ("短時間", "職種", "都道府県")):
                 continue
             found[t["id"]] = {k: t[k] for k in ("id", "title", "survey_date", "open_date")}
+    print(f"表の検索結果: {stats}")
+    WATCH.extend(stats)
     out = sorted(found.values(), key=lambda t: t["id"], reverse=True)[:200]
     if out:
         print(f"::warning::{latest}年より新しい表が {len(out)}件あります(まだ取り込めていません)。"
@@ -242,7 +249,7 @@ def fetch(cfg: dict) -> dict:
                           "all": rows.pop("_all", {}), "rows": rows})
     years.sort(key=lambda y: y["year"], reverse=True)
     newer = find_newer(api, ec, int(years[0]["year"]) if years else ec.get("min_year", 2020))
-    _dump(cfg, {"checked": checked, "fetched": DEBUG, "newer_tables": newer})
+    _dump(cfg, {"checked": checked, "fetched": DEBUG, "newer_tables": newer, "watch": WATCH})
     if not years:
         _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
