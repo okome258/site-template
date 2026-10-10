@@ -2,560 +2,2350 @@
  "status": "ok",
  "years": [
   {
-   "year": "2008",
+   "year": "2023",
    "table": {
-    "id": "0003130276",
-    "title": "平成20年 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 一般労働者 産業大分類",
-    "open_date": "2016-03-31"
+    "id": "0003425893",
+    "title": "令和２年以降 一般_産業大・中分類_年齢階級別DB",
+    "open_date": "2024-11-27"
    },
-   "all": {
-    "age": 40.9,
-    "tenure": 11.6,
-    "hours_sched": 165.0,
-    "hours_over": 14.0,
-    "monthly": 328.8,
-    "sched_pay": 299.1,
-    "bonus": 915.0,
-    "workers": 2145511.0,
-    "annual_man": 486.1,
-    "hours_month": 179.0,
-    "hourly": 2263
-   },
+   "all": {},
    "rows": {
+    "mining": {
+     "age": 47.9,
+     "tenure": 14.5,
+     "hours_sched": 166.0,
+     "hours_over": 12.0,
+     "monthly": 397.7,
+     "sched_pay": 366.7,
+     "bonus": 1377.4,
+     "workers": 1143.0,
+     "annual_man": 615.0,
+     "hours_month": 178.0,
+     "hourly": 2879
+    },
     "construction": {
-     "age": 43.2,
-     "tenure": 13.2,
-     "hours_sched": 170.0,
+     "age": 45.2,
+     "tenure": 13.5,
+     "hours_sched": 169.0,
      "hours_over": 13.0,
-     "monthly": 342.2,
-     "sched_pay": 316.7,
-     "bonus": 713.7,
-     "workers": 140488.0,
-     "annual_man": 482.0,
-     "hours_month": 183.0,
-     "hourly": 2195
+     "monthly": 381.2,
+     "sched_pay": 349.4,
+     "bonus": 1095.1,
+     "workers": 182348.0,
+     "annual_man": 567.0,
+     "hours_month": 182.0,
+     "hourly": 2596
     },
     "manufacturing": {
-     "age": 41.5,
-     "tenure": 13.9,
-     "hours_sched": 164.0,
-     "hours_over": 18.0,
-     "monthly": 332.4,
-     "sched_pay": 293.4,
-     "bonus": 1058.3,
-     "workers": 601391.0,
-     "annual_man": 504.7,
-     "hours_month": 182.0,
-     "hourly": 2311
+     "age": 43.7,
+     "tenure": 14.8,
+     "hours_sched": 166.0,
+     "hours_over": 14.0,
+     "monthly": 340.0,
+     "sched_pay": 306.0,
+     "bonus": 1055.5,
+     "workers": 647360.0,
+     "annual_man": 513.5,
+     "hours_month": 180.0,
+     "hourly": 2378
     },
     "utilities": {
-     "age": 40.3,
-     "tenure": 18.4,
-     "hours_sched": 151.0,
-     "hours_over": 14.0,
-     "monthly": 449.1,
-     "sched_pay": 398.7,
-     "bonus": 1648.4,
-     "workers": 14782.0,
-     "annual_man": 703.8,
-     "hours_month": 165.0,
-     "hourly": 3554
+     "age": 43.6,
+     "tenure": 19.0,
+     "hours_sched": 158.0,
+     "hours_over": 15.0,
+     "monthly": 463.5,
+     "sched_pay": 410.2,
+     "bonus": 1429.4,
+     "workers": 14058.0,
+     "annual_man": 699.1,
+     "hours_month": 173.0,
+     "hourly": 3368
     },
     "it": {
-     "age": 37.1,
-     "tenure": 11.3,
-     "hours_sched": 159.0,
-     "hours_over": 17.0,
-     "monthly": 393.2,
-     "sched_pay": 355.0,
-     "bonus": 1204.7,
-     "workers": 99352.0,
-     "annual_man": 592.3,
-     "hours_month": 176.0,
-     "hourly": 2804
+     "age": 40.6,
+     "tenure": 12.2,
+     "hours_sched": 165.0,
+     "hours_over": 10.0,
+     "monthly": 409.9,
+     "sched_pay": 381.2,
+     "bonus": 1134.8,
+     "workers": 143321.0,
+     "annual_man": 605.4,
+     "hours_month": 175.0,
+     "hourly": 2883
     },
     "transport": {
-     "age": 44.4,
-     "tenure": 12.1,
+     "age": 48.0,
+     "tenure": 13.1,
+     "hours_sched": 169.0,
+     "hours_over": 25.0,
+     "monthly": 347.9,
+     "sched_pay": 294.3,
+     "bonus": 623.5,
+     "workers": 225721.0,
+     "annual_man": 479.8,
+     "hours_month": 194.0,
+     "hourly": 2061
+    },
+    "trade": {
+     "age": 42.7,
+     "tenure": 13.0,
+     "hours_sched": 169.0,
+     "hours_over": 9.0,
+     "monthly": 340.6,
+     "sched_pay": 319.6,
+     "bonus": 862.7,
+     "workers": 518733.0,
+     "annual_man": 495.0,
+     "hours_month": 178.0,
+     "hourly": 2317
+    },
+    "finance": {
+     "age": 43.7,
+     "tenure": 14.3,
+     "hours_sched": 155.0,
+     "hours_over": 11.0,
+     "monthly": 421.7,
+     "sched_pay": 393.4,
+     "bonus": 1531.4,
+     "workers": 102329.0,
+     "annual_man": 659.2,
+     "hours_month": 166.0,
+     "hourly": 3309
+    },
+    "realestate": {
+     "age": 43.1,
+     "tenure": 10.5,
+     "hours_sched": 164.0,
+     "hours_over": 10.0,
+     "monthly": 364.2,
+     "sched_pay": 340.8,
+     "bonus": 1270.7,
+     "workers": 52386.0,
+     "annual_man": 564.1,
+     "hours_month": 174.0,
+     "hourly": 2702
+    },
+    "professional": {
+     "age": 43.0,
+     "tenure": 12.0,
+     "hours_sched": 164.0,
+     "hours_over": 11.0,
+     "monthly": 427.6,
+     "sched_pay": 396.6,
+     "bonus": 1363.6,
+     "workers": 119381.0,
+     "annual_man": 649.5,
+     "hours_month": 175.0,
+     "hourly": 3093
+    },
+    "hospitality": {
+     "age": 43.0,
+     "tenure": 9.9,
      "hours_sched": 170.0,
+     "hours_over": 13.0,
+     "monthly": 284.6,
+     "sched_pay": 259.5,
+     "bonus": 336.9,
+     "workers": 78896.0,
+     "annual_man": 375.2,
+     "hours_month": 183.0,
+     "hourly": 1709
+    },
+    "lifestyle": {
+     "age": 42.7,
+     "tenure": 11.0,
+     "hours_sched": 166.0,
+     "hours_over": 8.0,
+     "monthly": 296.1,
+     "sched_pay": 278.7,
+     "bonus": 445.9,
+     "workers": 59813.0,
+     "annual_man": 399.9,
+     "hours_month": 174.0,
+     "hourly": 1915
+    },
+    "education": {
+     "age": 44.4,
+     "tenure": 11.9,
+     "hours_sched": 167.0,
+     "hours_over": 5.0,
+     "monthly": 390.2,
+     "sched_pay": 377.2,
+     "bonus": 1225.9,
+     "workers": 78533.0,
+     "annual_man": 590.8,
+     "hours_month": 172.0,
+     "hourly": 2863
+    },
+    "medical": {
+     "age": 43.5,
+     "tenure": 9.5,
+     "hours_sched": 163.0,
+     "hours_over": 6.0,
+     "monthly": 319.7,
+     "sched_pay": 298.0,
+     "bonus": 717.2,
+     "workers": 454673.0,
+     "annual_man": 455.4,
+     "hours_month": 169.0,
+     "hourly": 2245
+    },
+    "compound": {
+     "age": 44.6,
+     "tenure": 16.3,
+     "hours_sched": 161.0,
+     "hours_over": 9.0,
+     "monthly": 320.1,
+     "sched_pay": 302.0,
+     "bonus": 997.1,
+     "workers": 26919.0,
+     "annual_man": 483.8,
+     "hours_month": 170.0,
+     "hourly": 2372
+    },
+    "services": {
+     "age": 45.5,
+     "tenure": 9.5,
+     "hours_sched": 163.0,
+     "hours_over": 11.0,
+     "monthly": 310.6,
+     "sched_pay": 285.7,
+     "bonus": 618.3,
+     "workers": 291094.0,
+     "annual_man": 434.6,
+     "hours_month": 174.0,
+     "hourly": 2081
+    }
+   }
+  },
+  {
+   "year": "2022",
+   "table": {
+    "id": "0003425893",
+    "title": "令和２年以降 一般_産業大・中分類_年齢階級別DB",
+    "open_date": "2024-11-27"
+   },
+   "all": {},
+   "rows": {
+    "mining": {
+     "age": 47.8,
+     "tenure": 14.2,
+     "hours_sched": 167.0,
+     "hours_over": 13.0,
+     "monthly": 379.0,
+     "sched_pay": 347.4,
+     "bonus": 1190.4,
+     "workers": 1137.0,
+     "annual_man": 573.8,
+     "hours_month": 180.0,
+     "hourly": 2657
+    },
+    "construction": {
+     "age": 45.0,
+     "tenure": 12.8,
+     "hours_sched": 171.0,
+     "hours_over": 11.0,
+     "monthly": 363.0,
+     "sched_pay": 335.4,
+     "bonus": 977.6,
+     "workers": 191546.0,
+     "annual_man": 533.4,
+     "hours_month": 182.0,
+     "hourly": 2442
+    },
+    "manufacturing": {
+     "age": 43.5,
+     "tenure": 14.8,
+     "hours_sched": 166.0,
+     "hours_over": 14.0,
+     "monthly": 335.9,
+     "sched_pay": 301.5,
+     "bonus": 1005.7,
+     "workers": 603731.0,
+     "annual_man": 503.6,
+     "hours_month": 180.0,
+     "hourly": 2332
+    },
+    "utilities": {
+     "age": 43.2,
+     "tenure": 18.6,
+     "hours_sched": 159.0,
+     "hours_over": 14.0,
+     "monthly": 453.4,
+     "sched_pay": 402.0,
+     "bonus": 1319.5,
+     "workers": 13889.0,
+     "annual_man": 676.0,
+     "hours_month": 173.0,
+     "hourly": 3256
+    },
+    "it": {
+     "age": 40.2,
+     "tenure": 12.0,
+     "hours_sched": 165.0,
+     "hours_over": 11.0,
+     "monthly": 407.6,
+     "sched_pay": 378.8,
+     "bonus": 1126.0,
+     "workers": 132704.0,
+     "annual_man": 601.7,
+     "hours_month": 176.0,
+     "hourly": 2849
+    },
+    "transport": {
+     "age": 47.5,
+     "tenure": 12.7,
+     "hours_sched": 169.0,
+     "hours_over": 26.0,
+     "monthly": 340.0,
+     "sched_pay": 285.4,
+     "bonus": 563.5,
+     "workers": 226219.0,
+     "annual_man": 464.4,
+     "hours_month": 195.0,
+     "hourly": 1984
+    },
+    "trade": {
+     "age": 43.3,
+     "tenure": 13.8,
+     "hours_sched": 166.0,
+     "hours_over": 9.0,
+     "monthly": 334.2,
+     "sched_pay": 314.6,
+     "bonus": 962.9,
+     "workers": 437284.0,
+     "annual_man": 497.3,
+     "hours_month": 175.0,
+     "hourly": 2368
+    },
+    "finance": {
+     "age": 43.2,
+     "tenure": 13.9,
+     "hours_sched": 155.0,
+     "hours_over": 11.0,
+     "monthly": 402.1,
+     "sched_pay": 374.0,
+     "bonus": 1449.0,
+     "workers": 100053.0,
+     "annual_man": 627.4,
+     "hours_month": 166.0,
+     "hourly": 3150
+    },
+    "realestate": {
+     "age": 43.3,
+     "tenure": 10.4,
+     "hours_sched": 165.0,
+     "hours_over": 10.0,
+     "monthly": 363.1,
+     "sched_pay": 339.5,
+     "bonus": 1067.9,
+     "workers": 44890.0,
+     "annual_man": 542.5,
+     "hours_month": 175.0,
+     "hourly": 2583
+    },
+    "professional": {
+     "age": 42.7,
+     "tenure": 12.1,
+     "hours_sched": 165.0,
+     "hours_over": 12.0,
+     "monthly": 416.3,
+     "sched_pay": 385.5,
+     "bonus": 1337.9,
+     "workers": 111633.0,
+     "annual_man": 633.4,
+     "hours_month": 177.0,
+     "hourly": 2982
+    },
+    "hospitality": {
+     "age": 43.5,
+     "tenure": 10.0,
+     "hours_sched": 170.0,
+     "hours_over": 12.0,
+     "monthly": 279.4,
+     "sched_pay": 257.4,
+     "bonus": 342.7,
+     "workers": 80583.0,
+     "annual_man": 369.5,
+     "hours_month": 182.0,
+     "hourly": 1692
+    },
+    "lifestyle": {
+     "age": 41.9,
+     "tenure": 10.5,
+     "hours_sched": 165.0,
+     "hours_over": 7.0,
+     "monthly": 287.7,
+     "sched_pay": 271.6,
+     "bonus": 361.7,
+     "workers": 59170.0,
+     "annual_man": 381.4,
+     "hours_month": 172.0,
+     "hourly": 1848
+    },
+    "education": {
+     "age": 43.9,
+     "tenure": 11.4,
+     "hours_sched": 167.0,
+     "hours_over": 5.0,
+     "monthly": 390.5,
+     "sched_pay": 377.7,
+     "bonus": 1227.3,
+     "workers": 77963.0,
+     "annual_man": 591.3,
+     "hours_month": 172.0,
+     "hourly": 2865
+    },
+    "medical": {
+     "age": 42.9,
+     "tenure": 9.1,
+     "hours_sched": 163.0,
+     "hours_over": 6.0,
+     "monthly": 319.0,
+     "sched_pay": 296.7,
+     "bonus": 734.3,
+     "workers": 426890.0,
+     "annual_man": 456.2,
+     "hours_month": 169.0,
+     "hourly": 2250
+    },
+    "compound": {
+     "age": 44.0,
+     "tenure": 16.3,
+     "hours_sched": 162.0,
+     "hours_over": 8.0,
+     "monthly": 315.6,
+     "sched_pay": 298.8,
+     "bonus": 992.9,
+     "workers": 28613.0,
+     "annual_man": 478.0,
+     "hours_month": 170.0,
+     "hourly": 2343
+    },
+    "services": {
+     "age": 45.2,
+     "tenure": 9.1,
+     "hours_sched": 165.0,
+     "hours_over": 12.0,
+     "monthly": 293.5,
+     "sched_pay": 268.4,
+     "bonus": 500.7,
+     "workers": 254368.0,
+     "annual_man": 402.3,
+     "hours_month": 177.0,
+     "hourly": 1894
+    }
+   }
+  },
+  {
+   "year": "2021",
+   "table": {
+    "id": "0003425893",
+    "title": "令和２年以降 一般_産業大・中分類_年齢階級別DB",
+    "open_date": "2024-11-27"
+   },
+   "all": {},
+   "rows": {
+    "mining": {
+     "age": 48.3,
+     "tenure": 14.9,
+     "hours_sched": 169.0,
+     "hours_over": 13.0,
+     "monthly": 354.8,
+     "sched_pay": 323.3,
+     "bonus": 1087.7,
+     "workers": 1004.0,
+     "annual_man": 534.5,
+     "hours_month": 182.0,
+     "hourly": 2447
+    },
+    "construction": {
+     "age": 44.5,
+     "tenure": 13.4,
+     "hours_sched": 171.0,
+     "hours_over": 13.0,
+     "monthly": 363.0,
+     "sched_pay": 333.2,
+     "bonus": 1014.4,
+     "workers": 182353.0,
+     "annual_man": 537.0,
+     "hours_month": 184.0,
+     "hourly": 2432
+    },
+    "manufacturing": {
+     "age": 43.1,
+     "tenure": 14.6,
+     "hours_sched": 166.0,
+     "hours_over": 15.0,
+     "monthly": 330.4,
+     "sched_pay": 294.9,
+     "bonus": 955.3,
+     "workers": 622742.0,
+     "annual_man": 492.0,
+     "hours_month": 181.0,
+     "hourly": 2265
+    },
+    "utilities": {
+     "age": 44.9,
+     "tenure": 21.2,
+     "hours_sched": 158.0,
+     "hours_over": 11.0,
+     "monthly": 463.7,
+     "sched_pay": 419.7,
+     "bonus": 1363.9,
+     "workers": 13822.0,
+     "annual_man": 692.8,
+     "hours_month": 169.0,
+     "hourly": 3416
+    },
+    "it": {
+     "age": 40.3,
+     "tenure": 12.9,
+     "hours_sched": 163.0,
+     "hours_over": 12.0,
+     "monthly": 406.2,
+     "sched_pay": 373.5,
+     "bonus": 1332.4,
+     "workers": 130750.0,
+     "annual_man": 620.7,
+     "hours_month": 175.0,
+     "hourly": 2956
+    },
+    "transport": {
+     "age": 46.9,
+     "tenure": 12.6,
+     "hours_sched": 168.0,
+     "hours_over": 23.0,
+     "monthly": 325.4,
+     "sched_pay": 278.5,
+     "bonus": 623.2,
+     "workers": 225170.0,
+     "annual_man": 452.8,
+     "hours_month": 191.0,
+     "hourly": 1976
+    },
+    "trade": {
+     "age": 42.7,
+     "tenure": 13.1,
+     "hours_sched": 165.0,
+     "hours_over": 9.0,
+     "monthly": 327.7,
+     "sched_pay": 308.0,
+     "bonus": 867.4,
+     "workers": 463651.0,
+     "annual_man": 480.0,
+     "hours_month": 174.0,
+     "hourly": 2299
+    },
+    "finance": {
+     "age": 42.7,
+     "tenure": 14.1,
+     "hours_sched": 155.0,
+     "hours_over": 10.0,
+     "monthly": 410.3,
+     "sched_pay": 383.5,
+     "bonus": 1461.4,
+     "workers": 101796.0,
+     "annual_man": 638.5,
+     "hours_month": 165.0,
+     "hourly": 3225
+    },
+    "realestate": {
+     "age": 43.2,
+     "tenure": 10.4,
+     "hours_sched": 164.0,
+     "hours_over": 11.0,
+     "monthly": 350.6,
+     "sched_pay": 326.1,
+     "bonus": 1093.9,
+     "workers": 46687.0,
+     "annual_man": 530.1,
+     "hours_month": 175.0,
+     "hourly": 2524
+    },
+    "professional": {
+     "age": 42.8,
+     "tenure": 12.9,
+     "hours_sched": 165.0,
+     "hours_over": 11.0,
+     "monthly": 415.0,
+     "sched_pay": 386.9,
+     "bonus": 1318.8,
+     "workers": 108242.0,
+     "annual_man": 629.9,
+     "hours_month": 176.0,
+     "hourly": 2982
+    },
+    "hospitality": {
+     "age": 42.5,
+     "tenure": 9.8,
+     "hours_sched": 166.0,
+     "hours_over": 9.0,
+     "monthly": 275.3,
+     "sched_pay": 257.6,
+     "bonus": 311.8,
+     "workers": 73204.0,
+     "annual_man": 361.5,
+     "hours_month": 175.0,
+     "hourly": 1722
+    },
+    "lifestyle": {
+     "age": 41.4,
+     "tenure": 10.4,
+     "hours_sched": 167.0,
+     "hours_over": 6.0,
+     "monthly": 280.1,
+     "sched_pay": 268.2,
+     "bonus": 377.8,
+     "workers": 56185.0,
+     "annual_man": 373.9,
+     "hours_month": 173.0,
+     "hourly": 1801
+    },
+    "education": {
+     "age": 43.9,
+     "tenure": 11.7,
+     "hours_sched": 167.0,
+     "hours_over": 5.0,
+     "monthly": 386.3,
+     "sched_pay": 373.9,
+     "bonus": 1250.6,
+     "workers": 80092.0,
+     "annual_man": 588.6,
+     "hours_month": 172.0,
+     "hourly": 2852
+    },
+    "medical": {
+     "age": 42.8,
+     "tenure": 9.0,
+     "hours_sched": 162.0,
+     "hours_over": 6.0,
+     "monthly": 312.3,
+     "sched_pay": 291.7,
+     "bonus": 701.1,
+     "workers": 441158.0,
+     "annual_man": 444.9,
+     "hours_month": 168.0,
+     "hourly": 2207
+    },
+    "compound": {
+     "age": 43.8,
+     "tenure": 15.9,
+     "hours_sched": 162.0,
+     "hours_over": 7.0,
+     "monthly": 312.0,
+     "sched_pay": 296.7,
+     "bonus": 1008.7,
+     "workers": 29550.0,
+     "annual_man": 475.3,
+     "hours_month": 169.0,
+     "hourly": 2344
+    },
+    "services": {
+     "age": 45.1,
+     "tenure": 9.2,
+     "hours_sched": 164.0,
+     "hours_over": 11.0,
+     "monthly": 289.0,
+     "sched_pay": 265.5,
+     "bonus": 521.2,
+     "workers": 244679.0,
+     "annual_man": 398.9,
+     "hours_month": 175.0,
+     "hourly": 1900
+    }
+   }
+  },
+  {
+   "year": "2020",
+   "table": {
+    "id": "0003425893",
+    "title": "令和２年以降 一般_産業大・中分類_年齢階級別DB",
+    "open_date": "2024-11-27"
+   },
+   "all": {},
+   "rows": {
+    "mining": {
+     "age": 46.8,
+     "tenure": 14.5,
+     "hours_sched": 168.0,
+     "hours_over": 14.0,
+     "monthly": 369.9,
+     "sched_pay": 338.6,
+     "bonus": 1263.5,
+     "workers": 1198.0,
+     "annual_man": 570.2,
+     "hours_month": 182.0,
+     "hourly": 2611
+    },
+    "construction": {
+     "age": 44.8,
+     "tenure": 13.5,
+     "hours_sched": 172.0,
+     "hours_over": 13.0,
+     "monthly": 363.5,
+     "sched_pay": 333.5,
+     "bonus": 1041.1,
+     "workers": 184429.0,
+     "annual_man": 540.3,
+     "hours_month": 185.0,
+     "hourly": 2434
+    },
+    "manufacturing": {
+     "age": 43.0,
+     "tenure": 14.5,
+     "hours_sched": 164.0,
+     "hours_over": 10.0,
+     "monthly": 323.4,
+     "sched_pay": 298.3,
+     "bonus": 1035.7,
+     "workers": 570148.0,
+     "annual_man": 491.6,
+     "hours_month": 174.0,
+     "hourly": 2355
+    },
+    "utilities": {
+     "age": 43.1,
+     "tenure": 19.1,
+     "hours_sched": 159.0,
+     "hours_over": 12.0,
+     "monthly": 448.3,
+     "sched_pay": 402.5,
+     "bonus": 1243.6,
+     "workers": 14489.0,
+     "annual_man": 662.3,
+     "hours_month": 171.0,
+     "hourly": 3228
+    },
+    "it": {
+     "age": 40.4,
+     "tenure": 12.6,
+     "hours_sched": 165.0,
+     "hours_over": 10.0,
+     "monthly": 408.8,
+     "sched_pay": 383.0,
+     "bonus": 1302.1,
+     "workers": 126483.0,
+     "annual_man": 620.8,
+     "hours_month": 175.0,
+     "hourly": 2956
+    },
+    "transport": {
+     "age": 46.2,
+     "tenure": 12.1,
+     "hours_sched": 169.0,
+     "hours_over": 23.0,
+     "monthly": 323.6,
+     "sched_pay": 276.3,
+     "bonus": 639.5,
+     "workers": 213520.0,
+     "annual_man": 452.3,
+     "hours_month": 192.0,
+     "hourly": 1963
+    },
+    "trade": {
+     "age": 42.4,
+     "tenure": 12.8,
+     "hours_sched": 166.0,
+     "hours_over": 7.0,
+     "monthly": 323.1,
+     "sched_pay": 307.9,
+     "bonus": 903.2,
+     "workers": 454382.0,
+     "annual_man": 478.0,
+     "hours_month": 173.0,
+     "hourly": 2303
+    },
+    "finance": {
+     "age": 42.6,
+     "tenure": 13.3,
+     "hours_sched": 156.0,
+     "hours_over": 10.0,
+     "monthly": 398.5,
+     "sched_pay": 374.4,
+     "bonus": 1346.0,
+     "workers": 108003.0,
+     "annual_man": 612.8,
+     "hours_month": 166.0,
+     "hourly": 3076
+    },
+    "realestate": {
+     "age": 43.0,
+     "tenure": 10.1,
+     "hours_sched": 164.0,
+     "hours_over": 8.0,
+     "monthly": 353.0,
+     "sched_pay": 333.4,
+     "bonus": 1097.6,
+     "workers": 47390.0,
+     "annual_man": 533.4,
+     "hours_month": 172.0,
+     "hourly": 2584
+    },
+    "professional": {
+     "age": 42.4,
+     "tenure": 12.5,
+     "hours_sched": 164.0,
+     "hours_over": 10.0,
+     "monthly": 411.9,
+     "sched_pay": 388.2,
+     "bonus": 1389.5,
+     "workers": 103091.0,
+     "annual_man": 633.2,
+     "hours_month": 174.0,
+     "hourly": 3033
+    },
+    "hospitality": {
+     "age": 42.7,
+     "tenure": 9.3,
+     "hours_sched": 168.0,
+     "hours_over": 8.0,
+     "monthly": 266.3,
+     "sched_pay": 250.5,
+     "bonus": 353.0,
+     "workers": 67795.0,
+     "annual_man": 354.9,
+     "hours_month": 176.0,
+     "hourly": 1680
+    },
+    "lifestyle": {
+     "age": 41.7,
+     "tenure": 9.3,
+     "hours_sched": 168.0,
+     "hours_over": 5.0,
+     "monthly": 278.1,
+     "sched_pay": 267.7,
+     "bonus": 450.4,
+     "workers": 61179.0,
+     "annual_man": 378.8,
+     "hours_month": 173.0,
+     "hourly": 1824
+    },
+    "education": {
+     "age": 43.5,
+     "tenure": 11.2,
+     "hours_sched": 166.0,
+     "hours_over": 4.0,
+     "monthly": 380.6,
+     "sched_pay": 370.3,
+     "bonus": 1248.5,
+     "workers": 79632.0,
+     "annual_man": 581.6,
+     "hours_month": 170.0,
+     "hourly": 2851
+    },
+    "medical": {
+     "age": 42.6,
+     "tenure": 8.7,
+     "hours_sched": 163.0,
+     "hours_over": 5.0,
+     "monthly": 309.1,
+     "sched_pay": 290.5,
+     "bonus": 730.5,
+     "workers": 449589.0,
+     "annual_man": 444.0,
+     "hours_month": 168.0,
+     "hourly": 2202
+    },
+    "compound": {
+     "age": 43.5,
+     "tenure": 15.6,
+     "hours_sched": 162.0,
+     "hours_over": 7.0,
+     "monthly": 306.1,
+     "sched_pay": 291.6,
+     "bonus": 989.6,
+     "workers": 32424.0,
+     "annual_man": 466.3,
+     "hours_month": 169.0,
+     "hourly": 2299
+    },
+    "services": {
+     "age": 44.7,
+     "tenure": 8.8,
+     "hours_sched": 163.0,
+     "hours_over": 10.0,
+     "monthly": 284.9,
+     "sched_pay": 264.4,
+     "bonus": 551.9,
+     "workers": 251271.0,
+     "annual_man": 397.1,
+     "hours_month": 173.0,
+     "hourly": 1913
+    }
+   }
+  },
+  {
+   "year": "2019",
+   "table": {
+    "id": "0003084009",
+    "title": "令和元年以前 産業大・中分類第１表",
+    "open_date": "2020-09-15"
+   },
+   "all": {},
+   "rows": {
+    "mining": {
+     "age": 47.1,
+     "tenure": 14.6,
+     "hours_sched": 161.0,
+     "hours_over": 15.0,
+     "monthly": 360.5,
+     "sched_pay": 327.3,
+     "bonus": 1212.0,
+     "workers": 999.0,
+     "annual_man": 553.8,
+     "hours_month": 176.0,
+     "hourly": 2622
+    },
+    "construction": {
+     "age": 45.1,
+     "tenure": 13.9,
+     "hours_sched": 166.0,
+     "hours_over": 14.0,
+     "monthly": 364.7,
+     "sched_pay": 332.8,
+     "bonus": 1124.9,
+     "workers": 142170.0,
+     "annual_man": 550.1,
+     "hours_month": 180.0,
+     "hourly": 2547
+    },
+    "manufacturing": {
+     "age": 42.7,
+     "tenure": 14.7,
+     "hours_sched": 162.0,
+     "hours_over": 17.0,
+     "monthly": 334.5,
+     "sched_pay": 295.2,
+     "bonus": 1061.0,
+     "workers": 555085.0,
+     "annual_man": 507.5,
+     "hours_month": 179.0,
+     "hourly": 2363
+    },
+    "utilities": {
+     "age": 42.2,
+     "tenure": 18.8,
+     "hours_sched": 149.0,
+     "hours_over": 13.0,
+     "monthly": 462.0,
+     "sched_pay": 412.5,
+     "bonus": 1051.0,
+     "workers": 16669.0,
+     "annual_man": 659.5,
+     "hours_month": 162.0,
+     "hourly": 3392
+    },
+    "it": {
+     "age": 40.3,
+     "tenure": 13.1,
+     "hours_sched": 154.0,
+     "hours_over": 11.0,
+     "monthly": 403.1,
+     "sched_pay": 375.0,
+     "bonus": 1276.9,
+     "workers": 93420.0,
+     "annual_man": 611.4,
+     "hours_month": 165.0,
+     "hourly": 3088
+    },
+    "transport": {
+     "age": 46.4,
+     "tenure": 12.0,
+     "hours_sched": 166.0,
      "hours_over": 27.0,
-     "monthly": 321.1,
-     "sched_pay": 275.7,
-     "bonus": 619.7,
-     "workers": 172324.0,
-     "annual_man": 447.3,
-     "hours_month": 197.0,
-     "hourly": 1892
+     "monthly": 332.4,
+     "sched_pay": 279.7,
+     "bonus": 643.4,
+     "workers": 168882.0,
+     "annual_man": 463.2,
+     "hours_month": 193.0,
+     "hourly": 2000
+    },
+    "trade": {
+     "age": 42.6,
+     "tenure": 13.6,
+     "hours_sched": 162.0,
+     "hours_over": 10.0,
+     "monthly": 337.7,
+     "sched_pay": 315.7,
+     "bonus": 984.5,
+     "workers": 320721.0,
+     "annual_man": 503.7,
+     "hours_month": 172.0,
+     "hourly": 2440
+    },
+    "finance": {
+     "age": 42.4,
+     "tenure": 13.7,
+     "hours_sched": 144.0,
+     "hours_over": 11.0,
+     "monthly": 393.4,
+     "sched_pay": 365.5,
+     "bonus": 1464.2,
+     "workers": 97621.0,
+     "annual_man": 618.5,
+     "hours_month": 155.0,
+     "hourly": 3325
+    },
+    "realestate": {
+     "age": 42.3,
+     "tenure": 10.2,
+     "hours_sched": 159.0,
+     "hours_over": 12.0,
+     "monthly": 346.7,
+     "sched_pay": 322.0,
+     "bonus": 1081.4,
+     "workers": 29492.0,
+     "annual_man": 524.2,
+     "hours_month": 171.0,
+     "hourly": 2554
+    },
+    "professional": {
+     "age": 42.6,
+     "tenure": 13.1,
+     "hours_sched": 155.0,
+     "hours_over": 12.0,
+     "monthly": 416.8,
+     "sched_pay": 387.0,
+     "bonus": 1433.6,
+     "workers": 81274.0,
+     "annual_man": 643.5,
+     "hours_month": 167.0,
+     "hourly": 3211
+    },
+    "hospitality": {
+     "age": 41.9,
+     "tenure": 9.1,
+     "hours_sched": 169.0,
+     "hours_over": 14.0,
+     "monthly": 272.8,
+     "sched_pay": 247.8,
+     "bonus": 368.1,
+     "workers": 48319.0,
+     "annual_man": 364.2,
+     "hours_month": 183.0,
+     "hourly": 1658
+    },
+    "lifestyle": {
+     "age": 40.6,
+     "tenure": 9.7,
+     "hours_sched": 165.0,
+     "hours_over": 9.0,
+     "monthly": 280.9,
+     "sched_pay": 263.6,
+     "bonus": 463.9,
+     "workers": 37396.0,
+     "annual_man": 383.5,
+     "hours_month": 174.0,
+     "hourly": 1837
+    },
+    "education": {
+     "age": 44.0,
+     "tenure": 11.8,
+     "hours_sched": 158.0,
+     "hours_over": 5.0,
+     "monthly": 399.8,
+     "sched_pay": 387.9,
+     "bonus": 1410.1,
+     "workers": 69159.0,
+     "annual_man": 620.8,
+     "hours_month": 163.0,
+     "hourly": 3174
+    },
+    "medical": {
+     "age": 42.2,
+     "tenure": 8.7,
+     "hours_sched": 159.0,
+     "hours_over": 6.0,
+     "monthly": 306.4,
+     "sched_pay": 284.8,
+     "bonus": 699.1,
+     "workers": 347314.0,
+     "annual_man": 437.6,
+     "hours_month": 165.0,
+     "hourly": 2210
+    },
+    "compound": {
+     "age": 43.0,
+     "tenure": 15.1,
+     "hours_sched": 154.0,
+     "hours_over": 10.0,
+     "monthly": 321.4,
+     "sched_pay": 299.9,
+     "bonus": 1000.6,
+     "workers": 34509.0,
+     "annual_man": 485.7,
+     "hours_month": 164.0,
+     "hourly": 2468
+    },
+    "services": {
+     "age": 45.0,
+     "tenure": 9.0,
+     "hours_sched": 159.0,
+     "hours_over": 14.0,
+     "monthly": 289.6,
+     "sched_pay": 262.6,
+     "bonus": 551.5,
+     "workers": 174853.0,
+     "annual_man": 402.7,
+     "hours_month": 173.0,
+     "hourly": 1940
+    }
+   }
+  },
+  {
+   "year": "2018",
+   "table": {
+    "id": "0003084009",
+    "title": "令和元年以前 産業大・中分類第１表",
+    "open_date": "2020-09-15"
+   },
+   "all": {},
+   "rows": {
+    "mining": {
+     "age": 47.5,
+     "tenure": 14.5,
+     "hours_sched": 166.0,
+     "hours_over": 14.0,
+     "monthly": 362.1,
+     "sched_pay": 333.1,
+     "bonus": 1166.3,
+     "workers": 841.0,
+     "annual_man": 551.2,
+     "hours_month": 180.0,
+     "hourly": 2552
+    },
+    "construction": {
+     "age": 44.3,
+     "tenure": 13.8,
+     "hours_sched": 169.0,
+     "hours_over": 14.0,
+     "monthly": 366.2,
+     "sched_pay": 334.7,
+     "bonus": 1070.6,
+     "workers": 139439.0,
+     "annual_man": 546.5,
+     "hours_month": 183.0,
+     "hourly": 2489
+    },
+    "manufacturing": {
+     "age": 42.6,
+     "tenure": 14.7,
+     "hours_sched": 165.0,
+     "hours_over": 18.0,
+     "monthly": 337.1,
+     "sched_pay": 296.5,
+     "bonus": 1055.7,
+     "workers": 516191.0,
+     "annual_man": 510.1,
+     "hours_month": 183.0,
+     "hourly": 2323
+    },
+    "utilities": {
+     "age": 43.5,
+     "tenure": 20.3,
+     "hours_sched": 153.0,
+     "hours_over": 14.0,
+     "monthly": 466.6,
+     "sched_pay": 417.5,
+     "bonus": 1272.4,
+     "workers": 14501.0,
+     "annual_man": 687.2,
+     "hours_month": 167.0,
+     "hourly": 3429
+    },
+    "it": {
+     "age": 40.2,
+     "tenure": 13.1,
+     "hours_sched": 159.0,
+     "hours_over": 12.0,
+     "monthly": 406.5,
+     "sched_pay": 377.5,
+     "bonus": 1259.5,
+     "workers": 94344.0,
+     "annual_man": 613.8,
+     "hours_month": 171.0,
+     "hourly": 2991
+    },
+    "transport": {
+     "age": 46.7,
+     "tenure": 12.2,
+     "hours_sched": 168.0,
+     "hours_over": 28.0,
+     "monthly": 334.3,
+     "sched_pay": 280.8,
+     "bonus": 649.8,
+     "workers": 159329.0,
+     "annual_man": 466.1,
+     "hours_month": 196.0,
+     "hourly": 1982
+    },
+    "trade": {
+     "age": 42.1,
+     "tenure": 13.2,
+     "hours_sched": 167.0,
+     "hours_over": 10.0,
+     "monthly": 330.3,
+     "sched_pay": 309.2,
+     "bonus": 966.1,
+     "workers": 307004.0,
+     "annual_man": 493.0,
+     "hours_month": 177.0,
+     "hourly": 2321
+    },
+    "finance": {
+     "age": 41.9,
+     "tenure": 13.7,
+     "hours_sched": 152.0,
+     "hours_over": 11.0,
+     "monthly": 398.8,
+     "sched_pay": 371.2,
+     "bonus": 1493.5,
+     "workers": 92272.0,
+     "annual_man": 627.9,
+     "hours_month": 163.0,
+     "hourly": 3210
     },
     "realestate": {
      "age": 42.8,
-     "tenure": 8.5,
+     "tenure": 10.5,
      "hours_sched": 164.0,
-     "hours_over": 10.0,
-     "monthly": 347.7,
-     "sched_pay": 327.0,
-     "bonus": 1056.3,
-     "workers": 18720.0,
-     "annual_man": 522.9,
-     "hours_month": 174.0,
-     "hourly": 2504
+     "hours_over": 11.0,
+     "monthly": 350.7,
+     "sched_pay": 326.6,
+     "bonus": 1063.0,
+     "workers": 28888.0,
+     "annual_man": 527.1,
+     "hours_month": 175.0,
+     "hourly": 2510
     },
-    "medical": {
-     "age": 38.9,
-     "tenure": 7.8,
-     "hours_sched": 163.0,
-     "hours_over": 6.0,
-     "monthly": 295.5,
-     "sched_pay": 273.9,
-     "bonus": 748.9,
-     "workers": 258359.0,
-     "annual_man": 429.5,
-     "hours_month": 169.0,
-     "hourly": 2118
+    "professional": {
+     "age": 42.2,
+     "tenure": 12.8,
+     "hours_sched": 161.0,
+     "hours_over": 12.0,
+     "monthly": 412.6,
+     "sched_pay": 383.6,
+     "bonus": 1283.1,
+     "workers": 76504.0,
+     "annual_man": 623.4,
+     "hours_month": 173.0,
+     "hourly": 3003
+    },
+    "hospitality": {
+     "age": 41.2,
+     "tenure": 8.7,
+     "hours_sched": 172.0,
+     "hours_over": 15.0,
+     "monthly": 271.8,
+     "sched_pay": 245.3,
+     "bonus": 362.0,
+     "workers": 48419.0,
+     "annual_man": 362.4,
+     "hours_month": 187.0,
+     "hourly": 1615
+    },
+    "lifestyle": {
+     "age": 40.6,
+     "tenure": 9.7,
+     "hours_sched": 167.0,
+     "hours_over": 9.0,
+     "monthly": 279.8,
+     "sched_pay": 262.4,
+     "bonus": 459.4,
+     "workers": 38724.0,
+     "annual_man": 381.7,
+     "hours_month": 176.0,
+     "hourly": 1807
     },
     "education": {
-     "age": 41.9,
-     "tenure": 12.1,
-     "hours_sched": 164.0,
+     "age": 43.7,
+     "tenure": 11.7,
+     "hours_sched": 163.0,
+     "hours_over": 5.0,
+     "monthly": 393.9,
+     "sched_pay": 381.5,
+     "bonus": 1317.0,
+     "workers": 63622.0,
+     "annual_man": 604.4,
+     "hours_month": 168.0,
+     "hourly": 2998
+    },
+    "medical": {
+     "age": 42.0,
+     "tenure": 8.9,
+     "hours_sched": 162.0,
      "hours_over": 6.0,
-     "monthly": 390.0,
-     "sched_pay": 376.8,
-     "bonus": 1464.5,
-     "workers": 59843.0,
-     "annual_man": 614.5,
-     "hours_month": 170.0,
-     "hourly": 3012
+     "monthly": 303.4,
+     "sched_pay": 282.0,
+     "bonus": 708.4,
+     "workers": 348753.0,
+     "annual_man": 434.9,
+     "hours_month": 168.0,
+     "hourly": 2157
     },
     "compound": {
-     "age": 41.6,
-     "tenure": 15.7,
-     "hours_sched": 159.0,
-     "hours_over": 7.0,
-     "monthly": 299.6,
-     "sched_pay": 287.1,
-     "bonus": 1010.1,
-     "workers": 24959.0,
-     "annual_man": 460.5,
-     "hours_month": 166.0,
-     "hourly": 2312
+     "age": 42.5,
+     "tenure": 15.1,
+     "hours_sched": 160.0,
+     "hours_over": 11.0,
+     "monthly": 317.8,
+     "sched_pay": 296.2,
+     "bonus": 973.2,
+     "workers": 33007.0,
+     "annual_man": 478.7,
+     "hours_month": 171.0,
+     "hourly": 2333
     },
     "services": {
-     "age": 40.9,
-     "tenure": 8.7,
-     "hours_sched": 164.0,
-     "hours_over": 13.0,
-     "monthly": 303.0,
-     "sched_pay": 277.5,
-     "bonus": 691.0,
-     "workers": 271291.0,
-     "annual_man": 432.7,
+     "age": 45.1,
+     "tenure": 9.1,
+     "hours_sched": 162.0,
+     "hours_over": 15.0,
+     "monthly": 283.6,
+     "sched_pay": 255.6,
+     "bonus": 497.0,
+     "workers": 160612.0,
+     "annual_man": 390.0,
      "hours_month": 177.0,
-     "hourly": 2037
+     "hourly": 1836
     }
    }
   }
  ],
- "debug_tables": [
+ "checked_tables": [
   {
-   "id": "0003130276",
-   "date": "200801-200812",
-   "title": "平成20年 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 一般労働者 産業大分類"
+   "id": "0003425893",
+   "title": "令和２年以降 一般_産業大・中分類_年齢階級別DB",
+   "ok": true,
+   "years": [
+    "2020",
+    "2023"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat01": {
+     "name": "企業規模_基本",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat02": {
+     "name": "産業分類",
+     "n": 109,
+     "head": [
+      "Ｔ１ 産業計",
+      "Ｃ 鉱業，採石業，砂利採取業",
+      "Ｄ 建設業",
+      "Ｄ０６ 総合工事業",
+      "Ｄ０７ 職別工事業（設備工事業を除く）",
+      "Ｄ０８ 設備工事業"
+     ]
+    },
+    "cat03": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat04": {
+     "name": "年齢階級_基本",
+     "n": 13,
+     "head": [
+      "年齢計",
+      "～19歳",
+      "20～24歳",
+      "25～29歳",
+      "30～34歳",
+      "35～39歳"
+     ]
+    },
+    "cat05": {
+     "name": "学歴_基本８区分（2020年～）",
+     "n": 8,
+     "head": [
+      "学歴計",
+      "中学",
+      "高校",
+      "専門学校",
+      "高専・短大",
+      "大学"
+     ]
+    },
+    "cat06": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営事業所",
+      "民営＋公営"
+     ]
+    },
+    "time": {
+     "name": "時間軸（2020～2023）",
+     "n": 4,
+     "head": [
+      "2023年",
+      "2022年",
+      "2021年",
+      "2020年"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat02",
+    "fixed": {
+     "cat01": "01",
+     "cat03": "01",
+     "cat04": "01",
+     "cat05": "01",
+     "cat06": "02"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   },
   {
-   "id": "0003130236",
-   "date": "0",
-   "title": "令和元年以前 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 平成16年-平成19年 一般労働者 産業大分類"
-  },
-  {
-   "id": "0003130256",
-   "date": "0",
-   "title": "令和元年以前 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 平成11年-平成15年 一般労働者 産業大分類"
-  },
-  {
-   "id": "0003029886",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 （産業計・産業別）"
-  },
-  {
-   "id": "0003030006",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 （労働者の種類別）"
-  },
-  {
-   "id": "0003029921",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 産業計"
-  },
-  {
-   "id": "0003029940",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （E 製造業）（F 電気・ガス・熱供給・水道業）"
-  },
-  {
-   "id": "0003029950",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （G 情報通信業）（H 運輸業，郵便業）"
-  },
-  {
-   "id": "0003029958",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （I 卸売業，小売業）（J 金融業，保険業）"
-  },
-  {
-   "id": "0003029991",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （O 教育，学習支援業）（P 医療，福祉）"
-  },
-  {
-   "id": "0003030013",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （民＋公営計）"
-  },
-  {
-   "id": "0003030026",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （Q 複合サービス事業）（R サービス業（他に分類されないもの））"
-  },
-  {
-   "id": "0003030038",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （労働者の種類別）"
-  },
-  {
-   "id": "0003030370",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （C 鉱業，採石業，砂利採取業）（D 建設業）"
-  },
-  {
-   "id": "0003030640",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （K 不動産業，物品賃貸業）（L 学術研究，専門・技術サービス業）"
-  },
-  {
-   "id": "0003030646",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （M 宿泊業，飲食サービス業）（N 生活関連サービス業，娯楽業）"
+   "id": "0003173200",
+   "title": "産業大・中分類第２表 第２表の１",
+   "ok": false,
+   "years": [
+    "2001",
+    "2015"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 3,
+     "head": [
+      "所定内給与額",
+      "年間賞与その他特別給与額",
+      "労働者数"
+     ]
+    },
+    "cat01": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat02": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat03": {
+     "name": "年齢階級_基本3",
+     "n": 16,
+     "head": [
+      "年齢計",
+      "～17歳（平成19年以前）",
+      "18～19歳（平成19年以前）",
+      "～19歳",
+      "20～24歳",
+      "25～29歳"
+     ]
+    },
+    "cat04": {
+     "name": "勤続年数_基本",
+     "n": 10,
+     "head": [
+      "勤続年数計",
+      "0年",
+      "1～2年",
+      "3～4年",
+      "5～9年",
+      "10～14年"
+     ]
+    },
+    "cat05": {
+     "name": "産業分類（1999-2015）",
+     "n": 266,
+     "head": [
+      "産業計",
+      "産業計(民･公営計)",
+      "D鉱業(平成11年～平成15年)",
+      "E建設業(平成11年～平成15年)",
+      "E09総合工事業(平成11年～平成15年)",
+      "E10職別工事業(設備工事業を除く)(平成11年～平成15年)"
+     ]
+    },
+    "cat06": {
+     "name": "企業規模_基本2",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat07": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営事業所",
+      "民営＋公営"
+     ]
+    },
+    "cat08": {
+     "name": "労働者種類",
+     "n": 3,
+     "head": [
+      "労働者",
+      "生産労働者",
+      "管理･事務･技術労働者"
+     ]
+    },
+    "time": {
+     "name": "時間軸（1999-2019）",
+     "n": 15,
+     "head": [
+      "2015年",
+      "2014年",
+      "2013年",
+      "2012年",
+      "2011年",
+      "2010年"
+     ]
+    }
+   },
+   "plan": null
   },
   {
    "id": "0003171770",
-   "date": "0",
-   "title": "産業大分類、中分類（全国） 第１表の１"
+   "title": "産業大分類、中分類（全国） 第１表の１",
+   "ok": true,
+   "years": [
+    "1999",
+    "2015"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat01": {
+     "name": "企業規模_基本2",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat02": {
+     "name": "年齢階級_基本3",
+     "n": 16,
+     "head": [
+      "年齢計",
+      "～17歳（平成19年以前）",
+      "18～19歳（平成19年以前）",
+      "～19歳",
+      "20～24歳",
+      "25～29歳"
+     ]
+    },
+    "cat03": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat04": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat05": {
+     "name": "産業分類（1999-2015）",
+     "n": 266,
+     "head": [
+      "産業計",
+      "産業計(民･公営計)",
+      "D鉱業(平成11年～平成15年)",
+      "E建設業(平成11年～平成15年)",
+      "E09総合工事業(平成11年～平成15年)",
+      "E10職別工事業(設備工事業を除く)(平成11年～平成15年)"
+     ]
+    },
+    "cat06": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営事業所",
+      "民営＋公営"
+     ]
+    },
+    "cat07": {
+     "name": "労働者種類",
+     "n": 3,
+     "head": [
+      "労働者",
+      "生産労働者",
+      "管理･事務･技術労働者"
+     ]
+    },
+    "time": {
+     "name": "時間軸（1999-2019）",
+     "n": 17,
+     "head": [
+      "2015年",
+      "2014年",
+      "2013年",
+      "2012年",
+      "2011年",
+      "2010年"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat05",
+    "fixed": {
+     "cat01": "01",
+     "cat02": "010",
+     "cat03": "01",
+     "cat04": "01",
+     "cat06": "02",
+     "cat07": "10"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   },
   {
-   "id": "0003172100",
-   "date": "0",
-   "title": "労働者の種類別（産業大分類・中分類）DB 第１表の２"
+   "id": "0003130276",
+   "title": "平成20年 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 一般労働者 産業大分類",
+   "ok": true,
+   "years": [
+    "2008",
+    "2008"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat02": {
+     "name": "企業規模",
+     "n": 4,
+     "head": [
+      "企業規模計",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat04": {
+     "name": "年齢階級_基本",
+     "n": 13,
+     "head": [
+      "年齢計",
+      "～19歳",
+      "20～24歳",
+      "25～29歳",
+      "30～34歳",
+      "35～39歳"
+     ]
+    },
+    "cat05": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat06": {
+     "name": "労働者種類",
+     "n": 3,
+     "head": [
+      "労働者",
+      "生産労働者",
+      "管理･事務･技術労働者"
+     ]
+    },
+    "cat07": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat08": {
+     "name": "産業分類(2004-2008)",
+     "n": 16,
+     "head": [
+      "産業計",
+      "産業計(民･公営計)",
+      "D鉱業",
+      "E建設業",
+      "F製造業",
+      "G電気･ｶﾞｽ･熱供給･水道業"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat08",
+    "fixed": {
+     "cat02": "01",
+     "cat04": "01",
+     "cat05": "01",
+     "cat06": "10",
+     "cat07": "01"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   },
   {
-   "id": "0003172122",
-   "date": "0",
-   "title": "産業大分類第２表(労働者の種類別) 第２表の２"
+   "id": "0003130256",
+   "title": "令和元年以前 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 平成11年-平成15年 一般労働者 産業大分類",
+   "ok": false,
+   "years": [
+    "1999",
+    "2003"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat02": {
+     "name": "企業規模",
+     "n": 4,
+     "head": [
+      "企業規模計",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat04": {
+     "name": "年齢階級2",
+     "n": 13,
+     "head": [
+      "年齢階級計",
+      "　　～１７歳",
+      "１８～１９歳",
+      "２０～２４歳",
+      "２５～２９歳",
+      "３０～３４歳"
+     ]
+    },
+    "cat05": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat06": {
+     "name": "労働者種類",
+     "n": 3,
+     "head": [
+      "労働者",
+      "生産労働者",
+      "管理･事務･技術労働者"
+     ]
+    },
+    "cat07": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat08": {
+     "name": "産業分類(1999-2003)",
+     "n": 11,
+     "head": [
+      "産業計",
+      "産業計(民･公営計)",
+      "D鉱業",
+      "E建設業",
+      "F製造業",
+      "G電気･ｶﾞｽ･熱供給･水道業(民･公営計)"
+     ]
+    },
+    "time": {
+     "name": "時間軸(年次)",
+     "n": 5,
+     "head": [
+      "1999年",
+      "2000年",
+      "2001年",
+      "2002年",
+      "2003年"
+     ]
+    }
+   },
+   "plan": null
   },
   {
-   "id": "0003085317",
-   "date": "0",
-   "title": "令和元年以前 労働者の種類別（産業大分類・中分類）DB"
+   "id": "0003130236",
+   "title": "令和元年以前 年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 平成16年-平成19年 一般労働者 産業大分類",
+   "ok": true,
+   "years": [
+    "2004",
+    "2007"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat02": {
+     "name": "企業規模",
+     "n": 4,
+     "head": [
+      "企業規模計",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat04": {
+     "name": "年齢階級2",
+     "n": 13,
+     "head": [
+      "年齢階級計",
+      "　　～１７歳",
+      "１８～１９歳",
+      "２０～２４歳",
+      "２５～２９歳",
+      "３０～３４歳"
+     ]
+    },
+    "cat05": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat06": {
+     "name": "労働者種類",
+     "n": 3,
+     "head": [
+      "労働者",
+      "生産労働者",
+      "管理･事務･技術労働者"
+     ]
+    },
+    "cat07": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat08": {
+     "name": "産業分類(2004-2008)",
+     "n": 16,
+     "head": [
+      "産業計",
+      "産業計(民･公営計)",
+      "D鉱業",
+      "E建設業",
+      "F製造業",
+      "G電気･ｶﾞｽ･熱供給･水道業"
+     ]
+    },
+    "time": {
+     "name": "時間軸(年次)",
+     "n": 4,
+     "head": [
+      "2004年",
+      "2005年",
+      "2006年",
+      "2007年"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat08",
+    "fixed": {
+     "cat02": "01",
+     "cat04": "nenrei01",
+     "cat05": "01",
+     "cat06": "10",
+     "cat07": "01"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   },
   {
-   "id": "0003085551",
-   "date": "0",
-   "title": "令和元年以前 産業大分類第２表(労働者の種類別)"
+   "id": "0003084623",
+   "title": "令和元年以前 産業大・中分類第２表",
+   "ok": false,
+   "years": [
+    "2010",
+    "2019"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 3,
+     "head": [
+      "所定内給与額",
+      "年間賞与その他特別給与額",
+      "労働者数"
+     ]
+    },
+    "cat01": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat02": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat03": {
+     "name": "年齢階級_基本",
+     "n": 13,
+     "head": [
+      "年齢計",
+      "～19歳",
+      "20～24歳",
+      "25～29歳",
+      "30～34歳",
+      "35～39歳"
+     ]
+    },
+    "cat04": {
+     "name": "勤続年数_基本",
+     "n": 10,
+     "head": [
+      "勤続年数計",
+      "0年",
+      "1～2年",
+      "3～4年",
+      "5～9年",
+      "10～14年"
+     ]
+    },
+    "cat05": {
+     "name": "産業分類",
+     "n": 109,
+     "head": [
+      "Ｔ１ 産業計",
+      "Ｃ 鉱業，採石業，砂利採取業",
+      "Ｄ 建設業",
+      "Ｄ０６ 総合工事業",
+      "Ｄ０７ 職別工事業（設備工事業を除く）",
+      "Ｄ０８ 設備工事業"
+     ]
+    },
+    "cat06": {
+     "name": "企業規模_基本",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat07": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営事業所",
+      "民営＋公営"
+     ]
+    },
+    "time": {
+     "name": "時間軸（2009～2019）",
+     "n": 10,
+     "head": [
+      "2019年",
+      "2018年",
+      "2017年",
+      "2016年",
+      "2015年",
+      "2014年"
+     ]
+    }
+   },
+   "plan": null
   },
   {
-   "id": "0003029941",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 K 不動産業，物品賃貸業（K68～K70）"
+   "id": "0003084009",
+   "title": "令和元年以前 産業大・中分類第１表",
+   "ok": true,
+   "years": [
+    "2010",
+    "2019"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat01": {
+     "name": "企業規模_基本",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat02": {
+     "name": "産業分類",
+     "n": 109,
+     "head": [
+      "Ｔ１ 産業計",
+      "Ｃ 鉱業，採石業，砂利採取業",
+      "Ｄ 建設業",
+      "Ｄ０６ 総合工事業",
+      "Ｄ０７ 職別工事業（設備工事業を除く）",
+      "Ｄ０８ 設備工事業"
+     ]
+    },
+    "cat03": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat04": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat05": {
+     "name": "年齢階級_基本",
+     "n": 13,
+     "head": [
+      "年齢計",
+      "～19歳",
+      "20～24歳",
+      "25～29歳",
+      "30～34歳",
+      "35～39歳"
+     ]
+    },
+    "cat06": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営事業所",
+      "民営＋公営"
+     ]
+    },
+    "time": {
+     "name": "時間軸（2009～2019）",
+     "n": 10,
+     "head": [
+      "2019年",
+      "2018年",
+      "2017年",
+      "2016年",
+      "2015年",
+      "2014年"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat02",
+    "fixed": {
+     "cat01": "01",
+     "cat03": "01",
+     "cat04": "01",
+     "cat05": "01",
+     "cat06": "02"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   },
   {
-   "id": "0003030279",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 K 不動産業，物品賃貸業（K68～K70）"
-  },
-  {
-   "id": "0003030751",
-   "date": "0",
-   "title": "標準労働者の年齢階級別所定内給与額及び年間賞与その他特別給与額 （産業計～R サービス業（他に分類されないもの））"
-  },
-  {
-   "id": "0003029801",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 D 建設業（D06～D08）"
-  },
-  {
-   "id": "0003029884",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 E 製造業（E09～E32）"
-  },
-  {
-   "id": "0003029911",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 F 電気・ガス・熱供給・水道業（F33～F36）"
-  },
-  {
-   "id": "0003029914",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 G 情報通信業（G37～G41）"
-  },
-  {
-   "id": "0003029923",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 H 運輸業，郵便業（H42～H49）"
-  },
-  {
-   "id": "0003029927",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 I　卸売業，小売業（I50-55～I61）"
-  },
-  {
-   "id": "0003029936",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 J 金融業，保険業（J62～J67）"
-  },
-  {
-   "id": "0003029949",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 L 学術研究，専門・技術サービス業（L71～L74）"
-  },
-  {
-   "id": "0003029952",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 M 宿泊業，飲食サービス業（M75～M77）"
-  },
-  {
-   "id": "0003029959",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 N 生活関連サービス業，娯楽業（N78～N80）"
-  },
-  {
-   "id": "0003029961",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 O 教育，学習支援業（O81～O82）"
-  },
-  {
-   "id": "0003029971",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 P 医療，福祉（P83～P85）"
-  },
-  {
-   "id": "0003029975",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 Q 複合サービス事業（Q86,Q87）"
-  },
-  {
-   "id": "0003029982",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 R サービス業（他に分類されないもの）（R88～R95）"
-  },
-  {
-   "id": "0003029985",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 （民＋公営計）"
-  },
-  {
-   "id": "0003029986",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 （労働者の種類別）"
-  },
-  {
-   "id": "0003029853",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 E 製造業（E09～E32）"
-  },
-  {
-   "id": "0003030015",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 G 情報通信業（G37～G41）"
-  },
-  {
-   "id": "0003030017",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 H 運輸業，郵便業（H42～H49）"
-  },
-  {
-   "id": "0003030041",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 I 卸売業，小売業（I50～I55）"
-  },
-  {
-   "id": "0003030042",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 I 卸売業，小売業（I56～I61）"
-  },
-  {
-   "id": "0003030249",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 J 金融業，保険業（J62～J67）"
-  },
-  {
-   "id": "0003030295",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 L 学術研究，専門・技術サービス業（L71～74）"
-  },
-  {
-   "id": "0003030309",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 M 宿泊業，飲食サービス業（M75～M77）"
-  },
-  {
-   "id": "0003030313",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 N 生活関連サービス業，娯楽業（N78～N80）"
-  },
-  {
-   "id": "0003030329",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 O 教育，学習支援業（O81～O82）"
-  },
-  {
-   "id": "0003030334",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 P 医療，福祉（P83～P85）"
-  },
-  {
-   "id": "0003030340",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 Q 複合サービス事業（Q86,Q87）"
-  },
-  {
-   "id": "0003030352",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 R サービス業（他に分類されないもの）（R88～R95）"
-  },
-  {
-   "id": "0003030369",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （民＋公営計）"
-  },
-  {
-   "id": "0003030379",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （労働者の種類別） D 建設業（D06～D08）"
-  },
-  {
-   "id": "0003030641",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 D 建設業（D06～D08）"
-  },
-  {
-   "id": "0003030648",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 F 電気・ガス・熱供給・水道業（F33～F36）"
-  },
-  {
-   "id": "0003031418",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （労働者の種類別） E 製造業（E09～E32）"
-  },
-  {
-   "id": "0003030761",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員計"
-  },
-  {
-   "id": "0003030789",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員以外計"
-  },
-  {
-   "id": "0003030801",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 雇用期間の定め無し計"
-  },
-  {
-   "id": "0003030803",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 雇用期間の定め有り計"
-  },
-  {
-   "id": "0003030804",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員のうち、雇用期間の定め無し"
-  },
-  {
-   "id": "0003030806",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員のうち、雇用期間の定め有り"
-  },
-  {
-   "id": "0003030808",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員以外のうち、雇用期間の定め無し"
-  },
-  {
-   "id": "0003030809",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 正社員・正職員以外のうち、雇用期間の定め有り"
-  },
-  {
-   "id": "0003031709",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員計"
-  },
-  {
-   "id": "0003031710",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員以外計"
-  },
-  {
-   "id": "0003031711",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 雇用期間の定め無し計"
-  },
-  {
-   "id": "0003031712",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 雇用期間の定め有り計"
-  },
-  {
-   "id": "0003031713",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員の雇用期間の定め無し"
-  },
-  {
-   "id": "0003031714",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員の雇用期間の定め有り"
-  },
-  {
-   "id": "0003031715",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員以外の雇用期間の定め無し"
-  },
-  {
-   "id": "0003031716",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額 （企業規模計） 正社員・正職員以外の雇用期間の定め有り"
-  },
-  {
-   "id": "0003030838",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額（企業規模5～9人）"
-  },
-  {
-   "id": "0003030841",
-   "date": "0",
-   "title": "年齢階級、勤続年数階級別所定内給与額及び年間賞与その他特別給与額（企業規模5～9人）"
-  },
-  {
-   "id": "0003030877",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 山梨・長野"
-  },
-  {
-   "id": "0003030909",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 岐阜・静岡"
-  },
-  {
-   "id": "0003030915",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 愛知・三重"
-  },
-  {
-   "id": "0003030928",
-   "date": "0",
-   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 北海道・青森"
+   "id": "0003029886",
+   "title": "年齢階級別きまって支給する現金給与額、所定内給与額及び年間賞与その他特別給与額 （産業計・産業別）",
+   "ok": true,
+   "years": [
+    "2009",
+    "2009"
+   ],
+   "classes": {
+    "tab": {
+     "name": "表章項目",
+     "n": 8,
+     "head": [
+      "年齢",
+      "勤続年数",
+      "所定内実労働時間数",
+      "超過実労働時間数",
+      "きまって支給する現金給与額",
+      "所定内給与額"
+     ]
+    },
+    "cat01": {
+     "name": "企業規模_基本",
+     "n": 4,
+     "head": [
+      "企業規模計（10人以上）",
+      "1,000人以上",
+      "100～999人",
+      "10～99人"
+     ]
+    },
+    "cat02": {
+     "name": "性別_基本",
+     "n": 3,
+     "head": [
+      "男女計",
+      "男",
+      "女"
+     ]
+    },
+    "cat03": {
+     "name": "学歴_基本",
+     "n": 5,
+     "head": [
+      "学歴計",
+      "中学卒",
+      "高校卒",
+      "高専・短大卒",
+      "大学・大学院卒"
+     ]
+    },
+    "cat04": {
+     "name": "年齢階級_基本",
+     "n": 13,
+     "head": [
+      "年齢計",
+      "～19歳",
+      "20～24歳",
+      "25～29歳",
+      "30～34歳",
+      "35～39歳"
+     ]
+    },
+    "cat05": {
+     "name": "産業分類",
+     "n": 17,
+     "head": [
+      "Ｔ１ 産業計",
+      "Ｃ 鉱業，採石業，砂利採取業",
+      "Ｄ 建設業",
+      "Ｅ 製造業",
+      "Ｆ 電気・ガス・熱供給・水道業",
+      "Ｇ 情報通信業"
+     ]
+    },
+    "cat06": {
+     "name": "民・公区分",
+     "n": 2,
+     "head": [
+      "民営＋公営",
+      "民営事業所"
+     ]
+    },
+    "area": {
+     "name": "地域",
+     "n": 1,
+     "head": [
+      "全国"
+     ]
+    },
+    "time": {
+     "name": "時間軸（年）",
+     "n": 1,
+     "head": [
+      "2009年"
+     ]
+    }
+   },
+   "plan": {
+    "item_cls": "tab",
+    "ind_cls": "cat05",
+    "fixed": {
+     "cat01": "01",
+     "cat02": "01",
+     "cat03": "01",
+     "cat04": "01",
+     "cat06": "01",
+     "area": "00000"
+    },
+    "items": {
+     "age": "33",
+     "tenure": "34",
+     "hours_sched": "36",
+     "hours_over": "38",
+     "monthly": "40",
+     "sched_pay": "42",
+     "bonus": "44",
+     "workers": "45"
+    }
+   }
   }
  ],
- "fetched_at": "2026-10-10T18:36+09:00"
+ "fetched_at": "2026-10-10T19:09+09:00"
 }
