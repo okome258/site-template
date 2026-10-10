@@ -1,13 +1,13 @@
-"""お米の最安値ウォッチ: 楽天市場のお米を毎日取得し、価格履歴(data/history/YYYY-MM.csv)に追記する。
-
-いまは「記録だけ」の段階。履歴が1〜2週間たまったら、
-過去最安値との差・補正レビュースコア・送料込み単価でページを作る。
+"""お米の最安値ウォッチ: 楽天市場のお米を毎日取得し、価格履歴(data/history/YYYY-MM.csv)に追記して、
+種類(白米・無洗米・玄米・もち米)× 量(5kg前後・10kg前後・20kg以上)ごとに 1kgあたりの値段でページを作る。
 """
 
 from __future__ import annotations
 
 import csv
 import re
+import statistics
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -19,12 +19,50 @@ HISTORY_FIELDS = ["date", "code", "kind", "price", "qty_kg", "postage_included",
                   "review_count", "review_avg", "available", "shop"]
 
 
-def kind_of(cfg: dict, name: str) -> str:
-    """白米(hakumai)・無洗米(musen)・玄米(genmai)・もち米(mochi)。単価はこの中でだけ比べる。"""
-    for kind, words in cfg.get("kinds", []):
-        if any(w in name for w in words):
-            return kind
-    return "hakumai"
+def kind_of(name: str) -> tuple[str, str]:
+    """(種類, 補足)。白米(hakumai)・無洗米(musen)・玄米(genmai)・もち米(mochi)。単価はこの中でだけ比べる。
+
+    楽天の商品名は「玄米 白米 精米」のように選べる種類を全部並べることが多い。
+    玄米と白米が両方書いてあるものは、玄米の量・値段で売っている「精米も選べる玄米」として玄米に入れる。
+    無洗米と白米が両方書いてあるものは、白米に入れて「無洗米も選べる」と添える。
+    """
+    has = lambda *ws: any(w in name for w in ws)
+    if has("もち米", "餅米", "糯米"):
+        return "mochi", ""
+    if has("玄米"):
+        return "genmai", ("精米も選べる" if has("白米", "精米", "無洗米", "分づき") else "")
+    if has("無洗米"):
+        return ("hakumai", "無洗米も選べる") if has("白米") else ("musen", "")
+    return "hakumai", ""
+
+
+def _image(it: dict) -> str:
+    urls = it.get("mediumImageUrls") or []
+    u = urls[0] if urls else ""
+    if isinstance(u, dict):
+        u = u.get("imageUrl", "")
+    return re.sub(r"\?_ex=\d+x\d+", "?_ex=240x240", u)
+
+
+_Z2H = str.maketrans("０１２３４５６７８９", "0123456789")
+
+
+def crop_label(name: str) -> str:
+    """商品名から産年を拾う(令和8年産 / R8 / 8年産)。2年分あれば「令和7・8年産」。"""
+    n = name.translate(_Z2H)
+    ys = sorted({int(y) for y in re.findall(r"(?:令和|R)\s*(\d{1,2})\s*年?", n) if 1 <= int(y) <= 20})
+    if not ys:
+        return ""
+    return "令和" + "・".join(map(str, ys)) + "年産"
+
+
+def tidy_name(name: str) -> str:
+    """表示用に、【】や［］の宣伝文句と「※」以降の注意書きを落とす。元の名前はリンク先で見られる。"""
+    t = re.split(r"[※《]", name)[0]
+    t = re.sub(r"【[^】]*】|［[^］]*］|\[[^\]]*\]|＜[^＞]*＞|<[^>]*>", " ", t)
+    t = re.sub(r"[♪★☆◆◇■□●○]+", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t or name.strip()
 
 
 def normalize(cfg: dict, raw: list[dict]) -> tuple[list[dict], dict]:
@@ -47,6 +85,7 @@ def normalize(cfg: dict, raw: list[dict]) -> tuple[list[dict], dict]:
             drop("米以外"); continue
         if price <= 0:
             continue
+        kind, option = kind_of(name)
         q, evidence = parse_quantity(name, "weight")
         if q is None:
             drop(evidence); continue
@@ -54,8 +93,14 @@ def normalize(cfg: dict, raw: list[dict]) -> tuple[list[dict], dict]:
             drop("量が範囲外"); continue
         rows.append({
             "code": code,
-            "kind": kind_of(cfg, name),
+            "kind": kind,
+            "option": option,
             "name": name.strip(),
+            "short": tidy_name(name),
+            "brand": next((b for b in cfg["brands"] if b in name), ""),
+            "blend": any(w in name for w in ("ブレンド", "複数原料")),
+            "crop": crop_label(name),
+            "image": _image(it),
             "price": price,
             "qty_kg": round(q, 3),
             "evidence": evidence,
@@ -118,16 +163,114 @@ def fetch(cfg: dict) -> dict:
     return {"items": rows, "dropped": dropped, "errors": errors[:10]}
 
 
-def history_days(cfg: dict) -> int:
+# ---- ページ ----
+
+def load_history(cfg: dict) -> list[dict]:
     d = cfg["_dir"] / "data" / "history"
-    days = set()
+    rows = []
     for p in sorted(d.glob("*.csv")) if d.exists() else []:
         with p.open(encoding="utf-8", newline="") as f:
-            days |= {r["date"] for r in csv.DictReader(f)}
-    return len(days)
+            rows += list(csv.DictReader(f))
+    return rows
+
+
+def band_of(cfg: dict, qty: float) -> str | None:
+    for b in cfg["bands"]:
+        if b["min"] <= qty <= b["max"]:
+            return b["id"]
+    return None
+
+
+def _median(v: list[float]) -> int | None:
+    return round(statistics.median(v)) if v else None
+
+
+def market_history(cfg: dict, hist: list[dict]) -> dict:
+    """種類 → 量の帯 → [(日付, 1kgあたり中央値)]。送料込みの商品だけで出す。"""
+    acc = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    for r in hist:
+        if r["postage_included"] != "True":
+            continue
+        q = float(r["qty_kg"])
+        b = band_of(cfg, q)
+        if b:
+            acc[r["kind"]][b][r["date"]].append(int(r["price"]) / q)
+    return {k: {b: sorted((d, _median(v)) for d, v in days.items()) for b, days in bands.items()}
+            for k, bands in acc.items()}
+
+
+def chart(cfg: dict, series: dict, w: int = 640, h: int = 200) -> dict | None:
+    """相場の推移グラフ用の座標(SVGはテンプレートで描く)。2日分以上たまってから出す。"""
+    dates = sorted({d for s in series.values() for d, _ in s})
+    if len(dates) < 2:
+        return None
+    vals = [v for s in series.values() for _, v in s]
+    lo, hi = min(vals), max(vals)
+    pad = max(10, (hi - lo) * 0.15)
+    lo, hi = lo - pad, hi + pad
+    L, R, T, B = 48, 12, 12, 26
+    x = lambda d: L + (w - L - R) * dates.index(d) / (len(dates) - 1)
+    y = lambda v: T + (h - T - B) * (1 - (v - lo) / (hi - lo))
+    lines = []
+    for b in cfg["bands"]:
+        s = series.get(b["id"])
+        if s:
+            lines.append({"label": b["label"], "points": " ".join(f"{x(d):.1f},{y(v):.1f}" for d, v in s),
+                          "last": {"x": x(s[-1][0]), "y": y(s[-1][1]), "v": s[-1][1]}})
+    ticks = [{"y": y(v), "v": round(v)} for v in (lo + pad, (lo + hi) / 2, hi - pad)]
+    xl = [{"x": x(d), "t": d[5:].replace("-", "/")} for d in (dates[0], dates[-1])]
+    return {"w": w, "h": h, "lines": lines, "ticks": ticks, "xl": xl, "L": L, "R": R}
+
+
+def item_history(hist: list[dict], today: str) -> dict:
+    """商品コード → {記録日数, 記録中の最安(1kg), 前回の1kg}"""
+    by = defaultdict(dict)
+    for r in hist:
+        by[r["code"]][r["date"]] = int(r["price"]) / float(r["qty_kg"])
+    out = {}
+    for code, days in by.items():
+        prev = [v for d, v in sorted(days.items()) if d < today]
+        out[code] = {"days": len(days), "min": round(min(days.values())),
+                     "prev": round(prev[-1]) if prev else None}
+    return out
+
+
+def _fill(cfg: dict, it: dict) -> dict:
+    """古い形式の latest.json(項目が足りない)でも生成できるように補う。"""
+    name = it.get("name", "")
+    kind, option = kind_of(name)
+    return {"image": "", "short": tidy_name(name), "crop": crop_label(name), "option": option,
+            "brand": next((b for b in cfg["brands"] if b in name), ""),
+            "blend": any(w in name for w in ("ブレンド", "複数原料")), **it, "kind": kind}
 
 
 def pages(cfg: dict, data: dict) -> list[dict]:
-    # 準備中なので検索には出さない(sitemap にも載らない)
-    return [{"path": "index.html", "template": "index.html", "noindex": True,
-             "context": {"days": history_days(cfg)}}]
+    items = [_fill(cfg, it) for it in data.get("items", [])]
+    hist = load_history(cfg)
+    today = (data.get("fetched_at") or datetime.now(JST).isoformat())[:10]
+    days = sorted({r["date"] for r in hist})
+    ih = item_history(hist, today)
+    mh = market_history(cfg, hist)
+    kinds = cfg["kinds_meta"]
+    out = []
+    for k in kinds:
+        mine = [dict(it, hist=ih.get(it["code"], {})) for it in items if it["kind"] == k["id"]]
+        ranked = [it for it in mine if it["postage_included"]]
+        bands = []
+        for b in cfg["bands"]:
+            rows = sorted((it for it in ranked if band_of(cfg, it["qty_kg"]) == b["id"]),
+                          key=lambda it: (it["per_kg"], -it["review_count"]))
+            if rows:
+                bands.append({**b, "items": rows[:cfg["top_n"]], "count": len(rows),
+                              "median": _median([it["per_kg"] for it in rows])})
+        out.append({
+            "path": k["path"], "template": "kind.html",
+            "title": k["title"], "description": k["description"],
+            "context": {"kind": k, "kinds": kinds, "bands": bands, "total": len(mine),
+                        "postage_extra": len(mine) - len(ranked), "days": days,
+                        "chart": chart(cfg, mh.get(k["id"], {}))},
+        })
+    out.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて",
+                "description": "お米の最安値ウォッチの集め方・比べ方・注意点。",
+                "context": {"kinds": kinds, "days": days}, "changefreq": "monthly"})
+    return out

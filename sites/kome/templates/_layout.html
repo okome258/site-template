@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+.kome-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 2px 0; }
+.tag { font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; color: var(--muted); background: #fff; }
+.tag.new { border-color: #c9a227; color: #7a5410; background: #fffaf0; }
+.tag.opt { border-color: color-mix(in srgb, var(--accent) 40%, white); color: var(--accent); }
+.diff { font-size: 12px; font-weight: 700; margin-left: 6px; }
+.diff.down { color: #2e7d4f; } .diff.up { color: #b3402a; }
+.band { margin-top: 28px; scroll-margin-top: 56px; }
+.band h2 { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.band h2 small { font-size: 12px; font-weight: 400; color: var(--muted); font-family: var(--body); }
+.trend svg { width: 100%; height: auto; display: block; }
+.trend .ax { stroke: var(--line); } .trend text { font-size: 11px; fill: var(--muted); }
+.trend .l0 { stroke: var(--accent); } .trend .l1 { stroke: #b88a1e; } .trend .l2 { stroke: #6f655d; }
+.trend .key { display: flex; gap: 14px; font-size: 12px; color: var(--muted); }
+.trend .k0 { background: var(--accent); } .trend .k1 { background: #b88a1e; } .trend .k2 { background: #6f655d; }
+.trend .key i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 4px; }
+.since { font-size: 13px; background: var(--panel); border-radius: 8px; padding: 8px 12px; }
+</style>
+{% endblock %}
+{% block nav %}
+<div class="tabs-wrap"><nav class="tabs" aria-label="種類">
+  {% for k in kinds %}<a href="{{ page.root }}{{ k.path | replace('index.html', '') }}" {% if kind is defined and kind.id == k.id %}class="on"{% endif %}>{{ k.name }}</a>{% endfor %}
+  <a href="{{ page.root }}about/" {% if page.path == 'about/index.html' %}class="on"{% endif %}>集め方</a>
+</nav></div>
+{% endblock %}
+{% block side %}
+<aside class="side" aria-label="種類">
+  <p class="side-h">種類</p>
+  <ul class="side-list">
+    {% for k in kinds %}<li><a href="{{ page.root }}{{ k.path | replace('index.html', '') }}" {% if kind is defined and kind.id == k.id %}class="on"{% endif %}><span>{{ k.name }}</span></a></li>{% endfor %}
+  </ul>
+  {% if bands %}
+  <p class="side-h">量で選ぶ</p>
+  <ul class="side-list">
+    {% for b in bands %}<li><a href="#b{{ b.id }}"><span>{{ b.label }}</span><em>{{ b.median | yen }}</em></a></li>{% endfor %}
+  </ul>
+  {% endif %}
+  <p class="side-h"><a href="{{ page.root }}about/">集め方・注意点</a></p>
+</aside>
+{% endblock %}

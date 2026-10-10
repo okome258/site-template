@@ -4,7 +4,7 @@
   "name": "kome",
   "main": "worker.js",
   "compatibility_date": "2026-10-01",
-  "vars": { "CANONICAL_HOST": "" },
+  "vars": { "CANONICAL_HOST": "kome.otokuest.com" },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",

@@ -1,0 +1,84 @@
+{% extends "_layout.html" %}
+{% block content %}
+<h1>{{ kind.h1 }}</h1>
+<p class="lead">楽天市場の{{ kind.name }}{{ total }}件を、送料込みの1kgあたりの値段で安い順に並べました。毎朝取り直しています。</p>
+
+{% if bands %}
+<dl class="market" aria-label="今日の相場">
+  {% for b in bands %}<div><dt>{{ b.label }}の相場</dt><dd>{{ b.median | yen }}<small>/kg</small></dd></div>{% endfor %}
+</dl>
+{% set b0 = bands[0] %}{% set t = b0["items"][0] %}
+<p class="summary">
+  {{ data.fetched_at | jdate("%-m月%-d日") }}の{{ kind.name }}は、{% for b in bands %}{{ b.label }}で1kgあたり<strong>{{ b.median | yen }}</strong>{{ "、" if not loop.last else "" }}{% endfor %}（いずれも中央値）。
+  {{ b0.label }}でいちばん安いのは{{ t.shop }}の{% if t.brand %}{{ t.brand }}{% else %}{{ "%g" | format(t.qty_kg) }}kg{% endif %}で、1kgあたり{{ t.per_kg | yen }}です。
+</p>
+{% endif %}
+{% if kind.note %}<p class="note">{{ kind.note }}</p>{% endif %}
+
+<section class="trend">
+  <h2>相場の動き</h2>
+  {% if chart %}
+  <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" role="img" aria-label="{{ kind.name }}の1kgあたり相場の推移">
+    {% for t in chart.ticks %}<line class="ax" x1="{{ chart.L }}" x2="{{ chart.w - chart.R }}" y1="{{ t.y }}" y2="{{ t.y }}"/><text x="{{ chart.L - 6 }}" y="{{ t.y + 4 }}" text-anchor="end">{{ t.v }}</text>{% endfor %}
+    {% for x in chart.xl %}<text x="{{ x.x }}" y="{{ chart.h - 6 }}" text-anchor="{{ 'start' if loop.first else 'end' }}">{{ x.t }}</text>{% endfor %}
+    {% for l in chart.lines %}<polyline class="l{{ loop.index0 }}" fill="none" stroke-width="2.5" stroke-linejoin="round" points="{{ l.points }}"/>{% endfor %}
+  </svg>
+  <p class="key">{% for l in chart.lines %}<span><i class="k{{ loop.index0 }}"></i>{{ l.label }}</span>{% endfor %}</p>
+  {% else %}
+  <p class="since">値段の記録は{{ (days[0] if days else data.fetched_at[:10]) | replace('-', '/') }}から始めました。2日分たまったら、ここに1kgあたり相場の推移が出ます。</p>
+  {% endif %}
+</section>
+
+{% for b in bands %}
+<section class="band" id="b{{ b.id }}">
+  <h2>{{ b.label }}で安い順<small>送料込み{{ b.count }}件中</small></h2>
+  <ol class="rank-list">
+  {% for it in b["items"] %}{% set h = it.hist %}
+    <li class="rank-item">
+      <div class="rank-top">
+        <a class="rank-thumb" href="{{ it.url }}" target="_blank" rel="sponsored noopener">
+          {% if it.image %}<img class="rank-img" src="{{ it.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}
+          <span class="rank-no">{{ loop.index }}</span>
+        </a>
+        <div class="rank-body">
+          <div class="rank-score">{{ it.per_kg | yen }}<small> / kg</small>
+            {% if h.prev and h.prev != it.per_kg %}<span class="diff {{ 'down' if it.per_kg < h.prev else 'up' }}">前回比 {{ '%+d' | format(it.per_kg - h.prev) }}円</span>{% endif %}
+          </div>
+          <p class="rank-name" title="{{ it.name }}">{{ it.short }}</p>
+          <div class="kome-tags">
+            {% if it.brand %}<span class="tag">{{ it.brand }}</span>{% endif %}
+            {% if it.blend %}<span class="tag">ブレンド</span>{% endif %}
+            {% if "訳あり" in it.name %}<span class="tag">訳あり</span>{% endif %}
+            {% if it.crop %}<span class="tag{{ ' new' if '8' in it.crop }}">{{ it.crop }}</span>{% endif %}
+            {% if it.option %}<span class="tag opt">{{ it.option }}</span>{% endif %}
+            {% if h.days and h.days >= 7 and it.per_kg <= h.min %}<span class="badge">記録{{ h.days }}日でいちばん安い</span>{% endif %}
+          </div>
+          <div class="rank-meta"><span>{{ it.shop }}</span>{% if it.review_count %}<span>★{{ it.review_avg }}（{{ it.review_count | num }}件）</span>{% endif %}</div>
+        </div>
+      </div>
+      <dl class="stats">
+        <div><dt>値段</dt><dd>{{ it.price | yen }}</dd></div>
+        <div><dt>量</dt><dd>{{ '%g' | format(it.qty_kg) }}kg</dd></div>
+        <div><dt>ポイント</dt><dd>{{ it.point_rate }}倍</dd></div>
+      </dl>
+      <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天市場で見る</a>
+      {% set q = ((it.brand or kind.name) ~ " " ~ ('%g' | format(it.qty_kg)) ~ "kg") %}
+      <div class="others">
+        <span>ほかの店でも探す</span>
+        <a href="https://shopping.yahoo.co.jp/search?p={{ q | urlencode }}" target="_blank" rel="noopener">Yahoo!ショッピング</a>
+        <a href="https://www.amazon.co.jp/s?k={{ q | urlencode }}" target="_blank" rel="noopener">Amazon</a>
+      </div>
+    </li>
+  {% endfor %}
+  </ol>
+</section>
+{% else %}
+<p class="card">今日は比べられる商品が取れませんでした。明日の朝にまた取り直します。</p>
+{% endfor %}
+
+<h2>この並びについて</h2>
+<div class="note">
+  楽天市場の商品名から量を読み取り、値段 ÷ 量で1kgあたりを出しています。送料込みの商品だけを順位にしていて、送料別の{{ postage_extra }}件は外しています（送料が地域で変わるため）。
+  送料込みでも北海道・沖縄・離島は別料金のことがあります。味や精米日は比べていないので、買う前にリンク先で確かめてください。<a href="{{ page.root }}about/">集め方の詳細</a>
+</div>
+{% endblock %}
