@@ -34,6 +34,16 @@
 .navs a b{display:block;color:var(--accent)}.navs a small{color:var(--muted)}
 .board.compact th,.board.compact td{padding:8px 5px}
 .wrap-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+/* 地図: このサイトは青系。濃いほど実質時給が高い */
+.map-box{margin:12px 0 18px}
+.jp-big .lv1 rect,.lv.lv1{fill:#dbe6f1;background:#dbe6f1}
+.jp-big .lv2 rect,.lv.lv2{fill:#a9c3dd;background:#a9c3dd}
+.jp-big .lv3 rect,.lv.lv3{fill:#5f8cb8;background:#5f8cb8}
+.jp-big .lv4 rect,.lv.lv4{fill:#2f5d8a;background:#2f5d8a}
+.jp-big text{fill:#334}
+.legend .lv{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
+tr:target{background:#fff4c4}
+html{scroll-padding-top:60px}
 </style>
 </head>
 <body>
@@ -42,7 +52,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T01:01+09:00"><b>2026/10/11 01:01</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T01:06+09:00"><b>2026/10/11 01:06</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -51,11 +61,15 @@
 <h1>都道府県別 実質時給ランキング <small class="muted">2025年</small></h1>
 <p class="lead">47都道府県の年収（月給×12＋ボーナス）を、残業込みの年間労働時間で割った「実質時給」で比べます。全産業・男女計・企業規模10人以上の平均です。</p>
 <p class="note">1位は<b>東京都 3,343円</b>、最下位は青森県 1,953円で、差は1,390円（約1.71倍）です。</p>
+<div class="map-box">
+<svg class="jp-big" viewBox="0 0 130 120" role="img" aria-label="都道府県別の実質時給の地図"><a href="#pref-hokkaido" class="lv2"><title>北海道: 2,247円</title><rect x="111" y="1" width="18" height="18" rx="2"/><text x="120" y="11.12" font-size="3.2">北海道</text></a><a href="#pref-aomori" class="lv1"><title>青森県: 1,953円</title><rect x="111" y="21" width="18" height="8" rx="2"/><text x="120" y="26.47" font-size="4.2">青森</text></a><a href="#pref-akita" class="lv1"><title>秋田県: 2,090円</title><rect x="111" y="31" width="8" height="8" rx="2"/><text x="115" y="36.47" font-size="4.2">秋田</text></a><a href="#pref-iwate" class="lv1"><title>岩手県: 2,043円</title><rect x="121" y="31" width="8" height="8" rx="2"/><text x="125" y="36.47" font-size="4.2">岩手</text></a><a href="#pref-ishikawa" class="lv3"><title>石川県: 2,340円</title><rect x="81" y="41" width="8" height="8" rx="2"/><text x="85" y="46.47" font-size="4.2">石川</text></a><a href="#pref-toyama" class="lv2"><title>富山県: 2,329円</title><rect x="91" y="41" width="8" height="8" rx="2"/><text x="95" y="46.47" font-size="4.2">富山</text></a><a href="#pref-niigata" class="lv2"><title>新潟県: 2,229円</title><rect x="101" y="41" width="8" height="8" rx="2"/><text x="105" y="46.47" font-size="4.2">新潟</text></a><a href="#pref-yamagata" class="lv1"><title>山形県: 2,053円</title><rect x="111" y="41" width="8" height="8" rx="2"/><text x="115" y="46.47" font-size="4.2">山形</text></a><a href="#pref-miyagi" class="lv3"><title>宮城県: 2,405円</title><rect x="121" y="41" width="8" height="8" rx="2"/><text x="125" y="46.47" font-size="4.2">宮城</text></a><a href="#pref-shimane" class="lv1"><title>島根県: 2,138円</title><rect x="31" y="51" width="8" height="8" rx="2"/><text x="35" y="56.47" font-size="4.2">島根</text></a><a href="#pref-tottori" class="lv1"><title>鳥取県: 2,093円</title><rect x="41" y="51" width="8" height="8" rx="2"/><text x="45" y="56.47" font-size="4.2">鳥取</text></a><a href="#pref-fukui" class="lv2"><title>福井県: 2,328円</title><rect x="71" y="51" width="8" height="8" rx="2"/><text x="75" y="56.47" font-size="4.2">福井</text></a><a href="#pref-gifu" class="lv3"><title>岐阜県: 2,362円</title><rect x="81" y="51" width="8" height="8" rx="2"/><text x="85" y="56.47" font-size="4.2">岐阜</text></a><a href="#pref-nagano" class="lv3"><title>長野県: 2,355円</title><rect x="91" y="51" width="8" height="8" rx="2"/><text x="95" y="56.47" font-size="4.2">長野</text></a><a href="#pref-gunma" class="lv3"><title>群馬県: 2,368円</title><rect x="101" y="51" width="8" height="8" rx="2"/><text x="105" y="56.47" font-size="4.2">群馬</text></a><a href="#pref-tochigi" class="lv4"><title>栃木県: 2,478円</title><rect x="111" y="51" width="8" height="8" rx="2"/><text x="115" y="56.47" font-size="4.2">栃木</text></a><a href="#pref-fukushima" class="lv2"><title>福島県: 2,193円</title><rect x="121" y="51" width="8" height="8" rx="2"/><text x="125" y="56.47" font-size="4.2">福島</text></a><a href="#pref-yamaguchi" class="lv3"><title>山口県: 2,386円</title><rect x="21" y="61" width="8" height="8" rx="2"/><text x="25" y="66.47" font-size="4.2">山口</text></a><a href="#pref-hiroshima" class="lv3"><title>広島県: 2,444円</title><rect x="31" y="61" width="8" height="8" rx="2"/><text x="35" y="66.47" font-size="4.2">広島</text></a><a href="#pref-okayama" class="lv2"><title>岡山県: 2,304円</title><rect x="41" y="61" width="8" height="8" rx="2"/><text x="45" y="66.47" font-size="4.2">岡山</text></a><a href="#pref-hyogo" class="lv4"><title>兵庫県: 2,598円</title><rect x="51" y="61" width="8" height="8" rx="2"/><text x="55" y="66.47" font-size="4.2">兵庫</text></a><a href="#pref-kyoto" class="lv4"><title>京都府: 2,571円</title><rect x="61" y="61" width="8" height="8" rx="2"/><text x="65" y="66.47" font-size="4.2">京都</text></a><a href="#pref-shiga" class="lv4"><title>滋賀県: 2,586円</title><rect x="71" y="61" width="8" height="8" rx="2"/><text x="75" y="66.47" font-size="4.2">滋賀</text></a><a href="#pref-aichi" class="lv4"><title>愛知県: 2,701円</title><rect x="81" y="61" width="8" height="8" rx="2"/><text x="85" y="66.47" font-size="4.2">愛知</text></a><a href="#pref-yamanashi" class="lv4"><title>山梨県: 2,458円</title><rect x="91" y="61" width="8" height="8" rx="2"/><text x="95" y="66.47" font-size="4.2">山梨</text></a><a href="#pref-saitama" class="lv3"><title>埼玉県: 2,446円</title><rect x="101" y="61" width="8" height="8" rx="2"/><text x="105" y="66.47" font-size="4.2">埼玉</text></a><a href="#pref-ibaraki" class="lv4"><title>茨城県: 2,584円</title><rect x="111" y="61" width="8" height="8" rx="2"/><text x="115" y="66.47" font-size="4.2">茨城</text></a><a href="#pref-fukuoka" class="lv3"><title>福岡県: 2,424円</title><rect x="11" y="71" width="8" height="8" rx="2"/><text x="15" y="76.47" font-size="4.2">福岡</text></a><a href="#pref-kagawa" class="lv3"><title>香川県: 2,386円</title><rect x="41" y="71" width="8" height="8" rx="2"/><text x="45" y="76.47" font-size="4.2">香川</text></a><a href="#pref-osaka" class="lv4"><title>大阪府: 2,667円</title><rect x="51" y="71" width="8" height="8" rx="2"/><text x="55" y="76.47" font-size="4.2">大阪</text></a><a href="#pref-nara" class="lv3"><title>奈良県: 2,400円</title><rect x="61" y="71" width="8" height="8" rx="2"/><text x="65" y="76.47" font-size="4.2">奈良</text></a><a href="#pref-mie" class="lv4"><title>三重県: 2,474円</title><rect x="71" y="71" width="8" height="8" rx="2"/><text x="75" y="76.47" font-size="4.2">三重</text></a><a href="#pref-shizuoka" class="lv3"><title>静岡県: 2,410円</title><rect x="91" y="71" width="8" height="8" rx="2"/><text x="95" y="76.47" font-size="4.2">静岡</text></a><a href="#pref-tokyo" class="lv4"><title>東京都: 3,343円</title><rect x="101" y="71" width="8" height="8" rx="2"/><text x="105" y="76.47" font-size="4.2">東京</text></a><a href="#pref-chiba" class="lv4"><title>千葉県: 2,562円</title><rect x="111" y="71" width="8" height="8" rx="2"/><text x="115" y="76.47" font-size="4.2">千葉</text></a><a href="#pref-saga" class="lv1"><title>佐賀県: 2,149円</title><rect x="1" y="81" width="8" height="8" rx="2"/><text x="5" y="86.47" font-size="4.2">佐賀</text></a><a href="#pref-kumamoto" class="lv2"><title>熊本県: 2,219円</title><rect x="11" y="81" width="8" height="8" rx="2"/><text x="15" y="86.47" font-size="4.2">熊本</text></a><a href="#pref-oita" class="lv2"><title>大分県: 2,203円</title><rect x="21" y="81" width="8" height="8" rx="2"/><text x="25" y="86.47" font-size="4.2">大分</text></a><a href="#pref-ehime" class="lv2"><title>愛媛県: 2,220円</title><rect x="31" y="81" width="8" height="8" rx="2"/><text x="35" y="86.47" font-size="4.2">愛媛</text></a><a href="#pref-tokushima" class="lv2"><title>徳島県: 2,309円</title><rect x="41" y="81" width="8" height="8" rx="2"/><text x="45" y="86.47" font-size="4.2">徳島</text></a><a href="#pref-wakayama" class="lv2"><title>和歌山県: 2,258円</title><rect x="61" y="81" width="8" height="8" rx="2"/><text x="65" y="86.12" font-size="3.2">和歌山</text></a><a href="#pref-kanagawa" class="lv4"><title>神奈川県: 2,869円</title><rect x="101" y="81" width="8" height="8" rx="2"/><text x="105" y="86.12" font-size="3.2">神奈川</text></a><a href="#pref-nagasaki" class="lv1"><title>長崎県: 2,152円</title><rect x="1" y="91" width="8" height="8" rx="2"/><text x="5" y="96.47" font-size="4.2">長崎</text></a><a href="#pref-kagoshima" class="lv2"><title>鹿児島県: 2,182円</title><rect x="11" y="91" width="8" height="8" rx="2"/><text x="15" y="96.12" font-size="3.2">鹿児島</text></a><a href="#pref-miyazaki" class="lv1"><title>宮崎県: 1,994円</title><rect x="21" y="91" width="8" height="8" rx="2"/><text x="25" y="96.47" font-size="4.2">宮崎</text></a><a href="#pref-kochi" class="lv1"><title>高知県: 2,138円</title><rect x="31" y="91" width="8" height="8" rx="2"/><text x="35" y="96.47" font-size="4.2">高知</text></a><a href="#pref-okinawa" class="lv1"><title>沖縄県: 2,017円</title><rect x="1" y="111" width="8" height="8" rx="2"/><text x="5" y="116.47" font-size="4.2">沖縄</text></a></svg>
+<p class="legend small"><span class="lv lv4"></span>上位1/4 <span class="lv lv3"></span> <span class="lv lv2"></span> <span class="lv lv1"></span>下位1/4　<span class="muted">地図を押すとその県の行へ移動します</span></p>
+</div>
 <div class="wrap-x">
 <table class="board compact">
 <thead><tr><th>#</th><th>都道府県</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th><th class="num hide-sp">2030年予想</th></tr></thead>
 <tbody>
-<tr>
+<tr id="pref-tokyo">
 <td>1</td>
 <th>東京都</th>
 <td class="num v">3,343円<span class="sub sp">年収678万・169.0h</span></td>
@@ -63,7 +77,7 @@
 <td class="num hide-sp">169.0h</td>
 <td class="num up">+147円</td>
 <td class="num hide-sp">3,697円</td></tr>
-<tr>
+<tr id="pref-kanagawa">
 <td>2</td>
 <th>神奈川県</th>
 <td class="num v">2,869円<span class="sub sp">年収592万・172.0h</span></td>
@@ -71,7 +85,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+40円</td>
 <td class="num hide-sp">3,231円</td></tr>
-<tr>
+<tr id="pref-aichi">
 <td>3</td>
 <th>愛知県</th>
 <td class="num v">2,701円<span class="sub sp">年収570万・176.0h</span></td>
@@ -79,7 +93,7 @@
 <td class="num hide-sp">176.0h</td>
 <td class="num up">+59円</td>
 <td class="num hide-sp">2,933円</td></tr>
-<tr>
+<tr id="pref-osaka">
 <td>4</td>
 <th>大阪府</th>
 <td class="num v">2,667円<span class="sub sp">年収550万・172.0h</span></td>
@@ -87,7 +101,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num down">-29円</td>
 <td class="num hide-sp">3,005円</td></tr>
-<tr>
+<tr id="pref-hyogo">
 <td>5</td>
 <th>兵庫県</th>
 <td class="num v">2,598円<span class="sub sp">年収546万・175.0h</span></td>
@@ -95,7 +109,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+169円</td>
 <td class="num hide-sp">2,782円</td></tr>
-<tr>
+<tr id="pref-shiga">
 <td>6</td>
 <th>滋賀県</th>
 <td class="num v">2,586円<span class="sub sp">年収534万・172.0h</span></td>
@@ -103,7 +117,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+129円</td>
 <td class="num hide-sp">2,781円</td></tr>
-<tr>
+<tr id="pref-ibaraki">
 <td>7</td>
 <th>茨城県</th>
 <td class="num v">2,584円<span class="sub sp">年収533万・172.0h</span></td>
@@ -111,7 +125,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+181円</td>
 <td class="num hide-sp">2,795円</td></tr>
-<tr>
+<tr id="pref-kyoto">
 <td>8</td>
 <th>京都府</th>
 <td class="num v">2,571円<span class="sub sp">年収534万・173.0h</span></td>
@@ -119,7 +133,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+84円</td>
 <td class="num hide-sp">2,761円</td></tr>
-<tr>
+<tr id="pref-chiba">
 <td>9</td>
 <th>千葉県</th>
 <td class="num v">2,562円<span class="sub sp">年収535万・174.0h</span></td>
@@ -127,7 +141,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+134円</td>
 <td class="num hide-sp">2,818円</td></tr>
-<tr>
+<tr id="pref-tochigi">
 <td>10</td>
 <th>栃木県</th>
 <td class="num v">2,478円<span class="sub sp">年収517万・174.0h</span></td>
@@ -135,7 +149,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+65円</td>
 <td class="num hide-sp">2,851円</td></tr>
-<tr>
+<tr id="pref-mie">
 <td>11</td>
 <th>三重県</th>
 <td class="num v">2,474円<span class="sub sp">年収517万・174.0h</span></td>
@@ -143,7 +157,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+41円</td>
 <td class="num hide-sp">2,729円</td></tr>
-<tr>
+<tr id="pref-yamanashi">
 <td>12</td>
 <th>山梨県</th>
 <td class="num v">2,458円<span class="sub sp">年収510万・173.0h</span></td>
@@ -151,7 +165,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+163円</td>
 <td class="num hide-sp">2,673円</td></tr>
-<tr>
+<tr id="pref-saitama">
 <td>13</td>
 <th>埼玉県</th>
 <td class="num v">2,446円<span class="sub sp">年収514万・175.0h</span></td>
@@ -159,7 +173,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+6円</td>
 <td class="num hide-sp">2,713円</td></tr>
-<tr>
+<tr id="pref-hiroshima">
 <td>14</td>
 <th>広島県</th>
 <td class="num v">2,444円<span class="sub sp">年収513万・175.0h</span></td>
@@ -167,7 +181,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+22円</td>
 <td class="num hide-sp">2,699円</td></tr>
-<tr>
+<tr id="pref-fukuoka">
 <td>15</td>
 <th>福岡県</th>
 <td class="num v">2,424円<span class="sub sp">年収500万・172.0h</span></td>
@@ -175,7 +189,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+49円</td>
 <td class="num hide-sp">2,718円</td></tr>
-<tr>
+<tr id="pref-shizuoka">
 <td>16</td>
 <th>静岡県</th>
 <td class="num v">2,410円<span class="sub sp">年収506万・175.0h</span></td>
@@ -183,7 +197,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+20円</td>
 <td class="num hide-sp">2,668円</td></tr>
-<tr>
+<tr id="pref-miyagi">
 <td>17</td>
 <th>宮城県</th>
 <td class="num v">2,405円<span class="sub sp">年収499万・173.0h</span></td>
@@ -191,7 +205,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+139円</td>
 <td class="num hide-sp">2,650円</td></tr>
-<tr>
+<tr id="pref-nara">
 <td>18</td>
 <th>奈良県</th>
 <td class="num v">2,400円<span class="sub sp">年収501万・174.0h</span></td>
@@ -199,7 +213,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+37円</td>
 <td class="num hide-sp">2,621円</td></tr>
-<tr>
+<tr id="pref-yamaguchi">
 <td>19</td>
 <th>山口県</th>
 <td class="num v">2,386円<span class="sub sp">年収498万・174.0h</span></td>
@@ -207,7 +221,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+46円</td>
 <td class="num hide-sp">2,618円</td></tr>
-<tr>
+<tr id="pref-kagawa">
 <td>20</td>
 <th>香川県</th>
 <td class="num v">2,386円<span class="sub sp">年収498万・174.0h</span></td>
@@ -215,7 +229,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+93円</td>
 <td class="num hide-sp">2,604円</td></tr>
-<tr>
+<tr id="pref-gunma">
 <td>21</td>
 <th>群馬県</th>
 <td class="num v">2,368円<span class="sub sp">年収494万・174.0h</span></td>
@@ -223,7 +237,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+65円</td>
 <td class="num hide-sp">2,551円</td></tr>
-<tr>
+<tr id="pref-gifu">
 <td>22</td>
 <th>岐阜県</th>
 <td class="num v">2,362円<span class="sub sp">年収496万・175.0h</span></td>
@@ -231,7 +245,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+192円</td>
 <td class="num hide-sp">2,445円</td></tr>
-<tr>
+<tr id="pref-nagano">
 <td>23</td>
 <th>長野県</th>
 <td class="num v">2,355円<span class="sub sp">年収492万・174.0h</span></td>
@@ -239,7 +253,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+61円</td>
 <td class="num hide-sp">2,531円</td></tr>
-<tr>
+<tr id="pref-ishikawa">
 <td>24</td>
 <th>石川県</th>
 <td class="num v">2,340円<span class="sub sp">年収486万・173.0h</span></td>
@@ -247,7 +261,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num down">-16円</td>
 <td class="num hide-sp">2,569円</td></tr>
-<tr>
+<tr id="pref-toyama">
 <td>25</td>
 <th>富山県</th>
 <td class="num v">2,329円<span class="sub sp">年収483万・173.0h</span></td>
@@ -255,7 +269,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+88円</td>
 <td class="num hide-sp">2,484円</td></tr>
-<tr>
+<tr id="pref-fukui">
 <td>26</td>
 <th>福井県</th>
 <td class="num v">2,328円<span class="sub sp">年収480万・172.0h</span></td>
@@ -263,7 +277,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+118円</td>
 <td class="num hide-sp">2,510円</td></tr>
-<tr>
+<tr id="pref-tokushima">
 <td>27</td>
 <th>徳島県</th>
 <td class="num v">2,309円<span class="sub sp">年収471万・170.0h</span></td>
@@ -271,7 +285,7 @@
 <td class="num hide-sp">170.0h</td>
 <td class="num up">+27円</td>
 <td class="num hide-sp">2,554円</td></tr>
-<tr>
+<tr id="pref-okayama">
 <td>28</td>
 <th>岡山県</th>
 <td class="num v">2,304円<span class="sub sp">年収484万・175.0h</span></td>
@@ -279,7 +293,7 @@
 <td class="num hide-sp">175.0h</td>
 <td class="num up">+29円</td>
 <td class="num hide-sp">2,545円</td></tr>
-<tr>
+<tr id="pref-wakayama">
 <td>29</td>
 <th>和歌山県</th>
 <td class="num v">2,258円<span class="sub sp">年収477万・176.0h</span></td>
@@ -287,7 +301,7 @@
 <td class="num hide-sp">176.0h</td>
 <td class="num up">+12円</td>
 <td class="num hide-sp">2,525円</td></tr>
-<tr>
+<tr id="pref-hokkaido">
 <td>30</td>
 <th>北海道</th>
 <td class="num v">2,247円<span class="sub sp">年収467万・173.0h</span></td>
@@ -295,7 +309,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+68円</td>
 <td class="num hide-sp">2,471円</td></tr>
-<tr>
+<tr id="pref-niigata">
 <td>31</td>
 <th>新潟県</th>
 <td class="num v">2,229円<span class="sub sp">年収463万・173.0h</span></td>
@@ -303,7 +317,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+49円</td>
 <td class="num hide-sp">2,519円</td></tr>
-<tr>
+<tr id="pref-ehime">
 <td>32</td>
 <th>愛媛県</th>
 <td class="num v">2,220円<span class="sub sp">年収461万・173.0h</span></td>
@@ -311,7 +325,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+88円</td>
 <td class="num hide-sp">2,503円</td></tr>
-<tr>
+<tr id="pref-kumamoto">
 <td>33</td>
 <th>熊本県</th>
 <td class="num v">2,219円<span class="sub sp">年収461万・173.0h</span></td>
@@ -319,7 +333,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+63円</td>
 <td class="num hide-sp">2,489円</td></tr>
-<tr>
+<tr id="pref-oita">
 <td>34</td>
 <th>大分県</th>
 <td class="num v">2,203円<span class="sub sp">年収457万・173.0h</span></td>
@@ -327,7 +341,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+35円</td>
 <td class="num hide-sp">2,489円</td></tr>
-<tr>
+<tr id="pref-fukushima">
 <td>35</td>
 <th>福島県</th>
 <td class="num v">2,193円<span class="sub sp">年収455万・173.0h</span></td>
@@ -335,7 +349,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+85円</td>
 <td class="num hide-sp">2,384円</td></tr>
-<tr>
+<tr id="pref-kagoshima">
 <td>36</td>
 <th>鹿児島県</th>
 <td class="num v">2,182円<span class="sub sp">年収453万・173.0h</span></td>
@@ -343,7 +357,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+132円</td>
 <td class="num hide-sp">2,405円</td></tr>
-<tr>
+<tr id="pref-nagasaki">
 <td>37</td>
 <th>長崎県</th>
 <td class="num v">2,152円<span class="sub sp">年収447万・173.0h</span></td>
@@ -351,7 +365,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+46円</td>
 <td class="num hide-sp">2,387円</td></tr>
-<tr>
+<tr id="pref-saga">
 <td>38</td>
 <th>佐賀県</th>
 <td class="num v">2,149円<span class="sub sp">年収446万・173.0h</span></td>
@@ -359,7 +373,7 @@
 <td class="num hide-sp">173.0h</td>
 <td class="num up">+70円</td>
 <td class="num hide-sp">2,424円</td></tr>
-<tr>
+<tr id="pref-shimane">
 <td>39</td>
 <th>島根県</th>
 <td class="num v">2,138円<span class="sub sp">年収446万・174.0h</span></td>
@@ -367,7 +381,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+63円</td>
 <td class="num hide-sp">2,334円</td></tr>
-<tr>
+<tr id="pref-kochi">
 <td>40</td>
 <th>高知県</th>
 <td class="num v">2,138円<span class="sub sp">年収431万・168.0h</span></td>
@@ -375,7 +389,7 @@
 <td class="num hide-sp">168.0h</td>
 <td class="num up">+77円</td>
 <td class="num hide-sp">2,367円</td></tr>
-<tr>
+<tr id="pref-tottori">
 <td>41</td>
 <th>鳥取県</th>
 <td class="num v">2,093円<span class="sub sp">年収430万・171.0h</span></td>
@@ -383,7 +397,7 @@
 <td class="num hide-sp">171.0h</td>
 <td class="num up">+113円</td>
 <td class="num hide-sp">2,206円</td></tr>
-<tr>
+<tr id="pref-akita">
 <td>42</td>
 <th>秋田県</th>
 <td class="num v">2,090円<span class="sub sp">年収426万・170.0h</span></td>
@@ -391,7 +405,7 @@
 <td class="num hide-sp">170.0h</td>
 <td class="num up">+53円</td>
 <td class="num hide-sp">2,381円</td></tr>
-<tr>
+<tr id="pref-yamagata">
 <td>43</td>
 <th>山形県</th>
 <td class="num v">2,053円<span class="sub sp">年収424万・172.0h</span></td>
@@ -399,7 +413,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num down">-48円</td>
 <td class="num hide-sp">2,292円</td></tr>
-<tr>
+<tr id="pref-iwate">
 <td>44</td>
 <th>岩手県</th>
 <td class="num v">2,043円<span class="sub sp">年収426万・174.0h</span></td>
@@ -407,7 +421,7 @@
 <td class="num hide-sp">174.0h</td>
 <td class="num ">0円</td>
 <td class="num hide-sp">2,325円</td></tr>
-<tr>
+<tr id="pref-okinawa">
 <td>45</td>
 <th>沖縄県</th>
 <td class="num v">2,017円<span class="sub sp">年収411万・170.0h</span></td>
@@ -415,7 +429,7 @@
 <td class="num hide-sp">170.0h</td>
 <td class="num up">+77円</td>
 <td class="num hide-sp">2,244円</td></tr>
-<tr>
+<tr id="pref-miyazaki">
 <td>46</td>
 <th>宮崎県</th>
 <td class="num v">1,994円<span class="sub sp">年収412万・172.0h</span></td>
@@ -423,7 +437,7 @@
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+32円</td>
 <td class="num hide-sp">2,198円</td></tr>
-<tr>
+<tr id="pref-aomori">
 <td>47</td>
 <th>青森県</th>
 <td class="num v">1,953円<span class="sub sp">年収401万・171.0h</span></td>
@@ -443,7 +457,7 @@
 <p class="small"><a href="../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 01:01</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 01:06</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>
