@@ -12,6 +12,8 @@ from pathlib import Path
 from core.estat import EStat, EStatError
 
 STATS_CODE = "00200571"  # 小売物価統計調査
+TABLE_ID = "0003421913"  # 主要品目の都市別小売価格
+AREA = "13100"  # 東京都区部
 SEARCH_WORDS = ["主要品目の東京都区部小売価格", "主要品目の都市別小売価格", "小売価格"]
 
 
@@ -38,6 +40,15 @@ def discover(out_dir: Path) -> dict:
                                   "items": [[x, c["items"][x]] for x in c["order"][:400]]}
                             for cid, c in meta["classes"].items()},
                 "values": meta["values"][:20]})
+        codes = ["01001","01201","01211","01221","01133","01114","01167","01106","01511","01502","01341",
+                 "01801","01142","01101","01132","01261","01533","01571","01551","01563","01982","02021",
+                 "02003","01953","01031","01844","01881"]
+        vals = api.get_data(TABLE_ID, cdCat02=",".join(codes), cdArea=AREA, limit=2000)
+        names = vals["classes"].get("cat02", {}).get("items", {})
+        rows = {}
+        for v in vals["values"]:
+            rows.setdefault(names.get(v["cat02"], v["cat02"]), []).append([v["time"], v["value"], v.get("unit")])
+        dbg["prices"] = {k: sorted(r, reverse=True)[:13] for k, r in rows.items()}
         dbg["status"] = "ok"
     except EStatError as e:
         dbg["status"] = f"error: {e}"
