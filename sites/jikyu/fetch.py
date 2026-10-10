@@ -168,8 +168,8 @@ def fetch(cfg: dict) -> dict:
         try:
             recent = api.list_tables(ec["stats_code"], word, **extra)
             EXPLORE.append({"q": word, "extra": extra, "n": len(recent)})
-            EXPLORE.extend({"id": r["id"], "date": r["survey_date"], "title": r["title"][:100]}
-                           for r in recent if "産業" in r["title"] and "都道府県" not in r["title"]][:40]
+            EXPLORE.extend([{"id": r["id"], "date": r["survey_date"], "title": r["title"][:100]}
+                            for r in recent if "産業" in r["title"] and "都道府県" not in r["title"]][:40])
         except Exception as e:
             EXPLORE.append({"q": word, "error": str(e)})
     cands = sorted(tables.values(), key=lambda t: t["id"], reverse=True)[: ec["max_candidates"]]
