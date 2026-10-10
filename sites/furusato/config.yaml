@@ -11,6 +11,7 @@ site:
   google_site_verification: "SC7yeTNVBtuerKfU-OZfA9tPcD6pXcqacd6m4AzjHY8"  # Search Console
   cf_analytics_token: "51a79abed12a41eea0d2cb216a642808"   # Cloudflare Web Analytics
   operator: "ふるさと納税 量コスパ比較"
+  amazon_tag: ""   # AmazonアソシエイトのトラッキングID(例: okome-22)。入れるとAmazonリンクがPR付きのアフィリンクになる
 
 # 取得設定(1カテゴリ = キーワード数 × sorts × pages 回 API を呼ぶ。1秒1回)
 fetch:
