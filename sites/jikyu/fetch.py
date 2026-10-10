@@ -160,11 +160,13 @@ def find_newer(api, ec: dict, latest: int) -> list[dict]:
         except Exception as e:  # 見張りの失敗でサイト更新は止めない
             print(f"::warning::新しい年の表の確認に失敗: {e}")
             continue
-        yrs = sorted({t["survey_date"][:4] for t in tables if t["survey_date"][:4].isdigit()})
-        stats.append({"word": w, "n": len(tables), "years": yrs[-4:]})
+        ods = sorted({t["open_date"][:7] for t in tables})
+        stats.append({"word": w, "n": len(tables), "open_dates": ods[-6:]})
         for t in tables:
-            y = t["survey_date"][:4]
-            if not y.isdigit() or int(y) <= latest:
+            # 調査年(survey_date)は空のことが多いので、公開日が「最新年の翌年以降」の表を拾う
+            # (例: 2023年分の公開は2024年3月なので、2025年以降に出た表は2024年分以降の可能性)
+            od = t["open_date"][:4]
+            if not od.isdigit() or int(od) <= latest + 1:
                 continue
             if any(x in t["title"] for x in ("短時間", "職種", "都道府県")):
                 continue
