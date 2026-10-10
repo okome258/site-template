@@ -43,7 +43,7 @@ def discover(out_dir: Path) -> dict:
         codes = ["01001","01201","01211","01221","01133","01114","01167","01106","01511","01502","01341",
                  "01801","01142","01101","01132","01261","01533","01571","01551","01563","01982","02021",
                  "02003","01953","01031","01844","01881"]
-        vals = api.get_data(TABLE_ID, cdCat02=",".join(codes), cdArea=AREA, limit=2000)
+        vals = api.get_data(TABLE_ID, cdCat02=",".join(codes), cdArea=AREA, cdTimeFrom="2025000901")
         names = vals["classes"].get("cat02", {}).get("items", {})
         rows = {}
         for v in vals["values"]:
