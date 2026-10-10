@@ -146,6 +146,38 @@ DEBUG: list = []
 WATCH: list = []
 
 
+def catalog_files(api, ec: dict, latest: int) -> list[dict]:
+    """e-Stat のファイル(Excel)一覧から、最新年より後に公開されたものを探す。"""
+    out = []
+    for w in ec.get("catalog_words", ["一般労働者 産業", "産業大分類"]):
+        try:
+            body = api._get("getDataCatalog", "GET_DATA_CATALOG", statsCode=ec["stats_code"],
+                            searchWord=w, limit=1000)
+        except Exception as e:
+            out.append({"word": w, "error": str(e)})
+            continue
+        cats = body.get("DATA_CATALOG_LIST_INF", {}).get("DATA_CATALOG_INF") or []
+        cats = cats if isinstance(cats, list) else [cats]
+        n = 0
+        for c in cats:
+            ds = c.get("DATASET", {})
+            res = (c.get("RESOURCES") or {}).get("RESOURCE") or []
+            res = res if isinstance(res, list) else [res]
+            for r in res:
+                n += 1
+                rd = str(r.get("RELEASE_DATE", ""))
+                if rd[:4].isdigit() and int(rd[:4]) <= latest + 1:
+                    continue
+                t = r.get("TITLE", {})
+                out.append({"word": w, "id": r.get("@id"), "release": rd, "format": r.get("FORMAT"),
+                            "url": r.get("URL"),
+                            "survey": str(ds.get("SURVEY_DATE", "")),
+                            "dataset": str((ds.get("TITLE") or {}).get("NAME", ""))[:80],
+                            "name": str(t.get("NAME", ""))[:100], "no": str(t.get("TABLE_NO", ""))})
+        out.append({"word": w, "n_resources": n})
+    return out[:400]
+
+
 def find_newer(api, ec: dict, latest: int) -> list[dict]:
     """使っている最新年より新しい年の表があるかを広く探して記録する(取り込みは別)。
 
@@ -173,6 +205,7 @@ def find_newer(api, ec: dict, latest: int) -> list[dict]:
             found[t["id"]] = {k: t[k] for k in ("id", "title", "survey_date", "open_date")}
     print(f"表の検索結果: {stats}")
     WATCH.extend(stats)
+    WATCH.append({"catalog": catalog_files(api, ec, latest)})
     out = sorted(found.values(), key=lambda t: t["id"], reverse=True)[:200]
     if out:
         print(f"::warning::{latest}年より新しい表が {len(out)}件あります(まだ取り込めていません)。"
