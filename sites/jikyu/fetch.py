@@ -162,14 +162,16 @@ def fetch(cfg: dict) -> dict:
         for t in api.list_tables(ec["stats_code"], w):
             if is_candidate(ec, t["title"]):
                 tables[t["id"]] = t
-    # 調査用: 2016年以降の表のタイトル一覧(新しい年の表名を確かめる)
-    try:
-        recent = api.list_tables(ec["stats_code"], "", surveyYears="201601-202612")
-        EXPLORE.extend({"id": r["id"], "date": r["survey_date"], "title": r["title"][:100]}
-                       for r in recent if "産業" in r["title"] and "都道府県" not in r["title"])
-        EXPLORE.insert(0, {"total_recent": len(recent)})
-    except Exception as e:
-        EXPLORE.append({"error": str(e)})
+    # 調査用: 新しい年の表名を確かめる
+    for word, extra in [("令和5年", {}), ("令和6年", {}), ("2023", {}), ("", {"surveyYears": "2023"}),
+                        ("", {"openYears": "2025"}), ("一般労働者 第1表", {})]:
+        try:
+            recent = api.list_tables(ec["stats_code"], word, **extra)
+            EXPLORE.append({"q": word, "extra": extra, "n": len(recent)})
+            EXPLORE.extend({"id": r["id"], "date": r["survey_date"], "title": r["title"][:100]}
+                           for r in recent if "産業" in r["title"] and "都道府県" not in r["title"]][:40]
+        except Exception as e:
+            EXPLORE.append({"q": word, "error": str(e)})
     cands = sorted(tables.values(), key=lambda t: t["id"], reverse=True)[: ec["max_candidates"]]
     print(f"候補の表: {len(tables)}件(中身を確認するのは {len(cands)}件)")
 
