@@ -1013,24 +1013,6 @@
      "vs_median": 1.05
     },
     {
-     "code": "f443417-hiji:10000537",
-     "name": "豊後牛 牛肉の切り落とし (900g) ギフトにもおすすめ!_ お肉 黒毛和牛 和牛 肉 焼肉 焼き肉 すき焼き 小分け 切落し プレゼント 贈り物 赤身 【配送不可地域：離島】【1108636】",
-     "price": 15000,
-     "qty": 0.9,
-     "evidence": "900g",
-     "per10k": 0.6,
-     "unit_price": 16667,
-     "shop": "大分県日出町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t5vjo.ia33040a.g00t5vjo.ia3310eb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff443417-hiji%2F1108636%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff443417-hiji%2Fi%2F10000537%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "日出町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f443417-hiji/cabinet/09421152/0594_1108636_01.jpg?_ex=240x240",
-     "review_avg": 4.75,
-     "review_count": 8,
-     "wakeari": false,
-     "vs_median": 1.02
-    },
-    {
      "code": "f242055-kuwana:10000525",
      "name": "【指定日必須】柿安本店 黒毛和牛 小間切れ 約600g 三重県 桑名市 送料無料",
      "price": 10000,
@@ -1101,24 +1083,42 @@
      "review_count": 4,
      "wakeari": true,
      "vs_median": 1.0
+    },
+    {
+     "code": "f452025-miyakonojo:10000141",
+     "name": "都城産宮崎牛切り落とし1.5kg - 国産黒毛和牛 ブランド牛 A4 牛肉 切り落とし 300g×5パック すきやきなどのお料理に 冷凍 宮崎牛指定販売店 送料無料 24-003【宮崎県都城市】",
+     "price": 27000,
+     "qty": 1.5,
+     "evidence": "300g×5",
+     "per10k": 0.556,
+     "unit_price": 18000,
+     "shop": "宮崎県都城市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s7umo.ia330103.g00s7umo.ia331dc1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff452025-miyakonojo%2Fma-2416%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff452025-miyakonojo%2Fi%2F10000141%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "都城市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f452025-miyakonojo/cabinet/08218569/08366601/ma-2416_0307_lubo.jpg?_ex=240x240",
+     "review_avg": 4.37,
+     "review_count": 38,
+     "wakeari": false,
+     "vs_median": 0.95
     }
    ],
    "candidates": 157,
-   "ranked": 59,
+   "ranked": 58,
    "dropped": {
     "対象外の商品": 39,
     "選択式": 50,
-    "量が複数": 7,
+    "量が複数": 8,
     "量なし": 2
    },
    "summary": {
     "median_per10k": 0.587,
-    "median_unit_price": 17037,
+    "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 37500,
-    "towns": 49
+    "max_unit_price": 40000,
+    "towns": 47
    },
-   "popularity": 2055
+   "popularity": 2047
   },
   "pork": {
    "items": [
@@ -2223,10 +2223,10 @@
      "vs_median": 0.7
     }
    ],
-   "candidates": 165,
-   "ranked": 36,
+   "candidates": 166,
+   "ranked": 38,
    "dropped": {
-    "対象外の商品": 75,
+    "対象外の商品": 74,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -3348,11 +3348,11 @@
    "candidates": 142,
    "ranked": 37,
    "dropped": {
-    "選択式": 41,
+    "選択式": 42,
     "対象外の商品": 51,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 6
+    "量が範囲外": 5
    },
    "summary": {
     "median_per10k": 0.727,
@@ -10081,9 +10081,9 @@
    "ranked": 21,
    "dropped": {
     "選択式": 43,
-    "対象外の商品": 26,
+    "対象外の商品": 25,
     "量なし": 3,
-    "量が複数": 2,
+    "量が複数": 3,
     "量が範囲外": 1
    },
    "summary": {
@@ -11802,8 +11802,8 @@
    "ranked": 33,
    "dropped": {
     "量なし": 15,
-    "対象外の商品": 7,
     "選択式": 29,
+    "対象外の商品": 7,
     "量が複数": 10
    },
    "summary": {
@@ -15759,5 +15759,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T22:57+09:00"
+ "fetched_at": "2026-10-10T23:03+09:00"
 }
