@@ -290,7 +290,12 @@ def fetch_xls_pref(api, cfg: dict, year: int, cache: dict) -> dict | None:
              if f["name"].startswith("1_都道府県、年齢階級別") and "5～9人" not in f["name"]]
     rows = {}
     for f in files:
-        for sh in read_file(cache, f):
+        try:
+            sheets = read_file(cache, f)
+        except Exception as e:  # 1ファイルの失敗で全体を止めない(翌日また取りにいく)
+            DEBUG.append({"pref_xls_error": f["name"][-12:], "year": year, "error": f"{type(e).__name__}: {str(e)[:150]}"})
+            continue
+        for sh in sheets:
             lb = sh["labels"]
             if not industries.norm(lb.get("産業", "")).endswith("産業計"):
                 continue
@@ -336,7 +341,11 @@ def fetch_db_pref(api, cfg: dict) -> list[dict]:
         p, y, k = area.get(r.get("area")), code_year.get(r.get("time")), key_of.get(r.get(item_cls))
         if p and y and k:
             acc.setdefault(y, {}).setdefault(p, {})[k] = r["value"]
-    DEBUG.append({"pref_db": t["id"], "fixed": fixed, "n_values": len(data["values"])})
+    DEBUG.append({"pref_db": t["id"], "fixed": fixed, "n_values": len(data["values"]),
+                  "classes": {cid: {"name": c["name"], "n": len(c["order"]),
+                                    "head": [c["items"][x] for x in c["order"][:5]]}
+                              for cid, c in classes.items()},
+                  "per_year": {y: len(v) for y, v in acc.items()}})
     return [{"year": y, "source": "db", "table": {"id": t["id"], "title": t["title"]},
              "rows": {p: metrics(raw) for p, raw in v.items()}}
             for y, v in sorted(acc.items(), reverse=True) if len(v) >= 40]
@@ -377,6 +386,7 @@ def fetch(cfg: dict) -> dict:
         p_latest = max((int(p["year"]) for p in prefs), default=ec.get("min_year", 2020) - 1)
         for y in range(p_latest + 1, date.today().year + 1):
             got = fetch_xls_pref(api, cfg, y, cache)
+            DEBUG.append({"pref_xls_year": y, "ok": bool(got)})
             if got:
                 print(f"{y}年: 都道府県 Excel から {len(got['rows'])}県")
                 prefs.append(got)
