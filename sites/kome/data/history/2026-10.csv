@@ -47,7 +47,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,auc-oyamadashouten:10000815,genmai,4580,10.0,False,1,131,4.43,True,お米と落花生の小山田商店
 2026-10-10,maruhi0924:10000001,hakumai,4600,10.0,False,1,2843,4.82,True,お米のまるひ 楽天市場店
 2026-10-10,komean-sugasawa:10000161,musen,11499,25.0,True,1,1,5.0,True,こめ庵
-2026-10-10,komean-sugasawa:10000181,musen,11499,25.0,True,1,20,4.5,True,こめ庵
 2026-10-10,auc-nihei-aizu:10000012,genmai,11500,25.0,False,1,969,4.8,True,会津の米蔵 二瓶商店
 2026-10-10,komean-sugasawa:10000149,hakumai,11499,25.0,True,1,8,4.5,True,こめ庵
 2026-10-10,rs-takeo:10000165,hakumai,4680,10.0,True,1,218,4.6,True,有限会社 佐藤米穀商店楽天市場店
@@ -102,7 +101,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,noukamai:10000005,genmai,5280,10.0,False,1,27,4.56,True,食卓に笑顔をお届け【農家の米】
 2026-10-10,kimsho:10000000,genmai,10600,20.0,True,1,794,4.49,True,近江の国から木村商店
 2026-10-10,marukichi-kayano:10000051,genmai,15980,30.0,False,1,3061,4.72,True,丸吉 茅野商店 北海道
-2026-10-10,kururinokome:10000045,genmai,15999,30.0,True,1,91,4.44,True,くるりのお米屋
 2026-10-10,ebisu-murayama:10000357,mochi,10700,20.0,True,1,24,4.17,True,丸公楽天市場店
 2026-10-10,okadabeikoku:10000005,hakumai,2680,5.0,True,1,17,4.71,True,岡田米穀店 楽天市場店
 2026-10-10,rice-smile:10000072,hakumai,2680,5.0,True,1,63,4.51,True,ライスマイルねっとショップ
@@ -137,6 +135,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,sakekasu:10000385,hakumai,2870,5.0,True,1,68,4.44,True,米と酒粕、うまいもの本舗「竹屋」
 2026-10-10,hseason:10000260,musen,5749,10.0,True,1,65275,4.68,True,ハーベストシーズン
 2026-10-10,komeyanookome-r:10000013,musen,11500,20.0,False,1,40,4.8,True,こめやのおこめR
+2026-10-10,auc-yamanoraisu:10000421,hakumai,2880,5.0,False,1,5,2.6,True,ヤマノライス 楽天市場店
 2026-10-10,agripartner:10000026,genmai,5780,10.0,False,1,168,4.7,True,東北の農産特産品アグリパートナー
 2026-10-10,dakko:10000283,genmai,5780,10.0,True,1,586,4.64,True,創業90年の米屋ますや
 2026-10-10,rice-life-eto:10000004,genmai,5780,10.0,False,1,54,4.61,True,お米の専門店 【rice-lifeえとう】
@@ -200,6 +199,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,isobekomeya:10000083,mochi,15600,24.0,False,1,98,4.64,True,いそべ米屋 楽天市場店
 2026-10-10,yokogoshi:10001025,hakumai,3270,5.0,False,1,1143,4.57,True,越後雪国地酒連峰(新潟店)
 2026-10-10,shokome:10000056,hakumai,3280,5.0,False,1,17,4.82,True,おいしい庄内米の店 秋田屋商店
+2026-10-10,agripartner:10002246,genmai,3280,5.0,False,1,20,4.85,True,東北の農産特産品アグリパートナー
 2026-10-10,rs-takeo:10000149,mochi,3280,5.0,True,1,123,4.67,True,有限会社 佐藤米穀商店楽天市場店
 2026-10-10,eekome:10000072,genmai,6580,10.0,True,1,5239,4.8,True,京の米職人
 2026-10-10,marukichi-kayano:10000131,genmai,6580,10.0,True,1,1094,4.71,True,丸吉 茅野商店 北海道
@@ -239,9 +239,11 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,myoko-koide:10000008,mochi,3600,5.0,False,1,117,4.75,True,こしひかりの郷 小出農場
 2026-10-10,rakuten24:10979010,musen,7248,10.0,True,1,28,4.36,True,楽天24
 2026-10-10,tendofoods:10000186,hakumai,7280,10.0,False,1,930,4.72,True,てんどうフーズうまいもの通販
+2026-10-10,jigomeya:10000076,genmai,21880,30.0,True,1,3,4.67,True,たじまんま 地米屋
 2026-10-10,rakuten24:10397873,hakumai,3661,5.0,True,1,56,4.21,True,楽天24
 2026-10-10,rakuten24:10979014,hakumai,7323,10.0,True,1,77,4.66,True,楽天24
 2026-10-10,ebisu-murayama:10000336,hakumai,3680,5.0,True,1,18,4.78,True,丸公楽天市場店
+2026-10-10,agripartner:10001851,genmai,22200,30.0,False,1,7,4.71,True,東北の農産特産品アグリパートナー
 2026-10-10,yamagatanougei:10000005,genmai,18500,25.0,True,1,2,5.0,True,山形農芸 楽天市場店
 2026-10-10,toyorice:10000262,genmai,6800,9.0,True,1,13668,4.78,True,金芽米・オンラインショップ
 2026-10-10,okadabeikoku:10000001,hakumai,3780,5.0,True,1,8,4.38,True,岡田米穀店 楽天市場店
@@ -249,13 +251,13 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,yokogoshi:10000947,hakumai,3800,5.0,False,1,784,4.67,True,越後雪国地酒連峰(新潟店)
 2026-10-10,rakuten24:10628129,hakumai,3809,5.0,True,1,39,4.36,True,楽天24
 2026-10-10,hseason:10000167,musen,7680,10.0,False,1,442,4.59,True,ハーベストシーズン
+2026-10-10,oga-tama:10000071,hakumai,7700,10.0,True,1,0,0,True,小川の玉手箱「おがたま」
 2026-10-10,toyorice:10000012,genmai,7800,10.0,True,1,12562,4.7,True,金芽米・オンラインショップ
 2026-10-10,toyorice:10000388,musen,7800,10.0,True,1,1445,4.79,True,金芽米・オンラインショップ
 2026-10-10,komedokoro:10000014,mochi,7800,10.0,True,1,140,4.81,True,米処 稲穂屋
 2026-10-10,okomeabe:10000351,mochi,7880,10.0,True,1,4,5.0,True,阿部ベイコク
 2026-10-10,tendofoods:10000012,hakumai,3980,5.0,False,1,211,4.61,True,てんどうフーズうまいもの通販
 2026-10-10,hseason:10000349,musen,7980,10.0,False,1,6940,4.6,True,ハーベストシーズン
-2026-10-10,yamasina:10000035,genmai,7980,10.0,True,1,18,5.0,True,京の米屋やましな
 2026-10-10,toyorice:10000206,musen,7200,9.0,True,1,4564,4.8,True,金芽米・オンラインショップ
 2026-10-10,tozuka:10000083,hakumai,3999,5.0,True,1,38,4.24,True,五ツ星お米マイスターの戸塚正商店
 2026-10-10,komenouka:10000014,hakumai,7998,10.0,True,1,1226,4.69,True,農家からの贈り物 楽天市場店
@@ -281,11 +283,9 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,kaitakunojo:10000035,genmai,21900,24.0,True,1,40,4.83,True,山本開拓農場
 2026-10-10,toyorice:10000018,genmai,9300,10.0,True,1,660,4.71,True,金芽米・オンラインショップ
 2026-10-10,jigomeya:10000006,hakumai,4680,5.0,True,1,46,4.85,True,たじまんま 地米屋
-2026-10-10,haratafarm:10000056,genmai,2810,3.0,True,1,32,4.5,True,原田佐渡島ファーム 楽天市場店
 2026-10-10,eekome:10000360,genmai,9580,10.0,True,1,2104,4.82,True,京の米職人
 2026-10-10,greencenter:10000707,mochi,26530,27.0,True,1,5,4.6,True,北国産直shop
 2026-10-10,hokubei-shop:10000722,mochi,4950,5.0,False,1,7,4.86,True,ほくべい
-2026-10-10,miyagiokomeshop:10000064,hakumai,4980,5.0,False,1,6,4.5,True,宮城商事
 2026-10-10,eekome:10000558,genmai,9980,10.0,True,1,1109,4.82,True,京の米職人
 2026-10-10,kyusyukome:10000073,mochi,9980,10.0,True,1,37,4.95,True,九州米大将
 2026-10-10,beikokukan:10000674,mochi,9990,10.0,True,1,8,4.88,True,無洗米とお米の「米穀館」
@@ -299,10 +299,12 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-10,genki-genmai:10000005,genmai,11200,9.0,False,1,1892,4.84,True,玄米・雑穀米の通販 川島米穀店
 2026-10-10,koiserice:10000000,hakumai,12700,10.0,True,1,139,4.6,True,ポンせんとお米専門店こいせライス
 2026-10-10,genki-genmai:10000004,genmai,5800,4.5,False,1,11187,4.79,True,玄米・雑穀米の通販 川島米穀店
+2026-10-10,niigata-shop:10001610,hakumai,3900,3.0,True,1,7,4.57,True,新潟県公式ショップ 新潟直送計画
 2026-10-10,uonumanoukousha:10000001,hakumai,13800,10.0,True,1,39,4.64,True,魚沼のこしひかり 魚沼農耕舎
 2026-10-10,futon-anmin:10000948,hakumai,2800,2.0,True,1,0,0,True,快適生活百貨店
+2026-10-10,niigata-shop:10003100,hakumai,7000,5.0,True,1,4,4.5,True,新潟県公式ショップ 新潟直送計画
 2026-10-10,koiserice:10000005,hakumai,7250,5.0,True,1,55,4.53,True,ポンせんとお米専門店こいせライス
+2026-10-10,sakuranbo:10001101,hakumai,7700,5.0,False,1,1,5.0,True,清川屋 特産品・フルーツ王国
 2026-10-10,komedokoro:10000011,mochi,3480,2.0,False,1,0,0,True,米処 稲穂屋
-2026-10-10,soarshop:10000312,hakumai,3780,2.0,True,1,15,5.0,True,SOAR(そあ)ショップ
 2026-10-10,hseason:10000715,mochi,3799,2.0,True,10,107,4.36,True,ハーベストシーズン
 2026-10-10,yuukiya0097:10001526,hakumai,2238,1.0,False,1,8,4.63,True,有機家

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>業界別 実質時給ランキング</title>
+<meta name="description" content="厚生労働省の賃金構造基本統計調査をもとに、業界ごとの年収を残業込みの労働時間で割った「実質時給」をランキング。年ごとの推移も毎年自動で更新します。">
+<meta name="robots" content="noindex"><link rel="canonical" href="https://jikyu.otokuest.com/"><meta property="og:title" content="業界別 実質時給ランキング">
+<meta property="og:description" content="厚生労働省の賃金構造基本統計調査をもとに、業界ごとの年収を残業込みの労働時間で割った「実質時給」をランキング。年ごとの推移も毎年自動で更新します。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jikyu.otokuest.com/"><meta property="og:site_name" content="業界別 実質時給ランキング">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#2f5d8a">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=Zen+Maru+Gothic:wght@700;900&display=swap"><link rel="stylesheet" href="./base.css">
+<style>:root{--accent: #2f5d8a;}</style>
+<style>
+.bar{position:relative;height:8px;background:var(--panel);border-radius:4px;margin-top:4px;min-width:60px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:4px}
+.up{color:#b4442d}.down{color:#2f6f9a}.muted{color:var(--muted)}
+.kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
+.kpi div{background:var(--panel);border-radius:10px;padding:10px 12px}
+.kpi dt{font-size:12px;color:var(--muted)}.kpi dd{margin:2px 0 0;font-size:20px;font-weight:900;font-family:var(--head)}
+.kpi dd small{font-size:12px;font-weight:400;margin-left:2px}
+@media(min-width:640px){.kpi{grid-template-columns:repeat(4,1fr)}}
+.trend{width:100%;max-width:560px;height:auto}
+.trend text{font-size:11px;fill:var(--muted)}.trend .val{fill:var(--ink);font-weight:700}
+.trend rect{fill:var(--accent)}.trend .avg{stroke:var(--muted);stroke-dasharray:4 3}
+.jobs a{margin:4px 6px 4px 0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="jp" viewBox="0 0 130 120"><g fill="currentColor"><rect x="111" y="1" width="18" height="18" rx="2"/><rect x="111" y="21" width="18" height="8" rx="2"/><rect x="111" y="31" width="8" height="8" rx="2"/><rect x="121" y="31" width="8" height="8" rx="2"/><rect x="81" y="41" width="8" height="8" rx="2"/><rect x="91" y="41" width="8" height="8" rx="2"/><rect x="101" y="41" width="8" height="8" rx="2"/><rect x="111" y="41" width="8" height="8" rx="2"/><rect x="121" y="41" width="8" height="8" rx="2"/><rect x="31" y="51" width="8" height="8" rx="2"/><rect x="41" y="51" width="8" height="8" rx="2"/><rect x="71" y="51" width="8" height="8" rx="2"/><rect x="81" y="51" width="8" height="8" rx="2"/><rect x="91" y="51" width="8" height="8" rx="2"/><rect x="101" y="51" width="8" height="8" rx="2"/><rect x="111" y="51" width="8" height="8" rx="2"/><rect x="121" y="51" width="8" height="8" rx="2"/><rect x="21" y="61" width="8" height="8" rx="2"/><rect x="31" y="61" width="8" height="8" rx="2"/><rect x="41" y="61" width="8" height="8" rx="2"/><rect x="51" y="61" width="8" height="8" rx="2"/><rect x="61" y="61" width="8" height="8" rx="2"/><rect x="71" y="61" width="8" height="8" rx="2"/><rect x="81" y="61" width="8" height="8" rx="2"/><rect x="91" y="61" width="8" height="8" rx="2"/><rect x="101" y="61" width="8" height="8" rx="2"/><rect x="111" y="61" width="8" height="8" rx="2"/><rect x="11" y="71" width="8" height="8" rx="2"/><rect x="41" y="71" width="8" height="8" rx="2"/><rect x="51" y="71" width="8" height="8" rx="2"/><rect x="61" y="71" width="8" height="8" rx="2"/><rect x="71" y="71" width="8" height="8" rx="2"/><rect x="91" y="71" width="8" height="8" rx="2"/><rect x="101" y="71" width="8" height="8" rx="2"/><rect x="111" y="71" width="8" height="8" rx="2"/><rect x="1" y="81" width="8" height="8" rx="2"/><rect x="11" y="81" width="8" height="8" rx="2"/><rect x="21" y="81" width="8" height="8" rx="2"/><rect x="31" y="81" width="8" height="8" rx="2"/><rect x="41" y="81" width="8" height="8" rx="2"/><rect x="61" y="81" width="8" height="8" rx="2"/><rect x="101" y="81" width="8" height="8" rx="2"/><rect x="1" y="91" width="8" height="8" rx="2"/><rect x="11" y="91" width="8" height="8" rx="2"/><rect x="21" y="91" width="8" height="8" rx="2"/><rect x="31" y="91" width="8" height="8" rx="2"/><rect x="1" y="111" width="8" height="8" rx="2"/></g></symbol></svg>
+<div class="pr-bar" role="note"><span class="pr">PR</span>本ページは広告（アフィリエイト）を含みます</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="./"><span class="logo-text">業界別 実質時給ランキング</span></a>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-10T14:01+09:00"><b>2026/10/10 14:01</b> 更新<span class="ago"></span></span></span>
+  </div>
+</header>
+<div class="wrap layout">
+<main>
+<h1>業界別 実質時給ランキング</h1>
+<p class="lead">厚生労働省の賃金構造基本統計調査をもとに、業界ごとの年収を残業込みの労働時間で割った「実質時給」をランキング。年ごとの推移も毎年自動で更新します。</p>
+<p class="note">ただいま準備中です。統計データの取得設定が終わりしだい公開します。</p>
+</main>
+</div>
+<footer class="site-footer">
+  <div class="wrap">
+<p class="small"><a href="./about/">このサイトについて・計算方法</a></p>
+<p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
+    <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/10 14:01</p>
+    <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
+  </div>
+</footer>
+<script>/* 更新からの経過を「今日/昨日/◯日前」で表示。2日以上古いと警告色 */
+try{var u=document.querySelector('.updated');if(u){var d=new Date(u.dataset.ts),n=new Date();
+var dd=Math.round((new Date(n.getFullYear(),n.getMonth(),n.getDate())-new Date(d.getFullYear(),d.getMonth(),d.getDate()))/864e5);
+u.querySelector('.ago').textContent=dd<=0?'（今日）':dd==1?'（昨日）':'（'+dd+'日前）';if(dd>=2)u.classList.add('old');}}catch(e){}</script>
+<script>/* 選択中のタブが画面外なら見える位置へ */try{var o=document.querySelector('.tabs .on');if(o)o.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}</script>
+</body>
+</html>

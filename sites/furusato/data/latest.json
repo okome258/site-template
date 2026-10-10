@@ -2223,10 +2223,10 @@
      "vs_median": 0.7
     }
    ],
-   "candidates": 165,
+   "candidates": 166,
    "ranked": 37,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 75,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -2859,24 +2859,6 @@
      "vs_median": 1.53
     },
     {
-     "code": "f042072-natori:10002269",
-     "name": "むきえび 1.6kg(800g×2p) [エビ 海老 えび]",
-     "price": 15000,
-     "qty": 1.6,
-     "evidence": "800g×2",
-     "per10k": 1.067,
-     "unit_price": 9375,
-     "shop": "宮城県名取市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00szd4o.ia330fca.g00szd4o.ia331929/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff042072-natori%2F730115%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff042072-natori%2Fi%2F10002269%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "名取市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f042072-natori/cabinet/img/p/21_mss-130201.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.47
-    },
-    {
      "code": "f422037-shimabara:10000444",
      "name": "CD190 有明海産 活き〆 天然小エビ 1kg（500g×2パック）【芝海老 シバエビ しばえび アカヒゲ 九州 長崎県 島原市 有明海産 生冷凍 刺身 くるまえび科 クルマエビ科 車エビ科 車海老科 送料無料 お取り寄せ おとりよせ】",
      "price": 10000,
@@ -3343,23 +3325,41 @@
      "review_count": 47,
      "wakeari": false,
      "vs_median": 0.63
+    },
+    {
+     "code": "f372013-takamatsu:10001604",
+     "name": "海老乃家のむき海老ギフトセット125g×8袋(1kg) | 天然 むき海老 海老専門店 刺身 海鮮 魚介 専門店 プリプリ 料理 時短料理 簡単調理 食卓 冷凍 食品 人気 おすすめ お取り寄せ お取り寄せグルメ 送料無料",
+     "price": 23000,
+     "qty": 1.0,
+     "evidence": "1kg",
+     "per10k": 0.435,
+     "unit_price": 23000,
+     "shop": "香川県高松市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tiddo.ia33010c.g00tiddo.ia331b91/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372013-takamatsu%2Ft124-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372013-takamatsu%2Fi%2F10001604%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高松市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372013-takamatsu/cabinet/frp_goods/frp006/23666074.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 2,
+     "wakeari": false,
+     "vs_median": 0.6
     }
    ],
-   "candidates": 142,
-   "ranked": 37,
+   "candidates": 143,
+   "ranked": 36,
    "dropped": {
-    "選択式": 41,
+    "選択式": 42,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 5
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 27
+    "towns": 26
    },
    "popularity": 1149
   },
@@ -3598,6 +3598,24 @@
      "review_count": 3,
      "wakeari": false,
      "vs_median": 1.29
+    },
+    {
+     "code": "f012190-mombetsu:10002848",
+     "name": "生ずわいがに しゃぶしゃぶ用 ポーション 1kg | かにしゃぶ ズワイガニ ポーション | 訳あり 剥き身 ふるさと納税 カニ ポーション カニ むき身 かに鍋 紋別 かに",
+     "price": 18000,
+     "qty": 1.0,
+     "evidence": "1kg",
+     "per10k": 0.556,
+     "unit_price": 18000,
+     "shop": "北海道紋別市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t6xzo.ia3300ea.g00t6xzo.ia331340/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012190-mombetsu%2F25033%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012190-mombetsu%2Fi%2F10002848%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "紋別市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012190-mombetsu/cabinet/toki/260302/marukaichi17.jpg?_ex=240x240",
+     "review_avg": 4.67,
+     "review_count": 3,
+     "wakeari": true,
+     "vs_median": 1.27
     },
     {
      "code": "f012238-nemuro:10005609",
@@ -3886,28 +3904,10 @@
      "review_count": 74,
      "wakeari": false,
      "vs_median": 0.59
-    },
-    {
-     "code": "f012114-abashiri:10000449",
-     "name": "【12/30までお届け受付中】満足度で選ばれる本ズワイ蟹ポーション500g×2袋 便利なむき身　計1kg【 ふるさと納税 人気 おすすめ ランキング かに カニ 蟹 ずわい蟹 ずわい むき身 北海道 網走市 送料無料 】ABB003",
-     "price": 40000,
-     "qty": 1.0,
-     "evidence": "計1kg",
-     "per10k": 0.25,
-     "unit_price": 40000,
-     "shop": "北海道網走市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1g4o.ia330d0d.g00t1g4o.ia331138/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012114-abashiri%2F14000-30027431%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012114-abashiri%2Fi%2F10000449%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "網走市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012114-abashiri/cabinet/10235898/abb003_r1.jpg?_ex=240x240",
-     "review_avg": 4.0,
-     "review_count": 10,
-     "wakeari": false,
-     "vs_median": 0.57
     }
    ],
-   "candidates": 133,
-   "ranked": 36,
+   "candidates": 134,
+   "ranked": 37,
    "dropped": {
     "対象外の商品": 16,
     "量が複数": 4,
@@ -3916,12 +3916,12 @@
    },
    "summary": {
     "median_per10k": 0.439,
-    "median_unit_price": 23077,
+    "median_unit_price": 22778,
     "min_unit_price": 9000,
     "max_unit_price": 98947,
-    "towns": 16
+    "towns": 17
    },
-   "popularity": 841
+   "popularity": 844
   },
   "ikura": {
    "items": [
@@ -11891,8 +11891,8 @@
    "candidates": 93,
    "ranked": 33,
    "dropped": {
-    "選択式": 27,
     "量なし": 15,
+    "選択式": 27,
     "対象外の商品": 8,
     "量が複数": 10
    },
@@ -13718,11 +13718,11 @@
      "vs_median": 0.53
     }
    ],
-   "candidates": 145,
+   "candidates": 146,
    "ranked": 28,
    "dropped": {
     "選択式": 39,
-    "対象外の商品": 44,
+    "対象外の商品": 45,
     "量なし": 24,
     "量が範囲外": 8,
     "量が複数": 2
@@ -15765,11 +15765,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 75,
+   "candidates": 74,
    "ranked": 15,
    "dropped": {
     "選択式": 11,
-    "量なし": 24,
+    "量なし": 23,
     "対象外の商品": 24,
     "量が範囲外": 1
    },
@@ -15831,5 +15831,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T13:50+09:00"
+ "fetched_at": "2026-10-10T14:01+09:00"
 }
