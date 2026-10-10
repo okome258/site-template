@@ -149,10 +149,10 @@ WATCH: list = []
 def catalog_files(api, ec: dict, latest: int) -> list[dict]:
     """e-Stat のファイル(Excel)一覧から、最新年より後に公開されたものを探す。"""
     out = []
-    for w in ec.get("catalog_words", ["一般労働者 産業", "産業大分類"]):
+    for w in ec.get("catalog_words", ["令和７年 一般労働者 産業", "令和６年 一般労働者 産業", "産業大分類"]):
         try:
             body = api._get("getDataCatalog", "GET_DATA_CATALOG", statsCode=ec["stats_code"],
-                            searchWord=w, limit=1000)
+                            searchWord=w, limit=100)
         except Exception as e:
             out.append({"word": w, "error": str(e)})
             continue
