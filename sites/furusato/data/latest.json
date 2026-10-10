@@ -1235,8 +1235,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 37500,
-    "towns": 48
+    "max_unit_price": 40000,
+    "towns": 47
    },
    "popularity": 2047
   },
@@ -3084,13 +3084,13 @@
      "market_pct": 11
     }
    ],
-   "candidates": 108,
+   "candidates": 109,
    "ranked": 33,
    "dropped": {
     "量なし": 5,
     "選択式": 52,
     "対象外の商品": 13,
-    "量が複数": 3,
+    "量が複数": 4,
     "量が範囲外": 2
    },
    "summary": {
@@ -3425,26 +3425,6 @@
      "market_pct": 29
     },
     {
-     "code": "f412040-taku:10000910",
-     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
-     "price": 12000,
-     "qty": 0.9,
-     "evidence": "合計900g",
-     "per10k": 0.75,
-     "unit_price": 13333,
-     "shop": "佐賀県多久市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "多久市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.03,
-     "market_yen": 3430.0,
-     "market_pct": 29
-    },
-    {
      "code": "f232131-nishio:10000873",
      "name": "特大天然むきエビ (背ワタ処理済み) 1.1kg《配達不可エリア：北海道・沖縄・離島》・K131-150 【冷凍便】再入荷！数量限定！ 海老 剥き海老 えび 海鮮 海の幸 冷凍保存 プロ使用 業務用 バラ凍結 ばら凍結 むきえび むき海老 特大 下味付きMB",
      "price": 15000,
@@ -3703,23 +3683,43 @@
      "vs_median": 0.63,
      "market_yen": 1900.0,
      "market_pct": 17
+    },
+    {
+     "code": "f372013-takamatsu:10001604",
+     "name": "海老乃家のむき海老ギフトセット125g×8袋(1kg) | 天然 むき海老 海老専門店 刺身 海鮮 魚介 専門店 プリプリ 料理 時短料理 簡単調理 食卓 冷凍 食品 人気 おすすめ お取り寄せ お取り寄せグルメ 送料無料",
+     "price": 23000,
+     "qty": 1.0,
+     "evidence": "1kg",
+     "per10k": 0.435,
+     "unit_price": 23000,
+     "shop": "香川県高松市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tiddo.ia33010c.g00tiddo.ia331b91/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372013-takamatsu%2Ft124-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372013-takamatsu%2Fi%2F10001604%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高松市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372013-takamatsu/cabinet/frp_goods/frp006/23666074.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 2,
+     "wakeari": false,
+     "vs_median": 0.6,
+     "market_yen": 3810.0,
+     "market_pct": 17
     }
    ],
-   "candidates": 142,
-   "ranked": 37,
+   "candidates": 143,
+   "ranked": 36,
    "dropped": {
-    "選択式": 41,
+    "選択式": 42,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 5
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 27
+    "towns": 26
    },
    "popularity": 1149
   },
@@ -5629,8 +5629,8 @@
    "candidates": 103,
    "ranked": 25,
    "dropped": {
-    "選択式": 39,
-    "対象外の商品": 27,
+    "選択式": 38,
+    "対象外の商品": 28,
     "量が複数": 9,
     "量なし": 2,
     "量が範囲外": 1
@@ -16759,5 +16759,5 @@
    }
   }
  },
- "fetched_at": "2026-10-10T23:13+09:00"
+ "fetched_at": "2026-10-10T23:18+09:00"
 }
