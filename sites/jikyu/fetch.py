@@ -146,6 +146,29 @@ DEBUG: list = []
 WATCH: list = []
 
 
+def probe(cfg, api, ec) -> None:
+    """(調査用・一時)新しい年の Excel の形を data/xls_probe.json に残す。"""
+    import json
+    import xls
+    out = {}
+    try:
+        for word, want in (("令和７年 一般労働者 産業大分類", "産業計・産業別"),
+                           ("令和７年 一般労働者 都道府県別", "1_")):
+            files = xls.catalog(api, ec["stats_code"], word)
+            out[word] = [{k: f[k] for k in ("dataset", "no", "name", "url")} for f in files][:80]
+            hit = [f for f in files if want in f["name"]][:1]
+            for f in hit:
+                book = xls.read_book(xls.download(f["url"]))
+                out[word + " :: " + f["name"]] = {
+                    sh: {"n": len(rows), "head": [[str(c)[:24] if c is not None else "" for c in r[:30]]
+                                                  for r in rows[:45]]}
+                    for sh, rows in list(book.items())[:3]}
+    except Exception as e:
+        out["error"] = f"{type(e).__name__}: {e}"[:300]
+    (cfg["_dir"] / "data" / "xls_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
+                                                          encoding="utf-8")
+
+
 def catalog_files(api, ec: dict, latest: int) -> list[dict]:
     """e-Stat のファイル(Excel)一覧から、最新年より後に公開されたものを探す。"""
     out = []
@@ -285,6 +308,7 @@ def fetch(cfg: dict) -> dict:
     years.sort(key=lambda y: y["year"], reverse=True)
     newer = find_newer(api, ec, int(years[0]["year"]) if years else ec.get("min_year", 2020))
     _dump(cfg, {"checked": checked, "fetched": DEBUG, "newer_tables": newer, "watch": WATCH})
+    probe(cfg, api, ec)
     if not years:
         _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
