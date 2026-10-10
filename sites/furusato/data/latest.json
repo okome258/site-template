@@ -2223,8 +2223,8 @@
      "vs_median": 0.71
     }
    ],
-   "candidates": 167,
-   "ranked": 38,
+   "candidates": 166,
+   "ranked": 37,
    "dropped": {
     "対象外の商品": 75,
     "選択式": 45,
@@ -8505,24 +8505,6 @@
      "vs_median": 1.41
     },
     {
-     "code": "f401307-fukuoka:10001520",
-     "name": "【1週間以内に発送】(7パック分）博多辛子明太子1050g(特選切子)(無着色)小分け便利！ | 明太子 訳あり 辛子明太子 めんたいこ 切子 家庭用 冷凍 冷凍食品 海鮮 大容量 小分け 人気 便利 おすすめ ランキング 魚卵 福岡県 福岡市 博多",
-     "price": 12000,
-     "qty": 1050.0,
-     "evidence": "1050g",
-     "per10k": 875.0,
-     "unit_price": 11,
-     "shop": "福岡県福岡市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tw6fo.ia3301a7.g00tw6fo.ia331ef6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff401307-fukuoka%2Fsn001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff401307-fukuoka%2Fi%2F10001520%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "福岡市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f401307-fukuoka/cabinet/d_202507/sku_184599_01_web_s.jpg?_ex=240x240",
-     "review_avg": 4.63,
-     "review_count": 16,
-     "wakeari": true,
-     "vs_median": 1.37
-    },
-    {
      "code": "f402028-omuta:10000462",
      "name": "「博多あごおとし」無着色辛子明太子120g×9個(1,080g)(大牟田市)_ 明太子 めんたいこ パック 小分け 無着色 セット お土産 お裾分け おすそわけ 福岡県 大牟田市 冷凍 送料無料 【配送不可地域：離島】【1569305】",
      "price": 12500,
@@ -8845,10 +8827,28 @@
      "review_count": 117,
      "wakeari": true,
      "vs_median": 0.49
+    },
+    {
+     "code": "f403431-shime:10000032",
+     "name": "博多若杉 国産 もつ鍋 + 明太子 セット 国産 醤油味 無着色辛子明太子 切れ子 500g 老舗 高級 食品 食べ物 グルメ 博多 九州 送料無料 ギフト プレゼント 人気",
+     "price": 16500,
+     "qty": 500.0,
+     "evidence": "500g",
+     "per10k": 303.03,
+     "unit_price": 33,
+     "shop": "福岡県志免町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00slbmo.ia33091d.g00slbmo.ia3314d2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff403431-shime%2Fitem0028%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff403431-shime%2Fi%2F10000032%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "志免町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f403431-shime/cabinet/hsm035/hsm035-0004_00_v2.jpg?_ex=240x240",
+     "review_avg": 4.71,
+     "review_count": 197,
+     "wakeari": false,
+     "vs_median": 0.48
     }
    ],
-   "candidates": 91,
-   "ranked": 35,
+   "candidates": 90,
+   "ranked": 34,
    "dropped": {
     "対象外の商品": 15,
     "量が複数": 5,
@@ -8862,7 +8862,7 @@
     "max_unit_price": 63,
     "towns": 18
    },
-   "popularity": 2169
+   "popularity": 2153
   },
   "tuna": {
    "items": [
@@ -12235,9 +12235,9 @@
    "candidates": 108,
    "ranked": 23,
    "dropped": {
-    "選択式": 36,
+    "選択式": 35,
     "量なし": 14,
-    "対象外の商品": 30,
+    "対象外の商品": 31,
     "量が複数": 4,
     "量が範囲外": 1
    },
@@ -12615,11 +12615,12 @@
      "vs_median": 0.86
     }
    ],
-   "candidates": 93,
+   "candidates": 94,
    "ranked": 7,
    "dropped": {
     "量なし": 27,
     "選択式": 49,
+    "量が複数": 1,
     "対象外の商品": 10
    },
    "summary": {
@@ -15758,5 +15759,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T22:46+09:00"
+ "fetched_at": "2026-10-10T22:51+09:00"
 }
