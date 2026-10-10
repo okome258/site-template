@@ -1989,6 +1989,24 @@
      "vs_median": 1.1
     },
     {
+     "code": "f442054-saiki:10002658",
+     "name": "【試食用チキンカツ付】時短おかず 揚げるだけ サクサク！ジューシー！チキンカツ(計1.2kg・400g×3袋) 国産 鶏むね肉 肉 チキンカツ 冷凍 惣菜 お弁当 小分け 簡単 時短 大分県 佐伯市【DH289】【ネクサ】",
+     "price": 6000,
+     "qty": 1.2,
+     "evidence": "計1.2kg",
+     "per10k": 2.0,
+     "unit_price": 5000,
+     "shop": "大分県佐伯市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sq38o.ia330c83.g00sq38o.ia3318ee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff442054-saiki%2Fdh289%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff442054-saiki%2Fi%2F10002658%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "佐伯市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f442054-saiki/cabinet/lr/13118952/imgrc0120430277.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 1.1
+    },
+    {
      "code": "f442089-taketa:10000020",
      "name": "【10営業日以内発送】大分県産 ハーブ鶏 もも肉 2kgセット 大分県 竹田市 2kg 鶏肉 セット",
      "price": 11000,
@@ -2203,30 +2221,12 @@
      "review_count": 0,
      "wakeari": false,
      "vs_median": 0.71
-    },
-    {
-     "code": "f352110-nagato:10000189",
-     "name": "長州どり もも肉 1.8kg（300g×6パック）【鶏肉 小分け もも カット もも肉 チキン モモ肉 とりにく 切り身 とり肉 国産 冷凍 精肉 カット済 小分けパック】",
-     "price": 14000,
-     "qty": 1.8,
-     "evidence": "300g×6",
-     "per10k": 1.286,
-     "unit_price": 7778,
-     "shop": "山口県長門市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpggo.ia330cfb.g00tpggo.ia331b7e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff352110-nagato%2F1006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff352110-nagato%2Fi%2F10000189%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "長門市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f352110-nagato/cabinet/07428829/imgrc0087924504.jpg?_ex=240x240",
-     "review_avg": 4.96,
-     "review_count": 24,
-     "wakeari": false,
-     "vs_median": 0.71
     }
    ],
-   "candidates": 164,
-   "ranked": 37,
+   "candidates": 165,
+   "ranked": 39,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 73,
     "選択式": 45,
     "量なし": 4,
     "量が複数": 3,
@@ -2237,7 +2237,7 @@
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 21
+    "towns": 23
    },
    "popularity": 1476
   },
@@ -2820,7 +2820,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.83
+     "vs_median": 1.82
     },
     {
      "code": "f242047-matsusaka:10001233",
@@ -2838,7 +2838,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.55
+     "vs_median": 1.53
     },
     {
      "code": "f442119-usa:10001528",
@@ -2856,7 +2856,7 @@
      "review_avg": 4.82,
      "review_count": 337,
      "wakeari": false,
-     "vs_median": 1.53
+     "vs_median": 1.52
     },
     {
      "code": "f042072-natori:10002269",
@@ -2874,7 +2874,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.46
     },
     {
      "code": "f422037-shimabara:10000444",
@@ -2892,7 +2892,7 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.36
     },
     {
      "code": "f182109-sakai:10000785",
@@ -2910,7 +2910,7 @@
      "review_avg": 4.69,
      "review_count": 248,
      "wakeari": true,
-     "vs_median": 1.31
+     "vs_median": 1.3
     },
     {
      "code": "f242047-matsusaka:10001039",
@@ -2928,7 +2928,7 @@
      "review_avg": 4.64,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.25
+     "vs_median": 1.24
     },
     {
      "code": "f452033-nobeoka:10000030",
@@ -2946,7 +2946,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.21
+     "vs_median": 1.2
     },
     {
      "code": "f232131-nishio:10001591",
@@ -2964,7 +2964,7 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.19
     },
     {
      "code": "f013625-kaminokuni:10000901",
@@ -2982,7 +2982,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.18
+     "vs_median": 1.17
     },
     {
      "code": "f242098-owase:10001208",
@@ -3000,7 +3000,7 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.14
     },
     {
      "code": "f242098-owase:10001210",
@@ -3018,7 +3018,7 @@
      "review_avg": 1.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.09
     },
     {
      "code": "f260002-kyoto:10003468",
@@ -3036,7 +3036,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.06
+     "vs_median": 1.05
     },
     {
      "code": "f182109-sakai:10002079",
@@ -3054,7 +3054,7 @@
      "review_avg": 4.36,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.03
+     "vs_median": 1.02
     },
     {
      "code": "f143413-oiso:10000272",
@@ -3072,7 +3072,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.02
     },
     {
      "code": "f013625-kaminokuni:10000899",
@@ -3090,7 +3090,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.02
     },
     {
      "code": "f412040-taku:10000910",
@@ -3108,7 +3108,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.02
     },
     {
      "code": "f232131-nishio:10000873",
@@ -3126,7 +3126,7 @@
      "review_avg": 4.29,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 1.01
+     "vs_median": 1.0
     },
     {
      "code": "f182095-echizen:10000776",
@@ -3144,7 +3144,7 @@
      "review_avg": 3.67,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.99
     },
     {
      "code": "f012238-nemuro:10007434",
@@ -3162,7 +3162,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.99
     },
     {
      "code": "f012238-nemuro:10007424",
@@ -3180,7 +3180,7 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.99
     },
     {
      "code": "f242098-owase:10001209",
@@ -3198,7 +3198,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.99
     },
     {
      "code": "f014087-yoichi:10003090",
@@ -3216,7 +3216,7 @@
      "review_avg": 4.58,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 0.97
     },
     {
      "code": "f402036-kurume:10002429",
@@ -3234,7 +3234,7 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 0.97
     },
     {
      "code": "f182109-sakai:10000004",
@@ -3252,7 +3252,7 @@
      "review_avg": 4.8,
      "review_count": 279,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.91
     },
     {
      "code": "f232017-toyohashi:10000701",
@@ -3270,7 +3270,7 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": true,
-     "vs_median": 0.92
+     "vs_median": 0.91
     },
     {
      "code": "f014842-haboro:10000118",
@@ -3288,25 +3288,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.86
-    },
-    {
-     "code": "f013625-kaminokuni:10000898",
-     "name": "【北海道加工】大粒冷凍むきえび　600g（ブラックタイガー使用、無添加・無保水・下処理済み）　冷凍えび　冷凍エビ　冷凍海老　冷凍食品　エビ　海老　えび　大粒えび　大粒エビ　大粒海老　人気　むきエビ　むき海老",
-     "price": 10000,
-     "qty": 0.6,
-     "evidence": "600g",
-     "per10k": 0.6,
-     "unit_price": 16667,
-     "shop": "北海道上ノ国町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tjx9o.ia330dff.g00tjx9o.ia331bd1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff013625-kaminokuni%2Frh-r001-1%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff013625-kaminokuni%2Fi%2F10000898%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "上ノ国町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f013625-kaminokuni/cabinet/12277087/12277089/imgrc0106418229.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.85
     },
     {
      "code": "f185019-wakasa:10000339",
@@ -3324,7 +3306,7 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 0.68
     },
     {
      "code": "f172014-kanazawa:10000909",
@@ -3342,20 +3324,38 @@
      "review_avg": 4.81,
      "review_count": 47,
      "wakeari": false,
-     "vs_median": 0.63
+     "vs_median": 0.62
+    },
+    {
+     "code": "f372013-takamatsu:10001604",
+     "name": "海老乃家のむき海老ギフトセット125g×8袋(1kg) | 天然 むき海老 海老専門店 刺身 海鮮 魚介 専門店 プリプリ 料理 時短料理 簡単調理 食卓 冷凍 食品 人気 おすすめ お取り寄せ お取り寄せグルメ 送料無料",
+     "price": 23000,
+     "qty": 1.0,
+     "evidence": "1kg",
+     "per10k": 0.435,
+     "unit_price": 23000,
+     "shop": "香川県高松市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tiddo.ia33010c.g00tiddo.ia331b91/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff372013-takamatsu%2Ft124-001%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff372013-takamatsu%2Fi%2F10001604%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高松市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f372013-takamatsu/cabinet/frp_goods/frp006/23666074.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 2,
+     "wakeari": false,
+     "vs_median": 0.59
     }
    ],
-   "candidates": 142,
-   "ranked": 37,
+   "candidates": 143,
+   "ranked": 36,
    "dropped": {
     "選択式": 41,
-    "対象外の商品": 51,
+    "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 6
+    "量が範囲外": 7
    },
    "summary": {
-    "median_per10k": 0.727,
+    "median_per10k": 0.733,
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
@@ -15758,5 +15758,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T18:47+09:00"
+ "fetched_at": "2026-10-10T18:53+09:00"
 }
