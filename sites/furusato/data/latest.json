@@ -547,8 +547,8 @@
    "ranked": 40,
    "dropped": {
     "量が複数": 17,
-    "選択式": 97,
     "対象外の商品": 8,
+    "選択式": 97,
     "量なし": 1
    },
    "summary": {
@@ -2223,12 +2223,12 @@
      "vs_median": 0.71
     }
    ],
-   "candidates": 166,
+   "candidates": 165,
    "ranked": 38,
    "dropped": {
     "対象外の商品": 74,
     "選択式": 45,
-    "量なし": 5,
+    "量なし": 4,
     "量が複数": 3,
     "量が範囲外": 1
    },
@@ -5172,7 +5172,7 @@
      "review_avg": 4.26,
      "review_count": 251,
      "wakeari": true,
-     "vs_median": 1.86
+     "vs_median": 1.9
     },
     {
      "code": "f022012-aomori:10001034",
@@ -5190,7 +5190,7 @@
      "review_avg": 4.0,
      "review_count": 5,
      "wakeari": true,
-     "vs_median": 1.86
+     "vs_median": 1.9
     },
     {
      "code": "f062014-yamagata:10003619",
@@ -5208,7 +5208,7 @@
      "review_avg": 3.84,
      "review_count": 105,
      "wakeari": false,
-     "vs_median": 1.53
+     "vs_median": 1.57
     },
     {
      "code": "f204030-takamori:10000720",
@@ -5226,7 +5226,7 @@
      "review_avg": 4.0,
      "review_count": 9,
      "wakeari": true,
-     "vs_median": 1.44
+     "vs_median": 1.48
     },
     {
      "code": "f205419-obuse:10000418",
@@ -5244,7 +5244,7 @@
      "review_avg": 3.19,
      "review_count": 90,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.33
     },
     {
      "code": "f204463-omi:10000087",
@@ -5262,7 +5262,7 @@
      "review_avg": 4.92,
      "review_count": 53,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.33
     },
     {
      "code": "f205419-obuse:10000417",
@@ -5280,7 +5280,7 @@
      "review_avg": 4.57,
      "review_count": 42,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.33
     },
     {
      "code": "f205907-iizuna:10000816",
@@ -5298,7 +5298,7 @@
      "review_avg": 4.66,
      "review_count": 71,
      "wakeari": true,
-     "vs_median": 1.24
+     "vs_median": 1.27
     },
     {
      "code": "f022012-aomori:10001212",
@@ -5316,7 +5316,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 1.18
+     "vs_median": 1.21
     },
     {
      "code": "f052043-odate:10000289",
@@ -5334,7 +5334,7 @@
      "review_avg": 4.59,
      "review_count": 17,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.03
     },
     {
      "code": "f062090-nagai:10000444",
@@ -5352,7 +5352,7 @@
      "review_avg": 4.11,
      "review_count": 9,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.03
     },
     {
      "code": "f022012-aomori:10001419",
@@ -5370,7 +5370,25 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": true,
-     "vs_median": 0.98
+     "vs_median": 1.0
+    },
+    {
+     "code": "f062065-sagae:10000311",
+     "name": "ご家庭用 りんご ラ・フランス 詰め合わせ 秀品 合計5kg (18-20玉) 山形県産【2026年12月上旬頃から下旬頃発送予定】 果物 フルーツ 先行予約 デザート 果実 林檎 洋梨 ふじ ラフランス 産地直送 生産者直送 2026年産 令和8年産 東北 山形県 寒河江市",
+     "price": 14000,
+     "qty": 5.0,
+     "evidence": "合計5kg",
+     "per10k": 3.571,
+     "unit_price": 2800,
+     "shop": "山形県寒河江市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s6fgo.ia330e03.g00s6fgo.ia331ba5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff062065-sagae%2F010-b37%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff062065-sagae%2Fi%2F10000311%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "寒河江市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f062065-sagae/cabinet/08693767/hokurin/imgrc0143414407.jpg?_ex=240x240",
+     "review_avg": 4.79,
+     "review_count": 14,
+     "wakeari": false,
+     "vs_median": 0.95
     },
     {
      "code": "f023612-fujisaki:10000427",
@@ -5388,7 +5406,7 @@
      "review_avg": 4.54,
      "review_count": 54,
      "wakeari": true,
-     "vs_median": 0.78
+     "vs_median": 0.8
     },
     {
      "code": "f062090-nagai:10000709",
@@ -5406,7 +5424,7 @@
      "review_avg": 4.16,
      "review_count": 49,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.8
     },
     {
      "code": "f023841-tsuruta:10000104",
@@ -5424,7 +5442,7 @@
      "review_avg": 5.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.72
+     "vs_median": 0.74
     },
     {
      "code": "f022012-aomori:10000075",
@@ -5442,7 +5460,7 @@
      "review_avg": 3.96,
      "review_count": 70,
      "wakeari": true,
-     "vs_median": 0.65
+     "vs_median": 0.67
     },
     {
      "code": "f062090-nagai:10001051",
@@ -5460,7 +5478,25 @@
      "review_avg": 5.0,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.6
+     "vs_median": 0.62
+    },
+    {
+     "code": "f062090-nagai:10001019",
+     "name": "【2026年発送】蜜入りだけ厳選！蜜入サンふじりんご3kg_H126(R8)",
+     "price": 15000,
+     "qty": 3.0,
+     "evidence": "3kg",
+     "per10k": 2.0,
+     "unit_price": 5000,
+     "shop": "山形県長井市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00spz7o.ia330c6d.g00spz7o.ia331212/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff062090-nagai%2F10001019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff062090-nagai%2Fi%2F10001019%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "長井市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f062090-nagai/cabinet/seika/ringo/h126-1.jpg?_ex=240x240",
+     "review_avg": 4.1,
+     "review_count": 41,
+     "wakeari": false,
+     "vs_median": 0.53
     },
     {
      "code": "f022021-hirosaki:10000291",
@@ -5478,7 +5514,7 @@
      "review_avg": 4.43,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.46
+     "vs_median": 0.47
     },
     {
      "code": "f205907-iizuna:10000920",
@@ -5496,7 +5532,7 @@
      "review_avg": 4.82,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 0.43
+     "vs_median": 0.44
     },
     {
      "code": "f022021-hirosaki:10000178",
@@ -5514,7 +5550,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.4
+     "vs_median": 0.41
     },
     {
      "code": "f022012-aomori:10000220",
@@ -5532,25 +5568,25 @@
      "review_avg": 3.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.39
+     "vs_median": 0.4
     }
    ],
    "candidates": 102,
-   "ranked": 21,
+   "ranked": 23,
    "dropped": {
-    "量が複数": 5,
-    "選択式": 62,
+    "量が複数": 4,
+    "選択式": 61,
     "量なし": 5,
     "対象外の商品": 9
    },
    "summary": {
-    "median_per10k": 3.846,
-    "median_unit_price": 2600,
+    "median_per10k": 3.75,
+    "median_unit_price": 2667,
     "min_unit_price": 1400,
     "max_unit_price": 6667,
-    "towns": 11
+    "towns": 12
    },
-   "popularity": 880
+   "popularity": 935
   },
   "toilet": {
    "items": [
@@ -11855,8 +11891,8 @@
    "candidates": 92,
    "ranked": 33,
    "dropped": {
-    "量なし": 15,
     "選択式": 27,
+    "量なし": 15,
     "対象外の商品": 7,
     "量が複数": 10
    },
@@ -15420,10 +15456,10 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 73,
+   "candidates": 72,
    "ranked": 25,
    "dropped": {
-    "選択式": 17,
+    "選択式": 16,
     "量なし": 11,
     "対象外の商品": 18,
     "量が複数": 2
@@ -15776,5 +15812,5 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T19:06+09:00"
+ "fetched_at": "2026-10-10T19:17+09:00"
 }
