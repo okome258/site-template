@@ -1,0 +1,33 @@
+{% extends "_layout.html" %}
+{% block content %}
+{% if not ready %}
+<h1>{{ site.name }}</h1>
+<p class="lead">{{ site.description }}</p>
+<p class="note">ただいま準備中です。統計データの取得設定が終わりしだい公開します。</p>
+{% else %}
+<h1>業界別 実質時給ランキング <small class="muted">{{ latest.year }}年</small></h1>
+<p class="lead">年収（月給×12＋ボーナス）を、残業も含めた年間の労働時間で割った「実質時給」で業界を比べます。年収が高くても長時間労働なら時給は下がります。</p>
+{% if latest.all.hourly %}
+<p class="note">全産業の平均は <b>{{ latest.all.hourly | num }}円</b>（年収 {{ latest.all.annual_man | num }}万円・月 {{ latest.all.hours_month }}時間）。</p>
+{% endif %}
+<table class="board">
+<thead><tr><th>#</th><th>業界</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th>{% if prev %}<th class="num">前年比</th>{% endif %}</tr></thead>
+<tbody>
+{% for r in ranking %}
+<tr>
+<td>{{ loop.index }}</td>
+<th><a href="{{ page.root }}gyokai/{{ r.ind.slug }}/">{{ r.ind.short }}</a>
+<div class="bar"><i style="width:{{ (r.hourly / max_hourly * 100) | round(1) }}%"></i></div></th>
+<td class="num v">{{ r.hourly | num }}円</td>
+<td class="num hide-sp">{{ r.annual_man | num }}万円</td>
+<td class="num hide-sp">{{ r.hours_month }}h</td>
+{% if prev %}<td class="num {{ 'up' if (r.diff or 0) > 0 else 'down' if (r.diff or 0) < 0 else '' }}">{% if r.diff is not none %}{{ '+' if r.diff > 0 else '' }}{{ r.diff | num }}円{% else %}-{% endif %}</td>{% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<p class="small muted">出典の表: {{ latest.table.title }}（{{ latest.table.id }}）。一般労働者・企業規模10人以上・男女計・全年齢の平均です。</p>
+<h2>実質時給の考え方</h2>
+<p>実質時給 ＝（きまって支給する現金給与額 × 12 ＋ 年間賞与その他特別給与額）÷（（所定内実労働時間 ＋ 超過実労働時間）× 12）。通勤時間や持ち帰り残業は統計に含まれないため、実際の体感より高めに出ることがあります。詳しくは<a href="{{ page.root }}about/">計算方法</a>へ。</p>
+{% endif %}
+{% endblock %}

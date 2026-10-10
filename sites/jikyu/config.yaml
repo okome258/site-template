@@ -1,0 +1,38 @@
+# 業界別 実質時給ランキング(転職・業界系)
+# データ: 厚生労働省「賃金構造基本統計調査」を e-Stat API で取得(GitHub Secrets: ESTAT_APP_ID)
+# キー未設定のあいだは「準備中」ページだけ出す(noindex)
+site:
+  name: "業界別 実質時給ランキング"
+  tagline: "年収÷労働時間で比べる、業界の本当の時給"
+  description: "厚生労働省の賃金構造基本統計調査をもとに、業界ごとの年収を残業込みの労働時間で割った「実質時給」をランキング。年ごとの推移も毎年自動で更新します。"
+  base_url: "https://jikyu.otokuest.com"
+  theme_color: "#2f5d8a"
+  cf_analytics_token: ""
+  operator: "業界別 実質時給ランキング"
+  rakuten_credit: false
+  pr_note: "当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。"
+
+# e-Stat から表を探す設定
+estat:
+  stats_code: "00450091"   # 賃金構造基本統計調査
+  # 一般労働者・産業大分類・年齢階級別の表(年収と労働時間が両方そろう表)を探す
+  search_words: ["産業大分類 年間賞与その他特別給与額", "産業 年齢階級 年間賞与その他特別給与額"]
+  title_exclude: ["職種", "短時間", "都道府県", "雇用形態", "役職", "新規学卒"]
+  max_candidates: 8        # 1年あたり中身を確かめる表の上限(API呼び出し回数の上限)
+  years: 6                 # 直近何年分を取るか(AI時代の傾向を見る用)
+
+# 表章項目(e-Stat の名前)→ サイト内のキー
+items:
+  age: "年齢"
+  tenure: "勤続年数"
+  hours_sched: "所定内実労働時間数"
+  hours_over: "超過実労働時間数"
+  monthly: "きまって支給する現金給与額"
+  sched_pay: "所定内給与額"
+  bonus: "年間賞与その他特別給与額"
+  workers: "労働者数"
+required: [hours_sched, hours_over, monthly, bonus]
+
+# 転職サービスの広告(A8 等で提携できたら入れる。空なら出さない)
+# - {name: "サービス名", url: "提携リンク", note: "ひとこと"}
+job_links: []

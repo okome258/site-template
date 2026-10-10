@@ -5,6 +5,7 @@
 | サイト | フォルダ | URL |
 |---|---|---|
 | ふるさと納税 量コスパ比較 | `sites/furusato` | https://furusato.otokuest.com |
+| 業界別 実質時給ランキング(準備中) | `sites/jikyu` | https://jikyu.otokuest.com |
 
 ## しくみ
 
@@ -13,6 +14,8 @@ core/                 全サイト共通
   build.py            ビルダー(データ取得 → Jinja2 → public/ 書き出し → sitemap.xml/robots.txt)
   rakuten.py          楽天ウェブサービス(新API)クライアント。Referer=okomen.workers.dev を付ける
   qty.py              商品名から内容量を読む(量コスパ系で共通)
+  estat.py            e-Stat(政府統計)APIクライアント。キーは ESTAT_APP_ID
+  industries.yaml     業界マスタ(産業大分類 C〜R ⇔ slug ⇔ TOPIX-17)。転職・株など業界軸のサイトで共有し、/gyokai/<slug>/ で相互リンクする
   templates/base.html PR表記・OGP・canonical・Cloudflare Web Analytics枠・フッター
   static/             共通CSS・favicon
 sites/<slug>/         サイトごとの差分(ここだけ書けば新サイトになる)
@@ -53,7 +56,7 @@ Cloudflare 側(サイトごとに1回):
 
 ## 秘密情報
 
-GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`。コードやファイルには書かない。
+GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID` / `ESTAT_APP_ID`(e-Stat。https://www.e-stat.go.jp/api/ で無料登録、アプリケーションIDの「URL」は otokuest.com)。e-Stat を使うページにはクレジット表記(`core/estat.py` の CREDIT)を必ず載せる。コードやファイルには書かない。
 屋号ドメインは `otokuest.com`(Cloudflare Registrar)。各サイトはサブドメイン。楽天アプリの許可Webサイトは `okomen.workers.dev`(API の Referer 用。サイトの公開URLとは別でよい)。API 呼び出し時はこれを Referer/Origin に付ける(`site.rakuten_referer` で変更可)。
 
 ## ふるさと納税サイトのキャラクター

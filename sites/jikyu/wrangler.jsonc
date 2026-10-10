@@ -1,0 +1,15 @@
+// Cloudflare Workers。Workers Builds で「ルートディレクトリ = sites/jikyu」にする
+// 独自ドメインをつないだら CANONICAL_HOST に入れる(旧 workers.dev から301転送される)
+{
+  "name": "jikyu",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "vars": { "CANONICAL_HOST": "" },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

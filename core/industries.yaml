@@ -1,0 +1,89 @@
+# 業界マスタ(全サイト共通)。転職サイト・株サイトなど「業界」で横串を通すサイトはここを使う。
+# slug を URL(/gyokai/<slug>/)に使うので、サイト間で同じ slug なら相互リンクできる。
+#
+# code   : 日本標準産業分類の大分類記号(賃金構造基本統計調査・e-Stat の産業名と対応)
+# name   : 統計上の正式名(e-Stat の名称と照合する。全角/半角・空白・先頭の記号は無視して比べる)
+# short  : サイトで見せる短い名前
+# topix17: 対応する TOPIX-17 業種(株サイト用。製造業などは複数にまたがる)
+#
+# 賃金構造基本統計調査の対象は C〜R(農林漁業・公務は対象外)なので、ここも C〜R だけ持つ。
+- code: C
+  slug: mining
+  name: 鉱業，採石業，砂利採取業
+  short: 鉱業
+  topix17: [エネルギー資源]
+- code: D
+  slug: construction
+  name: 建設業
+  short: 建設
+  topix17: [建設・資材]
+- code: E
+  slug: manufacturing
+  name: 製造業
+  short: 製造
+  topix17: [食品, 素材・化学, 医薬品, 自動車・輸送機, 鉄鋼・非鉄, 機械, 電機・精密]
+- code: F
+  slug: utilities
+  name: 電気・ガス・熱供給・水道業
+  short: 電気・ガス・水道
+  topix17: [電力・ガス]
+- code: G
+  slug: it
+  name: 情報通信業
+  short: IT・通信
+  topix17: [情報通信・サービスその他]
+- code: H
+  slug: transport
+  name: 運輸業，郵便業
+  short: 運輸・物流
+  topix17: [運輸・物流]
+- code: I
+  slug: trade
+  name: 卸売業，小売業
+  short: 卸売・小売
+  topix17: [商社・卸売, 小売]
+- code: J
+  slug: finance
+  name: 金融業，保険業
+  short: 金融・保険
+  topix17: [銀行, 金融（除く銀行）]
+- code: K
+  slug: realestate
+  name: 不動産業，物品賃貸業
+  short: 不動産
+  topix17: [不動産]
+- code: L
+  slug: professional
+  name: 学術研究，専門・技術サービス業
+  short: 専門・技術サービス
+  topix17: [情報通信・サービスその他]
+- code: M
+  slug: hospitality
+  name: 宿泊業，飲食サービス業
+  short: 宿泊・飲食
+  topix17: [情報通信・サービスその他]
+- code: N
+  slug: lifestyle
+  name: 生活関連サービス業，娯楽業
+  short: 生活サービス・娯楽
+  topix17: [情報通信・サービスその他]
+- code: O
+  slug: education
+  name: 教育，学習支援業
+  short: 教育
+  topix17: [情報通信・サービスその他]
+- code: P
+  slug: medical
+  name: 医療，福祉
+  short: 医療・福祉
+  topix17: [情報通信・サービスその他]
+- code: Q
+  slug: compound
+  name: 複合サービス事業
+  short: 郵便局・協同組合
+  topix17: []
+- code: R
+  slug: services
+  name: サービス業（他に分類されないもの）
+  short: その他サービス
+  topix17: [情報通信・サービスその他]

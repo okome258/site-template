@@ -1,0 +1,43 @@
+{% extends "_layout.html" %}
+{% block content %}
+<p class="small"><a href="{{ page.root }}">ランキング</a> › {{ row.ind.short }}</p>
+<h1>{{ row.ind.short }}業界の実質時給 <small class="muted">{{ latest.year }}年</small></h1>
+<p class="lead">{{ row.ind.name }}（日本標準産業分類 {{ row.ind.code }}）。全{{ ranking | length }}業界中 <b>{{ rank }}位</b>。</p>
+<dl class="kpi">
+<div><dt>実質時給</dt><dd>{{ row.hourly | num }}<small>円</small></dd></div>
+<div><dt>年収（推計）</dt><dd>{{ row.annual_man | num }}<small>万円</small></dd></div>
+<div><dt>月の労働時間</dt><dd>{{ row.hours_month }}<small>時間</small></dd></div>
+<div><dt>うち残業</dt><dd>{{ row.hours_over | num(1) }}<small>時間</small></dd></div>
+{% if row.age %}<div><dt>平均年齢</dt><dd>{{ row.age | num(1) }}<small>歳</small></dd></div>{% endif %}
+{% if row.tenure %}<div><dt>平均勤続</dt><dd>{{ row.tenure | num(1) }}<small>年</small></dd></div>{% endif %}
+{% if row.bonus is not none %}<div><dt>年間ボーナス等</dt><dd>{{ (row.bonus / 10) | num }}<small>万円</small></dd></div>{% endif %}
+{% if latest.all.hourly %}<div><dt>全産業平均との差</dt><dd class="{{ 'up' if row.hourly > latest.all.hourly else 'down' }}">{{ '+' if row.hourly > latest.all.hourly else '' }}{{ (row.hourly - latest.all.hourly) | num }}<small>円</small></dd></div>{% endif %}
+</dl>
+
+{% if hist | length > 1 %}
+<h2>実質時給の推移</h2>
+{% set w = 560 %}{% set h = 200 %}{% set n = hist | length %}{% set bw = (w - 40) / n %}
+{% set mx = hist | map(attribute='hourly') | select | max %}
+<svg class="trend" viewBox="0 0 {{ w }} {{ h }}" role="img" aria-label="{{ row.ind.short }}の実質時給の推移">
+{% for p in hist if p.hourly %}
+{% set bh = (p.hourly / mx) * (h - 50) %}
+{% set x = 20 + loop.index0 * bw %}
+<rect x="{{ (x + bw * 0.15) | round(1) }}" y="{{ (h - 22 - bh) | round(1) }}" width="{{ (bw * 0.7) | round(1) }}" height="{{ bh | round(1) }}" rx="3"/>
+<text class="val" x="{{ (x + bw / 2) | round(1) }}" y="{{ (h - 26 - bh) | round(1) }}" text-anchor="middle">{{ p.hourly | num }}</text>
+<text x="{{ (x + bw / 2) | round(1) }}" y="{{ h - 6 }}" text-anchor="middle">{{ p.year }}</text>
+{% endfor %}
+</svg>
+<table class="board">
+<thead><tr><th>年</th><th class="num">実質時給</th><th class="num">年収</th><th class="num">月の労働時間</th></tr></thead>
+<tbody>{% for p in hist | reverse %}<tr><td>{{ p.year }}</td><td class="num">{{ p.hourly | num }}円</td><td class="num">{{ p.annual_man | num }}万円</td><td class="num">{{ p.hours_month }}h</td></tr>{% endfor %}</tbody>
+</table>
+{% endif %}
+
+{% if cfg.job_links %}
+<h2>{{ row.ind.short }}業界への転職を考えるなら</h2>
+<p class="jobs">{% for j in cfg.job_links %}<a class="btn" href="{{ j.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ j.name }}</a>{% endfor %}</p>
+{% endif %}
+
+<h2>ほかの業界と比べる</h2>
+<p>{% for r in ranking %}{% if r.ind.slug != row.ind.slug %}<a class="btn" href="{{ page.root }}gyokai/{{ r.ind.slug }}/" style="margin:3px 4px 3px 0">{{ r.ind.short }} {{ r.hourly | num }}円</a>{% endif %}{% endfor %}</p>
+{% endblock %}
