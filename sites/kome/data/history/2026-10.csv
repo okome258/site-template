@@ -317,6 +317,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,komean-sugasawa:10000175,musen,10299,25.0,True,1,2,4.5,True,こめ庵
 2026-10-11,ajitukami:10000055,hakumai,12470,30.0,True,1,3623,4.53,True,お米専門店あじつかみ
 2026-10-11,okomeabe:10000024,hakumai,12480,30.0,True,1,3417,4.63,True,阿部ベイコク
+2026-10-11,kaguraya:10000895,genmai,12500,30.0,True,1,1,5.0,True,お米の専門店 神蔵屋
 2026-10-11,anzai-rice:10000181,hakumai,4180,10.0,True,1,16100,4.39,True,まんま屋
 2026-10-11,yahagishouten:10000000,hakumai,4180,10.0,False,1,2785,4.62,True,山形のお米とさくらんぼの矢萩商店
 2026-10-11,rice-smile:10000005,hakumai,4180,10.0,True,1,1360,4.43,True,ライスマイルねっとショップ
@@ -354,6 +355,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,komean-sugasawa:10000128,musen,4799,10.0,True,1,294,4.45,True,こめ庵
 2026-10-11,komean-sugasawa:10000139,genmai,4799,10.0,True,1,231,4.55,True,こめ庵
 2026-10-11,sunfarm:10000007,genmai,4800,10.0,True,1,79,4.72,True,サンファームしらたか
+2026-10-11,okome-gensenmai:10000085,genmai,14480,30.0,True,1,10,4.9,True,米 通販 厳選米本舗
 2026-10-11,sunfarm:10000091,genmai,4850,10.0,True,1,7,4.57,True,サンファームしらたか
 2026-10-11,yutakarice-miyagi:10000038,mochi,14650,30.0,False,1,21,3.9,True,豊ライスみやぎ
 2026-10-11,ebisu-murayama:10000358,mochi,14700,30.0,True,1,5,4.8,True,丸公楽天市場店
@@ -386,7 +388,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,agripartner:10001236,genmai,5180,10.0,False,1,125,4.7,True,東北の農産特産品アグリパートナー
 2026-10-11,agripartner:10001231,genmai,5180,10.0,False,1,183,4.67,True,東北の農産特産品アグリパートナー
 2026-10-11,ricey-miyagi:10000046,hakumai,5200,10.0,True,1,44,4.45,True,株式会社ライシー宮城
-2026-10-11,kaientai-2:10460324,genmai,5200,10.0,True,1,0,0,True,買援隊2号店
 2026-10-11,akutagawa-foods:10000043,musen,15768,30.0,True,1,1,4.0,True,里山農家のおいしいお米
 2026-10-11,kyusyukome:10000047,musen,5280,10.0,True,1,7670,4.65,True,九州米大将
 2026-10-11,okomeabe:10000034,genmai,5280,10.0,True,1,5889,4.7,True,阿部ベイコク
@@ -574,13 +575,17 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,toyorice:10000018,genmai,9300,10.0,True,1,660,4.71,True,金芽米・オンラインショップ
 2026-10-11,jigomeya:10000006,hakumai,4680,5.0,True,1,46,4.85,True,たじまんま 地米屋
 2026-10-11,eekome:10000360,genmai,9580,10.0,True,1,2104,4.82,True,京の米職人
+2026-10-11,i-gochisou:10004425,hakumai,24300,25.0,True,1,0,0,True,イワタニアイコレクト ごちそうch
 2026-10-11,greencenter:10000707,mochi,26530,27.0,True,1,5,4.6,True,北国産直shop
 2026-10-11,hokubei-shop:10000722,mochi,4950,5.0,False,1,7,4.86,True,ほくべい
 2026-10-11,toridorisan:10000001,hakumai,4980,5.0,True,1,5,5.0,True,山陰大山の里 TORIDORI
 2026-10-11,eekome:10000558,genmai,9980,10.0,True,1,1109,4.82,True,京の米職人
 2026-10-11,kyusyukome:10000073,mochi,9980,10.0,True,1,37,4.95,True,九州米大将
 2026-10-11,beikokukan:10000674,mochi,9990,10.0,True,1,8,4.88,True,無洗米とお米の「米穀館」
+2026-10-11,niigata-shop:10003080,hakumai,10500,10.0,True,1,0,0,True,新潟県公式ショップ 新潟直送計画
+2026-10-11,kome2silver-rice:10000108,genmai,31500,30.0,True,1,0,0,True,米のシルバーライス本舗 中嶋商店
 2026-10-11,eekome:10000453,genmai,10580,10.0,True,1,610,4.79,True,京の米職人
+2026-10-11,uonumabeikoku1:10000033,hakumai,10590,10.0,True,1,4,5.0,True,魚沼米穀楽天市場店
 2026-10-11,genki-genmai:10000071,genmai,4800,4.5,False,1,5579,4.76,True,玄米・雑穀米の通販 川島米穀店
 2026-10-11,adachi-umai:10000166,mochi,1530,1.4,False,1,131,4.65,True,あだちねっと 美米屋
 2026-10-11,kaitakunojo:10000016,mochi,5500,5.0,True,1,78,4.86,True,山本開拓農場
@@ -592,6 +597,8 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,genki-genmai:10000004,genmai,5800,4.5,False,1,11187,4.79,True,玄米・雑穀米の通販 川島米穀店
 2026-10-11,uonumanoukousha:10000001,hakumai,13800,10.0,True,1,39,4.64,True,魚沼のこしひかり 魚沼農耕舎
 2026-10-11,futon-anmin:10000948,hakumai,2800,2.0,True,1,0,0,True,快適生活百貨店
+2026-10-11,hondafarm:10000838,genmai,8500,5.0,True,1,3,5.0,True,ほんだ農場楽天市場店
 2026-10-11,komedokoro:10000011,mochi,3480,2.0,False,1,0,0,True,米処 稲穂屋
+2026-10-11,niigata-shop:10003402,hakumai,3750,2.0,True,1,2,5.0,True,新潟県公式ショップ 新潟直送計画
 2026-10-11,hseason:10000715,mochi,3799,2.0,True,10,107,4.36,True,ハーベストシーズン
 2026-10-11,yuukiya0097:10001526,hakumai,2238,1.0,False,1,8,4.63,True,有機家
