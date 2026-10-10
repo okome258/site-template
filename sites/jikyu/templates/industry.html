@@ -4,6 +4,7 @@
 <p class="small"><a href="{{ page.root }}">ランキング</a> › <a href="{{ page.root }}#focus">注目の業種</a> › {{ row.ind.short }}</p>
 <h1>{{ row.ind.short }}の年収・実質時給 <small class="muted">{{ latest.year }}年</small></h1>
 <p class="lead">統計上の区分は「{{ row.ind.name }}」（日本標準産業分類 {{ row.ind.code }}）で、{{ row.ind.parent.short }}業界の一部です。{% if row.ind.note %}{{ row.ind.note }}。{% endif %}注目の{{ focus_rank | length }}業種中 <b>{{ rank }}位</b>。</p>
+<p class="small muted">業種を細かく分けた統計は調査対象の人数が少ないため、年ごとの上下が大きく出ることがあります。推移とあわせてご覧ください。</p>
 {% else %}
 <p class="small"><a href="{{ page.root }}">ランキング</a> › {{ row.ind.short }}</p>
 <h1>{{ row.ind.short }}業界の実質時給 <small class="muted">{{ latest.year }}年</small></h1>

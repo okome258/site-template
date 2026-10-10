@@ -5,12 +5,16 @@
 <p class="lead">47都道府県の年収（月給×12＋ボーナス）を、残業込みの年間労働時間で割った「実質時給」で比べます。全産業・男女計・企業規模10人以上の平均です。</p>
 {% set top = pref_rank[0] %}{% set low = pref_rank[-1] %}
 <p class="note">1位は<b>{{ top.name }} {{ top.hourly | num }}円</b>、最下位は{{ low.name }} {{ low.hourly | num }}円で、差は{{ (top.hourly - low.hourly) | num }}円（約{{ (top.hourly / low.hourly) | round(2) }}倍）です。</p>
+<div class="map-box">
+{{ pref_map }}
+<p class="legend small"><span class="lv lv4"></span>上位1/4 <span class="lv lv3"></span> <span class="lv lv2"></span> <span class="lv lv1"></span>下位1/4　<span class="muted">地図を押すとその県の行へ移動します</span></p>
+</div>
 <div class="wrap-x">
 <table class="board compact">
 <thead><tr><th>#</th><th>都道府県</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th>{% if top.fc %}<th class="num hide-sp">{{ to_year }}年予想</th>{% endif %}</tr></thead>
 <tbody>
 {% for r in pref_rank %}
-<tr>
+<tr id="pref-{{ r.slug }}">
 <td>{{ loop.index }}</td>
 <th>{{ r.name }}</th>
 <td class="num v">{{ r.hourly | num }}円<span class="sub sp">年収{{ r.annual_man | num }}万・{{ r.hours_month }}h</span></td>

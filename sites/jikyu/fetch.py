@@ -476,6 +476,29 @@ def fetch(cfg: dict) -> dict:
 
 
 # ---------------- ページ ----------------
+def pref_map(rank: list[dict]) -> str:
+    """実質時給が高い県ほど濃く塗った日本のタイル地図(ふるさと納税サイトと同じ形)。押すと表の行へ。"""
+    from markupsafe import Markup
+    from core.japan import H, SLUGS, TILES, W, T, _rect, short
+    n = len(rank)
+    lv = {r["name"]: 4 - min(3, i * 4 // max(n, 1)) for i, r in enumerate(rank)}  # 上位1/4が濃い
+    val = {r["name"]: r["hourly"] for r in rank}
+    parts = []
+    for p, (x, y, w, h) in TILES.items():
+        name = short(p)
+        fs = 4.2 if len(name) <= 2 else 3.2
+        cx, cy = (x + w / 2) * T, (y + h / 2) * T + fs * 0.35
+        tip = f"{p}: {val[p]:,.0f}円" if p in val else p
+        parts.append(f'<a href="#pref-{SLUGS[p]}" class="lv{lv.get(p, 0)}"><title>{tip}</title>'
+                     f'{_rect(x, y, w, h)}<text x="{cx:g}" y="{cy:g}" font-size="{fs}">{name}</text></a>')
+    return Markup(f'<svg class="jp-big" viewBox="0 0 {W} {H}" role="img" aria-label="都道府県別の実質時給の地図">'
+                  f'{"".join(parts)}</svg>')
+
+
+def pref_slug(name: str) -> str:
+    from core.japan import SLUGS
+    return SLUGS.get(name, "")
+
 def trend(points: list[tuple[int, float]], to_year: int) -> dict | None:
     """年と値の並びに直線を当てはめ(最小二乗法)、to_year の値を出す。3年分以上ないときは出さない。"""
     pts = [(x, y) for x, y in points if y]
@@ -538,7 +561,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             if not m.get("hourly"):
                 continue
             hist = [{"year": y["year"], **y["rows"][p]} for y in reversed(prefs) if p in y["rows"]]
-            row = {"name": p, **m, "hist": hist,
+            row = {"name": p, "slug": pref_slug(p), **m, "hist": hist,
                    "diff": (m["hourly"] - pp["rows"][p]["hourly"])
                    if pp and pp["rows"].get(p, {}).get("hourly") else None}
             add_forecast(row, hist, to_year)
@@ -568,6 +591,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "max_hourly": max(r["hourly"] for r in ranking), "ready": True, "all_row": all_row,
               "to_year": to_year, "first_year": years[-1]["year"], "sources": sources,
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
+              "pref_map": pref_map(pref_rank) if pref_rank else "",
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
               "max_focus": max((r["hourly"] for r in focus_rank), default=1)}
 
