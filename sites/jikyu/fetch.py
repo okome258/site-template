@@ -145,6 +145,32 @@ def is_candidate(ec: dict, title: str) -> bool:
 DEBUG: list = []
 
 
+def find_newer(api, ec: dict, latest: int) -> list[dict]:
+    """使っている最新年より新しい年の表があるかを広く探して記録する(取り込みは別)。
+
+    DB表(全年まとめ)は更新が遅いので、新しい年が年ごとの表で先に出ていないかを見張る。
+    見つかったら Actions の警告に出し、data/debug.json に表題とIDを残す。
+    """
+    from datetime import date
+    found: dict[str, dict] = {}
+    span = f"{latest + 1}-{date.today().year}"
+    for w in ec.get("watch_words", ["一般労働者 産業"]):
+        try:
+            tables = api.list_tables(ec["stats_code"], w, surveyYears=span, limit=300)
+        except Exception as e:  # 見張りの失敗でサイト更新は止めない
+            print(f"::warning::新しい年の表の確認に失敗: {e}")
+            continue
+        for t in tables:
+            if any(x in t["title"] for x in ("短時間", "職種", "都道府県")):
+                continue
+            found[t["id"]] = {k: t[k] for k in ("id", "title", "survey_date", "open_date")}
+    out = sorted(found.values(), key=lambda t: t["id"], reverse=True)[:200]
+    if out:
+        print(f"::warning::{latest}年より新しい表が {len(out)}件あります(まだ取り込めていません)。"
+              "data/debug.json の newer_tables を確認")
+    return out
+
+
 def _dump(cfg: dict, obj: dict) -> None:
     """どの表をどう読んだかを data/debug.json に残す(取得に失敗しても残る)。"""
     import json
@@ -215,7 +241,8 @@ def fetch(cfg: dict) -> dict:
             years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
                           "all": rows.pop("_all", {}), "rows": rows})
     years.sort(key=lambda y: y["year"], reverse=True)
-    _dump(cfg, {"checked": checked, "fetched": DEBUG})
+    newer = find_newer(api, ec, int(years[0]["year"]) if years else ec.get("min_year", 2020))
+    _dump(cfg, {"checked": checked, "fetched": DEBUG, "newer_tables": newer})
     if not years:
         _dump(cfg, {"checked": checked, "fetched": DEBUG})
         raise RuntimeError("賃金構造基本統計調査の表が1年分も取れませんでした")
