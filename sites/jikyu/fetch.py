@@ -83,7 +83,7 @@ def inspect(cfg: dict, meta: dict) -> dict | None:
     fixed = {cid: total_code(c, cfg.get("fixed_prefer", [])) for cid, c in classes.items()
              if cid not in (item_cls, ind_cls, "time")}
     return {"item_cls": item_cls, "items": items, "ind_cls": ind_cls, "inds": inds,
-            "fixed": fixed, "n_classes": len(classes)}
+            "fixed": fixed, "n_classes": len(classes), "ind_names": classes[ind_cls]["items"]}
 
 
 def param_name(cid: str) -> str:
@@ -132,6 +132,38 @@ def extract(rows: list[dict], plan: dict, tcode: str | None) -> dict:
         if slug and key:
             out.setdefault(slug, {})[key] = r["value"]
     return {slug: metrics(raw) for slug, raw in out.items()}
+
+
+def strip_code(name: str) -> str:
+    """「Ｉ５０ 各種商品卸売業」「I50各種商品卸売業」→「各種商品卸売業」"""
+    return re.sub(r"^[A-Z][0-9～~\-]*", "", industries.norm(name))
+
+
+def focus_slug(cfg: dict, name: str) -> str | None:
+    n = strip_code(name)
+    for f in cfg.get("focus", []):
+        w = industries.norm(f["name"])
+        if n == w or (len(n) >= 4 and (n.startswith(w) or w.startswith(n))):
+            return f["slug"]
+    return None
+
+
+def extract_focus(cfg: dict, rows: list[dict], plan: dict, tcode: str | None) -> dict:
+    code_to_key = {v: k for k, v in plan["items"].items()}
+    codes = {c: focus_slug(cfg, nm) for c, nm in plan["ind_names"].items()}
+    out: dict[str, dict] = {}
+    for r in rows:
+        if r["value"] is None:
+            continue
+        if any(r.get(cid) not in (None, code) for cid, code in plan["fixed"].items()):
+            continue
+        if tcode and r.get("time") not in (None, tcode):
+            continue
+        slug = codes.get(r.get(plan["ind_cls"]))
+        key = code_to_key.get(r.get(plan["item_cls"]))
+        if slug and key:
+            out.setdefault(slug, {})[key] = r["value"]
+    return {slug: metrics(raw) for slug, raw in out.items() if "monthly" in raw}
 
 
 def is_candidate(ec: dict, title: str) -> bool:
@@ -205,7 +237,8 @@ def fetch_db_years(api, cfg: dict, checked: list) -> list[dict]:
                 continue
             print(f"{y}年: {tid} {t['title']} → {len(rows)}業界")
             years.append({"year": y, "table": {"id": tid, "title": t["title"], "open_date": t["open_date"]},
-                          "all": rows.pop("_all", {}), "rows": rows})
+                          "all": rows.pop("_all", {}), "rows": rows,
+                          "focus": extract_focus(cfg, data["values"], plan, best[y][3])})
     return years
 
 
@@ -269,6 +302,33 @@ def fetch_xls_industry(api, cfg: dict, year: int, cache: dict) -> dict | None:
             "table": {"id": f["id"], "title": f["dataset"].split("_", 1)[-1] + "（Excel）",
                       "open_date": f["release"]},
             "all": rows.pop("_all", {}), "rows": rows}
+
+
+def fetch_xls_focus(api, cfg: dict, year: int, cache: dict) -> dict:
+    """産業中分類の Excel(大分類ごとに1ファイル、中分類ごとに1シート)から注目業種を読む。"""
+    ec = cfg["estat"]
+    want = {f["parent"] for f in cfg.get("focus", [])}
+    out: dict[str, dict] = {}
+    for f in xls_files(api, ec, year, "産業中分類"):
+        if not f["name"].startswith("1_"):
+            continue
+        # ファイル名の大分類(例「D 建設業（D06～D08）」)で、注目業種が無いファイルは読まない
+        parent = industries.match(re.sub(r"（.*$", "", f["name"].split("_")[-1]))
+        if parent and parent["slug"] not in want:
+            continue
+        try:
+            sheets = read_file(cache, f)
+        except Exception as e:
+            DEBUG.append({"focus_xls_error": f["name"][-20:], "year": year, "error": f"{type(e).__name__}: {str(e)[:150]}"})
+            continue
+        for sh in sheets:
+            lb = sh["labels"]
+            if "公営" in lb.get("民公区分", ""):
+                continue
+            slug = focus_slug(cfg, lb.get("産業", ""))
+            if slug and slug not in out:
+                out[slug] = metrics(sh["raw"])
+    return out
 
 
 PREF_ALIAS = {"東京": "東京都", "京都": "京都府", "大阪": "大阪府", "北海道": "北海道"}
@@ -380,6 +440,12 @@ def fetch(cfg: dict) -> dict:
             got = None
         if got:
             print(f"{y}年: Excel から {len(got['rows'])}業界")
+            try:
+                got["focus"] = fetch_xls_focus(api, cfg, y, cache)
+            except Exception as e:
+                print(f"::warning::{y}年の注目業種の取得に失敗: {type(e).__name__}")
+                got["focus"] = {}
+            print(f"{y}年: 注目業種 {len(got['focus'])}/{len(cfg.get('focus', []))}")
             years.append(got)
     years.sort(key=lambda y: y["year"], reverse=True)
     if not years:
@@ -479,12 +545,31 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             pref_rank.append(row)
         pref_rank.sort(key=lambda r: -r["hourly"])
 
+    # 注目の業種(中分類)
+    focus_rank = []
+    for f in cfg.get("focus", []):
+        m = (latest.get("focus") or {}).get(f["slug"])
+        if not m or not m.get("hourly"):
+            continue
+        hist = [{"year": y["year"], **y["focus"][f["slug"]]} for y in reversed(years)
+                if (y.get("focus") or {}).get(f["slug"], {}).get("hourly")]
+        pv = (prev.get("focus") or {}).get(f["slug"], {}) if prev else {}
+        parent = master.get(f["parent"], {})
+        row = {"ind": {"slug": f["slug"], "short": f["short"], "name": f["name"], "code": f["code"],
+                       "note": f.get("note", ""), "parent": parent}, **m, "hist": hist,
+               "diff": m["hourly"] - pv["hourly"] if pv.get("hourly") else None}
+        add_forecast(row, hist, to_year)
+        focus_rank.append(row)
+    focus_rank.sort(key=lambda r: -r["hourly"])
+
     fc_rank = sorted((r for r in ranking if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
+    fc_focus = sorted((r for r in focus_rank if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     common = {"latest": latest, "prev": prev, "ranking": ranking, "industries": master,
               "max_hourly": max(r["hourly"] for r in ranking), "ready": True, "all_row": all_row,
               "to_year": to_year, "first_year": years[-1]["year"], "sources": sources,
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
-              "fc_rank": fc_rank}
+              "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
+              "max_focus": max((r["hourly"] for r in focus_rank), default=1)}
 
     out = [{"path": "index.html", "template": "index.html",
             "title": f"業界別 実質時給ランキング{latest['year']}｜年収÷労働時間で比べる",
@@ -510,6 +595,18 @@ def pages(cfg: dict, data: dict) -> list[dict]:
                             f"平均年収{r.get('annual_man', 0):,.0f}万円、月の労働時間{r.get('hours_month', 0)}時間。"
                             "賃金構造基本統計調査から計算し、年ごとの推移と今後の予想も掲載。"),
             "context": {**common, "row": r, "rank": i, "hist": history[s]},
+        })
+    for i, r in enumerate(focus_rank, 1):
+        s = r["ind"]["slug"]
+        pn = r["ind"]["parent"].get("short", "")
+        out.append({
+            "path": f"gyoshu/{s}/index.html", "template": "industry.html",
+            "title": f"{r['ind']['short']}の年収・実質時給・残業時間（{latest['year']}年）",
+            "description": (f"{r['ind']['short']}（{r['ind']['name']}）の実質時給は{r['hourly']:,.0f}円、"
+                            f"平均年収{r.get('annual_man', 0):,.0f}万円、月の労働時間{r.get('hours_month', 0)}時間。"
+                            f"{pn}業界全体との比較、年ごとの推移と{to_year}年の予想も。"),
+            "context": {**common, "row": r, "rank": i, "hist": r["hist"], "is_focus": True,
+                        "parent_row": next((x for x in ranking if x["ind"]["slug"] == r["ind"]["parent"].get("slug")), None)},
         })
     out.append({**about, "context": common})
     return out

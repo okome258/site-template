@@ -1,8 +1,14 @@
 {% extends "_layout.html" %}
 {% block content %}
+{% if is_focus %}
+<p class="small"><a href="{{ page.root }}">ランキング</a> › <a href="{{ page.root }}#focus">注目の業種</a> › {{ row.ind.short }}</p>
+<h1>{{ row.ind.short }}の年収・実質時給 <small class="muted">{{ latest.year }}年</small></h1>
+<p class="lead">統計上の区分は「{{ row.ind.name }}」（日本標準産業分類 {{ row.ind.code }}）で、{{ row.ind.parent.short }}業界の一部です。{% if row.ind.note %}{{ row.ind.note }}。{% endif %}注目の{{ focus_rank | length }}業種中 <b>{{ rank }}位</b>。</p>
+{% else %}
 <p class="small"><a href="{{ page.root }}">ランキング</a> › {{ row.ind.short }}</p>
 <h1>{{ row.ind.short }}業界の実質時給 <small class="muted">{{ latest.year }}年</small></h1>
 <p class="lead">{{ row.ind.name }}（日本標準産業分類 {{ row.ind.code }}）。全{{ ranking | length }}業界中 <b>{{ rank }}位</b>。</p>
+{% endif %}
 <dl class="kpi">
 <div><dt>実質時給</dt><dd>{{ row.hourly | num }}<small>円</small></dd></div>
 <div><dt>年収（推計）</dt><dd>{{ row.annual_man | num }}<small>万円</small></dd></div>
@@ -13,6 +19,10 @@
 {% if row.bonus is not none %}<div><dt>年間ボーナス等</dt><dd>{{ (row.bonus / 10) | num }}<small>万円</small></dd></div>{% endif %}
 {% if latest.all.hourly %}<div><dt>全産業平均との差</dt><dd class="{{ 'up' if row.hourly > latest.all.hourly else 'down' }}">{{ '+' if row.hourly > latest.all.hourly else '' }}{{ (row.hourly - latest.all.hourly) | num }}<small>円</small></dd></div>{% endif %}
 </dl>
+
+{% if is_focus and parent_row %}
+<p class="note">{{ row.ind.parent.short }}業界全体の平均は 実質時給{{ parent_row.hourly | num }}円・年収{{ parent_row.annual_man | num }}万円。{{ row.ind.short }}はそれより<b class="{{ 'up' if row.hourly > parent_row.hourly else 'down' }}">時給で{{ '+' if row.hourly > parent_row.hourly else '' }}{{ (row.hourly - parent_row.hourly) | num }}円、年収で{{ '+' if row.annual_man > parent_row.annual_man else '' }}{{ (row.annual_man - parent_row.annual_man) | num }}万円</b>です。<a href="{{ page.root }}gyokai/{{ row.ind.parent.slug }}/">{{ row.ind.parent.short }}業界を見る</a></p>
+{% endif %}
 
 {% if hist | length > 1 %}
 <h2>実質時給の推移</h2>
@@ -49,6 +59,10 @@
 <p class="jobs">{% for j in cfg.job_links %}<a class="btn" href="{{ j.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ j.name }}</a>{% endfor %}</p>
 {% endif %}
 
+{% if focus_rank %}
+<h2>注目の業種と比べる</h2>
+<p>{% for r in focus_rank %}{% if r.ind.slug != row.ind.slug %}<a class="btn" href="{{ page.root }}gyoshu/{{ r.ind.slug }}/" style="margin:3px 4px 3px 0">{{ r.ind.short }} {{ r.hourly | num }}円</a>{% endif %}{% endfor %}</p>
+{% endif %}
 <h2>ほかの業界と比べる</h2>
-<p>{% for r in ranking %}{% if r.ind.slug != row.ind.slug %}<a class="btn" href="{{ page.root }}gyokai/{{ r.ind.slug }}/" style="margin:3px 4px 3px 0">{{ r.ind.short }} {{ r.hourly | num }}円</a>{% endif %}{% endfor %}</p>
+<p>{% for r in ranking %}{% if is_focus or r.ind.slug != row.ind.slug %}<a class="btn" href="{{ page.root }}gyokai/{{ r.ind.slug }}/" style="margin:3px 4px 3px 0">{{ r.ind.short }} {{ r.hourly | num }}円</a>{% endif %}{% endfor %}</p>
 {% endblock %}

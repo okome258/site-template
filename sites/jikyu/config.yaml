@@ -43,3 +43,28 @@ fixed_prefer: ["民営事業所", "企業規模計（10人以上）", "男女計
 # 転職サービスの広告(A8 等で提携できたら入れる。空なら出さない)
 # - {name: "サービス名", url: "提携リンク", note: "ひとこと"}
 job_links: []
+
+# 注目の業種(産業中分類)。業界(大分類)の中に埋もれる、転職で気になる業種を個別に出す。
+# name は統計上の正式名(先頭の分類記号は不要)。short はサイトでの呼び名。
+focus:
+  - {slug: shosha, name: "各種商品卸売業", short: "総合商社", note: "何でも扱う卸売業。総合商社の多くがここに入ります", code: "I50", parent: trade}
+  - {slug: kikai-shosha, name: "機械器具卸売業", short: "機械・電機の商社", note: "機械・電気製品・自動車などを扱う専門商社・卸", code: "I54", parent: trade}
+  - {slug: bank, name: "銀行業", short: "銀行", note: "", code: "J62", parent: finance}
+  - {slug: securities, name: "金融商品取引業，商品先物取引業", short: "証券", note: "証券会社・投資運用など", code: "J65", parent: finance}
+  - {slug: insurance, name: "保険業(保険媒介代理業,保険サービス業を含む)", short: "保険", note: "生命保険・損害保険・保険代理店など", code: "J67", parent: finance}
+  - {slug: sier, name: "情報サービス業", short: "SIer・ソフトウェア", note: "受託開発・システム運用・パッケージソフトなど", code: "G39", parent: it}
+  - {slug: web, name: "インターネット附随サービス業", short: "Web・ネットサービス", note: "ポータル・EC基盤・クラウドなどネットを使ったサービス", code: "G40", parent: it}
+  - {slug: telecom, name: "通信業", short: "通信キャリア", note: "携帯・固定通信など", code: "G37", parent: it}
+  - {slug: broadcast, name: "放送業", short: "テレビ・ラジオ", note: "", code: "G38", parent: it}
+  - {slug: advertising, name: "広告業", short: "広告", note: "広告代理店など", code: "L73", parent: professional}
+  - {slug: electric, name: "電気業", short: "電力会社", note: "", code: "F33", parent: utilities}
+  - {slug: railway, name: "鉄道業", short: "鉄道", note: "", code: "H42", parent: transport}
+  - {slug: airline, name: "航空運輸業", short: "航空", note: "", code: "H46", parent: transport}
+  - {slug: trucking, name: "道路貨物運送業", short: "トラック運送", note: "", code: "H44", parent: transport}
+  - {slug: auto, name: "輸送用機械器具製造業", short: "自動車・輸送機メーカー", note: "自動車・部品・船・航空機など", code: "E31", parent: manufacturing}
+  - {slug: chemical, name: "化学工業", short: "化学メーカー", note: "化学品・医薬品・化粧品など", code: "E16", parent: manufacturing}
+  - {slug: hospital, name: "医療業", short: "病院・クリニック", note: "", code: "P83", parent: medical}
+  - {slug: kaigo, name: "社会保険・社会福祉・介護事業", short: "介護・福祉", note: "", code: "P85", parent: medical}
+  - {slug: school, name: "学校教育", short: "学校", note: "私立の学校など(民営事業所のみ)", code: "O81", parent: education}
+  - {slug: haken, name: "職業紹介・労働者派遣業", short: "人材紹介・派遣", note: "", code: "R91", parent: services}
+  - {slug: restaurant, name: "飲食店", short: "飲食店", note: "", code: "M76", parent: hospitality}

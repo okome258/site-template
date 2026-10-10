@@ -33,6 +33,25 @@
 </tbody>
 </table>
 </div>
+{% if fc_focus %}
+<h2>注目の業種の{{ to_year }}年予想</h2>
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>#</th><th>業種</th><th class="num">{{ latest.year }}年</th><th class="num">{{ to_year }}年予想</th><th class="num">伸び/年</th></tr></thead>
+<tbody>
+{% for r in fc_focus %}
+<tr>
+<td>{{ loop.index }}</td>
+<th><a href="{{ page.root }}gyoshu/{{ r.ind.slug }}/">{{ r.ind.short }}</a></th>
+<td class="num">{{ r.hourly | num }}円<span class="sub">{{ r.annual_man | num }}万</span></td>
+<td class="num v">{{ r.fc.hourly | num }}円<span class="sub">{{ r.fc.annual | num }}万</span></td>
+<td class="num {{ 'up' if r.fc.pace > 0 else 'down' }}">{{ '+' if r.fc.pace > 0 else '' }}{{ r.fc.pace | num }}円<span class="sub">{{ r.fc.rate | num(1) }}%</span></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endif %}
 <p class="small muted">上の段が実質時給、下の段が年収（万円）。伸び/年は1年あたりの時給の増え方と、その伸び率です。</p>
 
 <h2>AI時代の見方</h2>
