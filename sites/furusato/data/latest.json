@@ -606,8 +606,8 @@
    "candidates": 159,
    "ranked": 39,
    "dropped": {
-    "対象外の商品": 8,
     "量が複数": 15,
+    "対象外の商品": 8,
     "選択式": 96,
     "量なし": 1
    },
@@ -1863,26 +1863,6 @@
   "chicken": {
    "items": [
     {
-     "code": "f454010-takanabe:10001215",
-     "name": "【小分け】【大容量】＜鶏もも肉・鶏むね肉セット 各250g（各7パック 計3.5kg/各14パック 計7.0kg/各21パック 計10.5kg）＞翌月末迄に順次出荷 鶏肉 モモ肉 ムネ肉 冷凍 宮崎県産 国産 宮崎県 高鍋町 送料無料",
-     "price": 18000,
-     "qty": 10.5,
-     "evidence": "計10.5kg",
-     "per10k": 5.833,
-     "unit_price": 1714,
-     "shop": "宮崎県高鍋町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sj6go.ia33055a.g00sj6go.ia331cf9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff454010-takanabe%2Fkf_10%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff454010-takanabe%2Fi%2F10001215%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "高鍋町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f454010-takanabe/cabinet/11698978/imgrc0102226341.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 3.21,
-     "market_yen": 17010.0,
-     "market_pct": 94
-    },
-    {
      "code": "f032140-hachimantai:10001035",
      "name": "鶏肉 岩手県産 菜彩鶏 むね肉 4kgセット（1kg×4 計4kg）／ 国産 国産鶏 ブランド鶏 ブランド肉 お肉 鶏むね 鶏 もも 鳥肉 とりにく ムネ 冷凍 さいさいどり おすすめ 岩手県 八幡平市 送料無料 十文字 チキン カンパニー 八幡平工場",
      "price": 9000,
@@ -2461,12 +2441,32 @@
      "vs_median": 0.71,
      "market_yen": 2920.0,
      "market_pct": 21
+    },
+    {
+     "code": "f462187-kirishima:10000863",
+     "name": "国産！高原鶏 鶏刺し一羽セット(未カット)合計約1.4kg超え！ 鶏 鶏肉 鳥肉 モモ ムネ ササミ もも肉 むね肉 胸肉 真空パック 醤油付き 鳥刺し タタキ 刺身 おつまみ 冷凍【ワタセ食鳥】",
+     "price": 11000,
+     "qty": 1.4,
+     "evidence": "1.4kg",
+     "per10k": 1.273,
+     "unit_price": 7857,
+     "shop": "鹿児島県霧島市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3qro.ia330ec5.g00t3qro.ia331084/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462187-kirishima%2Fa0-278%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462187-kirishima%2Fi%2F10000863%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "霧島市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462187-kirishima/cabinet/img01/a0-278_smn_new.jpg?_ex=240x240",
+     "review_avg": 4.61,
+     "review_count": 118,
+     "wakeari": false,
+     "vs_median": 0.7,
+     "market_yen": 2270.0,
+     "market_pct": 21
     }
    ],
-   "candidates": 166,
+   "candidates": 165,
    "ranked": 37,
    "dropped": {
-    "対象外の商品": 75,
+    "対象外の商品": 74,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -2475,7 +2475,7 @@
    "summary": {
     "median_per10k": 1.818,
     "median_unit_price": 5500,
-    "min_unit_price": 1714,
+    "min_unit_price": 2250,
     "max_unit_price": 19000,
     "towns": 22
    },
@@ -15199,12 +15199,12 @@
      "vs_median": 0.64
     }
    ],
-   "candidates": 85,
+   "candidates": 86,
    "ranked": 37,
    "dropped": {
     "量が範囲外": 18,
     "選択式": 15,
-    "対象外の商品": 10,
+    "対象外の商品": 11,
     "量なし": 4,
     "量が複数": 1
    },
@@ -16721,5 +16721,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T00:53+09:00"
+ "fetched_at": "2026-10-11T00:59+09:00"
 }
