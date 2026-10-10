@@ -44,7 +44,7 @@ def find_industry_class(classes: dict) -> tuple[str | None, dict]:
     for cid, c in classes.items():
         m = {}
         for code, nm in c["items"].items():
-            if industries.norm(nm) in ALL_INDUSTRY:
+            if re.sub(r"^[A-Z]\d*", "", industries.norm(nm)) in ALL_INDUSTRY:
                 m[code] = "_all"
                 continue
             ind = industries.match(nm)
@@ -55,8 +55,12 @@ def find_industry_class(classes: dict) -> tuple[str | None, dict]:
     return best
 
 
-def total_code(c: dict) -> str:
-    """性別・企業規模・年齢階級などの「計」のコード。見つからなければ先頭。"""
+def total_code(c: dict, prefer: list[str] = ()) -> str:
+    """性別・企業規模・年齢階級などの「計」のコード。prefer の名前があればそれ、なければ先頭。"""
+    for want in prefer:
+        for code in c["order"]:
+            if industries.norm(c["items"][code]) == industries.norm(want):
+                return code
     hits = [code for code in c["order"]
             if any(industries.norm(c["items"][code]).split("(")[0].endswith(w) for w in TOTAL_WORDS)]
     if hits:
@@ -76,7 +80,7 @@ def inspect(cfg: dict, meta: dict) -> dict | None:
         return None
     if sum(1 for v in inds.values() if v != "_all") < 10:
         return None
-    fixed = {cid: total_code(c) for cid, c in classes.items()
+    fixed = {cid: total_code(c, cfg.get("fixed_prefer", [])) for cid, c in classes.items()
              if cid not in (item_cls, ind_cls, "time")}
     return {"item_cls": item_cls, "items": items, "ind_cls": ind_cls, "inds": inds,
             "fixed": fixed, "n_classes": len(classes)}
@@ -186,7 +190,7 @@ def fetch(cfg: dict) -> dict:
             if y not in best or score > best[y][0]:
                 best[y] = (score, t, plan, code)
 
-    want = sorted(best, reverse=True)[: ec["years"]]
+    want = sorted((y for y in best if int(y) >= ec.get("min_year", 0)), reverse=True)[: ec["years"]]
     by_table: dict[str, list[str]] = {}
     for y in want:
         by_table.setdefault(best[y][1]["id"], []).append(y)
