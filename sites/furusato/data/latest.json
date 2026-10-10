@@ -18,7 +18,9 @@
      "review_avg": 4.16,
      "review_count": 25,
      "wakeari": true,
-     "vs_median": 1.8
+     "vs_median": 1.8,
+     "market_yen": 8650.0,
+     "market_pct": 87
     },
     {
      "code": "f434442-kosa:10000561",
@@ -36,7 +38,9 @@
      "review_avg": 4.26,
      "review_count": 341,
      "wakeari": true,
-     "vs_median": 1.6
+     "vs_median": 1.6,
+     "market_yen": 17300.0,
+     "market_pct": 77
     },
     {
      "code": "f082031-tsuchiura:10003739",
@@ -54,7 +58,9 @@
      "review_avg": 4.48,
      "review_count": 56,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.5,
+     "market_yen": 8650.0,
+     "market_pct": 72
     },
     {
      "code": "f082295-inashiki:10000198",
@@ -72,7 +78,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.38,
+     "market_yen": 8650.0,
+     "market_pct": 67
     },
     {
      "code": "f313891-nanbu:10000529",
@@ -90,7 +98,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.38,
+     "market_yen": 17300.0,
+     "market_pct": 67
     },
     {
      "code": "f434442-kosa:10000551",
@@ -108,7 +118,9 @@
      "review_avg": 3.43,
      "review_count": 63,
      "wakeari": true,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 8650.0,
+     "market_pct": 64
     },
     {
      "code": "f082295-inashiki:10000195",
@@ -126,7 +138,9 @@
      "review_avg": 4.47,
      "review_count": 81,
      "wakeari": false,
-     "vs_median": 1.29
+     "vs_median": 1.29,
+     "market_yen": 8650.0,
+     "market_pct": 62
     },
     {
      "code": "f062049-sakata:10002139",
@@ -144,7 +158,9 @@
      "review_avg": 4.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.29
+     "vs_median": 1.29,
+     "market_yen": 8650.0,
+     "market_pct": 62
     },
     {
      "code": "f314021-hino:10000403",
@@ -162,7 +178,9 @@
      "review_avg": 4.78,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.26
+     "vs_median": 1.26,
+     "market_yen": 17300.0,
+     "market_pct": 61
     },
     {
      "code": "f204048-anan:10000025",
@@ -180,7 +198,9 @@
      "review_avg": 4.05,
      "review_count": 65,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 5190.0,
+     "market_pct": 58
     },
     {
      "code": "f312029-yonago:10000721",
@@ -198,7 +218,9 @@
      "review_avg": 4.3,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 8650.0,
+     "market_pct": 58
     },
     {
      "code": "f062049-sakata:10002462",
@@ -216,7 +238,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 8650.0,
+     "market_pct": 58
     },
     {
      "code": "f333468-wake:10000581",
@@ -234,7 +258,9 @@
      "review_avg": 3.53,
      "review_count": 19,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 8650.0,
+     "market_pct": 53
     },
     {
      "code": "f023213-ajigasawa:10000096",
@@ -252,7 +278,9 @@
      "review_avg": 4.43,
      "review_count": 63,
      "wakeari": false,
-     "vs_median": 1.06
+     "vs_median": 1.06,
+     "market_yen": 8650.0,
+     "market_pct": 51
     },
     {
      "code": "f083097-oarai:10001105",
@@ -270,7 +298,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.06
+     "vs_median": 1.06,
+     "market_yen": 8650.0,
+     "market_pct": 51
     },
     {
      "code": "f333468-wake:10000585",
@@ -288,7 +318,9 @@
      "review_avg": 4.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 12980.0,
+     "market_pct": 50
     },
     {
      "code": "f333468-wake:10000586",
@@ -306,7 +338,9 @@
      "review_avg": 4.86,
      "review_count": 14,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 8650.0,
+     "market_pct": 49
     },
     {
      "code": "f023213-ajigasawa:10000095",
@@ -324,7 +358,9 @@
      "review_avg": 4.65,
      "review_count": 101,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4330.0,
+     "market_pct": 48
     },
     {
      "code": "f064611-yuza:10000492",
@@ -342,7 +378,9 @@
      "review_avg": 4.71,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4330.0,
+     "market_pct": 48
     },
     {
      "code": "f062049-sakata:10002452",
@@ -360,7 +398,9 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.95
+     "vs_median": 0.95,
+     "market_yen": 8650.0,
+     "market_pct": 46
     },
     {
      "code": "f413461-miyaki:10004608",
@@ -378,7 +418,9 @@
      "review_avg": 3.52,
      "review_count": 54,
      "wakeari": true,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 4330.0,
+     "market_pct": 43
     },
     {
      "code": "f052159-semboku:10002042",
@@ -396,7 +438,9 @@
      "review_avg": 4.13,
      "review_count": 39,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 8650.0,
+     "market_pct": 43
     },
     {
      "code": "f014346-chippubetsu:10000132",
@@ -414,7 +458,9 @@
      "review_avg": 2.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 8650.0,
+     "market_pct": 43
     },
     {
      "code": "f064611-yuza:10000666",
@@ -432,7 +478,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 4330.0,
+     "market_pct": 43
     },
     {
      "code": "f203246-tateshina:10000187",
@@ -450,7 +498,9 @@
      "review_avg": 4.95,
      "review_count": 19,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 8650.0,
+     "market_pct": 41
     },
     {
      "code": "f203246-tateshina:10000181",
@@ -468,7 +518,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 8650.0,
+     "market_pct": 41
     },
     {
      "code": "f322067-yasugi:10000084",
@@ -486,7 +538,9 @@
      "review_avg": 4.65,
      "review_count": 75,
      "wakeari": false,
-     "vs_median": 0.75
+     "vs_median": 0.75,
+     "market_yen": 4330.0,
+     "market_pct": 36
     },
     {
      "code": "f322067-yasugi:10000150",
@@ -504,7 +558,9 @@
      "review_avg": 4.74,
      "review_count": 19,
      "wakeari": false,
-     "vs_median": 0.75
+     "vs_median": 0.75,
+     "market_yen": 4330.0,
+     "market_pct": 36
     },
     {
      "code": "f413461-miyaki:10001333",
@@ -522,7 +578,9 @@
      "review_avg": 4.34,
      "review_count": 93,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.67,
+     "market_yen": 2600.0,
+     "market_pct": 32
     },
     {
      "code": "f434281-takamori:10000799",
@@ -540,7 +598,9 @@
      "review_avg": 4.31,
      "review_count": 170,
      "wakeari": true,
-     "vs_median": 0.62
+     "vs_median": 0.62,
+     "market_yen": 14710.0,
+     "market_pct": 30
     }
    ],
    "candidates": 159,
@@ -578,7 +638,9 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.95
+     "vs_median": 1.95,
+     "market_yen": 22510.0,
+     "market_pct": 107
     },
     {
      "code": "f442062-usuki:10000142",
@@ -596,7 +658,9 @@
      "review_avg": 4.34,
      "review_count": 35,
      "wakeari": false,
-     "vs_median": 1.7
+     "vs_median": 1.7,
+     "market_yen": 9380.0,
+     "market_pct": 94
     },
     {
      "code": "f072052-shirakawa:10000909",
@@ -614,7 +678,9 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": true,
-     "vs_median": 1.57
+     "vs_median": 1.57,
+     "market_yen": 11260.0,
+     "market_pct": 87
     },
     {
      "code": "f282260-awaji:10000852",
@@ -632,7 +698,9 @@
      "review_avg": 4.46,
      "review_count": 63,
      "wakeari": false,
-     "vs_median": 1.46
+     "vs_median": 1.46,
+     "market_yen": 11260.0,
+     "market_pct": 80
     },
     {
      "code": "f454028-shintomi:10001278",
@@ -650,7 +718,9 @@
      "review_avg": 4.0,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 1.42
+     "vs_median": 1.42,
+     "market_yen": 9380.0,
+     "market_pct": 78
     },
     {
      "code": "f452025-miyakonojo:10004389",
@@ -668,7 +738,9 @@
      "review_avg": 4.71,
      "review_count": 309,
      "wakeari": false,
-     "vs_median": 1.39
+     "vs_median": 1.39,
+     "market_yen": 16880.0,
+     "market_pct": 77
     },
     {
      "code": "f462179-soo:10000726",
@@ -686,7 +758,9 @@
      "review_avg": 4.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 16420.0,
+     "market_pct": 75
     },
     {
      "code": "f452025-miyakonojo:10007778",
@@ -704,7 +778,9 @@
      "review_avg": 3.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.34
+     "vs_median": 1.34,
+     "market_yen": 14070.0,
+     "market_pct": 74
     },
     {
      "code": "f282260-awaji:10001305",
@@ -722,7 +798,9 @@
      "review_avg": 3.92,
      "review_count": 53,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 9380.0,
+     "market_pct": 72
     },
     {
      "code": "f016641-shibecha:10000215",
@@ -740,7 +818,9 @@
      "review_avg": 4.04,
      "review_count": 23,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 9380.0,
+     "market_pct": 72
     },
     {
      "code": "f082368-omitama:10000317",
@@ -758,7 +838,9 @@
      "review_avg": 4.67,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 9380.0,
+     "market_pct": 72
     },
     {
      "code": "f082112-joso:10000372",
@@ -776,7 +858,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.28
+     "vs_median": 1.28,
+     "market_yen": 8440.0,
+     "market_pct": 70
     },
     {
      "code": "f212172-hida:10000349",
@@ -794,7 +878,9 @@
      "review_avg": 4.79,
      "review_count": 116,
      "wakeari": true,
-     "vs_median": 1.22
+     "vs_median": 1.22,
+     "market_yen": 9380.0,
+     "market_pct": 67
     },
     {
      "code": "f452017-miyazaki:10001835",
@@ -812,7 +898,9 @@
      "review_avg": 4.86,
      "review_count": 35,
      "wakeari": false,
-     "vs_median": 1.22
+     "vs_median": 1.22,
+     "market_yen": 9380.0,
+     "market_pct": 67
     },
     {
      "code": "f452017-miyazaki:10001618",
@@ -830,7 +918,9 @@
      "review_avg": 4.67,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 1.22
+     "vs_median": 1.22,
+     "market_yen": 9380.0,
+     "market_pct": 67
     },
     {
      "code": "f452084-saito:10000700",
@@ -848,7 +938,9 @@
      "review_avg": 4.13,
      "review_count": 30,
      "wakeari": true,
-     "vs_median": 1.18
+     "vs_median": 1.18,
+     "market_yen": 9380.0,
+     "market_pct": 65
     },
     {
      "code": "f452017-miyazaki:10001027",
@@ -866,7 +958,9 @@
      "review_avg": 3.76,
      "review_count": 157,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 9380.0,
+     "market_pct": 63
     },
     {
      "code": "f402214-dazaifu:10000971",
@@ -884,7 +978,9 @@
      "review_avg": 4.31,
      "review_count": 75,
      "wakeari": true,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 9380.0,
+     "market_pct": 63
     },
     {
      "code": "f282260-awaji:10001956",
@@ -902,7 +998,9 @@
      "review_avg": 4.43,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 9380.0,
+     "market_pct": 63
     },
     {
      "code": "f402141-buzen:10000730",
@@ -920,7 +1018,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": true,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 14070.0,
+     "market_pct": 61
     },
     {
      "code": "f213411-yoro:10000520",
@@ -938,7 +1038,9 @@
      "review_avg": 4.77,
      "review_count": 13,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.09,
+     "market_yen": 7500.0,
+     "market_pct": 60
     },
     {
      "code": "f454010-takanabe:10000045",
@@ -956,7 +1058,9 @@
      "review_avg": 4.37,
      "review_count": 165,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 15010.0,
+     "market_pct": 59
     },
     {
      "code": "f402303-itoshima:10000156",
@@ -974,7 +1078,9 @@
      "review_avg": 4.72,
      "review_count": 144,
      "wakeari": false,
-     "vs_median": 1.06
+     "vs_median": 1.06,
+     "market_yen": 9380.0,
+     "market_pct": 59
     },
     {
      "code": "f452025-miyakonojo:10006041",
@@ -992,7 +1098,9 @@
      "review_avg": 4.83,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 7500.0,
+     "market_pct": 58
     },
     {
      "code": "f433691-nagomi:10000594",
@@ -1010,7 +1118,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": true,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 7500.0,
+     "market_pct": 58
     },
     {
      "code": "f242055-kuwana:10000525",
@@ -1028,7 +1138,9 @@
      "review_avg": 3.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.02
+     "vs_median": 1.02,
+     "market_yen": 5630.0,
+     "market_pct": 56
     },
     {
      "code": "f085464-sakai:10000542",
@@ -1046,7 +1158,9 @@
      "review_avg": 4.65,
      "review_count": 71,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 9380.0,
+     "market_pct": 55
     },
     {
      "code": "f402273-kama:10000648",
@@ -1064,7 +1178,9 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 9380.0,
+     "market_pct": 55
     },
     {
      "code": "f152064-shibata:10000554",
@@ -1082,7 +1198,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 12660.0,
+     "market_pct": 55
     },
     {
      "code": "f452025-miyakonojo:10000141",
@@ -1100,7 +1218,9 @@
      "review_avg": 4.37,
      "review_count": 38,
      "wakeari": false,
-     "vs_median": 0.95
+     "vs_median": 0.95,
+     "market_yen": 14070.0,
+     "market_pct": 52
     }
    ],
    "candidates": 157,
@@ -1138,7 +1258,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 2.17
+     "vs_median": 2.17,
+     "market_yen": 12200.0,
+     "market_pct": 122
     },
     {
      "code": "f452025-miyakonojo:10006992",
@@ -1156,7 +1278,9 @@
      "review_avg": 4.46,
      "review_count": 291,
      "wakeari": false,
-     "vs_median": 1.69
+     "vs_median": 1.69,
+     "market_yen": 15250.0,
+     "market_pct": 95
     },
     {
      "code": "f452017-miyazaki:10002664",
@@ -1174,7 +1298,9 @@
      "review_avg": 4.68,
      "review_count": 34,
      "wakeari": false,
-     "vs_median": 1.63
+     "vs_median": 1.63,
+     "market_yen": 13720.0,
+     "market_pct": 92
     },
     {
      "code": "f122157-asahi:10000437",
@@ -1192,7 +1318,9 @@
      "review_avg": 4.71,
      "review_count": 24,
      "wakeari": true,
-     "vs_median": 1.63
+     "vs_median": 1.63,
+     "market_yen": 9150.0,
+     "market_pct": 92
     },
     {
      "code": "f454311-misato:10000798",
@@ -1210,7 +1338,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.58
+     "vs_median": 1.58,
+     "market_yen": 16470.0,
+     "market_pct": 89
     },
     {
      "code": "f452025-miyakonojo:10004301",
@@ -1228,7 +1358,9 @@
      "review_avg": 4.47,
      "review_count": 85,
      "wakeari": false,
-     "vs_median": 1.43
+     "vs_median": 1.43,
+     "market_yen": 15250.0,
+     "market_pct": 80
     },
     {
      "code": "f453412-mimata:10000515",
@@ -1246,7 +1378,9 @@
      "review_avg": 4.63,
      "review_count": 153,
      "wakeari": false,
-     "vs_median": 1.42
+     "vs_median": 1.42,
+     "market_yen": 12810.0,
+     "market_pct": 80
     },
     {
      "code": "f032026-miyako:10000574",
@@ -1264,7 +1398,9 @@
      "review_avg": 4.28,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 1.41
+     "vs_median": 1.41,
+     "market_yen": 9150.0,
+     "market_pct": 80
     },
     {
      "code": "f462209-minamisatsuma:10005354",
@@ -1282,7 +1418,9 @@
      "review_avg": 3.73,
      "review_count": 44,
      "wakeari": true,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 15250.0,
+     "market_pct": 76
     },
     {
      "code": "f452017-miyazaki:10001614",
@@ -1300,7 +1438,9 @@
      "review_avg": 4.32,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 15250.0,
+     "market_pct": 76
     },
     {
      "code": "f452017-miyazaki:10002370",
@@ -1318,7 +1458,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 13720.0,
+     "market_pct": 76
     },
     {
      "code": "f452017-miyazaki:10001063",
@@ -1336,7 +1478,9 @@
      "review_avg": 4.5,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.25
+     "vs_median": 1.25,
+     "market_yen": 9150.0,
+     "market_pct": 70
     },
     {
      "code": "f382019-matsuyama:10002414",
@@ -1354,7 +1498,9 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.22
+     "vs_median": 1.22,
+     "market_yen": 5490.0,
+     "market_pct": 69
     },
     {
      "code": "f464686-osaki:10000308",
@@ -1372,7 +1518,9 @@
      "review_avg": 3.8,
      "review_count": 54,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 6100.0,
+     "market_pct": 68
     },
     {
      "code": "f082104-shimotsuma:10000154",
@@ -1390,7 +1538,9 @@
      "review_avg": 4.78,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 12200.0,
+     "market_pct": 68
     },
     {
      "code": "f082015-mito:10000460",
@@ -1408,7 +1558,9 @@
      "review_avg": 4.68,
      "review_count": 41,
      "wakeari": true,
-     "vs_median": 1.16
+     "vs_median": 1.16,
+     "market_yen": 9150.0,
+     "market_pct": 65
     },
     {
      "code": "f472107-itoman:10000648",
@@ -1426,7 +1578,9 @@
      "review_avg": 4.68,
      "review_count": 260,
      "wakeari": true,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 12200.0,
+     "market_pct": 64
     },
     {
      "code": "f452025-miyakonojo:10003712",
@@ -1444,7 +1598,9 @@
      "review_avg": 4.58,
      "review_count": 142,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 12200.0,
+     "market_pct": 64
     },
     {
      "code": "f462209-minamisatsuma:10005578",
@@ -1462,7 +1618,9 @@
      "review_avg": 4.5,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.13
+     "vs_median": 1.13,
+     "market_yen": 7620.0,
+     "market_pct": 64
     },
     {
      "code": "f454052-kawaminami:10001018",
@@ -1480,7 +1638,9 @@
      "review_avg": 4.35,
      "review_count": 75,
      "wakeari": false,
-     "vs_median": 1.12
+     "vs_median": 1.12,
+     "market_yen": 10680.0,
+     "market_pct": 63
     },
     {
      "code": "f452025-miyakonojo:10002649",
@@ -1498,7 +1658,9 @@
      "review_avg": 4.32,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 10980.0,
+     "market_pct": 61
     },
     {
      "code": "f324493-ohnan:10000047",
@@ -1516,7 +1678,9 @@
      "review_avg": 4.73,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 15250.0,
+     "market_pct": 61
     },
     {
      "code": "f442143-kunisaki:10001114",
@@ -1534,7 +1698,9 @@
      "review_avg": 2.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 6100.0,
+     "market_pct": 61
     },
     {
      "code": "f015784-shiraoi:10001525",
@@ -1552,7 +1718,9 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 7320.0,
+     "market_pct": 61
     },
     {
      "code": "f452017-miyazaki:10001831",
@@ -1570,7 +1738,9 @@
      "review_avg": 1.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 12200.0,
+     "market_pct": 61
     },
     {
      "code": "f454311-misato:10000677",
@@ -1588,7 +1758,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 5490.0,
+     "market_pct": 61
     },
     {
      "code": "f082015-mito:10000896",
@@ -1606,7 +1778,9 @@
      "review_avg": 4.63,
      "review_count": 78,
      "wakeari": true,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 6400.0,
+     "market_pct": 58
     },
     {
      "code": "f452041-nichinan:10001883",
@@ -1624,7 +1798,9 @@
      "review_avg": 4.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 12200.0,
+     "market_pct": 58
     },
     {
      "code": "f452025-miyakonojo:10006464",
@@ -1642,7 +1818,9 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.02
+     "vs_median": 1.02,
+     "market_yen": 9760.0,
+     "market_pct": 57
     },
     {
      "code": "f322075-gotsu:10000411",
@@ -1660,7 +1838,9 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 7320.0,
+     "market_pct": 56
     }
    ],
    "candidates": 149,
@@ -1698,7 +1878,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.44
+     "vs_median": 2.44,
+     "market_yen": 6480.0,
+     "market_pct": 72
     },
     {
      "code": "f464040-nagashima:10000645",
@@ -1716,7 +1898,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.36
+     "vs_median": 2.36,
+     "market_yen": 19440.0,
+     "market_pct": 69
     },
     {
      "code": "f434841-tsunagi:10000052",
@@ -1734,7 +1918,9 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.17
+     "vs_median": 2.17,
+     "market_yen": 12960.0,
+     "market_pct": 64
     },
     {
      "code": "f464040-nagashima:10000644",
@@ -1752,7 +1938,9 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.1
+     "vs_median": 2.1,
+     "market_yen": 12960.0,
+     "market_pct": 62
     },
     {
      "code": "f452025-miyakonojo:10007038",
@@ -1770,7 +1958,9 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.83
+     "vs_median": 1.83,
+     "market_yen": 6480.0,
+     "market_pct": 54
     },
     {
      "code": "f462080-izumi:10000302",
@@ -1788,7 +1978,9 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.77
+     "vs_median": 1.77,
+     "market_yen": 16200.0,
+     "market_pct": 52
     },
     {
      "code": "f442089-taketa:10000327",
@@ -1806,7 +1998,9 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.74
+     "vs_median": 1.74,
+     "market_yen": 9720.0,
+     "market_pct": 51
     },
     {
      "code": "f452025-miyakonojo:10004095",
@@ -1824,7 +2018,9 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.69
+     "vs_median": 1.69,
+     "market_yen": 6480.0,
+     "market_pct": 50
     },
     {
      "code": "f462063-akune:10000743",
@@ -1842,7 +2038,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.69
+     "vs_median": 1.69,
+     "market_yen": 19440.0,
+     "market_pct": 50
     },
     {
      "code": "f452025-miyakonojo:10004700",
@@ -1860,7 +2058,9 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.5,
+     "market_yen": 4860.0,
+     "market_pct": 44
     },
     {
      "code": "f452025-miyakonojo:10004478",
@@ -1878,7 +2078,9 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.5,
+     "market_yen": 4860.0,
+     "market_pct": 44
     },
     {
      "code": "f464040-nagashima:10000636",
@@ -1896,7 +2098,9 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 12960.0,
+     "market_pct": 43
     },
     {
      "code": "f454028-shintomi:10001238",
@@ -1914,7 +2118,9 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 5180.0,
+     "market_pct": 40
     },
     {
      "code": "f453820-kunitomi:10000957",
@@ -1932,7 +2138,9 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.28
+     "vs_median": 1.28,
+     "market_yen": 8260.0,
+     "market_pct": 38
     },
     {
      "code": "f442089-taketa:10000021",
@@ -1950,7 +2158,9 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.16
+     "vs_median": 1.16,
+     "market_yen": 6480.0,
+     "market_pct": 34
     },
     {
      "code": "f422029-sasebo:10004651",
@@ -1968,7 +2178,9 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.1,
+     "market_yen": 5510.0,
+     "market_pct": 32
     },
     {
      "code": "f452068-hyuga:10000841",
@@ -1986,7 +2198,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.1,
+     "market_yen": 4860.0,
+     "market_pct": 32
     },
     {
      "code": "f442089-taketa:10000020",
@@ -2004,7 +2218,9 @@
      "review_avg": 4.54,
      "review_count": 181,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3240.0,
+     "market_pct": 29
     },
     {
      "code": "f452068-hyuga:10000838",
@@ -2022,7 +2238,9 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4860.0,
+     "market_pct": 29
     },
     {
      "code": "f452076-kushima:10000700",
@@ -2040,7 +2258,9 @@
      "review_avg": 4.73,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 4860.0,
+     "market_pct": 27
     },
     {
      "code": "f342041-mihara:10000847",
@@ -2058,7 +2278,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 4860.0,
+     "market_pct": 27
     },
     {
      "code": "f212059-seki:10004151",
@@ -2076,7 +2298,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 6800.0,
+     "market_pct": 25
     },
     {
      "code": "f342041-mihara:10000839",
@@ -2094,7 +2318,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 3240.0,
+     "market_pct": 25
     },
     {
      "code": "f075485-katsurao:10000015",
@@ -2112,7 +2338,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 3240.0,
+     "market_pct": 25
     },
     {
      "code": "f462187-kirishima:10001267",
@@ -2130,7 +2358,9 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.8,
+     "market_yen": 2590.0,
+     "market_pct": 24
     },
     {
      "code": "f342041-mihara:10000848",
@@ -2148,7 +2378,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.79
+     "vs_median": 0.79,
+     "market_yen": 3240.0,
+     "market_pct": 23
     },
     {
      "code": "f212059-seki:10004159",
@@ -2166,7 +2398,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.72
+     "vs_median": 0.72,
+     "market_yen": 3400.0,
+     "market_pct": 21
     },
     {
      "code": "f072133-date:10000403",
@@ -2184,7 +2418,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71
+     "vs_median": 0.71,
+     "market_yen": 6480.0,
+     "market_pct": 21
     },
     {
      "code": "f352110-nagato:10000189",
@@ -2202,7 +2438,9 @@
      "review_avg": 4.96,
      "review_count": 24,
      "wakeari": false,
-     "vs_median": 0.71
+     "vs_median": 0.71,
+     "market_yen": 2920.0,
+     "market_pct": 21
     },
     {
      "code": "f462187-kirishima:10000863",
@@ -2220,11 +2458,13 @@
      "review_avg": 4.61,
      "review_count": 118,
      "wakeari": false,
-     "vs_median": 0.7
+     "vs_median": 0.7,
+     "market_yen": 2270.0,
+     "market_pct": 21
     }
    ],
-   "candidates": 165,
-   "ranked": 37,
+   "candidates": 166,
+   "ranked": 38,
    "dropped": {
     "対象外の商品": 74,
     "選択式": 45,
@@ -2234,10 +2474,10 @@
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 5500,
+    "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 23
    },
    "popularity": 1476
   },
@@ -2259,7 +2499,9 @@
      "review_avg": 4.28,
      "review_count": 108,
      "wakeari": true,
-     "vs_median": 4.2
+     "vs_median": 4.2,
+     "market_yen": 14820.0,
+     "market_pct": 74
     },
     {
      "code": "f013471-oshamambe:10000036",
@@ -2277,7 +2519,9 @@
      "review_avg": 4.82,
      "review_count": 256,
      "wakeari": false,
-     "vs_median": 2.89
+     "vs_median": 2.89,
+     "market_yen": 7900.0,
+     "market_pct": 51
     },
     {
      "code": "f015636-oumu:10000353",
@@ -2295,7 +2539,9 @@
      "review_avg": 4.75,
      "review_count": 24,
      "wakeari": true,
-     "vs_median": 1.81
+     "vs_median": 1.81,
+     "market_yen": 9880.0,
+     "market_pct": 32
     },
     {
      "code": "f011002-sapporo:10000049",
@@ -2313,7 +2559,9 @@
      "review_avg": 3.38,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.75
+     "vs_median": 1.75,
+     "market_yen": 4940.0,
+     "market_pct": 31
     },
     {
      "code": "f015636-oumu:10000354",
@@ -2331,7 +2579,9 @@
      "review_avg": 4.35,
      "review_count": 17,
      "wakeari": true,
-     "vs_median": 1.7
+     "vs_median": 1.7,
+     "market_yen": 9880.0,
+     "market_pct": 30
     },
     {
      "code": "f015148-esashi:10001390",
@@ -2349,7 +2599,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.63
+     "vs_median": 1.63,
+     "market_yen": 12350.0,
+     "market_pct": 29
     },
     {
      "code": "f015148-esashi:10001389",
@@ -2367,7 +2619,9 @@
      "review_avg": 4.0,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.62
+     "vs_median": 1.62,
+     "market_yen": 7410.0,
+     "market_pct": 28
     },
     {
      "code": "f023019-hiranai:10000008",
@@ -2385,7 +2639,9 @@
      "review_avg": 4.0,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 4940.0,
+     "market_pct": 26
     },
     {
      "code": "f012149-wakkanai:10000751",
@@ -2403,7 +2659,9 @@
      "review_avg": 4.36,
      "review_count": 28,
      "wakeari": false,
-     "vs_median": 1.4
+     "vs_median": 1.4,
+     "market_yen": 4940.0,
+     "market_pct": 25
     },
     {
      "code": "f015148-esashi:10000530",
@@ -2421,7 +2679,9 @@
      "review_avg": 4.76,
      "review_count": 190,
      "wakeari": false,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 4940.0,
+     "market_pct": 24
     },
     {
      "code": "f015636-oumu:10000141",
@@ -2439,7 +2699,9 @@
      "review_avg": 4.68,
      "review_count": 87,
      "wakeari": true,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 4940.0,
+     "market_pct": 24
     },
     {
      "code": "f023078-sotogahama:10000022",
@@ -2457,7 +2719,9 @@
      "review_avg": 5.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.24
+     "vs_median": 1.24,
+     "market_yen": 3950.0,
+     "market_pct": 22
     },
     {
      "code": "f015148-esashi:10000589",
@@ -2475,7 +2739,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.17
+     "vs_median": 1.17,
+     "market_yen": 4940.0,
+     "market_pct": 21
     },
     {
      "code": "f016624-akkeshi:10000710",
@@ -2493,7 +2759,9 @@
      "review_avg": 4.09,
      "review_count": 11,
      "wakeari": true,
-     "vs_median": 1.15
+     "vs_median": 1.15,
+     "market_yen": 4940.0,
+     "market_pct": 20
     },
     {
      "code": "f015148-esashi:10001399",
@@ -2511,7 +2779,9 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 4940.0,
+     "market_pct": 19
     },
     {
      "code": "f012114-abashiri:10001129",
@@ -2529,7 +2799,9 @@
      "review_avg": 3.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 4940.0,
+     "market_pct": 19
     },
     {
      "code": "f013471-oshamambe:10000174",
@@ -2547,7 +2819,9 @@
      "review_avg": 4.78,
      "review_count": 49,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4940.0,
+     "market_pct": 18
     },
     {
      "code": "f012114-abashiri:10001052",
@@ -2565,7 +2839,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3700.0,
+     "market_pct": 18
     },
     {
      "code": "f012114-abashiri:10000234",
@@ -2583,7 +2859,9 @@
      "review_avg": 4.86,
      "review_count": 270,
      "wakeari": true,
-     "vs_median": 0.97
+     "vs_median": 0.97,
+     "market_yen": 4940.0,
+     "market_pct": 17
     },
     {
      "code": "f015636-oumu:10000338",
@@ -2601,7 +2879,9 @@
      "review_avg": 4.88,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.97
+     "vs_median": 0.97,
+     "market_yen": 4940.0,
+     "market_pct": 17
     },
     {
      "code": "f015636-oumu:10000249",
@@ -2619,7 +2899,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.93,
+     "market_yen": 4940.0,
+     "market_pct": 16
     },
     {
      "code": "f012084-kitami:10001024",
@@ -2637,7 +2919,9 @@
      "review_avg": 4.8,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 4940.0,
+     "market_pct": 16
     },
     {
      "code": "f023078-sotogahama:10000027",
@@ -2655,7 +2939,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 4940.0,
+     "market_pct": 16
     },
     {
      "code": "f422100-iki:10000546",
@@ -2673,7 +2959,9 @@
      "review_avg": 4.91,
      "review_count": 23,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 4940.0,
+     "market_pct": 15
     },
     {
      "code": "f016918-betsukai:10000071",
@@ -2691,7 +2979,9 @@
      "review_avg": 4.88,
      "review_count": 468,
      "wakeari": true,
-     "vs_median": 0.82
+     "vs_median": 0.82,
+     "market_yen": 2470.0,
+     "market_pct": 15
     },
     {
      "code": "f016918-betsukai:10000092",
@@ -2709,7 +2999,9 @@
      "review_avg": 4.87,
      "review_count": 184,
      "wakeari": true,
-     "vs_median": 0.82
+     "vs_median": 0.82,
+     "market_yen": 2470.0,
+     "market_pct": 15
     },
     {
      "code": "f016918-betsukai:10003424",
@@ -2727,7 +3019,9 @@
      "review_avg": 4.67,
      "review_count": 27,
      "wakeari": true,
-     "vs_median": 0.82
+     "vs_median": 0.82,
+     "market_yen": 2470.0,
+     "market_pct": 15
     },
     {
      "code": "f422100-iki:10001942",
@@ -2745,7 +3039,9 @@
      "review_avg": 4.88,
      "review_count": 68,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 2470.0,
+     "market_pct": 14
     },
     {
      "code": "f016659-teshikaga:10000495",
@@ -2763,7 +3059,9 @@
      "review_avg": 4.76,
      "review_count": 37,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 4940.0,
+     "market_pct": 14
     },
     {
      "code": "f016659-teshikaga:10000299",
@@ -2781,7 +3079,9 @@
      "review_avg": 4.58,
      "review_count": 40,
      "wakeari": false,
-     "vs_median": 0.65
+     "vs_median": 0.65,
+     "market_yen": 1480.0,
+     "market_pct": 11
     }
    ],
    "candidates": 108,
@@ -2820,7 +3120,9 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.83
+     "vs_median": 1.83,
+     "market_yen": 6100.0,
+     "market_pct": 51
     },
     {
      "code": "f242047-matsusaka:10001233",
@@ -2838,7 +3140,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.55
+     "vs_median": 1.55,
+     "market_yen": 6860.0,
+     "market_pct": 43
     },
     {
      "code": "f442119-usa:10001528",
@@ -2856,7 +3160,9 @@
      "review_avg": 4.82,
      "review_count": 337,
      "wakeari": false,
-     "vs_median": 1.53
+     "vs_median": 1.53,
+     "market_yen": 3810.0,
+     "market_pct": 42
     },
     {
      "code": "f042072-natori:10002269",
@@ -2874,7 +3180,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 6100.0,
+     "market_pct": 41
     },
     {
      "code": "f422037-shimabara:10000444",
@@ -2892,7 +3200,9 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.38,
+     "market_yen": 3810.0,
+     "market_pct": 38
     },
     {
      "code": "f182109-sakai:10000785",
@@ -2910,7 +3220,9 @@
      "review_avg": 4.69,
      "review_count": 248,
      "wakeari": true,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 3810.0,
+     "market_pct": 36
     },
     {
      "code": "f242047-matsusaka:10001039",
@@ -2928,7 +3240,9 @@
      "review_avg": 4.64,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.25
+     "vs_median": 1.25,
+     "market_yen": 3810.0,
+     "market_pct": 35
     },
     {
      "code": "f452033-nobeoka:10000030",
@@ -2946,7 +3260,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.21
+     "vs_median": 1.21,
+     "market_yen": 5720.0,
+     "market_pct": 34
     },
     {
      "code": "f232131-nishio:10001591",
@@ -2964,7 +3280,9 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 3810.0,
+     "market_pct": 33
     },
     {
      "code": "f013625-kaminokuni:10000901",
@@ -2982,7 +3300,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.18
+     "vs_median": 1.18,
+     "market_yen": 4570.0,
+     "market_pct": 33
     },
     {
      "code": "f242098-owase:10001208",
@@ -3000,7 +3320,9 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.15,
+     "market_yen": 3810.0,
+     "market_pct": 32
     },
     {
      "code": "f242098-owase:10001210",
@@ -3018,7 +3340,9 @@
      "review_avg": 1.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.1,
+     "market_yen": 3050.0,
+     "market_pct": 30
     },
     {
      "code": "f260002-kyoto:10003468",
@@ -3036,7 +3360,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.06
+     "vs_median": 1.06,
+     "market_yen": 3810.0,
+     "market_pct": 29
     },
     {
      "code": "f182109-sakai:10002079",
@@ -3054,7 +3380,9 @@
      "review_avg": 4.36,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 2290.0,
+     "market_pct": 29
     },
     {
      "code": "f143413-oiso:10000272",
@@ -3072,7 +3400,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 2860.0,
+     "market_pct": 29
     },
     {
      "code": "f013625-kaminokuni:10000899",
@@ -3090,7 +3420,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 4570.0,
+     "market_pct": 29
     },
     {
      "code": "f412040-taku:10000910",
@@ -3108,7 +3440,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 3430.0,
+     "market_pct": 29
     },
     {
      "code": "f232131-nishio:10000873",
@@ -3126,7 +3460,9 @@
      "review_avg": 4.29,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 1.01
+     "vs_median": 1.01,
+     "market_yen": 4190.0,
+     "market_pct": 28
     },
     {
      "code": "f182095-echizen:10000776",
@@ -3144,7 +3480,9 @@
      "review_avg": 3.67,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4570.0,
+     "market_pct": 28
     },
     {
      "code": "f012238-nemuro:10007434",
@@ -3162,7 +3500,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3050.0,
+     "market_pct": 28
     },
     {
      "code": "f012238-nemuro:10007424",
@@ -3180,7 +3520,9 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3050.0,
+     "market_pct": 28
     },
     {
      "code": "f242098-owase:10001209",
@@ -3198,7 +3540,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3050.0,
+     "market_pct": 28
     },
     {
      "code": "f014087-yoichi:10003090",
@@ -3216,7 +3560,9 @@
      "review_avg": 4.58,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 0.98,
+     "market_yen": 3810.0,
+     "market_pct": 27
     },
     {
      "code": "f402036-kurume:10002429",
@@ -3234,7 +3580,9 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.98
+     "vs_median": 0.98,
+     "market_yen": 3810.0,
+     "market_pct": 27
     },
     {
      "code": "f182109-sakai:10000004",
@@ -3252,7 +3600,9 @@
      "review_avg": 4.8,
      "review_count": 279,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 4190.0,
+     "market_pct": 25
     },
     {
      "code": "f232017-toyohashi:10000701",
@@ -3270,7 +3620,9 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": true,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 2290.0,
+     "market_pct": 25
     },
     {
      "code": "f014842-haboro:10000118",
@@ -3288,7 +3640,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 3810.0,
+     "market_pct": 24
     },
     {
      "code": "f013625-kaminokuni:10000898",
@@ -3306,7 +3660,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.83,
+     "market_yen": 2290.0,
+     "market_pct": 23
     },
     {
      "code": "f185019-wakasa:10000339",
@@ -3324,7 +3680,9 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 0.69,
+     "market_yen": 1900.0,
+     "market_pct": 19
     },
     {
      "code": "f172014-kanazawa:10000909",
@@ -3342,7 +3700,9 @@
      "review_avg": 4.81,
      "review_count": 47,
      "wakeari": false,
-     "vs_median": 0.63
+     "vs_median": 0.63,
+     "market_yen": 1900.0,
+     "market_pct": 17
     }
    ],
    "candidates": 142,
@@ -3941,7 +4301,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 7320.0,
+     "market_pct": 32
     },
     {
      "code": "f014818-mashike:10001127",
@@ -3959,7 +4321,9 @@
      "review_avg": 4.5,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.15,
+     "market_yen": 9760.0,
+     "market_pct": 27
     },
     {
      "code": "f034851-fudai:10000024",
@@ -3977,7 +4341,9 @@
      "review_avg": 4.66,
      "review_count": 71,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.1,
+     "market_yen": 3900.0,
+     "market_pct": 26
     },
     {
      "code": "f013641-otobe:10000445",
@@ -3995,7 +4361,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 12200.0,
+     "market_pct": 24
     },
     {
      "code": "f012238-nemuro:10003630",
@@ -4013,7 +4381,9 @@
      "review_avg": 4.4,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 14630.0,
+     "market_pct": 24
     },
     {
      "code": "f012238-nemuro:10003627",
@@ -4031,7 +4401,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 14630.0,
+     "market_pct": 24
     },
     {
      "code": "f011002-sapporo:10000444",
@@ -4049,7 +4421,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.94
+     "vs_median": 0.94,
+     "market_yen": 12200.0,
+     "market_pct": 22
     },
     {
      "code": "f034851-fudai:10000057",
@@ -4067,7 +4441,9 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.9,
+     "market_yen": 4880.0,
+     "market_pct": 21
     },
     {
      "code": "f452033-nobeoka:10001893",
@@ -4085,7 +4461,9 @@
      "review_avg": 4.78,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 0.79
+     "vs_median": 0.79,
+     "market_yen": 2440.0,
+     "market_pct": 19
     },
     {
      "code": "f012246-chitose:10000827",
@@ -4103,13 +4481,15 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 5850.0,
+     "market_pct": 18
     }
    ],
-   "candidates": 107,
+   "candidates": 108,
    "ranked": 10,
    "dropped": {
-    "選択式": 16,
+    "選択式": 17,
     "対象外の商品": 78,
     "量が複数": 2,
     "量なし": 1
@@ -4141,7 +4521,9 @@
      "review_avg": 4.83,
      "review_count": 93,
      "wakeari": false,
-     "vs_median": 2.8
+     "vs_median": 2.8,
+     "market_yen": 8850.0,
+     "market_pct": 98
     },
     {
      "code": "f122386-isumi:10000554",
@@ -4159,7 +4541,9 @@
      "review_avg": 4.62,
      "review_count": 69,
      "wakeari": true,
-     "vs_median": 2.43
+     "vs_median": 2.43,
+     "market_yen": 13270.0,
+     "market_pct": 86
     },
     {
      "code": "f122025-choshi:10001725",
@@ -4177,7 +4561,9 @@
      "review_avg": 4.96,
      "review_count": 26,
      "wakeari": true,
-     "vs_median": 2.06
+     "vs_median": 2.06,
+     "market_yen": 9400.0,
+     "market_pct": 72
     },
     {
      "code": "f016098-erimo:10000604",
@@ -4195,7 +4581,9 @@
      "review_avg": 4.5,
      "review_count": 113,
      "wakeari": false,
-     "vs_median": 1.97
+     "vs_median": 1.97,
+     "market_yen": 11060.0,
+     "market_pct": 69
     },
     {
      "code": "f042030-shiogama:10000795",
@@ -4213,7 +4601,9 @@
      "review_avg": 4.55,
      "review_count": 211,
      "wakeari": true,
-     "vs_median": 1.89
+     "vs_median": 1.89,
+     "market_yen": 9950.0,
+     "market_pct": 66
     },
     {
      "code": "f122386-isumi:10000481",
@@ -4231,7 +4621,9 @@
      "review_avg": 4.73,
      "review_count": 37,
      "wakeari": false,
-     "vs_median": 1.89
+     "vs_median": 1.89,
+     "market_yen": 8300.0,
+     "market_pct": 66
     },
     {
      "code": "f122181-katsuura:10000359",
@@ -4249,7 +4641,9 @@
      "review_avg": 4.78,
      "review_count": 93,
      "wakeari": false,
-     "vs_median": 1.75
+     "vs_median": 1.75,
+     "market_yen": 8300.0,
+     "market_pct": 61
     },
     {
      "code": "f014087-yoichi:10003146",
@@ -4267,7 +4661,9 @@
      "review_avg": 4.66,
      "review_count": 35,
      "wakeari": false,
-     "vs_median": 1.68
+     "vs_median": 1.68,
+     "market_yen": 8300.0,
+     "market_pct": 59
     },
     {
      "code": "f152242-sado:10002272",
@@ -4285,7 +4681,9 @@
      "review_avg": 4.95,
      "review_count": 58,
      "wakeari": false,
-     "vs_median": 1.57
+     "vs_median": 1.57,
+     "market_yen": 8300.0,
+     "market_pct": 55
     },
     {
      "code": "f312045-sakaiminato:10000011",
@@ -4303,7 +4701,9 @@
      "review_avg": 4.78,
      "review_count": 119,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 8300.0,
+     "market_pct": 52
     },
     {
      "code": "f122386-isumi:10000217",
@@ -4321,7 +4721,9 @@
      "review_avg": 4.5,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.38,
+     "market_yen": 7740.0,
+     "market_pct": 48
     },
     {
      "code": "f083097-oarai:10001485",
@@ -4339,7 +4741,9 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": true,
-     "vs_median": 1.26
+     "vs_median": 1.26,
+     "market_yen": 4420.0,
+     "market_pct": 44
     },
     {
      "code": "f014575-kamikawa:10000275",
@@ -4357,7 +4761,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.12
+     "vs_median": 1.12,
+     "market_yen": 8300.0,
+     "market_pct": 40
     },
     {
      "code": "f016098-erimo:10000849",
@@ -4375,7 +4781,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.12
+     "vs_median": 1.12,
+     "market_yen": 5530.0,
+     "market_pct": 40
     },
     {
      "code": "f042056-kesennuma:10001941",
@@ -4393,7 +4801,9 @@
      "review_avg": 4.46,
      "review_count": 24,
      "wakeari": true,
-     "vs_median": 1.01
+     "vs_median": 1.01,
+     "market_yen": 5530.0,
+     "market_pct": 36
     },
     {
      "code": "f272132-izumisano:10007881",
@@ -4411,7 +4821,9 @@
      "review_avg": 4.72,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 3870.0,
+     "market_pct": 35
     },
     {
      "code": "f016683-shiranuka:10000157",
@@ -4429,7 +4841,9 @@
      "review_avg": 4.2,
      "review_count": 133,
      "wakeari": false,
-     "vs_median": 0.94
+     "vs_median": 0.94,
+     "market_yen": 4980.0,
+     "market_pct": 33
     },
     {
      "code": "f372064-sanukishi:10000003",
@@ -4447,7 +4861,9 @@
      "review_avg": 4.62,
      "review_count": 68,
      "wakeari": false,
-     "vs_median": 0.92
+     "vs_median": 0.92,
+     "market_yen": 5530.0,
+     "market_pct": 33
     },
     {
      "code": "f014575-kamikawa:10000337",
@@ -4465,7 +4881,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.88
+     "vs_median": 0.88,
+     "market_yen": 2490.0,
+     "market_pct": 31
     },
     {
      "code": "f242098-owase:10001268",
@@ -4483,7 +4901,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.7
+     "vs_median": 0.7,
+     "market_yen": 2650.0,
+     "market_pct": 25
     },
     {
      "code": "f252034-nagahama:10000697",
@@ -4501,7 +4921,9 @@
      "review_avg": 5.0,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.63
+     "vs_median": 0.63,
+     "market_yen": 3320.0,
+     "market_pct": 22
     },
     {
      "code": "f232319-tahara:10000042",
@@ -4519,7 +4941,9 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.61
+     "vs_median": 0.61,
+     "market_yen": 2760.0,
+     "market_pct": 21
     },
     {
      "code": "f242098-owase:10001179",
@@ -4537,7 +4961,9 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.59
+     "vs_median": 0.59,
+     "market_yen": 3320.0,
+     "market_pct": 21
     },
     {
      "code": "f242098-owase:10001180",
@@ -4555,7 +4981,9 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.56
+     "vs_median": 0.56,
+     "market_yen": 3320.0,
+     "market_pct": 20
     },
     {
      "code": "f372064-sanukishi:10000542",
@@ -4573,7 +5001,9 @@
      "review_avg": 4.2,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.52,
+     "market_yen": 1660.0,
+     "market_pct": 18
     },
     {
      "code": "f182109-sakai:10000693",
@@ -4591,7 +5021,9 @@
      "review_avg": 3.93,
      "review_count": 81,
      "wakeari": false,
-     "vs_median": 0.47
+     "vs_median": 0.47,
+     "market_yen": 3320.0,
+     "market_pct": 17
     },
     {
      "code": "f012068-kushiro:10001785",
@@ -4609,7 +5041,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.46
+     "vs_median": 0.46,
+     "market_yen": 3320.0,
+     "market_pct": 16
     },
     {
      "code": "f182109-sakai:10001420",
@@ -4627,7 +5061,9 @@
      "review_avg": 4.0,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.45
+     "vs_median": 0.45,
+     "market_yen": 2210.0,
+     "market_pct": 16
     },
     {
      "code": "f182109-sakai:10001422",
@@ -4645,7 +5081,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.45
+     "vs_median": 0.45,
+     "market_yen": 6640.0,
+     "market_pct": 16
     },
     {
      "code": "f182087-awara:10000624",
@@ -4663,7 +5101,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.42
+     "vs_median": 0.42,
+     "market_yen": 3320.0,
+     "market_pct": 15
     }
    ],
    "candidates": 153,
@@ -4701,7 +5141,9 @@
      "review_avg": 3.67,
      "review_count": 33,
      "wakeari": true,
-     "vs_median": 2.5
+     "vs_median": 2.6,
+     "market_yen": 10550.0,
+     "market_pct": 106
     },
     {
      "code": "f431001-kumamoto:10000851",
@@ -4719,7 +5161,9 @@
      "review_avg": 3.8,
      "review_count": 203,
      "wakeari": false,
-     "vs_median": 2.14
+     "vs_median": 2.23,
+     "market_yen": 6330.0,
+     "market_pct": 90
     },
     {
      "code": "f245615-mihama:10000085",
@@ -4737,7 +5181,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.08
+     "vs_median": 2.17,
+     "market_yen": 10550.0,
+     "market_pct": 88
     },
     {
      "code": "f382141-seiyo:10000128",
@@ -4755,7 +5201,9 @@
      "review_avg": 4.73,
      "review_count": 11,
      "wakeari": true,
-     "vs_median": 1.92
+     "vs_median": 2.0,
+     "market_yen": 10550.0,
+     "market_pct": 81
     },
     {
      "code": "f382035-uwajima:10000118",
@@ -4773,7 +5221,9 @@
      "review_avg": 4.33,
      "review_count": 27,
      "wakeari": false,
-     "vs_median": 1.67
+     "vs_median": 1.73,
+     "market_yen": 10550.0,
+     "market_pct": 70
     },
     {
      "code": "f303615-yuasa:10000354",
@@ -4791,7 +5241,9 @@
      "review_avg": 3.74,
      "review_count": 81,
      "wakeari": false,
-     "vs_median": 1.56
+     "vs_median": 1.63,
+     "market_yen": 10550.0,
+     "market_pct": 66
     },
     {
      "code": "f382035-uwajima:10000497",
@@ -4809,7 +5261,9 @@
      "review_avg": 4.38,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.46
+     "vs_median": 1.52,
+     "market_yen": 7380.0,
+     "market_pct": 62
     },
     {
      "code": "f302023-kainan:10000863",
@@ -4827,7 +5281,9 @@
      "review_avg": 4.85,
      "review_count": 137,
      "wakeari": true,
-     "vs_median": 1.39
+     "vs_median": 1.44,
+     "market_yen": 5280.0,
+     "market_pct": 59
     },
     {
      "code": "f303666-aridagawa:10002075",
@@ -4845,7 +5301,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.25
+     "vs_median": 1.3,
+     "market_yen": 5280.0,
+     "market_pct": 53
     },
     {
      "code": "f303666-aridagawa:10000162",
@@ -4863,7 +5321,9 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.13,
+     "market_yen": 10550.0,
+     "market_pct": 46
     },
     {
      "code": "f303615-yuasa:10000004",
@@ -4881,7 +5341,9 @@
      "review_avg": 4.36,
      "review_count": 147,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.04,
+     "market_yen": 8440.0,
+     "market_pct": 42
     },
     {
      "code": "f303666-aridagawa:10000617",
@@ -4899,7 +5361,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.04,
+     "market_yen": 10550.0,
+     "market_pct": 42
     },
     {
      "code": "f303623-hirogawa:10000297",
@@ -4917,7 +5381,9 @@
      "review_avg": 4.85,
      "review_count": 217,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0,
+     "market_yen": 5280.0,
+     "market_pct": 41
     },
     {
      "code": "f303615-yuasa:10005854",
@@ -4935,7 +5401,29 @@
      "review_avg": 4.79,
      "review_count": 184,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0,
+     "market_yen": 5280.0,
+     "market_pct": 41
+    },
+    {
+     "code": "f392111-konan:10000698",
+     "name": "甘い完熟みかん 寿太郎 (家庭用) 約5kg - 先行予約 数量限定 大容量 訳あり 果物 くだもの フルーツ 蜜柑 みかん 柑橘 美味しい ジューシー フレッシュ 期間限定 間城農園 10,000円以上 10000円以上 1万円以上 5キロ 高知県 香南市【常温】ms-0087",
+     "price": 13000,
+     "qty": 5.0,
+     "evidence": "5キロ",
+     "per10k": 3.846,
+     "unit_price": 2600,
+     "shop": "高知県香南市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ss7qo.ia3301c3.g00ss7qo.ia33156d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff392111-konan%2F10000680%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff392111-konan%2Fi%2F10000698%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "香南市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f392111-konan/cabinet/y_item_img/ms/0403_ms_01a.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 3,
+     "wakeari": true,
+     "vs_median": 1.0,
+     "market_yen": 5280.0,
+     "market_pct": 41
     },
     {
      "code": "f303810-mihama:10001070",
@@ -4953,7 +5441,9 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0,
+     "market_yen": 10550.0,
+     "market_pct": 41
     },
     {
      "code": "f303615-yuasa:10002539",
@@ -4971,7 +5461,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.93,
+     "market_yen": 10550.0,
+     "market_pct": 38
     },
     {
      "code": "f303615-yuasa:10002536",
@@ -4989,7 +5481,9 @@
      "review_avg": 4.0,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.81,
+     "market_yen": 10550.0,
+     "market_pct": 33
     },
     {
      "code": "f303615-yuasa:10000031",
@@ -5007,7 +5501,9 @@
      "review_avg": 4.31,
      "review_count": 45,
      "wakeari": false,
-     "vs_median": 0.74
+     "vs_median": 0.76,
+     "market_yen": 10550.0,
+     "market_pct": 31
     },
     {
      "code": "f303615-yuasa:10002538",
@@ -5025,7 +5521,9 @@
      "review_avg": 4.09,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 0.69
+     "vs_median": 0.72,
+     "market_yen": 5280.0,
+     "market_pct": 29
     },
     {
      "code": "f303615-yuasa:10001620",
@@ -5043,7 +5541,9 @@
      "review_avg": 3.76,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 0.66
+     "vs_median": 0.68,
+     "market_yen": 5280.0,
+     "market_pct": 28
     },
     {
      "code": "f303615-yuasa:10000002",
@@ -5061,7 +5561,9 @@
      "review_avg": 3.91,
      "review_count": 46,
      "wakeari": false,
-     "vs_median": 0.62
+     "vs_median": 0.65,
+     "market_yen": 5280.0,
+     "market_pct": 26
     },
     {
      "code": "f442143-kunisaki:10001290",
@@ -5079,7 +5581,9 @@
      "review_avg": 4.13,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.6
+     "vs_median": 0.62,
+     "market_yen": 5280.0,
+     "market_pct": 25
     },
     {
      "code": "f382027-imabari:10001558",
@@ -5097,7 +5601,9 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.47
+     "vs_median": 0.49,
+     "market_yen": 3160.0,
+     "market_pct": 20
     },
     {
      "code": "f384020-tobe:10000043",
@@ -5115,11 +5621,13 @@
      "review_avg": 3.82,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.18
+     "vs_median": 0.18,
+     "market_yen": 2850.0,
+     "market_pct": 7
     }
    ],
-   "candidates": 102,
-   "ranked": 24,
+   "candidates": 103,
+   "ranked": 25,
    "dropped": {
     "選択式": 39,
     "対象外の商品": 27,
@@ -5128,13 +5636,13 @@
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 4.0,
+    "median_per10k": 3.846,
     "median_unit_price": 2600,
     "min_unit_price": 1000,
     "max_unit_price": 14074,
-    "towns": 13
+    "towns": 14
    },
-   "popularity": 1237
+   "popularity": 1240
   },
   "apple": {
    "items": [
@@ -5154,7 +5662,9 @@
      "review_avg": 4.26,
      "review_count": 251,
      "wakeari": true,
-     "vs_median": 1.86
+     "vs_median": 1.86,
+     "market_yen": 11970.0,
+     "market_pct": 86
     },
     {
      "code": "f022012-aomori:10001034",
@@ -5172,7 +5682,9 @@
      "review_avg": 4.0,
      "review_count": 5,
      "wakeari": true,
-     "vs_median": 1.86
+     "vs_median": 1.86,
+     "market_yen": 11970.0,
+     "market_pct": 86
     },
     {
      "code": "f062014-yamagata:10003619",
@@ -5190,7 +5702,9 @@
      "review_avg": 3.84,
      "review_count": 105,
      "wakeari": false,
-     "vs_median": 1.53
+     "vs_median": 1.53,
+     "market_yen": 11970.0,
+     "market_pct": 70
     },
     {
      "code": "f204030-takamori:10000720",
@@ -5208,7 +5722,9 @@
      "review_avg": 4.0,
      "review_count": 9,
      "wakeari": true,
-     "vs_median": 1.44
+     "vs_median": 1.44,
+     "market_yen": 5980.0,
+     "market_pct": 66
     },
     {
      "code": "f205419-obuse:10000418",
@@ -5226,7 +5742,9 @@
      "review_avg": 3.19,
      "review_count": 90,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 3590.0,
+     "market_pct": 60
     },
     {
      "code": "f204463-omi:10000087",
@@ -5244,7 +5762,9 @@
      "review_avg": 4.92,
      "review_count": 53,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 5980.0,
+     "market_pct": 60
     },
     {
      "code": "f204463-omi:10000088",
@@ -5262,7 +5782,9 @@
      "review_avg": 4.68,
      "review_count": 44,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 5980.0,
+     "market_pct": 60
     },
     {
      "code": "f205419-obuse:10000417",
@@ -5280,7 +5802,9 @@
      "review_avg": 4.57,
      "review_count": 42,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 3590.0,
+     "market_pct": 60
     },
     {
      "code": "f205907-iizuna:10000816",
@@ -5298,7 +5822,9 @@
      "review_avg": 4.66,
      "review_count": 71,
      "wakeari": true,
-     "vs_median": 1.24
+     "vs_median": 1.24,
+     "market_yen": 5980.0,
+     "market_pct": 57
     },
     {
      "code": "f022012-aomori:10001212",
@@ -5316,7 +5842,9 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 1.18
+     "vs_median": 1.18,
+     "market_yen": 5980.0,
+     "market_pct": 54
     },
     {
      "code": "f052043-odate:10000289",
@@ -5334,7 +5862,9 @@
      "review_avg": 4.59,
      "review_count": 17,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 5980.0,
+     "market_pct": 46
     },
     {
      "code": "f062090-nagai:10000444",
@@ -5352,7 +5882,9 @@
      "review_avg": 4.11,
      "review_count": 9,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 5980.0,
+     "market_pct": 46
     },
     {
      "code": "f022012-aomori:10001419",
@@ -5370,7 +5902,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": true,
-     "vs_median": 0.98
+     "vs_median": 0.98,
+     "market_yen": 3590.0,
+     "market_pct": 45
     },
     {
      "code": "f062065-sagae:10000311",
@@ -5388,7 +5922,9 @@
      "review_avg": 4.79,
      "review_count": 14,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.93,
+     "market_yen": 5980.0,
+     "market_pct": 43
     },
     {
      "code": "f023612-fujisaki:10000427",
@@ -5406,7 +5942,9 @@
      "review_avg": 4.54,
      "review_count": 54,
      "wakeari": true,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 3590.0,
+     "market_pct": 36
     },
     {
      "code": "f062090-nagai:10000709",
@@ -5424,7 +5962,9 @@
      "review_avg": 4.16,
      "review_count": 49,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 3590.0,
+     "market_pct": 36
     },
     {
      "code": "f023841-tsuruta:10000104",
@@ -5442,7 +5982,9 @@
      "review_avg": 5.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.72
+     "vs_median": 0.72,
+     "market_yen": 5980.0,
+     "market_pct": 33
     },
     {
      "code": "f022012-aomori:10000075",
@@ -5460,7 +6002,9 @@
      "review_avg": 3.96,
      "review_count": 70,
      "wakeari": true,
-     "vs_median": 0.65
+     "vs_median": 0.65,
+     "market_yen": 3590.0,
+     "market_pct": 30
     },
     {
      "code": "f062090-nagai:10001051",
@@ -5478,7 +6022,9 @@
      "review_avg": 5.0,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.6
+     "vs_median": 0.6,
+     "market_yen": 3590.0,
+     "market_pct": 28
     },
     {
      "code": "f062090-nagai:10001019",
@@ -5496,7 +6042,9 @@
      "review_avg": 4.1,
      "review_count": 41,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.52,
+     "market_yen": 3590.0,
+     "market_pct": 24
     },
     {
      "code": "f205907-iizuna:10000920",
@@ -5514,7 +6062,9 @@
      "review_avg": 4.82,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 0.43
+     "vs_median": 0.43,
+     "market_yen": 3590.0,
+     "market_pct": 20
     },
     {
      "code": "f022012-aomori:10000220",
@@ -5532,7 +6082,9 @@
      "review_avg": 3.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.39
+     "vs_median": 0.39,
+     "market_yen": 3590.0,
+     "market_pct": 18
     }
    ],
    "candidates": 100,
@@ -6511,7 +7063,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 4.0
+     "vs_median": 4.0,
+     "market_yen": 3050.0,
+     "market_pct": 38
     },
     {
      "code": "f142174-minamiashigara:10000149",
@@ -6529,7 +7083,9 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 2.46
+     "vs_median": 2.46,
+     "market_yen": 3050.0,
+     "market_pct": 23
     },
     {
      "code": "f043010-zao:10000567",
@@ -6547,7 +7103,9 @@
      "review_avg": 4.78,
      "review_count": 209,
      "wakeari": false,
-     "vs_median": 2.0
+     "vs_median": 2.0,
+     "market_yen": 1330.0,
+     "market_pct": 19
     },
     {
      "code": "f434281-takamori:10000593",
@@ -6565,7 +7123,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.78
+     "vs_median": 1.78,
+     "market_yen": 1520.0,
+     "market_pct": 17
     },
     {
      "code": "f434442-kosa:10000417",
@@ -6583,7 +7143,9 @@
      "review_avg": 1.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.78
+     "vs_median": 1.78,
+     "market_yen": 1520.0,
+     "market_pct": 17
     },
     {
      "code": "f434434-mashiki:10000632",
@@ -6601,7 +7163,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.78
+     "vs_median": 1.78,
+     "market_yen": 1520.0,
+     "market_pct": 17
     },
     {
      "code": "f212032-takayama:10003214",
@@ -6619,7 +7183,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.78
+     "vs_median": 1.78,
+     "market_yen": 1520.0,
+     "market_pct": 17
     },
     {
      "code": "f281000-kobe:10002986",
@@ -6637,7 +7203,9 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.6
+     "vs_median": 1.6,
+     "market_yen": 1520.0,
+     "market_pct": 15
     },
     {
      "code": "f434035-ozu:10000090",
@@ -6655,7 +7223,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.6
+     "vs_median": 1.6,
+     "market_yen": 1520.0,
+     "market_pct": 15
     },
     {
      "code": "f392022-muroto:10001214",
@@ -6673,7 +7243,9 @@
      "review_avg": 4.83,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.57
+     "vs_median": 1.57,
+     "market_yen": 1270.0,
+     "market_pct": 15
     },
     {
      "code": "f392022-muroto:10001371",
@@ -6691,7 +7263,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.57
+     "vs_median": 1.57,
+     "market_yen": 1270.0,
+     "market_pct": 15
     },
     {
      "code": "f432105-kikuchi:10003220",
@@ -6709,7 +7283,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.56
+     "vs_median": 1.56,
+     "market_yen": 1330.0,
+     "market_pct": 15
     },
     {
      "code": "f104493-minakami:10000193",
@@ -6727,7 +7303,9 @@
      "review_avg": 4.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 840.0,
+     "market_pct": 14
     },
     {
      "code": "f462187-kirishima:10000368",
@@ -6745,7 +7323,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 1270.0,
+     "market_pct": 13
     },
     {
      "code": "f393070-geisei:10001361",
@@ -6763,7 +7343,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 760.0,
+     "market_pct": 13
     },
     {
      "code": "f281000-kobe:10002985",
@@ -6781,7 +7363,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 760.0,
+     "market_pct": 13
     },
     {
      "code": "f392022-muroto:10000430",
@@ -6799,7 +7383,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.23
+     "vs_median": 1.23,
+     "market_yen": 760.0,
+     "market_pct": 12
     },
     {
      "code": "f152269-minamiuonuma:10001738",
@@ -6817,7 +7403,9 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 760.0,
+     "market_pct": 11
     },
     {
      "code": "f392022-muroto:10000683",
@@ -6835,7 +7423,9 @@
      "review_avg": 4.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.1,
+     "market_yen": 1520.0,
+     "market_pct": 11
     },
     {
      "code": "f462187-kirishima:10000369",
@@ -6853,7 +7443,9 @@
      "review_avg": 4.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 1020.0,
+     "market_pct": 10
     },
     {
      "code": "f194301-fujikawagutiko:10001275",
@@ -6871,7 +7463,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 1520.0,
+     "market_pct": 10
     },
     {
      "code": "f322059-oda:10000012",
@@ -6889,7 +7483,9 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 1520.0,
+     "market_pct": 10
     },
     {
      "code": "f112071-chichibu:10000020",
@@ -6907,7 +7503,9 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.03,
+     "market_yen": 1270.0,
+     "market_pct": 10
     },
     {
      "code": "f422037-shimabara:10000331",
@@ -6925,7 +7523,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.02
+     "vs_median": 1.02,
+     "market_yen": 2030.0,
+     "market_pct": 10
     },
     {
      "code": "f192040-tsuru:10000852",
@@ -6943,7 +7543,9 @@
      "review_avg": 4.7,
      "review_count": 27,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 760.0,
+     "market_pct": 10
     },
     {
      "code": "f314030-kofu:10000050",
@@ -6961,7 +7563,9 @@
      "review_avg": 4.89,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 760.0,
+     "market_pct": 10
     },
     {
      "code": "f314030-kofu:10000004",
@@ -6979,7 +7583,9 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 1520.0,
+     "market_pct": 10
     },
     {
      "code": "f382141-seiyo:10000027",
@@ -6997,7 +7603,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 760.0,
+     "market_pct": 10
     },
     {
      "code": "f222071-fujinomiya:10000007",
@@ -7015,7 +7623,9 @@
      "review_avg": 4.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 0.96,
+     "market_yen": 910.0,
+     "market_pct": 9
     },
     {
      "code": "f212059-seki:10000563",
@@ -7033,7 +7643,9 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.94
+     "vs_median": 0.94,
+     "market_yen": 1520.0,
+     "market_pct": 9
     }
    ],
    "candidates": 165,
@@ -7072,7 +7684,9 @@
      "review_avg": 4.83,
      "review_count": 220,
      "wakeari": false,
-     "vs_median": 1.19
+     "vs_median": 1.19,
+     "market_yen": 4680.0,
+     "market_pct": 40
     },
     {
      "code": "f473626-yaese:10000140",
@@ -7090,7 +7704,9 @@
      "review_avg": 4.86,
      "review_count": 202,
      "wakeari": false,
-     "vs_median": 1.19
+     "vs_median": 1.19,
+     "market_yen": 4680.0,
+     "market_pct": 40
     },
     {
      "code": "f473286-nakagusuku:10000167",
@@ -7108,7 +7724,9 @@
      "review_avg": 4.93,
      "review_count": 54,
      "wakeari": false,
-     "vs_median": 1.19
+     "vs_median": 1.19,
+     "market_yen": 4680.0,
+     "market_pct": 40
     },
     {
      "code": "f473626-yaese:10000511",
@@ -7126,7 +7744,9 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.18
+     "vs_median": 1.18,
+     "market_yen": 6690.0,
+     "market_pct": 39
     },
     {
      "code": "f473626-yaese:10000586",
@@ -7144,7 +7764,9 @@
      "review_avg": 4.85,
      "review_count": 1135,
      "wakeari": false,
-     "vs_median": 1.01
+     "vs_median": 1.01,
+     "market_yen": 4680.0,
+     "market_pct": 34
     },
     {
      "code": "f473286-nakagusuku:10000175",
@@ -7162,7 +7784,9 @@
      "review_avg": 4.88,
      "review_count": 16,
      "wakeari": false,
-     "vs_median": 1.01
+     "vs_median": 1.01,
+     "market_yen": 4680.0,
+     "market_pct": 34
     },
     {
      "code": "f472093-nago:10000847",
@@ -7180,7 +7804,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.01
+     "vs_median": 1.01,
+     "market_yen": 4680.0,
+     "market_pct": 34
     },
     {
      "code": "f072141-motomiya:10000050",
@@ -7198,7 +7824,9 @@
      "review_avg": 5.0,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4680.0,
+     "market_pct": 33
     },
     {
      "code": "f072141-motomiya:10000051",
@@ -7216,7 +7844,9 @@
      "review_avg": 4.5,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 6690.0,
+     "market_pct": 33
     },
     {
      "code": "f072141-motomiya:10000172",
@@ -7234,7 +7864,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.97
+     "vs_median": 0.97,
+     "market_yen": 6690.0,
+     "market_pct": 32
     },
     {
      "code": "f072141-motomiya:10000004",
@@ -7252,7 +7884,9 @@
      "review_avg": 4.64,
      "review_count": 44,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.93,
+     "market_yen": 9370.0,
+     "market_pct": 31
     },
     {
      "code": "f072141-motomiya:10000238",
@@ -7270,7 +7904,9 @@
      "review_avg": 4.57,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.93,
+     "market_yen": 9370.0,
+     "market_pct": 31
     },
     {
      "code": "f473626-yaese:10000696",
@@ -7288,7 +7924,9 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.91,
+     "market_yen": 6690.0,
+     "market_pct": 30
     },
     {
      "code": "f473626-yaese:10000621",
@@ -7306,7 +7944,9 @@
      "review_avg": 4.92,
      "review_count": 114,
      "wakeari": false,
-     "vs_median": 0.84
+     "vs_median": 0.84,
+     "market_yen": 4680.0,
+     "market_pct": 28
     },
     {
      "code": "f252026-hikone:10000998",
@@ -7324,7 +7964,9 @@
      "review_avg": 5.0,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.8,
+     "market_yen": 4680.0,
+     "market_pct": 27
     },
     {
      "code": "f473626-yaese:10000372",
@@ -7342,7 +7984,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.73
+     "vs_median": 0.73,
+     "market_yen": 2340.0,
+     "market_pct": 24
     }
    ],
    "candidates": 124,
@@ -7381,7 +8025,9 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 2.77
+     "vs_median": 2.77,
+     "market_yen": 5140.0,
+     "market_pct": 34
     },
     {
      "code": "f473481-yonabaru:10000291",
@@ -7399,7 +8045,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.45
+     "vs_median": 2.45,
+     "market_yen": 5140.0,
+     "market_pct": 30
     },
     {
      "code": "f422126-saikai:10001137",
@@ -7417,7 +8065,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 2.23
+     "vs_median": 2.23,
+     "market_yen": 5780.0,
+     "market_pct": 28
     },
     {
      "code": "f332054-kasaoka:10000317",
@@ -7435,7 +8085,9 @@
      "review_avg": 4.25,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.6
+     "vs_median": 1.6,
+     "market_yen": 2570.0,
+     "market_pct": 20
     },
     {
      "code": "f404021-kurate:10000017",
@@ -7453,7 +8105,9 @@
      "review_avg": 2.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.6
+     "vs_median": 1.6,
+     "market_yen": 2570.0,
+     "market_pct": 20
     },
     {
      "code": "f454028-shintomi:10000839",
@@ -7471,7 +8125,9 @@
      "review_avg": 4.95,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.56
+     "vs_median": 1.56,
+     "market_yen": 1930.0,
+     "market_pct": 19
     },
     {
      "code": "f443417-hiji:10001972",
@@ -7489,7 +8145,9 @@
      "review_avg": 4.63,
      "review_count": 38,
      "wakeari": false,
-     "vs_median": 1.49
+     "vs_median": 1.49,
+     "market_yen": 2570.0,
+     "market_pct": 18
     },
     {
      "code": "f462241-isa:10000436",
@@ -7507,7 +8165,9 @@
      "review_avg": 4.79,
      "review_count": 218,
      "wakeari": true,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 960.0,
+     "market_pct": 16
     },
     {
      "code": "f454028-shintomi:10000838",
@@ -7525,7 +8185,9 @@
      "review_avg": 4.57,
      "review_count": 14,
      "wakeari": false,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 1280.0,
+     "market_pct": 16
     },
     {
      "code": "f082015-mito:10001499",
@@ -7543,7 +8205,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.3
+     "vs_median": 1.3,
+     "market_yen": 1930.0,
+     "market_pct": 16
     },
     {
      "code": "f192104-kai:10000056",
@@ -7561,7 +8225,9 @@
      "review_avg": 4.75,
      "review_count": 16,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 1930.0,
+     "market_pct": 15
     },
     {
      "code": "f462195-itikikusikino:10000107",
@@ -7579,7 +8245,9 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.2,
+     "market_yen": 1930.0,
+     "market_pct": 15
     },
     {
      "code": "f442119-usa:10000455",
@@ -7597,7 +8265,9 @@
      "review_avg": 4.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 960.0,
+     "market_pct": 14
     },
     {
      "code": "f122378-sammu:10000124",
@@ -7615,7 +8285,9 @@
      "review_avg": 4.2,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.08,
+     "market_yen": 1600.0,
+     "market_pct": 13
     },
     {
      "code": "f104248-naganohara:10000065",
@@ -7633,7 +8305,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 1600.0,
+     "market_pct": 12
     },
     {
      "code": "f082040-koga:10000372",
@@ -7651,7 +8325,9 @@
      "review_avg": 4.48,
      "review_count": 44,
      "wakeari": false,
-     "vs_median": 0.97
+     "vs_median": 0.97,
+     "market_yen": 960.0,
+     "market_pct": 12
     },
     {
      "code": "f082040-koga:10000377",
@@ -7669,7 +8345,9 @@
      "review_avg": 3.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.93,
+     "market_yen": 1600.0,
+     "market_pct": 11
     },
     {
      "code": "f454028-shintomi:10000837",
@@ -7687,7 +8365,9 @@
      "review_avg": 4.54,
      "review_count": 52,
      "wakeari": false,
-     "vs_median": 0.87
+     "vs_median": 0.87,
+     "market_yen": 640.0,
+     "market_pct": 11
     },
     {
      "code": "f192104-kai:10000055",
@@ -7705,7 +8385,9 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.87
+     "vs_median": 0.87,
+     "market_yen": 960.0,
+     "market_pct": 11
     },
     {
      "code": "f082040-koga:10000444",
@@ -7723,7 +8405,9 @@
      "review_avg": 4.5,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.87
+     "vs_median": 0.87,
+     "market_yen": 960.0,
+     "market_pct": 11
     },
     {
      "code": "f016314-otofuke:10000142",
@@ -7741,7 +8425,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.81
+     "vs_median": 0.81,
+     "market_yen": 1160.0,
+     "market_pct": 10
     },
     {
      "code": "f104248-naganohara:10000064",
@@ -7759,7 +8445,9 @@
      "review_avg": 5.0,
      "review_count": 7,
      "wakeari": true,
-     "vs_median": 0.81
+     "vs_median": 0.81,
+     "market_yen": 800.0,
+     "market_pct": 10
     },
     {
      "code": "f232238-obu:10000894",
@@ -7777,7 +8465,9 @@
      "review_avg": 4.79,
      "review_count": 38,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 960.0,
+     "market_pct": 10
     },
     {
      "code": "f402273-kama:10000311",
@@ -7795,7 +8485,9 @@
      "review_avg": 4.71,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 0.71
+     "vs_median": 0.71,
+     "market_yen": 960.0,
+     "market_pct": 9
     },
     {
      "code": "f192104-kai:10000054",
@@ -7813,7 +8505,9 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.67,
+     "market_yen": 580.0,
+     "market_pct": 8
     },
     {
      "code": "f282294-tatsuno:10000843",
@@ -7831,7 +8525,9 @@
      "review_avg": 4.39,
      "review_count": 23,
      "wakeari": false,
-     "vs_median": 0.65
+     "vs_median": 0.65,
+     "market_yen": 960.0,
+     "market_pct": 8
     },
     {
      "code": "f082040-koga:10000694",
@@ -7849,7 +8545,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.65
+     "vs_median": 0.65,
+     "market_yen": 640.0,
+     "market_pct": 8
     },
     {
      "code": "f016683-shiranuka:10000590",
@@ -7867,7 +8565,9 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.6
+     "vs_median": 0.6,
+     "market_yen": 960.0,
+     "market_pct": 7
     },
     {
      "code": "f112097-hanno:10000936",
@@ -7885,7 +8585,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.52,
+     "market_yen": 640.0,
+     "market_pct": 6
     }
    ],
    "candidates": 148,
@@ -8397,24 +9099,6 @@
      "vs_median": 1.64
     },
     {
-     "code": "f402192-onojo:10002127",
-     "name": "出来立て鮮度そのまま急速凍結 _待望の無着色!粒が自慢の千曲屋一口明太子200g×6P(計1.2キロ)お裾分けにも_ 小分け パック ふるさと納税 めんたいこ 辛子明太子 切子 冷凍 福岡 ふるさと ランキング 【配送不可地域：離島】【1489854】",
-     "price": 11500,
-     "qty": 1200.0,
-     "evidence": "計1.2キロ",
-     "per10k": 1043.478,
-     "unit_price": 10,
-     "shop": "福岡県大野城市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tqjpo.ia330047.g00tqjpo.ia3313f9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff402192-onojo%2F1489854%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff402192-onojo%2Fi%2F10002127%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "大野城市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402192-onojo/cabinet/09806514/0289_1489854_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.64
-    },
-    {
      "code": "f014061-furubira:10000002",
      "name": "【業務用】辛子 明太子 1.5kg【 辛子明太子 海鮮 魚介類 魚貝類 魚介 魚貝 魚卵 業務用 家庭用 贈答用 人気 ランキング 北海道グルメ 北海道 グルメ ごはんのお供 白米 高評価 】",
      "price": 16400,
@@ -8827,10 +9511,28 @@
      "review_count": 117,
      "wakeari": true,
      "vs_median": 0.49
+    },
+    {
+     "code": "f403431-shime:10000032",
+     "name": "博多若杉 国産 もつ鍋 + 明太子 セット 国産 醤油味 無着色辛子明太子 切れ子 500g 老舗 高級 食品 食べ物 グルメ 博多 九州 送料無料 ギフト プレゼント 人気",
+     "price": 16500,
+     "qty": 500.0,
+     "evidence": "500g",
+     "per10k": 303.03,
+     "unit_price": 33,
+     "shop": "福岡県志免町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00slbmo.ia33091d.g00slbmo.ia3314d2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff403431-shime%2Fitem0028%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff403431-shime%2Fi%2F10000032%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "志免町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f403431-shime/cabinet/hsm035/hsm035-0004_00_v2.jpg?_ex=240x240",
+     "review_avg": 4.71,
+     "review_count": 197,
+     "wakeari": false,
+     "vs_median": 0.48
     }
    ],
-   "candidates": 91,
-   "ranked": 35,
+   "candidates": 90,
+   "ranked": 34,
    "dropped": {
     "対象外の商品": 15,
     "選択式": 33,
@@ -8864,7 +9566,9 @@
      "review_avg": 4.38,
      "review_count": 118,
      "wakeari": true,
-     "vs_median": 2.36
+     "vs_median": 2.36,
+     "market_yen": 8700.0,
+     "market_pct": 87
     },
     {
      "code": "f221007-shizuoka:10001335",
@@ -8882,7 +9586,9 @@
      "review_avg": 4.25,
      "review_count": 28,
      "wakeari": false,
-     "vs_median": 2.36
+     "vs_median": 2.36,
+     "market_yen": 8700.0,
+     "market_pct": 87
     },
     {
      "code": "f222127-yaizu:10011282",
@@ -8900,7 +9606,9 @@
      "review_avg": 4.48,
      "review_count": 120,
      "wakeari": false,
-     "vs_median": 2.29
+     "vs_median": 2.29,
+     "market_yen": 9280.0,
+     "market_pct": 84
     },
     {
      "code": "f392065-susaki:10002341",
@@ -8918,7 +9626,9 @@
      "review_avg": 4.48,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 2.25
+     "vs_median": 2.25,
+     "market_yen": 11600.0,
+     "market_pct": 83
     },
     {
      "code": "f222127-yaizu:10011210",
@@ -8936,7 +9646,9 @@
      "review_avg": 4.77,
      "review_count": 104,
      "wakeari": false,
-     "vs_median": 2.0
+     "vs_median": 2.0,
+     "market_yen": 8120.0,
+     "market_pct": 74
     },
     {
      "code": "f382019-matsuyama:10001205",
@@ -8954,7 +9666,9 @@
      "review_avg": 4.78,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.97
+     "vs_median": 1.97,
+     "market_yen": 7250.0,
+     "market_pct": 72
     },
     {
      "code": "f141500-sagamihara:10000813",
@@ -8972,7 +9686,9 @@
      "review_avg": 4.83,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.97
+     "vs_median": 1.97,
+     "market_yen": 5800.0,
+     "market_pct": 72
     },
     {
      "code": "f222232-omaezaki:10000265",
@@ -8990,7 +9706,9 @@
      "review_avg": 4.68,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.75
+     "vs_median": 1.75,
+     "market_yen": 5800.0,
+     "market_pct": 64
     },
     {
      "code": "f222127-yaizu:10010367",
@@ -9008,7 +9726,9 @@
      "review_avg": 4.0,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.72
+     "vs_median": 1.72,
+     "market_yen": 6960.0,
+     "market_pct": 63
     },
     {
      "code": "f221007-shizuoka:10002403",
@@ -9026,7 +9746,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.68
+     "vs_median": 1.68,
+     "market_yen": 8700.0,
+     "market_pct": 62
     },
     {
      "code": "f222127-yaizu:10010529",
@@ -9044,7 +9766,9 @@
      "review_avg": 4.77,
      "review_count": 13,
      "wakeari": false,
-     "vs_median": 1.68
+     "vs_median": 1.68,
+     "market_yen": 7420.0,
+     "market_pct": 62
     },
     {
      "code": "f244724-minamiise:10000455",
@@ -9062,7 +9786,9 @@
      "review_avg": 3.77,
      "review_count": 31,
      "wakeari": true,
-     "vs_median": 1.57
+     "vs_median": 1.57,
+     "market_yen": 6960.0,
+     "market_pct": 58
     },
     {
      "code": "f352039-yamaguchi:10000689",
@@ -9080,7 +9806,9 @@
      "review_avg": 5.0,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.5,
+     "market_yen": 7770.0,
+     "market_pct": 56
     },
     {
      "code": "f472107-itoman:10000561",
@@ -9098,7 +9826,9 @@
      "review_avg": 4.78,
      "review_count": 87,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 8700.0,
+     "market_pct": 54
     },
     {
      "code": "f222127-yaizu:10010039",
@@ -9116,7 +9846,9 @@
      "review_avg": 4.8,
      "review_count": 403,
      "wakeari": false,
-     "vs_median": 1.37
+     "vs_median": 1.37,
+     "market_yen": 5570.0,
+     "market_pct": 51
     },
     {
      "code": "f222127-yaizu:10009030",
@@ -9134,7 +9866,9 @@
      "review_avg": 4.75,
      "review_count": 193,
      "wakeari": false,
-     "vs_median": 1.37
+     "vs_median": 1.37,
+     "market_yen": 5570.0,
+     "market_pct": 51
     },
     {
      "code": "f222127-yaizu:10009032",
@@ -9152,7 +9886,9 @@
      "review_avg": 4.8,
      "review_count": 91,
      "wakeari": false,
-     "vs_median": 1.37
+     "vs_median": 1.37,
+     "market_yen": 5570.0,
+     "market_pct": 51
     },
     {
      "code": "f224243-yoshida:10002246",
@@ -9170,7 +9906,9 @@
      "review_avg": 3.55,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.35
+     "vs_median": 1.35,
+     "market_yen": 6960.0,
+     "market_pct": 50
     },
     {
      "code": "f352039-yamaguchi:10000690",
@@ -9188,7 +9926,9 @@
      "review_avg": 4.19,
      "review_count": 32,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 5800.0,
+     "market_pct": 48
     },
     {
      "code": "f222127-yaizu:10010859",
@@ -9206,7 +9946,9 @@
      "review_avg": 4.53,
      "review_count": 19,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 5800.0,
+     "market_pct": 48
     },
     {
      "code": "f042056-kesennuma:10001246",
@@ -9224,7 +9966,9 @@
      "review_avg": 4.76,
      "review_count": 74,
      "wakeari": false,
-     "vs_median": 1.26
+     "vs_median": 1.26,
+     "market_yen": 5800.0,
+     "market_pct": 46
     },
     {
      "code": "f042056-kesennuma:10001825",
@@ -9242,7 +9986,9 @@
      "review_avg": 4.62,
      "review_count": 13,
      "wakeari": false,
-     "vs_median": 1.26
+     "vs_median": 1.26,
+     "market_yen": 5800.0,
+     "market_pct": 46
     },
     {
      "code": "f222127-yaizu:10010473",
@@ -9260,7 +10006,9 @@
      "review_avg": 4.66,
      "review_count": 332,
      "wakeari": false,
-     "vs_median": 1.21
+     "vs_median": 1.21,
+     "market_yen": 5800.0,
+     "market_pct": 45
     },
     {
      "code": "f222127-yaizu:10010917",
@@ -9278,7 +10026,9 @@
      "review_avg": 4.79,
      "review_count": 42,
      "wakeari": false,
-     "vs_median": 1.17
+     "vs_median": 1.17,
+     "market_yen": 5800.0,
+     "market_pct": 43
     },
     {
      "code": "f352039-yamaguchi:10000693",
@@ -9296,7 +10046,9 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.15,
+     "market_yen": 3830.0,
+     "market_pct": 43
     },
     {
      "code": "f393070-geisei:10001267",
@@ -9314,7 +10066,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 4900.0,
+     "market_pct": 41
     },
     {
      "code": "f222127-yaizu:10010860",
@@ -9332,7 +10086,9 @@
      "review_avg": 4.52,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.09,
+     "market_yen": 4640.0,
+     "market_pct": 40
     },
     {
      "code": "f222127-yaizu:10004868",
@@ -9350,7 +10106,9 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 8700.0,
+     "market_pct": 40
     },
     {
      "code": "f272132-izumisano:10006362",
@@ -9368,7 +10126,9 @@
      "review_avg": 4.38,
      "review_count": 32,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 5800.0,
+     "market_pct": 39
     },
     {
      "code": "f222127-yaizu:10010658",
@@ -9386,7 +10146,9 @@
      "review_avg": 4.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 4640.0,
+     "market_pct": 39
     }
    ],
    "candidates": 150,
@@ -9425,7 +10187,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 2.27
+     "vs_median": 2.27,
+     "market_yen": 10000.0,
+     "market_pct": 67
     },
     {
      "code": "f234451-minamichita:10000429",
@@ -9443,7 +10207,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.7
+     "vs_median": 1.7,
+     "market_yen": 5000.0,
+     "market_pct": 50
     },
     {
      "code": "f282081-aioi:10000024",
@@ -9461,7 +10227,9 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.62
+     "vs_median": 1.62,
+     "market_yen": 10000.0,
+     "market_pct": 48
     },
     {
      "code": "f042021-ishinomaki:10002749",
@@ -9479,7 +10247,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.42
+     "vs_median": 1.42,
+     "market_yen": 5000.0,
+     "market_pct": 42
     },
     {
      "code": "f282081-aioi:10000023",
@@ -9497,7 +10267,9 @@
      "review_avg": 4.45,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.31
+     "vs_median": 1.31,
+     "market_yen": 5000.0,
+     "market_pct": 38
     },
     {
      "code": "f234451-minamichita:10000527",
@@ -9515,7 +10287,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.13
+     "vs_median": 1.13,
+     "market_yen": 3000.0,
+     "market_pct": 33
     },
     {
      "code": "f342157-etajima:10000431",
@@ -9533,7 +10307,9 @@
      "review_avg": 4.7,
      "review_count": 92,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 5000.0,
+     "market_pct": 29
     },
     {
      "code": "f332119-bizen:10000829",
@@ -9551,7 +10327,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4250.0,
+     "market_pct": 29
     },
     {
      "code": "f342050-onomichi:10001742",
@@ -9569,7 +10347,9 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.89,
+     "market_yen": 5000.0,
+     "market_pct": 26
     },
     {
      "code": "f325252-ama:10000214",
@@ -9587,7 +10367,9 @@
      "review_avg": 4.67,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.89,
+     "market_yen": 5000.0,
+     "market_pct": 26
     },
     {
      "code": "f342131-hatsukaichi:10000512",
@@ -9605,7 +10387,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 10000.0,
+     "market_pct": 25
     },
     {
      "code": "f342122-higasihirosima:10000633",
@@ -9623,7 +10407,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 3000.0,
+     "market_pct": 25
     },
     {
      "code": "f342122-higasihirosima:10000634",
@@ -9641,7 +10427,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.85,
+     "market_yen": 4500.0,
+     "market_pct": 25
     },
     {
      "code": "f042021-ishinomaki:10002790",
@@ -9659,7 +10447,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 0.61
+     "vs_median": 0.61,
+     "market_yen": 2500.0,
+     "market_pct": 18
     }
    ],
    "candidates": 78,
@@ -9696,7 +10486,7 @@
      "review_avg": 4.43,
      "review_count": 72,
      "wakeari": true,
-     "vs_median": 2.88
+     "vs_median": 2.76
     },
     {
      "code": "f042129-tome:10000298",
@@ -9714,7 +10504,7 @@
      "review_avg": 2.67,
      "review_count": 167,
      "wakeari": true,
-     "vs_median": 2.82
+     "vs_median": 2.7
     },
     {
      "code": "f262137-nantan:10001204",
@@ -9732,7 +10522,7 @@
      "review_avg": 4.71,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 1.92
+     "vs_median": 1.84
     },
     {
      "code": "f040002-miyagi:10000581",
@@ -9750,7 +10540,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.68
+     "vs_median": 1.61
     },
     {
      "code": "f040002-miyagi:10000583",
@@ -9768,7 +10558,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.68
+     "vs_median": 1.61
     },
     {
      "code": "f032051-hanamaki:10001849",
@@ -9786,7 +10576,7 @@
      "review_avg": 4.2,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.33
+     "vs_median": 1.28
     },
     {
      "code": "f032051-hanamaki:10001053",
@@ -9804,7 +10594,7 @@
      "review_avg": 3.86,
      "review_count": 66,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.15
     },
     {
      "code": "f044067-rifu:10000708",
@@ -9822,7 +10612,7 @@
      "review_avg": 4.14,
      "review_count": 14,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.07
     },
     {
      "code": "f044067-rifu:10000813",
@@ -9840,7 +10630,7 @@
      "review_avg": 3.9,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.05
     },
     {
      "code": "f435015-nishiki:10000861",
@@ -9858,7 +10648,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": true,
-     "vs_median": 1.04
+     "vs_median": 1.0
     },
     {
      "code": "f044067-rifu:10000466",
@@ -9876,7 +10666,7 @@
      "review_avg": 4.35,
      "review_count": 60,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.96
     },
     {
      "code": "f032051-hanamaki:10001332",
@@ -9894,7 +10684,7 @@
      "review_avg": 3.97,
      "review_count": 31,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.96
     },
     {
      "code": "f044067-rifu:10000812",
@@ -9912,7 +10702,7 @@
      "review_avg": 3.6,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.96
     },
     {
      "code": "f052019-akita:10000008",
@@ -9930,7 +10720,7 @@
      "review_avg": 4.07,
      "review_count": 137,
      "wakeari": false,
-     "vs_median": 0.89
+     "vs_median": 0.85
     },
     {
      "code": "f032051-hanamaki:10000882",
@@ -9948,7 +10738,7 @@
      "review_avg": 3.38,
      "review_count": 16,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.77
     },
     {
      "code": "f032069-kitakami:10000090",
@@ -9966,25 +10756,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.8
-    },
-    {
-     "code": "f040002-miyagi:10000287",
-     "name": "杜の都・仙台の名物 厚切り牛タン 1kg (250gx4) [ギフト 対応可 焼き方 レシピ付]_ 牛タン 厚切り 仙台 宮城 名物 人気 おすすめ 送料無料 贈答 ギフト プレゼント 本場 【配送不可地域：離島】【1378624】",
-     "price": 30000,
-     "qty": 1.0,
-     "evidence": "1kg",
-     "per10k": 0.333,
-     "unit_price": 30000,
-     "shop": "宮城県",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00u7oho.ia330ac9.g00u7oho.ia33158a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff040002-miyagi%2F1378624%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff040002-miyagi%2Fi%2F10000287%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "宮城県",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f040002-miyagi/cabinet/1150_1378624_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.77
     },
     {
      "code": "f042129-tome:10000459",
@@ -10002,7 +10774,7 @@
      "review_avg": 3.73,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.77
+     "vs_median": 0.74
     },
     {
      "code": "f042072-natori:10001508",
@@ -10020,7 +10792,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.53
+     "vs_median": 0.51
     },
     {
      "code": "f112151-sayama:10000123",
@@ -10038,7 +10810,7 @@
      "review_avg": 5.0,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 0.37
+     "vs_median": 0.36
     },
     {
      "code": "f042145-higasimatusima:10000235",
@@ -10056,11 +10828,11 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.24
+     "vs_median": 0.23
     }
    ],
-   "candidates": 96,
-   "ranked": 21,
+   "candidates": 95,
+   "ranked": 20,
    "dropped": {
     "選択式": 43,
     "対象外の商品": 25,
@@ -10069,7 +10841,7 @@
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 0.417,
+    "median_per10k": 0.435,
     "median_unit_price": 24000,
     "min_unit_price": 8333,
     "max_unit_price": 100000,
@@ -10332,24 +11104,6 @@
      "vs_median": 0.7
     },
     {
-     "code": "f464040-nagashima:10001154",
-     "name": "鹿児島黒牛特選ハンバーグ(計約1.3kg・約150g×9個)国産 鹿児島 ハンバーグ 冷凍 セット 詰め合わせ 惣菜 肉 黒牛 牛肉 加工品 小分け 簡単調理 おかず 【nixy中山亭】chuzan-7012",
-     "price": 23000,
-     "qty": 1.35,
-     "evidence": "150g×9",
-     "per10k": 0.587,
-     "unit_price": 17037,
-     "shop": "鹿児島県長島町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s9p6o.ia3307a0.g00s9p6o.ia331d9a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff464040-nagashima%2Fchuzan-1017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff464040-nagashima%2Fi%2F10001154%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "長島町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f464040-nagashima/cabinet/10539196/10724177/chuzan-1017.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.64
-    },
-    {
      "code": "f253847-ryuo:10001410",
      "name": "近江牛 100％ ハンバーグ 淡路島の玉ねぎ 使用 150g × 5個 10個 15個 黒毛和牛 ブランド 肉 三大和牛 贈り物 ギフト 滋賀県 竜王町 古株牧場 神戸牛 松阪牛 に並ぶ 日本三大和牛 ふるさと納税",
      "price": 13000,
@@ -10440,8 +11194,8 @@
      "vs_median": 0.36
     }
    ],
-   "candidates": 99,
-   "ranked": 20,
+   "candidates": 98,
+   "ranked": 19,
    "dropped": {
     "選択式": 33,
     "対象外の商品": 29,
@@ -10451,10 +11205,10 @@
    },
    "summary": {
     "median_per10k": 0.914,
-    "median_unit_price": 11111,
+    "median_unit_price": 10938,
     "min_unit_price": 5000,
     "max_unit_price": 30556,
-    "towns": 16
+    "towns": 15
    },
    "popularity": 1607
   },
@@ -11255,7 +12009,9 @@
      "review_avg": 3.93,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 2.0
+     "vs_median": 2.0,
+     "market_yen": 21880.0,
+     "market_pct": 88
     },
     {
      "code": "f062014-yamagata:10006178",
@@ -11273,7 +12029,9 @@
      "review_avg": 3.83,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.56
+     "vs_median": 1.56,
+     "market_yen": 21880.0,
+     "market_pct": 68
     },
     {
      "code": "f205419-obuse:10000445",
@@ -11291,7 +12049,9 @@
      "review_avg": 4.58,
      "review_count": 216,
      "wakeari": true,
-     "vs_median": 1.5
+     "vs_median": 1.5,
+     "market_yen": 6570.0,
+     "market_pct": 66
     },
     {
      "code": "f063215-kahoku:10001956",
@@ -11309,7 +12069,9 @@
      "review_avg": 3.5,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.38,
+     "market_yen": 8750.0,
+     "market_pct": 60
     },
     {
      "code": "f202185-chikuma:10000950",
@@ -11327,7 +12089,9 @@
      "review_avg": 4.55,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.33
+     "vs_median": 1.33,
+     "market_yen": 8750.0,
+     "market_pct": 58
     },
     {
      "code": "f202118-nakano:10000714",
@@ -11345,7 +12109,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.22
+     "vs_median": 1.22,
+     "market_yen": 21880.0,
+     "market_pct": 53
     },
     {
      "code": "f202118-nakano:10000713",
@@ -11363,7 +12129,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.18
+     "vs_median": 1.18,
+     "market_yen": 17510.0,
+     "market_pct": 51
     },
     {
      "code": "f202118-nakano:10000712",
@@ -11381,7 +12149,9 @@
      "review_avg": 3.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.15
+     "vs_median": 1.15,
+     "market_yen": 13130.0,
+     "market_pct": 51
     },
     {
      "code": "f062031-tsuruoka:10002906",
@@ -11399,7 +12169,9 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.14,
+     "market_yen": 8750.0,
+     "market_pct": 50
     },
     {
      "code": "f192082-minamiarupusu:10000484",
@@ -11417,7 +12189,9 @@
      "review_avg": 4.38,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 4380.0,
+     "market_pct": 49
     },
     {
      "code": "f202118-nakano:10000711",
@@ -11435,7 +12209,9 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.11
+     "vs_median": 1.11,
+     "market_yen": 8750.0,
+     "market_pct": 49
     },
     {
      "code": "f193682-fujikawa:10000351",
@@ -11453,7 +12229,9 @@
      "review_avg": 4.49,
      "review_count": 59,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.09,
+     "market_yen": 5250.0,
+     "market_pct": 48
     },
     {
      "code": "f192082-minamiarupusu:10000402",
@@ -11471,7 +12249,9 @@
      "review_avg": 4.79,
      "review_count": 19,
      "wakeari": false,
-     "vs_median": 1.09
+     "vs_median": 1.09,
+     "market_yen": 5250.0,
+     "market_pct": 48
     },
     {
      "code": "f062090-nagai:10001001",
@@ -11489,7 +12269,9 @@
      "review_avg": 4.24,
      "review_count": 50,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.05,
+     "market_yen": 8750.0,
+     "market_pct": 46
     },
     {
      "code": "f192074-nirasaki:10001041",
@@ -11507,7 +12289,9 @@
      "review_avg": 3.74,
      "review_count": 35,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 5250.0,
+     "market_pct": 44
     },
     {
      "code": "f192058-yamanashi:10001746",
@@ -11525,7 +12309,9 @@
      "review_avg": 4.71,
      "review_count": 34,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4380.0,
+     "market_pct": 44
     },
     {
      "code": "f452050-kobayashi:10000305",
@@ -11543,7 +12329,9 @@
      "review_avg": 4.38,
      "review_count": 26,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 8750.0,
+     "market_pct": 44
     },
     {
      "code": "f332038-tsuyama:10000652",
@@ -11561,7 +12349,9 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 8750.0,
+     "market_pct": 44
     },
     {
      "code": "f192112-fuefuki:10000301",
@@ -11579,7 +12369,9 @@
      "review_avg": 4.56,
      "review_count": 50,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.91,
+     "market_yen": 21880.0,
+     "market_pct": 40
     },
     {
      "code": "f192074-nirasaki:10000794",
@@ -11597,7 +12389,9 @@
      "review_avg": 4.85,
      "review_count": 27,
      "wakeari": true,
-     "vs_median": 0.91
+     "vs_median": 0.91,
+     "market_yen": 4380.0,
+     "market_pct": 40
     },
     {
      "code": "f344621-sera:10000071",
@@ -11615,7 +12409,9 @@
      "review_avg": 5.0,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 0.87
+     "vs_median": 0.87,
+     "market_yen": 8750.0,
+     "market_pct": 38
     },
     {
      "code": "f432083-yamaga:10000583",
@@ -11633,7 +12429,9 @@
      "review_avg": 4.56,
      "review_count": 41,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 5250.0,
+     "market_pct": 38
     },
     {
      "code": "f192112-fuefuki:10000317",
@@ -11651,7 +12449,9 @@
      "review_avg": 4.17,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 0.86
+     "vs_median": 0.86,
+     "market_yen": 13130.0,
+     "market_pct": 38
     },
     {
      "code": "f192058-yamanashi:10001832",
@@ -11669,7 +12469,9 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.83,
+     "market_yen": 4380.0,
+     "market_pct": 36
     },
     {
      "code": "f192112-fuefuki:10000111",
@@ -11687,7 +12489,9 @@
      "review_avg": 4.03,
      "review_count": 34,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.8,
+     "market_yen": 5250.0,
+     "market_pct": 35
     },
     {
      "code": "f202118-nakano:10000501",
@@ -11705,7 +12509,9 @@
      "review_avg": 3.39,
      "review_count": 31,
      "wakeari": false,
-     "vs_median": 0.77
+     "vs_median": 0.77,
+     "market_yen": 4380.0,
+     "market_pct": 34
     },
     {
      "code": "f192058-yamanashi:10001024",
@@ -11723,7 +12529,9 @@
      "review_avg": 5.0,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 0.77
+     "vs_median": 0.77,
+     "market_yen": 4380.0,
+     "market_pct": 34
     },
     {
      "code": "f332097-takahashi:10000072",
@@ -11741,7 +12549,9 @@
      "review_avg": 4.6,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 0.74
+     "vs_median": 0.74,
+     "market_yen": 8750.0,
+     "market_pct": 32
     },
     {
      "code": "f192112-fuefuki:10000920",
@@ -11759,7 +12569,9 @@
      "review_avg": 4.76,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.67,
+     "market_yen": 4380.0,
+     "market_pct": 29
     },
     {
      "code": "f192058-yamanashi:10000484",
@@ -11777,7 +12589,9 @@
      "review_avg": 4.87,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 0.56
+     "vs_median": 0.56,
+     "market_yen": 2190.0,
+     "market_pct": 24
     }
    ],
    "candidates": 94,
@@ -11815,7 +12629,9 @@
      "review_avg": 4.44,
      "review_count": 82,
      "wakeari": false,
-     "vs_median": 3.25
+     "vs_median": 3.25,
+     "market_yen": 4260.0,
+     "market_pct": 39
     },
     {
      "code": "f402184-kasuga:10002330",
@@ -11833,7 +12649,9 @@
      "review_avg": 4.67,
      "review_count": 63,
      "wakeari": false,
-     "vs_median": 3.25
+     "vs_median": 3.25,
+     "market_yen": 4260.0,
+     "market_pct": 39
     },
     {
      "code": "f406058-kawasaki:10000968",
@@ -11851,7 +12669,9 @@
      "review_avg": 4.74,
      "review_count": 23,
      "wakeari": true,
-     "vs_median": 2.18
+     "vs_median": 2.18,
+     "market_yen": 2350.0,
+     "market_pct": 26
     },
     {
      "code": "f402061-tagawashi:10001429",
@@ -11869,7 +12689,9 @@
      "review_avg": 3.3,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.18
+     "vs_median": 2.18,
+     "market_yen": 2350.0,
+     "market_pct": 26
     },
     {
      "code": "f082341-hokota:10000776",
@@ -11887,7 +12709,9 @@
      "review_avg": 4.57,
      "review_count": 14,
      "wakeari": false,
-     "vs_median": 2.14
+     "vs_median": 2.14,
+     "market_yen": 2300.0,
+     "market_pct": 26
     },
     {
      "code": "f432067-tamana:10000602",
@@ -11905,7 +12729,9 @@
      "review_avg": 3.23,
      "review_count": 102,
      "wakeari": true,
-     "vs_median": 2.06
+     "vs_median": 2.06,
+     "market_yen": 3200.0,
+     "market_pct": 25
     },
     {
      "code": "f402303-itoshima:10004099",
@@ -11923,7 +12749,9 @@
      "review_avg": 4.06,
      "review_count": 31,
      "wakeari": false,
-     "vs_median": 1.93
+     "vs_median": 1.93,
+     "market_yen": 3450.0,
+     "market_pct": 23
     },
     {
      "code": "f232092-hekinan:10000241",
@@ -11941,7 +12769,9 @@
      "review_avg": 4.64,
      "review_count": 56,
      "wakeari": false,
-     "vs_median": 1.79
+     "vs_median": 1.79,
+     "market_yen": 1710.0,
+     "market_pct": 21
     },
     {
      "code": "f402231-koga:10001268",
@@ -11959,7 +12789,9 @@
      "review_avg": 3.75,
      "review_count": 93,
      "wakeari": false,
-     "vs_median": 1.49
+     "vs_median": 1.49,
+     "market_yen": 2130.0,
+     "market_pct": 18
     },
     {
      "code": "f222143-fujieda:10001816",
@@ -11977,7 +12809,9 @@
      "review_avg": 4.4,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.49
+     "vs_median": 1.49,
+     "market_yen": 2130.0,
+     "market_pct": 18
     },
     {
      "code": "f402141-buzen:10000185",
@@ -11995,7 +12829,9 @@
      "review_avg": 4.56,
      "review_count": 63,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.07,
+     "market_yen": 2300.0,
+     "market_pct": 13
     },
     {
      "code": "f302040-arida:10000529",
@@ -12013,7 +12849,9 @@
      "review_avg": 4.86,
      "review_count": 7,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 1190.0,
+     "market_pct": 12
     },
     {
      "code": "f452084-saito:10001541",
@@ -12031,7 +12869,9 @@
      "review_avg": 4.53,
      "review_count": 15,
      "wakeari": true,
-     "vs_median": 0.81
+     "vs_median": 0.81,
+     "market_yen": 2130.0,
+     "market_pct": 10
     },
     {
      "code": "f402192-onojo:10000082",
@@ -12049,7 +12889,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.81
+     "vs_median": 0.81,
+     "market_yen": 1070.0,
+     "market_pct": 10
     },
     {
      "code": "f302040-arida:10000254",
@@ -12067,7 +12909,9 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 0.78
+     "vs_median": 0.78,
+     "market_yen": 1490.0,
+     "market_pct": 9
     },
     {
      "code": "f382060-saijo:10000049",
@@ -12085,7 +12929,9 @@
      "review_avg": 4.44,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.73
+     "vs_median": 0.73,
+     "market_yen": 2130.0,
+     "market_pct": 9
     },
     {
      "code": "f402036-kurume:10001356",
@@ -12103,7 +12949,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.65
+     "vs_median": 0.65,
+     "market_yen": 1710.0,
+     "market_pct": 8
     },
     {
      "code": "f414255-shiroishi:10000246",
@@ -12121,7 +12969,9 @@
      "review_avg": 4.22,
      "review_count": 50,
      "wakeari": false,
-     "vs_median": 0.6
+     "vs_median": 0.6,
+     "market_yen": 940.0,
+     "market_pct": 7
     },
     {
      "code": "f442097-bungotakada:10000206",
@@ -12139,7 +12989,9 @@
      "review_avg": 3.85,
      "review_count": 59,
      "wakeari": false,
-     "vs_median": 0.58
+     "vs_median": 0.58,
+     "market_yen": 940.0,
+     "market_pct": 7
     },
     {
      "code": "f412082-ogi:10000226",
@@ -12157,7 +13009,9 @@
      "review_avg": 4.2,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 0.56
+     "vs_median": 0.56,
+     "market_yen": 940.0,
+     "market_pct": 7
     },
     {
      "code": "f432113-uto:10000299",
@@ -12175,7 +13029,9 @@
      "review_avg": 2.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.22
+     "vs_median": 0.22,
+     "market_yen": 1070.0,
+     "market_pct": 3
     },
     {
      "code": "f212075-mino:10000593",
@@ -12193,7 +13049,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.21
+     "vs_median": 0.21,
+     "market_yen": 960.0,
+     "market_pct": 2
     },
     {
      "code": "f432113-uto:10000297",
@@ -12211,7 +13069,9 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.11
+     "vs_median": 0.11,
+     "market_yen": 1070.0,
+     "market_pct": 1
     }
    ],
    "candidates": 107,
@@ -12250,7 +13110,9 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.47
+     "vs_median": 1.47,
+     "market_yen": 7760.0,
+     "market_pct": 46
     },
     {
      "code": "f073229-otama:10000093",
@@ -12268,7 +13130,9 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.39
+     "vs_median": 1.39,
+     "market_yen": 7760.0,
+     "market_pct": 43
     },
     {
      "code": "f072010-fukushima:10002715",
@@ -12286,7 +13150,9 @@
      "review_avg": 4.5,
      "review_count": 82,
      "wakeari": false,
-     "vs_median": 1.32
+     "vs_median": 1.32,
+     "market_yen": 7760.0,
+     "market_pct": 41
     },
     {
      "code": "f072010-fukushima:10002716",
@@ -12304,7 +13170,9 @@
      "review_avg": 4.48,
      "review_count": 42,
      "wakeari": false,
-     "vs_median": 1.32
+     "vs_median": 1.32,
+     "market_yen": 7760.0,
+     "market_pct": 41
     },
     {
      "code": "f062081-murayama:10000255",
@@ -12322,7 +13190,9 @@
      "review_avg": 4.15,
      "review_count": 119,
      "wakeari": false,
-     "vs_median": 1.19
+     "vs_median": 1.19,
+     "market_yen": 7760.0,
+     "market_pct": 37
     },
     {
      "code": "f192112-fuefuki:10001449",
@@ -12340,7 +13210,9 @@
      "review_avg": 4.68,
      "review_count": 161,
      "wakeari": true,
-     "vs_median": 1.0
+     "vs_median": 1.0,
+     "market_yen": 4660.0,
+     "market_pct": 31
     },
     {
      "code": "f192082-minamiarupusu:10000083",
@@ -12358,7 +13230,9 @@
      "review_avg": 3.7,
      "review_count": 125,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.91,
+     "market_yen": 3100.0,
+     "market_pct": 28
     },
     {
      "code": "f072010-fukushima:10003423",
@@ -12376,7 +13250,9 @@
      "review_avg": 4.83,
      "review_count": 59,
      "wakeari": false,
-     "vs_median": 0.88
+     "vs_median": 0.88,
+     "market_yen": 4660.0,
+     "market_pct": 27
     },
     {
      "code": "f302082-kinokawa:10000697",
@@ -12394,7 +13270,9 @@
      "review_avg": 4.13,
      "review_count": 47,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.83,
+     "market_yen": 6210.0,
+     "market_pct": 26
     },
     {
      "code": "f302082-kinokawa:10000661",
@@ -12412,7 +13290,9 @@
      "review_avg": 4.37,
      "review_count": 62,
      "wakeari": false,
-     "vs_median": 0.82
+     "vs_median": 0.82,
+     "market_yen": 6210.0,
+     "market_pct": 25
     },
     {
      "code": "f302082-kinokawa:10000824",
@@ -12430,7 +13310,9 @@
      "review_avg": 4.46,
      "review_count": 261,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.67,
+     "market_yen": 3100.0,
+     "market_pct": 21
     },
     {
      "code": "f372072-higashikagawa:10001043",
@@ -12448,7 +13330,9 @@
      "review_avg": 4.05,
      "review_count": 60,
      "wakeari": false,
-     "vs_median": 0.67
+     "vs_median": 0.67,
+     "market_yen": 2790.0,
+     "market_pct": 21
     }
    ],
    "candidates": 93,
@@ -15675,11 +16559,11 @@
      "vs_median": 0.2
     }
    ],
-   "candidates": 76,
+   "candidates": 75,
    "ranked": 15,
    "dropped": {
     "選択式": 11,
-    "量なし": 25,
+    "量なし": 24,
     "対象外の商品": 24,
     "量が範囲外": 1
    },
@@ -15741,5 +16625,139 @@
   "g_appliance": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Fappliance%2F",
   "g_travel-coupon": "https://hb.afl.rakuten.co.jp/hgc/5853e01c.55a3dc8f.5853e01d.fd9ebb86/?pc=https%3A%2F%2Fevent.rakuten.co.jp%2Ffurusato%2Franking%2Ftravel-coupon%2F"
  },
- "fetched_at": "2026-10-10T23:07+09:00"
+ "market": {
+  "area": "東京都区部",
+  "table": "0003421913",
+  "credit": "このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。",
+  "fetched": "2026-10-10",
+  "items": {
+   "rice": {
+    "name": "うるち米(単一原料米,「コシヒカリ」)",
+    "yen": 4326.0,
+    "per": "5kg",
+    "ym": "2026年8月",
+    "per_unit": 865.2
+   },
+   "tuna": {
+    "name": "まぐろ",
+    "yen": 580.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 5800.0
+   },
+   "salmon": {
+    "name": "さけ",
+    "yen": 553.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 5530.0
+   },
+   "shrimp": {
+    "name": "えび",
+    "yen": 381.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 3810.0
+   },
+   "oyster": {
+    "name": "かき(貝)",
+    "yen": 500.0,
+    "per": "100g",
+    "ym": "2026年3月",
+    "per_unit": 5000.0
+   },
+   "scallop": {
+    "name": "ほたて貝",
+    "yen": 494.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 4940.0
+   },
+   "ikura": {
+    "name": "いくら",
+    "yen": 2439.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 24.39
+   },
+   "beef": {
+    "name": "牛肉(国産品)",
+    "yen": 938.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 9380.0
+   },
+   "pork": {
+    "name": "豚肉(国産品,バラ)",
+    "yen": 305.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 3050.0
+   },
+   "chicken": {
+    "name": "鶏肉",
+    "yen": 162.0,
+    "per": "100g",
+    "ym": "2026年8月",
+    "per_unit": 1620.0
+   },
+   "egg": {
+    "name": "鶏卵",
+    "yen": 321.0,
+    "per": "10個",
+    "ym": "2026年8月",
+    "per_unit": 32.1
+   },
+   "apple": {
+    "name": "りんご(ふじ又はつがる)",
+    "yen": 1197.0,
+    "per": "1kg",
+    "ym": "2026年8月",
+    "per_unit": 1197.0
+   },
+   "mikan": {
+    "name": "みかん",
+    "yen": 1055.0,
+    "per": "1kg",
+    "ym": "2026年3月",
+    "per_unit": 1055.0
+   },
+   "shine": {
+    "name": "ぶどう(シャインマスカット)",
+    "yen": 4377.0,
+    "per": "1kg",
+    "ym": "2026年8月",
+    "per_unit": 4377.0
+   },
+   "peach": {
+    "name": "桃",
+    "yen": 1552.0,
+    "per": "1kg",
+    "ym": "2026年8月",
+    "per_unit": 1552.0
+   },
+   "strawberry": {
+    "name": "いちご",
+    "yen": 2132.0,
+    "per": "1kg",
+    "ym": "2026年5月",
+    "per_unit": 2132.0
+   },
+   "water": {
+    "name": "ミネラルウォーター(配達を除く。)",
+    "yen": 127.0,
+    "per": "2L",
+    "ym": "2026年8月",
+    "per_unit": 63.5
+   },
+   "beer": {
+    "name": "ビール",
+    "yen": 1171.0,
+    "per": "350ml×6缶",
+    "ym": "2026年8月",
+    "per_unit": 557.6190476190476
+   }
+  }
+ },
+ "fetched_at": "2026-10-10T23:13+09:00"
 }
