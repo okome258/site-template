@@ -52,4 +52,5 @@
 {% endblock %}
 {% block footer_extra %}
 <p class="small">「1万円あたりの量」は商品名に書かれた内容量 ÷ 寄付額で機械的に計算しています。<a href="{{ page.root }}about/">計算方法</a></p>
+{% if data.market and data.market.credit %}<p class="small">{{ data.market.credit }}</p>{% endif %}
 {% endblock %}

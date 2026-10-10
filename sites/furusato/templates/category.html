@@ -2,7 +2,7 @@
 {% set d = 1 if (cat.unit_kind != 'count' and cat.scale is not defined) else 0 %}
 {% block head %}
 <script type="application/ld+json">{{ jsonld | tojson }}</script>
-<style>.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.chg-note{margin:6px 0 0;color:var(--muted)}</style>
+<style>.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.chg-note{margin:6px 0 0;color:var(--muted)}.stats .mk dd small{display:block;font-size:11px;color:var(--muted)}.mk-src{color:var(--muted)}</style>
 {% endblock %}
 {% block content %}
 <h1>{{ cat.name }}の量コスパランキング</h1>
@@ -25,6 +25,8 @@
 {% endif %}
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
 
+{% set mk = (data.market or {}).get("items", {}).get(cat.id) %}
+{% if mk %}<p class="mk-src small">「お店で買うと」は、総務省 小売物価統計調査（{{ data.market.area }}・{{ mk.ym }}）の「{{ mk.name }}」の平均価格 {{ mk.yen | yen }}／{{ mk.per }} で換算した目安です。品種・部位・等級によって実際の値段は変わります。</p>{% endif %}
 {% if rank["items"] %}
 <ol class="rank-list">
 {% for it in rank["items"] %}
@@ -47,6 +49,7 @@
       <div><dt>寄付額</dt><dd>{{ it.price | yen }}</dd></div>
       <div><dt>内容量</dt><dd>{{ "%g" | format(it.qty) }}{{ cat.unit }}</dd></div>
       <div><dt>1{{ cat.unit }}あたり</dt><dd>{{ it.unit_price | yen }}</dd></div>
+      {% if it.market_yen %}<div class="mk"><dt>お店で買うと</dt><dd>約{{ it.market_yen | yen }}<small>（寄付額の{{ it.market_pct }}%分）</small></dd></div>{% endif %}
     </dl>
     {% if it.change and it.change.per10k_pct %}<p class="chg-note small">{{ it.change.changed | replace('-', '/') }}に変更：{% if it.change.price != it.price %}寄付額 {{ it.change.price | yen }} → {{ it.price | yen }}{% endif %}{% if it.change.price != it.price and it.change.qty != it.qty %}、{% endif %}{% if it.change.qty != it.qty %}内容量 {{ "%g" | format(it.change.qty) }} → {{ "%g" | format(it.qty) }}{{ cat.unit }}{% endif %}</p>{% endif %}
     <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ it.portal or '楽天ふるさと納税' }}で見る</a>

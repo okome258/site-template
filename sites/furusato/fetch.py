@@ -166,11 +166,13 @@ def fetch(cfg: dict) -> dict:
         raise RakutenError("全カテゴリで0件でした: " + " / ".join(errors[:3]))
     today = datetime.now(timezone(timedelta(hours=9))).date().isoformat()
     update_history(cfg["_dir"] / "data" / "history.json", out, today)
+    mk = {}
     try:  # 市販価格(e-Stat)。失敗してもランキングは出す
         import market
-        market.discover(cfg["_dir"] / "data")
+        mk = market.fetch(cfg["_dir"] / "data", today)
+        market.apply(out, mk)
     except Exception as e:  # noqa: BLE001
-        print(f"::warning::市販価格の取得に失敗: {type(e).__name__}")
+        print(f"::warning::市販価格の反映に失敗: {type(e).__name__}")
     # 量ではない「通常の人気ランキング」(楽天公式)への入口。アフィリエイトリンクにしておく
     rk = "https://event.rakuten.co.jp/furusato/ranking/"
     links = {"_total": api.affiliate_link(rk)}
@@ -180,7 +182,7 @@ def fetch(cfg: dict) -> dict:
             links[cat["id"]] = api.affiliate_link(f"{rk}{slug}/")
     for slug, label in GENRE_RANKINGS:
         links["g_" + slug] = api.affiliate_link(f"{rk}{slug}/")
-    return {"categories": out, "errors": errors[:10], "ranking_links": links}
+    return {"categories": out, "errors": errors[:10], "ranking_links": links, "market": mk}
 
 
 def _ym(data: dict) -> str:

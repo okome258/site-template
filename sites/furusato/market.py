@@ -1,7 +1,10 @@
-"""市販価格(e-Stat 小売物価統計調査)を取ってくる。
+"""市販価格(総務省 小売物価統計調査・東京都区部)を e-Stat から取ってくる。
 
-まだ表の形を確認中なので、見つかった表と中身の見本を data/market_debug.json に書き出す。
-失敗してもサイトのビルドは止めない。
+各カテゴリの「1単位(サイトの表示単位)あたりの市販価格」を出し、
+返礼品の内容量 × 市販価格 で「スーパーで買うと何円分か」の目安を計算する。
+
+銘柄の単位は、2026年10月に実際の価格の大きさで確かめたものだけ載せている。
+単位が確かめられない銘柄(うなぎ・ソーセージ・清酒・メロン等)は入れない。
 """
 
 from __future__ import annotations
@@ -9,50 +12,82 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from core.estat import EStat, EStatError
+from core.estat import CREDIT, EStat, EStatError
 
-STATS_CODE = "00200571"  # 小売物価統計調査
-TABLE_ID = "0003421913"  # 主要品目の都市別小売価格
+TABLE_ID = "0003421913"  # 小売物価統計調査(動向編) 主要品目の都市別小売価格
 AREA = "13100"  # 東京都区部
-SEARCH_WORDS = ["主要品目の東京都区部小売価格", "主要品目の都市別小売価格", "小売価格"]
+AREA_NAME = "東京都区部"
+TIME_FROM_MONTHS = 13  # この月数さかのぼって、値のある最新の月を使う(旬の果物は冬に値が無い)
+
+# カテゴリID: (銘柄コード, 調査の単位をサイトの表示単位にした量, 調査の単位の書き方)
+ITEMS = {
+    "rice": ("01001", 5, "5kg"),
+    "beef": ("01201", 0.1, "100g"),
+    "pork": ("01211", 0.1, "100g"),
+    "chicken": ("01221", 0.1, "100g"),
+    "tuna": ("01101", 0.1, "100g"),
+    "salmon": ("01106", 0.1, "100g"),
+    "shrimp": ("01114", 0.1, "100g"),
+    "scallop": ("01133", 0.1, "100g"),
+    "oyster": ("01132", 0.1, "100g"),
+    "ikura": ("01167", 100, "100g"),  # いくらはサイトの単位が g
+    "egg": ("01341", 10, "10個"),
+    "apple": ("01502", 1, "1kg"),
+    "mikan": ("01511", 1, "1kg"),
+    "shine": ("01533", 1, "1kg"),
+    "peach": ("01551", 1, "1kg"),
+    "strawberry": ("01571", 1, "1kg"),
+    "water": ("01982", 2, "2L"),
+    "beer": ("02021", 2.1, "350ml×6缶"),
+}
 
 
-def discover(out_dir: Path) -> dict:
+def _ym(code: str) -> str:
+    # e-Stat の時間コード 2026000808 → 2026年8月
+    return f"{int(code[:4])}年{int(code[6:8])}月" if len(code) >= 8 else code
+
+
+def fetch(out_dir: Path, today: str) -> dict:
+    """市販価格を取得して data/market.json に保存。失敗したら前回の保存分を返す。"""
+    path = out_dir / "market.json"
+    prev = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     api = EStat()
     if not api.ready:
-        return {"status": "no_key"}
-    dbg: dict = {"tables": [], "samples": []}
+        return prev
+    y, m = int(today[:4]), int(today[5:7])
+    m0 = (y * 12 + m - 1) - TIME_FROM_MONTHS
+    since = f"{m0 // 12}00{m0 % 12 + 1:02d}{m0 % 12 + 1:02d}"
     try:
-        seen = {}
-        for w in SEARCH_WORDS:
-            for t in api.list_tables(STATS_CODE, w, limit=200):
-                seen[t["id"]] = t
-        tables = sorted(seen.values(), key=lambda t: (t["survey_date"], t["id"]), reverse=True)
-        dbg["tables"] = [{k: t[k] for k in ("id", "title", "survey_date", "open_date", "statistics_name")}
-                         for t in tables[:80]]
-        # 「主要品目」の新しい表をいくつか中身を見る
-        picks = [t for t in tables if "主要品目" in t["title"] or "主要品目" in t["statistics_name"]][:4]
-        for t in picks:
-            meta = api.get_data(t["id"], limit=20)
-            dbg["samples"].append({
-                "id": t["id"], "title": t["title"], "statistics_name": t["statistics_name"],
-                "classes": {cid: {"name": c["name"], "n": len(c["order"]),
-                                  "items": [[x, c["items"][x]] for x in c["order"][:400]]}
-                            for cid, c in meta["classes"].items()},
-                "values": meta["values"][:20]})
-        codes = ["01001","01201","01211","01221","01133","01114","01167","01106","01511","01502","01341",
-                 "01801","01142","01101","01132","01261","01533","01571","01551","01563","01982","02021",
-                 "02003","01953","01031","01844","01881"]
-        vals = api.get_data(TABLE_ID, cdCat02=",".join(codes), cdArea=AREA, cdTimeFrom="2025000901")
-        names = vals["classes"].get("cat02", {}).get("items", {})
-        rows = {}
-        for v in vals["values"]:
-            rows.setdefault(names.get(v["cat02"], v["cat02"]), []).append([v["time"], v["value"], v.get("unit")])
-        dbg["prices"] = {k: sorted(r, reverse=True)[:13] for k, r in rows.items()}
-        dbg["status"] = "ok"
+        codes = {v[0]: k for k, v in ITEMS.items()}
+        res = api.get_data(TABLE_ID, cdCat02=",".join(codes), cdArea=AREA, cdTimeFrom=since)
     except EStatError as e:
-        dbg["status"] = f"error: {e}"
+        print(f"::warning::市販価格の取得に失敗、前回の値を使う: {e}")
+        return prev
+    names = res["classes"].get("cat02", {}).get("items", {})
+    latest: dict[str, tuple[str, float]] = {}
+    for v in res["values"]:
+        cid = codes.get(v.get("cat02"))
+        if cid and v["value"] and (cid not in latest or v["time"] > latest[cid][0]):
+            latest[cid] = (v["time"], v["value"])
+    items = {}
+    for cid, (t, val) in latest.items():
+        code, amount, label = ITEMS[cid]
+        name = names.get(code, "").split(" ", 1)[-1].split("【")[0]
+        items[cid] = {"name": name, "yen": val, "per": label, "ym": _ym(t),
+                      "per_unit": val / amount}
+    if not items:
+        return prev
+    data = {"area": AREA_NAME, "table": TABLE_ID, "credit": CREDIT, "fetched": today, "items": items}
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / "market_debug.json").write_text(json.dumps(dbg, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"[market] {dbg['status']} 表{len(dbg['tables'])}件 見本{len(dbg['samples'])}件")
-    return dbg
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"[market] {len(items)}カテゴリの市販価格を取得")
+    return data
+
+
+def apply(categories: dict, market: dict) -> None:
+    """返礼品ごとに「市販だと何円分か」と「寄付額の何%分か」をつける。"""
+    for cid, mk in (market.get("items") or {}).items():
+        for it in categories.get(cid, {}).get("items", []):
+            yen = it["qty"] * mk["per_unit"]
+            it["market_yen"] = round(yen, -1)
+            it["market_pct"] = round(yen / it["price"] * 100) if it["price"] else None
