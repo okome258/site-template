@@ -1,0 +1,97 @@
+# ポイント禁止(2025年10月)後、各ポータルがポイントの代わりにやっていること
+# checked: 確認日 / source_type: official=公式・プレスリリース, secondary=比較サイト等の二次情報(公開前に公式で要確認)
+# url: 公式トップ(広告なし) / 楽天とau PAYはページ側でアフィリンクに差し替える
+# campaign は期間限定。表示時は「時期によって変わります」を必ず添える
+
+portals:
+  - id: rakuten
+    url: https://event.rakuten.co.jp/furusato/
+    name: 楽天ふるさと納税
+    standing: 楽天カードで払えばカードの通常ポイントはつく。買い回りやSPUは対象外になった
+    campaign: 5と0のつく日にエントリーして楽天カードで払うと+1倍(月の上限1,000pt)
+    merit:
+      - 楽天IDでそのまま寄付できる
+      - 返礼品とレビューが多く、選びやすい
+    demerit:
+      - 以前のような高還元はもうない。還元は楽天カード頼み
+      - 5と0の日は当日エントリーが必要で、上限も低め
+    suited: 楽天カードを持っていて、楽天のレビューで選びたい人
+    checked: 2026-10-10
+    source_type: secondary
+    source: https://pricey.jp/web/articles/4326
+
+  - id: furunavi
+    url: https://furunavi.jp/
+    name: ふるなび
+    standing: 2025年12月に始めた「ふるなびマネー」で払う。チャージ分は有効期限なし
+    campaign: チャージ時の5%増量をかなりの頻度で実施(内訳は4%+期間限定1%)
+    merit:
+      - 増量率は今の主要サイトでいちばん高い水準
+      - 寄付額を指定すると、増量分を引いたチャージ額を自動で出してくれる
+    demerit:
+      - 増量分の一部は1年で期限切れ
+      - キャンペーン期間外だと増量なし。ふるなびの中でしか使えない
+    suited: 寄付額が大きく、ふるなびに欲しい返礼品がある人
+    checked: 2026-10-10
+    source_type: official
+    source: https://webtan.impress.co.jp/r/prtimes/items/000001610.000007821
+
+  - id: aupay
+    url: https://furusato.wowma.jp/
+    name: au PAY ふるさと納税
+    standing: 手持ちのPontaポイントを「お得なポイント交換所」で増やしてから寄付に使える(新たにもらう仕組みではない)
+    campaign: 交換レートは基本1.1倍、au・UQなどの条件で月の上限まで1.5倍
+    merit:
+      - Pontaが貯まっている人にはかなり強い
+      - au PAY(auかんたん決済)でも払える
+    demerit:
+      - 交換後のポイントはau PAY マーケット限定で、30日で期限切れ
+      - Pontaを持っていない人にはメリットが薄い
+    suited: au・UQユーザー、Pontaをよく貯めている人
+    checked: 2026-10-10
+    source_type: secondary
+    source: https://money-lifehack.com/?p=18535
+
+  - id: yahoo
+    url: https://furusato.yahoo.co.jp/
+    name: Yahoo!ふるさと納税
+    standing: ヤフーショッピング商品券で寄付を払える
+    campaign: 商品券の増量キャンペーン(月によって4〜8%程度。2026年9月は6%)
+    merit:
+      - 増量率が高い月はふるなびと並ぶ
+      - 寄付先と金額が決まっていれば手間が少ない
+    demerit:
+      - 受け取りまで30日、受け取ってから使うまで30日と期限が短い
+      - 2026年7月から、商品券で払った分は買い物キャンペーンのポイント対象外
+    suited: 寄付先が決まっていて、期限内にさっと使い切れる人
+    checked: 2026-10-10
+    source_type: secondary
+    source: https://money-lifehack.com/diary/24823
+
+  - id: choice
+    url: https://www.furusato-tax.jp/
+    name: ふるさとチョイス
+    standing: お得さより「寄付金の使い道」や地域支援を前に出す方針。ポイント禁止にも賛成していた
+    campaign: 感謝券コードで寄付額500円OFFという情報あり(要公式確認)
+    merit:
+      - 使い道を選んで寄付したい人、災害支援寄付をしたい人に向く
+    demerit:
+      - 金銭的なお得さは他サイトより控えめ
+    suited: 返礼品より応援先で選びたい人
+    checked: 2026-10-10
+    source_type: secondary
+    source: https://www.businessinsider.jp/article/290572/
+
+  - id: satofull
+    url: https://www.satofull.jp/
+    name: さとふる
+    standing: 新しいポイント付与は終了。持っているポイントは期限内ならPayPayポイント・Amazonギフトカードへの交換や寄付に使える。今回の調査では常設の代わりの特典は見当たらず
+    campaign: なし(要公式確認)
+    merit:
+      - 支払い方法が多い(PayPay、Amazon Pay、メルペイ、d払い、楽天ペイなど)
+    demerit:
+      - 増量・還元系の施策は今のところ目立たない
+    suited: 普段使いの決済で払いたい人
+    checked: 2026-10-10
+    source_type: official
+    source: https://origin.digitalpr.jp/pdf.php?r=117011

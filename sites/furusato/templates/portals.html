@@ -1,0 +1,67 @@
+{% extends "_layout.html" %}
+{% block head %}
+<style>
+.pt-list { display: grid; gap: 14px; margin: 16px 0; }
+.pt h2 { margin: 0 0 6px; font-size: 18px; }
+.pt dl { margin: 8px 0 0; }
+.pt dt { font-weight: 700; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.pt dd { margin: 2px 0 0; }
+.pt ul { margin: 2px 0 0; padding-left: 1.2em; }
+.pt .camp { background: var(--soft); border-radius: 6px; padding: 6px 10px; }
+.pt .meta { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.pt .go { margin-top: 12px; }
+.pt-sum { overflow-x: auto; }
+.pt-sum table { border-collapse: collapse; width: 100%; font-size: 14px; }
+.pt-sum th, .pt-sum td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+</style>
+{% endblock %}
+{% block content %}
+<h1>ポイント禁止後、各ふるさと納税サイトは何をしている？<span class="h1-sub">ポイントの代わりの施策とメリット・デメリット</span></h1>
+<p class="lead">2025年10月から、ふるさと納税サイトが寄付にポイントをつけることは禁止されました。その代わりに各サイトが用意している「お得に払う方法」をまとめています。</p>
+<p class="note">キャンペーンは期間限定で、内容がよく変わります。各サイトの「確認日」より後に変わっていることもあるので、寄付の前に公式ページで条件を確認してください。</p>
+
+<div class="card pt-sum">
+  <table>
+    <thead><tr><th>サイト</th><th>ポイントの代わり</th><th>向いている人</th></tr></thead>
+    <tbody>
+    {% for p in portals %}
+    <tr><td><a href="#{{ p.id }}">{{ p.name }}</a></td><td>{{ p.standing }}</td><td>{{ p.suited }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="pt-list">
+{% for p in portals %}
+<section class="card pt" id="{{ p.id }}">
+  <h2>{{ p.name }}</h2>
+  <dl>
+    <dt>ポイントの代わりにやっていること</dt>
+    <dd>{{ p.standing }}</dd>
+    {% if p.campaign %}<dt>キャンペーン（時期によって変わります）</dt>
+    <dd class="camp">{{ p.campaign }}</dd>{% endif %}
+    <dt>メリット</dt>
+    <dd><ul>{% for m in p.merit %}<li>{{ m }}</li>{% endfor %}</ul></dd>
+    <dt>デメリット</dt>
+    <dd><ul>{% for m in p.demerit %}<li>{{ m }}</li>{% endfor %}</ul></dd>
+    <dt>向いている人</dt>
+    <dd>{{ p.suited }}</dd>
+  </dl>
+  <p class="meta">確認日：{{ p.checked }}　参考：<a href="{{ p.source }}" target="_blank" rel="nofollow noopener">情報元</a></p>
+  <p class="go">
+  {% if p.aff %}
+    <a class="btn" href="{{ p.aff }}" target="_blank" rel="sponsored nofollow noopener"><span class="pr">PR</span>{{ p.name }}を見る</a>{% if p.aff_img %}<img border="0" width="1" height="1" src="{{ p.aff_img }}" alt="" style="position:absolute">{% endif %}
+  {% else %}
+    <a href="{{ p.url }}" target="_blank" rel="nofollow noopener">{{ p.name }}の公式サイト</a>
+  {% endif %}
+  </p>
+</section>
+{% endfor %}
+</div>
+
+<div class="card">
+  <h2 style="margin-top:0">結局どこで寄付すればいい？</h2>
+  <p>サイトのお得さの差は、今は数%程度です。まずは<a href="{{ page.root }}">量コスパランキング</a>で欲しい返礼品を決めて、その返礼品が載っているサイトの中から、自分が使っている決済やポイントに合うところを選ぶのがおすすめです。</p>
+  <p>クレジットカードの通常ポイントはどのサイトでもつくことが多いので、カード会社のポイント条件も確認しておきましょう。</p>
+</div>
+{% endblock %}

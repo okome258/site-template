@@ -15,12 +15,14 @@
   {% endfor %}
   <a href="{{ page.root }}other/" {% if is_other %}class="on"{% endif %}>その他{% if cat is defined and cat in nav.others %}（{{ cat.name }}）{% endif %}</a>
   <a href="{{ page.root }}simulator/" class="sim-tab{% if page.path == 'simulator/index.html' %} on{% endif %}">上限シミュレーター</a>
+  <a href="{{ page.root }}portals/" {% if page.path == 'portals/index.html' %}class="on"{% endif %}>サイト比較</a>
 </nav></div>
 {% endblock %}
 {% block side %}
 {# PC: 左に固定のカテゴリ一覧 #}
 <aside class="side" aria-label="カテゴリ一覧">
   <a class="side-sim{% if page.path == 'simulator/index.html' %} on{% endif %}" href="{{ page.root }}simulator/">控除上限額を計算する</a>
+  <a class="side-about" href="{{ page.root }}portals/">ポイント禁止後のサイト比較</a>
   {% if nav.season %}
   <p class="side-h season-h">いまが旬　{{ nav.season.name }}</p>
   <ul class="side-list season-list">

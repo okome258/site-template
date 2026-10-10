@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
+
+import yaml
 
 from core.qty import parse_quantity
 from core.rakuten import Rakuten, RakutenError
@@ -188,6 +191,28 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
             "context": {"cats": cats, "tax_year": year, "table_year": table_year, "picks": picks, "faq": faq}}
 
 
+AUPAY_A8 = "https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM"
+AUPAY_A8_IMG = "https://www15.a8.net/0.gif?a8mat=4BECH2+BOC3EQ+54OC+5YJRM"
+
+
+def _portals_page(data: dict) -> dict:
+    """ポイント禁止後に各ポータルがやっていること(sites/furusato/portals.yaml を手で更新する)。"""
+    src = yaml.safe_load((Path(__file__).parent / "portals.yaml").read_text(encoding="utf-8"))
+    portals = []
+    for p in src.get("portals", []):
+        p = dict(p)
+        if p["id"] == "rakuten":
+            p["aff"] = (data.get("ranking_links") or {}).get("_total")
+        elif p["id"] == "aupay":
+            p["aff"], p["aff_img"] = AUPAY_A8, AUPAY_A8_IMG
+        portals.append(p)
+    checked = max((str(p.get("checked", "")) for p in portals), default="")
+    return {"path": "portals/index.html", "template": "portals.html",
+            "title": "ふるさと納税サイト比較｜ポイント禁止後の代わりの特典とメリット・デメリット",
+            "description": "2025年10月のポイント禁止後、楽天・ふるなび・au PAY・Yahoo!・ふるさとチョイス・さとふるがポイントの代わりにやっていること(決済の増量・カード還元など)を、メリット・デメリット付きで比較。",
+            "context": {"portals": portals, "checked": checked}, "changefreq": "weekly"}
+
+
 def _season(cfg: dict, data: dict) -> dict | None:
     month = int((data.get("fetched_at") or "2026-10")[5:7])
     for s in cfg.get("seasons", []):
@@ -258,6 +283,9 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     sim = _simulator_page(cfg, data, cats)
     sim["context"]["nav"] = nav
     ps.append(sim)
+    pt = _portals_page(data)
+    pt["context"].update({"cats": cats, "nav": nav})
+    ps.append(pt)
     ps.append({"path": "other/index.html", "template": "other.html", "title": "その他のカテゴリ",
                "description": "日用品・果物・麺・飲み物など、定番以外のふるさと納税の返礼品も寄付1万円あたりの量で比較。",
                "context": {"cats": cats, "nav": nav}})
