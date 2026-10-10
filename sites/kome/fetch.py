@@ -15,8 +15,16 @@ from core.qty import parse_quantity
 from core.rakuten import Rakuten, RakutenError
 
 JST = timezone(timedelta(hours=9))
-HISTORY_FIELDS = ["date", "code", "price", "qty_kg", "postage_included", "point_rate",
+HISTORY_FIELDS = ["date", "code", "kind", "price", "qty_kg", "postage_included", "point_rate",
                   "review_count", "review_avg", "available", "shop"]
+
+
+def kind_of(cfg: dict, name: str) -> str:
+    """白米(hakumai)・無洗米(musen)・玄米(genmai)・もち米(mochi)。単価はこの中でだけ比べる。"""
+    for kind, words in cfg.get("kinds", []):
+        if any(w in name for w in words):
+            return kind
+    return "hakumai"
 
 
 def normalize(cfg: dict, raw: list[dict]) -> tuple[list[dict], dict]:
@@ -46,6 +54,7 @@ def normalize(cfg: dict, raw: list[dict]) -> tuple[list[dict], dict]:
             drop("量が範囲外"); continue
         rows.append({
             "code": code,
+            "kind": kind_of(cfg, name),
             "name": name.strip(),
             "price": price,
             "qty_kg": round(q, 3),
