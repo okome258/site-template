@@ -603,12 +603,12 @@
      "market_pct": 33
     }
    ],
-   "candidates": 160,
+   "candidates": 159,
    "ranked": 39,
    "dropped": {
     "対象外の商品": 8,
     "選択式": 96,
-    "量が複数": 16,
+    "量が複数": 15,
     "量なし": 1
    },
    "summary": {
@@ -1235,8 +1235,8 @@
     "median_per10k": 0.587,
     "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
-    "towns": 47
+    "max_unit_price": 37500,
+    "towns": 48
    },
    "popularity": 2047
   },
@@ -1258,7 +1258,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 2.17,
+     "vs_median": 2.24,
      "market_yen": 12200.0,
      "market_pct": 122
     },
@@ -1278,7 +1278,7 @@
      "review_avg": 4.46,
      "review_count": 291,
      "wakeari": false,
-     "vs_median": 1.69,
+     "vs_median": 1.75,
      "market_yen": 15250.0,
      "market_pct": 95
     },
@@ -1298,7 +1298,7 @@
      "review_avg": 4.68,
      "review_count": 34,
      "wakeari": false,
-     "vs_median": 1.63,
+     "vs_median": 1.68,
      "market_yen": 13720.0,
      "market_pct": 92
     },
@@ -1318,7 +1318,7 @@
      "review_avg": 4.71,
      "review_count": 24,
      "wakeari": true,
-     "vs_median": 1.63,
+     "vs_median": 1.68,
      "market_yen": 9150.0,
      "market_pct": 92
     },
@@ -1338,7 +1338,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.58,
+     "vs_median": 1.63,
      "market_yen": 16470.0,
      "market_pct": 89
     },
@@ -1358,7 +1358,7 @@
      "review_avg": 4.47,
      "review_count": 85,
      "wakeari": false,
-     "vs_median": 1.43,
+     "vs_median": 1.47,
      "market_yen": 15250.0,
      "market_pct": 80
     },
@@ -1378,7 +1378,7 @@
      "review_avg": 4.63,
      "review_count": 153,
      "wakeari": false,
-     "vs_median": 1.42,
+     "vs_median": 1.47,
      "market_yen": 12810.0,
      "market_pct": 80
     },
@@ -1398,7 +1398,7 @@
      "review_avg": 4.28,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 1.41,
+     "vs_median": 1.46,
      "market_yen": 9150.0,
      "market_pct": 80
     },
@@ -1418,7 +1418,7 @@
      "review_avg": 3.73,
      "review_count": 44,
      "wakeari": true,
-     "vs_median": 1.35,
+     "vs_median": 1.4,
      "market_yen": 15250.0,
      "market_pct": 76
     },
@@ -1438,28 +1438,8 @@
      "review_avg": 4.32,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.35,
+     "vs_median": 1.4,
      "market_yen": 15250.0,
-     "market_pct": 76
-    },
-    {
-     "code": "f452017-miyazaki:10002370",
-     "name": "宮崎県産豚肉切り落とし 合計4.5kg 豚 肉 お肉 精肉 パック 小分け 真空 真空パック 使い勝手 料理 アレンジ おかず 炒め物 豚汁 焼肉 BBQ お弁当 食品 畜産物 畜産 宮崎県産豚肉 グルメ お取り寄せ おすすめ お取り寄せグルメ 宮崎県 宮崎市 送料無料",
-     "price": 18000,
-     "qty": 4.5,
-     "evidence": "合計4.5kg",
-     "per10k": 2.5,
-     "unit_price": 4000,
-     "shop": "宮崎県宮崎市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tjs8o.ia3305fd.g00tjs8o.ia331ec5/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff452017-miyazaki%2Fm144-019%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff452017-miyazaki%2Fi%2F10002370%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "宮崎市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f452017-miyazaki/cabinet/img/m144/m144-019-s01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.35,
-     "market_yen": 13720.0,
      "market_pct": 76
     },
     {
@@ -1478,7 +1458,7 @@
      "review_avg": 4.5,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.25,
+     "vs_median": 1.29,
      "market_yen": 9150.0,
      "market_pct": 70
     },
@@ -1498,7 +1478,7 @@
      "review_avg": 4.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.22,
+     "vs_median": 1.26,
      "market_yen": 5490.0,
      "market_pct": 69
     },
@@ -1518,7 +1498,7 @@
      "review_avg": 3.8,
      "review_count": 54,
      "wakeari": false,
-     "vs_median": 1.2,
+     "vs_median": 1.24,
      "market_yen": 6100.0,
      "market_pct": 68
     },
@@ -1538,7 +1518,7 @@
      "review_avg": 4.78,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.2,
+     "vs_median": 1.24,
      "market_yen": 12200.0,
      "market_pct": 68
     },
@@ -1558,7 +1538,7 @@
      "review_avg": 4.68,
      "review_count": 41,
      "wakeari": true,
-     "vs_median": 1.16,
+     "vs_median": 1.2,
      "market_yen": 9150.0,
      "market_pct": 65
     },
@@ -1578,7 +1558,7 @@
      "review_avg": 4.68,
      "review_count": 260,
      "wakeari": true,
-     "vs_median": 1.14,
+     "vs_median": 1.18,
      "market_yen": 12200.0,
      "market_pct": 64
     },
@@ -1598,7 +1578,7 @@
      "review_avg": 4.58,
      "review_count": 142,
      "wakeari": false,
-     "vs_median": 1.14,
+     "vs_median": 1.18,
      "market_yen": 12200.0,
      "market_pct": 64
     },
@@ -1618,7 +1598,7 @@
      "review_avg": 4.5,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.13,
+     "vs_median": 1.17,
      "market_yen": 7620.0,
      "market_pct": 64
     },
@@ -1638,7 +1618,7 @@
      "review_avg": 4.35,
      "review_count": 75,
      "wakeari": false,
-     "vs_median": 1.12,
+     "vs_median": 1.15,
      "market_yen": 10680.0,
      "market_pct": 63
     },
@@ -1658,7 +1638,7 @@
      "review_avg": 4.32,
      "review_count": 437,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 10980.0,
      "market_pct": 61
     },
@@ -1678,7 +1658,7 @@
      "review_avg": 4.73,
      "review_count": 15,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 15250.0,
      "market_pct": 61
     },
@@ -1698,7 +1678,7 @@
      "review_avg": 2.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 6100.0,
      "market_pct": 61
     },
@@ -1718,7 +1698,7 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 7320.0,
      "market_pct": 61
     },
@@ -1738,7 +1718,7 @@
      "review_avg": 1.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 12200.0,
      "market_pct": 61
     },
@@ -1758,7 +1738,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.08,
+     "vs_median": 1.12,
      "market_yen": 5490.0,
      "market_pct": 61
     },
@@ -1778,7 +1758,7 @@
      "review_avg": 4.63,
      "review_count": 78,
      "wakeari": true,
-     "vs_median": 1.03,
+     "vs_median": 1.07,
      "market_yen": 6400.0,
      "market_pct": 58
     },
@@ -1798,7 +1778,7 @@
      "review_avg": 4.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.03,
+     "vs_median": 1.07,
      "market_yen": 12200.0,
      "market_pct": 58
     },
@@ -1818,7 +1798,7 @@
      "review_avg": 4.75,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.02,
+     "vs_median": 1.05,
      "market_yen": 9760.0,
      "market_pct": 57
     },
@@ -1838,13 +1818,33 @@
      "review_avg": 3.67,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.03,
      "market_yen": 7320.0,
      "market_pct": 56
+    },
+    {
+     "code": "f462241-isa:10000382",
+     "name": "鹿児島県産黒豚切り落とし(計2.5kg・250g×10P) 精肉 小分け 切落とし 料理 パック 国産 薄切り 豚肉 九州産 冷凍 【増元精肉店】",
+     "price": 14000,
+     "qty": 2.5,
+     "evidence": "計2.5kg",
+     "per10k": 1.786,
+     "unit_price": 5600,
+     "shop": "鹿児島県伊佐市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbf5o.ia330ae0.g00tbf5o.ia331efd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462241-isa%2Fisa267%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462241-isa%2Fi%2F10000382%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "伊佐市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462241-isa/cabinet/img01/isa267_smn02.jpg?_ex=240x240",
+     "review_avg": 4.7,
+     "review_count": 66,
+     "wakeari": false,
+     "vs_median": 1.0,
+     "market_yen": 7620.0,
+     "market_pct": 54
     }
    ],
-   "candidates": 149,
-   "ranked": 60,
+   "candidates": 148,
+   "ranked": 59,
    "dropped": {
     "対象外の商品": 36,
     "選択式": 44,
@@ -1852,7 +1852,7 @@
     "量なし": 2
    },
    "summary": {
-    "median_per10k": 1.846,
+    "median_per10k": 1.786,
     "median_unit_price": 5600,
     "min_unit_price": 2500,
     "max_unit_price": 18000,
@@ -15217,12 +15217,12 @@
      "vs_median": 0.64
     }
    ],
-   "candidates": 85,
+   "candidates": 86,
    "ranked": 37,
    "dropped": {
     "量が範囲外": 18,
     "選択式": 15,
-    "対象外の商品": 10,
+    "対象外の商品": 11,
     "量なし": 4,
     "量が複数": 1
    },
@@ -16739,5 +16739,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T00:15+09:00"
+ "fetched_at": "2026-10-11T00:21+09:00"
 }
