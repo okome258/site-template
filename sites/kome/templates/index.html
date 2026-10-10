@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ site.name }}(準備中)</h1>
+<p class="lead">お米の価格を毎日記録しています。記録がたまったら、1kgあたりの価格・過去最安値との差・レビューで「買い時」を判定するページを公開します。</p>
+<p>記録日数: <b>{{ days }}日</b> / 今日の記録: <b>{{ data["items"] | length }}件</b></p>
+<h2>今日の1kgあたり 安い順(上位10件)</h2>
+<ol>
+{% for it in data["items"][:10] %}
+  <li><a href="{{ it.url }}" target="_blank" rel="sponsored noopener">{{ it.name[:60] }}</a>
+    {{ it.price | yen }} / {{ it.qty_kg }}kg → <b>1kg {{ it.per_kg | yen }}</b>{% if not it.postage_included %}(送料別){% endif %} <span class="pr">PR</span></li>
+{% endfor %}
+</ol>
+{% endblock %}
