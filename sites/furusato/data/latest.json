@@ -603,10 +603,10 @@
      "market_pct": 30
     }
    ],
-   "candidates": 157,
+   "candidates": 156,
    "ranked": 38,
    "dropped": {
-    "対象外の商品": 8,
+    "対象外の商品": 7,
     "選択式": 95,
     "量が複数": 15,
     "量なし": 1
@@ -1224,18 +1224,18 @@
     }
    ],
    "candidates": 155,
-   "ranked": 58,
+   "ranked": 57,
    "dropped": {
     "対象外の商品": 38,
-    "選択式": 50,
+    "選択式": 51,
     "量が複数": 7,
     "量なし": 2
    },
    "summary": {
     "median_per10k": 0.556,
-    "median_unit_price": 18333,
+    "median_unit_price": 18000,
     "min_unit_price": 8750,
-    "max_unit_price": 40000,
+    "max_unit_price": 37500,
     "towns": 48
    },
    "popularity": 2013
@@ -2243,26 +2243,6 @@
      "market_pct": 29
     },
     {
-     "code": "f342041-mihara:10000846",
-     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉 皮無し3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ とりむねにく 鶏むね肉 むね肉 鶏 皮なし 小分け みはら 広島県産 神明鶏 012017",
-     "price": 17000,
-     "qty": 3.0,
-     "evidence": "3kg",
-     "per10k": 1.765,
-     "unit_price": 5667,
-     "shop": "広島県三原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110783%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000846%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "三原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f592cbbb26a6284704.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.97,
-     "market_yen": 4860.0,
-     "market_pct": 29
-    },
-    {
      "code": "f452076-kushima:10000700",
      "name": "便利な小分け10袋！宮崎県産若鶏もも肉 計3kg（300g×10袋）肉 もも肉 お肉 鶏肉 鶏もも肉 鶏 精肉 小分け ストック 若鶏 カット済み 国産 ふるさと 人気 おすすめ カット 鶏もも グルメ 使い勝手 宮崎 国産若鶏 特産品 宮崎県 串間市 送料無料",
      "price": 18000,
@@ -2461,6 +2441,26 @@
      "vs_median": 0.71,
      "market_yen": 6480.0,
      "market_pct": 21
+    },
+    {
+     "code": "f352110-nagato:10000189",
+     "name": "長州どり もも肉 1.8kg（300g×6パック）【鶏肉 小分け もも カット もも肉 チキン モモ肉 とりにく 切り身 とり肉 国産 冷凍 精肉 カット済 小分けパック】",
+     "price": 14000,
+     "qty": 1.8,
+     "evidence": "300g×6",
+     "per10k": 1.286,
+     "unit_price": 7778,
+     "shop": "山口県長門市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpggo.ia330cfb.g00tpggo.ia331b7e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff352110-nagato%2F1006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff352110-nagato%2Fi%2F10000189%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "長門市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f352110-nagato/cabinet/07428829/imgrc0087924504.jpg?_ex=240x240",
+     "review_avg": 4.96,
+     "review_count": 24,
+     "wakeari": false,
+     "vs_median": 0.71,
+     "market_yen": 2920.0,
+     "market_pct": 21
     }
    ],
    "candidates": 165,
@@ -2474,10 +2474,10 @@
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 5667,
+    "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 21
+    "towns": 22
    },
    "popularity": 1476
   },
@@ -3705,14 +3705,14 @@
      "market_pct": 17
     }
    ],
-   "candidates": 143,
+   "candidates": 142,
    "ranked": 37,
    "dropped": {
     "選択式": 41,
     "対象外の商品": 51,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
@@ -10889,7 +10889,7 @@
      "review_avg": 4.32,
      "review_count": 75,
      "wakeari": false,
-     "vs_median": 2.46
+     "vs_median": 2.56
     },
     {
      "code": "f412040-taku:10000336",
@@ -10907,7 +10907,7 @@
      "review_avg": 4.43,
      "review_count": 384,
      "wakeari": false,
-     "vs_median": 1.92
+     "vs_median": 2.0
     },
     {
      "code": "f412040-taku:10000676",
@@ -10925,7 +10925,7 @@
      "review_avg": 4.47,
      "review_count": 98,
      "wakeari": false,
-     "vs_median": 1.92
+     "vs_median": 2.0
     },
     {
      "code": "f412040-taku:10000796",
@@ -10943,7 +10943,7 @@
      "review_avg": 4.72,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 1.92
+     "vs_median": 2.0
     },
     {
      "code": "f452025-miyakonojo:10000011",
@@ -10961,7 +10961,7 @@
      "review_avg": 4.28,
      "review_count": 185,
      "wakeari": false,
-     "vs_median": 1.58
+     "vs_median": 1.65
     },
     {
      "code": "f282260-awaji:10002041",
@@ -10979,7 +10979,7 @@
      "review_avg": 4.7,
      "review_count": 66,
      "wakeari": false,
-     "vs_median": 1.48
+     "vs_median": 1.54
     },
     {
      "code": "f016438-makubetsu:10000474",
@@ -10997,7 +10997,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.19
     },
     {
      "code": "f434230-minamioguni:10000256",
@@ -11015,7 +11015,7 @@
      "review_avg": 4.58,
      "review_count": 146,
      "wakeari": false,
-     "vs_median": 1.1
+     "vs_median": 1.15
     },
     {
      "code": "f282260-awaji:10000854",
@@ -11033,7 +11033,7 @@
      "review_avg": 4.66,
      "review_count": 157,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.04
     },
     {
      "code": "f252026-hikone:10000825",
@@ -11051,7 +11051,7 @@
      "review_avg": 4.76,
      "review_count": 99,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0
     },
     {
      "code": "f012041-asahikawashi:10001253",
@@ -11069,7 +11069,7 @@
      "review_avg": 5.0,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.91
+     "vs_median": 0.95
     },
     {
      "code": "f015431-bihoro:10000382",
@@ -11087,7 +11087,7 @@
      "review_avg": 4.6,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.85
+     "vs_median": 0.89
     },
     {
      "code": "f412040-taku:10000185",
@@ -11105,7 +11105,25 @@
      "review_avg": 4.8,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.83
+    },
+    {
+     "code": "f412040-taku:10000530",
+     "name": "【高評価＆高リピート率】老舗の佐賀牛100% ハンバーグ 150g×10個 個包装 肉々しくジューシーな味わい ふるさと納税 ハンバーグ 牛100% 無添加 ハンバーグ 牛肉100% 冷凍 国産 佐賀牛 黒毛和牛 牛肉 ふるさと 人気 ランキング z-73",
+     "price": 22000,
+     "qty": 1.5,
+     "evidence": "150g×10",
+     "per10k": 0.682,
+     "unit_price": 14667,
+     "shop": "佐賀県多久市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fz-73%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000530%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "多久市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/06153579/10097835/10163328/z-73_2601.jpg?_ex=240x240",
+     "review_avg": 4.82,
+     "review_count": 11,
+     "wakeari": false,
+     "vs_median": 0.76
     },
     {
      "code": "f464040-nagashima:10001154",
@@ -11123,7 +11141,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.63
+     "vs_median": 0.65
     },
     {
      "code": "f253847-ryuo:10001410",
@@ -11141,7 +11159,7 @@
      "review_avg": 4.62,
      "review_count": 253,
      "wakeari": false,
-     "vs_median": 0.62
+     "vs_median": 0.64
     },
     {
      "code": "f434281-takamori:10000501",
@@ -11159,7 +11177,7 @@
      "review_avg": 4.64,
      "review_count": 154,
      "wakeari": false,
-     "vs_median": 0.47
+     "vs_median": 0.49
     },
     {
      "code": "f242012-tsu:10000077",
@@ -11177,7 +11195,7 @@
      "review_avg": 4.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.44
+     "vs_median": 0.46
     },
     {
      "code": "f402052-iizuka:10002144",
@@ -11195,11 +11213,11 @@
      "review_avg": 4.23,
      "review_count": 13,
      "wakeari": false,
-     "vs_median": 0.36
+     "vs_median": 0.37
     }
    ],
-   "candidates": 96,
-   "ranked": 18,
+   "candidates": 97,
+   "ranked": 19,
    "dropped": {
     "選択式": 31,
     "対象外の商品": 30,
@@ -11208,13 +11226,13 @@
     "量が範囲外": 2
    },
    "summary": {
-    "median_per10k": 0.938,
+    "median_per10k": 0.9,
     "median_unit_price": 11111,
     "min_unit_price": 4333,
     "max_unit_price": 30000,
     "towns": 14
    },
-   "popularity": 1677
+   "popularity": 1688
   },
   "gyoza": {
    "items": [
@@ -12518,6 +12536,26 @@
      "market_pct": 34
     },
     {
+     "code": "f332097-takahashi:10000072",
+     "name": "シャインマスカット 約2kg 3～5房 岡山県高梁市産 2026年先行予約 ぶどう 葡萄 フルーツ 果物 産地直送 種なし 皮ごと食べられる JAびほくぶどう生産部会 日本農業賞集団組織の部で大賞受賞　お届け：2026年9月下旬～2026年10月下旬",
+     "price": 27000,
+     "qty": 2.0,
+     "evidence": "2kg",
+     "per10k": 0.741,
+     "unit_price": 13500,
+     "shop": "岡山県高梁市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00th6io.ia3305eb.g00th6io.ia331996/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff332097-takahashi%2F56150079%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff332097-takahashi%2Fi%2F10000072%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高梁市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f332097-takahashi/cabinet/d_201906/56150079_01_web_s.jpg?_ex=240x240",
+     "review_avg": 4.6,
+     "review_count": 10,
+     "wakeari": false,
+     "vs_median": 0.74,
+     "market_yen": 8750.0,
+     "market_pct": 32
+    },
+    {
      "code": "f192112-fuefuki:10000920",
      "name": "【2026年発送★先行予約】笛吹市産　 厳選! シャインマスカット 2〜3房 約1.0kg 205-004 ふるさと納税 シャインマスカット 笛吹市 国産 人気 期間限定 ぶどう ブドウ 葡萄 旬 果物 フルーツ 山梨県 送料無料 先行予約",
      "price": 15000,
@@ -12576,30 +12614,10 @@
      "vs_median": 0.5,
      "market_yen": 4380.0,
      "market_pct": 22
-    },
-    {
-     "code": "f332119-bizen:10000604",
-     "name": "【2027年発送 先行受付】シャインマスカット 3〜5房 約2kg ハウス栽培 株式会社土方商店《7月上旬-8月上旬頃出荷》岡山県 備前市 岡山県産 ブドウ ぶどう 葡萄 フルーツ 果物 お取り寄せ お取り寄せフルーツ 送料無料",
-     "price": 50000,
-     "qty": 2.0,
-     "evidence": "2kg",
-     "per10k": 0.4,
-     "unit_price": 25000,
-     "shop": "岡山県備前市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tigqo.ia330521.g00tigqo.ia331bdf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff332119-bizen%2F0050-b-055%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff332119-bizen%2Fi%2F10000604%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "備前市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f332119-bizen/cabinet/local/09939412/bhsyh35001_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.4,
-     "market_yen": 8750.0,
-     "market_pct": 18
     }
    ],
-   "candidates": 94,
-   "ranked": 31,
+   "candidates": 95,
+   "ranked": 32,
    "dropped": {
     "量なし": 15,
     "選択式": 31,
@@ -12611,9 +12629,9 @@
     "median_unit_price": 10000,
     "min_unit_price": 5000,
     "max_unit_price": 27273,
-    "towns": 18
+    "towns": 19
    },
-   "popularity": 804
+   "popularity": 814
   },
   "strawberry": {
    "items": [
@@ -16743,5 +16761,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T23:23+09:00"
+ "fetched_at": "2026-10-11T23:30+09:00"
 }
