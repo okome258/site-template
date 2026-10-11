@@ -474,6 +474,74 @@ def fetch_occupations(api) -> dict | None:
     return {"table": {"id": tid, "title": meta["table"]["title"]}, "years": sorted(code_year.values()), "rows": rows}
 
 
+def fetch_occ_by_industry(api, year: str) -> dict | None:
+    """業界ごとの職業の内訳(労働力調査・産業，職業別就業者数・年次)。AIの影響を受けやすい仕事の割合を出す。"""
+    tid = "0003024266"
+    try:
+        body = api._get("getStatsList", "GET_STATS_LIST", searchWord="産業 職業別就業者数", limit=100)
+        tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
+        tabs = tabs if isinstance(tabs, list) else [tabs]
+        from core.estat import parse_table_inf
+        hits = [parse_table_inf(t) for t in tabs]
+        hits = [t for t in hits if "年次" in t["statistics_name"] and "全国" in t["statistics_name"]
+                and t["title"].startswith("産業，職業別就業者数") and "～）" in t["title"]]
+        if hits:
+            tid = max(hits, key=lambda t: t["open_date"])["id"]
+    except Exception:
+        pass
+    meta = api.get_data(tid, limit=1)
+    cl = meta["classes"]
+    occ = next((c for c in cl if "職業" in cl[c]["name"]), None)
+    ind = next((c for c in cl if "産業" in cl[c]["name"]), None)
+    if not occ or not ind:
+        return None
+    code_year = {v: k for k, v in time_years(cl).items()}
+    ycode = next((c for c, y in code_year.items() if y == year), None) or max(code_year, key=lambda c: code_year[c])
+    fixed = {}
+    for cid, c in cl.items():
+        if cid in (occ, ind, "time", "tab", "area"):
+            continue
+        prefer = ["総数", "就業者", "15歳以上"]
+        fixed[cid] = total_code(c, prefer)
+    filters = {param_name(cid): code for cid, code in fixed.items()}
+    filters["cdTime"] = ycode
+    data = api.get_data(tid, **filters)
+    order = cl[occ]["order"]
+    has_sub, parent = set(), None
+    for code in order:
+        if code in OCC_MAJOR:
+            parent = code
+        elif code != "000" and parent:
+            has_sub.add(parent)
+    leaves = [c for c in order if c != "000" and c not in has_sub]
+    vals: dict[str, dict[str, float]] = {}
+    for r in data["values"]:
+        if r["value"] is None or any(r.get(cid) not in (None, code) for cid, code in fixed.items()):
+            continue
+        vals.setdefault(r[ind], {})[r[occ]] = r["value"]
+    rows = []
+    for icode, v in vals.items():
+        tot = v.get("000")
+        if not tot:
+            continue
+        lv = {3: 0.0, 2: 0.0, 1: 0.0}
+        parent = None
+        for code in order:
+            if code in OCC_MAJOR:
+                parent = code
+            if code in leaves and v.get(code):
+                lv[AI_LEVEL.get(code, AI_LEVEL.get(parent or "", 1))] += v[code]
+        known = sum(lv.values())
+        if known < tot * 0.6:   # 内訳が秘匿などで足りない業界は使わない
+            continue
+        rows.append({"code": icode, "name": cl[ind]["items"][icode], "total": tot,
+                     "high": round(lv[3] / known, 3), "mid": round(lv[2] / known, 3), "low": round(lv[1] / known, 3),
+                     "clerical": round(v.get("007", 0) / tot, 3)})
+    DEBUG.append({"occ_ind_table": tid, "year": code_year.get(ycode), "n_values": len(data["values"]),
+                  "industries": [r["name"] for r in rows]})
+    return {"table": {"id": tid, "title": meta["table"]["title"]}, "year": code_year.get(ycode), "rows": rows}
+
+
 def fetch(cfg: dict) -> dict:
     from datetime import date
     api = EStat()
@@ -533,6 +601,10 @@ def fetch(cfg: dict) -> dict:
         occ = fetch_occupations(api)
         if occ:
             print(f"職業別就業者数: {occ['table']['id']} {len(occ['rows'])}職業 {occ['years'][:1]}〜{occ['years'][-1:]}")
+            oi = fetch_occ_by_industry(api, occ["years"][-1])
+            if oi:
+                occ["by_industry"] = oi
+                print(f"業界ごとの職業の内訳: {len(oi['rows'])}業界({oi['year']}年)")
     except Exception as e:
         print(f"::warning::職業別就業者数の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
     return {"status": "ok", "years": years, "occ": occ, "prefs": prefs[: ec["years"]], "checked_tables": checked}
