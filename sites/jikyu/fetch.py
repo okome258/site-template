@@ -422,20 +422,27 @@ def probe_jobs(cfg: dict, api) -> None:
     """(調査用・一時)職業別の求人統計の表を探して data/jobs_probe.json に残す。"""
     import json
     out = {}
-    try:
-        for code, word in (("00450222", "職業別"), ("00450222", "職業")):
-            ts = api.list_tables(code, word, limit=300)
-            out[f"{code}:{word}"] = [{k: t[k] for k in ("id", "title", "survey_date", "open_date", "statistics_name")}
-                                    for t in ts][:300]
-        cands = [t for t in out.get("00450222:職業別", []) if "職業" in t["title"]][:6]
-        for t in cands:
-            meta = api.get_data(t["id"], limit=3)
-            out["meta:" + t["id"]] = {cid: {"name": c["name"], "n": len(c["order"]),
-                                            "head": [c["items"][x] for x in c["order"][:40]],
-                                            "tail": [c["items"][x] for x in c["order"][-3:]]}
-                                      for cid, c in meta["classes"].items()}
-    except Exception as e:
-        out["error"] = f"{type(e).__name__}: {str(e)[:200]}"
+    queries = [
+        {"searchWord": "職業別 有効求人倍率"},
+        {"searchWord": "一般職業紹介状況 職業別"},
+        {"searchWord": "職業安定業務統計 職業"},
+        {"statsCode": "00450222"},
+        {"searchWord": "労働力調査 職業別 就業者"},
+    ]
+    for q in queries:
+        key = " ".join(f"{k}={v}" for k, v in q.items())
+        try:
+            body = api._get("getStatsList", "GET_STATS_LIST", limit=200, **q)
+            tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
+            tabs = tabs if isinstance(tabs, list) else [tabs]
+            from core.estat import parse_table_inf
+            rows = [parse_table_inf(t) for t in tabs]
+            out[key] = {"n": body.get("DATALIST_INF", {}).get("NUMBER"),
+                        "tables": [{"id": t["id"], "stat": t["stat_name"][:20], "stats": t["statistics_name"][:40],
+                                    "title": t["title"][:70], "open": t["open_date"], "survey": t["survey_date"]}
+                                   for t in rows][:120]}
+        except Exception as e:
+            out[key] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
     (cfg["_dir"] / "data" / "jobs_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
                                                            encoding="utf-8")
 
