@@ -443,6 +443,16 @@ def probe_jobs(cfg: dict, api) -> None:
                                    for t in rows][:120]}
         except Exception as e:
             out[key] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
+    for tid in ("0003024266", "0003024268"):
+        try:
+            meta = api.get_data(tid, limit=5)
+            out["meta:" + tid] = {"table": meta["table"]["title"][:80],
+                                  "classes": {cid: {"name": c["name"], "n": len(c["order"]),
+                                                    "items": [f'{x}:{c["items"][x]}' for x in c["order"][:80]]}
+                                              for cid, c in meta["classes"].items()},
+                                  "sample": meta["values"][:5]}
+        except Exception as e:
+            out["meta:" + tid] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
     (cfg["_dir"] / "data" / "jobs_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
                                                            encoding="utf-8")
 

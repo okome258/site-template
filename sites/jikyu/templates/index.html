@@ -16,6 +16,16 @@
 {% if latest.all.hourly %}
 <p class="note">全産業の平均は <b>{{ latest.all.hourly | num }}円</b>（年収 {{ latest.all.annual_man | num }}万円・月 {{ latest.all.hours_month }}時間）。</p>
 {% endif %}
+<div class="rk-tabs">
+<input type="radio" name="rk" id="rk-gyokai" checked>
+<input type="radio" name="rk" id="rk-gyoshu">
+<div class="rk-bar">
+<label for="rk-gyokai">業界 <small>{{ ranking | length }}</small></label>
+{% if focus_rank %}<label for="rk-gyoshu">注目の業種 <small>{{ focus_rank | length }}</small></label>{% endif %}
+{% if pref_rank %}<a href="{{ page.root }}chiiki/">都道府県 <small>47</small></a>{% endif %}
+</div>
+<div class="rk-panel rk-p1">
+<p class="small muted">大きな区分（産業大分類）で比べた順位です。商社・銀行・SIerなどは「注目の業種」タブへ。</p>
 <table class="board compact">
 <thead><tr><th>#</th><th>業界</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th>{% if prev %}<th class="num">前年比</th>{% endif %}</tr></thead>
 <tbody>
@@ -33,9 +43,12 @@
 </tbody>
 </table>
 <p class="small muted">出典の表: {{ latest.table.title }}（{{ latest.table.id }}）。一般労働者・民営事業所・企業規模10人以上・男女計・全年齢の平均です。</p>
+</div>
 {% if focus_rank %}
-<h2 id="focus">注目の業種（商社・銀行・SIerなど）</h2>
-<p>上の業界をもう一段細かく分けた統計（産業中分類）から、転職で気になる業種を抜き出しました。たとえば総合商社は「卸売・小売」に含まれるため、上の表では小売と混ざって平均が下がっています。</p>
+<div class="rk-panel rk-p2" id="focus">
+<script>if(location.hash==="#focus"){document.getElementById("rk-gyoshu").checked=true}</script>
+
+<p class="small">業界をもう一段細かく分けた統計（産業中分類）から、転職で気になる業種を抜き出しました。たとえば総合商社は「卸売・小売」に含まれるため、業界の表では小売と混ざって平均が下がっています。</p>
 <table class="board compact">
 <thead><tr><th>#</th><th>業種</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th>{% if prev %}<th class="num">前年比</th>{% endif %}</tr></thead>
 <tbody>
@@ -52,7 +65,9 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
 {% endif %}
+</div>
 <div class="navs">
 {% if fc_rank %}<a href="{{ page.root }}yosoku/"><b>{{ to_year }}年の予想 →</b><small>このペースが続いたら年収・時給はいくら？</small></a>{% endif %}
 {% if pref_rank %}<a href="{{ page.root }}chiiki/"><b>都道府県別ランキング →</b><small>{{ pref_year }}年・47都道府県の実質時給</small></a>{% endif %}

@@ -29,6 +29,15 @@
 .jp-big text{fill:#334}
 .legend .lv{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
 tr:target{background:#fff4c4}
+/* ランキングの切り替えタブ(業界/注目の業種/都道府県) */
+.rk-tabs>input{position:absolute;opacity:0;pointer-events:none}
+.rk-bar{position:sticky;top:0;z-index:5;display:flex;gap:6px;padding:8px 0;background:var(--bg,#fff);border-bottom:2px solid var(--ink);margin:8px 0 10px}
+.rk-bar label,.rk-bar a{flex:1;text-align:center;padding:9px 4px;border-radius:10px 10px 0 0;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.rk-bar small{font-weight:400;color:var(--muted);font-size:11px}
+.rk-panel{display:none}
+#rk-gyokai:checked~.rk-p1,#rk-gyoshu:checked~.rk-p2{display:block}
+#rk-gyokai:checked~.rk-bar label[for=rk-gyokai],#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu]{background:var(--accent);color:#fff}
+#rk-gyokai:checked~.rk-bar label[for=rk-gyokai] small,#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu] small{color:#dde8f3}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
