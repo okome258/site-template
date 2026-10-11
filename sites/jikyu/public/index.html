@@ -84,6 +84,31 @@ tr:target{background:#fff4c4}
 .caveat{border-left:4px solid #e3c46b;background:#fbf6e6;padding:10px 12px;border-radius:6px;font-size:14px;line-height:1.7;margin:12px 0}
 details.more{margin:10px 0}details.more summary{cursor:pointer;color:var(--accent);font-weight:700;padding:6px 0}
 .dash th small,.dash td small{font-weight:400;color:var(--muted)}
+.answer{border:2px solid var(--accent);border-radius:14px;padding:12px 14px 6px;margin:12px 0}
+.answer .ah{margin:0 0 4px;font-weight:900;color:var(--accent)}
+.answer ol{margin:0;padding-left:20px}.answer li{margin:0 0 8px;line-height:1.7}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.toc a{font-size:13px;padding:5px 10px;border-radius:16px;background:var(--panel);color:var(--ink);text-decoration:none;border:1px solid var(--line)}
+.jobcards{list-style:none;padding:0;margin:10px 0;counter-reset:jc;display:grid;gap:8px}
+@media(min-width:640px){.jobcards{grid-template-columns:1fr 1fr}}
+.jobcards li{counter-increment:jc;border:1px solid var(--line);border-radius:12px;padding:10px 12px;position:relative}
+.jobcards li::before{content:counter(jc);position:absolute;left:-6px;top:-6px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.jc-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.jc-n{font-weight:700}.jc-v{color:#b4442d;font-size:20px;font-family:var(--head)}.jc-v small{font-size:12px}
+.jc-m{margin:4px 0}
+.jc-q{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.jc-q span{font-size:12px;background:#eef3f8;color:#234a70;border-radius:6px;padding:2px 7px}
+.risky{list-style:none;padding:0;margin:8px 0;display:grid;gap:4px}
+.risky li{display:flex;gap:8px;align-items:baseline;border-bottom:1px solid var(--line);padding:6px 0}
+.risky li span{flex:1}.risky small{font-size:12px}
+details.big>summary{display:block;text-align:center;border:1px solid var(--accent);border-radius:10px;padding:10px;margin:8px 0}
+.sortbar{display:flex;gap:6px;margin:6px 0 4px;flex-wrap:wrap}
+.sortbar button{font:inherit;font-size:12px;padding:5px 10px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.sortbar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rk-tabs>input:nth-of-type(3):checked~.rk-p3{display:block}
+.rk-links{position:static}.rk-links a.on{background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(3):checked~.rk-bar label:nth-of-type(3){background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(3):checked~.rk-bar label:nth-of-type(3) small{color:#dde8f3}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -102,7 +127,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="./"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T23:03+09:00"><b>2026/10/11 23:03</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T23:25+09:00"><b>2026/10/11 23:25</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -116,7 +141,7 @@ html{scroll-padding-top:60px}
 </div>
 <a class="ai-hero" href="./ai/">
 <img src="./yc-pc.webp" alt="" width="110" height="90">
-<span><b>AI時代、あなたの業界の時給はどうなる？</b><small>業界・業種別に2030年をシミュレーション／実際に増えた仕事・減った仕事</small></span>
+<span><b>AIに食われにくい仕事・資格は？</b><small>求人倍率と人手不足で見るAI時代の転職／業界別の2030年予想</small></span>
 <i>›</i>
 </a>
 <div class="yc-say"><img src="./yc-greet.webp" alt="" width="76" height="78"><p><b class="nm">ヤドキャリ</b>殻（会社）を住み替える前に、年収だけじゃなく「1時間あたりいくらもらえるか」も見ておこう。</p></div>
@@ -124,136 +149,137 @@ html{scroll-padding-top:60px}
 <div class="rk-tabs">
 <input type="radio" name="rk" id="rk-gyokai" checked>
 <input type="radio" name="rk" id="rk-gyoshu">
-<div class="rk-bar">
+<input type="radio" name="rk" id="rk-pref"><div class="rk-bar">
 <label for="rk-gyokai">業界 <small>16</small></label>
-<label for="rk-gyoshu">注目の業種 <small>21</small></label><a href="./chiiki/">都道府県 <small>47</small></a></div>
+<label for="rk-gyoshu">注目の業種 <small>21</small></label><label for="rk-pref">都道府県 <small>47</small></label></div>
 <div class="rk-panel rk-p1">
 <p class="small muted">大きな区分（産業大分類）で比べた順位です。商社・銀行・SIerなどは「注目の業種」タブへ。</p>
-<table class="board compact">
+<div class="sortbar" data-target="tbl-gyokai"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<table class="board compact" id="tbl-gyokai">
 <thead><tr><th>#</th><th>業界</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th></tr></thead>
 <tbody>
-<tr>
-<td>1</td>
+<tr data-h="3818" data-a="723.9" data-t="158.0">
+<td class="rk">1</td>
 <th><a href="./gyokai/finance/">金融・保険</a>
 <div class="bar"><i style="width:100.0%"></i></div></th>
 <td class="num v">3,818円<span class="sub sp">年収724万</span></td>
 <td class="num hide-sp">724万円</td>
 <td class="num hide-sp">158.0h</td>
 <td class="num up">+274円</td></tr>
-<tr>
-<td>2</td>
+<tr data-h="3747" data-a="755.4" data-t="168.0">
+<td class="rk">2</td>
 <th><a href="./gyokai/utilities/">電気・ガス・水道</a>
 <div class="bar"><i style="width:98.1%"></i></div></th>
 <td class="num v">3,747円<span class="sub sp">年収755万</span></td>
 <td class="num hide-sp">755万円</td>
 <td class="num hide-sp">168.0h</td>
 <td class="num up">+29円</td></tr>
-<tr>
-<td>3</td>
+<tr data-h="3480" data-a="714.1" data-t="171.0">
+<td class="rk">3</td>
 <th><a href="./gyokai/professional/">専門・技術サービス</a>
 <div class="bar"><i style="width:91.1%"></i></div></th>
 <td class="num v">3,480円<span class="sub sp">年収714万</span></td>
 <td class="num hide-sp">714万円</td>
 <td class="num hide-sp">171.0h</td>
 <td class="num up">+249円</td></tr>
-<tr>
-<td>4</td>
+<tr data-h="3257" data-a="668.4" data-t="171.0">
+<td class="rk">4</td>
 <th><a href="./gyokai/it/">IT・通信</a>
 <div class="bar"><i style="width:85.3%"></i></div></th>
 <td class="num v">3,257円<span class="sub sp">年収668万</span></td>
 <td class="num hide-sp">668万円</td>
 <td class="num hide-sp">171.0h</td>
 <td class="num up">+60円</td></tr>
-<tr>
-<td>5</td>
+<tr data-h="3105" data-a="648.4" data-t="174.0">
+<td class="rk">5</td>
 <th><a href="./gyokai/mining/">鉱業</a>
 <div class="bar"><i style="width:81.3%"></i></div></th>
 <td class="num v">3,105円<span class="sub sp">年収648万</span></td>
 <td class="num hide-sp">648万円</td>
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+45円</td></tr>
-<tr>
-<td>6</td>
+<tr data-h="2984" data-a="598.0" data-t="167.0">
+<td class="rk">6</td>
 <th><a href="./gyokai/education/">教育</a>
 <div class="bar"><i style="width:78.2%"></i></div></th>
 <td class="num v">2,984円<span class="sub sp">年収598万</span></td>
 <td class="num hide-sp">598万円</td>
 <td class="num hide-sp">167.0h</td>
 <td class="num down">-50円</td></tr>
-<tr>
-<td>7</td>
+<tr data-h="2869" data-a="592.1" data-t="172.0">
+<td class="rk">7</td>
 <th><a href="./gyokai/realestate/">不動産</a>
 <div class="bar"><i style="width:75.1%"></i></div></th>
 <td class="num v">2,869円<span class="sub sp">年収592万</span></td>
 <td class="num hide-sp">592万円</td>
 <td class="num hide-sp">172.0h</td>
 <td class="num down">-96円</td></tr>
-<tr>
-<td>8</td>
+<tr data-h="2804" data-a="592.1" data-t="176.0">
+<td class="rk">8</td>
 <th><a href="./gyokai/construction/">建設</a>
 <div class="bar"><i style="width:73.4%"></i></div></th>
 <td class="num v">2,804円<span class="sub sp">年収592万</span></td>
 <td class="num hide-sp">592万円</td>
 <td class="num hide-sp">176.0h</td>
 <td class="num up">+112円</td></tr>
-<tr>
-<td>9</td>
+<tr data-h="2755" data-a="562.0" data-t="170.0">
+<td class="rk">9</td>
 <th><a href="./gyokai/trade/">卸売・小売</a>
 <div class="bar"><i style="width:72.2%"></i></div></th>
 <td class="num v">2,755円<span class="sub sp">年収562万</span></td>
 <td class="num hide-sp">562万円</td>
 <td class="num hide-sp">170.0h</td>
 <td class="num up">+92円</td></tr>
-<tr>
-<td>10</td>
+<tr data-h="2621" data-a="553.6" data-t="176.0">
+<td class="rk">10</td>
 <th><a href="./gyokai/manufacturing/">製造</a>
 <div class="bar"><i style="width:68.6%"></i></div></th>
 <td class="num v">2,621円<span class="sub sp">年収554万</span></td>
 <td class="num hide-sp">554万円</td>
 <td class="num hide-sp">176.0h</td>
 <td class="num up">+58円</td></tr>
-<tr>
-<td>11</td>
+<tr data-h="2593" data-a="516.5" data-t="166.0">
+<td class="rk">11</td>
 <th><a href="./gyokai/compound/">郵便局・協同組合</a>
 <div class="bar"><i style="width:67.9%"></i></div></th>
 <td class="num v">2,593円<span class="sub sp">年収516万</span></td>
 <td class="num hide-sp">516万円</td>
 <td class="num hide-sp">166.0h</td>
 <td class="num up">+65円</td></tr>
-<tr>
-<td>12</td>
+<tr data-h="2418" data-a="478.8" data-t="165.0">
+<td class="rk">12</td>
 <th><a href="./gyokai/medical/">医療・福祉</a>
 <div class="bar"><i style="width:63.3%"></i></div></th>
 <td class="num v">2,418円<span class="sub sp">年収479万</span></td>
 <td class="num hide-sp">479万円</td>
 <td class="num hide-sp">165.0h</td>
 <td class="num up">+91円</td></tr>
-<tr>
-<td>13</td>
+<tr data-h="2220" data-a="506.1" data-t="190.0">
+<td class="rk">13</td>
 <th><a href="./gyokai/transport/">運輸・物流</a>
 <div class="bar"><i style="width:58.1%"></i></div></th>
 <td class="num v">2,220円<span class="sub sp">年収506万</span></td>
 <td class="num hide-sp">506万円</td>
 <td class="num hide-sp">190.0h</td>
 <td class="num down">-2円</td></tr>
-<tr>
-<td>14</td>
+<tr data-h="2089" data-a="431.1" data-t="172.0">
+<td class="rk">14</td>
 <th><a href="./gyokai/lifestyle/">生活サービス・娯楽</a>
 <div class="bar"><i style="width:54.7%"></i></div></th>
 <td class="num v">2,089円<span class="sub sp">年収431万</span></td>
 <td class="num hide-sp">431万円</td>
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+103円</td></tr>
-<tr>
-<td>15</td>
+<tr data-h="2065" data-a="426.1" data-t="172.0">
+<td class="rk">15</td>
 <th><a href="./gyokai/services/">その他サービス</a>
 <div class="bar"><i style="width:54.1%"></i></div></th>
 <td class="num v">2,065円<span class="sub sp">年収426万</span></td>
 <td class="num hide-sp">426万円</td>
 <td class="num hide-sp">172.0h</td>
 <td class="num down">-29円</td></tr>
-<tr>
-<td>16</td>
+<tr data-h="1864" data-a="402.6" data-t="180.0">
+<td class="rk">16</td>
 <th><a href="./gyokai/hospitality/">宿泊・飲食</a>
 <div class="bar"><i style="width:48.8%"></i></div></th>
 <td class="num v">1,864円<span class="sub sp">年収403万</span></td>
@@ -265,174 +291,175 @@ html{scroll-padding-top:60px}
 <p class="small muted">出典の表: 令和７年賃金構造基本統計調査_一般労働者_産業大分類_2025年（Excel）（000010817542）。一般労働者・民営事業所・企業規模10人以上・男女計・全年齢の平均です。</p>
 </div>
 <div class="rk-panel rk-p2" id="focus">
-<script>if(location.hash==="#focus"){document.getElementById("rk-gyoshu").checked=true}</script>
+<script>if(location.hash==="#focus"){document.getElementById("rk-gyoshu").checked=true}if(location.hash==="#pref"){var e=document.getElementById("rk-pref");if(e)e.checked=true}</script>
 
 <p class="small">業界をもう一段細かく分けた統計（産業中分類）から、転職で気になる業種を抜き出しました。たとえば総合商社は「卸売・小売」に含まれるため、業界の表では小売と混ざって平均が下がっています。</p>
-<table class="board compact">
+<div class="sortbar" data-target="tbl-gyoshu"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<table class="board compact" id="tbl-gyoshu">
 <thead><tr><th>#</th><th>業種</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th></tr></thead>
 <tbody>
-<tr>
-<td>1</td>
+<tr data-h="5853" data-a="1158.8" data-t="165.0">
+<td class="rk">1</td>
 <th><a href="./gyoshu/securities/">証券</a><span class="sub">金融・保険</span>
 <div class="bar"><i style="width:100.0%"></i></div></th>
 <td class="num v">5,853円<span class="sub sp">年収1,159万</span></td>
 <td class="num hide-sp">1,159万円</td>
 <td class="num hide-sp">165.0h</td>
 <td class="num up">+203円</td></tr>
-<tr>
-<td>2</td>
+<tr data-h="4650" data-a="881.6" data-t="158.0">
+<td class="rk">2</td>
 <th><a href="./gyoshu/airline/">航空</a><span class="sub">運輸・物流</span>
 <div class="bar"><i style="width:79.4%"></i></div></th>
 <td class="num v">4,650円<span class="sub sp">年収882万</span></td>
 <td class="num hide-sp">882万円</td>
 <td class="num hide-sp">158.0h</td>
 <td class="num down">-116円</td></tr>
-<tr>
-<td>3</td>
+<tr data-h="4627" data-a="905.1" data-t="163.0">
+<td class="rk">3</td>
 <th><a href="./gyoshu/shosha/">総合商社</a><span class="sub">卸売・小売</span>
 <div class="bar"><i style="width:79.1%"></i></div></th>
 <td class="num v">4,627円<span class="sub sp">年収905万</span></td>
 <td class="num hide-sp">905万円</td>
 <td class="num hide-sp">163.0h</td>
 <td class="num down">-622円</td></tr>
-<tr>
-<td>4</td>
+<tr data-h="4014" data-a="809.3" data-t="168.0">
+<td class="rk">4</td>
 <th><a href="./gyoshu/electric/">電力会社</a><span class="sub">電気・ガス・水道</span>
 <div class="bar"><i style="width:68.6%"></i></div></th>
 <td class="num v">4,014円<span class="sub sp">年収809万</span></td>
 <td class="num hide-sp">809万円</td>
 <td class="num hide-sp">168.0h</td>
 <td class="num up">+89円</td></tr>
-<tr>
-<td>5</td>
+<tr data-h="3860" data-a="694.9" data-t="150.0">
+<td class="rk">5</td>
 <th><a href="./gyoshu/insurance/">保険</a><span class="sub">金融・保険</span>
 <div class="bar"><i style="width:65.9%"></i></div></th>
 <td class="num v">3,860円<span class="sub sp">年収695万</span></td>
 <td class="num hide-sp">695万円</td>
 <td class="num hide-sp">150.0h</td>
 <td class="num up">+484円</td></tr>
-<tr>
-<td>6</td>
+<tr data-h="3658" data-a="746.3" data-t="170.0">
+<td class="rk">6</td>
 <th><a href="./gyoshu/railway/">鉄道</a><span class="sub">運輸・物流</span>
 <div class="bar"><i style="width:62.5%"></i></div></th>
 <td class="num v">3,658円<span class="sub sp">年収746万</span></td>
 <td class="num hide-sp">746万円</td>
 <td class="num hide-sp">170.0h</td>
 <td class="num up">+327円</td></tr>
-<tr>
-<td>7</td>
+<tr data-h="3518" data-a="713.4" data-t="169.0">
+<td class="rk">7</td>
 <th><a href="./gyoshu/broadcast/">テレビ・ラジオ</a><span class="sub">IT・通信</span>
 <div class="bar"><i style="width:60.1%"></i></div></th>
 <td class="num v">3,518円<span class="sub sp">年収713万</span></td>
 <td class="num hide-sp">713万円</td>
 <td class="num hide-sp">169.0h</td>
 <td class="num down">-119円</td></tr>
-<tr>
-<td>8</td>
+<tr data-h="3484" data-a="706.6" data-t="169.0">
+<td class="rk">8</td>
 <th><a href="./gyoshu/bank/">銀行</a><span class="sub">金融・保険</span>
 <div class="bar"><i style="width:59.5%"></i></div></th>
 <td class="num v">3,484円<span class="sub sp">年収707万</span></td>
 <td class="num hide-sp">707万円</td>
 <td class="num hide-sp">169.0h</td>
 <td class="num up">+51円</td></tr>
-<tr>
-<td>9</td>
+<tr data-h="3446" data-a="707.1" data-t="171.0">
+<td class="rk">9</td>
 <th><a href="./gyoshu/web/">Web・ネットサービス</a><span class="sub">IT・通信</span>
 <div class="bar"><i style="width:58.9%"></i></div></th>
 <td class="num v">3,446円<span class="sub sp">年収707万</span></td>
 <td class="num hide-sp">707万円</td>
 <td class="num hide-sp">171.0h</td>
 <td class="num up">+287円</td></tr>
-<tr>
-<td>10</td>
+<tr data-h="3398" data-a="681.0" data-t="167.0">
+<td class="rk">10</td>
 <th><a href="./gyoshu/chemical/">化学メーカー</a><span class="sub">製造</span>
 <div class="bar"><i style="width:58.1%"></i></div></th>
 <td class="num v">3,398円<span class="sub sp">年収681万</span></td>
 <td class="num hide-sp">681万円</td>
 <td class="num hide-sp">167.0h</td>
 <td class="num down">-8円</td></tr>
-<tr>
-<td>11</td>
+<tr data-h="3391" data-a="707.9" data-t="174.0">
+<td class="rk">11</td>
 <th><a href="./gyoshu/advertising/">広告</a><span class="sub">専門・技術サービス</span>
 <div class="bar"><i style="width:57.9%"></i></div></th>
 <td class="num v">3,391円<span class="sub sp">年収708万</span></td>
 <td class="num hide-sp">708万円</td>
 <td class="num hide-sp">174.0h</td>
 <td class="num up">+286円</td></tr>
-<tr>
-<td>12</td>
+<tr data-h="3372" data-a="687.9" data-t="170.0">
+<td class="rk">12</td>
 <th><a href="./gyoshu/kikai-shosha/">機械・電機の商社</a><span class="sub">卸売・小売</span>
 <div class="bar"><i style="width:57.6%"></i></div></th>
 <td class="num v">3,372円<span class="sub sp">年収688万</span></td>
 <td class="num hide-sp">688万円</td>
 <td class="num hide-sp">170.0h</td>
 <td class="num down">-300円</td></tr>
-<tr>
-<td>13</td>
+<tr data-h="3294" data-a="676.0" data-t="171.0">
+<td class="rk">13</td>
 <th><a href="./gyoshu/telecom/">通信キャリア</a><span class="sub">IT・通信</span>
 <div class="bar"><i style="width:56.3%"></i></div></th>
 <td class="num v">3,294円<span class="sub sp">年収676万</span></td>
 <td class="num hide-sp">676万円</td>
 <td class="num hide-sp">171.0h</td>
 <td class="num down">-383円</td></tr>
-<tr>
-<td>14</td>
+<tr data-h="3244" data-a="669.5" data-t="172.0">
+<td class="rk">14</td>
 <th><a href="./gyoshu/sier/">SIer・ソフトウェア</a><span class="sub">IT・通信</span>
 <div class="bar"><i style="width:55.4%"></i></div></th>
 <td class="num v">3,244円<span class="sub sp">年収670万</span></td>
 <td class="num hide-sp">670万円</td>
 <td class="num hide-sp">172.0h</td>
 <td class="num up">+157円</td></tr>
-<tr>
-<td>15</td>
+<tr data-h="3132" data-a="627.7" data-t="167.0">
+<td class="rk">15</td>
 <th><a href="./gyoshu/school/">学校</a><span class="sub">教育</span>
 <div class="bar"><i style="width:53.5%"></i></div></th>
 <td class="num v">3,132円<span class="sub sp">年収628万</span></td>
 <td class="num hide-sp">628万円</td>
 <td class="num hide-sp">167.0h</td>
 <td class="num down">-77円</td></tr>
-<tr>
-<td>16</td>
+<tr data-h="2922" data-a="631.2" data-t="180.0">
+<td class="rk">16</td>
 <th><a href="./gyoshu/auto/">自動車・輸送機メーカー</a><span class="sub">製造</span>
 <div class="bar"><i style="width:49.9%"></i></div></th>
 <td class="num v">2,922円<span class="sub sp">年収631万</span></td>
 <td class="num hide-sp">631万円</td>
 <td class="num hide-sp">180.0h</td>
 <td class="num up">+42円</td></tr>
-<tr>
-<td>17</td>
+<tr data-h="2723" data-a="536.0" data-t="164.0">
+<td class="rk">17</td>
 <th><a href="./gyoshu/hospital/">病院・クリニック</a><span class="sub">医療・福祉</span>
 <div class="bar"><i style="width:46.5%"></i></div></th>
 <td class="num v">2,723円<span class="sub sp">年収536万</span></td>
 <td class="num hide-sp">536万円</td>
 <td class="num hide-sp">164.0h</td>
 <td class="num up">+55円</td></tr>
-<tr>
-<td>18</td>
+<tr data-h="2083" data-a="414.9" data-t="166.0">
+<td class="rk">18</td>
 <th><a href="./gyoshu/kaigo/">介護・福祉</a><span class="sub">医療・福祉</span>
 <div class="bar"><i style="width:35.6%"></i></div></th>
 <td class="num v">2,083円<span class="sub sp">年収415万</span></td>
 <td class="num hide-sp">415万円</td>
 <td class="num hide-sp">166.0h</td>
 <td class="num up">+49円</td></tr>
-<tr>
-<td>19</td>
+<tr data-h="1973" data-a="468.7" data-t="198.0">
+<td class="rk">19</td>
 <th><a href="./gyoshu/trucking/">トラック運送</a><span class="sub">運輸・物流</span>
 <div class="bar"><i style="width:33.7%"></i></div></th>
 <td class="num v">1,973円<span class="sub sp">年収469万</span></td>
 <td class="num hide-sp">469万円</td>
 <td class="num hide-sp">198.0h</td>
 <td class="num up">+31円</td></tr>
-<tr>
-<td>20</td>
+<tr data-h="1873" data-a="411.4" data-t="183.0">
+<td class="rk">20</td>
 <th><a href="./gyoshu/restaurant/">飲食店</a><span class="sub">宿泊・飲食</span>
 <div class="bar"><i style="width:32.0%"></i></div></th>
 <td class="num v">1,873円<span class="sub sp">年収411万</span></td>
 <td class="num hide-sp">411万円</td>
 <td class="num hide-sp">183.0h</td>
 <td class="num up">+90円</td></tr>
-<tr>
-<td>21</td>
+<tr data-h="1870" data-a="379.2" data-t="169.0">
+<td class="rk">21</td>
 <th><a href="./gyoshu/haken/">人材紹介・派遣</a><span class="sub">その他サービス</span>
 <div class="bar"><i style="width:31.9%"></i></div></th>
 <td class="num v">1,870円<span class="sub sp">年収379万</span></td>
@@ -442,6 +469,397 @@ html{scroll-padding-top:60px}
 </tbody>
 </table>
 </div>
+<div class="rk-panel rk-p3" id="pref">
+<p class="small muted">2025年・47都道府県の実質時給。濃い青ほど時給が高い県です。<a href="./chiiki/">都道府県のページで見る</a></p>
+<div class="map-box">
+<svg class="jp-big" viewBox="0 0 130 120" role="img" aria-label="都道府県別の実質時給の地図"><a href="#pref-hokkaido" class="lv2"><title>北海道: 2,247円</title><rect x="111" y="1" width="18" height="18" rx="2"/><text x="120" y="11.12" font-size="3.2">北海道</text></a><a href="#pref-aomori" class="lv1"><title>青森県: 1,953円</title><rect x="111" y="21" width="18" height="8" rx="2"/><text x="120" y="26.47" font-size="4.2">青森</text></a><a href="#pref-akita" class="lv1"><title>秋田県: 2,090円</title><rect x="111" y="31" width="8" height="8" rx="2"/><text x="115" y="36.47" font-size="4.2">秋田</text></a><a href="#pref-iwate" class="lv1"><title>岩手県: 2,043円</title><rect x="121" y="31" width="8" height="8" rx="2"/><text x="125" y="36.47" font-size="4.2">岩手</text></a><a href="#pref-ishikawa" class="lv3"><title>石川県: 2,340円</title><rect x="81" y="41" width="8" height="8" rx="2"/><text x="85" y="46.47" font-size="4.2">石川</text></a><a href="#pref-toyama" class="lv2"><title>富山県: 2,329円</title><rect x="91" y="41" width="8" height="8" rx="2"/><text x="95" y="46.47" font-size="4.2">富山</text></a><a href="#pref-niigata" class="lv2"><title>新潟県: 2,229円</title><rect x="101" y="41" width="8" height="8" rx="2"/><text x="105" y="46.47" font-size="4.2">新潟</text></a><a href="#pref-yamagata" class="lv1"><title>山形県: 2,053円</title><rect x="111" y="41" width="8" height="8" rx="2"/><text x="115" y="46.47" font-size="4.2">山形</text></a><a href="#pref-miyagi" class="lv3"><title>宮城県: 2,405円</title><rect x="121" y="41" width="8" height="8" rx="2"/><text x="125" y="46.47" font-size="4.2">宮城</text></a><a href="#pref-shimane" class="lv1"><title>島根県: 2,138円</title><rect x="31" y="51" width="8" height="8" rx="2"/><text x="35" y="56.47" font-size="4.2">島根</text></a><a href="#pref-tottori" class="lv1"><title>鳥取県: 2,093円</title><rect x="41" y="51" width="8" height="8" rx="2"/><text x="45" y="56.47" font-size="4.2">鳥取</text></a><a href="#pref-fukui" class="lv2"><title>福井県: 2,328円</title><rect x="71" y="51" width="8" height="8" rx="2"/><text x="75" y="56.47" font-size="4.2">福井</text></a><a href="#pref-gifu" class="lv3"><title>岐阜県: 2,362円</title><rect x="81" y="51" width="8" height="8" rx="2"/><text x="85" y="56.47" font-size="4.2">岐阜</text></a><a href="#pref-nagano" class="lv3"><title>長野県: 2,355円</title><rect x="91" y="51" width="8" height="8" rx="2"/><text x="95" y="56.47" font-size="4.2">長野</text></a><a href="#pref-gunma" class="lv3"><title>群馬県: 2,368円</title><rect x="101" y="51" width="8" height="8" rx="2"/><text x="105" y="56.47" font-size="4.2">群馬</text></a><a href="#pref-tochigi" class="lv4"><title>栃木県: 2,478円</title><rect x="111" y="51" width="8" height="8" rx="2"/><text x="115" y="56.47" font-size="4.2">栃木</text></a><a href="#pref-fukushima" class="lv2"><title>福島県: 2,193円</title><rect x="121" y="51" width="8" height="8" rx="2"/><text x="125" y="56.47" font-size="4.2">福島</text></a><a href="#pref-yamaguchi" class="lv3"><title>山口県: 2,386円</title><rect x="21" y="61" width="8" height="8" rx="2"/><text x="25" y="66.47" font-size="4.2">山口</text></a><a href="#pref-hiroshima" class="lv3"><title>広島県: 2,444円</title><rect x="31" y="61" width="8" height="8" rx="2"/><text x="35" y="66.47" font-size="4.2">広島</text></a><a href="#pref-okayama" class="lv2"><title>岡山県: 2,304円</title><rect x="41" y="61" width="8" height="8" rx="2"/><text x="45" y="66.47" font-size="4.2">岡山</text></a><a href="#pref-hyogo" class="lv4"><title>兵庫県: 2,598円</title><rect x="51" y="61" width="8" height="8" rx="2"/><text x="55" y="66.47" font-size="4.2">兵庫</text></a><a href="#pref-kyoto" class="lv4"><title>京都府: 2,571円</title><rect x="61" y="61" width="8" height="8" rx="2"/><text x="65" y="66.47" font-size="4.2">京都</text></a><a href="#pref-shiga" class="lv4"><title>滋賀県: 2,586円</title><rect x="71" y="61" width="8" height="8" rx="2"/><text x="75" y="66.47" font-size="4.2">滋賀</text></a><a href="#pref-aichi" class="lv4"><title>愛知県: 2,701円</title><rect x="81" y="61" width="8" height="8" rx="2"/><text x="85" y="66.47" font-size="4.2">愛知</text></a><a href="#pref-yamanashi" class="lv4"><title>山梨県: 2,458円</title><rect x="91" y="61" width="8" height="8" rx="2"/><text x="95" y="66.47" font-size="4.2">山梨</text></a><a href="#pref-saitama" class="lv3"><title>埼玉県: 2,446円</title><rect x="101" y="61" width="8" height="8" rx="2"/><text x="105" y="66.47" font-size="4.2">埼玉</text></a><a href="#pref-ibaraki" class="lv4"><title>茨城県: 2,584円</title><rect x="111" y="61" width="8" height="8" rx="2"/><text x="115" y="66.47" font-size="4.2">茨城</text></a><a href="#pref-fukuoka" class="lv3"><title>福岡県: 2,424円</title><rect x="11" y="71" width="8" height="8" rx="2"/><text x="15" y="76.47" font-size="4.2">福岡</text></a><a href="#pref-kagawa" class="lv3"><title>香川県: 2,386円</title><rect x="41" y="71" width="8" height="8" rx="2"/><text x="45" y="76.47" font-size="4.2">香川</text></a><a href="#pref-osaka" class="lv4"><title>大阪府: 2,667円</title><rect x="51" y="71" width="8" height="8" rx="2"/><text x="55" y="76.47" font-size="4.2">大阪</text></a><a href="#pref-nara" class="lv3"><title>奈良県: 2,400円</title><rect x="61" y="71" width="8" height="8" rx="2"/><text x="65" y="76.47" font-size="4.2">奈良</text></a><a href="#pref-mie" class="lv4"><title>三重県: 2,474円</title><rect x="71" y="71" width="8" height="8" rx="2"/><text x="75" y="76.47" font-size="4.2">三重</text></a><a href="#pref-shizuoka" class="lv3"><title>静岡県: 2,410円</title><rect x="91" y="71" width="8" height="8" rx="2"/><text x="95" y="76.47" font-size="4.2">静岡</text></a><a href="#pref-tokyo" class="lv4"><title>東京都: 3,343円</title><rect x="101" y="71" width="8" height="8" rx="2"/><text x="105" y="76.47" font-size="4.2">東京</text></a><a href="#pref-chiba" class="lv4"><title>千葉県: 2,562円</title><rect x="111" y="71" width="8" height="8" rx="2"/><text x="115" y="76.47" font-size="4.2">千葉</text></a><a href="#pref-saga" class="lv1"><title>佐賀県: 2,149円</title><rect x="1" y="81" width="8" height="8" rx="2"/><text x="5" y="86.47" font-size="4.2">佐賀</text></a><a href="#pref-kumamoto" class="lv2"><title>熊本県: 2,219円</title><rect x="11" y="81" width="8" height="8" rx="2"/><text x="15" y="86.47" font-size="4.2">熊本</text></a><a href="#pref-oita" class="lv2"><title>大分県: 2,203円</title><rect x="21" y="81" width="8" height="8" rx="2"/><text x="25" y="86.47" font-size="4.2">大分</text></a><a href="#pref-ehime" class="lv2"><title>愛媛県: 2,220円</title><rect x="31" y="81" width="8" height="8" rx="2"/><text x="35" y="86.47" font-size="4.2">愛媛</text></a><a href="#pref-tokushima" class="lv2"><title>徳島県: 2,309円</title><rect x="41" y="81" width="8" height="8" rx="2"/><text x="45" y="86.47" font-size="4.2">徳島</text></a><a href="#pref-wakayama" class="lv2"><title>和歌山県: 2,258円</title><rect x="61" y="81" width="8" height="8" rx="2"/><text x="65" y="86.12" font-size="3.2">和歌山</text></a><a href="#pref-kanagawa" class="lv4"><title>神奈川県: 2,869円</title><rect x="101" y="81" width="8" height="8" rx="2"/><text x="105" y="86.12" font-size="3.2">神奈川</text></a><a href="#pref-nagasaki" class="lv1"><title>長崎県: 2,152円</title><rect x="1" y="91" width="8" height="8" rx="2"/><text x="5" y="96.47" font-size="4.2">長崎</text></a><a href="#pref-kagoshima" class="lv2"><title>鹿児島県: 2,182円</title><rect x="11" y="91" width="8" height="8" rx="2"/><text x="15" y="96.12" font-size="3.2">鹿児島</text></a><a href="#pref-miyazaki" class="lv1"><title>宮崎県: 1,994円</title><rect x="21" y="91" width="8" height="8" rx="2"/><text x="25" y="96.47" font-size="4.2">宮崎</text></a><a href="#pref-kochi" class="lv1"><title>高知県: 2,138円</title><rect x="31" y="91" width="8" height="8" rx="2"/><text x="35" y="96.47" font-size="4.2">高知</text></a><a href="#pref-okinawa" class="lv1"><title>沖縄県: 2,017円</title><rect x="1" y="111" width="8" height="8" rx="2"/><text x="5" y="116.47" font-size="4.2">沖縄</text></a></svg>
+<p class="legend small"><span class="lv lv4"></span>上位1/4 <span class="lv lv3"></span> <span class="lv lv2"></span> <span class="lv lv1"></span>下位1/4　<span class="muted">地図を押すとその県の行へ移動します</span></p>
+</div>
+<div class="sortbar" data-target="tbl-pref"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<div class="wrap-x">
+<table class="board compact" id="tbl-pref">
+<thead><tr><th>#</th><th>都道府県</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th><th class="num hide-sp">2030年予想</th></tr></thead>
+<tbody>
+<tr id="pref-tokyo" data-h="3343" data-a="678.0" data-t="169.0">
+<td class="rk">1</td>
+<th>東京都</th>
+<td class="num v">3,343円<span class="sub sp">年収678万・169.0h</span></td>
+<td class="num hide-sp">678万円</td>
+<td class="num hide-sp">169.0h</td>
+<td class="num up">+147円</td>
+<td class="num hide-sp">3,697円</td></tr>
+<tr id="pref-kanagawa" data-h="2869" data-a="592.1" data-t="172.0">
+<td class="rk">2</td>
+<th>神奈川県</th>
+<td class="num v">2,869円<span class="sub sp">年収592万・172.0h</span></td>
+<td class="num hide-sp">592万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+40円</td>
+<td class="num hide-sp">3,231円</td></tr>
+<tr id="pref-aichi" data-h="2701" data-a="570.4" data-t="176.0">
+<td class="rk">3</td>
+<th>愛知県</th>
+<td class="num v">2,701円<span class="sub sp">年収570万・176.0h</span></td>
+<td class="num hide-sp">570万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+59円</td>
+<td class="num hide-sp">2,933円</td></tr>
+<tr id="pref-osaka" data-h="2667" data-a="550.4" data-t="172.0">
+<td class="rk">4</td>
+<th>大阪府</th>
+<td class="num v">2,667円<span class="sub sp">年収550万・172.0h</span></td>
+<td class="num hide-sp">550万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num down">-29円</td>
+<td class="num hide-sp">3,005円</td></tr>
+<tr id="pref-hyogo" data-h="2598" data-a="545.5" data-t="175.0">
+<td class="rk">5</td>
+<th>兵庫県</th>
+<td class="num v">2,598円<span class="sub sp">年収546万・175.0h</span></td>
+<td class="num hide-sp">546万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+169円</td>
+<td class="num hide-sp">2,782円</td></tr>
+<tr id="pref-shiga" data-h="2586" data-a="533.7" data-t="172.0">
+<td class="rk">6</td>
+<th>滋賀県</th>
+<td class="num v">2,586円<span class="sub sp">年収534万・172.0h</span></td>
+<td class="num hide-sp">534万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+129円</td>
+<td class="num hide-sp">2,781円</td></tr>
+<tr id="pref-ibaraki" data-h="2584" data-a="533.4" data-t="172.0">
+<td class="rk">7</td>
+<th>茨城県</th>
+<td class="num v">2,584円<span class="sub sp">年収533万・172.0h</span></td>
+<td class="num hide-sp">533万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+181円</td>
+<td class="num hide-sp">2,795円</td></tr>
+<tr id="pref-kyoto" data-h="2571" data-a="533.7" data-t="173.0">
+<td class="rk">8</td>
+<th>京都府</th>
+<td class="num v">2,571円<span class="sub sp">年収534万・173.0h</span></td>
+<td class="num hide-sp">534万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+84円</td>
+<td class="num hide-sp">2,761円</td></tr>
+<tr id="pref-chiba" data-h="2562" data-a="534.9" data-t="174.0">
+<td class="rk">9</td>
+<th>千葉県</th>
+<td class="num v">2,562円<span class="sub sp">年収535万・174.0h</span></td>
+<td class="num hide-sp">535万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+134円</td>
+<td class="num hide-sp">2,818円</td></tr>
+<tr id="pref-tochigi" data-h="2478" data-a="517.4" data-t="174.0">
+<td class="rk">10</td>
+<th>栃木県</th>
+<td class="num v">2,478円<span class="sub sp">年収517万・174.0h</span></td>
+<td class="num hide-sp">517万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+65円</td>
+<td class="num hide-sp">2,851円</td></tr>
+<tr id="pref-mie" data-h="2474" data-a="516.6" data-t="174.0">
+<td class="rk">11</td>
+<th>三重県</th>
+<td class="num v">2,474円<span class="sub sp">年収517万・174.0h</span></td>
+<td class="num hide-sp">517万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+41円</td>
+<td class="num hide-sp">2,729円</td></tr>
+<tr id="pref-yamanashi" data-h="2458" data-a="510.3" data-t="173.0">
+<td class="rk">12</td>
+<th>山梨県</th>
+<td class="num v">2,458円<span class="sub sp">年収510万・173.0h</span></td>
+<td class="num hide-sp">510万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+163円</td>
+<td class="num hide-sp">2,673円</td></tr>
+<tr id="pref-saitama" data-h="2446" data-a="513.6" data-t="175.0">
+<td class="rk">13</td>
+<th>埼玉県</th>
+<td class="num v">2,446円<span class="sub sp">年収514万・175.0h</span></td>
+<td class="num hide-sp">514万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+6円</td>
+<td class="num hide-sp">2,713円</td></tr>
+<tr id="pref-hiroshima" data-h="2444" data-a="513.3" data-t="175.0">
+<td class="rk">14</td>
+<th>広島県</th>
+<td class="num v">2,444円<span class="sub sp">年収513万・175.0h</span></td>
+<td class="num hide-sp">513万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+22円</td>
+<td class="num hide-sp">2,699円</td></tr>
+<tr id="pref-fukuoka" data-h="2424" data-a="500.3" data-t="172.0">
+<td class="rk">15</td>
+<th>福岡県</th>
+<td class="num v">2,424円<span class="sub sp">年収500万・172.0h</span></td>
+<td class="num hide-sp">500万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+49円</td>
+<td class="num hide-sp">2,718円</td></tr>
+<tr id="pref-shizuoka" data-h="2410" data-a="506.1" data-t="175.0">
+<td class="rk">16</td>
+<th>静岡県</th>
+<td class="num v">2,410円<span class="sub sp">年収506万・175.0h</span></td>
+<td class="num hide-sp">506万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+20円</td>
+<td class="num hide-sp">2,668円</td></tr>
+<tr id="pref-miyagi" data-h="2405" data-a="499.3" data-t="173.0">
+<td class="rk">17</td>
+<th>宮城県</th>
+<td class="num v">2,405円<span class="sub sp">年収499万・173.0h</span></td>
+<td class="num hide-sp">499万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+139円</td>
+<td class="num hide-sp">2,650円</td></tr>
+<tr id="pref-nara" data-h="2400" data-a="501.0" data-t="174.0">
+<td class="rk">18</td>
+<th>奈良県</th>
+<td class="num v">2,400円<span class="sub sp">年収501万・174.0h</span></td>
+<td class="num hide-sp">501万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+37円</td>
+<td class="num hide-sp">2,621円</td></tr>
+<tr id="pref-yamaguchi" data-h="2386" data-a="498.2" data-t="174.0">
+<td class="rk">19</td>
+<th>山口県</th>
+<td class="num v">2,386円<span class="sub sp">年収498万・174.0h</span></td>
+<td class="num hide-sp">498万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+46円</td>
+<td class="num hide-sp">2,618円</td></tr>
+<tr id="pref-kagawa" data-h="2386" data-a="498.2" data-t="174.0">
+<td class="rk">20</td>
+<th>香川県</th>
+<td class="num v">2,386円<span class="sub sp">年収498万・174.0h</span></td>
+<td class="num hide-sp">498万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+93円</td>
+<td class="num hide-sp">2,604円</td></tr>
+<tr id="pref-gunma" data-h="2368" data-a="494.5" data-t="174.0">
+<td class="rk">21</td>
+<th>群馬県</th>
+<td class="num v">2,368円<span class="sub sp">年収494万・174.0h</span></td>
+<td class="num hide-sp">494万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+65円</td>
+<td class="num hide-sp">2,551円</td></tr>
+<tr id="pref-gifu" data-h="2362" data-a="496.1" data-t="175.0">
+<td class="rk">22</td>
+<th>岐阜県</th>
+<td class="num v">2,362円<span class="sub sp">年収496万・175.0h</span></td>
+<td class="num hide-sp">496万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+192円</td>
+<td class="num hide-sp">2,445円</td></tr>
+<tr id="pref-nagano" data-h="2355" data-a="491.7" data-t="174.0">
+<td class="rk">23</td>
+<th>長野県</th>
+<td class="num v">2,355円<span class="sub sp">年収492万・174.0h</span></td>
+<td class="num hide-sp">492万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+61円</td>
+<td class="num hide-sp">2,531円</td></tr>
+<tr id="pref-ishikawa" data-h="2340" data-a="485.8" data-t="173.0">
+<td class="rk">24</td>
+<th>石川県</th>
+<td class="num v">2,340円<span class="sub sp">年収486万・173.0h</span></td>
+<td class="num hide-sp">486万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num down">-16円</td>
+<td class="num hide-sp">2,569円</td></tr>
+<tr id="pref-toyama" data-h="2329" data-a="483.4" data-t="173.0">
+<td class="rk">25</td>
+<th>富山県</th>
+<td class="num v">2,329円<span class="sub sp">年収483万・173.0h</span></td>
+<td class="num hide-sp">483万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+88円</td>
+<td class="num hide-sp">2,484円</td></tr>
+<tr id="pref-fukui" data-h="2328" data-a="480.5" data-t="172.0">
+<td class="rk">26</td>
+<th>福井県</th>
+<td class="num v">2,328円<span class="sub sp">年収480万・172.0h</span></td>
+<td class="num hide-sp">480万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+118円</td>
+<td class="num hide-sp">2,510円</td></tr>
+<tr id="pref-tokushima" data-h="2309" data-a="471.1" data-t="170.0">
+<td class="rk">27</td>
+<th>徳島県</th>
+<td class="num v">2,309円<span class="sub sp">年収471万・170.0h</span></td>
+<td class="num hide-sp">471万円</td>
+<td class="num hide-sp">170.0h</td>
+<td class="num up">+27円</td>
+<td class="num hide-sp">2,554円</td></tr>
+<tr id="pref-okayama" data-h="2304" data-a="483.9" data-t="175.0">
+<td class="rk">28</td>
+<th>岡山県</th>
+<td class="num v">2,304円<span class="sub sp">年収484万・175.0h</span></td>
+<td class="num hide-sp">484万円</td>
+<td class="num hide-sp">175.0h</td>
+<td class="num up">+29円</td>
+<td class="num hide-sp">2,545円</td></tr>
+<tr id="pref-wakayama" data-h="2258" data-a="476.8" data-t="176.0">
+<td class="rk">29</td>
+<th>和歌山県</th>
+<td class="num v">2,258円<span class="sub sp">年収477万・176.0h</span></td>
+<td class="num hide-sp">477万円</td>
+<td class="num hide-sp">176.0h</td>
+<td class="num up">+12円</td>
+<td class="num hide-sp">2,525円</td></tr>
+<tr id="pref-hokkaido" data-h="2247" data-a="466.6" data-t="173.0">
+<td class="rk">30</td>
+<th>北海道</th>
+<td class="num v">2,247円<span class="sub sp">年収467万・173.0h</span></td>
+<td class="num hide-sp">467万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+68円</td>
+<td class="num hide-sp">2,471円</td></tr>
+<tr id="pref-niigata" data-h="2229" data-a="462.6" data-t="173.0">
+<td class="rk">31</td>
+<th>新潟県</th>
+<td class="num v">2,229円<span class="sub sp">年収463万・173.0h</span></td>
+<td class="num hide-sp">463万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+49円</td>
+<td class="num hide-sp">2,519円</td></tr>
+<tr id="pref-ehime" data-h="2220" data-a="460.9" data-t="173.0">
+<td class="rk">32</td>
+<th>愛媛県</th>
+<td class="num v">2,220円<span class="sub sp">年収461万・173.0h</span></td>
+<td class="num hide-sp">461万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+88円</td>
+<td class="num hide-sp">2,503円</td></tr>
+<tr id="pref-kumamoto" data-h="2219" data-a="460.8" data-t="173.0">
+<td class="rk">33</td>
+<th>熊本県</th>
+<td class="num v">2,219円<span class="sub sp">年収461万・173.0h</span></td>
+<td class="num hide-sp">461万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+63円</td>
+<td class="num hide-sp">2,489円</td></tr>
+<tr id="pref-oita" data-h="2203" data-a="457.3" data-t="173.0">
+<td class="rk">34</td>
+<th>大分県</th>
+<td class="num v">2,203円<span class="sub sp">年収457万・173.0h</span></td>
+<td class="num hide-sp">457万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+35円</td>
+<td class="num hide-sp">2,489円</td></tr>
+<tr id="pref-fukushima" data-h="2193" data-a="455.2" data-t="173.0">
+<td class="rk">35</td>
+<th>福島県</th>
+<td class="num v">2,193円<span class="sub sp">年収455万・173.0h</span></td>
+<td class="num hide-sp">455万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+85円</td>
+<td class="num hide-sp">2,384円</td></tr>
+<tr id="pref-kagoshima" data-h="2182" data-a="452.9" data-t="173.0">
+<td class="rk">36</td>
+<th>鹿児島県</th>
+<td class="num v">2,182円<span class="sub sp">年収453万・173.0h</span></td>
+<td class="num hide-sp">453万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+132円</td>
+<td class="num hide-sp">2,405円</td></tr>
+<tr id="pref-nagasaki" data-h="2152" data-a="446.8" data-t="173.0">
+<td class="rk">37</td>
+<th>長崎県</th>
+<td class="num v">2,152円<span class="sub sp">年収447万・173.0h</span></td>
+<td class="num hide-sp">447万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+46円</td>
+<td class="num hide-sp">2,387円</td></tr>
+<tr id="pref-saga" data-h="2149" data-a="446.1" data-t="173.0">
+<td class="rk">38</td>
+<th>佐賀県</th>
+<td class="num v">2,149円<span class="sub sp">年収446万・173.0h</span></td>
+<td class="num hide-sp">446万円</td>
+<td class="num hide-sp">173.0h</td>
+<td class="num up">+70円</td>
+<td class="num hide-sp">2,424円</td></tr>
+<tr id="pref-shimane" data-h="2138" data-a="446.5" data-t="174.0">
+<td class="rk">39</td>
+<th>島根県</th>
+<td class="num v">2,138円<span class="sub sp">年収446万・174.0h</span></td>
+<td class="num hide-sp">446万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num up">+63円</td>
+<td class="num hide-sp">2,334円</td></tr>
+<tr id="pref-kochi" data-h="2138" data-a="431.0" data-t="168.0">
+<td class="rk">40</td>
+<th>高知県</th>
+<td class="num v">2,138円<span class="sub sp">年収431万・168.0h</span></td>
+<td class="num hide-sp">431万円</td>
+<td class="num hide-sp">168.0h</td>
+<td class="num up">+77円</td>
+<td class="num hide-sp">2,367円</td></tr>
+<tr id="pref-tottori" data-h="2093" data-a="429.6" data-t="171.0">
+<td class="rk">41</td>
+<th>鳥取県</th>
+<td class="num v">2,093円<span class="sub sp">年収430万・171.0h</span></td>
+<td class="num hide-sp">430万円</td>
+<td class="num hide-sp">171.0h</td>
+<td class="num up">+113円</td>
+<td class="num hide-sp">2,206円</td></tr>
+<tr id="pref-akita" data-h="2090" data-a="426.4" data-t="170.0">
+<td class="rk">42</td>
+<th>秋田県</th>
+<td class="num v">2,090円<span class="sub sp">年収426万・170.0h</span></td>
+<td class="num hide-sp">426万円</td>
+<td class="num hide-sp">170.0h</td>
+<td class="num up">+53円</td>
+<td class="num hide-sp">2,381円</td></tr>
+<tr id="pref-yamagata" data-h="2053" data-a="423.8" data-t="172.0">
+<td class="rk">43</td>
+<th>山形県</th>
+<td class="num v">2,053円<span class="sub sp">年収424万・172.0h</span></td>
+<td class="num hide-sp">424万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num down">-48円</td>
+<td class="num hide-sp">2,292円</td></tr>
+<tr id="pref-iwate" data-h="2043" data-a="426.5" data-t="174.0">
+<td class="rk">44</td>
+<th>岩手県</th>
+<td class="num v">2,043円<span class="sub sp">年収426万・174.0h</span></td>
+<td class="num hide-sp">426万円</td>
+<td class="num hide-sp">174.0h</td>
+<td class="num ">0円</td>
+<td class="num hide-sp">2,325円</td></tr>
+<tr id="pref-okinawa" data-h="2017" data-a="411.4" data-t="170.0">
+<td class="rk">45</td>
+<th>沖縄県</th>
+<td class="num v">2,017円<span class="sub sp">年収411万・170.0h</span></td>
+<td class="num hide-sp">411万円</td>
+<td class="num hide-sp">170.0h</td>
+<td class="num up">+77円</td>
+<td class="num hide-sp">2,244円</td></tr>
+<tr id="pref-miyazaki" data-h="1994" data-a="411.6" data-t="172.0">
+<td class="rk">46</td>
+<th>宮崎県</th>
+<td class="num v">1,994円<span class="sub sp">年収412万・172.0h</span></td>
+<td class="num hide-sp">412万円</td>
+<td class="num hide-sp">172.0h</td>
+<td class="num up">+32円</td>
+<td class="num hide-sp">2,198円</td></tr>
+<tr id="pref-aomori" data-h="1953" data-a="400.8" data-t="171.0">
+<td class="rk">47</td>
+<th>青森県</th>
+<td class="num v">1,953円<span class="sub sp">年収401万・171.0h</span></td>
+<td class="num hide-sp">401万円</td>
+<td class="num hide-sp">171.0h</td>
+<td class="num up">+8円</td>
+<td class="num hide-sp">2,180円</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small muted">産業計・男女計・全年齢・企業規模10人以上。2030年予想は過去の推移を直線で延ばした目安です。</p></div>
 </div>
 <div class="navs">
 <a href="./yosoku/"><b>2030年の予想 →</b><small>このペースが続いたら年収・時給はいくら？</small></a></div>
@@ -451,10 +869,20 @@ html{scroll-padding-top:60px}
 </div>
 <footer class="site-footer">
   <div class="wrap">
+<script>
+document.querySelectorAll(".sortbar").forEach(function(bar){
+  var tb=document.getElementById(bar.dataset.target);if(!tb)return;
+  bar.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+    var k=b.dataset.k,asc=b.dataset.asc==="1",rows=[].slice.call(tb.querySelectorAll("tbody tr"));
+    rows.sort(function(x,y){return (asc?1:-1)*((+x.dataset[k]||0)-(+y.dataset[k]||0));});
+    rows.forEach(function(r,i){tb.querySelector("tbody").appendChild(r);var c=r.querySelector("td.rk");if(c)c.textContent=i+1;});
+    bar.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});});
+});
+</script>
 <p class="small"><a href="./about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 23:03</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 23:25</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>

@@ -603,11 +603,11 @@
      "market_pct": 30
     }
    ],
-   "candidates": 158,
+   "candidates": 157,
    "ranked": 38,
    "dropped": {
     "対象外の商品": 8,
-    "選択式": 96,
+    "選択式": 95,
     "量が複数": 15,
     "量なし": 1
    },
@@ -2203,26 +2203,6 @@
      "market_pct": 32
     },
     {
-     "code": "f442054-saiki:10002658",
-     "name": "【試食用チキンカツ付】時短おかず 揚げるだけ サクサク！ジューシー！チキンカツ(計1.2kg・400g×3袋) 国産 鶏むね肉 肉 チキンカツ 冷凍 惣菜 お弁当 小分け 簡単 時短 大分県 佐伯市【DH289】【ネクサ】",
-     "price": 6000,
-     "qty": 1.2,
-     "evidence": "計1.2kg",
-     "per10k": 2.0,
-     "unit_price": 5000,
-     "shop": "大分県佐伯市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sq38o.ia330c83.g00sq38o.ia3318ee/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff442054-saiki%2Fdh289%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff442054-saiki%2Fi%2F10002658%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "佐伯市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f442054-saiki/cabinet/lr/13118952/imgrc0120430277.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.1,
-     "market_yen": 1940.0,
-     "market_pct": 32
-    },
-    {
      "code": "f442089-taketa:10000020",
      "name": "【10営業日以内発送】大分県産 ハーブ鶏 もも肉 2kgセット 大分県 竹田市 2kg 鶏肉 セット",
      "price": 11000,
@@ -2259,6 +2239,26 @@
      "review_count": 67,
      "wakeari": false,
      "vs_median": 1.0,
+     "market_yen": 4860.0,
+     "market_pct": 29
+    },
+    {
+     "code": "f342041-mihara:10000846",
+     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉 皮無し3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ とりむねにく 鶏むね肉 むね肉 鶏 皮なし 小分け みはら 広島県産 神明鶏 012017",
+     "price": 17000,
+     "qty": 3.0,
+     "evidence": "3kg",
+     "per10k": 1.765,
+     "unit_price": 5667,
+     "shop": "広島県三原市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110783%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000846%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "三原市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f592cbbb26a6284704.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.97,
      "market_yen": 4860.0,
      "market_pct": 29
     },
@@ -2474,10 +2474,10 @@
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 5500,
+    "median_unit_price": 5667,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 22
+    "towns": 21
    },
    "popularity": 1476
   },
@@ -8957,11 +8957,11 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 97,
+   "candidates": 98,
    "ranked": 20,
    "dropped": {
     "選択式": 42,
-    "量なし": 32,
+    "量なし": 33,
     "量が複数": 1,
     "対象外の商品": 2
    },
@@ -12601,8 +12601,8 @@
    "candidates": 94,
    "ranked": 31,
    "dropped": {
-    "選択式": 31,
     "量なし": 15,
+    "選択式": 31,
     "量が複数": 10,
     "対象外の商品": 7
    },
@@ -16253,11 +16253,11 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 73,
+   "candidates": 72,
    "ranked": 25,
    "dropped": {
     "選択式": 16,
-    "量なし": 13,
+    "量なし": 12,
     "対象外の商品": 17,
     "量が複数": 2
    },
@@ -16743,5 +16743,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T23:00+09:00"
+ "fetched_at": "2026-10-11T23:23+09:00"
 }
