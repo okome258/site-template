@@ -5,9 +5,9 @@
 {% set o = occ %}
 {% set lv = {} %}{% for g in o.by_level %}{% set _ = lv.update({g.level: g}) %}{% endfor %}
 {% set by = {} %}{% for r in o.rows %}{% set _ = by.update({r.code: r}) %}{% endfor %}
-<p class="small"><a href="{{ page.root }}">ランキング</a> › AI時代の仕事</p>
-<h1>AI時代に増えた仕事・減った仕事 <small class="muted">{{ o.base5 }}→{{ o.last }}年</small></h1>
-<p class="lead">「AIで仕事がなくなる」と言われますが、実際に働く人の数はどう動いているのか。総務省「労働力調査」の職業別の就業者数で確かめます。毎年1月ごろに新しい年の数字が出ると、自動で更新されます。</p>
+<p class="small"><a href="{{ page.root }}">ランキング</a> › AI時代の予想</p>
+<h1>AI時代、業界の時給はどうなる？ <small class="muted">{{ to_year }}年予想・{{ o.last }}年の実績</small></h1>
+<p class="lead">「AIで仕事がなくなる」と言われますが、実際はどうなのか。業界・業種ごとに<b>AIが広まったときの{{ to_year }}年の実質時給</b>をシミュレーションし、職業別に<b>実際に働く人が増えた仕事・減った仕事</b>を確かめます。統計の数字は新しい年が出ると自動で更新されます。</p>
 <div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>「言われていること」と「実際の数字」を並べてみるよ。殻（仕事）選びの参考にしてね。</p></div>
 
 <dl class="kpi">
@@ -17,6 +17,58 @@
 <div><dt>{{ label }} {{ o.base5 }}→{{ o.last }}</dt><dd>{{ pct(by[code].c5) }}<small>{{ man(by[code].c5) }}</small></dd></div>
 {% endif %}{% endfor %}
 </dl>
+
+
+{% macro ai_table(rows, base, tabname) %}
+<div class="wrap-x">
+<table class="board compact aisim">
+<thead><tr><th>{{ tabname }}</th><th class="num">今のペース</th><th class="num">AIありの幅</th></tr></thead>
+<tbody>
+{% for r in rows %}
+<tr data-fc="{{ r.fc.hourly }}" data-h="{{ r.ai.high }}" data-m="{{ r.ai.mid }}">
+<th><a href="{{ page.root }}{{ base }}/{{ r.ind.slug }}/">{{ r.ind.short }}</a>
+<div class="mix" title="影響 高{{ (r.ai.high*100)|round|int }}% 中{{ (r.ai.mid*100)|round|int }}% 低{{ (r.ai.low*100)|round|int }}%"><i class="m3" style="width:{{ (r.ai.high*100)|round(1) }}%"></i><i class="m2" style="width:{{ (r.ai.mid*100)|round(1) }}%"></i><i class="m1" style="width:{{ (r.ai.low*100)|round(1) }}%"></i></div>
+<span class="sub">影響が高い仕事 {{ (r.ai.high*100)|round|int }}%{% if r.ai.approx %}（{{ r.ai.src }}の値）{% endif %}</span></th>
+<td class="num">{{ r.fc.hourly | num }}円<span class="sub">{{ r.hourly | num }}円→</span></td>
+<td class="num"><b class="up js-opt">{{ r.ai.opt | num }}円</b><span class="sub">〜 <b class="down js-pes">{{ r.ai.pes | num }}円</b></span><span class="sub js-r">作業{{ r.ai.r }}%減</span></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% endmacro %}
+{% if ai_ctx and ai_rank %}
+<h2 id="sim">業界・業種別 AI時代の{{ to_year }}年予想</h2>
+<p>「今のペース」は過去の流れをそのまま延ばした予想です。ここに、<b>その業界で働く人のうち、AIの影響を受けやすい仕事（事務など）をしている人の割合</b>を掛け合わせて、AIが広まったときの幅を出しました。</p>
+<div class="simbox">
+<label for="ai-x">AIで「影響が高い仕事」の作業が <b id="ai-xv">{{ ai_ctx.x }}</b>% 置き換わったら</label>
+<input type="range" id="ai-x" min="0" max="60" step="5" value="{{ ai_ctx.x }}">
+<p class="small muted">「影響が中」の仕事はその半分が置き換わるとして計算します。<b class="up">楽観</b>＝同じ給料のまま早く帰れる（時給が上がる）、<b class="down">悲観</b>＝減った作業のぶん給料も減る（時給が下がる）。実際はこの間のどこかに落ち着くと考えられます。</p>
+</div>
+<p class="legend small"><span class="lv mixk m3"></span>影響 高い <span class="lv mixk m2"></span>中 <span class="lv mixk m1"></span>低い（その業界で働く人の職業の内訳）</p>
+<div class="rk-tabs">
+<input type="radio" name="ai" id="ai-gyokai" checked>
+<input type="radio" name="ai" id="ai-gyoshu">
+<div class="rk-bar">
+<label for="ai-gyokai">業界 <small>{{ ai_rank | length }}</small></label>
+<label for="ai-gyoshu">注目の業種 <small>{{ ai_focus | length }}</small></label>
+</div>
+<div class="rk-panel rk-p1">{{ ai_table(ai_rank, 'gyokai', '業界') }}</div>
+<div class="rk-panel rk-p2">{{ ai_table(ai_focus, 'gyoshu', '業種') }}</div>
+</div>
+{% set top = ai_rank[0] %}{% set low = ai_rank[-1] %}
+<p class="note">影響を受けやすい仕事の割合がいちばん高い業界は<b>{{ top.ind.short }}</b>（{{ (top.ai.high*100)|round|int }}%）、いちばん低いのは<b>{{ low.ind.short }}</b>（{{ (low.ai.high*100)|round|int }}%）。割合が高い業界ほど、AIの使い方しだいで時給が<b>大きく上がることも、大きく下がることもある</b>業界です。</p>
+<p class="small muted">職業の内訳：総務省「労働力調査」{{ ai_ctx.table.title }}（{{ ai_ctx.table.id }}）の{{ ai_ctx.year }}年の値。（ ）付きの業種は、細かい内訳が統計にないため、上の区分の値を使っています。</p>
+<script>
+(function(){var s=document.getElementById("ai-x");if(!s)return;var v=document.getElementById("ai-xv");
+function f(n){return Math.round(n).toLocaleString("ja-JP")+"円"}
+function up(){var x=s.value/100;v.textContent=s.value;
+document.querySelectorAll(".aisim tr[data-fc]").forEach(function(t){var fc=+t.dataset.fc,h=+t.dataset.h,m=+t.dataset.m;
+var r=Math.min(.9,x*h+x/2*m);t.querySelector(".js-opt").textContent=f(fc/(1-r));t.querySelector(".js-pes").textContent=f(fc*(1-r));
+t.querySelector(".js-r").textContent="作業"+(Math.round(r*1000)/10)+"%減";});}
+s.addEventListener("input",up);})();
+</script>
+{% endif %}
 
 <h2>AIの影響の受けやすさ別に見ると</h2>
 <p>国際労働機関（ILO）の研究では、生成AIの影響をいちばん受けやすいのは<b>事務の仕事</b>で、体を使う仕事や人と直接接する仕事は受けにくいとされています。その傾向を日本の職業に当てはめて、働く人の数の増減を比べました。</p>
@@ -36,7 +88,7 @@
 ただし、働く人の数は景気や人手不足、高齢化の影響も受けるので、この差がすべてAIのせいとは言えません。</p>
 {% endif %}
 
-<h2>増えた仕事・減った仕事 <small class="muted">{{ o.base5 }}→{{ o.last }}年</small></h2>
+<h2>実際に増えた仕事・減った仕事 <small class="muted">{{ o.base5 }}→{{ o.last }}年</small></h2>
 <div class="updown">
 <div><h3 class="up">増えた仕事 TOP5</h3><ol>{% for r in o.up %}<li>{{ r.short }} <b class="up">{{ '+' if r.c5.pct > 0 else '' }}{{ r.c5.pct | num(1) }}%</b> <span class="ai ai{{ r.ai }}">AI{{ r.ai_label }}</span></li>{% endfor %}</ol></div>
 <div><h3 class="down">減った仕事 TOP5</h3><ol>{% for r in o.down %}<li>{{ r.short }} <b class="{{ 'down' if r.c5.pct < 0 else 'up' }}">{{ '+' if r.c5.pct > 0 else '' }}{{ r.c5.pct | num(1) }}%</b> <span class="ai ai{{ r.ai }}">AI{{ r.ai_label }}</span></li>{% endfor %}</ol></div>

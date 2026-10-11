@@ -712,6 +712,41 @@ def occ_context(occ: dict | None) -> dict | None:
             "max_now": mx, "leaf_rank": sorted(leaves, key=lambda r: -r["c5"]["pct"])}
 
 
+def ai_scenario(fc: float, h: float, m: float, x: float) -> dict:
+    """AIで「高い」仕事の作業が x 割、「中」の仕事が x/2 割置き換わったときの実質時給。
+    楽観: 同じ給料で労働時間が減る → 時給が上がる / 悲観: 減った作業のぶん給料も減る → 時給が下がる"""
+    r = min(0.9, x * h + x / 2 * m)
+    return {"r": round(r * 100, 1), "opt": round(fc / (1 - r)), "pes": round(fc * (1 - r))}
+
+
+def attach_ai(cfg: dict, data: dict, ranking: list, focus_rank: list) -> dict | None:
+    oi = (data.get("occ") or {}).get("by_industry")
+    if not oi:
+        return None
+    by_name = {industries.norm(r["name"]): r for r in oi["rows"]}
+    master = industries.by_slug()
+    x = cfg.get("ai_scenario_default", 20) / 100
+    def put(row, src, approx=False):
+        row["ai"] = {"high": src["high"], "mid": src["mid"], "low": src["low"], "src": src["name"], "approx": approx}
+        if row.get("fc"):
+            row["ai"].update(ai_scenario(row["fc"]["hourly"], src["high"], src["mid"], x))
+    for r in ranking:
+        src = by_name.get(industries.norm(r["ind"]["name"]))
+        if src:
+            put(r, src)
+    for r in focus_rank:
+        f = next((f for f in cfg.get("focus", []) if f["slug"] == r["ind"]["slug"]), {})
+        src = by_name.get(industries.norm(f.get("name", "")))
+        if src:
+            put(r, src)
+        elif f.get("occ_name") and by_name.get(industries.norm(f["occ_name"])):
+            put(r, by_name[industries.norm(f["occ_name"])], approx=True)
+        elif by_name.get(industries.norm(master.get(f.get("parent"), {}).get("name", ""))):
+            put(r, by_name[industries.norm(master[f["parent"]]["name"])], approx=True)
+    allr = by_name.get(industries.norm("全産業"))
+    return {"year": oi["year"], "table": oi["table"], "x": round(x * 100), "all": allr}
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     about = {"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
              "changefreq": "monthly"}
@@ -772,6 +807,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         focus_rank.append(row)
     focus_rank.sort(key=lambda r: -r["hourly"])
 
+    ai_ctx = attach_ai(cfg, data, ranking, focus_rank)
     fc_rank = sorted((r for r in ranking if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     fc_focus = sorted((r for r in focus_rank if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     common = {"latest": latest, "prev": prev, "ranking": ranking, "industries": master,
@@ -779,7 +815,9 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "to_year": to_year, "first_year": years[-1]["year"], "sources": sources,
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
-              "occ": occ_context(data.get("occ")),
+              "occ": occ_context(data.get("occ")), "ai_ctx": ai_ctx,
+              "ai_rank": sorted((r for r in ranking if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
+              "ai_focus": sorted((r for r in focus_rank if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
               "max_focus": max((r["hourly"] for r in focus_rank), default=1)}
 

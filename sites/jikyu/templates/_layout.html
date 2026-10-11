@@ -35,9 +35,9 @@ tr:target{background:#fff4c4}
 .rk-bar label,.rk-bar a{flex:1;text-align:center;padding:9px 4px;border-radius:10px 10px 0 0;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
 .rk-bar small{font-weight:400;color:var(--muted);font-size:11px}
 .rk-panel{display:none}
-#rk-gyokai:checked~.rk-p1,#rk-gyoshu:checked~.rk-p2{display:block}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai],#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu]{background:var(--accent);color:#fff}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai] small,#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu] small{color:#dde8f3}
+.rk-tabs>input:nth-of-type(1):checked~.rk-p1,.rk-tabs>input:nth-of-type(2):checked~.rk-p2{display:block}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1),.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2){background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1) small,.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2) small{color:#dde8f3}
 /* AI時代ページ */
 .ai{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .ai3{background:#f6d6cb;color:#8a2e17}.ai2{background:#f3ead0;color:#6b5410}.ai1{background:#dbe6f1;color:#234a70}
@@ -46,6 +46,21 @@ tr:target{background:#fff4c4}
 .updown h3{font-size:15px;margin:8px 0 4px}.updown ol{margin:0;padding-left:22px}.updown li{margin:5px 0}
 .occ tr.sub th{padding-left:20px;font-weight:400;font-size:13px}
 .occ tr.maj th{font-weight:700}
+.mix{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:5px 0 2px;background:var(--panel);max-width:220px}
+.mix.big{height:14px;max-width:none;margin:8px 0 12px}
+.mix i{display:block;height:100%}
+.m3{background:#d4705a}.m2{background:#e3c46b}.m1{background:#7fa6cc}
+.mixk{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
+.simbox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+.simbox label{display:block;font-weight:700;margin-bottom:6px}
+.simbox input[type=range]{width:100%;accent-color:var(--accent)}
+.simbox #ai-xv{color:var(--accent);font-size:20px}
+.aisim td.num b{font-size:15px}
+.ai-hero{display:flex;align-items:center;gap:12px;margin:6px 0 14px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#2f5d8a,#4a7fb3);color:#fff;text-decoration:none}
+.ai-hero img{width:76px;height:auto;flex:none}
+.ai-hero b{display:block;font-size:17px;line-height:1.4}
+.ai-hero small{display:block;font-size:12px;opacity:.9;margin-top:3px}
+.ai-hero i{font-style:normal;font-size:26px;margin-left:auto;opacity:.8}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}

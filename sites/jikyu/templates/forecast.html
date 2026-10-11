@@ -4,6 +4,7 @@
 <h1>{{ to_year }}年の年収・時給予想 <small class="muted">業界別</small></h1>
 <p class="lead">{{ first_year }}〜{{ latest.year }}年の実際の数字に直線を当てはめ、「このペースが続いたら{{ to_year }}年にどうなるか」を業界ごとに出しました。</p>
 <div class="yc-say"><img src="{{ page.root }}yc-hatena.webp" alt="" width="80" height="85"><p><b class="nm">ヤドキャリ</b>この先、どの殻（業界）に住むと得なんだろう？ 過去のペースのまま進んだらどうなるか、見てみよう。</p></div>
+{% if ai_rank %}<p class="note">このページは「今のペースが続いたら」の予想です。<b>AIが広まったときの予想</b>は<a href="{{ page.root }}ai/#sim">AI時代の業界別シミュレーション</a>へ。</p>{% endif %}
 {% if all_row.fc %}
 <dl class="kpi">
 <div><dt>全産業 {{ latest.year }}年の時給</dt><dd>{{ all_row.hourly | num }}<small>円</small></dd></div>

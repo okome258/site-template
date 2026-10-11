@@ -60,6 +60,19 @@
 <p class="small muted">{{ row.fc.first }}〜{{ latest.year }}年の{{ row.fc.n }}年分に直線を当てはめて延ばした値です。景気・物価・AIの普及などで実際は変わります。<a href="{{ page.root }}yosoku/">全業界の予想を見る</a></p>
 {% endif %}
 
+{% if row.ai and row.ai.opt %}
+<h2>AI時代の{{ to_year }}年予想</h2>
+<p>この{{ '業種' if is_focus else '業界' }}で働く人のうち、AIの影響を受けやすい仕事（事務など）をしている人は<b>{{ (row.ai.high*100)|round|int }}%</b>、仕事の一部が変わる仕事（専門職・営業・販売など）は{{ (row.ai.mid*100)|round|int }}%です{% if row.ai.approx %}（{{ row.ai.src }}の値）{% endif %}。</p>
+<div class="mix big"><i class="m3" style="width:{{ (row.ai.high*100)|round(1) }}%"></i><i class="m2" style="width:{{ (row.ai.mid*100)|round(1) }}%"></i><i class="m1" style="width:{{ (row.ai.low*100)|round(1) }}%"></i></div>
+<dl class="kpi">
+<div><dt>今のペース</dt><dd>{{ row.fc.hourly | num }}<small>円</small></dd></div>
+<div><dt>AI楽観（早く帰れる）</dt><dd class="up">{{ row.ai.opt | num }}<small>円</small></dd></div>
+<div><dt>AI悲観（給料も減る）</dt><dd class="down">{{ row.ai.pes | num }}<small>円</small></dd></div>
+<div><dt>置き換わる作業</dt><dd>{{ row.ai.r }}<small>%</small></dd></div>
+</dl>
+<p class="small muted">「影響が高い仕事」の作業の{{ ai_ctx.x }}%、「中」の仕事の{{ (ai_ctx.x/2)|round|int }}%がAIに置き換わったと仮定した計算です。<a href="{{ page.root }}ai/#sim">割合を変えてシミュレーションする</a></p>
+{% endif %}
+
 {% if cfg.job_links %}
 <h2>{{ row.ind.short }}業界への転職を考えるなら</h2>
 <p class="jobs">{% for j in cfg.job_links %}<a class="btn" href="{{ j.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ j.name }}</a>{% endfor %}</p>

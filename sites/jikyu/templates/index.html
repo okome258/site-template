@@ -12,6 +12,13 @@
 </div>
 <img src="{{ page.root }}yc-walk.webp" alt="スーツ姿のヤドカリ「ヤドキャリ」" width="360" height="376">
 </div>
+{% if occ %}
+<a class="ai-hero" href="{{ page.root }}ai/">
+<img src="{{ page.root }}yc-pc.webp" alt="" width="110" height="90">
+<span><b>AI時代、あなたの業界の時給はどうなる？</b><small>業界・業種別に{{ to_year }}年をシミュレーション／実際に増えた仕事・減った仕事</small></span>
+<i>›</i>
+</a>
+{% endif %}
 <div class="yc-say"><img src="{{ page.root }}yc-greet.webp" alt="" width="76" height="78"><p><b class="nm">ヤドキャリ</b>殻（会社）を住み替える前に、年収だけじゃなく「1時間あたりいくらもらえるか」も見ておこう。</p></div>
 {% if latest.all.hourly %}
 <p class="note">全産業の平均は <b>{{ latest.all.hourly | num }}円</b>（年収 {{ latest.all.annual_man | num }}万円・月 {{ latest.all.hours_month }}時間）。</p>
@@ -69,9 +76,7 @@
 {% endif %}
 </div>
 <div class="navs">
-{% if occ %}<a href="{{ page.root }}ai/"><b>AI時代に増えた仕事・減った仕事 →</b><small>事務職は本当に減っている？ 職業別の働く人の数</small></a>{% endif %}
 {% if fc_rank %}<a href="{{ page.root }}yosoku/"><b>{{ to_year }}年の予想 →</b><small>このペースが続いたら年収・時給はいくら？</small></a>{% endif %}
-{% if pref_rank %}<a href="{{ page.root }}chiiki/"><b>都道府県別ランキング →</b><small>{{ pref_year }}年・47都道府県の実質時給</small></a>{% endif %}
 </div>
 <h2>実質時給の考え方</h2>
 <p>実質時給 ＝（きまって支給する現金給与額 × 12 ＋ 年間賞与その他特別給与額）÷（（所定内実労働時間 ＋ 超過実労働時間）× 12）。通勤時間や持ち帰り残業は統計に含まれないため、実際の体感より高めに出ることがあります。詳しくは<a href="{{ page.root }}about/">計算方法</a>へ。</p>
