@@ -1095,6 +1095,18 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     focus_rank.sort(key=lambda r: -r["hourly"])
 
     ai_ctx = attach_ai(cfg, data, ranking, focus_rank)
+    # 「年収は上なのに時給は下」の組み合わせ(説明の例に使う)。年収が近く、労働時間の差が大きいものを選ぶ
+    flip = None
+    pool = [r for r in focus_rank + ranking if r.get("annual_man") and r.get("hours_month")]
+    for a in pool:
+        for b in pool:
+            if a is b or not (a["annual_man"] > b["annual_man"] and a["hourly"] < b["hourly"]):
+                continue
+            gap = a["annual_man"] - b["annual_man"]
+            score = (a["hours_month"] - b["hours_month"]) / (1 + gap / 20)
+            if gap <= 60 and (flip is None or score > flip["score"]):
+                flip = {"hi": a, "lo": b, "gap": round(gap), "hgap": round((a["hours_month"] - b["hours_month"]) * 12),
+                        "score": score}
     fc_rank = sorted((r for r in ranking if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     fc_focus = sorted((r for r in focus_rank if r.get("fc")), key=lambda r: -r["fc"]["hourly"])
     common = {"latest": latest, "prev": prev, "ranking": ranking, "industries": master,
@@ -1103,7 +1115,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
               "occ": occ_context(data.get("occ")), "ai_ctx": ai_ctx,
-              "labor": labor_context(data, ranking), "quals": cfg.get("quals") or {},
+              "labor": labor_context(data, ranking), "flip": flip, "quals": cfg.get("quals") or {},
               "ai_rank": sorted((r for r in ranking if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "ai_focus": sorted((r for r in focus_rank if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
