@@ -543,41 +543,69 @@ def fetch_occ_by_industry(api, year: str) -> dict | None:
 
 
 def probe_sources(cfg: dict, api) -> None:
-    """(調査用・一時)雇用の動きを見るための統計がe-Statのどこにあるかを data/sources_probe.json に残す。"""
-    import json
+    """(調査用・一時)各統計ファイルの中身の形を data/sources_probe.json に残す。"""
+    import io, csv, json
     import xls
     out = {}
-    lists = {
-        "求人倍率DB": {"searchWord": "職業別 求人倍率"},
-        "職安DB": {"searchWord": "一般職業紹介状況"},
-        "雇用動向DB": {"searchWord": "雇用動向調査 産業 入職率 離職率"},
-        "毎勤DB": {"searchWord": "毎月勤労統計調査 全国調査 産業 現金給与総額"},
-        "労調失業DB": {"searchWord": "労働力調査 完全失業率 月次"},
-        "通信利用DB": {"searchWord": "通信利用動向調査 企業 AI"},
-    }
-    from core.estat import parse_table_inf
-    for k, q in lists.items():
+    def head(rows, n=40, w=26):
+        return [[str(c)[:14] if c is not None else "" for c in r[:w]] for r in rows[:n]]
+    def show(key, f, sheets=2, n=40):
         try:
-            body = api._get("getStatsList", "GET_STATS_LIST", limit=60, **q)
-            tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
-            tabs = tabs if isinstance(tabs, list) else [tabs]
-            out[k] = {"n": body.get("DATALIST_INF", {}).get("NUMBER"),
-                      "t": [(t["id"], t["open_date"], t["statistics_name"][:40], t["title"][:70])
-                            for t in map(parse_table_inf, tabs)][:40]}
+            blob = xls.download(f["url"])
+            if f.get("format", "").startswith("CSV") or blob[:2] not in (b"PK", b"\xd0\xcf"):
+                for enc in ("cp932", "utf-8-sig"):
+                    try:
+                        txt = blob.decode(enc); break
+                    except UnicodeDecodeError:
+                        continue
+                out[key] = {"name": f["name"], "csv": head(list(csv.reader(io.StringIO(txt))), n)}
+            else:
+                book = xls.read_book(blob)
+                out[key] = {"name": f["name"], "sheets": list(book)[:20],
+                            "head": {sh: head(r, n) for sh, r in list(book.items())[:sheets]}}
         except Exception as e:
-            out[k] = {"error": str(e)[:200]}
-    cats = {
-        "求人倍率File": ("00450222", "職業別"),
-        "求人倍率File2": ("00450222", "一般職業紹介状況"),
-        "雇用動向File": ("00450073", "入職率"),
-        "通信利用File": ("00200356", "AI"),
-    }
-    for k, (code, w) in cats.items():
+            out[key] = {"name": f.get("name"), "error": f"{type(e).__name__}: {str(e)[:200]}"}
+    try:
+        fs = [f for f in xls.catalog(api, "00450222", "職業別労働市場関係指標") if "令和4年4月" in f["name"]]
+        if fs:
+            show("求人倍率_職業別", max(fs, key=lambda f: f["release"]), sheets=3, n=60)
+    except Exception as e:
+        out["求人倍率_err"] = str(e)[:200]
+    for code, w in (("00450092", "過不足"), ("00450092", "労働者過不足判断"), ("", "労働経済動向調査 過不足")):
         try:
-            fs = xls.catalog(api, code, w)
-            out[k] = {"n": len(fs), "t": [(f["release"], f["dataset"][-50:], f["name"][:70], f["format"]) for f in fs][:50]}
+            if code:
+                fs = xls.catalog(api, code, w)
+            else:
+                body = api._get("getDataCatalog", "GET_DATA_CATALOG", searchWord=w, limit=100)
+                fs = []
+                cats = body.get("DATA_CATALOG_LIST_INF", {}).get("DATA_CATALOG_INF") or []
+                cats = cats if isinstance(cats, list) else [cats]
+                for c in cats:
+                    ds = str(((c.get("DATASET") or {}).get("TITLE") or {}).get("NAME", ""))
+                    res = (c.get("RESOURCES") or {}).get("RESOURCE") or []
+                    for r in (res if isinstance(res, list) else [res]):
+                        fs.append({"dataset": ds, "release": str(r.get("RELEASE_DATE", "")),
+                                   "name": str((r.get("TITLE") or {}).get("NAME", "")), "url": r.get("URL"), "format": r.get("FORMAT")})
+            out[f"過不足list:{code}:{w}"] = [(f["release"], f["dataset"][-50:], f["name"][:80], f["format"]) for f in
+                                          sorted(fs, key=lambda f: f["release"], reverse=True)][:25]
+            hit = [f for f in fs if "職種" in f["name"] and "過不足" in f["name"]]
+            if hit and "過不足file" not in out:
+                show("過不足file", max(hit, key=lambda f: f["release"]), n=50)
         except Exception as e:
-            out[k] = {"error": str(e)[:200]}
+            out[f"過不足err:{code}:{w}"] = str(e)[:200]
+    try:
+        fs = [f for f in xls.catalog(api, "00200356", "ＡＩなどのシステムやサービスの導入状況") if "産業別" in f["name"]]
+        out["AI導入list"] = [(f["release"], f["dataset"][-30:], f["name"][:60]) for f in sorted(fs, key=lambda f: f["release"], reverse=True)][:8]
+        if fs:
+            show("AI導入", max(fs, key=lambda f: f["release"]), n=40)
+    except Exception as e:
+        out["AI導入_err"] = str(e)[:200]
+    try:
+        fs = xls.catalog(api, "00450073", "産業（大分類）別入職率")
+        fs += xls.catalog(api, "00450073", "産業別 入職率 離職率")
+        out["雇用動向list"] = [(f["release"], f["dataset"][-40:], f["name"][:80]) for f in sorted(fs, key=lambda f: f["release"], reverse=True)][:25]
+    except Exception as e:
+        out["雇用動向_err"] = str(e)[:200]
     (cfg["_dir"] / "data" / "sources_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding="utf-8")
 
 
