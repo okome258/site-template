@@ -419,6 +419,28 @@
    "url": "https://hb.afl.rakuten.co.jp/hgc/g00s3qmo.ia3300bc.g00s3qmo.ia331bbf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fginmaido%2Fkakeiouennmai10kg%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fginmaido%2Fi%2F10000104%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
   },
   {
+   "code": "okomeabe:10000289",
+   "kind": "genmai",
+   "option": "",
+   "name": "楽天ランキング受賞 玄米 10kg 送料無料 玄米のりすけ 家計応援玄米 一部地域送料無料（北海道.中国.四国.九州.沖縄を除く)",
+   "short": "楽天ランキング受賞 玄米 10kg 送料無料 玄米のりすけ 家計応援玄米 一部地域送料無料（北海道.中国.四国.九州.沖縄を除く)",
+   "brand": "",
+   "blend": false,
+   "crop": "",
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/okomeabe/cabinet/man/man-10k-gen.jpg?_ex=240x240",
+   "price": 4080,
+   "qty_kg": 10.0,
+   "evidence": "10kg",
+   "per_kg": 408,
+   "postage_included": true,
+   "point_rate": 1,
+   "review_count": 804,
+   "review_avg": 4.66,
+   "available": true,
+   "shop": "阿部ベイコク",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00q08ho.ia3303a5.g00q08ho.ia331236/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fokomeabe%2F1000077811%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fokomeabe%2Fi%2F10000289%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
+  },
+  {
    "code": "auc-nihei-aizu:10000079",
    "kind": "genmai",
    "option": "精米も選べる",
@@ -4313,28 +4335,6 @@
    "url": "https://hb.afl.rakuten.co.jp/hgc/g00rw37o.ia330760.g00rw37o.ia331b9a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fajitukami%2F10000023%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fajitukami%2Fi%2F10000022%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
   },
   {
-   "code": "kodawari-komachi:10000009",
-   "kind": "genmai",
-   "option": "",
-   "name": "＼新米／あきたこまち 玄米10kg（5kg×2袋）●安心の石抜き済●【農家直送】秋田県大潟村産 2026年産 特別栽培米 あきたこまち 脱酸素袋 《送料無料》",
-   "short": "＼新米／あきたこまち 玄米10kg（5kg×2袋） 安心の石抜き済 秋田県大潟村産 2026年産 特別栽培米 あきたこまち 脱酸素袋",
-   "brand": "あきたこまち",
-   "blend": false,
-   "crop": "",
-   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kodawari-komachi/cabinet/compass1760769734.jpg?_ex=240x240",
-   "price": 6400,
-   "qty_kg": 10.0,
-   "evidence": "5kg×2",
-   "per_kg": 640,
-   "postage_included": true,
-   "point_rate": 1,
-   "review_count": 29,
-   "review_avg": 4.79,
-   "available": true,
-   "shop": "秋田県こだわり農場 楽天市場店",
-   "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2zro.ia3304d8.g00t2zro.ia331bdd/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkodawari-komachi%2F010%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkodawari-komachi%2Fi%2F10000009%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
-  },
-  {
    "code": "halloday:10001855",
    "kind": "musen",
    "option": "",
@@ -6669,12 +6669,12 @@
  ],
  "dropped": {
   "量が複数": 50,
-  "選択式": 50,
+  "選択式": 49,
   "対象外": 53,
   "量なし": 28,
   "米以外": 5,
   "量が範囲外": 4
  },
  "errors": [],
- "fetched_at": "2026-10-11T09:18+09:00"
+ "fetched_at": "2026-10-11T09:25+09:00"
 }

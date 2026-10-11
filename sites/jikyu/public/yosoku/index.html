@@ -44,6 +44,15 @@
 .jp-big text{fill:#334}
 .legend .lv{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
 tr:target{background:#fff4c4}
+/* ランキングの切り替えタブ(業界/注目の業種/都道府県) */
+.rk-tabs>input{position:absolute;opacity:0;pointer-events:none}
+.rk-bar{position:sticky;top:0;z-index:5;display:flex;gap:6px;padding:8px 0;background:var(--bg,#fff);border-bottom:2px solid var(--ink);margin:8px 0 10px}
+.rk-bar label,.rk-bar a{flex:1;text-align:center;padding:9px 4px;border-radius:10px 10px 0 0;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.rk-bar small{font-weight:400;color:var(--muted);font-size:11px}
+.rk-panel{display:none}
+#rk-gyokai:checked~.rk-p1,#rk-gyoshu:checked~.rk-p2{display:block}
+#rk-gyokai:checked~.rk-bar label[for=rk-gyokai],#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu]{background:var(--accent);color:#fff}
+#rk-gyokai:checked~.rk-bar label[for=rk-gyokai] small,#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu] small{color:#dde8f3}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -62,7 +71,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T09:18+09:00"><b>2026/10/11 09:18</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T09:25+09:00"><b>2026/10/11 09:25</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -376,7 +385,7 @@ html{scroll-padding-top:60px}
 <p class="small"><a href="../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 09:18</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 09:25</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>

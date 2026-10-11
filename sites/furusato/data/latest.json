@@ -1226,8 +1226,8 @@
    "candidates": 157,
    "ranked": 58,
    "dropped": {
-    "選択式": 50,
     "対象外の商品": 39,
+    "選択式": 50,
     "量が複数": 8,
     "量なし": 2
    },
@@ -2283,6 +2283,26 @@
      "market_pct": 27
     },
     {
+     "code": "f342041-mihara:10000949",
+     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉・皮無しミンチ 合計3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ 鶏肉 むねにく 鶏むね肉 むね肉 皮なし 鶏 ミンチ 小分け 広島県産 神明鶏 012021",
+     "price": 18000,
+     "qty": 3.0,
+     "evidence": "合計3kg",
+     "per10k": 1.667,
+     "unit_price": 6000,
+     "shop": "広島県三原市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110895%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000949%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "三原市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f59ba7cedd88078810.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.92,
+     "market_yen": 4860.0,
+     "market_pct": 27
+    },
+    {
      "code": "f212059-seki:10004151",
      "name": "恵那どり むねミンチ肉 4.2kg バラ凍　(420g×10パック)　冷凍 鶏肉 ひき肉 むね肉 とり肉 鶏むね肉 業務用 原料肉 銘柄鶏 胸 パラパラ ミンチ肉 鶏ミンチ くっつかない 小分け 大容量【配送不可地域：離島・一部山間部等】",
      "price": 27000,
@@ -2441,43 +2461,23 @@
      "vs_median": 0.71,
      "market_yen": 2920.0,
      "market_pct": 21
-    },
-    {
-     "code": "f462187-kirishima:10000863",
-     "name": "国産！高原鶏 鶏刺し一羽セット(未カット)合計約1.4kg超え！ 鶏 鶏肉 鳥肉 モモ ムネ ササミ もも肉 むね肉 胸肉 真空パック 醤油付き 鳥刺し タタキ 刺身 おつまみ 冷凍【ワタセ食鳥】",
-     "price": 11000,
-     "qty": 1.4,
-     "evidence": "1.4kg",
-     "per10k": 1.273,
-     "unit_price": 7857,
-     "shop": "鹿児島県霧島市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3qro.ia330ec5.g00t3qro.ia331084/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462187-kirishima%2Fa0-278%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462187-kirishima%2Fi%2F10000863%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "霧島市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462187-kirishima/cabinet/img01/a0-278_smn_new.jpg?_ex=240x240",
-     "review_avg": 4.61,
-     "review_count": 118,
-     "wakeari": false,
-     "vs_median": 0.7,
-     "market_yen": 2270.0,
-     "market_pct": 21
     }
    ],
    "candidates": 165,
-   "ranked": 36,
+   "ranked": 38,
    "dropped": {
-    "対象外の商品": 75,
-    "選択式": 45,
+    "対象外の商品": 74,
+    "選択式": 44,
     "量なし": 5,
     "量が複数": 3,
     "量が範囲外": 1
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 5500,
+    "median_unit_price": 6000,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 21
+    "towns": 22
    },
    "popularity": 1476
   },
@@ -3709,10 +3709,10 @@
    "ranked": 37,
    "dropped": {
     "選択式": 41,
-    "対象外の商品": 51,
+    "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 7
+    "量が範囲外": 6
    },
    "summary": {
     "median_per10k": 0.727,
@@ -6446,8 +6446,8 @@
    "candidates": 86,
    "ranked": 22,
    "dropped": {
-    "量が複数": 7,
     "選択式": 40,
+    "量が複数": 7,
     "量なし": 1,
     "量が範囲外": 9,
     "対象外の商品": 7
@@ -15198,24 +15198,6 @@
      "vs_median": 1.67
     },
     {
-     "code": "f152269-minamiuonuma:10004694",
-     "name": "【魚沼地域限定】純米酒 八海山「魚沼で候」1800ml×3本【八海山 純米 魚沼で候 一升瓶 3本 セット 日本酒 1800ml 新潟 地酒 厳選 晩酌 熱燗 お酒 酒 さけ お中元 お歳暮 贈答】",
-     "price": 36000,
-     "qty": 5.4,
-     "evidence": "1800ml×3",
-     "per10k": 1.5,
-     "unit_price": 6667,
-     "shop": "新潟県南魚沼市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tobvo.ia330389.g00tobvo.ia331b7c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff152269-minamiuonuma%2Fcn441%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff152269-minamiuonuma%2Fi%2F10004694%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "南魚沼市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f152269-minamiuonuma/cabinet/frp_goods/frp003/4502712.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 1,
-     "wakeari": false,
-     "vs_median": 1.67
-    },
-    {
      "code": "f444626-kusu:10000006",
      "name": "日本酒 亀の井 山廃仕込み 空河 純米酒 1800ml 一升瓶 亀の井 山廃 仕込み 清酒 純米酒 大分県 酒蔵 五百万石 地元産 万年山 伏流水 手造り 酒蔵 熱燗 ぬる燗 室温 中華料理 和食 明治 江戸 享保年間 創業三百余年 伝統製法 濃い旨味 亀の井酒造",
      "price": 12000,
@@ -15408,6 +15390,24 @@
      "portal": "楽天ふるさと納税",
      "town": "小川町",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f113433-ogawa/cabinet/11187922/285.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 1,
+     "wakeari": false,
+     "vs_median": 1.33
+    },
+    {
+     "code": "f342076-fukuyama:10000214",
+     "name": "福山城築城四百年記念酒『天寶一 福山。』 特別純米酒 (1.8L) おすすめ 人気 一升瓶 広島の酒 食中酒 冷酒 熱燗 ぬる燗 プレゼント 日本酒 酒 純米酒 アルコール 贈り物 ギフト 贈答 城 福山城 蔵元 天寶一 広島県福山市/株式会社酒商山田[BAFR006]",
+     "price": 15000,
+     "qty": 1.8,
+     "evidence": "1.8L",
+     "per10k": 1.2,
+     "unit_price": 8333,
+     "shop": "広島県福山市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sx0oo.ia330cd1.g00sx0oo.ia33159f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342076-fukuyama%2Ffu39011%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342076-fukuyama%2Fi%2F10000214%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "福山市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342076-fukuyama/cabinet/item/bafr/bafr006.jpg?_ex=240x240",
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
@@ -15666,12 +15666,12 @@
      "vs_median": 1.0
     }
    ],
-   "candidates": 165,
+   "candidates": 164,
    "ranked": 62,
    "dropped": {
     "対象外の商品": 72,
     "選択式": 18,
-    "量なし": 10,
+    "量なし": 9,
     "量が複数": 2,
     "量が範囲外": 1
    },
@@ -15680,7 +15680,7 @@
     "median_unit_price": 11111,
     "min_unit_price": 2500,
     "max_unit_price": 76389,
-    "towns": 32
+    "towns": 33
    },
    "popularity": 444
   },
@@ -16627,5 +16627,5 @@
    }
   }
  },
- "fetched_at": "2026-10-11T09:14+09:00"
+ "fetched_at": "2026-10-11T09:23+09:00"
 }
