@@ -112,6 +112,19 @@ details.big>summary{display:block;text-align:center;border:1px solid var(--accen
 details.why{background:#fbf6e6;border-radius:10px;padding:8px 12px;margin:10px 0}
 details.why summary{cursor:pointer;font-weight:700;font-size:14px}
 details.why p{margin:8px 0 4px;line-height:1.7}
+.heatbox{margin:8px 0 14px}
+.heat-ctl{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.heat-ctl button{flex:none;font:inherit;font-size:13px;padding:6px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.heat-ctl button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.heat{position:relative;width:100%;aspect-ratio:1/1.25;border-radius:10px;overflow:hidden;background:#fff}
+@media(min-width:640px){.heat{aspect-ratio:16/10}}
+.tile{position:absolute;box-sizing:border-box;border:2px solid #fff;padding:5px 6px;text-decoration:none;color:var(--ink);overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;line-height:1.25;transition:background .25s}
+.tile b{font-size:13px}.tile .tv{font-size:12px;font-weight:700;font-family:var(--head)}
+.tile.sm{padding:2px}.tile.sm b{font-size:9px;font-weight:700}.tile.sm .tv{display:none}
+.tile.xs b{display:none}
+.tile:hover{outline:2px solid var(--ink);outline-offset:-2px;z-index:2}
+.heat-legend{margin:6px 0 0;color:var(--muted)}
+.h-map{margin-top:18px}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -130,7 +143,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="./"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T00:07+09:00"><b>2026/10/12 00:07</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T00:14+09:00"><b>2026/10/12 00:14</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -149,6 +162,83 @@ html{scroll-padding-top:60px}
 </a>
 <div class="yc-say"><img src="./yc-greet.webp" alt="" width="76" height="78"><p><b class="nm">ヤドキャリ</b>殻（会社）を住み替える前に、年収だけじゃなく「1時間あたりいくらもらえるか」も見ておこう。</p></div>
 <p class="note">全産業の平均は <b>2,628円</b>（年収 546万円・月 173.0時間）。</p>
+<h2 class="h-map">ひと目でわかる業界マップ</h2>
+<div class="heatbox">
+<div class="heat-ctl" role="tablist">
+<button class="on" data-k="h">時給</button><button data-k="d">前年比</button><button data-k="ai">AIの影響</button><button data-k="di">人手不足</button><button data-k="fc">2030年への伸び</button>
+</div>
+<div class="heat">
+<a class="tile" href="./gyokai/manufacturing/" style="left:0%;top:0%;width:32.88%;height:50.1%"
+ data-h="-0.3" data-d="2.3" data-ai="19" data-di="45" data-fc="2.5"
+ title="製造：実質時給2,621円・年収554万円・働く人1,033万人"><b>製造</b><span class="tv">2,621円</span></a>
+<a class="tile" href="./gyokai/trade/" style="left:0%;top:50.1%;width:32.88%;height:49.9%"
+ data-h="4.8" data-d="3.5" data-ai="19" data-di="32" data-fc="3.4"
+ title="卸売・小売：実質時給2,755円・年収562万円・働く人1,029万人"><b>卸売・小売</b><span class="tv">2,755円</span></a>
+<a class="tile" href="./gyokai/medical/" style="left:32.88%;top:0%;width:44.48%;height:33.94%"
+ data-h="-8.0" data-d="3.9" data-ai="13" data-di="55" data-fc="1.7"
+ title="医療・福祉：実質時給2,418円・年収479万円・働く人947万人"><b>医療・福祉</b><span class="tv">2,418円</span></a>
+<a class="tile" href="./gyokai/services/" style="left:77.36%;top:0%;width:22.64%;height:33.94%"
+ data-h="-21.4" data-d="-1.4" data-ai="34" data-di="51" data-fc="2.1"
+ title="その他サービス：実質時給2,065円・年収426万円・働く人482万人"><b>その他サービス</b><span class="tv">2,065円</span></a>
+<a class="tile" href="./gyokai/construction/" style="left:32.88%;top:33.94%;width:30.17%;height:25.26%"
+ data-h="6.7" data-d="4.2" data-ai="18" data-di="59" data-fc="2.8"
+ title="建設：実質時給2,804円・年収592万円・働く人478万人"><b>建設</b><span class="tv">2,804円</span></a>
+<a class="tile" href="./gyokai/hospitality/" style="left:32.88%;top:59.2%;width:30.17%;height:21.98%"
+ data-h="-29.1" data-d="2.8" data-ai="3" data-di="32" data-fc="1.9"
+ title="宿泊・飲食：実質時給1,864円・年収403万円・働く人416万人"><b>宿泊・飲食</b><span class="tv">1,864円</span></a>
+<a class="tile" href="./gyokai/education/" style="left:32.88%;top:81.19%;width:30.17%;height:18.81%"
+ data-h="13.5" data-d="-1.6" data-ai="18" data-di="" data-fc="1.2"
+ title="教育：実質時給2,984円・年収598万円・働く人356万人"><b>教育</b><span class="tv">2,984円</span></a>
+<a class="tile" href="./gyokai/transport/" style="left:63.05%;top:33.94%;width:19.7%;height:27.92%"
+ data-h="-15.5" data-d="-0.1" data-ai="22" data-di="61" data-fc="2.7"
+ title="運輸・物流：実質時給2,220円・年収506万円・働く人345万人"><b>運輸・物流</b><span class="tv">2,220円</span></a>
+<a class="tile" href="./gyokai/it/" style="left:82.75%;top:33.94%;width:17.25%;height:27.92%"
+ data-h="23.9" data-d="1.9" data-ai="24" data-di="52" data-fc="2.0"
+ title="IT・通信：実質時給3,257円・年収668万円・働く人302万人"><b>IT・通信</b><span class="tv">3,257円</span></a>
+<a class="tile" href="./gyokai/professional/" style="left:63.05%;top:61.86%;width:19.76%;height:21.79%"
+ data-h="32.4" data-d="7.7" data-ai="32" data-di="59" data-fc="2.5"
+ title="専門・技術サービス：実質時給3,480円・年収714万円・働く人270万人"><b>専門・技術サービス</b><span class="tv">3,480円</span></a>
+<a class="tile" href="./gyokai/lifestyle/" style="left:82.8%;top:61.86%;width:17.2%;height:21.79%"
+ data-h="-20.5" data-d="5.2" data-ai="10" data-di="38" data-fc="2.7"
+ title="生活サービス・娯楽：実質時給2,089円・年収431万円・働く人235万人"><b>生活サービス・娯楽</b><span class="tv">2,089円</span></a>
+<a class="tile" href="./gyokai/finance/" style="left:63.05%;top:83.65%;width:15.31%;height:16.35%"
+ data-h="45.3" data-d="7.7" data-ai="57" data-di="31" data-fc="3.6"
+ title="金融・保険：実質時給3,818円・年収724万円・働く人157万人"><b>金融・保険</b><span class="tv">3,818円</span></a>
+<a class="tile" href="./gyokai/realestate/" style="left:78.35%;top:83.65%;width:14.14%;height:16.35%"
+ data-h="9.2" data-d="-3.2" data-ai="30" data-di="42" data-fc="2.9"
+ title="不動産：実質時給2,869円・年収592万円・働く人145万人"><b>不動産</b><span class="tv">2,869円</span></a>
+<a class="tile sm" href="./gyokai/compound/" style="left:92.49%;top:83.65%;width:7.51%;height:9.34%"
+ data-h="-1.3" data-d="2.6" data-ai="73" data-di="" data-fc="2.3"
+ title="郵便局・協同組合：実質時給2,593円・年収516万円・働く人44万人"><b>郵便局・協同組合</b><span class="tv">2,593円</span></a>
+<a class="tile sm" href="./gyokai/utilities/" style="left:92.49%;top:92.99%;width:7.51%;height:7.01%"
+ data-h="42.6" data-d="0.8" data-ai="38" data-di="" data-fc="2.8"
+ title="電気・ガス・水道：実質時給3,747円・年収755万円・働く人33万人"><b>電気・ガス・水道</b><span class="tv">3,747円</span></a>
+</div>
+<p class="heat-legend small"><span class="hl-desc">色＝全産業平均と比べた時給（青いほど高い）</span>　マスの大きさ＝働く人の数（総務省「労働力調査」）。マスを押すと業界のページへ。鉱業は働く人の内訳が統計にないため入っていません。</p>
+</div>
+<script>
+(function(){
+var box=document.currentScript.previousElementSibling,tiles=box.querySelectorAll(".tile"),desc=box.querySelector(".hl-desc");
+var M={h:{t:"div",u:"%",d:"色＝全産業平均と比べた時給（青いほど高い）"},
+d:{t:"div",u:"%",d:"色＝時給の前年比（青＝上がった・オレンジ＝下がった）"},
+ai:{t:"bad",u:"%",d:"色＝AIの影響を受けやすい仕事の割合（濃いほど高い）"},
+di:{t:"good",u:"",d:"色＝会社が感じる人手不足DI（濃いほど足りない）"},
+fc:{t:"div",u:"%/年",d:"色＝2030年に向けた時給の伸び（このペースが続いた場合）"}};
+function col(v,mx,t){var a=Math.min(1,Math.abs(v)/(mx||1));
+if(t==="bad"||(t==="div"&&v<0))return [`rgba(212,112,90,${.15+.85*a})`,a>.55];
+return [`rgba(47,93,138,${.15+.85*a})`,a>.55];}
+function show(k){var m=M[k],vals=[].map.call(tiles,function(e){return e.dataset[k]===""?null:+e.dataset[k]}),
+mx=Math.max.apply(null,vals.filter(function(v){return v!==null}).map(Math.abs));
+tiles.forEach(function(e,i){var v=vals[i],tv=e.querySelector(".tv");
+if(v===null){e.style.background="#e9e6df";e.style.color="";tv.textContent="データなし";return;}
+var c=col(v,mx,m.t);e.style.background=c[0];e.style.color=c[1]?"#fff":"";
+tv.textContent=(m.t==="div"&&v>0?"+":"")+(k==="di"&&v>0?"+":"")+v+m.u;});
+desc.textContent=m.d;
+box.querySelectorAll(".heat-ctl button").forEach(function(b){b.classList.toggle("on",b.dataset.k===k)});}
+box.querySelector(".heat-ctl").addEventListener("click",function(e){var b=e.target.closest("button");if(b)show(b.dataset.k)});
+show("h");
+})();
+</script>
 <details class="why">
 <summary>年収が高いのに、時給が下になる業界があるのはなぜ？</summary>
 <p>実質時給は「年収 ÷ 1年間に働いた時間」なので、<b>年収が少し低くても、働く時間が短ければ時給は上</b>になります。</p>
@@ -890,7 +980,7 @@ document.querySelectorAll(".sortbar").forEach(function(bar){
 <p class="small"><a href="./about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 00:07</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 00:14</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>

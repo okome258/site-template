@@ -112,6 +112,19 @@ details.big>summary{display:block;text-align:center;border:1px solid var(--accen
 details.why{background:#fbf6e6;border-radius:10px;padding:8px 12px;margin:10px 0}
 details.why summary{cursor:pointer;font-weight:700;font-size:14px}
 details.why p{margin:8px 0 4px;line-height:1.7}
+.heatbox{margin:8px 0 14px}
+.heat-ctl{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.heat-ctl button{flex:none;font:inherit;font-size:13px;padding:6px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.heat-ctl button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.heat{position:relative;width:100%;aspect-ratio:1/1.25;border-radius:10px;overflow:hidden;background:#fff}
+@media(min-width:640px){.heat{aspect-ratio:16/10}}
+.tile{position:absolute;box-sizing:border-box;border:2px solid #fff;padding:5px 6px;text-decoration:none;color:var(--ink);overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;line-height:1.25;transition:background .25s}
+.tile b{font-size:13px}.tile .tv{font-size:12px;font-weight:700;font-family:var(--head)}
+.tile.sm{padding:2px}.tile.sm b{font-size:9px;font-weight:700}.tile.sm .tv{display:none}
+.tile.xs b{display:none}
+.tile:hover{outline:2px solid var(--ink);outline-offset:-2px;z-index:2}
+.heat-legend{margin:6px 0 0;color:var(--muted)}
+.h-map{margin-top:18px}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -130,7 +143,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T00:07+09:00"><b>2026/10/12 00:07</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T00:14+09:00"><b>2026/10/12 00:14</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -214,7 +227,7 @@ document.querySelectorAll(".sortbar").forEach(function(bar){
 <p class="small"><a href="../../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 00:07</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 00:14</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>
