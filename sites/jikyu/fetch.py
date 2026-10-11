@@ -542,6 +542,45 @@ def fetch_occ_by_industry(api, year: str) -> dict | None:
     return {"table": {"id": tid, "title": meta["table"]["title"]}, "year": code_year.get(ycode), "rows": rows}
 
 
+def probe_sources(cfg: dict, api) -> None:
+    """(調査用・一時)雇用の動きを見るための統計がe-Statのどこにあるかを data/sources_probe.json に残す。"""
+    import json
+    import xls
+    out = {}
+    lists = {
+        "求人倍率DB": {"searchWord": "職業別 求人倍率"},
+        "職安DB": {"searchWord": "一般職業紹介状況"},
+        "雇用動向DB": {"searchWord": "雇用動向調査 産業 入職率 離職率"},
+        "毎勤DB": {"searchWord": "毎月勤労統計調査 全国調査 産業 現金給与総額"},
+        "労調失業DB": {"searchWord": "労働力調査 完全失業率 月次"},
+        "通信利用DB": {"searchWord": "通信利用動向調査 企業 AI"},
+    }
+    from core.estat import parse_table_inf
+    for k, q in lists.items():
+        try:
+            body = api._get("getStatsList", "GET_STATS_LIST", limit=60, **q)
+            tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
+            tabs = tabs if isinstance(tabs, list) else [tabs]
+            out[k] = {"n": body.get("DATALIST_INF", {}).get("NUMBER"),
+                      "t": [(t["id"], t["open_date"], t["statistics_name"][:40], t["title"][:70])
+                            for t in map(parse_table_inf, tabs)][:40]}
+        except Exception as e:
+            out[k] = {"error": str(e)[:200]}
+    cats = {
+        "求人倍率File": ("00450222", "職業別"),
+        "求人倍率File2": ("00450222", "一般職業紹介状況"),
+        "雇用動向File": ("00450073", "入職率"),
+        "通信利用File": ("00200356", "AI"),
+    }
+    for k, (code, w) in cats.items():
+        try:
+            fs = xls.catalog(api, code, w)
+            out[k] = {"n": len(fs), "t": [(f["release"], f["dataset"][-50:], f["name"][:70], f["format"]) for f in fs][:50]}
+        except Exception as e:
+            out[k] = {"error": str(e)[:200]}
+    (cfg["_dir"] / "data" / "sources_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding="utf-8")
+
+
 def fetch(cfg: dict) -> dict:
     from datetime import date
     api = EStat()
@@ -596,6 +635,10 @@ def fetch(cfg: dict) -> dict:
     if int(newest) < date.today().year - 2 + (1 if date.today().month >= 4 else 0):
         print(f"::warning::最新が{newest}年のままです。新しい年の公表を確認してください")
     _dump(cfg, {"checked": checked, "fetched": DEBUG})
+    try:
+        probe_sources(cfg, api)
+    except Exception as e:
+        print(f"::warning::probe: {e}")
     occ = None
     try:
         occ = fetch_occupations(api)
