@@ -369,13 +369,13 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,tendofoods:10000086,hakumai,4980,10.0,False,1,4720,4.66,True,てんどうフーズうまいもの通販
 2026-10-11,ebisu-murayama:10000003,hakumai,4980,10.0,True,1,3311,4.82,True,丸公楽天市場店
 2026-10-11,kyusyukome:10000128,hakumai,4980,10.0,True,1,2690,4.45,True,九州米大将
+2026-10-11,rice-smile:10000163,hakumai,4980,10.0,True,1,95,4.59,True,ライスマイルねっとショップ
 2026-10-11,ajiwainoasa:10000028,hakumai,4980,10.0,True,1,2296,4.58,True,お米・菓子の直売所あじわいの朝
 2026-10-11,okadabeikoku:10000031,hakumai,4980,10.0,True,1,14,4.93,True,岡田米穀店 楽天市場店
 2026-10-11,fuchigami:10000069,hakumai,4980,10.0,True,1,977,4.58,True,こめたつ
 2026-10-11,komeminori:10000004,hakumai,4980,10.0,False,1,299,4.74,True,米のみのり屋
 2026-10-11,ricetanaka:10000000,hakumai,4980,10.0,True,1,241,4.78,True,こめた 楽天市場店
 2026-10-11,fuchigami:10000359,hakumai,4980,10.0,True,1,1730,4.61,True,こめたつ
-2026-10-11,rice-smile:10000163,hakumai,4980,10.0,True,1,95,4.59,True,ライスマイルねっとショップ
 2026-10-11,mizuhonokuni:10001014,genmai,4980,10.0,False,1,763,4.55,True,純米処 瑞穂の国
 2026-10-11,anzai-rice:10000522,genmai,4980,10.0,True,1,38,4.55,True,まんま屋
 2026-10-11,marukichi-kayano:10000021,genmai,14980,30.0,True,1,2980,4.66,True,丸吉 茅野商店 北海道
@@ -507,7 +507,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-10-11,eekome:10000072,genmai,6580,10.0,True,1,5239,4.8,True,京の米職人
 2026-10-11,marukichi-kayano:10000131,genmai,6580,10.0,True,1,1094,4.71,True,丸吉 茅野商店 北海道
 2026-10-11,okomeabe:10000345,mochi,6580,10.0,True,1,44,4.61,True,阿部ベイコク
-2026-10-11,ricey-miyagi:10000045,hakumai,3300,5.0,True,1,66,4.86,True,株式会社ライシー宮城
 2026-10-11,myoko-koide:10000060,genmai,6600,10.0,True,1,836,4.71,True,こしひかりの郷 小出農場
 2026-10-11,komeminori:10000007,mochi,19800,30.0,False,1,3,4.33,True,米のみのり屋
 2026-10-11,yamatorice:10000184,hakumai,6680,10.0,False,1,4288,4.51,True,ヤマトライス
