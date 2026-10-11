@@ -6623,6 +6623,28 @@
    "url": "https://hb.afl.rakuten.co.jp/hgc/g00qbbko.ia330a99.g00qbbko.ia33111a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fadachi-umai%2F15moti%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fadachi-umai%2Fi%2F10000166%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
   },
   {
+   "code": "kaitakunojo:10000016",
+   "kind": "mochi",
+   "option": "",
+   "name": "新米予約無農薬　玄米　令和8年産　　秋田県産　　地下水で栽培　　きぬのはだ　安心で美味しいもち米5kg",
+   "short": "新米予約無農薬 玄米 令和8年産 秋田県産 地下水で栽培 きぬのはだ 安心で美味しいもち米5kg",
+   "brand": "",
+   "blend": false,
+   "crop": "令和8年産",
+   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/kaitakunojo/cabinet/moti555.jpg?_ex=240x240",
+   "price": 5500,
+   "qty_kg": 5.0,
+   "evidence": "5kg",
+   "per_kg": 1100,
+   "postage_included": true,
+   "point_rate": 1,
+   "review_count": 78,
+   "review_avg": 4.86,
+   "available": true,
+   "shop": "山本開拓農場",
+   "url": "https://hb.afl.rakuten.co.jp/hgc/g00r8ypo.ia330957.g00r8ypo.ia33138c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkaitakunojo%2F10000422%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fkaitakunojo%2Fi%2F10000016%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
+  },
+  {
    "code": "genki-genmai:10000006",
    "kind": "genmai",
    "option": "精米も選べる",
@@ -6911,12 +6933,12 @@
  ],
  "dropped": {
   "量が複数": 50,
-  "選択式": 48,
-  "対象外": 52,
-  "量なし": 29,
+  "選択式": 49,
+  "対象外": 53,
+  "量なし": 28,
   "米以外": 5,
   "量が範囲外": 4
  },
  "errors": [],
- "fetched_at": "2026-10-11T22:45+09:00"
+ "fetched_at": "2026-10-11T22:54+09:00"
 }
