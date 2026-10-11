@@ -11,6 +11,8 @@
 <div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>「言われていること」と「実際の数字」を並べてみるよ。殻（仕事）選びの参考にしてね。</p></div>
 
 <dl class="kpi">
+{% if labor and labor.adopt %}<div><dt>企業のAI導入率 {{ labor.adopt.y1 }}年</dt><dd>{{ labor.adopt.by_year[labor.adopt.y1]._all | num(1) }}<small>%（{{ labor.adopt.y0 }}年 {{ labor.adopt.by_year[labor.adopt.y0]._all | num(1) }}%）</small></dd></div>{% endif %}
+{% if labor and labor.hw and '事務従事者' in labor.hw.by %}<div><dt>事務の求人倍率 {{ labor.hw.y1 }}年</dt><dd>{{ labor.hw.by['事務従事者'].now }}<small>倍（人余り）</small></dd></div>{% endif %}
 {% if o.total %}<div><dt>働く人全体（{{ o.last }}年）</dt><dd>{{ o.total.now | num }}<small>万人</small></dd></div>
 <div><dt>{{ o.base5 }}年からの増減</dt><dd>{{ man(o.total.c5) }}</dd></div>{% endif %}
 {% for code, label in [("007", "事務の仕事"), ("003", "技術者（ITなど）"), ("016", "介護の仕事"), ("012", "お店の販売")] %}{% if by[code] %}
@@ -68,6 +70,90 @@ var r=Math.min(.9,x*h+x/2*m);t.querySelector(".js-opt").textContent=f(fc/(1-r));
 t.querySelector(".js-r").textContent="作業"+(Math.round(r*1000)/10)+"%減";});}
 s.addEventListener("input",up);})();
 </script>
+{% endif %}
+
+{% if labor %}
+{% set L = labor %}
+<h2 id="dash">雇用の動きダッシュボード（業界別）</h2>
+<p>AIの影響の受けやすさ・会社のAI導入・人手不足・給料の動きを、業界ごとに1つの表にまとめました。どれも公的な統計で、新しい数字が出るたびに自動で更新されます。</p>
+<div class="wrap-x">
+<table class="board compact dash">
+<thead><tr><th>業界</th><th class="num">AIの影響<br><small>高い仕事の割合</small></th>{% if L.adopt %}<th class="num">AI導入率<br><small>{{ L.adopt.y1 }}年</small></th>{% endif %}{% if L.di %}<th class="num">人手不足<br><small>DI</small></th>{% endif %}<th class="num hide-sp">時給<br><small>前年比</small></th></tr></thead>
+<tbody>
+{% for d in L.dash %}
+<tr>
+<th><a href="{{ page.root }}gyokai/{{ d.ind.slug }}/">{{ d.ind.short }}</a></th>
+<td class="num">{% if d.ai %}{{ (d.ai.high*100)|round|int }}%{% else %}-{% endif %}</td>
+{% if L.adopt %}<td class="num">{% if d.adopt is not none %}{{ d.adopt | num(1) }}%{% if d.adopt0 is not none %}<span class="sub up">+{{ (d.adopt - d.adopt0) | num(1) }}</span>{% endif %}{% else %}<span class="muted">-</span>{% endif %}</td>{% endif %}
+{% if L.di %}<td class="num">{% if d.di %}<b class="{{ 'up' if d.di.di > 0 else 'down' }}">{{ '+' if d.di.di > 0 else '' }}{{ d.di.di }}</b>{% if d.di_old %}<span class="sub">{{ '+' if d.di.di - d.di_old.di > 0 else '' }}{{ d.di.di - d.di_old.di }}</span>{% endif %}{% else %}<span class="muted">-</span>{% endif %}</td>{% endif %}
+<td class="num hide-sp">{% if d.diff is not none %}<span class="{{ 'up' if d.diff > 0 else 'down' }}">{{ '+' if d.diff > 0 else '' }}{{ d.diff | num }}円</span>{% else %}-{% endif %}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<ul class="small muted">
+<li><b>AIの影響</b>：その業界で働く人のうち、AIの影響を受けやすい仕事（事務など）の人の割合。</li>
+{% if L.adopt %}<li><b>AI導入率</b>：「IoTやAIなどのシステム・サービスを導入している」企業の割合（総務省「通信利用動向調査」、従業員100人以上の企業）。下の小さい数字は{{ L.adopt.y0 }}年からの増加。AIだけでなくIoTも含む数字です。空欄は統計に区分がない業界。</li>{% endif %}
+{% if L.di %}<li><b>人手不足DI</b>：正社員が「不足」と答えた事業所の割合から「過剰」の割合を引いた数（厚生労働省「労働経済動向調査」{{ L.di.survey }}調査）。プラスが大きいほど人手不足。下の小さい数字は{{ L.di.old_survey }}調査からの変化。</li>{% endif %}
+</ul>
+
+{% if L.adopt %}
+<h3>企業のAI導入は、ここ数年でどこまで進んだ？</h3>
+{% set a1 = L.adopt.by_year[L.adopt.y1] %}{% set a0 = L.adopt.by_year[L.adopt.y0] %}
+<p>IoTやAIを導入している企業は、{{ L.adopt.y0 }}年の<b>{{ a0._all | num(1) }}%</b>から{{ L.adopt.y1 }}年は<b>{{ a1._all | num(1) }}%</b>に増えました。{% set t = L.adopt.rows[0] %}いちばん進んでいるのは{{ L.adopt.names[t[0]] }}（{{ t[1] | num(1) }}%）です。</p>
+<div class="adopt">
+{% for slug, now, old in L.adopt.rows %}
+<div class="arow"><span class="an">{{ L.adopt.names[slug] }}</span><span class="ab"><i class="a0" style="width:{{ old or 0 }}%"></i><i class="a1" style="width:{{ (now or 0) - (old or 0) if now and old and now > old else 0 }}%"></i></span><span class="av">{{ now | num(1) }}%</span></div>
+{% endfor %}
+</div>
+<p class="legend small"><span class="lv mixk" style="background:#7fa6cc"></span>{{ L.adopt.y0 }}年 <span class="lv mixk" style="background:#2f5d8a"></span>{{ L.adopt.y1 }}年までの増加</p>
+{% endif %}
+
+{% if L.hw %}
+{% set H = L.hw %}
+<h3>人手が足りない仕事・余っている仕事（ハローワーク）</h3>
+<p>有効求人倍率は「仕事を探している人1人に、求人がいくつあるか」。1倍より大きいと人手不足、小さいと人が余っています（{{ H.y1 }}年平均）。</p>
+<div class="updown">
+<div><h3 class="up">足りない仕事 TOP5</h3><ol>{% for r in H.top %}<li>{{ r.short }} <b class="up">{{ r.now }}倍</b> <span class="ai ai{{ r.ai }}">AI{{ {3:'高い',2:'中',1:'低い'}[r.ai] }}</span></li>{% endfor %}</ol></div>
+<div><h3 class="down">余っている仕事 TOP5</h3><ol>{% for r in H.bottom %}<li>{{ r.short }} <b class="down">{{ r.now }}倍</b> <span class="ai ai{{ r.ai }}">AI{{ {3:'高い',2:'中',1:'低い'}[r.ai] }}</span></li>{% endfor %}</ol></div>
+</div>
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>AIの影響</th><th>主な職業</th><th class="num">{{ H.y1 }}年</th><th class="num">{{ H.y0 }}年</th></tr></thead>
+<tbody>{% for g in H.by_level %}<tr><th><span class="ai ai{{ g.level }}">{{ g.label }}</span></th><td class="small">{{ g.names[:4] | join('、') }}{% if g.names|length > 4 %} ほか{% endif %}</td><td class="num"><b>{{ g.now }}倍</b></td><td class="num">{{ g.base }}倍</td></tr>{% endfor %}</tbody>
+</table>
+</div>
+{% set jim = H.by['事務従事者'] if '事務従事者' in H.by else none %}{% set it = H.by['情報処理・通信技術者'] if '情報処理・通信技術者' in H.by else none %}
+<p class="note">{% if jim %}AIの影響を受けやすい<b>事務の仕事は{{ jim.now }}倍</b>で、仕事を探している人のほうがずっと多い「人余り」の状態です{% if jim.diff is not none and jim.diff < 0 %}（{{ H.y0 }}年の{{ jim.base }}倍からさらに低下）{% endif %}。{% endif %}
+働く人の数は事務でも増えていますが（上の「実際に増えた仕事」）、求人は増えていないので、<b>事務職への転職は競争が激しくなっています</b>。</p>
+<div class="caveat">
+<b>この数字の弱点</b>：有効求人倍率は<b>ハローワークに出た求人と求職だけ</b>の数字です。IT・専門職・高年収の転職は転職サイトやエージェント経由が多いので、実際より低めに出ます。
+{% if it and L.di and L.di.latest.it %}たとえば情報処理・通信技術者の求人倍率は{{ it.now }}倍ですが、会社への調査（労働経済動向調査）では<b>情報通信業の人手不足DIは+{{ L.di.latest.it.di }}</b>{% if L.di.latest._all %}（全産業は+{{ L.di.latest._all.di }}）{% endif %}で、会社側は強い人手不足を感じています。{% endif %}
+求人倍率と人手不足DIの両方を見るのがおすすめです。
+</div>
+<details class="more"><summary>職業別の有効求人倍率をすべて見る（{{ H.rows | length }}職業）</summary>
+<div class="wrap-x">
+<table class="board compact occ">
+<thead><tr><th>職業</th><th class="num">{{ H.y1 }}年</th><th class="num">{{ H.y0 }}年比</th>{% if H.month %}<th class="num hide-sp">{{ H.month }}</th>{% endif %}<th>AI</th></tr></thead>
+<tbody>{% for r in H.rows %}<tr class="{{ 'maj' if r.major or r.total else 'sub' }}"><th>{{ r.short }}</th><td class="num">{{ r.now }}倍</td><td class="num">{% if r.diff is not none %}<span class="{{ 'up' if r.diff > 0 else 'down' if r.diff < 0 else '' }}">{{ '+' if r.diff > 0 else '' }}{{ r.diff }}</span>{% else %}-{% endif %}</td>{% if H.month %}<td class="num hide-sp">{{ r.m_val if r.m_val is not none else '-' }}</td>{% endif %}<td>{% if r.ai %}<span class="ai ai{{ r.ai }}">{{ {3:'高い',2:'中',1:'低い'}[r.ai] }}</span>{% endif %}</td></tr>{% endfor %}</tbody>
+</table>
+</div>
+<p class="small muted">出典：厚生労働省「一般職業紹介状況」{{ H.file }}（e-Stat、{{ H.release }}公開）。パートを含む常用。{{ H.month }}は最新月の値（季節調整なし）。</p>
+</details>
+{% endif %}
+
+{% if L.di %}
+<h3>会社が感じる人手不足（業界別）</h3>
+<p>求人をどこに出したかに関係なく、会社に直接「正社員が足りているか」を聞いた調査です。ハローワークの数字では見えにくいIT・専門職の人手不足もここに出ます。</p>
+{% set di_rows = L.di.latest.items() | rejectattr(0, 'equalto', '_all') | sort(attribute='1.di', reverse=true) | list %}
+<div class="adopt">
+{% for slug, v in di_rows %}
+<div class="arow"><span class="an">{{ industries[slug].short if slug in industries else v.name }}</span><span class="ab"><i class="a1" style="width:{{ [v.di, 0] | max }}%"></i></span><span class="av">{{ '+' if v.di > 0 else '' }}{{ v.di }}</span></div>
+{% endfor %}
+</div>
+<p class="small muted">人手不足DI＝「不足」と答えた事業所の割合 −「過剰」と答えた割合（正社員等）。{{ L.di.survey }}調査。出典：厚生労働省「労働経済動向調査」。</p>
+{% endif %}
 {% endif %}
 
 <h2>AIの影響の受けやすさ別に見ると</h2>

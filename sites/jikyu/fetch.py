@@ -639,19 +639,27 @@ def fetch_shortage(api, cache: dict, n: int = 8) -> dict | None:
     import xls
     fs = [f for f in catalog_any(api, "労働経済動向調査 過不足")
           if "産業、企業規模、雇用形態・職種、労働者の過不足状況別事業所割合" in f["name"]
-          and f["url"] and "原表" in f["dataset"]]
+          and f["url"]]
+    import unicodedata
     by_survey = {}
     for f in fs:
-        m = re.search(r"(\d{4})\)?年(\d{1,2})月調査", f["name"])
-        if not m:
+        nm = unicodedata.normalize("NFKC", f["name"])
+        m = re.search(r"(\d{4})\)?年(\d{1,2})月調査", nm)
+        w = re.search(r"令和(\d{1,2})年(\d{1,2})月調査", nm)
+        if m:
+            lab = f"{m.group(1)}年{int(m.group(2))}月"
+        elif w:
+            lab = f"{int(w.group(1)) + 2018}年{int(w.group(2))}月"
+        else:
             continue
-        lab = f"{m.group(1)}年{int(m.group(2))}月"
-        if lab not in by_survey or (f["format"] == "XLS" and by_survey[lab]["format"] != "XLS"):
-            by_survey[lab] = f
+        rank = ("原表" in f["dataset"], f["format"] == "XLS", f["release"])
+        if lab not in by_survey or rank > by_survey[lab][0]:
+            by_survey[lab] = (rank, f)
+    by_survey = {k: v[1] for k, v in by_survey.items()}
     out = []
     for lab in sorted(by_survey, key=lambda s: tuple(int(x) for x in re.findall(r"\d+", s)), reverse=True)[:n]:
         f = by_survey[lab]
-        key = "di:" + (f["id"] or lab) + "@" + f["release"]
+        key = "di2:" + (f["id"] or lab) + "@" + f["release"]
         if key not in cache:
             try:
                 book = xls.read_book(xls.download(f["url"]))
@@ -660,11 +668,11 @@ def fetch_shortage(api, cache: dict, n: int = 8) -> dict | None:
                 continue
             sh = next((x for x in book if "0001" in x), next(iter(book)))
             rows = book[sh]
-            ci = next((i for i, r in enumerate(rows[:20]) if "B" in [_cell(c) for c in r] and "b4" in [_cell(c) for c in r]), None)
+            ci = next((i for i, r in enumerate(rows[:20]) if "b1" in [_cell(c) for c in r] and "b5" in [_cell(c) for c in r]), None)
             res = {}
             if ci is not None:
                 code = [_cell(c) for c in rows[ci]]
-                cb, cx = code.index("B"), code.index("b4")
+                cb, cx = code.index("b1"), code.index("b5")   # 正社員等: b1=不足(小計) b5=過剰(小計)
                 for r in rows[ci + 1:]:
                     name, size = _cell(r[0]), _cell(r[1]) if len(r) > 1 else ""
                     if name and not size and len(r) > cx and _num(r[cb]) is not None:
@@ -939,6 +947,82 @@ def attach_ai(cfg: dict, data: dict, ranking: list, focus_rank: list) -> dict | 
     return {"year": oi["year"], "table": oi["table"], "x": round(x * 100), "all": allr}
 
 
+def labor_context(data: dict, ranking: list) -> dict | None:
+    """雇用の動きダッシュボード用の数字。"""
+    L = data.get("labor") or {}
+    out = {}
+    hw = L.get("hw")
+    if hw and hw.get("rows"):
+        ys = sorted({y for r in hw["rows"] for y in r["annual"]})
+        y1, y0 = ys[-1], ys[0]
+        rows = []
+        for r in hw["rows"]:
+            a = r["annual"]
+            if a.get(y1) is None:
+                continue
+            rows.append({**r, "now": a[y1], "base": a.get(y0),
+                         "diff": round(a[y1] - a[y0], 2) if a.get(y0) is not None else None,
+                         "m_lab": (r.get("month") or [None, None])[0], "m_val": (r.get("month") or [None, None])[1]})
+        by = {r["name"]: r for r in rows}
+        lv = []
+        for level, label in ((3, "高い"), (2, "中"), (1, "低い")):
+            g = [r for r in rows if r["major"] and r["ai"] == level]
+            o1 = sum(r["offers"].get(y1, 0) or 0 for r in g); s1 = sum(r["seekers"].get(y1, 0) or 0 for r in g)
+            o0 = sum(r["offers"].get(y0, 0) or 0 for r in g); s0 = sum(r["seekers"].get(y0, 0) or 0 for r in g)
+            lv.append({"level": level, "label": label, "names": [r["short"] for r in g],
+                       "now": round(o1 / s1, 2) if s1 else None, "base": round(o0 / s0, 2) if s0 else None})
+        leaves = [r for r in rows if not r["major"] and not r["total"]]
+        out["hw"] = {"y1": y1, "y0": y0, "rows": rows, "by": by, "by_level": lv,
+                     "top": sorted(leaves, key=lambda r: -r["now"])[:5],
+                     "bottom": sorted(leaves, key=lambda r: r["now"])[:5],
+                     "month": next((r["m_lab"] for r in rows if r["m_lab"]), None),
+                     "file": hw["file"], "release": hw["release"]}
+    di = L.get("di")
+    if di and di.get("surveys"):
+        sv = di["surveys"]
+        def mapped(rows):
+            m = {}
+            for name, v in rows.items():
+                slug = "_all" if "調査産業計" in name else (industries.match(name) or {}).get("slug")
+                if slug and slug not in m:
+                    m[slug] = {"name": name, "di": round(v["short"] - v["excess"]), "short": v["short"]}
+            return m
+        latest, old = mapped(sv[0]["rows"]), mapped(sv[min(4, len(sv) - 1)]["rows"])
+        series = {}
+        for x in reversed(sv):
+            for slug, v in mapped(x["rows"]).items():
+                series.setdefault(slug, []).append({"survey": x["survey"], "di": v["di"]})
+        out["di"] = {"latest": latest, "old": old, "survey": sv[0]["survey"],
+                     "old_survey": sv[min(4, len(sv) - 1)]["survey"], "series": series, "n": len(sv)}
+    aa = L.get("ai_adopt")
+    if aa and aa.get("years"):
+        yrs = sorted(aa["years"])
+        def m(rows):
+            r = {}
+            for name, v in rows.items():
+                slug = "_all" if name.replace(" ", "") == "全体" else AI_ADOPT_ALIAS.get(name)
+                if slug:
+                    r[slug] = v
+            return r
+        byy = {y: m(aa["years"][y]) for y in yrs}
+        names = {AI_ADOPT_ALIAS.get(n) or "_all": n for n in aa["years"][yrs[-1]]}
+        out["adopt"] = {"years": yrs, "by_year": byy, "y1": yrs[-1], "y0": yrs[0], "names": names,
+                        "rows": sorted(((slug, byy[yrs[-1]].get(slug), byy[yrs[0]].get(slug)) for slug in byy[yrs[-1]]
+                                        if slug not in ("_all",)), key=lambda t: -(t[1] or 0))}
+    if not out:
+        return None
+    dash = []
+    for r in ranking:
+        s_ = r["ind"]["slug"]
+        dash.append({"ind": r["ind"], "ai": r.get("ai"), "diff": r.get("diff"), "hourly": r["hourly"],
+                     "di": (out.get("di") or {}).get("latest", {}).get(s_),
+                     "di_old": (out.get("di") or {}).get("old", {}).get(s_),
+                     "adopt": (out.get("adopt") or {}).get("by_year", {}).get((out.get("adopt") or {}).get("y1"), {}).get(s_),
+                     "adopt0": (out.get("adopt") or {}).get("by_year", {}).get((out.get("adopt") or {}).get("y0"), {}).get(s_)})
+    out["dash"] = sorted(dash, key=lambda d: -((d["ai"] or {}).get("high") or 0))
+    return out
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     about = {"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
              "changefreq": "monthly"}
@@ -1008,6 +1092,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
               "occ": occ_context(data.get("occ")), "ai_ctx": ai_ctx,
+              "labor": labor_context(data, ranking),
               "ai_rank": sorted((r for r in ranking if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "ai_focus": sorted((r for r in focus_rank if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
