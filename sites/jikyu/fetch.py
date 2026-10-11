@@ -813,6 +813,74 @@ def fetch(cfg: dict) -> dict:
 
 
 # ---------------- ページ ----------------
+def squarify(items: list[dict], x: float, y: float, w: float, h: float) -> list[dict]:
+    """ツリーマップ(株のヒートマップと同じ並べ方)。items は size の大きい順。座標は % で返す。"""
+    out = []
+    items = [dict(i) for i in items if i["size"] > 0]
+    total = sum(i["size"] for i in items)
+    if not items or total <= 0:
+        return out
+    for i in items:
+        i["area"] = i["size"] / total * w * h
+
+    def worst(row, side):
+        s_ = sum(r["area"] for r in row)
+        return max(max(side * side * r["area"] / (s_ * s_), (s_ * s_) / (side * side * r["area"])) for r in row)
+
+    def place(row, x, y, w, h):
+        s_ = sum(r["area"] for r in row)
+        if w >= h:   # 左に縦一列
+            cw = s_ / h
+            cy = y
+            for r in row:
+                rh = r["area"] / cw
+                out.append({**r, "x": x, "y": cy, "w": cw, "h": rh})
+                cy += rh
+            return x + cw, y, w - cw, h
+        ch = s_ / w
+        cx = x
+        for r in row:
+            rw = r["area"] / ch
+            out.append({**r, "x": cx, "y": y, "w": rw, "h": ch})
+            cx += rw
+        return x, y + ch, w, h - ch
+
+    row = []
+    rest = items[:]
+    while rest:
+        side = min(w, h)
+        r = rest[0]
+        if not row or worst(row + [r], side) <= worst(row, side):
+            row.append(r)
+            rest.pop(0)
+        else:
+            x, y, w, h = place(row, x, y, w, h)
+            row = []
+    if row:
+        place(row, x, y, w, h)
+    return out
+
+
+def heatmap(ranking: list, all_hourly: float | None) -> list[dict]:
+    items = []
+    for r in ranking:
+        if not r.get("emp"):
+            continue
+        prev = r["hourly"] - r["diff"] if r.get("diff") is not None else None
+        items.append({"size": r["emp"], "slug": r["ind"]["slug"], "name": r["ind"]["short"],
+                      "workers": r["emp"], "hourly": r["hourly"], "annual": r.get("annual_man"),
+                      "m": {"h": round((r["hourly"] / all_hourly - 1) * 100, 1) if all_hourly else None,
+                            "d": round(r["diff"] / prev * 100, 1) if prev else None,
+                            "ai": round((r.get("ai") or {}).get("high", 0) * 100) if r.get("ai") else None,
+                            "fc": round(r["fc"]["rate"], 1) if r.get("fc") and r["fc"].get("rate") is not None else None}})
+    items.sort(key=lambda i: -i["size"])
+    tiles = squarify(items, 0, 0, 100, 100)
+    for t in tiles:
+        for k in ("x", "y", "w", "h"):
+            t[k] = round(t[k], 2)
+    return tiles
+
+
 def pref_map(rank: list[dict]) -> str:
     """実質時給が高い県ほど濃く塗った日本のタイル地図(ふるさと納税サイトと同じ形)。押すと表の行へ。"""
     from markupsafe import Markup
@@ -929,6 +997,8 @@ def attach_ai(cfg: dict, data: dict, ranking: list, focus_rank: list) -> dict | 
     master = industries.by_slug()
     x = cfg.get("ai_scenario_default", 20) / 100
     def put(row, src, approx=False):
+        if not approx:
+            row["emp"] = src["total"]   # 働く人の数(万人・労働力調査)。賃金統計の workers(十人)とは別
         row["ai"] = {"high": src["high"], "mid": src["mid"], "low": src["low"], "src": src["name"], "approx": approx}
         if row.get("fc"):
             row["ai"].update(ai_scenario(row["fc"]["hourly"], src["high"], src["mid"], x))
@@ -1115,7 +1185,8 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
               "occ": occ_context(data.get("occ")), "ai_ctx": ai_ctx,
-              "labor": labor_context(data, ranking), "flip": flip, "quals": cfg.get("quals") or {},
+              "labor": labor_context(data, ranking), "flip": flip,
+              "heat": heatmap(ranking, (latest.get("all") or {}).get("hourly")), "quals": cfg.get("quals") or {},
               "ai_rank": sorted((r for r in ranking if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "ai_focus": sorted((r for r in focus_rank if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,

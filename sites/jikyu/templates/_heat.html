@@ -1,0 +1,39 @@
+{% if heat %}
+<div class="heatbox">
+<div class="heat-ctl" role="tablist">
+<button class="on" data-k="h">時給</button><button data-k="d">前年比</button><button data-k="ai">AIの影響</button>{% if labor and labor.di %}<button data-k="di">人手不足</button>{% endif %}<button data-k="fc">2030年への伸び</button>
+</div>
+<div class="heat">
+{% for t in heat %}
+{% set di = (labor.di.latest[t.slug].di if labor and labor.di and t.slug in labor.di.latest else '') %}
+<a class="tile{{ ' sm' if t.w * t.h < 160 else '' }}{{ ' xs' if t.w * t.h < 45 else '' }}" href="{{ page.root }}gyokai/{{ t.slug }}/" style="left:{{ t.x }}%;top:{{ t.y }}%;width:{{ t.w }}%;height:{{ t.h }}%"
+ data-h="{{ t.m.h if t.m.h is not none else '' }}" data-d="{{ t.m.d if t.m.d is not none else '' }}" data-ai="{{ t.m.ai if t.m.ai is not none else '' }}" data-di="{{ di }}" data-fc="{{ t.m.fc if t.m.fc is not none else '' }}"
+ title="{{ t.name }}：実質時給{{ t.hourly | num }}円・年収{{ t.annual | num }}万円・働く人{{ t.workers | num }}万人"><b>{{ t.name }}</b><span class="tv">{{ t.hourly | num }}円</span></a>
+{% endfor %}
+</div>
+<p class="heat-legend small"><span class="hl-desc">色＝全産業平均と比べた時給（青いほど高い）</span>　マスの大きさ＝働く人の数（総務省「労働力調査」）。マスを押すと業界のページへ。鉱業は働く人の内訳が統計にないため入っていません。</p>
+</div>
+<script>
+(function(){
+var box=document.currentScript.previousElementSibling,tiles=box.querySelectorAll(".tile"),desc=box.querySelector(".hl-desc");
+var M={h:{t:"div",u:"%",d:"色＝全産業平均と比べた時給（青いほど高い）"},
+d:{t:"div",u:"%",d:"色＝時給の前年比（青＝上がった・オレンジ＝下がった）"},
+ai:{t:"bad",u:"%",d:"色＝AIの影響を受けやすい仕事の割合（濃いほど高い）"},
+di:{t:"good",u:"",d:"色＝会社が感じる人手不足DI（濃いほど足りない）"},
+fc:{t:"div",u:"%/年",d:"色＝2030年に向けた時給の伸び（このペースが続いた場合）"}};
+function col(v,mx,t){var a=Math.min(1,Math.abs(v)/(mx||1));
+if(t==="bad"||(t==="div"&&v<0))return [`rgba(212,112,90,${.15+.85*a})`,a>.55];
+return [`rgba(47,93,138,${.15+.85*a})`,a>.55];}
+function show(k){var m=M[k],vals=[].map.call(tiles,function(e){return e.dataset[k]===""?null:+e.dataset[k]}),
+mx=Math.max.apply(null,vals.filter(function(v){return v!==null}).map(Math.abs));
+tiles.forEach(function(e,i){var v=vals[i],tv=e.querySelector(".tv");
+if(v===null){e.style.background="#e9e6df";e.style.color="";tv.textContent="データなし";return;}
+var c=col(v,mx,m.t);e.style.background=c[0];e.style.color=c[1]?"#fff":"";
+tv.textContent=(m.t==="div"&&v>0?"+":"")+(k==="di"&&v>0?"+":"")+v+m.u;});
+desc.textContent=m.d;
+box.querySelectorAll(".heat-ctl button").forEach(function(b){b.classList.toggle("on",b.dataset.k===k)});}
+box.querySelector(".heat-ctl").addEventListener("click",function(e){var b=e.target.closest("button");if(b)show(b.dataset.k)});
+show("h");
+})();
+</script>
+{% endif %}
