@@ -589,7 +589,7 @@ def fetch_hw(api, cache: dict) -> dict | None:
     if not fs:
         return None
     f = max(fs, key=lambda f: (f["release"], f["name"]))   # 最新の分類・最新月のファイル
-    key = "hw:" + f["id"] + "@" + f["release"]
+    key = "hw2:" + f["id"] + "@" + f["release"]
     if key not in cache:
         book = xls.read_book(xls.download(f["url"]))
         want = {"ratio": "有効求人倍率（パート含む常用）", "offers": "有効求人（パート含む常用）",
@@ -606,7 +606,7 @@ def fetch_hw(api, cache: dict) -> dict | None:
                       and not _cell(mrow[j])}
             monthly = [(j, f"{_cell(c)[:4]}年{_cell(mrow[j])}") for j, c in enumerate(yrow)
                        if re.fullmatch(r"\d{4}年", _cell(c)) and _cell(mrow[j]).endswith("月")]
-            data = {}
+            data = []
             for r in rows[yi + 3:]:
                 name = _cell(r[0])
                 if not name or name in ("人", "倍"):
@@ -614,14 +614,16 @@ def fetch_hw(api, cache: dict) -> dict | None:
                 ann = {y: _num(r[j]) for j, y in annual.items() if j < len(r) and _num(r[j]) is not None}
                 last = next(((lab, _num(r[j])) for j, lab in reversed(monthly) if j < len(r) and _num(r[j]) is not None), None)
                 if ann or last:
-                    data[name] = {"annual": ann, "month": last}
+                    data.append([name, {"annual": ann, "month": last}])
             res[k] = data
         cache[key] = {"file": f["name"], "release": f["release"], "data": res}
         print(f"  求人倍率 Excel 読み込み: {f['name'][:40]}")
-    raw = cache[key]["data"]
+    raw = {k: dict(v) for k, v in cache[key]["data"].items()}
+    order = [n for n, _ in cache[key]["data"].get("ratio") or []]
     ratio = raw.get("ratio") or {}
     rows, major = [], None
-    for name, v in ratio.items():
+    for name in order:
+        v = ratio[name]
         if name in HW_MAJOR:
             major = name
         lvl = HW_MAJOR.get(major, 1) if name != "職業計" else None
@@ -1009,6 +1011,15 @@ def labor_context(data: dict, ranking: list) -> dict | None:
         out["adopt"] = {"years": yrs, "by_year": byy, "y1": yrs[-1], "y0": yrs[0], "names": names,
                         "rows": sorted(((slug, byy[yrs[-1]].get(slug), byy[yrs[0]].get(slug)) for slug in byy[yrs[-1]]
                                         if slug not in ("_all",)), key=lambda t: -(t[1] or 0))}
+    # AIに食われにくい仕事 / 食われやすい仕事(ハローワークの細かい職業)
+    if out.get("hw"):
+        hr = out["hw"]["rows"]
+        # 内訳のない大分類(保安など)も1つの仕事として扱う。「その他の〜」「分類不能」は中身がわからないので除く
+        has_child = {hr[i]["name"] for i in range(len(hr) - 1) if hr[i]["major"] and not hr[i + 1]["major"] and not hr[i + 1]["total"]}
+        leaves = [r for r in hr if not r["total"] and (not r["major"] or r["name"] not in has_child)
+                  and r["name"] != "分類不能の職業" and not r["name"].startswith("その他")]
+        out["hw"]["safe"] = sorted((r for r in leaves if r["ai"] in (1, 2) and r["now"] >= 1.5), key=lambda r: -r["now"])
+        out["hw"]["risky"] = sorted((r for r in leaves if r["ai"] == 3), key=lambda r: r["now"])
     if not out:
         return None
     dash = []
@@ -1092,7 +1103,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
               "occ": occ_context(data.get("occ")), "ai_ctx": ai_ctx,
-              "labor": labor_context(data, ranking),
+              "labor": labor_context(data, ranking), "quals": cfg.get("quals") or {},
               "ai_rank": sorted((r for r in ranking if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "ai_focus": sorted((r for r in focus_rank if (r.get("ai") or {}).get("opt")), key=lambda r: -r["ai"]["high"]),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
@@ -1110,9 +1121,9 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     oc = common["occ"]
     if oc:
         out.append({"path": "ai/index.html", "template": "ai.html",
-                    "title": f"AI時代に増えた仕事・減った仕事｜職業別の働く人の数 {oc['base5']}→{oc['last']}年",
-                    "description": (f"総務省「労働力調査」の職業別就業者数で、{oc['base5']}年から{oc['last']}年に増えた職・減った職を一覧に。"
-                                    "AIの影響を受けやすい事務職は本当に減っているのか、国際労働機関(ILO)の研究とあわせて確かめます。"),
+                    "title": "AIに食われにくい仕事・資格ランキング｜求人倍率と人手不足で見るAI時代の転職",
+                    "description": ("AIに食われにくい仕事と、取っておきたい資格を国の統計で答えます。職業別の求人倍率・会社の人手不足・"
+                                    "企業のAI導入率から、AI時代に強い仕事と事務職の今を確認。業界別の2030年の時給予想も。"),
                     "context": common})
     if pref_rank:
         out.append({"path": "chiiki/index.html", "template": "pref.html",

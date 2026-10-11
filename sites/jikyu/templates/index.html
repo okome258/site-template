@@ -15,7 +15,7 @@
 {% if occ %}
 <a class="ai-hero" href="{{ page.root }}ai/">
 <img src="{{ page.root }}yc-pc.webp" alt="" width="110" height="90">
-<span><b>AI時代、あなたの業界の時給はどうなる？</b><small>業界・業種別に{{ to_year }}年をシミュレーション／実際に増えた仕事・減った仕事</small></span>
+<span><b>AIに食われにくい仕事・資格は？</b><small>求人倍率と人手不足で見るAI時代の転職／業界別の{{ to_year }}年予想</small></span>
 <i>›</i>
 </a>
 {% endif %}
@@ -26,19 +26,21 @@
 <div class="rk-tabs">
 <input type="radio" name="rk" id="rk-gyokai" checked>
 <input type="radio" name="rk" id="rk-gyoshu">
+{% if pref_rank %}<input type="radio" name="rk" id="rk-pref">{% endif %}
 <div class="rk-bar">
 <label for="rk-gyokai">業界 <small>{{ ranking | length }}</small></label>
 {% if focus_rank %}<label for="rk-gyoshu">注目の業種 <small>{{ focus_rank | length }}</small></label>{% endif %}
-{% if pref_rank %}<a href="{{ page.root }}chiiki/">都道府県 <small>47</small></a>{% endif %}
+{% if pref_rank %}<label for="rk-pref">都道府県 <small>47</small></label>{% endif %}
 </div>
 <div class="rk-panel rk-p1">
 <p class="small muted">大きな区分（産業大分類）で比べた順位です。商社・銀行・SIerなどは「注目の業種」タブへ。</p>
-<table class="board compact">
+<div class="sortbar" data-target="tbl-gyokai"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<table class="board compact" id="tbl-gyokai">
 <thead><tr><th>#</th><th>業界</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th>{% if prev %}<th class="num">前年比</th>{% endif %}</tr></thead>
 <tbody>
 {% for r in ranking %}
-<tr>
-<td>{{ loop.index }}</td>
+<tr data-h="{{ r.hourly }}" data-a="{{ r.annual_man }}" data-t="{{ r.hours_month }}">
+<td class="rk">{{ loop.index }}</td>
 <th><a href="{{ page.root }}gyokai/{{ r.ind.slug }}/">{{ r.ind.short }}</a>
 <div class="bar"><i style="width:{{ (r.hourly / max_hourly * 100) | round(1) }}%"></i></div></th>
 <td class="num v">{{ r.hourly | num }}円<span class="sub sp">年収{{ r.annual_man | num }}万</span></td>
@@ -53,15 +55,16 @@
 </div>
 {% if focus_rank %}
 <div class="rk-panel rk-p2" id="focus">
-<script>if(location.hash==="#focus"){document.getElementById("rk-gyoshu").checked=true}</script>
+<script>if(location.hash==="#focus"){document.getElementById("rk-gyoshu").checked=true}if(location.hash==="#pref"){var e=document.getElementById("rk-pref");if(e)e.checked=true}</script>
 
 <p class="small">業界をもう一段細かく分けた統計（産業中分類）から、転職で気になる業種を抜き出しました。たとえば総合商社は「卸売・小売」に含まれるため、業界の表では小売と混ざって平均が下がっています。</p>
-<table class="board compact">
+<div class="sortbar" data-target="tbl-gyoshu"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<table class="board compact" id="tbl-gyoshu">
 <thead><tr><th>#</th><th>業種</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th>{% if prev %}<th class="num">前年比</th>{% endif %}</tr></thead>
 <tbody>
 {% for r in focus_rank %}
-<tr>
-<td>{{ loop.index }}</td>
+<tr data-h="{{ r.hourly }}" data-a="{{ r.annual_man }}" data-t="{{ r.hours_month }}">
+<td class="rk">{{ loop.index }}</td>
 <th><a href="{{ page.root }}gyoshu/{{ r.ind.slug }}/">{{ r.ind.short }}</a><span class="sub">{{ r.ind.parent.short }}</span>
 <div class="bar"><i style="width:{{ (r.hourly / max_focus * 100) | round(1) }}%"></i></div></th>
 <td class="num v">{{ r.hourly | num }}円<span class="sub sp">年収{{ r.annual_man | num }}万</span></td>
@@ -72,6 +75,12 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+{% endif %}
+{% if pref_rank %}
+<div class="rk-panel rk-p3" id="pref">
+<p class="small muted">{{ pref_year }}年・47都道府県の実質時給。濃い青ほど時給が高い県です。<a href="{{ page.root }}chiiki/">都道府県のページで見る</a></p>
+{% include "_pref_table.html" %}
 </div>
 {% endif %}
 </div>

@@ -1,26 +1,6 @@
 {% extends "_layout.html" %}
 {% macro pct(c) %}{% if c %}<span class="{{ 'up' if c.pct > 0 else 'down' if c.pct < 0 else '' }}">{{ '+' if c.pct > 0 else '' }}{{ c.pct | num(1) }}%</span>{% else %}-{% endif %}{% endmacro %}
 {% macro man(c) %}{% if c %}{{ '+' if c.diff > 0 else '' }}{{ c.diff | num }}万人{% else %}-{% endif %}{% endmacro %}
-{% block content %}
-{% set o = occ %}
-{% set lv = {} %}{% for g in o.by_level %}{% set _ = lv.update({g.level: g}) %}{% endfor %}
-{% set by = {} %}{% for r in o.rows %}{% set _ = by.update({r.code: r}) %}{% endfor %}
-<p class="small"><a href="{{ page.root }}">ランキング</a> › AI時代の予想</p>
-<h1>AI時代、業界の時給はどうなる？ <small class="muted">{{ to_year }}年予想・{{ o.last }}年の実績</small></h1>
-<p class="lead">「AIで仕事がなくなる」と言われますが、実際はどうなのか。業界・業種ごとに<b>AIが広まったときの{{ to_year }}年の実質時給</b>をシミュレーションし、職業別に<b>実際に働く人が増えた仕事・減った仕事</b>を確かめます。統計の数字は新しい年が出ると自動で更新されます。</p>
-<div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>「言われていること」と「実際の数字」を並べてみるよ。殻（仕事）選びの参考にしてね。</p></div>
-
-<dl class="kpi">
-{% if labor and labor.adopt %}<div><dt>企業のAI導入率 {{ labor.adopt.y1 }}年</dt><dd>{{ labor.adopt.by_year[labor.adopt.y1]._all | num(1) }}<small>%（{{ labor.adopt.y0 }}年 {{ labor.adopt.by_year[labor.adopt.y0]._all | num(1) }}%）</small></dd></div>{% endif %}
-{% if labor and labor.hw and '事務従事者' in labor.hw.by %}<div><dt>事務の求人倍率 {{ labor.hw.y1 }}年</dt><dd>{{ labor.hw.by['事務従事者'].now }}<small>倍（人余り）</small></dd></div>{% endif %}
-{% if o.total %}<div><dt>働く人全体（{{ o.last }}年）</dt><dd>{{ o.total.now | num }}<small>万人</small></dd></div>
-<div><dt>{{ o.base5 }}年からの増減</dt><dd>{{ man(o.total.c5) }}</dd></div>{% endif %}
-{% for code, label in [("007", "事務の仕事"), ("003", "技術者（ITなど）"), ("016", "介護の仕事"), ("012", "お店の販売")] %}{% if by[code] %}
-<div><dt>{{ label }} {{ o.base5 }}→{{ o.last }}</dt><dd>{{ pct(by[code].c5) }}<small>{{ man(by[code].c5) }}</small></dd></div>
-{% endif %}{% endfor %}
-</dl>
-
-
 {% macro ai_table(rows, base, tabname) %}
 <div class="wrap-x">
 <table class="board compact aisim">
@@ -39,6 +19,61 @@
 </table>
 </div>
 {% endmacro %}
+{% block content %}
+{% set o = occ %}
+{% set lv = {} %}{% for g in o.by_level %}{% set _ = lv.update({g.level: g}) %}{% endfor %}
+{% set by = {} %}{% for r in o.rows %}{% set _ = by.update({r.code: r}) %}{% endfor %}
+<p class="small"><a href="{{ page.root }}">ランキング</a> › AIに食われにくい仕事・資格</p>
+<h1>AIに食われにくい仕事・資格 <small class="muted">{{ labor.hw.y1 if labor and labor.hw else o.last }}年データ</small></h1>
+<p class="lead">AI時代に強い仕事はどれか、取るならどの資格か。国の統計（求人倍率・働く人の数・会社の人手不足）から答えます。数字は新しい統計が出ると自動で更新されます。</p>
+
+{% if labor and labor.hw %}{% set H = labor.hw %}
+{% set jim = H.by['事務従事者'] if '事務従事者' in H.by else none %}
+<div class="answer">
+<p class="ah">結論（3行で）</p>
+<ol>
+<li><b>食われにくいのは「体を使う・人と接する・資格が要る」仕事</b>。{{ H.safe[:3] | map(attribute='short') | join('・') }}などは求人倍率が{{ H.safe[2].now if H.safe|length > 2 else '' }}倍以上で、人が足りていません。</li>
+<li><b>食われやすいのは事務</b>。{% if jim %}事務の求人倍率は{{ jim.now }}倍（仕事を探す人{{ (1 / jim.now) | round(1) }}人に求人1件）で、{% endif %}AIの導入が進む金融・保険でも人手不足感は弱めです。</li>
+<li><b>ITは「AIを使う側」として需要あり</b>。{% if labor.di and labor.di.latest.it %}会社への調査では情報通信業の人手不足DIは+{{ labor.di.latest.it.di }}と高水準です。{% endif %}</li>
+</ol>
+</div>
+<div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>次の殻（仕事）は、AIに食われにくくて人が足りていない所を選ぼう。資格があると引っ越し（転職）もしやすいよ。</p></div>
+
+<nav class="toc"><a href="#safe">食われにくい仕事</a><a href="#risky">食われやすい仕事</a><a href="#quals">おすすめ資格</a><a href="#sim">業界別の予想</a><a href="#data">くわしいデータ</a></nav>
+
+<h2 id="safe">AIに食われにくい仕事ランキング</h2>
+<p class="small muted">AIの影響を受けにくい仕事のうち、人手不足（有効求人倍率1.5倍以上）のものを、足りない順に並べました。</p>
+<ol class="jobcards">
+{% for r in H.safe[:10] %}
+<li>
+<div class="jc-h"><span class="jc-n">{{ r.short }}</span><b class="jc-v">{{ r.now }}<small>倍</small></b></div>
+<div class="jc-m"><span class="ai ai{{ r.ai }}">AIの影響 {{ {1:'低い',2:'中'}[r.ai] }}</span>{% if r.diff is not none %} <span class="small {{ 'up' if r.diff > 0 else 'down' if r.diff < 0 else 'muted' }}">{{ H.y0 }}年比 {{ '+' if r.diff > 0 else '' }}{{ r.diff }}</span>{% endif %}</div>
+{% if quals[r.name] %}<div class="jc-q">{% for q in quals[r.name] %}<span>{{ q }}</span>{% endfor %}</div>{% endif %}
+</li>
+{% endfor %}
+</ol>
+
+<h2 id="risky">AIに食われやすい仕事</h2>
+<p>AIの影響をいちばん受けやすいのは事務の仕事です。すでに求人が少なく、仕事を探す人のほうがずっと多い状態です。</p>
+<ul class="risky">{% for r in H.risky %}<li><span>{{ r.short }}</span><b class="down">{{ r.now }}倍</b>{% if r.diff is not none %}<small class="{{ 'down' if r.diff < 0 else 'up' }}">{{ '+' if r.diff > 0 else '' }}{{ r.diff }}</small>{% endif %}</li>{% endfor %}</ul>
+<p class="note">事務の経験がある人は、<b>事務＋α</b>（IT・会計・医療事務・営業事務など、専門知識と組み合わせる）か、<b>AIを使って事務を減らす側</b>（業務改善・社内SE）に移ると、強みが生きやすくなります。</p>
+
+<h2 id="quals">AI時代のおすすめ資格</h2>
+<p class="small muted">上の「食われにくい仕事」で役立つ資格です。求人倍率は、その資格が生きる仕事の数字です。</p>
+{% set seen = [] %}
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>資格</th><th>生きる仕事</th><th class="num">求人倍率</th></tr></thead>
+<tbody>
+{% for r in H.safe %}{% for q in quals[r.name] or [] %}{% if q not in seen %}{% set _ = seen.append(q) %}
+<tr><th>{{ q }}</th><td class="small">{{ r.short }}</td><td class="num">{{ r.now }}倍</td></tr>
+{% endif %}{% endfor %}{% endfor %}
+</tbody>
+</table>
+</div>
+<p class="small muted">資格の名前は代表的なものです。受験の条件（実務経験など）は各資格の公式案内で確認してください。</p>
+{% endif %}
+
 {% if ai_ctx and ai_rank %}
 <h2 id="sim">業界・業種別 AI時代の{{ to_year }}年予想</h2>
 <p>「今のペース」は過去の流れをそのまま延ばした予想です。ここに、<b>その業界で働く人のうち、AIの影響を受けやすい仕事（事務など）をしている人の割合</b>を掛け合わせて、AIが広まったときの幅を出しました。</p>
@@ -71,6 +106,21 @@ t.querySelector(".js-r").textContent="作業"+(Math.round(r*1000)/10)+"%減";});
 s.addEventListener("input",up);})();
 </script>
 {% endif %}
+
+<h2 id="data">くわしいデータ</h2>
+<details class="more big"><summary>雇用の動きダッシュボード・職業別の数字を見る</summary>
+
+<dl class="kpi">
+{% if labor and labor.adopt %}<div><dt>企業のAI導入率 {{ labor.adopt.y1 }}年</dt><dd>{{ labor.adopt.by_year[labor.adopt.y1]._all | num(1) }}<small>%（{{ labor.adopt.y0 }}年 {{ labor.adopt.by_year[labor.adopt.y0]._all | num(1) }}%）</small></dd></div>{% endif %}
+{% if labor and labor.hw and '事務従事者' in labor.hw.by %}<div><dt>事務の求人倍率 {{ labor.hw.y1 }}年</dt><dd>{{ labor.hw.by['事務従事者'].now }}<small>倍（人余り）</small></dd></div>{% endif %}
+{% if o.total %}<div><dt>働く人全体（{{ o.last }}年）</dt><dd>{{ o.total.now | num }}<small>万人</small></dd></div>
+<div><dt>{{ o.base5 }}年からの増減</dt><dd>{{ man(o.total.c5) }}</dd></div>{% endif %}
+{% for code, label in [("007", "事務の仕事"), ("003", "技術者（ITなど）"), ("016", "介護の仕事"), ("012", "お店の販売")] %}{% if by[code] %}
+<div><dt>{{ label }} {{ o.base5 }}→{{ o.last }}</dt><dd>{{ pct(by[code].c5) }}<small>{{ man(by[code].c5) }}</small></dd></div>
+{% endif %}{% endfor %}
+</dl>
+
+
 
 {% if labor %}
 {% set L = labor %}
@@ -199,6 +249,7 @@ s.addEventListener("input",up);})();
 </div>
 <p class="small muted">{% if o.pre_ai %}{{ o.pre_ai }}年比は、生成AI（ChatGPTなど）が広く使われ始める前の年との比較です。{% endif %}字下げしている行は、その上の職業の内訳です。</p>
 
+</details>
 <h2>よくある疑問</h2>
 <h3>ほとんどの仕事がAIに置き換わるの？</h3>
 <p>ILOが2025年に出した研究では、世界の働く人のうち生成AIの影響を何らかの形で受けるのは約4分の1で、いちばん影響が大きい区分に入るのは3.3%でした。多くの仕事では、仕事がまるごと消えるのではなく<b>仕事の中の一部の作業がAIに置き換わり、やり方が変わる</b>と見られています。

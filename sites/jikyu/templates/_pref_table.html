@@ -1,0 +1,25 @@
+{% set top = pref_rank[0] %}
+<div class="map-box">
+{{ pref_map }}
+<p class="legend small"><span class="lv lv4"></span>上位1/4 <span class="lv lv3"></span> <span class="lv lv2"></span> <span class="lv lv1"></span>下位1/4　<span class="muted">地図を押すとその県の行へ移動します</span></p>
+</div>
+<div class="sortbar" data-target="tbl-pref"><button class="on" data-k="h">時給が高い順</button><button data-k="a">年収が高い順</button><button data-k="t" data-asc="1">労働時間が短い順</button></div>
+<div class="wrap-x">
+<table class="board compact" id="tbl-pref">
+<thead><tr><th>#</th><th>都道府県</th><th class="num">実質時給</th><th class="num hide-sp">年収</th><th class="num hide-sp">月の労働時間</th><th class="num">前年比</th>{% if top.fc %}<th class="num hide-sp">{{ to_year }}年予想</th>{% endif %}</tr></thead>
+<tbody>
+{% for r in pref_rank %}
+<tr id="pref-{{ r.slug }}" data-h="{{ r.hourly }}" data-a="{{ r.annual_man }}" data-t="{{ r.hours_month }}">
+<td class="rk">{{ loop.index }}</td>
+<th>{{ r.name }}</th>
+<td class="num v">{{ r.hourly | num }}円<span class="sub sp">年収{{ r.annual_man | num }}万・{{ r.hours_month }}h</span></td>
+<td class="num hide-sp">{{ r.annual_man | num }}万円</td>
+<td class="num hide-sp">{{ r.hours_month }}h</td>
+<td class="num {{ 'up' if (r.diff or 0) > 0 else 'down' if (r.diff or 0) < 0 else '' }}">{% if r.diff is not none %}{{ '+' if r.diff > 0 else '' }}{{ r.diff | num }}円{% else %}-{% endif %}</td>
+{% if top.fc %}<td class="num hide-sp">{% if r.fc %}{{ r.fc.hourly | num }}円{% else %}-{% endif %}</td>{% endif %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<p class="small muted">産業計・男女計・全年齢・企業規模10人以上。{{ to_year }}年予想は過去の推移を直線で延ばした目安です。</p>

@@ -69,6 +69,31 @@ tr:target{background:#fff4c4}
 .caveat{border-left:4px solid #e3c46b;background:#fbf6e6;padding:10px 12px;border-radius:6px;font-size:14px;line-height:1.7;margin:12px 0}
 details.more{margin:10px 0}details.more summary{cursor:pointer;color:var(--accent);font-weight:700;padding:6px 0}
 .dash th small,.dash td small{font-weight:400;color:var(--muted)}
+.answer{border:2px solid var(--accent);border-radius:14px;padding:12px 14px 6px;margin:12px 0}
+.answer .ah{margin:0 0 4px;font-weight:900;color:var(--accent)}
+.answer ol{margin:0;padding-left:20px}.answer li{margin:0 0 8px;line-height:1.7}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px}
+.toc a{font-size:13px;padding:5px 10px;border-radius:16px;background:var(--panel);color:var(--ink);text-decoration:none;border:1px solid var(--line)}
+.jobcards{list-style:none;padding:0;margin:10px 0;counter-reset:jc;display:grid;gap:8px}
+@media(min-width:640px){.jobcards{grid-template-columns:1fr 1fr}}
+.jobcards li{counter-increment:jc;border:1px solid var(--line);border-radius:12px;padding:10px 12px;position:relative}
+.jobcards li::before{content:counter(jc);position:absolute;left:-6px;top:-6px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.jc-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.jc-n{font-weight:700}.jc-v{color:#b4442d;font-size:20px;font-family:var(--head)}.jc-v small{font-size:12px}
+.jc-m{margin:4px 0}
+.jc-q{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.jc-q span{font-size:12px;background:#eef3f8;color:#234a70;border-radius:6px;padding:2px 7px}
+.risky{list-style:none;padding:0;margin:8px 0;display:grid;gap:4px}
+.risky li{display:flex;gap:8px;align-items:baseline;border-bottom:1px solid var(--line);padding:6px 0}
+.risky li span{flex:1}.risky small{font-size:12px}
+details.big>summary{display:block;text-align:center;border:1px solid var(--accent);border-radius:10px;padding:10px;margin:8px 0}
+.sortbar{display:flex;gap:6px;margin:6px 0 4px;flex-wrap:wrap}
+.sortbar button{font:inherit;font-size:12px;padding:5px 10px;border-radius:14px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.sortbar button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rk-tabs>input:nth-of-type(3):checked~.rk-p3{display:block}
+.rk-links{position:static}.rk-links a.on{background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(3):checked~.rk-bar label:nth-of-type(3){background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(3):checked~.rk-bar label:nth-of-type(3) small{color:#dde8f3}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -82,6 +107,16 @@ html{scroll-padding-top:60px}
 </style>
 {% endblock %}
 {% block footer_extra %}
+<script>
+document.querySelectorAll(".sortbar").forEach(function(bar){
+  var tb=document.getElementById(bar.dataset.target);if(!tb)return;
+  bar.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+    var k=b.dataset.k,asc=b.dataset.asc==="1",rows=[].slice.call(tb.querySelectorAll("tbody tr"));
+    rows.sort(function(x,y){return (asc?1:-1)*((+x.dataset[k]||0)-(+y.dataset[k]||0));});
+    rows.forEach(function(r,i){tb.querySelector("tbody").appendChild(r);var c=r.querySelector("td.rk");if(c)c.textContent=i+1;});
+    bar.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});});
+});
+</script>
 <p class="small"><a href="{{ page.root }}about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
 {% endblock %}
