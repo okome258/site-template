@@ -5941,28 +5941,6 @@
    "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbcvo.ia3308aa.g00tbcvo.ia331e47/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Firankarapte%2Fkinausu-nanatugen10%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Firankarapte%2Fi%2F10000600%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
   },
   {
-   "code": "rakuten24:10338519",
-   "kind": "hakumai",
-   "option": "",
-   "name": "8年産魚沼産コシヒカリ(5kg)【田中米穀】[産地精米 新潟 魚沼 コシヒカリ こしひかり 米]",
-   "short": "8年産魚沼産コシヒカリ(5kg)",
-   "brand": "コシヒカリ",
-   "blend": false,
-   "crop": "",
-   "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/051/4521570110051.jpg?_ex=240x240",
-   "price": 4401,
-   "qty_kg": 5.0,
-   "evidence": "5kg",
-   "per_kg": 880,
-   "postage_included": true,
-   "point_rate": 1,
-   "review_count": 43,
-   "review_avg": 4.33,
-   "available": true,
-   "shop": "楽天24",
-   "url": "https://hb.afl.rakuten.co.jp/hgc/g00r136o.ia330ea8.g00r136o.ia331356/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fe144670h%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10338519%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7"
-  },
-  {
    "code": "marukichi-kayano:10000110",
    "kind": "genmai",
    "option": "精米も選べる",
@@ -6676,5 +6654,5 @@
   "量が範囲外": 4
  },
  "errors": [],
- "fetched_at": "2026-10-11T09:25+09:00"
+ "fetched_at": "2026-10-11T09:33+09:00"
 }
