@@ -542,71 +542,186 @@ def fetch_occ_by_industry(api, year: str) -> dict | None:
     return {"table": {"id": tid, "title": meta["table"]["title"]}, "year": code_year.get(ycode), "rows": rows}
 
 
-def probe_sources(cfg: dict, api) -> None:
-    """(調査用・一時)各統計ファイルの中身の形を data/sources_probe.json に残す。"""
-    import io, csv, json
+# ---- 雇用の動き(求人倍率・人手不足・AI導入率) ----
+def _cell(v) -> str:
+    return "" if v is None else str(v).replace("\n", "").replace("　", "").strip()
+
+
+def _num(v):
+    try:
+        return float(str(v).replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+
+
+def catalog_any(api, word: str) -> list[dict]:
+    """統計コードがわからないファイルも、言葉だけで e-Stat のファイル一覧から探す。"""
+    out = []
+    for pos in (1, 101, 201):
+        body = api._get("getDataCatalog", "GET_DATA_CATALOG", searchWord=word, limit=100, startPosition=pos)
+        inf = body.get("DATA_CATALOG_LIST_INF", {})
+        cats = inf.get("DATA_CATALOG_INF") or []
+        cats = cats if isinstance(cats, list) else [cats]
+        for c in cats:
+            ds = str(((c.get("DATASET") or {}).get("TITLE") or {}).get("NAME", ""))
+            res = (c.get("RESOURCES") or {}).get("RESOURCE") or []
+            for r in (res if isinstance(res, list) else [res]):
+                out.append({"id": r.get("@id"), "dataset": ds, "release": str(r.get("RELEASE_DATE", "")),
+                            "name": _cell((r.get("TITLE") or {}).get("NAME", "")), "url": r.get("URL"),
+                            "format": r.get("FORMAT")})
+        if not (inf.get("RESULT_INF") or {}).get("NEXT_KEY"):
+            break
+    return out
+
+
+# ハローワークの職業(大分類)→ AIの影響の目安(労働力調査と同じ考え方)
+HW_MAJOR = {"管理的職業従事者": 2, "専門的・技術的職業従事者": 2, "事務従事者": 3, "販売従事者": 2,
+            "サービス職業従事者": 1, "保安職業従事者": 1, "農林漁業従事者": 1, "生産工程従事者": 1,
+            "輸送・機械運転従事者": 1, "建設・採掘従事者": 1, "運搬・清掃・包装等従事者": 1}
+HW_HEALTH = ("医師", "保健師", "医療技術者", "その他の保健医療")
+
+
+def fetch_hw(api, cache: dict) -> dict | None:
+    """ハローワークの職業別 有効求人倍率(一般職業紹介状況・長期時系列表 第21表)。"""
     import xls
+    fs = [f for f in xls.catalog(api, "00450222", "職業別労働市場関係指標")
+          if "職業別労働市場関係指標" in f["name"] and f["url"]]
+    if not fs:
+        return None
+    f = max(fs, key=lambda f: (f["release"], f["name"]))   # 最新の分類・最新月のファイル
+    key = "hw:" + f["id"] + "@" + f["release"]
+    if key not in cache:
+        book = xls.read_book(xls.download(f["url"]))
+        want = {"ratio": "有効求人倍率（パート含む常用）", "offers": "有効求人（パート含む常用）",
+                "seekers": "有効求職（パート含む常用）"}
+        res = {}
+        for k, w in want.items():
+            sh = next((n for n in book if _cell(n).endswith(w) or w in _cell(n)), None)
+            if not sh:
+                continue
+            rows = book[sh]
+            yi = next(i for i, r in enumerate(rows[:8]) if _cell(r[0]) == "西暦")
+            yrow, mrow = rows[yi], rows[yi + 2]
+            annual = {j: _cell(c)[:4] for j, c in enumerate(yrow) if re.fullmatch(r"\d{4}年", _cell(c))
+                      and not _cell(mrow[j])}
+            monthly = [(j, f"{_cell(c)[:4]}年{_cell(mrow[j])}") for j, c in enumerate(yrow)
+                       if re.fullmatch(r"\d{4}年", _cell(c)) and _cell(mrow[j]).endswith("月")]
+            data = {}
+            for r in rows[yi + 3:]:
+                name = _cell(r[0])
+                if not name or name in ("人", "倍"):
+                    continue
+                ann = {y: _num(r[j]) for j, y in annual.items() if j < len(r) and _num(r[j]) is not None}
+                last = next(((lab, _num(r[j])) for j, lab in reversed(monthly) if j < len(r) and _num(r[j]) is not None), None)
+                if ann or last:
+                    data[name] = {"annual": ann, "month": last}
+            res[k] = data
+        cache[key] = {"file": f["name"], "release": f["release"], "data": res}
+        print(f"  求人倍率 Excel 読み込み: {f['name'][:40]}")
+    raw = cache[key]["data"]
+    ratio = raw.get("ratio") or {}
+    rows, major = [], None
+    for name, v in ratio.items():
+        if name in HW_MAJOR:
+            major = name
+        lvl = HW_MAJOR.get(major, 1) if name != "職業計" else None
+        if major == "専門的・技術的職業従事者" and name.startswith(HW_HEALTH):
+            lvl = 1
+        rows.append({"name": name, "short": name.replace("従事者", ""), "major": name in HW_MAJOR,
+                     "total": name == "職業計", "ai": lvl, "annual": v["annual"], "month": v["month"],
+                     "offers": ((raw.get("offers") or {}).get(name) or {}).get("annual", {}),
+                     "seekers": ((raw.get("seekers") or {}).get(name) or {}).get("annual", {})})
+    return {"file": cache[key]["file"], "release": cache[key]["release"], "rows": rows}
+
+
+def fetch_shortage(api, cache: dict, n: int = 8) -> dict | None:
+    """会社が感じる人手不足(労働経済動向調査・業界別、正社員等の「不足」−「過剰」)。四半期ごと。"""
+    import xls
+    fs = [f for f in catalog_any(api, "労働経済動向調査 過不足")
+          if "産業、企業規模、雇用形態・職種、労働者の過不足状況別事業所割合" in f["name"]
+          and f["url"] and "原表" in f["dataset"]]
+    by_survey = {}
+    for f in fs:
+        m = re.search(r"(\d{4})\)?年(\d{1,2})月調査", f["name"])
+        if not m:
+            continue
+        lab = f"{m.group(1)}年{int(m.group(2))}月"
+        if lab not in by_survey or (f["format"] == "XLS" and by_survey[lab]["format"] != "XLS"):
+            by_survey[lab] = f
+    out = []
+    for lab in sorted(by_survey, key=lambda s: tuple(int(x) for x in re.findall(r"\d+", s)), reverse=True)[:n]:
+        f = by_survey[lab]
+        key = "di:" + (f["id"] or lab) + "@" + f["release"]
+        if key not in cache:
+            try:
+                book = xls.read_book(xls.download(f["url"]))
+            except Exception as e:
+                DEBUG.append({"di_error": lab, "error": f"{type(e).__name__}: {str(e)[:120]}"})
+                continue
+            sh = next((x for x in book if "0001" in x), next(iter(book)))
+            rows = book[sh]
+            ci = next((i for i, r in enumerate(rows[:20]) if "B" in [_cell(c) for c in r] and "b4" in [_cell(c) for c in r]), None)
+            res = {}
+            if ci is not None:
+                code = [_cell(c) for c in rows[ci]]
+                cb, cx = code.index("B"), code.index("b4")
+                for r in rows[ci + 1:]:
+                    name, size = _cell(r[0]), _cell(r[1]) if len(r) > 1 else ""
+                    if name and not size and len(r) > cx and _num(r[cb]) is not None:
+                        res.setdefault(name, {"short": _num(r[cb]), "excess": _num(r[cx]) or 0.0})
+            cache[key] = {"survey": lab, "rows": res}
+        if cache[key]["rows"]:
+            out.append(cache[key])
+    if not out:
+        return None
+    return {"surveys": out}
+
+
+AI_ADOPT_ALIAS = {"建設業": "construction", "製造業": "manufacturing", "運輸業・郵便業": "transport",
+                  "卸売・小売業": "trade", "金融・保険業": "finance", "不動産業": "realestate",
+                  "情報通信業": "it", "サービス業、その他": "_service_other"}
+
+
+def fetch_ai_adopt(api, cache: dict) -> dict | None:
+    """企業のAI導入率(総務省 通信利用動向調査・企業編「IoTやAIなどのシステムやサービスの導入状況」産業別)。"""
+    import csv
+    import io
+    import xls
+    fs = [f for f in xls.catalog(api, "00200356", "ＡＩなどのシステムやサービスの導入状況")
+          if "産業別" in f["name"] and "導入状況" in f["name"] and f["url"]]
+    years = {}
+    for f in fs:
+        m = re.search(r"_(\d{4})年$", f["dataset"])
+        if m and (m.group(1) not in years or f["release"] > years[m.group(1)]["release"]):
+            years[m.group(1)] = f
     out = {}
-    def head(rows, n=40, w=26):
-        return [[str(c)[:14] if c is not None else "" for c in r[:w]] for r in rows[:n]]
-    def show(key, f, sheets=2, n=40):
-        try:
-            blob = xls.download(f["url"])
-            if f.get("format", "").startswith("CSV") or blob[:2] not in (b"PK", b"\xd0\xcf"):
+    for y, f in sorted(years.items())[-6:]:
+        key = "ai:" + y + "@" + f["release"]
+        if key not in cache:
+            try:
+                blob = xls.download(f["url"])
+                txt = None
                 for enc in ("cp932", "utf-8-sig"):
                     try:
-                        txt = blob.decode(enc); break
+                        txt = blob.decode(enc)
+                        break
                     except UnicodeDecodeError:
                         continue
-                out[key] = {"name": f["name"], "csv": head(list(csv.reader(io.StringIO(txt))), n)}
-            else:
-                book = xls.read_book(blob)
-                out[key] = {"name": f["name"], "sheets": list(book)[:20],
-                            "head": {sh: head(r, n) for sh, r in list(book.items())[:sheets]}}
-        except Exception as e:
-            out[key] = {"name": f.get("name"), "error": f"{type(e).__name__}: {str(e)[:200]}"}
-    try:
-        fs = [f for f in xls.catalog(api, "00450222", "職業別労働市場関係指標") if "令和4年4月" in f["name"]]
-        if fs:
-            show("求人倍率_職業別", max(fs, key=lambda f: f["release"]), sheets=3, n=60)
-    except Exception as e:
-        out["求人倍率_err"] = str(e)[:200]
-    for code, w in (("00450092", "過不足"), ("00450092", "労働者過不足判断"), ("", "労働経済動向調査 過不足")):
-        try:
-            if code:
-                fs = xls.catalog(api, code, w)
-            else:
-                body = api._get("getDataCatalog", "GET_DATA_CATALOG", searchWord=w, limit=100)
-                fs = []
-                cats = body.get("DATA_CATALOG_LIST_INF", {}).get("DATA_CATALOG_INF") or []
-                cats = cats if isinstance(cats, list) else [cats]
-                for c in cats:
-                    ds = str(((c.get("DATASET") or {}).get("TITLE") or {}).get("NAME", ""))
-                    res = (c.get("RESOURCES") or {}).get("RESOURCE") or []
-                    for r in (res if isinstance(res, list) else [res]):
-                        fs.append({"dataset": ds, "release": str(r.get("RELEASE_DATE", "")),
-                                   "name": str((r.get("TITLE") or {}).get("NAME", "")), "url": r.get("URL"), "format": r.get("FORMAT")})
-            out[f"過不足list:{code}:{w}"] = [(f["release"], f["dataset"][-50:], f["name"][:80], f["format"]) for f in
-                                          sorted(fs, key=lambda f: f["release"], reverse=True)][:25]
-            hit = [f for f in fs if "職種" in f["name"] and "過不足" in f["name"]]
-            if hit and "過不足file" not in out:
-                show("過不足file", max(hit, key=lambda f: f["release"]), n=50)
-        except Exception as e:
-            out[f"過不足err:{code}:{w}"] = str(e)[:200]
-    try:
-        fs = [f for f in xls.catalog(api, "00200356", "ＡＩなどのシステムやサービスの導入状況") if "産業別" in f["name"]]
-        out["AI導入list"] = [(f["release"], f["dataset"][-30:], f["name"][:60]) for f in sorted(fs, key=lambda f: f["release"], reverse=True)][:8]
-        if fs:
-            show("AI導入", max(fs, key=lambda f: f["release"]), n=40)
-    except Exception as e:
-        out["AI導入_err"] = str(e)[:200]
-    try:
-        fs = xls.catalog(api, "00450073", "産業（大分類）別入職率")
-        fs += xls.catalog(api, "00450073", "産業別 入職率 離職率")
-        out["雇用動向list"] = [(f["release"], f["dataset"][-40:], f["name"][:80]) for f in sorted(fs, key=lambda f: f["release"], reverse=True)][:25]
-    except Exception as e:
-        out["雇用動向_err"] = str(e)[:200]
-    (cfg["_dir"] / "data" / "sources_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0), encoding="utf-8")
+                rows = list(csv.reader(io.StringIO(txt or "")))
+            except Exception as e:
+                DEBUG.append({"ai_adopt_error": y, "error": f"{type(e).__name__}: {str(e)[:120]}"})
+                continue
+            hi = next((i for i, r in enumerate(rows) if "導入している" in [_cell(c) for c in r]), None)
+            res = {}
+            if hi is not None:
+                col = [_cell(c) for c in rows[hi]].index("導入している")
+                for r in rows[hi + 1:]:
+                    if len(r) > col and _cell(r[0]) in ("全体", "産業分類") and _num(r[col]) is not None:
+                        res[_cell(r[1]).replace("全体", "全体")] = _num(r[col])
+            cache[key] = {"year": y, "rows": res}
+        if cache[key]["rows"]:
+            out[y] = cache[key]["rows"]
+    return {"years": out} if out else None
 
 
 def fetch(cfg: dict) -> dict:
@@ -657,16 +772,22 @@ def fetch(cfg: dict) -> dict:
     except Exception as e:
         print(f"::warning::都道府県別の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
     prefs.sort(key=lambda y: y["year"], reverse=True)
+
+    # 雇用の動き(どれか失敗しても他は続ける)
+    labor = {}
+    for k, fn in (("hw", fetch_hw), ("di", fetch_shortage), ("ai_adopt", fetch_ai_adopt)):
+        try:
+            labor[k] = fn(api, cache)
+            print(f"雇用の動き {k}: {'OK' if labor[k] else 'なし'}")
+        except Exception as e:
+            print(f"::warning::雇用の動き {k} の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
+            labor[k] = None
     save_cache(cfg, cache)
 
     newest = years[0]["year"]
     if int(newest) < date.today().year - 2 + (1 if date.today().month >= 4 else 0):
         print(f"::warning::最新が{newest}年のままです。新しい年の公表を確認してください")
     _dump(cfg, {"checked": checked, "fetched": DEBUG})
-    try:
-        probe_sources(cfg, api)
-    except Exception as e:
-        print(f"::warning::probe: {e}")
     occ = None
     try:
         occ = fetch_occupations(api)
@@ -678,7 +799,7 @@ def fetch(cfg: dict) -> dict:
                 print(f"業界ごとの職業の内訳: {len(oi['rows'])}業界({oi['year']}年)")
     except Exception as e:
         print(f"::warning::職業別就業者数の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
-    return {"status": "ok", "years": years, "occ": occ, "prefs": prefs[: ec["years"]], "checked_tables": checked}
+    return {"status": "ok", "years": years, "occ": occ, "labor": labor, "prefs": prefs[: ec["years"]], "checked_tables": checked}
 
 
 # ---------------- ページ ----------------
