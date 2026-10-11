@@ -418,43 +418,60 @@ def fetch_db_pref(api, cfg: dict) -> list[dict]:
             for y, v in sorted(acc.items(), reverse=True) if len(v) >= 40]
 
 
-def probe_jobs(cfg: dict, api) -> None:
-    """(調査用・一時)職業別の求人統計の表を探して data/jobs_probe.json に残す。"""
-    import json
-    out = {}
-    queries = [
-        {"searchWord": "職業別 有効求人倍率"},
-        {"searchWord": "一般職業紹介状況 職業別"},
-        {"searchWord": "職業安定業務統計 職業"},
-        {"statsCode": "00450222"},
-        {"searchWord": "労働力調査 職業別 就業者"},
-    ]
-    for q in queries:
-        key = " ".join(f"{k}={v}" for k, v in q.items())
-        try:
-            body = api._get("getStatsList", "GET_STATS_LIST", limit=200, **q)
-            tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
-            tabs = tabs if isinstance(tabs, list) else [tabs]
-            from core.estat import parse_table_inf
-            rows = [parse_table_inf(t) for t in tabs]
-            out[key] = {"n": body.get("DATALIST_INF", {}).get("NUMBER"),
-                        "tables": [{"id": t["id"], "stat": t["stat_name"][:20], "stats": t["statistics_name"][:40],
-                                    "title": t["title"][:70], "open": t["open_date"], "survey": t["survey_date"]}
-                                   for t in rows][:120]}
-        except Exception as e:
-            out[key] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
-    for tid in ("0003024266", "0003024268"):
-        try:
-            meta = api.get_data(tid, limit=5)
-            out["meta:" + tid] = {"table": meta["table"]["title"][:80],
-                                  "classes": {cid: {"name": c["name"], "n": len(c["order"]),
-                                                    "items": [f'{x}:{c["items"][x]}' for x in c["order"][:80]]}
-                                              for cid, c in meta["classes"].items()},
-                                  "sample": meta["values"][:5]}
-        except Exception as e:
-            out["meta:" + tid] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
-    (cfg["_dir"] / "data" / "jobs_probe.json").write_text(json.dumps(out, ensure_ascii=False, indent=0),
-                                                           encoding="utf-8")
+# ---- 職業別の就業者数(総務省 労働力調査・年次) ----
+OCC_MAJOR = ["001", "002", "007", "011", "015", "021", "022", "023", "031", "032", "033"]
+# AIの影響の受けやすさの目安(ILO「Generative AI and Jobs」の傾向を、日本の職業大分類に当てはめたもの)
+#  3=高い(仕事の多くが置き換わりうる) 2=中(仕事の一部が変わる) 1=低い(体を使う・対人の仕事が中心)
+AI_LEVEL = {"007": 3, "008": 3, "009": 3, "010": 3,
+            "001": 2, "002": 2, "003": 2, "005": 2, "006": 2, "011": 2, "012": 2, "013": 2, "014": 2,
+            "004": 1}
+
+
+def fetch_occupations(api) -> dict | None:
+    """職業別就業者数(2009年〜・年次・全国)。表が見つからなければ None。"""
+    tid = "0003024268"
+    try:
+        body = api._get("getStatsList", "GET_STATS_LIST", searchWord="従業上の地位 職業別就業者数", limit=100)
+        tabs = body.get("DATALIST_INF", {}).get("TABLE_INF") or []
+        tabs = tabs if isinstance(tabs, list) else [tabs]
+        from core.estat import parse_table_inf
+        hits = [parse_table_inf(t) for t in tabs]
+        hits = [t for t in hits if "年次" in t["statistics_name"] and "全国" in t["statistics_name"]
+                and t["title"].startswith("従業上の地位，職業別就業者数") and "～）" in t["title"]]
+        if hits:
+            tid = max(hits, key=lambda t: t["open_date"])["id"]
+    except Exception:
+        pass
+    meta = api.get_data(tid, limit=1)
+    cl = meta["classes"]
+    occ = next((c for c in cl if "職業" in cl[c]["name"]), None)
+    if not occ:
+        return None
+    fixed = {cid: total_code(c, ["総数", "15歳以上"]) for cid, c in cl.items()
+             if cid not in (occ, "time", "tab", "area")}
+    filters = {param_name(cid): code for cid, code in fixed.items()}
+    data = api.get_data(tid, **filters)
+    code_year = {v: k for k, v in time_years(cl).items()}
+    vals: dict[str, dict[str, float]] = {}
+    for r in data["values"]:
+        if r["value"] is None or any(r.get(cid) not in (None, code) for cid, code in fixed.items()):
+            continue
+        y = code_year.get(r.get("time"))
+        if y:
+            vals.setdefault(r[occ], {})[y] = r["value"]
+    rows, parent = [], None
+    for code in cl[occ]["order"]:
+        name = cl[occ]["items"][code]
+        if code in OCC_MAJOR:
+            parent = code
+        if code == "000":
+            parent = None
+        rows.append({"code": code, "name": name, "short": name.replace("従事者", ""),
+                     "major": code in OCC_MAJOR, "parent": parent if code not in OCC_MAJOR else None,
+                     "ai": AI_LEVEL.get(code, AI_LEVEL.get(parent or "", 1)) if code != "000" else None,
+                     "values": vals.get(code, {})})
+    DEBUG.append({"occ_table": tid, "filters": filters, "n_values": len(data["values"])})
+    return {"table": {"id": tid, "title": meta["table"]["title"]}, "years": sorted(code_year.values()), "rows": rows}
 
 
 def fetch(cfg: dict) -> dict:
@@ -511,8 +528,14 @@ def fetch(cfg: dict) -> dict:
     if int(newest) < date.today().year - 2 + (1 if date.today().month >= 4 else 0):
         print(f"::warning::最新が{newest}年のままです。新しい年の公表を確認してください")
     _dump(cfg, {"checked": checked, "fetched": DEBUG})
-    probe_jobs(cfg, api)
-    return {"status": "ok", "years": years, "prefs": prefs[: ec["years"]], "checked_tables": checked}
+    occ = None
+    try:
+        occ = fetch_occupations(api)
+        if occ:
+            print(f"職業別就業者数: {occ['table']['id']} {len(occ['rows'])}職業 {occ['years'][:1]}〜{occ['years'][-1:]}")
+    except Exception as e:
+        print(f"::warning::職業別就業者数の取得に失敗: {type(e).__name__}: {str(e)[:120]}")
+    return {"status": "ok", "years": years, "occ": occ, "prefs": prefs[: ec["years"]], "checked_tables": checked}
 
 
 # ---------------- ページ ----------------
@@ -563,6 +586,58 @@ def add_forecast(r: dict, hist: list[dict], to_year: int) -> None:
         r["fc"] = {"hourly": round(th["pred"]), "pace": round(th["slope"]), "rate": th["rate"],
                    "annual": round(ta["pred"], 1), "annual_pace": round(ta["slope"], 1),
                    "first": hist[0]["year"], "n": len(hist)}
+
+
+AI_LABEL = {3: "高い", 2: "中", 1: "低い"}
+
+
+def occ_context(occ: dict | None) -> dict | None:
+    """職業別就業者数から、AI時代ページ用の数字を作る。"""
+    if not occ or not occ.get("rows"):
+        return None
+    years = [y for y in occ["years"] if any(r["values"].get(y) for r in occ["rows"])]
+    if len(years) < 6:
+        return None
+    last = years[-1]
+    base5 = str(int(last) - 5)
+    pre_ai = "2022" if "2022" in years and last > "2022" else None   # 生成AI(ChatGPT)が広まる前の年
+    first = years[0]
+
+    def chg(v, a, b):
+        x, y = v.get(a), v.get(b)
+        if not x or not y:
+            return None
+        return {"diff": round(x - y, 1), "pct": round((x - y) / y * 100, 1)}
+
+    rows, total = [], None
+    has_sub = {r["parent"] for r in occ["rows"] if r["parent"]}
+    for r in occ["rows"]:
+        v = r["values"]
+        if not v.get(last):
+            continue
+        row = {**r, "now": v[last], "c5": chg(v, last, base5), "cai": chg(v, last, pre_ai) if pre_ai else None,
+               "c0": chg(v, last, first), "ai_label": AI_LABEL.get(r["ai"]), "leaf": r["code"] not in has_sub,
+               "series": [{"year": y, "v": v.get(y)} for y in years]}
+        if r["code"] == "000":
+            total = row
+        else:
+            rows.append(row)
+    leaves = [r for r in rows if r["leaf"] and r["c5"]]
+    by_level = []
+    for lv in (3, 2, 1):
+        g = [r for r in leaves if r["ai"] == lv]
+        a = sum(r["values"].get(base5, 0) for r in g)
+        b = sum(r["now"] for r in g)
+        by_level.append({"level": lv, "label": AI_LABEL[lv], "n": len(g), "now": round(b, 0),
+                         "diff": round(b - a, 0), "pct": round((b - a) / a * 100, 1) if a else None,
+                         "names": [r["short"] for r in g]})
+    up = sorted(leaves, key=lambda r: -r["c5"]["pct"])[:5]
+    down = sorted(leaves, key=lambda r: r["c5"]["pct"])[:5]
+    majors = [r for r in rows if r["major"]]
+    mx = max(r["now"] for r in majors) if majors else 1
+    return {"table": occ["table"], "last": last, "base5": base5, "pre_ai": pre_ai, "first": first,
+            "total": total, "majors": majors, "rows": rows, "by_level": by_level, "up": up, "down": down,
+            "max_now": mx, "leaf_rank": sorted(leaves, key=lambda r: -r["c5"]["pct"])}
 
 
 def pages(cfg: dict, data: dict) -> list[dict]:
@@ -632,6 +707,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
               "to_year": to_year, "first_year": years[-1]["year"], "sources": sources,
               "pref_rank": pref_rank, "pref_year": prefs[0]["year"] if prefs else None,
               "pref_map": pref_map(pref_rank) if pref_rank else "",
+              "occ": occ_context(data.get("occ")),
               "fc_rank": fc_rank, "focus_rank": focus_rank, "fc_focus": fc_focus,
               "max_focus": max((r["hourly"] for r in focus_rank), default=1)}
 
@@ -643,6 +719,13 @@ def pages(cfg: dict, data: dict) -> list[dict]:
                     "title": f"{to_year}年の年収・時給予想｜業界別、このペースが続いたら（AI時代の伸び方）",
                     "description": (f"賃金構造基本統計調査の{years[-1]['year']}〜{latest['year']}年の推移から、"
                                     f"業界ごとの{to_year}年の年収・実質時給を直線で延ばして予想。伸びている業界・伸び悩む業界がわかります。"),
+                    "context": common})
+    oc = common["occ"]
+    if oc:
+        out.append({"path": "ai/index.html", "template": "ai.html",
+                    "title": f"AI時代に増えた仕事・減った仕事｜職業別の働く人の数 {oc['base5']}→{oc['last']}年",
+                    "description": (f"総務省「労働力調査」の職業別就業者数で、{oc['base5']}年から{oc['last']}年に増えた職・減った職を一覧に。"
+                                    "AIの影響を受けやすい事務職は本当に減っているのか、国際労働機関(ILO)の研究とあわせて確かめます。"),
                     "context": common})
     if pref_rank:
         out.append({"path": "chiiki/index.html", "template": "pref.html",

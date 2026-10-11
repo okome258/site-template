@@ -69,6 +69,7 @@
 {% endif %}
 </div>
 <div class="navs">
+{% if occ %}<a href="{{ page.root }}ai/"><b>AI時代に増えた仕事・減った仕事 →</b><small>事務職は本当に減っている？ 職業別の働く人の数</small></a>{% endif %}
 {% if fc_rank %}<a href="{{ page.root }}yosoku/"><b>{{ to_year }}年の予想 →</b><small>このペースが続いたら年収・時給はいくら？</small></a>{% endif %}
 {% if pref_rank %}<a href="{{ page.root }}chiiki/"><b>都道府県別ランキング →</b><small>{{ pref_year }}年・47都道府県の実質時給</small></a>{% endif %}
 </div>

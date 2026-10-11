@@ -1,0 +1,88 @@
+{% extends "_layout.html" %}
+{% macro pct(c) %}{% if c %}<span class="{{ 'up' if c.pct > 0 else 'down' if c.pct < 0 else '' }}">{{ '+' if c.pct > 0 else '' }}{{ c.pct | num(1) }}%</span>{% else %}-{% endif %}{% endmacro %}
+{% macro man(c) %}{% if c %}{{ '+' if c.diff > 0 else '' }}{{ c.diff | num }}万人{% else %}-{% endif %}{% endmacro %}
+{% block content %}
+{% set o = occ %}
+{% set lv = {} %}{% for g in o.by_level %}{% set _ = lv.update({g.level: g}) %}{% endfor %}
+{% set by = {} %}{% for r in o.rows %}{% set _ = by.update({r.code: r}) %}{% endfor %}
+<p class="small"><a href="{{ page.root }}">ランキング</a> › AI時代の仕事</p>
+<h1>AI時代に増えた仕事・減った仕事 <small class="muted">{{ o.base5 }}→{{ o.last }}年</small></h1>
+<p class="lead">「AIで仕事がなくなる」と言われますが、実際に働く人の数はどう動いているのか。総務省「労働力調査」の職業別の就業者数で確かめます。毎年1月ごろに新しい年の数字が出ると、自動で更新されます。</p>
+<div class="yc-say"><img src="{{ page.root }}yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>「言われていること」と「実際の数字」を並べてみるよ。殻（仕事）選びの参考にしてね。</p></div>
+
+<dl class="kpi">
+{% if o.total %}<div><dt>働く人全体（{{ o.last }}年）</dt><dd>{{ o.total.now | num }}<small>万人</small></dd></div>
+<div><dt>{{ o.base5 }}年からの増減</dt><dd>{{ man(o.total.c5) }}</dd></div>{% endif %}
+{% for code, label in [("007", "事務の仕事"), ("003", "技術者（ITなど）"), ("016", "介護の仕事"), ("012", "お店の販売")] %}{% if by[code] %}
+<div><dt>{{ label }} {{ o.base5 }}→{{ o.last }}</dt><dd>{{ pct(by[code].c5) }}<small>{{ man(by[code].c5) }}</small></dd></div>
+{% endif %}{% endfor %}
+</dl>
+
+<h2>AIの影響の受けやすさ別に見ると</h2>
+<p>国際労働機関（ILO）の研究では、生成AIの影響をいちばん受けやすいのは<b>事務の仕事</b>で、体を使う仕事や人と直接接する仕事は受けにくいとされています。その傾向を日本の職業に当てはめて、働く人の数の増減を比べました。</p>
+<div class="wrap-x">
+<table class="board compact">
+<thead><tr><th>AIの影響</th><th>主な職業</th><th class="num">{{ o.last }}年</th><th class="num">{{ o.base5 }}年比</th></tr></thead>
+<tbody>
+{% for g in o.by_level %}
+<tr><th><span class="ai ai{{ g.level }}">{{ g.label }}</span></th><td class="small">{{ g.names[:4] | join('、') }}{% if g.names | length > 4 %} ほか{% endif %}</td><td class="num">{{ g.now | num }}万人</td><td class="num">{% if g.pct is not none %}<span class="{{ 'up' if g.pct > 0 else 'down' }}">{{ '+' if g.pct > 0 else '' }}{{ g.pct | num(1) }}%</span><span class="sub">{{ '+' if g.diff > 0 else '' }}{{ g.diff | num }}万人</span>{% endif %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% if lv[3] and lv[1] and lv[3].pct is not none and lv[1].pct is not none %}
+<p class="note">{{ o.base5 }}年から{{ o.last }}年で、影響が「高い」とされる仕事は<b>{{ '+' if lv[3].pct > 0 else '' }}{{ lv[3].pct | num(1) }}%</b>、「低い」とされる仕事は<b>{{ '+' if lv[1].pct > 0 else '' }}{{ lv[1].pct | num(1) }}%</b>でした。
+{% if lv[3].pct < lv[1].pct %}影響を受けやすい仕事のほうが伸びが小さい、という結果です。{% else %}今のところ、影響を受けやすい仕事のほうが減っている、という結果は出ていません。{% endif %}
+ただし、働く人の数は景気や人手不足、高齢化の影響も受けるので、この差がすべてAIのせいとは言えません。</p>
+{% endif %}
+
+<h2>増えた仕事・減った仕事 <small class="muted">{{ o.base5 }}→{{ o.last }}年</small></h2>
+<div class="updown">
+<div><h3 class="up">増えた仕事 TOP5</h3><ol>{% for r in o.up %}<li>{{ r.short }} <b class="up">{{ '+' if r.c5.pct > 0 else '' }}{{ r.c5.pct | num(1) }}%</b> <span class="ai ai{{ r.ai }}">AI{{ r.ai_label }}</span></li>{% endfor %}</ol></div>
+<div><h3 class="down">減った仕事 TOP5</h3><ol>{% for r in o.down %}<li>{{ r.short }} <b class="{{ 'down' if r.c5.pct < 0 else 'up' }}">{{ '+' if r.c5.pct > 0 else '' }}{{ r.c5.pct | num(1) }}%</b> <span class="ai ai{{ r.ai }}">AI{{ r.ai_label }}</span></li>{% endfor %}</ol></div>
+</div>
+
+<h2>職業別の一覧</h2>
+<div class="wrap-x">
+<table class="board compact occ">
+<thead><tr><th>職業</th><th class="num">{{ o.last }}年</th><th class="num">{{ o.base5 }}年比</th>{% if o.pre_ai %}<th class="num hide-sp">{{ o.pre_ai }}年比</th>{% endif %}<th>AIの影響</th></tr></thead>
+<tbody>
+{% for r in o.rows %}
+<tr class="{{ 'maj' if r.major else 'sub' }}">
+<th>{{ r.short }}{% if r.major %}<div class="bar"><i style="width:{{ (r.now / o.max_now * 100) | round(1) }}%"></i></div>{% endif %}</th>
+<td class="num">{{ r.now | num }}万人</td>
+<td class="num">{{ pct(r.c5) }}<span class="sub">{{ man(r.c5) }}</span></td>
+{% if o.pre_ai %}<td class="num hide-sp">{{ pct(r.cai) }}</td>{% endif %}
+<td><span class="ai ai{{ r.ai }}">{{ r.ai_label }}</span></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+<p class="small muted">{% if o.pre_ai %}{{ o.pre_ai }}年比は、生成AI（ChatGPTなど）が広く使われ始める前の年との比較です。{% endif %}字下げしている行は、その上の職業の内訳です。</p>
+
+<h2>よくある疑問</h2>
+<h3>ほとんどの仕事がAIに置き換わるの？</h3>
+<p>ILOが2025年に出した研究では、世界の働く人のうち生成AIの影響を何らかの形で受けるのは約4分の1で、いちばん影響が大きい区分に入るのは3.3%でした。多くの仕事では、仕事がまるごと消えるのではなく<b>仕事の中の一部の作業がAIに置き換わり、やり方が変わる</b>と見られています。
+{% if o.total and o.total.c5 %}日本で働く人の数も、{{ o.base5 }}年から{{ o.last }}年で{{ '増えて' if o.total.c5.diff > 0 else '減って' }}いて（{{ man(o.total.c5) }}）、今のところ全体の仕事が減っている状況ではありません。{% endif %}</p>
+<h3>ベーシックインカムになるの？</h3>
+<p>ベーシックインカム（全員に毎月決まったお金を配る仕組み）は、AIで仕事が減ったときの備えとして話題になりますが、<b>国全体で本格的に導入した国はまだありません</b>。有名な実験には、フィンランドが2017〜2018年に失業者2,000人へ月560ユーロを配ったものがあり、働く人が大きく増えることはなかった一方で、受け取った人の生活の満足度や安心感は高まったと報告されています。</p>
+<ul>
+<li><b>賛成の意見</b>：仕事の形が変わっても生活の土台が守られる／手続きが単純で、もれなく届く</li>
+<li><b>反対・慎重な意見</b>：全員に配るには大きな財源（増税）が必要／働く意欲への影響が読み切れない／今ある年金や手当との関係の整理が難しい</li>
+</ul>
+<p>日本でも議論はありますが、導入の予定は決まっていません（2026年10月時点）。</p>
+<h3>転職するなら何を意識すればいい？</h3>
+<ul>
+<li><b>人が増えている仕事を見る</b>：{{ o.up[:3] | map(attribute='short') | join('・') }}などは、この{{ o.last | int - o.base5 | int }}年で働く人が増えています。求人も出やすい分野です。</li>
+<li><b>「AIを使う側」に回る</b>：影響が「中」の仕事は、AIで作業が速くなるぶん、使いこなせる人の価値が上がると見られています。</li>
+<li><b>年収だけでなく実質時給で比べる</b>：同じ年収でも、労働時間が長ければ1時間あたりの価値は下がります。<a href="{{ page.root }}">業界別ランキング</a>・<a href="{{ page.root }}#focus">注目の業種</a>で比べてみてください。</li>
+</ul>
+
+<h2>データと目安について</h2>
+<ul class="small">
+<li>働く人の数：総務省「労働力調査」{{ o.table.title }}（{{ o.table.id }}）。15歳以上・男女計・全国の年平均です。</li>
+<li>AIの影響の目安：国際労働機関（ILO）「Generative AI and Jobs」（2025年）の、職業の大きなまとまりごとの傾向を、当サイトが日本の職業分類に当てはめたものです。個々の職場の実態を表すものではありません。</li>
+<li>ベーシックインカムの説明は2026年10月時点の情報です。</li>
+</ul>
+{% endblock %}
