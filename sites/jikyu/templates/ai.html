@@ -60,17 +60,19 @@
 
 <h2 id="quals">AI時代のおすすめ資格</h2>
 <p class="small muted">上の「食われにくい仕事」で役立つ資格です。求人倍率は、その資格が生きる仕事の数字です。</p>
-{% set seen = [] %}
 <div class="wrap-x">
 <table class="board compact">
 <thead><tr><th>資格</th><th>生きる仕事</th><th class="num">求人倍率</th></tr></thead>
 <tbody>
-{% for r in H.safe %}{% for q in quals[r.name] or [] %}{% if q not in seen %}{% set _ = seen.append(q) %}
-<tr><th>{{ q }}</th><td class="small">{{ r.short }}</td><td class="num">{{ r.now }}倍</td></tr>
-{% endif %}{% endfor %}{% endfor %}
+{% for r in H.safe if quals[r.name] %}{% if loop.index <= 10 %}
+<tr><th>{{ quals[r.name][0] }}</th><td class="small">{{ r.short }}</td><td class="num">{{ r.now }}倍</td></tr>
+{% endif %}{% endfor %}
 </tbody>
 </table>
 </div>
+<details class="more"><summary>ほかの資格も見る</summary>
+<ul class="small">{% for r in H.safe if quals[r.name] %}<li><b>{{ r.short }}</b>（{{ r.now }}倍）：{{ quals[r.name] | join('、') }}</li>{% endfor %}</ul>
+</details>
 <p class="small muted">資格の名前は代表的なものです。受験の条件（実務経験など）は各資格の公式案内で確認してください。</p>
 {% endif %}
 

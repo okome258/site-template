@@ -1017,7 +1017,7 @@ def labor_context(data: dict, ranking: list) -> dict | None:
         # 内訳のない大分類(保安など)も1つの仕事として扱う。「その他の〜」「分類不能」は中身がわからないので除く
         has_child = {hr[i]["name"] for i in range(len(hr) - 1) if hr[i]["major"] and not hr[i + 1]["major"] and not hr[i + 1]["total"]}
         leaves = [r for r in hr if not r["total"] and (not r["major"] or r["name"] not in has_child)
-                  and r["name"] != "分類不能の職業" and not r["name"].startswith("その他")]
+                  and r["name"] != "分類不能の職業" and not r["name"].startswith("その他") and "（注" not in r["name"]]
         out["hw"]["safe"] = sorted((r for r in leaves if r["ai"] in (1, 2) and r["now"] >= 1.5), key=lambda r: -r["now"])
         out["hw"]["risky"] = sorted((r for r in leaves if r["ai"] == 3), key=lambda r: r["now"])
     if not out:
