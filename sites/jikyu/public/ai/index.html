@@ -50,9 +50,9 @@ tr:target{background:#fff4c4}
 .rk-bar label,.rk-bar a{flex:1;text-align:center;padding:9px 4px;border-radius:10px 10px 0 0;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
 .rk-bar small{font-weight:400;color:var(--muted);font-size:11px}
 .rk-panel{display:none}
-#rk-gyokai:checked~.rk-p1,#rk-gyoshu:checked~.rk-p2{display:block}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai],#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu]{background:var(--accent);color:#fff}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai] small,#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu] small{color:#dde8f3}
+.rk-tabs>input:nth-of-type(1):checked~.rk-p1,.rk-tabs>input:nth-of-type(2):checked~.rk-p2{display:block}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1),.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2){background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1) small,.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2) small{color:#dde8f3}
 /* AI時代ページ */
 .ai{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .ai3{background:#f6d6cb;color:#8a2e17}.ai2{background:#f3ead0;color:#6b5410}.ai1{background:#dbe6f1;color:#234a70}
@@ -61,6 +61,21 @@ tr:target{background:#fff4c4}
 .updown h3{font-size:15px;margin:8px 0 4px}.updown ol{margin:0;padding-left:22px}.updown li{margin:5px 0}
 .occ tr.sub th{padding-left:20px;font-weight:400;font-size:13px}
 .occ tr.maj th{font-weight:700}
+.mix{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:5px 0 2px;background:var(--panel);max-width:220px}
+.mix.big{height:14px;max-width:none;margin:8px 0 12px}
+.mix i{display:block;height:100%}
+.m3{background:#d4705a}.m2{background:#e3c46b}.m1{background:#7fa6cc}
+.mixk{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
+.simbox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+.simbox label{display:block;font-weight:700;margin-bottom:6px}
+.simbox input[type=range]{width:100%;accent-color:var(--accent)}
+.simbox #ai-xv{color:var(--accent);font-size:20px}
+.aisim td.num b{font-size:15px}
+.ai-hero{display:flex;align-items:center;gap:12px;margin:6px 0 14px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#2f5d8a,#4a7fb3);color:#fff;text-decoration:none}
+.ai-hero img{width:76px;height:auto;flex:none}
+.ai-hero b{display:block;font-size:17px;line-height:1.4}
+.ai-hero small{display:block;font-size:12px;opacity:.9;margin-top:3px}
+.ai-hero i{font-style:normal;font-size:26px;margin-left:auto;opacity:.8}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -79,14 +94,14 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T09:52+09:00"><b>2026/10/11 09:52</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T10:01+09:00"><b>2026/10/11 10:01</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
 <main>
-<p class="small"><a href="../">ランキング</a> › AI時代の仕事</p>
-<h1>AI時代に増えた仕事・減った仕事 <small class="muted">2020→2025年</small></h1>
-<p class="lead">「AIで仕事がなくなる」と言われますが、実際に働く人の数はどう動いているのか。総務省「労働力調査」の職業別の就業者数で確かめます。毎年1月ごろに新しい年の数字が出ると、自動で更新されます。</p>
+<p class="small"><a href="../">ランキング</a> › AI時代の予想</p>
+<h1>AI時代、業界の時給はどうなる？ <small class="muted">2030年予想・2025年の実績</small></h1>
+<p class="lead">「AIで仕事がなくなる」と言われますが、実際はどうなのか。業界・業種ごとに<b>AIが広まったときの2030年の実質時給</b>をシミュレーションし、職業別に<b>実際に働く人が増えた仕事・減った仕事</b>を確かめます。統計の数字は新しい年が出ると自動で更新されます。</p>
 <div class="yc-say"><img src="../yc-pc.webp" alt="" width="90" height="74"><p><b class="nm">ヤドキャリ</b>「言われていること」と「実際の数字」を並べてみるよ。殻（仕事）選びの参考にしてね。</p></div>
 
 <dl class="kpi">
@@ -96,6 +111,303 @@ html{scroll-padding-top:60px}
 <div><dt>介護の仕事 2020→2025</dt><dd><span class="up">+4.3%</span><small>+8万人</small></dd></div>
 <div><dt>お店の販売 2020→2025</dt><dd><span class="down">-4.8%</span><small>-22万人</small></dd></div>
 </dl>
+
+
+<h2 id="sim">業界・業種別 AI時代の2030年予想</h2>
+<p>「今のペース」は過去の流れをそのまま延ばした予想です。ここに、<b>その業界で働く人のうち、AIの影響を受けやすい仕事（事務など）をしている人の割合</b>を掛け合わせて、AIが広まったときの幅を出しました。</p>
+<div class="simbox">
+<label for="ai-x">AIで「影響が高い仕事」の作業が <b id="ai-xv">20</b>% 置き換わったら</label>
+<input type="range" id="ai-x" min="0" max="60" step="5" value="20">
+<p class="small muted">「影響が中」の仕事はその半分が置き換わるとして計算します。<b class="up">楽観</b>＝同じ給料のまま早く帰れる（時給が上がる）、<b class="down">悲観</b>＝減った作業のぶん給料も減る（時給が下がる）。実際はこの間のどこかに落ち着くと考えられます。</p>
+</div>
+<p class="legend small"><span class="lv mixk m3"></span>影響 高い <span class="lv mixk m2"></span>中 <span class="lv mixk m1"></span>低い（その業界で働く人の職業の内訳）</p>
+<div class="rk-tabs">
+<input type="radio" name="ai" id="ai-gyokai" checked>
+<input type="radio" name="ai" id="ai-gyoshu">
+<div class="rk-bar">
+<label for="ai-gyokai">業界 <small>15</small></label>
+<label for="ai-gyoshu">注目の業種 <small>21</small></label>
+</div>
+<div class="rk-panel rk-p1"><div class="wrap-x">
+<table class="board compact aisim">
+<thead><tr><th>業界</th><th class="num">今のペース</th><th class="num">AIありの幅</th></tr></thead>
+<tbody>
+<tr data-fc="2853" data-h="0.732" data-m="0.122">
+<th><a href="../gyokai/compound/">郵便局・協同組合</a>
+<div class="mix" title="影響 高73% 中12% 低15%"><i class="m3" style="width:73.2%"></i><i class="m2" style="width:12.2%"></i><i class="m1" style="width:14.6%"></i></div>
+<span class="sub">影響が高い仕事 73%</span></th>
+<td class="num">2,853円<span class="sub">2,593円→</span></td>
+<td class="num"><b class="up js-opt">3,391円</b><span class="sub">〜 <b class="down js-pes">2,401円</b></span><span class="sub js-r">作業15.9%減</span></td>
+</tr>
+<tr data-fc="4388" data-h="0.567" data-m="0.427">
+<th><a href="../gyokai/finance/">金融・保険</a>
+<div class="mix" title="影響 高57% 中43% 低1%"><i class="m3" style="width:56.7%"></i><i class="m2" style="width:42.7%"></i><i class="m1" style="width:0.6%"></i></div>
+<span class="sub">影響が高い仕事 57%</span></th>
+<td class="num">4,388円<span class="sub">3,818円→</span></td>
+<td class="num"><b class="up js-opt">5,200円</b><span class="sub">〜 <b class="down js-pes">3,703円</b></span><span class="sub js-r">作業15.6%減</span></td>
+</tr>
+<tr data-fc="4230" data-h="0.382" data-m="0.235">
+<th><a href="../gyokai/utilities/">電気・ガス・水道</a>
+<div class="mix" title="影響 高38% 中24% 低38%"><i class="m3" style="width:38.2%"></i><i class="m2" style="width:23.5%"></i><i class="m1" style="width:38.2%"></i></div>
+<span class="sub">影響が高い仕事 38%</span></th>
+<td class="num">4,230円<span class="sub">3,747円→</span></td>
+<td class="num"><b class="up js-opt">4,699円</b><span class="sub">〜 <b class="down js-pes">3,807円</b></span><span class="sub js-r">作業10.0%減</span></td>
+</tr>
+<tr data-fc="2319" data-h="0.34" data-m="0.113">
+<th><a href="../gyokai/services/">その他サービス</a>
+<div class="mix" title="影響 高34% 中11% 低55%"><i class="m3" style="width:34.0%"></i><i class="m2" style="width:11.3%"></i><i class="m1" style="width:54.7%"></i></div>
+<span class="sub">影響が高い仕事 34%</span></th>
+<td class="num">2,319円<span class="sub">2,065円→</span></td>
+<td class="num"><b class="up js-opt">2,519円</b><span class="sub">〜 <b class="down js-pes">2,135円</b></span><span class="sub js-r">作業7.9%減</span></td>
+</tr>
+<tr data-fc="3796" data-h="0.317" data-m="0.549">
+<th><a href="../gyokai/professional/">専門・技術サービス</a>
+<div class="mix" title="影響 高32% 中55% 低13%"><i class="m3" style="width:31.7%"></i><i class="m2" style="width:54.9%"></i><i class="m1" style="width:13.4%"></i></div>
+<span class="sub">影響が高い仕事 32%</span></th>
+<td class="num">3,796円<span class="sub">3,480円→</span></td>
+<td class="num"><b class="up js-opt">4,305円</b><span class="sub">〜 <b class="down js-pes">3,347円</b></span><span class="sub js-r">作業11.8%減</span></td>
+</tr>
+<tr data-fc="3319" data-h="0.299" data-m="0.396">
+<th><a href="../gyokai/realestate/">不動産</a>
+<div class="mix" title="影響 高30% 中40% 低31%"><i class="m3" style="width:29.9%"></i><i class="m2" style="width:39.6%"></i><i class="m1" style="width:30.6%"></i></div>
+<span class="sub">影響が高い仕事 30%</span></th>
+<td class="num">3,319円<span class="sub">2,869円→</span></td>
+<td class="num"><b class="up js-opt">3,685円</b><span class="sub">〜 <b class="down js-pes">2,989円</b></span><span class="sub js-r">作業9.9%減</span></td>
+</tr>
+<tr data-fc="3501" data-h="0.237" data-m="0.74">
+<th><a href="../gyokai/it/">IT・通信</a>
+<div class="mix" title="影響 高24% 中74% 低2%"><i class="m3" style="width:23.7%"></i><i class="m2" style="width:74.0%"></i><i class="m1" style="width:2.3%"></i></div>
+<span class="sub">影響が高い仕事 24%</span></th>
+<td class="num">3,501円<span class="sub">3,257円→</span></td>
+<td class="num"><b class="up js-opt">3,985円</b><span class="sub">〜 <b class="down js-pes">3,076円</b></span><span class="sub js-r">作業12.1%減</span></td>
+</tr>
+<tr data-fc="2521" data-h="0.222" data-m="0.044">
+<th><a href="../gyokai/transport/">運輸・物流</a>
+<div class="mix" title="影響 高22% 中4% 低74%"><i class="m3" style="width:22.2%"></i><i class="m2" style="width:4.4%"></i><i class="m1" style="width:73.5%"></i></div>
+<span class="sub">影響が高い仕事 22%</span></th>
+<td class="num">2,521円<span class="sub">2,220円→</span></td>
+<td class="num"><b class="up js-opt">2,650円</b><span class="sub">〜 <b class="down js-pes">2,398円</b></span><span class="sub js-r">作業4.9%減</span></td>
+</tr>
+<tr data-fc="3158" data-h="0.19" data-m="0.549">
+<th><a href="../gyokai/trade/">卸売・小売</a>
+<div class="mix" title="影響 高19% 中55% 低26%"><i class="m3" style="width:19.0%"></i><i class="m2" style="width:54.9%"></i><i class="m1" style="width:26.1%"></i></div>
+<span class="sub">影響が高い仕事 19%</span></th>
+<td class="num">3,158円<span class="sub">2,755円→</span></td>
+<td class="num"><b class="up js-opt">3,481円</b><span class="sub">〜 <b class="down js-pes">2,865円</b></span><span class="sub js-r">作業9.3%減</span></td>
+</tr>
+<tr data-fc="2905" data-h="0.19" data-m="0.173">
+<th><a href="../gyokai/manufacturing/">製造</a>
+<div class="mix" title="影響 高19% 中17% 低64%"><i class="m3" style="width:19.0%"></i><i class="m2" style="width:17.3%"></i><i class="m1" style="width:63.7%"></i></div>
+<span class="sub">影響が高い仕事 19%</span></th>
+<td class="num">2,905円<span class="sub">2,621円→</span></td>
+<td class="num"><b class="up js-opt">3,075円</b><span class="sub">〜 <b class="down js-pes">2,744円</b></span><span class="sub js-r">作業5.5%減</span></td>
+</tr>
+<tr data-fc="3163" data-h="0.184" data-m="0.174">
+<th><a href="../gyokai/construction/">建設</a>
+<div class="mix" title="影響 高18% 中17% 低64%"><i class="m3" style="width:18.4%"></i><i class="m2" style="width:17.4%"></i><i class="m1" style="width:64.2%"></i></div>
+<span class="sub">影響が高い仕事 18%</span></th>
+<td class="num">3,163円<span class="sub">2,804円→</span></td>
+<td class="num"><b class="up js-opt">3,344円</b><span class="sub">〜 <b class="down js-pes">2,992円</b></span><span class="sub js-r">作業5.4%減</span></td>
+</tr>
+<tr data-fc="3167" data-h="0.183" data-m="0.73">
+<th><a href="../gyokai/education/">教育</a>
+<div class="mix" title="影響 高18% 中73% 低9%"><i class="m3" style="width:18.3%"></i><i class="m2" style="width:73.0%"></i><i class="m1" style="width:8.7%"></i></div>
+<span class="sub">影響が高い仕事 18%</span></th>
+<td class="num">3,167円<span class="sub">2,984円→</span></td>
+<td class="num"><b class="up js-opt">3,557円</b><span class="sub">〜 <b class="down js-pes">2,820円</b></span><span class="sub js-r">作業11.0%減</span></td>
+</tr>
+<tr data-fc="2582" data-h="0.132" data-m="0.158">
+<th><a href="../gyokai/medical/">医療・福祉</a>
+<div class="mix" title="影響 高13% 中16% 低71%"><i class="m3" style="width:13.2%"></i><i class="m2" style="width:15.8%"></i><i class="m1" style="width:71.0%"></i></div>
+<span class="sub">影響が高い仕事 13%</span></th>
+<td class="num">2,582円<span class="sub">2,418円→</span></td>
+<td class="num"><b class="up js-opt">2,696円</b><span class="sub">〜 <b class="down js-pes">2,473円</b></span><span class="sub js-r">作業4.2%減</span></td>
+</tr>
+<tr data-fc="2328" data-h="0.095" data-m="0.142">
+<th><a href="../gyokai/lifestyle/">生活サービス・娯楽</a>
+<div class="mix" title="影響 高10% 中14% 低76%"><i class="m3" style="width:9.5%"></i><i class="m2" style="width:14.2%"></i><i class="m1" style="width:76.3%"></i></div>
+<span class="sub">影響が高い仕事 10%</span></th>
+<td class="num">2,328円<span class="sub">2,089円→</span></td>
+<td class="num"><b class="up js-opt">2,408円</b><span class="sub">〜 <b class="down js-pes">2,251円</b></span><span class="sub js-r">作業3.3%減</span></td>
+</tr>
+<tr data-fc="2006" data-h="0.034" data-m="0.065">
+<th><a href="../gyokai/hospitality/">宿泊・飲食</a>
+<div class="mix" title="影響 高3% 中6% 低90%"><i class="m3" style="width:3.4%"></i><i class="m2" style="width:6.5%"></i><i class="m1" style="width:90.1%"></i></div>
+<span class="sub">影響が高い仕事 3%</span></th>
+<td class="num">2,006円<span class="sub">1,864円→</span></td>
+<td class="num"><b class="up js-opt">2,033円</b><span class="sub">〜 <b class="down js-pes">1,979円</b></span><span class="sub js-r">作業1.3%減</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="rk-panel rk-p2"><div class="wrap-x">
+<table class="board compact aisim">
+<thead><tr><th>業種</th><th class="num">今のペース</th><th class="num">AIありの幅</th></tr></thead>
+<tbody>
+<tr data-fc="2088" data-h="0.605" data-m="0.395">
+<th><a href="../gyoshu/haken/">人材紹介・派遣</a>
+<div class="mix" title="影響 高60% 中40% 低0%"><i class="m3" style="width:60.5%"></i><i class="m2" style="width:39.5%"></i><i class="m1" style="width:0.0%"></i></div>
+<span class="sub">影響が高い仕事 60%</span></th>
+<td class="num">2,088円<span class="sub">1,870円→</span></td>
+<td class="num"><b class="up js-opt">2,487円</b><span class="sub">〜 <b class="down js-pes">1,753円</b></span><span class="sub js-r">作業16.1%減</span></td>
+</tr>
+<tr data-fc="6900" data-h="0.567" data-m="0.427">
+<th><a href="../gyoshu/securities/">証券</a>
+<div class="mix" title="影響 高57% 中43% 低1%"><i class="m3" style="width:56.7%"></i><i class="m2" style="width:42.7%"></i><i class="m1" style="width:0.6%"></i></div>
+<span class="sub">影響が高い仕事 57%（金融業，保険業の値）</span></th>
+<td class="num">6,900円<span class="sub">5,853円→</span></td>
+<td class="num"><b class="up js-opt">8,176円</b><span class="sub">〜 <b class="down js-pes">5,823円</b></span><span class="sub js-r">作業15.6%減</span></td>
+</tr>
+<tr data-fc="4504" data-h="0.567" data-m="0.427">
+<th><a href="../gyoshu/insurance/">保険</a>
+<div class="mix" title="影響 高57% 中43% 低1%"><i class="m3" style="width:56.7%"></i><i class="m2" style="width:42.7%"></i><i class="m1" style="width:0.6%"></i></div>
+<span class="sub">影響が高い仕事 57%（金融業，保険業の値）</span></th>
+<td class="num">4,504円<span class="sub">3,860円→</span></td>
+<td class="num"><b class="up js-opt">5,337円</b><span class="sub">〜 <b class="down js-pes">3,801円</b></span><span class="sub js-r">作業15.6%減</span></td>
+</tr>
+<tr data-fc="3857" data-h="0.567" data-m="0.427">
+<th><a href="../gyoshu/bank/">銀行</a>
+<div class="mix" title="影響 高57% 中43% 低1%"><i class="m3" style="width:56.7%"></i><i class="m2" style="width:42.7%"></i><i class="m1" style="width:0.6%"></i></div>
+<span class="sub">影響が高い仕事 57%（金融業，保険業の値）</span></th>
+<td class="num">3,857円<span class="sub">3,484円→</span></td>
+<td class="num"><b class="up js-opt">4,570円</b><span class="sub">〜 <b class="down js-pes">3,255円</b></span><span class="sub js-r">作業15.6%減</span></td>
+</tr>
+<tr data-fc="3894" data-h="0.476" data-m="0.048">
+<th><a href="../gyoshu/railway/">鉄道</a>
+<div class="mix" title="影響 高48% 中5% 低48%"><i class="m3" style="width:47.6%"></i><i class="m2" style="width:4.8%"></i><i class="m1" style="width:47.6%"></i></div>
+<span class="sub">影響が高い仕事 48%</span></th>
+<td class="num">3,894円<span class="sub">3,658円→</span></td>
+<td class="num"><b class="up js-opt">4,327円</b><span class="sub">〜 <b class="down js-pes">3,505円</b></span><span class="sub js-r">作業10.0%減</span></td>
+</tr>
+<tr data-fc="3446" data-h="0.474" data-m="0.474">
+<th><a href="../gyoshu/telecom/">通信キャリア</a>
+<div class="mix" title="影響 高47% 中47% 低5%"><i class="m3" style="width:47.4%"></i><i class="m2" style="width:47.4%"></i><i class="m1" style="width:5.3%"></i></div>
+<span class="sub">影響が高い仕事 47%</span></th>
+<td class="num">3,446円<span class="sub">3,294円→</span></td>
+<td class="num"><b class="up js-opt">4,017円</b><span class="sub">〜 <b class="down js-pes">2,956円</b></span><span class="sub js-r">作業14.2%減</span></td>
+</tr>
+<tr data-fc="3197" data-h="0.429" data-m="0.571">
+<th><a href="../gyoshu/broadcast/">テレビ・ラジオ</a>
+<div class="mix" title="影響 高43% 中57% 低0%"><i class="m3" style="width:42.9%"></i><i class="m2" style="width:57.1%"></i><i class="m1" style="width:0.0%"></i></div>
+<span class="sub">影響が高い仕事 43%</span></th>
+<td class="num">3,197円<span class="sub">3,518円→</span></td>
+<td class="num"><b class="up js-opt">3,730円</b><span class="sub">〜 <b class="down js-pes">2,740円</b></span><span class="sub js-r">作業14.3%減</span></td>
+</tr>
+<tr data-fc="3703" data-h="0.421" data-m="0.579">
+<th><a href="../gyoshu/advertising/">広告</a>
+<div class="mix" title="影響 高42% 中58% 低0%"><i class="m3" style="width:42.1%"></i><i class="m2" style="width:57.9%"></i><i class="m1" style="width:0.0%"></i></div>
+<span class="sub">影響が高い仕事 42%</span></th>
+<td class="num">3,703円<span class="sub">3,391円→</span></td>
+<td class="num"><b class="up js-opt">4,316円</b><span class="sub">〜 <b class="down js-pes">3,177円</b></span><span class="sub js-r">作業14.2%減</span></td>
+</tr>
+<tr data-fc="4492" data-h="0.382" data-m="0.235">
+<th><a href="../gyoshu/electric/">電力会社</a>
+<div class="mix" title="影響 高38% 中24% 低38%"><i class="m3" style="width:38.2%"></i><i class="m2" style="width:23.5%"></i><i class="m1" style="width:38.2%"></i></div>
+<span class="sub">影響が高い仕事 38%（電気・ガス・熱供給・水道業の値）</span></th>
+<td class="num">4,492円<span class="sub">4,014円→</span></td>
+<td class="num"><b class="up js-opt">4,991円</b><span class="sub">〜 <b class="down js-pes">4,043円</b></span><span class="sub js-r">作業10.0%減</span></td>
+</tr>
+<tr data-fc="4213" data-h="0.35" data-m="0.65">
+<th><a href="../gyoshu/web/">Web・ネットサービス</a>
+<div class="mix" title="影響 高35% 中65% 低0%"><i class="m3" style="width:35.0%"></i><i class="m2" style="width:65.0%"></i><i class="m1" style="width:0.0%"></i></div>
+<span class="sub">影響が高い仕事 35%</span></th>
+<td class="num">4,213円<span class="sub">3,446円→</span></td>
+<td class="num"><b class="up js-opt">4,871円</b><span class="sub">〜 <b class="down js-pes">3,644円</b></span><span class="sub js-r">作業13.5%減</span></td>
+</tr>
+<tr data-fc="5074" data-h="0.34" data-m="0.462">
+<th><a href="../gyoshu/shosha/">総合商社</a>
+<div class="mix" title="影響 高34% 中46% 低20%"><i class="m3" style="width:34.0%"></i><i class="m2" style="width:46.2%"></i><i class="m1" style="width:19.8%"></i></div>
+<span class="sub">影響が高い仕事 34%（卸売業の値）</span></th>
+<td class="num">5,074円<span class="sub">4,627円→</span></td>
+<td class="num"><b class="up js-opt">5,728円</b><span class="sub">〜 <b class="down js-pes">4,495円</b></span><span class="sub js-r">作業11.4%減</span></td>
+</tr>
+<tr data-fc="4158" data-h="0.34" data-m="0.462">
+<th><a href="../gyoshu/kikai-shosha/">機械・電機の商社</a>
+<div class="mix" title="影響 高34% 中46% 低20%"><i class="m3" style="width:34.0%"></i><i class="m2" style="width:46.2%"></i><i class="m1" style="width:19.8%"></i></div>
+<span class="sub">影響が高い仕事 34%（卸売業の値）</span></th>
+<td class="num">4,158円<span class="sub">3,372円→</span></td>
+<td class="num"><b class="up js-opt">4,694円</b><span class="sub">〜 <b class="down js-pes">3,683円</b></span><span class="sub js-r">作業11.4%減</span></td>
+</tr>
+<tr data-fc="6030" data-h="0.333" data-m="0.0">
+<th><a href="../gyoshu/airline/">航空</a>
+<div class="mix" title="影響 高33% 中0% 低67%"><i class="m3" style="width:33.3%"></i><i class="m2" style="width:0.0%"></i><i class="m1" style="width:66.7%"></i></div>
+<span class="sub">影響が高い仕事 33%</span></th>
+<td class="num">6,030円<span class="sub">4,650円→</span></td>
+<td class="num"><b class="up js-opt">6,460円</b><span class="sub">〜 <b class="down js-pes">5,628円</b></span><span class="sub js-r">作業6.7%減</span></td>
+</tr>
+<tr data-fc="3995" data-h="0.268" data-m="0.268">
+<th><a href="../gyoshu/chemical/">化学メーカー</a>
+<div class="mix" title="影響 高27% 中27% 低46%"><i class="m3" style="width:26.8%"></i><i class="m2" style="width:26.8%"></i><i class="m1" style="width:46.5%"></i></div>
+<span class="sub">影響が高い仕事 27%</span></th>
+<td class="num">3,995円<span class="sub">3,398円→</span></td>
+<td class="num"><b class="up js-opt">4,344円</b><span class="sub">〜 <b class="down js-pes">3,674円</b></span><span class="sub js-r">作業8.0%減</span></td>
+</tr>
+<tr data-fc="3513" data-h="0.207" data-m="0.789">
+<th><a href="../gyoshu/sier/">SIer・ソフトウェア</a>
+<div class="mix" title="影響 高21% 中79% 低0%"><i class="m3" style="width:20.7%"></i><i class="m2" style="width:78.9%"></i><i class="m1" style="width:0.5%"></i></div>
+<span class="sub">影響が高い仕事 21%</span></th>
+<td class="num">3,513円<span class="sub">3,244円→</span></td>
+<td class="num"><b class="up js-opt">3,993円</b><span class="sub">〜 <b class="down js-pes">3,090円</b></span><span class="sub js-r">作業12.0%減</span></td>
+</tr>
+<tr data-fc="3221" data-h="0.192" data-m="0.2">
+<th><a href="../gyoshu/auto/">自動車・輸送機メーカー</a>
+<div class="mix" title="影響 高19% 中20% 低61%"><i class="m3" style="width:19.2%"></i><i class="m2" style="width:20.0%"></i><i class="m1" style="width:60.8%"></i></div>
+<span class="sub">影響が高い仕事 19%</span></th>
+<td class="num">3,221円<span class="sub">2,922円→</span></td>
+<td class="num"><b class="up js-opt">3,421円</b><span class="sub">〜 <b class="down js-pes">3,033円</b></span><span class="sub js-r">作業5.8%減</span></td>
+</tr>
+<tr data-fc="2903" data-h="0.19" data-m="0.022">
+<th><a href="../gyoshu/hospital/">病院・クリニック</a>
+<div class="mix" title="影響 高19% 中2% 低79%"><i class="m3" style="width:19.0%"></i><i class="m2" style="width:2.2%"></i><i class="m1" style="width:78.8%"></i></div>
+<span class="sub">影響が高い仕事 19%</span></th>
+<td class="num">2,903円<span class="sub">2,723円→</span></td>
+<td class="num"><b class="up js-opt">3,025円</b><span class="sub">〜 <b class="down js-pes">2,786円</b></span><span class="sub js-r">作業4.0%減</span></td>
+</tr>
+<tr data-fc="2167" data-h="0.173" data-m="0.036">
+<th><a href="../gyoshu/trucking/">トラック運送</a>
+<div class="mix" title="影響 高17% 中4% 低79%"><i class="m3" style="width:17.3%"></i><i class="m2" style="width:3.6%"></i><i class="m1" style="width:79.2%"></i></div>
+<span class="sub">影響が高い仕事 17%</span></th>
+<td class="num">2,167円<span class="sub">1,973円→</span></td>
+<td class="num"><b class="up js-opt">2,253円</b><span class="sub">〜 <b class="down js-pes">2,084円</b></span><span class="sub js-r">作業3.8%減</span></td>
+</tr>
+<tr data-fc="3280" data-h="0.16" data-m="0.745">
+<th><a href="../gyoshu/school/">学校</a>
+<div class="mix" title="影響 高16% 中74% 低10%"><i class="m3" style="width:16.0%"></i><i class="m2" style="width:74.5%"></i><i class="m1" style="width:9.5%"></i></div>
+<span class="sub">影響が高い仕事 16%</span></th>
+<td class="num">3,280円<span class="sub">3,132円→</span></td>
+<td class="num"><b class="up js-opt">3,671円</b><span class="sub">〜 <b class="down js-pes">2,931円</b></span><span class="sub js-r">作業10.7%減</span></td>
+</tr>
+<tr data-fc="2248" data-h="0.079" data-m="0.285">
+<th><a href="../gyoshu/kaigo/">介護・福祉</a>
+<div class="mix" title="影響 高8% 中28% 低64%"><i class="m3" style="width:7.9%"></i><i class="m2" style="width:28.5%"></i><i class="m1" style="width:63.6%"></i></div>
+<span class="sub">影響が高い仕事 8%</span></th>
+<td class="num">2,248円<span class="sub">2,083円→</span></td>
+<td class="num"><b class="up js-opt">2,352円</b><span class="sub">〜 <b class="down js-pes">2,148円</b></span><span class="sub js-r">作業4.4%減</span></td>
+</tr>
+<tr data-fc="2012" data-h="0.023" data-m="0.07">
+<th><a href="../gyoshu/restaurant/">飲食店</a>
+<div class="mix" title="影響 高2% 中7% 低91%"><i class="m3" style="width:2.3%"></i><i class="m2" style="width:7.0%"></i><i class="m1" style="width:90.6%"></i></div>
+<span class="sub">影響が高い仕事 2%</span></th>
+<td class="num">2,012円<span class="sub">1,873円→</span></td>
+<td class="num"><b class="up js-opt">2,036円</b><span class="sub">〜 <b class="down js-pes">1,989円</b></span><span class="sub js-r">作業1.2%減</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p class="note">影響を受けやすい仕事の割合がいちばん高い業界は<b>郵便局・協同組合</b>（73%）、いちばん低いのは<b>宿泊・飲食</b>（3%）。割合が高い業界ほど、AIの使い方しだいで時給が<b>大きく上がることも、大きく下がることもある</b>業界です。</p>
+<p class="small muted">職業の内訳：総務省「労働力調査」産業，職業別就業者数(2009年～)-第12・13回改定産業分類及び平成21年12月改定職業分類による（0003024266）の2025年の値。（ ）付きの業種は、細かい内訳が統計にないため、上の区分の値を使っています。</p>
+<script>
+(function(){var s=document.getElementById("ai-x");if(!s)return;var v=document.getElementById("ai-xv");
+function f(n){return Math.round(n).toLocaleString("ja-JP")+"円"}
+function up(){var x=s.value/100;v.textContent=s.value;
+document.querySelectorAll(".aisim tr[data-fc]").forEach(function(t){var fc=+t.dataset.fc,h=+t.dataset.h,m=+t.dataset.m;
+var r=Math.min(.9,x*h+x/2*m);t.querySelector(".js-opt").textContent=f(fc/(1-r));t.querySelector(".js-pes").textContent=f(fc*(1-r));
+t.querySelector(".js-r").textContent="作業"+(Math.round(r*1000)/10)+"%減";});}
+s.addEventListener("input",up);})();
+</script>
 
 <h2>AIの影響の受けやすさ別に見ると</h2>
 <p>国際労働機関（ILO）の研究では、生成AIの影響をいちばん受けやすいのは<b>事務の仕事</b>で、体を使う仕事や人と直接接する仕事は受けにくいとされています。その傾向を日本の職業に当てはめて、働く人の数の増減を比べました。</p>
@@ -112,7 +424,7 @@ html{scroll-padding-top:60px}
 <p class="note">2020年から2025年で、影響が「高い」とされる仕事は<b>+6.5%</b>、「低い」とされる仕事は<b>-0.1%</b>でした。
 今のところ、影響を受けやすい仕事のほうが減っている、という結果は出ていません。ただし、働く人の数は景気や人手不足、高齢化の影響も受けるので、この差がすべてAIのせいとは言えません。</p>
 
-<h2>増えた仕事・減った仕事 <small class="muted">2020→2025年</small></h2>
+<h2>実際に増えた仕事・減った仕事 <small class="muted">2020→2025年</small></h2>
 <div class="updown">
 <div><h3 class="up">増えた仕事 TOP5</h3><ol><li>技術者 <b class="up">+15.2%</b> <span class="ai ai2">AI中</span></li><li>その他の運搬・清掃・包装等 <b class="up">+10.3%</b> <span class="ai ai1">AI低い</span></li><li>その他の専門的・技術的職業 <b class="up">+10.2%</b> <span class="ai ai2">AI中</span></li><li>保健医療 <b class="up">+10.0%</b> <span class="ai ai1">AI低い</span></li><li>一般事務 <b class="up">+7.0%</b> <span class="ai ai3">AI高い</span></li></ol></div>
 <div><h3 class="down">減った仕事 TOP5</h3><ol><li>農林漁業 <b class="down">-12.9%</b> <span class="ai ai1">AI低い</span></li><li>保安職業 <b class="down">-9.8%</b> <span class="ai ai1">AI低い</span></li><li>機械検査 <b class="down">-9.4%</b> <span class="ai ai1">AI低い</span></li><li>製品検査 <b class="down">-8.2%</b> <span class="ai ai1">AI低い</span></li><li>建設・採掘 <b class="down">-6.8%</b> <span class="ai ai1">AI低い</span></li></ol></div>
@@ -375,7 +687,7 @@ html{scroll-padding-top:60px}
 <p class="small"><a href="../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 09:52</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 10:01</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>

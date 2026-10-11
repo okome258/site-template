@@ -50,9 +50,9 @@ tr:target{background:#fff4c4}
 .rk-bar label,.rk-bar a{flex:1;text-align:center;padding:9px 4px;border-radius:10px 10px 0 0;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
 .rk-bar small{font-weight:400;color:var(--muted);font-size:11px}
 .rk-panel{display:none}
-#rk-gyokai:checked~.rk-p1,#rk-gyoshu:checked~.rk-p2{display:block}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai],#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu]{background:var(--accent);color:#fff}
-#rk-gyokai:checked~.rk-bar label[for=rk-gyokai] small,#rk-gyoshu:checked~.rk-bar label[for=rk-gyoshu] small{color:#dde8f3}
+.rk-tabs>input:nth-of-type(1):checked~.rk-p1,.rk-tabs>input:nth-of-type(2):checked~.rk-p2{display:block}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1),.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2){background:var(--accent);color:#fff}
+.rk-tabs>input:nth-of-type(1):checked~.rk-bar label:nth-of-type(1) small,.rk-tabs>input:nth-of-type(2):checked~.rk-bar label:nth-of-type(2) small{color:#dde8f3}
 /* AI時代ページ */
 .ai{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:9px;white-space:nowrap}
 .ai3{background:#f6d6cb;color:#8a2e17}.ai2{background:#f3ead0;color:#6b5410}.ai1{background:#dbe6f1;color:#234a70}
@@ -61,6 +61,21 @@ tr:target{background:#fff4c4}
 .updown h3{font-size:15px;margin:8px 0 4px}.updown ol{margin:0;padding-left:22px}.updown li{margin:5px 0}
 .occ tr.sub th{padding-left:20px;font-weight:400;font-size:13px}
 .occ tr.maj th{font-weight:700}
+.mix{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:5px 0 2px;background:var(--panel);max-width:220px}
+.mix.big{height:14px;max-width:none;margin:8px 0 12px}
+.mix i{display:block;height:100%}
+.m3{background:#d4705a}.m2{background:#e3c46b}.m1{background:#7fa6cc}
+.mixk{display:inline-block;width:14px;height:10px;border-radius:2px;vertical-align:middle;margin:0 2px}
+.simbox{background:var(--panel);border-radius:12px;padding:12px 14px;margin:12px 0}
+.simbox label{display:block;font-weight:700;margin-bottom:6px}
+.simbox input[type=range]{width:100%;accent-color:var(--accent)}
+.simbox #ai-xv{color:var(--accent);font-size:20px}
+.aisim td.num b{font-size:15px}
+.ai-hero{display:flex;align-items:center;gap:12px;margin:6px 0 14px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,#2f5d8a,#4a7fb3);color:#fff;text-decoration:none}
+.ai-hero img{width:76px;height:auto;flex:none}
+.ai-hero b{display:block;font-size:17px;line-height:1.4}
+.ai-hero small{display:block;font-size:12px;opacity:.9;margin-top:3px}
+.ai-hero i{font-style:normal;font-size:26px;margin-left:auto;opacity:.8}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -79,7 +94,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T09:52+09:00"><b>2026/10/11 09:52</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-11T10:01+09:00"><b>2026/10/11 10:01</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -132,6 +147,17 @@ html{scroll-padding-top:60px}
 </dl>
 <p class="small muted">2020〜2025年の6年分に直線を当てはめて延ばした値です。景気・物価・AIの普及などで実際は変わります。<a href="../../yosoku/">全業界の予想を見る</a></p>
 
+<h2>AI時代の2030年予想</h2>
+<p>この業種で働く人のうち、AIの影響を受けやすい仕事（事務など）をしている人は<b>21%</b>、仕事の一部が変わる仕事（専門職・営業・販売など）は79%です。</p>
+<div class="mix big"><i class="m3" style="width:20.7%"></i><i class="m2" style="width:78.9%"></i><i class="m1" style="width:0.5%"></i></div>
+<dl class="kpi">
+<div><dt>今のペース</dt><dd>3,513<small>円</small></dd></div>
+<div><dt>AI楽観（早く帰れる）</dt><dd class="up">3,993<small>円</small></dd></div>
+<div><dt>AI悲観（給料も減る）</dt><dd class="down">3,090<small>円</small></dd></div>
+<div><dt>置き換わる作業</dt><dd>12.0<small>%</small></dd></div>
+</dl>
+<p class="small muted">「影響が高い仕事」の作業の20%、「中」の仕事の10%がAIに置き換わったと仮定した計算です。<a href="../../ai/#sim">割合を変えてシミュレーションする</a></p>
+
 
 <h2>注目の業種と比べる</h2>
 <p><a class="btn" href="../../gyoshu/securities/" style="margin:3px 4px 3px 0">証券 5,853円</a><a class="btn" href="../../gyoshu/airline/" style="margin:3px 4px 3px 0">航空 4,650円</a><a class="btn" href="../../gyoshu/shosha/" style="margin:3px 4px 3px 0">総合商社 4,627円</a><a class="btn" href="../../gyoshu/electric/" style="margin:3px 4px 3px 0">電力会社 4,014円</a><a class="btn" href="../../gyoshu/insurance/" style="margin:3px 4px 3px 0">保険 3,860円</a><a class="btn" href="../../gyoshu/railway/" style="margin:3px 4px 3px 0">鉄道 3,658円</a><a class="btn" href="../../gyoshu/broadcast/" style="margin:3px 4px 3px 0">テレビ・ラジオ 3,518円</a><a class="btn" href="../../gyoshu/bank/" style="margin:3px 4px 3px 0">銀行 3,484円</a><a class="btn" href="../../gyoshu/web/" style="margin:3px 4px 3px 0">Web・ネットサービス 3,446円</a><a class="btn" href="../../gyoshu/chemical/" style="margin:3px 4px 3px 0">化学メーカー 3,398円</a><a class="btn" href="../../gyoshu/advertising/" style="margin:3px 4px 3px 0">広告 3,391円</a><a class="btn" href="../../gyoshu/kikai-shosha/" style="margin:3px 4px 3px 0">機械・電機の商社 3,372円</a><a class="btn" href="../../gyoshu/telecom/" style="margin:3px 4px 3px 0">通信キャリア 3,294円</a><a class="btn" href="../../gyoshu/school/" style="margin:3px 4px 3px 0">学校 3,132円</a><a class="btn" href="../../gyoshu/auto/" style="margin:3px 4px 3px 0">自動車・輸送機メーカー 2,922円</a><a class="btn" href="../../gyoshu/hospital/" style="margin:3px 4px 3px 0">病院・クリニック 2,723円</a><a class="btn" href="../../gyoshu/kaigo/" style="margin:3px 4px 3px 0">介護・福祉 2,083円</a><a class="btn" href="../../gyoshu/trucking/" style="margin:3px 4px 3px 0">トラック運送 1,973円</a><a class="btn" href="../../gyoshu/restaurant/" style="margin:3px 4px 3px 0">飲食店 1,873円</a><a class="btn" href="../../gyoshu/haken/" style="margin:3px 4px 3px 0">人材紹介・派遣 1,870円</a></p>
@@ -144,7 +170,7 @@ html{scroll-padding-top:60px}
 <p class="small"><a href="../../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 09:52</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/11 10:01</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>
