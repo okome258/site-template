@@ -124,7 +124,12 @@ details.why p{margin:8px 0 4px;line-height:1.7}
 .tile.xs b{display:none}
 .tile:hover{outline:2px solid var(--ink);outline-offset:-2px;z-index:2}
 .heat-legend{margin:6px 0 0;color:var(--muted)}
-.h-map{margin-top:18px}
+.h-map{margin:0;display:inline}
+.mapfold{margin-top:18px}
+.mapfold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0 8px}
+.mapfold>summary::-webkit-details-marker{display:none}
+.mf-hint::after{content:"閉じる ▲";font-size:12px;color:var(--accent);border:1px solid var(--line);border-radius:14px;padding:3px 10px;white-space:nowrap}
+.mapfold:not([open]) .mf-hint::after{content:"開く ▼"}
 /* マスコット「ヤドキャリ」のふきだし */
 .yc-say{display:flex;align-items:flex-end;gap:10px;margin:10px 0 16px}
 .yc-say img{flex:none;height:auto}
@@ -143,7 +148,7 @@ html{scroll-padding-top:60px}
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="../../"><span class="logo-text">業界別 実質時給ランキング</span></a>
-<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T09:15+09:00"><b>2026/10/12 09:15</b> 更新<span class="ago"></span></span></span>
+<span class="tagline">年収÷労働時間で比べる、業界の本当の時給</span>    <span class="hdr-info"><span class="updated" data-ts="2026-10-12T15:37+09:00"><b>2026/10/12 15:37</b> 更新<span class="ago"></span></span></span>
   </div>
 </header>
 <div class="wrap layout">
@@ -217,7 +222,7 @@ document.querySelectorAll(".sortbar").forEach(function(bar){
 <p class="small"><a href="../../about/">このサイトについて・計算方法</a></p>
 <p class="small">出典: 厚生労働省「賃金構造基本統計調査」(一般労働者・企業規模10人以上・男女計)を加工して作成。2023年以前はe-Statのデータベース、2024年以降はe-Statで公開されている統計表(Excel)から取得しています。このサービスは、政府統計総合窓口(e-Stat)のAPI機能を使用していますが、サービスの内容は国によって保証されたものではありません。</p>
     <p class="small">当サイトはアフィリエイト広告を利用する場合があります。リンク先でのサービス登録等により当サイトに収益が発生することがあります。統計データの集計・ランキングは広告の有無に関係なく同じ基準で行っています。</p>
-    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 09:15</p>
+    <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: 2026/10/12 15:37</p>
     <p class="small">&copy; 2026 業界別 実質時給ランキング</p>
   </div>
 </footer>
