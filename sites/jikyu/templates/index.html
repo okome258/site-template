@@ -24,8 +24,10 @@
 <p class="note">全産業の平均は <b>{{ latest.all.hourly | num }}円</b>（年収 {{ latest.all.annual_man | num }}万円・月 {{ latest.all.hours_month }}時間）。</p>
 {% endif %}
 {% if heat %}
-<h2 class="h-map">ひと目でわかる業界マップ</h2>
+<details class="mapfold" open>
+<summary><h2 class="h-map">ひと目でわかる業界マップ</h2><span class="mf-hint"></span></summary>
 {% include "_heat.html" %}
+</details>
 {% endif %}
 <details class="why">
 <summary>年収が高いのに、時給が下になる業界があるのはなぜ？</summary>
