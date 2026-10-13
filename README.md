@@ -4,7 +4,7 @@
 
 | サイト | フォルダ | URL |
 |---|---|---|
-| ふるさと納税 量コスパ比較 | `sites/furusato` | https://furusato.otokuest.com |
+| ふるさと納税 量くらべ | `sites/furusato` | https://furusato.otokuest.com |
 | 業界別 実質時給ランキング(準備中) | `sites/jikyu` | https://jikyu.otokuest.com |
 
 ## しくみ
@@ -13,7 +13,7 @@
 core/                 全サイト共通
   build.py            ビルダー(データ取得 → Jinja2 → public/ 書き出し → sitemap.xml/robots.txt)
   rakuten.py          楽天ウェブサービス(新API)クライアント。Referer=okomen.workers.dev を付ける
-  qty.py              商品名から内容量を読む(量コスパ系で共通)
+  qty.py              商品名から内容量を読む(量比較系で共通)
   estat.py            e-Stat(政府統計)APIクライアント。キーは ESTAT_APP_ID
   industries.yaml     業界マスタ(産業大分類 C〜R ⇔ slug ⇔ TOPIX-17)。転職・株など業界軸のサイトで共有し、/gyokai/<slug>/ で相互リンクする
   templates/base.html PR表記・OGP・canonical・Cloudflare Web Analytics枠・フッター

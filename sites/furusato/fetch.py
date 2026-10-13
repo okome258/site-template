@@ -1,4 +1,4 @@
-"""ふるさと納税 量コスパ比較: 楽天市場から返礼品を集め、寄付1万円あたりの量でランキングする。"""
+"""ふるさと納税 量くらべ: 楽天市場から返礼品を集め、寄付1万円あたりの量でランキングする。"""
 
 from __future__ import annotations
 
@@ -115,7 +115,7 @@ def update_history(path: Path, out: dict, today: str) -> None:
     """返礼品ごとに寄付額と内容量の記録を残し、前回から変わったものに印をつける。
 
     履歴は値が変わった日だけ追記する(毎日同じ値なら増えない)。
-    item["change"] = {"price": 旧寄付額, "qty": 旧内容量, "since": 変わる前の記録日, "per10k_pct": 量コスパの増減%}
+    item["change"] = {"price": 旧寄付額, "qty": 旧内容量, "since": 変わる前の記録日, "per10k_pct": 1万円あたりの量の増減%}
     """
     hist = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     for cid, r in out.items():
@@ -207,7 +207,7 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
                   "per10k_s": f"{it['per10k']:,.{d}f}", "qty_s": f"{it['qty']:g}",
                   "town": it.get("town") or it["shop"], "url": it["url"]}
                  for it in r.get("items", [])]
-        # 上限額ごとの1位だけ分かればよいので「より安くて量コスパが上の品が無いもの」だけ残す(ページを軽く)
+        # 上限額ごとの1位だけ分かればよいので「より安くて1万円あたりの量が多い品が無いもの」だけ残す(ページを軽く)
         front, best = [], -1.0
         for it in sorted(items, key=lambda x: (x["price"], -x["per10k"])):
             if it["per10k"] > best:
@@ -248,7 +248,7 @@ def _portals_page(data: dict) -> dict:
     checked = max((str(p.get("checked", "")) for p in portals), default="")
     return {"path": "portals/index.html", "template": "portals.html",
             "title": "ふるさと納税サイト比較｜ポイント禁止後の代わりの特典とメリット・デメリット",
-            "description": "2025年10月のポイント禁止後、楽天・ふるなび・au PAY・Yahoo!・ふるさとチョイス・さとふる・Amazonがポイントの代わりにやっていること(決済の増量・カード還元など)を、メリット・デメリット付きで比較。",
+            "description": "2025年10月のポイント禁止後、楽天・ふるなび・au PAY・Yahoo!・ふるさとチョイス・さとふる・Amazonがポイントの代わりにやっていること(決済の増量・カードのポイントなど)を、メリット・デメリット付きで比較。",
             "context": {"portals": portals, "checked": checked}, "changefreq": "weekly"}
 
 
@@ -298,7 +298,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
            "pref_counts": pref_counts, "top_n_map": TOP_N_MAP}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
-           "title": f"ふるさと納税 コスパランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
+           "title": f"ふるさと納税 内容量ランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})
         ym = _ym(data)
@@ -310,11 +310,11 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         ps.append({
             "path": f"c/{c['id']}/index.html",
             "template": "category.html",
-            "title": f"{c['name']}のふるさと納税 量コスパランキング【{ym}】",
+            "title": f"{c['name']}のふるさと納税 内容量ランキング【{ym}】",
             "description": desc,
             "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym, "jsonld": {
                 "@context": "https://schema.org", "@type": "ItemList",
-                "name": f"{c['name']}のふるさと納税 量コスパランキング",
+                "name": f"{c['name']}のふるさと納税 内容量ランキング",
                 "itemListElement": [
                     {"@type": "ListItem", "position": i + 1, "name": it["name"][:100], "url": it["url"]}
                     for i, it in enumerate(r.get("items", [])[:10])]}},
@@ -336,11 +336,11 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         near = [] if rows else allrows[:5]  # 上位に無い県は、順位が良い順に最大5件
         if rows:
             names = "・".join(dict.fromkeys(r["cat"]["name"] for r in rows[:5]))
-            desc = f"楽天ふるさと納税で{p}の返礼品が量コスパ上位{TOP_N_MAP}位に入ったカテゴリは{n}つ({names}など)。"
+            desc = f"楽天ふるさと納税で{p}の返礼品が内容量ランキング上位{TOP_N_MAP}位に入ったカテゴリは{n}つ({names}など)。"
         else:
             desc = f"楽天ふるさと納税の{p}の返礼品を、寄付1万円あたりの量で比べたときの順位。"
         ps.append({"path": f"pref/{SLUGS[p]}/index.html", "template": "pref.html",
-                   "title": f"{p}のふるさと納税 量コスパ返礼品【{_ym(data)}】",
+                   "title": f"{p}のふるさと納税 量の多い返礼品【{_ym(data)}】",
                    "description": desc + "毎日自動更新。",
                    "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near}})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",

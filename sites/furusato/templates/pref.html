@@ -4,11 +4,11 @@
 <div class="pref-head">
   {{ jp_mini(pref) }}
   <div>
-    <h1>{{ pref }}のふるさと納税 量コスパ返礼品</h1>
+    <h1>{{ pref }}のふるさと納税 量の多い返礼品</h1>
     {% if rows %}
-    <p class="lead">{{ pref }}の返礼品が、カテゴリ別の量コスパで<b>上位{{ nav.top_n_map }}位</b>に入っているのは{{ rows | length }}カテゴリです。</p>
+    <p class="lead">{{ pref }}の返礼品が、カテゴリ別の内容量ランキングで<b>上位{{ nav.top_n_map }}位</b>に入っているのは{{ rows | length }}カテゴリです。</p>
     {% else %}
-    <p class="lead">今は、{{ pref }}の返礼品で量コスパ上位{{ nav.top_n_map }}位に入っているものはありません。ランキングは毎日更新されるので、入れ替わることがあります。</p>
+    <p class="lead">今は、{{ pref }}の返礼品で内容量ランキング上位{{ nav.top_n_map }}位に入っているものはありません。ランキングは毎日更新されるので、入れ替わることがあります。</p>
     {% endif %}
   </div>
 </div>
