@@ -9,7 +9,7 @@ site:
   base_url: "https://furusato.otokuest.com"
   theme_color: "#b23a2a"   # 紅(紅白でおめでたい)
   google_site_verification: "SC7yeTNVBtuerKfU-OZfA9tPcD6pXcqacd6m4AzjHY8"  # Search Console
-  cf_analytics_token: "51a79abed12a41eea0d2cb216a642808"   # Cloudflare Web Analytics
+  cf_analytics_token: "f09afa37efab46c986bbd62b7770e255"   # Cloudflare Web Analytics
   operator: "ふるさと納税 量くらべ"
   amazon_tag: ""   # AmazonアソシエイトのトラッキングID(例: okome-22)。入れるとAmazonリンクがPR付きのアフィリンクになる
 
