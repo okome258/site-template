@@ -232,9 +232,9 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
 
 AUPAY_A8 = "https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM"
 AUPAY_A8_IMG = "https://www15.a8.net/0.gif?a8mat=4BECH2+BOC3EQ+54OC+5YJRM"
-# バリューコマースのLinkSwitchで自動的にアフィリンクに変わる(または承認後に変わる)サイト。
+# VCのLinkSwitch・A8のリンクマネージャーで自動的にアフィリンクに変わる(または承認後に変わる)サイト。
 # 承認された瞬間にPR表記なしの広告にならないよう、提携待ちのものも先にPR表記をつけておく
-LINKSWITCH_PORTALS = {"furulab", "honpo", "furunavi", "choice", "yahoo"}
+LINKSWITCH_PORTALS = {"furulab", "honpo", "furunavi", "choice", "yahoo", "satofull"}
 
 
 def _portals_page(data: dict) -> dict:

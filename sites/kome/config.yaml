@@ -6,6 +6,7 @@ site:
   base_url: "https://kome.otokuest.com"
   theme_color: "#8a6d1f"
   cf_analytics_token: ""
+  a8linkmgr_id: "o4jHaYFl8Dl7jX4u4BIH"   # A8.net リンクマネージャー(会員共通)
   operator: "お米の最安値ウォッチ"
 
 # 取得設定(キーワード数 × sorts × pages 回 API を呼ぶ。1秒1回)
