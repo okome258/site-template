@@ -303,7 +303,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
            "pref_counts": pref_counts, "top_n_map": TOP_N_MAP}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
-           "title": f"ふるさと納税 内容量ランキング｜寄付1万円あたりの量で比較【{_ym(data)}】"}]
+           "title": f"ふるさと納税 量くらべ｜寄付1万円あたりの内容量ランキング【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})
         ym = _ym(data)
