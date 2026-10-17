@@ -111,3 +111,34 @@ portals:
     checked: 2026-10-11
     source_type: secondary
     source: https://appllio.com/amazon-primeappreciation-furusatomatsuri-week
+
+  - id: furulab
+    url: https://furusato.asahi.co.jp/
+    name: ふるラボ
+    standing: 朝日放送テレビが運営。ポイントや増量の代わりに、テレビ番組での返礼品紹介や、番組と地域で共同開発した返礼品を前に出している
+    campaign: 金銭的な特典は今回の調査では見当たらず(要公式確認)
+    merit:
+      - 旅番組などで紹介された返礼品を探しやすい
+      - 動画や特集ページで、地域や返礼品の背景を知ってから選べる
+    demerit:
+      - 増量・ポイント系の特典は目立たない
+      - 後発のため、大手より掲載数は少なめ
+    suited: テレビで見た返礼品や、地域の話を知ってから寄付したい人
+    checked: 2026-10-17
+    source_type: official
+    source: https://netshop.impress.co.jp/r/prtimes/items/000000068.000062174
+
+  - id: honpo
+    url: https://furusatohonpo.jp/
+    name: ふるさと本舗
+    standing: 常設の代わりの特典は見当たらず、期間限定のキャンペーンで対応
+    campaign: 2026年10月31日まで、寄付時にキャンペーンコードを入れてアンケートに答えるとAmazonギフト券500円分という情報あり(要公式確認)
+    merit:
+      - 「おいしい」を前に出した食べ物中心の品ぞろえ
+    demerit:
+      - 常設の増量・ポイント系の特典はない
+      - キャンペーンは期間と条件つき
+    suited: 食べ物の返礼品を中心に探したい人
+    checked: 2026-10-17
+    source_type: secondary
+    source: https://furu-sato.com/magazine/42750/
