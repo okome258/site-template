@@ -24,6 +24,7 @@
 </p>
 {% endif %}
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
+{% if cat_changes %}<p class="chg-note"><a href="{{ page.root }}changes/">{{ cat.name }}で寄付額・内容量が変わった返礼品が{{ cat_changes | length }}件あります（{% for x in cat_changes[:2] %}{{ x.town or '' }}{{ x.kind }}{% if not loop.last %}、{% endif %}{% endfor %}など）→ 変更履歴を見る</a></p>{% endif %}
 
 {% set mk = (data.market or {}).get("items", {}).get(cat.id) %}
 {% if mk %}<p class="mk-src small">「お店で買うと」は、総務省 小売物価統計調査（{{ data.market.area }}・{{ mk.ym }}）の「{{ mk.name }}」の平均価格 {{ mk.yen | yen }}／{{ mk.per }} で換算した目安です。品種・部位・等級によって実際の値段は変わります。</p>{% endif %}

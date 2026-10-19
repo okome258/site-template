@@ -16,6 +16,7 @@
   <a href="{{ page.root }}other/" {% if is_other %}class="on"{% endif %}>その他{% if cat is defined and cat in nav.others %}（{{ cat.name }}）{% endif %}</a>
   <a href="{{ page.root }}simulator/" class="sim-tab{% if page.path == 'simulator/index.html' %} on{% endif %}">上限シミュレーター</a>
   <a href="{{ page.root }}portals/" {% if page.path == 'portals/index.html' %}class="on"{% endif %}>サイト比較</a>
+  <a href="{{ page.root }}changes/" {% if page.path == 'changes/index.html' %}class="on"{% endif %}>値上げ・減量</a>
 </nav></div>
 {% endblock %}
 {% block side %}

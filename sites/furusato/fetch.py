@@ -122,6 +122,7 @@ def update_history(path: Path, out: dict, today: str) -> None:
         for it in r.get("items", []):
             h = hist.setdefault(it["code"], {"cat": cid, "first": today, "h": []})
             h["cat"], h["name"], h["last"] = cid, it["name"][:80], today
+            h["url"], h["town"] = it["url"], it.get("town") or it.get("shop", "")
             rec = [today, it["price"], it["qty"]]
             if not h["h"] or h["h"][-1][1:] != rec[1:]:
                 h["h"].append(rec)
@@ -263,6 +264,57 @@ def _portals_page(data: dict) -> dict:
             "context": {"portals": portals, "checked": checked}, "changefreq": "weekly"}
 
 
+def _kind(p0: int, q0: float, p1: int, q1: float) -> tuple[str, str]:
+    """変更の種類と、受け取る側にとって良い/悪いか(1万円あたりの量で判定)。"""
+    parts = []
+    if p1 != p0:
+        parts.append("値上げ" if p1 > p0 else "値下げ")
+    if q1 != q0:
+        parts.append("増量" if q1 > q0 else "減量")
+    old = q0 / p0 if p0 else 0
+    new = q1 / p1 if p1 else 0
+    tone = "good" if new > old else ("bad" if new < old else "same")
+    return "・".join(parts) or "変更", tone
+
+
+def _changes(cfg: dict, data: dict, cats: list) -> list[dict]:
+    """history.json から、寄付額か内容量が変わった返礼品を新しい順に。"""
+    path = cfg["_dir"] / "data" / "history.json"
+    if not path.exists():
+        return []
+    hist = json.loads(path.read_text(encoding="utf-8"))
+    byid = {c["id"]: c for c in cats}
+    cur = {it["code"]: it for r in data.get("categories", {}).values() for it in r.get("items", []) if it.get("code")}
+    rows = []
+    for code, h in hist.items():
+        c = byid.get(h.get("cat"))
+        if not c or len(h.get("h", [])) < 2:
+            continue
+        (d0, p0, q0), (d1, p1, q1) = h["h"][-2], h["h"][-1]
+        kind, tone = _kind(p0, q0, p1, q1)
+        old = q0 / p0 * 10000 if p0 else 0
+        new = q1 / p1 * 10000 if p1 else 0
+        it = cur.get(code, {})
+        rows.append({"cat": c, "name": h.get("name", ""), "town": it.get("town") or h.get("town") or "",
+                     "url": it.get("url") or h.get("url"), "image": it.get("image"), "date": d1, "since": d0,
+                     "p0": p0, "q0": q0, "p1": p1, "q1": q1, "kind": kind, "tone": tone,
+                     "pct": round((new / old - 1) * 100) if old else None})
+    rows.sort(key=lambda r: (r["date"], abs(r["pct"] or 0)), reverse=True)
+    return rows
+
+
+def _changes_page(cfg: dict, data: dict, cats: list, rows: list[dict]) -> dict:
+    up = sum(1 for r in rows if r["tone"] == "bad")
+    down = sum(1 for r in rows if r["tone"] == "good")
+    hist_start = cfg.get("history_start", "2026-10-10")
+    desc = (f"ふるさと納税の返礼品で、寄付額の値上げ・内容量の減量(実質値上げ)があったものを毎日自動で記録。"
+            f"{_ym(data)}時点で実質値上げ{up}件・お得になった{down}件。寄付前に変更前後の量と寄付額を確認できます。")
+    return {"path": "changes/index.html", "template": "changes.html",
+            "title": f"ふるさと納税の値上げ・減量まとめ｜返礼品の寄付額と内容量の変更履歴【{_ym(data)}】",
+            "description": desc,
+            "context": {"rows": rows, "up": up, "down": down, "hist_start": hist_start}, "changefreq": "daily"}
+
+
 def _season(cfg: dict, data: dict) -> dict | None:
     month = int((data.get("fetched_at") or "2026-10")[5:7])
     for s in cfg.get("seasons", []):
@@ -306,8 +358,10 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         season = {**season, "cats": [byid[i] for i in season["cats"] if i in byid]}
     bp = _by_pref(data, cats)
     pref_counts = {p: sum(1 for r in rows if r["rank"] <= TOP_N_MAP) for p, rows in bp.items()}
+    changes = _changes(cfg, data, cats)
     nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
-           "pref_counts": pref_counts, "top_n_map": TOP_N_MAP}
+           "pref_counts": pref_counts, "top_n_map": TOP_N_MAP,
+           "changes_n": len(changes), "changes_recent": changes[:5]}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
            "title": f"ふるさと納税 量くらべ｜コスパ最強の返礼品を寄付1万円あたりの量でランキング【{_ym(data)}】"}]
     for c in cats:
@@ -325,7 +379,8 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             "template": "category.html",
             "title": f"ふるさと納税 {c['name']}のコスパ・量ランキング{best}【{ym}】",
             "description": desc,
-            "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym, "jsonld": {
+            "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym,
+                        "cat_changes": [x for x in changes if x["cat"]["id"] == c["id"]][:5], "jsonld": {
                 "@context": "https://schema.org", "@type": "ItemList",
                 "name": f"{c['name']}のふるさと納税 内容量ランキング",
                 "itemListElement": [
@@ -335,6 +390,9 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     sim = _simulator_page(cfg, data, cats)
     sim["context"]["nav"] = nav
     ps.append(sim)
+    cp = _changes_page(cfg, data, cats, changes)
+    cp["context"].update({"cats": cats, "nav": nav})
+    ps.append(cp)
     pt = _portals_page(data)
     pt["context"].update({"cats": cats, "nav": nav})
     ps.append(pt)

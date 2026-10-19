@@ -1,0 +1,61 @@
+{% extends "_layout.html" %}
+{% block head %}
+<style>
+.chg-sum{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.chg-sum div{flex:1 1 140px;border-radius:10px;padding:10px 14px;background:var(--card,#fff);border:1px solid var(--line,#e5ddd3)}
+.chg-sum b{display:block;font-size:24px;font-family:var(--head)}
+.chg-sum .bad b{color:#a3401c}.chg-sum .good b{color:#1e6b34}
+.chg-list{list-style:none;padding:0;margin:0}
+.chg-row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line,#e5ddd3)}
+.chg-row img{width:64px;height:64px;object-fit:cover;border-radius:8px;flex:none}
+.chg-row .body{min-width:0;flex:1}
+.chg-row .nm{display:block;font-size:14px;line-height:1.45;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.chg-row .meta{font-size:12px;color:var(--muted);margin:2px 0}
+.chg-row .diff{font-size:14px;margin:4px 0 0}
+.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.badge.chg.same{background:#eee;color:#555}
+.chg-filter{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 4px}
+.chg-filter button{border:1px solid var(--line,#ccc);background:none;border-radius:99px;padding:4px 12px;font-size:13px;cursor:pointer;color:var(--ink)}
+.chg-filter button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+</style>
+{% endblock %}
+{% block content %}
+<h1>ふるさと納税の値上げ・減量まとめ</h1>
+<p class="lead">このサイトで比べている返礼品の<strong>寄付額</strong>と<strong>内容量</strong>を毎日記録し、変わったものを新しい順に並べています。量が同じでも寄付額が上がれば、実質的には値上げです。</p>
+
+<div class="chg-sum">
+  <div class="bad"><b>{{ up }}件</b>実質値上げ（1万円あたりの量が減った）</div>
+  <div class="good"><b>{{ down }}件</b>お得になった（1万円あたりの量が増えた）</div>
+</div>
+
+{% if rows %}
+<div class="chg-filter" role="group" aria-label="絞り込み">
+  <button type="button" class="on" data-f="all">すべて</button>
+  <button type="button" data-f="bad">実質値上げ</button>
+  <button type="button" data-f="good">お得になった</button>
+</div>
+<ol class="chg-list">
+{% for r in rows %}
+  <li class="chg-row" data-tone="{{ r.tone }}">
+    {% if r.image %}<img src="{{ r.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="64" height="64">{% endif %}
+    <div class="body">
+      <p class="meta"><span class="badge chg {{ r.tone }}">{{ r.kind }}{% if r.pct %} {{ '+' if r.pct > 0 else '' }}{{ r.pct }}%{% endif %}</span>
+        <a href="{{ page.root }}c/{{ r.cat.id }}/">{{ r.cat.name }}</a>{% if r.town %}・{{ r.town }}{% endif %}・{{ r.date | replace('-', '/') }}に変更</p>
+      {% if r.url %}<a class="nm" href="{{ r.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ r.name }}</a>{% else %}<span class="nm">{{ r.name }}</span>{% endif %}
+      <p class="diff">寄付額 {{ r.p0 | yen }} → <strong>{{ r.p1 | yen }}</strong>／内容量 {{ "%g" | format(r.q0) }} → <strong>{{ "%g" | format(r.q1) }}</strong>{{ r.cat.unit }}</p>
+    </div>
+  </li>
+{% endfor %}
+</ol>
+<script>
+(function(){var bs=document.querySelectorAll('.chg-filter button'),rs=document.querySelectorAll('.chg-row');
+bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.classList.toggle('on',x===b)});
+var f=b.getAttribute('data-f');rs.forEach(function(r){r.hidden=!(f==='all'||r.getAttribute('data-tone')===f)})})})})();
+</script>
+{% else %}
+<p>まだ変更は見つかっていません。毎日記録しているので、変わったものが出るとここに並びます。</p>
+{% endif %}
+
+<h2>このページの見方</h2>
+<p>記録は{{ hist_start | replace('-', '/') }}から。各カテゴリで量の多い上位の返礼品を毎日チェックし、前回から寄付額か内容量が変わった日を「変更日」としています。「+○%／−○%」は、寄付1万円あたりの量がどれだけ増えたか・減ったかです。</p>
+<p>楽天ふるさと納税の商品名・寄付額から機械的に記録しているため、表記の書き換えで変更と判定される場合があります。寄付前に必ずリンク先で最新の内容をご確認ください。</p>
+{% endblock %}
