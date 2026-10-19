@@ -2475,10 +2475,30 @@
      "vs_median": 0.72,
      "market_yen": 3400.0,
      "market_pct": 21
+    },
+    {
+     "code": "f072133-date:10000403",
+     "name": "福島県 伊達市産 伊達鶏むね肉 4kg ブランド鶏 銘柄鶏 惣菜 おつまみ グルメ チキン BBQ キャンプ バーベキューだてどり 高タンパク F20C-223",
+     "price": 31000,
+     "qty": 4.0,
+     "evidence": "4kg",
+     "per10k": 1.29,
+     "unit_price": 7750,
+     "shop": "福島県伊達市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t6ipo.ia330a0a.g00t6ipo.ia3314fa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff072133-date%2Ff20c-223%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff072133-date%2Fi%2F10000403%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "伊達市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f072133-date/cabinet/f20c-0200-0399/r_f20c_223_1.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.71,
+     "market_yen": 6480.0,
+     "market_pct": 21
     }
    ],
    "candidates": 167,
-   "ranked": 39,
+   "ranked": 38,
    "dropped": {
     "対象外の商品": 73,
     "選択式": 46,
@@ -3733,14 +3753,14 @@
      "market_pct": 15
     }
    ],
-   "candidates": 143,
+   "candidates": 141,
    "ranked": 33,
    "dropped": {
     "選択式": 44,
-    "対象外の商品": 53,
+    "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
-    "量が範囲外": 6
+    "量が範囲外": 5
    },
    "summary": {
     "median_per10k": 0.727,
@@ -15827,7 +15847,7 @@
      "review_avg": 4.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 6.25
+     "vs_median": 5.95
     },
     {
      "code": "f072044-iwaki:10001172",
@@ -15845,7 +15865,7 @@
      "review_avg": 4.72,
      "review_count": 29,
      "wakeari": false,
-     "vs_median": 4.46
+     "vs_median": 4.25
     },
     {
      "code": "f141305-kawasaki:10001163",
@@ -15863,7 +15883,7 @@
      "review_avg": 4.8,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 2.25
+     "vs_median": 2.14
     },
     {
      "code": "f141305-kawasaki:10001164",
@@ -15881,7 +15901,7 @@
      "review_avg": 4.83,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 2.14
+     "vs_median": 2.04
     },
     {
      "code": "f302015-wakayama:10004002",
@@ -15899,7 +15919,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.55
+     "vs_median": 1.47
     },
     {
      "code": "f302015-wakayama:10002488",
@@ -15917,7 +15937,7 @@
      "review_avg": 4.81,
      "review_count": 42,
      "wakeari": false,
-     "vs_median": 1.5
+     "vs_median": 1.43
     },
     {
      "code": "f302015-wakayama:10004003",
@@ -15935,7 +15955,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.45
+     "vs_median": 1.39
     },
     {
      "code": "f302015-wakayama:10002489",
@@ -15953,7 +15973,7 @@
      "review_avg": 4.88,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.4
+     "vs_median": 1.33
     },
     {
      "code": "f141305-kawasaki:10000890",
@@ -15971,7 +15991,7 @@
      "review_avg": 4.7,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.38
+     "vs_median": 1.31
     },
     {
      "code": "f082082-ryugasaki:10000930",
@@ -15989,7 +16009,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.25
+     "vs_median": 1.19
     },
     {
      "code": "f302015-wakayama:10003992",
@@ -16007,7 +16027,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.16
+     "vs_median": 1.11
     },
     {
      "code": "f102024-takasaki:10000228",
@@ -16025,7 +16045,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.0
     },
     {
      "code": "f102024-takasaki:10000227",
@@ -16043,7 +16063,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.05
+     "vs_median": 1.0
     },
     {
      "code": "f292010-nara:10000998",
@@ -16061,7 +16081,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 0.95
     },
     {
      "code": "f282286-kato:10000851",
@@ -16079,7 +16099,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.5
+     "vs_median": 0.48
     },
     {
      "code": "f282286-kato:10000680",
@@ -16097,7 +16117,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.39
+     "vs_median": 0.38
     },
     {
      "code": "f282286-kato:10000842",
@@ -16115,7 +16135,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.39
+     "vs_median": 0.37
     },
     {
      "code": "f282286-kato:10000224",
@@ -16133,7 +16153,7 @@
      "review_avg": 5.0,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 0.33
+     "vs_median": 0.32
     },
     {
      "code": "f282286-kato:10000852",
@@ -16151,7 +16171,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.3
+     "vs_median": 0.29
     },
     {
      "code": "f282286-kato:10000678",
@@ -16169,25 +16189,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.25
-    },
-    {
-     "code": "f282286-kato:10000854",
-     "name": "ファーファ ストーリー ドリーミー 洗濯用洗剤 液体 850g 詰め替え用 6個セット / ファーファ 無添加 洗濯洗剤 液体 洗剤 衣類用洗剤 詰め替え 部屋干し お花の香り 赤ちゃんから大人まで 日本製",
-     "price": 20000,
-     "qty": 0.85,
-     "evidence": "850g",
-     "per10k": 0.425,
-     "unit_price": 23529,
-     "shop": "兵庫県加東市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tdzoo.ia330fb0.g00tdzoo.ia331016/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff282286-kato%2F59721277%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff282286-kato%2Fi%2F10000854%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "加東市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f282286-kato/cabinet/product_page/product05/155259047.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.21
+     "vs_median": 0.24
     },
     {
      "code": "f282286-kato:10000681",
@@ -16205,7 +16207,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.2
+     "vs_median": 0.19
     },
     {
      "code": "f282286-kato:10000447",
@@ -16223,7 +16225,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.19
+     "vs_median": 0.18
     },
     {
      "code": "f292010-nara:10001744",
@@ -16241,7 +16243,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 0.16
+     "vs_median": 0.15
     },
     {
      "code": "f282286-kato:10000679",
@@ -16259,7 +16261,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.14
+     "vs_median": 0.13
     },
     {
      "code": "f282286-kato:10000843",
@@ -16277,7 +16279,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.11
+     "vs_median": 0.1
     },
     {
      "code": "f282286-kato:10000446",
@@ -16299,7 +16301,7 @@
     }
    ],
    "candidates": 74,
-   "ranked": 27,
+   "ranked": 26,
    "dropped": {
     "選択式": 17,
     "量なし": 11,
@@ -16307,7 +16309,7 @@
     "量が複数": 1
    },
    "summary": {
-    "median_per10k": 2.0,
+    "median_per10k": 2.1,
     "median_unit_price": 5000,
     "min_unit_price": 800,
     "max_unit_price": 50000,
@@ -16788,5 +16790,5 @@
    }
   }
  },
- "fetched_at": "2026-10-20T02:00+09:00"
+ "fetched_at": "2026-10-20T02:08+09:00"
 }
