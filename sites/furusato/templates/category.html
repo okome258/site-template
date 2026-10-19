@@ -5,7 +5,7 @@
 <style>.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.chg-note{margin:6px 0 0;color:var(--muted)}.stats .mk dd small{display:block;font-size:11px;color:var(--muted)}.mk-src{color:var(--muted)}</style>
 {% endblock %}
 {% block content %}
-<h1>{{ cat.name }}の内容量ランキング</h1>
+<h1>ふるさと納税 {{ cat.name }}の量が多い順ランキング</h1>
 <p class="lead">楽天ふるさと納税の{{ cat.name }}{{ rank.ranked or 0 }}件を、寄付1万円あたりの量（{{ cat.unit }}）が多い順に並べています。</p>
 {% set s = rank.summary or {} %}
 {% if s %}

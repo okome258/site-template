@@ -194,6 +194,12 @@ def _fmt(v: float) -> str:
     return f"{v:g}"
 
 
+def _per(c: dict, v: float) -> str:
+    """1万円あたりの量をページ内の表示(num フィルタ)と同じ桁で。kg・L は小数1桁、個数・g は整数。"""
+    d = 1 if (c.get("unit_kind") != "count" and "scale" not in c) else 0
+    return f"{v:,.{d}f}"
+
+
 def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
     """控除上限額シミュレーター。税制の年は寄付する年(取得日の年)。"""
     year = int((data.get("fetched_at") or "2026")[:4])
@@ -303,19 +309,21 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
            "pref_counts": pref_counts, "top_n_map": TOP_N_MAP}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
-           "title": f"ふるさと納税 量くらべ｜寄付1万円あたりの内容量ランキング【{_ym(data)}】"}]
+           "title": f"ふるさと納税 量くらべ｜コスパ最強の返礼品を寄付1万円あたりの量でランキング【{_ym(data)}】"}]
     for c in cats:
         r = data["categories"].get(c["id"], {"items": []})
         ym = _ym(data)
         top = r["items"][0] if r.get("items") else None
-        desc = f"楽天ふるさと納税の{c['name']}{r.get('ranked', 0)}件を「寄付1万円あたりの量」で比較。"
+        desc = f"量が多い・コスパの良い{c['name']}の返礼品はどれ？楽天ふるさと納税の{c['name']}{r.get('ranked', 0)}件を「寄付1万円あたりの量」で比較。"
         if top:
             desc += f"1位は{top['town'] or top['shop']}の{_fmt(top['qty'])}{c['unit']}・寄付{top['price']:,}円。"
         desc += "毎日自動更新。"
+        # タイトルは実際に検索される言葉(ふるさと納税 ○○ コスパ/量)を先頭に。1位の量を入れてクリックされやすく
+        best = f"｜1万円で最大{_per(c, top['per10k'])}{c['unit']}" if top else ""
         ps.append({
             "path": f"c/{c['id']}/index.html",
             "template": "category.html",
-            "title": f"{c['name']}のふるさと納税 内容量ランキング【{ym}】",
+            "title": f"ふるさと納税 {c['name']}のコスパ・量ランキング{best}【{ym}】",
             "description": desc,
             "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym, "jsonld": {
                 "@context": "https://schema.org", "@type": "ItemList",
@@ -345,7 +353,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         else:
             desc = f"楽天ふるさと納税の{p}の返礼品を、寄付1万円あたりの量で比べたときの順位。"
         ps.append({"path": f"pref/{SLUGS[p]}/index.html", "template": "pref.html",
-                   "title": f"{p}のふるさと納税 量の多い返礼品【{_ym(data)}】",
+                   "title": f"{p}のふるさと納税 コスパの良い返礼品(量が多い順)【{_ym(data)}】",
                    "description": desc + "毎日自動更新。",
                    "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near}})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
