@@ -614,8 +614,8 @@
    "ranked": 43,
    "dropped": {
     "選択式": 92,
-    "量なし": 2,
     "量が複数": 13,
+    "量なし": 2,
     "対象外の商品": 9
    },
    "summary": {
@@ -890,26 +890,6 @@
      "market_pct": 72
     },
     {
-     "code": "f212172-hida:10000349",
-     "name": "【訳あり】飛騨牛 こま切れ 1kg 小分け 500g 500g×2 小間切れ こまぎれ 切り落とし 切落し 訳アリ わけあり ワケアリ 不揃い 牛 肉 牛肉 国産牛 黒毛和牛 牛丼 焼肉 冷凍発送 時間指定 飛騨牛 飛騨市",
-     "price": 14000,
-     "qty": 1.0,
-     "evidence": "500g×2",
-     "per10k": 0.714,
-     "unit_price": 14000,
-     "shop": "岐阜県飛騨市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sl9no.ia330cb5.g00sl9no.ia331887/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff212172-hida%2F0020-0057%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff212172-hida%2Fi%2F10000349%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "飛騨市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f212172-hida/cabinet/ja/r_q3006_sku.jpg?_ex=240x240",
-     "review_avg": 4.79,
-     "review_count": 116,
-     "wakeari": true,
-     "vs_median": 1.28,
-     "market_yen": 9380.0,
-     "market_pct": 67
-    },
-    {
      "code": "f452017-miyazaki:10001618",
      "name": "宮崎県産黒毛和牛パイン牛 切り落とし肉(肩・肩ロース)1kg 500g×2 小分け パック 冷凍 肉 お肉 精肉 牛肉 牛 宮崎県産 国産 黒毛和牛 パイン牛 和牛 国産牛 牛肩 牛肩ロース 切り落とし 贈答 贈り物 ギフト プレゼント グルメ お取り寄せ 宮崎県 宮崎市",
      "price": 14000,
@@ -1097,6 +1077,26 @@
      "market_pct": 58
     },
     {
+     "code": "f433691-nagomi:10000594",
+     "name": "訳あり A5 ランク 和王 赤身肉 小間切れ 800g 牛丼 しゃぶしゃぶ a5 黒毛和牛 お肉 肉 牛肉 熊本県産 送料無料",
+     "price": 13000,
+     "qty": 0.8,
+     "evidence": "800g",
+     "per10k": 0.615,
+     "unit_price": 16250,
+     "shop": "熊本県和水町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sugvo.ia330e5f.g00sugvo.ia3319e1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff433691-nagomi%2Fnt4%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff433691-nagomi%2Fi%2F10000594%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "和水町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f433691-nagomi/cabinet/09341757/imgrc0115931221.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": true,
+     "vs_median": 1.11,
+     "market_yen": 7500.0,
+     "market_pct": 58
+    },
+    {
      "code": "f443417-hiji:10000537",
      "name": "豊後牛 牛肉の切り落とし (900g) ギフトにもおすすめ!_ お肉 黒毛和牛 和牛 肉 焼肉 焼き肉 すき焼き 小分け 切落し プレゼント 贈り物 赤身 【配送不可地域：離島】【1108636】",
      "price": 15000,
@@ -1237,11 +1237,11 @@
      "market_pct": 51
     }
    ],
-   "candidates": 155,
+   "candidates": 156,
    "ranked": 57,
    "dropped": {
     "対象外の商品": 38,
-    "選択式": 52,
+    "選択式": 53,
     "量が複数": 6,
     "量なし": 2
    },
@@ -1250,9 +1250,9 @@
     "median_unit_price": 18000,
     "min_unit_price": 8000,
     "max_unit_price": 37500,
-    "towns": 50
+    "towns": 49
    },
-   "popularity": 1813
+   "popularity": 1697
   },
   "pork": {
    "items": [
@@ -2477,10 +2477,10 @@
      "market_pct": 21
     }
    ],
-   "candidates": 168,
-   "ranked": 38,
+   "candidates": 167,
+   "ranked": 39,
    "dropped": {
-    "対象外の商品": 75,
+    "対象外の商品": 73,
     "選択式": 46,
     "量なし": 5,
     "量が複数": 3,
@@ -2491,7 +2491,7 @@
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 23
+    "towns": 24
    },
    "popularity": 1529
   },
@@ -3626,6 +3626,33 @@
      "market_pct": 23
     },
     {
+     "code": "f412040-taku:10000910",
+     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
+     "price": 18000,
+     "qty": 0.9,
+     "evidence": "合計900g",
+     "per10k": 0.5,
+     "unit_price": 20000,
+     "shop": "佐賀県多久市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "多久市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.69,
+     "change": {
+      "price": 12000,
+      "qty": 0.9,
+      "since": "2026-10-10",
+      "changed": "2026-10-17",
+      "per10k_pct": -33
+     },
+     "market_yen": 3430.0,
+     "market_pct": 19
+    },
+    {
      "code": "f212130-kakamigahara:10001102",
      "name": "天然 大粒 むきえび 340g 背ワタ処理済 エビ えび 海老 冷凍 剥きえび 下処理済み ふるさと納税むきえび",
      "price": 7000,
@@ -3704,32 +3731,12 @@
      "vs_median": 0.55,
      "market_yen": 2290.0,
      "market_pct": 15
-    },
-    {
-     "code": "f014842-haboro:10000090",
-     "name": "冷凍むき甘えび1kg 500g×2パック えび エビ 海老 甘えび 甘エビ 甘海老 1kg 1キロ 1キロ 1kg 冷凍 海産物 魚介類 刺身 丼 時短 すぐに使える 便利 北海道 羽幌町 羽幌 ふるさと納税【38001AA0101】",
-     "price": 26000,
-     "qty": 1.0,
-     "evidence": "500g×2",
-     "per10k": 0.385,
-     "unit_price": 26000,
-     "shop": "北海道羽幌町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00svlio.ia3302f1.g00svlio.ia331752/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff014842-haboro%2Fc-30-2%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff014842-haboro%2Fi%2F10000090%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "羽幌町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f014842-haboro/cabinet/henreihin/175/1750068_28_155331.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.53,
-     "market_yen": 3810.0,
-     "market_pct": 15
     }
    ],
    "candidates": 142,
-   "ranked": 33,
+   "ranked": 34,
    "dropped": {
-    "選択式": 44,
+    "選択式": 43,
     "対象外の商品": 52,
     "量なし": 5,
     "量が複数": 2,
@@ -3740,7 +3747,7 @@
     "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 34000,
-    "towns": 24
+    "towns": 25
    },
    "popularity": 1116
   },
@@ -6455,8 +6462,8 @@
    "candidates": 88,
    "ranked": 22,
    "dropped": {
-    "選択式": 43,
     "量が複数": 7,
+    "選択式": 43,
     "量が範囲外": 9,
     "量なし": 1,
     "対象外の商品": 6
@@ -8917,8 +8924,8 @@
    "candidates": 96,
    "ranked": 20,
    "dropped": {
-    "量なし": 29,
-    "選択式": 43,
+    "量なし": 30,
+    "選択式": 42,
     "量が複数": 2,
     "対象外の商品": 2
    },
@@ -11303,9 +11310,9 @@
    "candidates": 100,
    "ranked": 23,
    "dropped": {
-    "選択式": 32,
+    "選択式": 33,
     "対象外の商品": 33,
-    "量なし": 8,
+    "量なし": 7,
     "量が複数": 2,
     "量が範囲外": 2
    },
@@ -12612,10 +12619,10 @@
    "candidates": 94,
    "ranked": 26,
    "dropped": {
+    "量なし": 14,
     "選択式": 35,
     "量が複数": 8,
-    "対象外の商品": 11,
-    "量なし": 14
+    "対象外の商品": 11
    },
    "summary": {
     "median_per10k": 1.0,
@@ -13389,12 +13396,12 @@
      "market_pct": 21
     }
    ],
-   "candidates": 95,
+   "candidates": 96,
    "ranked": 14,
    "dropped": {
-    "選択式": 63,
-    "量が複数": 6,
+    "選択式": 64,
     "量なし": 8,
+    "量が複数": 6,
     "対象外の商品": 4
    },
    "summary": {
@@ -13553,11 +13560,11 @@
      "vs_median": 0.83
     }
    ],
-   "candidates": 95,
+   "candidates": 94,
    "ranked": 8,
    "dropped": {
     "量なし": 26,
-    "選択式": 51,
+    "選択式": 50,
     "対象外の商品": 10
    },
    "summary": {
@@ -16335,10 +16342,10 @@
    "candidates": 74,
    "ranked": 27,
    "dropped": {
-    "選択式": 17,
-    "量なし": 12,
-    "対象外の商品": 17,
-    "量が複数": 1
+    "選択式": 16,
+    "量なし": 11,
+    "対象外の商品": 18,
+    "量が複数": 2
    },
    "summary": {
     "median_per10k": 2.0,
@@ -16822,5 +16829,5 @@
    }
   }
  },
- "fetched_at": "2026-10-20T07:28+09:00"
+ "fetched_at": "2026-10-20T09:00+09:00"
 }
