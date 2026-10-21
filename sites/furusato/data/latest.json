@@ -2371,26 +2371,6 @@
      "market_pct": 27
     },
     {
-     "code": "f342041-mihara:10000949",
-     "name": "【テレビで話題！】「みはら神明鶏」ムネ肉・皮無しミンチ 合計3kg(250g×12パック) 低脂質 高タンパク 低カロリー アスリート トレーニング ダイエット 筋トレ 鶏肉 むねにく 鶏むね肉 むね肉 皮なし 鶏 ミンチ 小分け 広島県産 神明鶏 012021",
-     "price": 18000,
-     "qty": 3.0,
-     "evidence": "合計3kg",
-     "per10k": 1.667,
-     "unit_price": 6000,
-     "shop": "広島県三原市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tg6qo.ia330179.g00tg6qo.ia331d3f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff342041-mihara%2F53110895%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff342041-mihara%2Fi%2F10000949%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "三原市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f342041-mihara/cabinet/10810121/68f59ba7cedd88078810.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.92,
-     "market_yen": 4860.0,
-     "market_pct": 27
-    },
-    {
      "code": "f212059-seki:10004151",
      "name": "恵那どり むねミンチ肉 4.2kg バラ凍　(420g×10パック)　冷凍 鶏肉 ひき肉 むね肉 とり肉 鶏むね肉 業務用 原料肉 銘柄鶏 胸 パラパラ ミンチ肉 鶏ミンチ くっつかない 小分け 大容量【配送不可地域：離島・一部山間部等】",
      "price": 27000,
@@ -2489,12 +2469,32 @@
      "vs_median": 0.79,
      "market_yen": 3240.0,
      "market_pct": 23
+    },
+    {
+     "code": "f212059-seki:10004159",
+     "name": "恵那どり むねミンチ肉 2.1kg　バラ凍　(420g×5パック)　冷凍 鶏肉 ひき肉 むね肉 とり肉 鶏むね肉 業務用 原料肉 銘柄鶏 胸 パラパラ ミンチ肉 鶏ミンチ くっつかない 小分け【配送不可地域：離島・一部山間部等】",
+     "price": 16000,
+     "qty": 2.1,
+     "evidence": "420g×5",
+     "per10k": 1.313,
+     "unit_price": 7619,
+     "shop": "岐阜県関市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sc9no.ia3302ea.g00sc9no.ia3313aa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff212059-seki%2F10004145%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff212059-seki%2Fi%2F10004159%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "関市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f212059-seki/cabinet/tonodelica/10004145_s1_760_760.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 2,
+     "wakeari": false,
+     "vs_median": 0.72,
+     "market_yen": 3400.0,
+     "market_pct": 21
     }
    ],
    "candidates": 169,
-   "ranked": 42,
+   "ranked": 41,
    "dropped": {
-    "対象外の商品": 73,
+    "対象外の商品": 74,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -2502,7 +2502,7 @@
    },
    "summary": {
     "median_per10k": 1.818,
-    "median_unit_price": 5700,
+    "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
     "towns": 26
@@ -5560,8 +5560,8 @@
    "ranked": 19,
    "dropped": {
     "選択式": 47,
-    "対象外の商品": 25,
     "量が複数": 11,
+    "対象外の商品": 25,
     "量なし": 1,
     "量が範囲外": 1
    },
@@ -5817,6 +5817,26 @@
      "market_pct": 43
     },
     {
+     "code": "f022021-hirosaki:10000191",
+     "name": "【26年9月〜発送】りんご 旬のリンゴ詰め合わせ【家庭用】約5kg 糖度13度以上 [アップル おいしい りんご 果実 果物 詰め合わせ 詰合 糖度 美味 林檎]",
+     "price": 14000,
+     "qty": 5.0,
+     "evidence": "5kg",
+     "per10k": 3.571,
+     "unit_price": 2800,
+     "shop": "青森県弘前市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tub1o.ia330218.g00tub1o.ia331397/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff022021-hirosaki%2F52280296%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff022021-hirosaki%2Fi%2F10000191%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "弘前市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f022021-hirosaki/cabinet/img/p/rfk/24_rfk-010501.jpg?_ex=240x240",
+     "review_avg": 3.71,
+     "review_count": 7,
+     "wakeari": false,
+     "vs_median": 1.0,
+     "market_yen": 5980.0,
+     "market_pct": 43
+    },
+    {
      "code": "f062065-sagae:10000720",
      "name": "《先行予約》 令和8年産 りんご サンふじ 秀品 5kg（12 - 20玉） 山形県産 【2026年11月頃より順次発送予定】 2026年産 山形産 お取り寄せ ご当地 特産 産地直送 果物 フルーツ 新鮮 季節 林檎 デザート おやつ 山形県産 山形産 5キロ",
      "price": 15000,
@@ -6058,22 +6078,22 @@
     }
    ],
    "candidates": 101,
-   "ranked": 24,
+   "ranked": 25,
    "dropped": {
-    "選択式": 57,
     "量なし": 6,
+    "選択式": 56,
     "量が複数": 3,
     "対象外の商品": 10,
     "量が範囲外": 1
    },
    "summary": {
     "median_per10k": 3.571,
-    "median_unit_price": 3000,
+    "median_unit_price": 2800,
     "min_unit_price": 1400,
     "max_unit_price": 8000,
     "towns": 10
    },
-   "popularity": 932
+   "popularity": 939
   },
   "toilet": {
    "items": [
@@ -6420,11 +6440,11 @@
      "vs_median": 0.15
     }
    ],
-   "candidates": 87,
+   "candidates": 86,
    "ranked": 19,
    "dropped": {
-    "選択式": 43,
     "量が複数": 8,
+    "選択式": 42,
     "量なし": 1,
     "対象外の商品": 7,
     "量が範囲外": 9
@@ -13303,12 +13323,12 @@
      "market_pct": 21
     }
    ],
-   "candidates": 98,
+   "candidates": 97,
    "ranked": 15,
    "dropped": {
     "選択式": 65,
     "量なし": 8,
-    "量が複数": 6,
+    "量が複数": 5,
     "対象外の商品": 4
    },
    "summary": {
@@ -15740,9 +15760,9 @@
     }
    ],
    "candidates": 166,
-   "ranked": 59,
+   "ranked": 60,
    "dropped": {
-    "対象外の商品": 80,
+    "対象外の商品": 79,
     "選択式": 17,
     "量なし": 7,
     "量が複数": 2,
@@ -15750,12 +15770,12 @@
    },
    "summary": {
     "median_per10k": 0.947,
-    "median_unit_price": 10556,
+    "median_unit_price": 11111,
     "min_unit_price": 2500,
     "max_unit_price": 76389,
-    "towns": 31
+    "towns": 32
    },
-   "popularity": 426
+   "popularity": 427
   },
   "detergent": {
    "items": [
@@ -16231,8 +16251,8 @@
    "candidates": 75,
    "ranked": 26,
    "dropped": {
-    "選択式": 15,
-    "量なし": 14,
+    "選択式": 16,
+    "量なし": 13,
     "対象外の商品": 18,
     "量が複数": 2
    },
@@ -16700,5 +16720,5 @@
    }
   }
  },
- "fetched_at": "2026-10-22T06:50+09:00"
+ "fetched_at": "2026-10-22T08:43+09:00"
 }
