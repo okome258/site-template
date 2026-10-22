@@ -75,7 +75,7 @@
 
 {% if cfg.job_links %}
 <h2>{{ row.ind.short }}業界への転職を考えるなら</h2>
-<p class="jobs">{% for j in cfg.job_links %}<a class="btn" href="{{ j.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ j.name }}</a>{% endfor %}</p>
+<p class="jobs">{% for j in cfg.job_links %}<a class="btn" href="{{ j.url }}" target="_blank" rel="sponsored noopener">{{ j.name }}</a>{% endfor %}</p>
 {% endif %}
 
 {% if focus_rank %}

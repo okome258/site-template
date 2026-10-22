@@ -40,7 +40,7 @@
     <div class="body">
       <p class="meta"><span class="badge chg {{ r.tone }}">{{ r.kind }}{% if r.pct %} {{ '+' if r.pct > 0 else '' }}{{ r.pct }}%{% endif %}</span>
         <a href="{{ page.root }}c/{{ r.cat.id }}/">{{ r.cat.name }}</a>{% if r.town %}・{{ r.town }}{% endif %}・{{ r.date | replace('-', '/') }}に変更</p>
-      {% if r.url %}<a class="nm" href="{{ r.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ r.name }}</a>{% else %}<span class="nm">{{ r.name }}</span>{% endif %}
+      {% if r.url %}<a class="nm" href="{{ r.url }}" target="_blank" rel="sponsored noopener">{{ r.name }}</a>{% else %}<span class="nm">{{ r.name }}</span>{% endif %}
       <p class="diff">寄付額 {{ r.p0 | yen }} → <strong>{{ r.p1 | yen }}</strong>／内容量 {{ "%g" | format(r.q0) }} → <strong>{{ "%g" | format(r.q1) }}</strong>{{ r.cat.unit }}</p>
     </div>
   </li>

@@ -53,7 +53,7 @@
       {% if it.market_yen %}<div class="mk"><dt>お店で買うと</dt><dd>約{{ it.market_yen | yen }}<small>（寄付額の{{ it.market_pct }}%分）</small></dd></div>{% endif %}
     </dl>
     {% if it.change and it.change.per10k_pct %}<p class="chg-note small">{{ it.change.changed | replace('-', '/') }}に変更：{% if it.change.price != it.price %}寄付額 {{ it.change.price | yen }} → {{ it.price | yen }}{% endif %}{% if it.change.price != it.price and it.change.qty != it.qty %}、{% endif %}{% if it.change.qty != it.qty %}内容量 {{ "%g" | format(it.change.qty) }} → {{ "%g" | format(it.qty) }}{{ cat.unit }}{% endif %}</p>{% endif %}
-    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>{{ it.portal or '楽天ふるさと納税' }}で見る</a>
+    <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener">{{ it.portal or '楽天ふるさと納税' }}で見る</a>
     {% set q = (it.town or it.shop) ~ " " ~ (cat.search_word or cat.name) %}
     <div class="others">
       <span>同じ自治体を他サイトで探す</span>
@@ -61,7 +61,7 @@
       <a href="https://www.furusato-tax.jp/search?q={{ q | urlencode }}" target="_blank" rel="noopener">ふるさとチョイス</a>
       <a href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="noopener">ふるなび</a>
       <a href="https://shopping.yahoo.co.jp/search?p={{ ('ふるさと納税 ' ~ q) | urlencode }}" target="_blank" rel="noopener">Yahoo!</a>
-      {% set amz = "https://www.amazon.co.jp/s?i=jpdonation&k=" ~ (q | urlencode) %}{% if site.amazon_tag %}<a href="{{ amz }}&tag={{ site.amazon_tag }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>Amazon</a>{% else %}<a href="{{ amz }}" target="_blank" rel="noopener">Amazon</a>{% endif %}
+      {% set amz = "https://www.amazon.co.jp/s?i=jpdonation&k=" ~ (q | urlencode) %}{% if site.amazon_tag %}<a href="{{ amz }}&tag={{ site.amazon_tag }}" target="_blank" rel="sponsored noopener">Amazon</a>{% else %}<a href="{{ amz }}" target="_blank" rel="noopener">Amazon</a>{% endif %}
     </div>
   </li>
 {% endfor %}
@@ -74,10 +74,10 @@
 <section class="popular">
   <h2>量ではなく「人気順」で見るなら</h2>
   <div class="pop-main">
-    <a class="btn" href="{{ rl[cat.id] or rl._total or 'https://event.rakuten.co.jp/furusato/ranking/' }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天ふるさと納税 人気ランキング</a>
+    <a class="btn" href="{{ rl[cat.id] or rl._total or 'https://event.rakuten.co.jp/furusato/ranking/' }}" target="_blank" rel="sponsored noopener">楽天ふるさと納税 人気ランキング</a>
     <a class="btn" href="https://www.satofull.jp/products/ranking.php" target="_blank" rel="noopener">さとふる 人気ランキング</a>
   </div>
-  <p class="other-portals small">ほかのふるさと納税サイト：<a href="https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" target="_blank" rel="sponsored nofollow noopener"><span class="pr">PR</span>au PAY ふるさと納税</a>（Pontaポイントを寄付に使える）<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" alt="" style="position:absolute">／<a href="https://furusato.asahi.co.jp/" target="_blank" rel="sponsored nofollow noopener"><span class="pr">PR</span>ふるラボ</a>（テレビ番組で紹介された返礼品）／<a href="https://furusatohonpo.jp/" target="_blank" rel="sponsored nofollow noopener"><span class="pr">PR</span>ふるさと本舗</a></p>
+  <p class="other-portals small">ほかのふるさと納税サイト：<a href="https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" target="_blank" rel="sponsored nofollow noopener">au PAY ふるさと納税</a>（Pontaポイントを寄付に使える）<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" alt="" style="position:absolute">／<a href="https://furusato.asahi.co.jp/" target="_blank" rel="sponsored nofollow noopener">ふるラボ</a>（テレビ番組で紹介された返礼品）／<a href="https://furusatohonpo.jp/" target="_blank" rel="sponsored nofollow noopener">ふるさと本舗</a></p>
 </section>
 <p class="small" style="margin-top:16px">量は商品名「{{ rank["items"][0].evidence if rank["items"] else '' }}」のような表記から自動で読み取っています。寄付前に必ずリンク先で内容量をご確認ください。</p>
 {% endblock %}

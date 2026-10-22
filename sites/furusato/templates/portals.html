@@ -50,7 +50,7 @@
   <p class="meta">確認日：{{ p.checked }}　参考：<a href="{{ p.source }}" target="_blank" rel="nofollow noopener">情報元</a></p>
   <p class="go">
   {% if p.aff %}
-    <a class="btn" href="{{ p.aff }}" target="_blank" rel="sponsored nofollow noopener"><span class="pr">PR</span>{{ p.name }}を見る</a>{% if p.aff_img %}<img border="0" width="1" height="1" src="{{ p.aff_img }}" alt="" style="position:absolute">{% endif %}
+    <a class="btn" href="{{ p.aff }}" target="_blank" rel="sponsored nofollow noopener">{{ p.name }}を見る</a>{% if p.aff_img %}<img border="0" width="1" height="1" src="{{ p.aff_img }}" alt="" style="position:absolute">{% endif %}
   {% else %}
     <a href="{{ p.url }}" target="_blank" rel="nofollow noopener">{{ p.name }}の公式サイト</a>
   {% endif %}

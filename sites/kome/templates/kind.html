@@ -61,7 +61,7 @@
         <div><dt>量</dt><dd>{{ '%g' | format(it.qty_kg) }}kg</dd></div>
         <div><dt>ポイント</dt><dd>{{ it.point_rate }}倍</dd></div>
       </dl>
-      <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener"><span class="pr">PR</span>楽天市場で見る</a>
+      <a class="btn btn-block" href="{{ it.url }}" target="_blank" rel="sponsored noopener">楽天市場で見る</a>
       {% set q = ((it.brand or kind.name) ~ " " ~ ('%g' | format(it.qty_kg)) ~ "kg") %}
       <div class="others">
         <span>ほかの店でも探す</span>
