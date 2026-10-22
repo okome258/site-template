@@ -266,3 +266,9 @@ br.sp { display: inline; }
 @media (min-width: 640px) { .pref-list { grid-template-columns: 1fr 1fr; } }
 .other-portals { margin: 10px 0 0; }
 .other-portals a { font-weight: 700; }
+
+/* トップへ戻る矢印(右下に固定) */
+.to-top { position: fixed; right: 16px; bottom: 20px; z-index: 50; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-size: 22px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.25); opacity: .92; }
+.to-top[hidden] { display: none; }
+.to-top:hover { opacity: 1; }

@@ -67,5 +67,10 @@ u.querySelector('.ago').textContent=dd<=0?'（今日）':dd==1?'（昨日）':'�
 {% if site.cf_analytics_token %}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cf_analytics_token }}"}'></script>
 {% endif %}
+<a href="#" class="to-top" aria-label="ページの先頭へ戻る" hidden>&#8593;</a>
+<script>/* 下にスクロールしたら右下に「トップへ戻る」矢印を出す */
+try{var tt=document.querySelector('.to-top');var f=function(){tt.hidden=window.scrollY<600;};
+window.addEventListener('scroll',f,{passive:true});f();
+tt.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});}catch(e){}</script>
 </body>
 </html>
