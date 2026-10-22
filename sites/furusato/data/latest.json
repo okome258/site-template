@@ -2497,32 +2497,12 @@
      "vs_median": 0.79,
      "market_yen": 3240.0,
      "market_pct": 23
-    },
-    {
-     "code": "f212059-seki:10004159",
-     "name": "恵那どり むねミンチ肉 2.1kg　バラ凍　(420g×5パック)　冷凍 鶏肉 ひき肉 むね肉 とり肉 鶏むね肉 業務用 原料肉 銘柄鶏 胸 パラパラ ミンチ肉 鶏ミンチ くっつかない 小分け【配送不可地域：離島・一部山間部等】",
-     "price": 16000,
-     "qty": 2.1,
-     "evidence": "420g×5",
-     "per10k": 1.313,
-     "unit_price": 7619,
-     "shop": "岐阜県関市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sc9no.ia3302ea.g00sc9no.ia3313aa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff212059-seki%2F10004145%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff212059-seki%2Fi%2F10004159%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "関市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f212059-seki/cabinet/tonodelica/10004145_s1_760_760.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 0.72,
-     "market_yen": 3400.0,
-     "market_pct": 21
     }
    ],
    "candidates": 170,
-   "ranked": 40,
+   "ranked": 41,
    "dropped": {
-    "対象外の商品": 76,
+    "対象外の商品": 75,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -3669,33 +3649,6 @@
      "market_pct": 21
     },
     {
-     "code": "f412040-taku:10000910",
-     "name": "冷凍 むきエビ (非加熱) 300g × 3 合計 900g | えび 海老 小分けサイズ _b-437",
-     "price": 18000,
-     "qty": 0.9,
-     "evidence": "合計900g",
-     "per10k": 0.5,
-     "unit_price": 20000,
-     "shop": "佐賀県多久市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t2nho.ia330ed8.g00t2nho.ia331c87/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412040-taku%2Fb-437%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412040-taku%2Fi%2F10000910%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "多久市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412040-taku/cabinet/10604225/10605613/b437/b-437_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 0.69,
-     "change": {
-      "price": 12000,
-      "qty": 0.9,
-      "since": "2026-10-10",
-      "changed": "2026-10-17",
-      "per10k_pct": -33
-     },
-     "market_yen": 3430.0,
-     "market_pct": 19
-    },
-    {
      "code": "f212130-kakamigahara:10001102",
      "name": "天然 大粒 むきえび 340g 背ワタ処理済 エビ えび 海老 冷凍 剥きえび 下処理済み ふるさと納税むきえび",
      "price": 7000,
@@ -3794,10 +3747,30 @@
      "vs_median": 0.53,
      "market_yen": 3810.0,
      "market_pct": 15
+    },
+    {
+     "code": "f182028-tsuruga:10000949",
+     "name": "福井県敦賀産 ガラ海老 500g 約35尾入り 船上凍結 冷凍便 【しおそう 塩荘 ガサエビ ガラエビ がさえび がらえび がまえび えび 海老 刺身 生 生食 冷凍 500g お中元 お歳暮 ギフト 贈り物 プレゼント】",
+     "price": 14500,
+     "qty": 0.5,
+     "evidence": "500g",
+     "per10k": 0.345,
+     "unit_price": 29000,
+     "shop": "福井県敦賀市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tflyo.ia330abf.g00tflyo.ia331de1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182028-tsuruga%2F053-a021%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff182028-tsuruga%2Fi%2F10000949%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "敦賀市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f182028-tsuruga/cabinet/img/053/053-a021/053-a021-s.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 8,
+     "wakeari": false,
+     "vs_median": 0.47,
+     "market_yen": 1900.0,
+     "market_pct": 13
     }
    ],
    "candidates": 138,
-   "ranked": 34,
+   "ranked": 33,
    "dropped": {
     "選択式": 41,
     "対象外の商品": 51,
@@ -3807,10 +3780,10 @@
    },
    "summary": {
     "median_per10k": 0.727,
-    "median_unit_price": 14000,
+    "median_unit_price": 13750,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
-    "towns": 25
+    "towns": 24
    },
    "popularity": 1130
   },
@@ -6426,10 +6399,10 @@
      "vs_median": 0.15
     }
    ],
-   "candidates": 89,
+   "candidates": 88,
    "ranked": 20,
    "dropped": {
-    "選択式": 43,
+    "選択式": 42,
     "量が複数": 7,
     "対象外の商品": 9,
     "量が範囲外": 9,
@@ -16270,7 +16243,7 @@
    "candidates": 75,
    "ranked": 27,
    "dropped": {
-    "選択式": 16,
+    "選択式": 17,
     "量なし": 13,
     "対象外の商品": 18,
     "量が複数": 1
@@ -16739,5 +16712,5 @@
    }
   }
  },
- "fetched_at": "2026-10-22T23:13+09:00"
+ "fetched_at": "2026-10-22T23:20+09:00"
 }
