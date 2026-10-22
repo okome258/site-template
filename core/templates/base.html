@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {# A8.net リンクマネージャー(公式の指示で<head>のなるべく上)。config.yaml の site.a8linkmgr_id を入れると有効。自動でアフィ化されるリンクにはPR表記をつけること #}
 {% if site.a8linkmgr_id %}<script src="//statics.8me.jp/a8link/a8linkmgr.js"></script>
-<script>a8linkmgr({"config_id": "{{ site.a8linkmgr_id }}"});</script>{% endif %}
+<script>if(window.a8linkmgr)a8linkmgr({"config_id": "{{ site.a8linkmgr_id }}"});/* 広告ブロック等で読み込めなくてもエラーにしない */</script>{% endif %}
 {% set full_title = page.title if (page.title and page.path == 'index.html') else ((page.title ~ "｜" ~ site.name) if page.title else site.name) %}
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ page.description }}">
