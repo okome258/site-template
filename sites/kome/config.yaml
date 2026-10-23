@@ -5,6 +5,7 @@ site:
   description: "楽天市場のお米を毎朝集めて、送料込みの1kgあたりの値段で安い順に並べています。白米・無洗米・玄米・もち米を、5kg・10kg・20kg以上に分けて比較。"
   base_url: "https://kome.otokuest.com"
   theme_color: "#8a6d1f"
+  apple_touch_icon: "apple-touch-icon.png"   # スマホのホーム画面用
   cf_analytics_token: ""
   a8linkmgr_id: "o4jHaYFl8Dl7jX4u4BIH"   # A8.net リンクマネージャー(会員共通)
   operator: "お米の最安値ウォッチ"
