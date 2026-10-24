@@ -27,7 +27,9 @@ h2 { font-size: 19px; font-weight: 700; margin: 36px 0 10px; word-break: auto-ph
 .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
 
 /* 広告表記 */
-.pr-bar { background: #fbf3dc; font-size: 11px; color: #6b5a1e; padding: 4px 16px; text-align: center; }
+/* ステマ規制・ASP規約で必須なので消さない。目立たない灰色の1行(右上)にしている */
+.pr-bar { background: transparent; font-size: 10px; color: #999; padding: 2px 16px; text-align: right; line-height: 1.4; }
+.pr-bar .pr { color: #999; border-color: #ccc; font-size: 9px; padding: 0 3px; margin-right: 4px; }
 .pr { display: inline-block; font-size: 10px; font-weight: 700; color: #6b5a1e; border: 1px solid #c9b46a; border-radius: 3px; padding: 0 4px; margin: 0 6px 0 0; line-height: 1.5; vertical-align: 1px; font-family: var(--body); }
 
 /* ヘッダー: 紅の看板。サイト名は丸ゴの極太 */
