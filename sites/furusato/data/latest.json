@@ -2522,7 +2522,7 @@
    "candidates": 167,
    "ranked": 39,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 76,
     "選択式": 45,
     "量なし": 5,
     "量が複数": 3,
@@ -3799,8 +3799,8 @@
    "candidates": 139,
    "ranked": 30,
    "dropped": {
-    "選択式": 44,
-    "対象外の商品": 52,
+    "選択式": 43,
+    "対象外の商品": 53,
     "量なし": 5,
     "量が複数": 2,
     "量が範囲外": 6
@@ -16203,6 +16203,24 @@
      "vs_median": 0.24
     },
     {
+     "code": "f282286-kato:10000854",
+     "name": "ファーファ ストーリー ドリーミー 洗濯用洗剤 液体 850g 詰め替え用 6個セット / ファーファ 無添加 洗濯洗剤 液体 洗剤 衣類用洗剤 詰め替え 部屋干し お花の香り 赤ちゃんから大人まで 日本製",
+     "price": 20000,
+     "qty": 0.85,
+     "evidence": "850g",
+     "per10k": 0.425,
+     "unit_price": 23529,
+     "shop": "兵庫県加東市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tdzoo.ia330fb0.g00tdzoo.ia331016/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff282286-kato%2F59721277%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff282286-kato%2Fi%2F10000854%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "加東市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f282286-kato/cabinet/product_page/product05/155259047.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.2
+    },
+    {
      "code": "f282286-kato:10000681",
      "name": "ファーファ 乾燥機で服が縮むのを防ぐ洗剤 詰め替え用 1500g 6個セット / ファーファ 乾燥機 洗剤 洗濯洗剤 液体 衣類用洗剤 詰め替え ドラム式 自動投入 浴室乾燥機 日本製",
      "price": 37000,
@@ -16293,13 +16311,13 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 73,
-   "ranked": 26,
+   "candidates": 74,
+   "ranked": 27,
    "dropped": {
     "選択式": 16,
     "量なし": 12,
     "対象外の商品": 17,
-    "量が複数": 2
+    "量が複数": 1
    },
    "summary": {
     "median_per10k": 2.1,
@@ -16765,5 +16783,5 @@
    }
   }
  },
- "fetched_at": "2026-10-28T00:17+09:00"
+ "fetched_at": "2026-10-28T00:24+09:00"
 }
