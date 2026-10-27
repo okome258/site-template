@@ -324,6 +324,76 @@ def _season(cfg: dict, data: dict) -> dict | None:
 
 
 
+# ---- 「迷ったらこれ」: 量だけで推すと外れるので、外れやすい表記を弾いた中から選ぶ ----
+# (商品名の言葉, 表示する理由)。カテゴリ固有の分は config.yaml の risk に足す
+RISK_COMMON = [("訳あり", "訳あり品"), ("訳アリ", "訳あり品"), ("規格外", "規格外品"), ("不揃い", "大きさ・形が不揃い"),
+               ("B級", "B級品"), ("打ち身", "見た目に傷あり"), ("色飛び", "見た目に傷あり"), ("キズ", "見た目に傷あり"),
+               ("割れ", "割れ・欠けあり"), ("欠け", "割れ・欠けあり"), ("切れ子", "形くずれ品"), ("端材", "端材")]
+PICK_MIN_AVG = 4.0     # レビュー平均がこれ以上
+PICK_MIN_COUNT = 10    # レビュー件数がこれ以上(少ないと平均があてにならない)
+SHIP = re.compile(r"年内[^\s　】]{0,4}発送|最短[^\s　】]{0,6}発送|(?:20\d\d年)?\d{1,2}月(?:上旬|中旬|下旬)?(?:以降|より|から|～)?[^\s　】]{0,4}発送|20\d\d年[^\s　】]{0,6}発送")
+
+
+def _risks(cat: dict, name: str, year: int) -> list[str]:
+    out = []
+    for w, why in RISK_COMMON + [tuple(x) for x in cat.get("risk", [])]:
+        if w in name and why not in out:
+            out.append(why)
+    if cat.get("need_fresh"):  # お米: 今年の米だと分かる表記があるか
+        ry = year - 2018
+        if not any(w in name for w in ("新米", f"令和{ry}年", f"令和{ry}", f"R{ry}", f"{year}年産")):
+            out.append("今年の新米という表記なし")
+    return out
+
+
+def _ship(name: str, today: str) -> dict | None:
+    """商品名から発送時期を読む。来年以降の発送なら late=True。"""
+    m = SHIP.search(name)
+    if not m:
+        return None
+    t = m.group(0)
+    y, mo = int(today[:4]), int(today[5:7])
+    late = False
+    my = re.search(r"(20\d\d)年", t)
+    mm = re.search(r"(\d{1,2})月", t)
+    if my and int(my.group(1)) > y:
+        late = True
+    elif not my and mm and int(mm.group(1)) < mo - 1:  # 年の書いていない「2月以降」は来年の話
+        late = True
+    return {"text": t, "late": late, "fast": t.startswith("最短") or t.startswith("年内")}
+
+
+def _pick(cat: dict, items: list[dict], data: dict, cfg: dict) -> dict | None:
+    """量・評判・外れやすさで1品に決める。items は量の多い順。"""
+    if not items:
+        return None
+    today = (data.get("fetched_at") or "2026-01-01")[:10]
+    year = int(today[:4])
+    rows = []
+    for i, it in enumerate(items):
+        rows.append({**it, "rank": i + 1, "risks": _risks(cat, it["name"], year), "ship": _ship(it["name"], today)})
+    pick = None
+    for need in (PICK_MIN_COUNT, 3):  # 条件に合うものが無いカテゴリだけ、件数の条件をゆるめる
+        ok = [r for r in rows if not r["risks"] and (r["review_avg"] or 0) >= PICK_MIN_AVG and (r["review_count"] or 0) >= need]
+        if ok:
+            # 来年以降の発送になるものは、すぐ届くものが無いときだけ選ぶ
+            pick = next((r for r in ok if not (r["ship"] and r["ship"]["late"])), ok[0])
+            break
+    if not pick:
+        return None
+    top = rows[0]
+    # いちばんレビューが多い返礼品 = よく選ばれている人気品の目安
+    popular = max(rows, key=lambda r: r["review_count"] or 0)
+    res = {"item": pick, "top": top if top["code"] != pick["code"] else None,
+           "popular": popular if popular["code"] != pick["code"] and popular["per10k"] < pick["per10k"] else None}
+    if res["popular"]:
+        res["popular_more_pct"] = round((pick["per10k"] / popular["per10k"] - 1) * 100) if popular["per10k"] else None
+    b = (cfg.get("portal_bonus") or {})
+    if b.get("rate"):
+        res["bonus"] = {**b, "yen": int(pick["price"] * b["rate"])}
+    return res
+
+
 TOP_N_MAP = 10  # 地図で数える順位(各カテゴリの上位何位まで)
 
 
@@ -380,6 +450,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
             "title": f"ふるさと納税 {c['name']}のコスパ・量ランキング{best}【{ym}】",
             "description": desc,
             "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym,
+                        "pick": _pick(c, r.get("items", []), data, cfg),
                         "cat_changes": [x for x in changes if x["cat"]["id"] == c["id"]][:5], "jsonld": {
                 "@context": "https://schema.org", "@type": "ItemList",
                 "name": f"{c['name']}のふるさと納税 内容量ランキング",

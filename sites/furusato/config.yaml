@@ -50,6 +50,14 @@ seasons:
     lead: 桃・メロン・土用のうなぎ、冷えたビール。
     cats: [peach, melon, unagi, beer, sparkling]
 
+# 「迷ったらこれ」に出す、ふるなび経由のおトク(時期で変わるので確認日を必ず出す)
+portal_bonus:
+  portal: ふるなび
+  rate: 0.04
+  how: 事前エントリーしてふるなびマネーにチャージすると4%増量
+  checked: "2026-10-28"
+  source: https://prtimes.jp/main/html/rd/p/000001743.000007821.html
+
 categories:
   - id: rice
     group: お米
@@ -62,6 +70,8 @@ categories:
     keywords: ["ふるさと納税 米 精米", "ふるさと納税 無洗米"]
     exclude: ["玄米", "パックご飯", "レトルト", "米粉", "日本酒", "甘酒", "もち"]
     range: [2, 60]
+    need_fresh: true   # 「迷ったらこれ」は今年の新米と分かるものだけ
+    risk: [["ブレンド", "複数の米のブレンド"], ["複数原料", "複数の米のブレンド"], ["小粒", "小粒の米"], ["くず米", "くず米"]]
   - id: beef
     group: 肉
     rakuten_ranking: beef
@@ -72,6 +82,7 @@ categories:
     unit: kg
     keywords: ["ふるさと納税 牛肉 切り落とし", "ふるさと納税 牛肉 小間切れ"]
     exclude: ["ハンバーグ", "コロッケ", "メンチ", "カレー", "ビーフジャーキー", "牛タン", "味付", "タレ", "豚", "鶏", "バラエティ"]
+    risk: [["成型", "成型肉"], ["脂注入", "脂を注入した加工肉"], ["インジェクション", "脂を注入した加工肉"]]
     range: [0.3, 10]
   - id: pork
     group: 肉

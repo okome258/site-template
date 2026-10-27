@@ -2,7 +2,7 @@
 {% set d = 1 if (cat.unit_kind != 'count' and cat.scale is not defined) else 0 %}
 {% block head %}
 <script type="application/ld+json">{{ jsonld | tojson }}</script>
-<style>.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.chg-note{margin:6px 0 0;color:var(--muted)}.stats .mk dd small{display:block;font-size:11px;color:var(--muted)}.mk-src{color:var(--muted)}</style>
+<style>.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.chg-note{margin:6px 0 0;color:var(--muted)}.stats .mk dd small{display:block;font-size:11px;color:var(--muted)}.mk-src{color:var(--muted)}.pickbox{border:2px solid var(--accent);border-radius:12px;padding:14px 16px;margin:0 0 20px;background:#fff}.pickbox h2{font-size:18px;margin:0 0 10px;display:flex;align-items:center;gap:8px}.pickbox .why{margin:10px 0;padding-left:1.2em;font-size:14px}.pickbox .why li{margin:3px 0}.pickbox .btns{display:grid;gap:8px}.pickbox .bonus{font-size:13px;margin:6px 0 0;color:var(--muted)}.pickbox .alt{font-size:13px;margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--line)}.pickbox .late{color:#a3401c;font-weight:700}</style>
 {% endblock %}
 {% block content %}
 <h1>ふるさと納税 {{ cat.name }}の量が多い順ランキング</h1>
@@ -26,6 +26,31 @@
 {% if cat.note %}<p class="note">{{ cat.note }}</p>{% endif %}
 {% if cat_changes %}<p class="chg-note"><a href="{{ page.root }}changes/">{{ cat.name }}で寄付額・内容量が変わった返礼品が{{ cat_changes | length }}件あります（{% for x in cat_changes[:2] %}{{ x.town or '' }}{{ x.kind }}{% if not loop.last %}、{% endif %}{% endfor %}など）→ 変更履歴を見る</a></p>{% endif %}
 
+{% if pick %}{% set p = pick.item %}{% set q = (p.town or p.shop) ~ " " ~ (cat.search_word or cat.name) %}
+<section class="pickbox" aria-label="迷ったらこれ">
+  <h2><img src="{{ page.root }}fukusuke-face.png" alt="" width="32" height="32">迷ったら、これでいいチュン</h2>
+  <div class="rank-top">
+    <a class="rank-thumb" href="{{ p.url }}" target="_blank" rel="sponsored noopener">{% if p.image %}<img class="rank-img" src="{{ p.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" width="96" height="96">{% else %}<span class="rank-img"></span>{% endif %}</a>
+    <div class="rank-body">
+      <div class="rank-score">{{ p.per10k | num(d) }}{{ cat.unit }}<small> / 1万円</small></div>
+      <p class="rank-name">{{ p.name }}</p>
+      <div class="rank-meta"><span class="loc">{{ jp_mini(p.shop) }}{{ p.shop }}</span><span>寄付{{ p.price | yen }}で{{ "%g" | format(p.qty) }}{{ cat.unit }}</span></div>
+    </div>
+  </div>
+  <ul class="why">
+    <li><strong>量</strong>：比較した{{ rank.ranked }}件中{{ p.rank }}位{% if pick.popular and pick.popular_more_pct %}。いちばんレビューが多い人気品（{{ pick.popular.town or pick.popular.shop }}）より、1万円あたりの量が<strong>{{ pick.popular_more_pct }}%多い</strong>{% endif %}</li>
+    <li><strong>評判</strong>：★{{ p.review_avg }}（レビュー{{ p.review_count | num }}件）</li>
+    <li><strong>外れにくさ</strong>：訳あり・規格外・割れ{% if cat.need_fresh %}・ブレンド米・新米の表記なし{% endif %}などに当てはまらないものから選んでいます</li>
+    <li><strong>発送</strong>：{% if p.ship %}<span class="{{ 'late' if p.ship.late }}">{{ p.ship.text }}</span>{% if p.ship.late %}（年明け以降の発送）{% endif %}{% else %}商品名に記載なし。寄付前に商品ページで確認してください{% endif %}</li>
+  </ul>
+  <div class="btns">
+    <a class="btn btn-block" href="{{ p.url }}" target="_blank" rel="sponsored noopener">楽天ふるさと納税で見る</a>
+    {% if pick.bonus %}<a class="btn btn-block" href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="sponsored noopener">{{ pick.bonus.portal }}で同じ返礼品を探す</a>
+    <p class="bonus">{{ pick.bonus.portal }}に同じ返礼品があれば、{{ pick.bonus.how }}。この寄付額なら<strong>約{{ pick.bonus.yen | yen }}分おトク</strong>です（{{ pick.bonus.checked | replace('-', '/') }}確認。キャンペーンは時期によって変わります）。</p>{% endif %}
+  </div>
+  {% if pick.top %}{% set t = pick.top %}<p class="alt">量だけなら1位は{{ t.town or t.shop }}の{{ t.per10k | num(d) }}{{ cat.unit }}/1万円。ただし{% if t.risks %}「{{ t.risks | join('」「') }}」{% else %}レビューが少ない（★{{ t.review_avg }}・{{ t.review_count }}件）{% endif %}ため、ここでは外しています。それでも量優先なら下のランキングからどうぞ。</p>{% endif %}
+</section>
+{% endif %}
 {% set mk = (data.market or {}).get("items", {}).get(cat.id) %}
 {% if mk %}<p class="mk-src small">「お店で買うと」は、総務省 小売物価統計調査（{{ data.market.area }}・{{ mk.ym }}）の「{{ mk.name }}」の平均価格 {{ mk.yen | yen }}／{{ mk.per }} で換算した目安です。品種・部位・等級によって実際の値段は変わります。</p>{% endif %}
 {% if rank["items"] %}
