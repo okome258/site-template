@@ -631,10 +631,10 @@
      "market_pct": 39
     }
    ],
-   "candidates": 159,
+   "candidates": 158,
    "ranked": 41,
    "dropped": {
-    "選択式": 94,
+    "選択式": 93,
     "対象外の商品": 10,
     "量なし": 2,
     "量が複数": 12
@@ -1976,7 +1976,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.44,
+     "vs_median": 2.22,
      "market_yen": 6520.0,
      "market_pct": 72
     },
@@ -1996,7 +1996,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.36,
+     "vs_median": 2.14,
      "market_yen": 19560.0,
      "market_pct": 70
     },
@@ -2016,7 +2016,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.17,
+     "vs_median": 1.97,
      "market_yen": 13040.0,
      "market_pct": 64
     },
@@ -2036,7 +2036,7 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.1,
+     "vs_median": 1.91,
      "market_yen": 13040.0,
      "market_pct": 62
     },
@@ -2056,7 +2056,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.91,
+     "vs_median": 1.74,
      "market_yen": 13040.0,
      "market_pct": 57
     },
@@ -2076,7 +2076,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.83,
+     "vs_median": 1.67,
      "market_yen": 6520.0,
      "market_pct": 54
     },
@@ -2096,7 +2096,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.77,
+     "vs_median": 1.61,
      "market_yen": 16300.0,
      "market_pct": 53
     },
@@ -2116,7 +2116,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.74,
+     "vs_median": 1.58,
      "market_yen": 9780.0,
      "market_pct": 51
     },
@@ -2136,7 +2136,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.69,
+     "vs_median": 1.54,
      "market_yen": 6520.0,
      "market_pct": 50
     },
@@ -2156,7 +2156,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.69,
+     "vs_median": 1.54,
      "market_yen": 19560.0,
      "market_pct": 50
     },
@@ -2176,7 +2176,7 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.5,
+     "vs_median": 1.36,
      "market_yen": 4890.0,
      "market_pct": 44
     },
@@ -2196,7 +2196,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.5,
+     "vs_median": 1.36,
      "market_yen": 4890.0,
      "market_pct": 44
     },
@@ -2216,7 +2216,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.47,
+     "vs_median": 1.33,
      "market_yen": 13040.0,
      "market_pct": 43
     },
@@ -2236,7 +2236,7 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.35,
+     "vs_median": 1.23,
      "market_yen": 5220.0,
      "market_pct": 40
     },
@@ -2256,7 +2256,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.28,
+     "vs_median": 1.16,
      "market_yen": 8310.0,
      "market_pct": 38
     },
@@ -2276,7 +2276,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 1.26,
+     "vs_median": 1.14,
      "market_yen": 5220.0,
      "market_pct": 37
     },
@@ -2296,7 +2296,7 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.16,
+     "vs_median": 1.05,
      "market_yen": 6520.0,
      "market_pct": 34
     },
@@ -2316,7 +2316,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.0,
      "market_yen": 5540.0,
      "market_pct": 33
     },
@@ -2336,7 +2336,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.0,
      "market_yen": 4890.0,
      "market_pct": 33
     },
@@ -2356,7 +2356,7 @@
      "review_avg": 4.54,
      "review_count": 181,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 0.91,
      "market_yen": 3260.0,
      "market_pct": 30
     },
@@ -2376,7 +2376,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 0.91,
      "market_yen": 4890.0,
      "market_pct": 30
     },
@@ -2396,7 +2396,7 @@
      "review_avg": 4.73,
      "review_count": 436,
      "wakeari": false,
-     "vs_median": 0.92,
+     "vs_median": 0.83,
      "market_yen": 4890.0,
      "market_pct": 27
     },
@@ -2416,7 +2416,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.86,
+     "vs_median": 0.78,
      "market_yen": 6850.0,
      "market_pct": 25
     },
@@ -2436,7 +2436,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85,
+     "vs_median": 0.77,
      "market_yen": 3260.0,
      "market_pct": 25
     },
@@ -2456,7 +2456,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.83,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2483,7 +2483,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.83,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2510,7 +2510,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.8,
+     "vs_median": 0.73,
      "market_yen": 2610.0,
      "market_pct": 24
     },
@@ -2530,7 +2530,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.73,
+     "vs_median": 0.67,
      "change": {
       "price": 13000,
       "qty": 2.0,
@@ -2557,7 +2557,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.72,
+     "vs_median": 0.66,
      "market_yen": 3420.0,
      "market_pct": 21
     },
@@ -2577,26 +2577,26 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71,
+     "vs_median": 0.65,
      "market_yen": 6520.0,
      "market_pct": 21
     }
    ],
    "candidates": 164,
-   "ranked": 39,
+   "ranked": 38,
    "dropped": {
     "対象外の商品": 72,
     "選択式": 45,
     "量が複数": 2,
-    "量なし": 5,
+    "量なし": 6,
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 1.818,
+    "median_per10k": 2.0,
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 24
+    "towns": 23
    },
    "popularity": 1466
   },
@@ -5275,24 +5275,24 @@
      "market_pct": 97
     },
     {
-     "code": "f422045-isahaya:10001463",
-     "name": "高評価4.76※【2026年11月より順次発送／先行予約】伊木力温州早生みかん10kg(ご家庭用、箱入り) / みかん 温州みかん 柑橘 蜜柑 ミカン 果物 / 諫早市 / 末永果樹園 [AHBD002]",
-     "price": 10000,
+     "code": "f412074-kashima:10000492",
+     "name": "【先行予約】（2026年11月上旬～発送）”わーがと”鹿島産がばい訳アリみかん 約10kg【大中小サイズ別】or【サイズ混合】【期日指定不可】 | ふるさと納税 みかん 蜜柑 柑橘 果物 フルーツ 果実 国産 佐賀県 鹿島市 ふるさと 人気 送料無料 A-90",
+     "price": 9000,
      "qty": 10.0,
      "evidence": "10kg",
-     "per10k": 10.0,
-     "unit_price": 1000,
-     "shop": "長崎県諫早市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ts8zo.ia330ab2.g00ts8zo.ia33168f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff422045-isahaya%2F10001463%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff422045-isahaya%2Fi%2F10001463%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "per10k": 11.111,
+     "unit_price": 900,
+     "shop": "佐賀県鹿島市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3jfo.ia330ad3.g00t3jfo.ia331f7a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412074-kashima%2Fa-90%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412074-kashima%2Fi%2F10000492%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "諫早市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f422045-isahaya/cabinet/item/ahbd/ahbd002.jpg?_ex=240x240",
-     "review_avg": 4.76,
-     "review_count": 62,
-     "wakeari": false,
-     "vs_median": 1.8,
+     "town": "鹿島市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412074-kashima/cabinet/maruoka/a-90_001.jpg?_ex=240x240",
+     "review_avg": 4.09,
+     "review_count": 46,
+     "wakeari": true,
+     "vs_median": 2.0,
      "market_yen": 7770.0,
-     "market_pct": 78
+     "market_pct": 86
     },
     {
      "code": "f302015-wakayama:10001832",
@@ -5731,7 +5731,7 @@
     "max_unit_price": 14074,
     "towns": 11
    },
-   "popularity": 1676
+   "popularity": 1660
   },
   "apple": {
    "items": [
@@ -6615,8 +6615,8 @@
    "candidates": 88,
    "ranked": 23,
    "dropped": {
-    "選択式": 41,
     "量が複数": 7,
+    "選択式": 41,
     "量が範囲外": 10,
     "量なし": 1,
     "対象外の商品": 6
@@ -7140,8 +7140,8 @@
    "ranked": 26,
    "dropped": {
     "選択式": 25,
-    "量が複数": 5,
     "量なし": 11,
+    "量が複数": 5,
     "対象外の商品": 12
    },
    "summary": {
@@ -9841,12 +9841,12 @@
      "vs_median": 0.35
     }
    ],
-   "candidates": 85,
+   "candidates": 86,
    "ranked": 31,
    "dropped": {
-    "対象外の商品": 19,
     "量が複数": 4,
-    "選択式": 30,
+    "対象外の商品": 18,
+    "選択式": 32,
     "量なし": 1
    },
    "summary": {
@@ -13548,25 +13548,7 @@
      "review_avg": 4.74,
      "review_count": 39,
      "wakeari": false,
-     "vs_median": 1.07
-    },
-    {
-     "code": "f082104-shimotsuma:10000339",
-     "name": "メロン タカミメロン 赤肉 2027年 先行予約 果物 茨城県 茨城県産 旬 フルーツ くだもの 茨城県産タカミレッドメロン約2kg（2個）【2027年5月中旬～6月上旬ごろ発送予定】",
-     "price": 9000,
-     "qty": 2.0,
-     "evidence": "2kg",
-     "per10k": 2.222,
-     "unit_price": 4500,
-     "shop": "茨城県下妻市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tonvo.ia330399.g00tonvo.ia3310b1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff082104-shimotsuma%2F12-20%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff082104-shimotsuma%2Fi%2F10000339%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "下妻市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f082104-shimotsuma/cabinet/products/imgrc0089060002.jpg?_ex=240x240",
-     "review_avg": 4.86,
-     "review_count": 14,
-     "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.11
     },
     {
      "code": "f012297-furano:10000157",
@@ -13584,7 +13566,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.07
+     "vs_median": 1.11
     },
     {
      "code": "f012297-furano:10000481",
@@ -13602,7 +13584,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.0
+     "vs_median": 1.04
     },
     {
      "code": "f423831-ojika:10000211",
@@ -13620,7 +13602,7 @@
      "review_avg": 4.81,
      "review_count": 27,
      "wakeari": false,
-     "vs_median": 0.96
+     "vs_median": 1.0
     },
     {
      "code": "f012297-furano:10001283",
@@ -13638,7 +13620,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.94
+     "vs_median": 0.98
     },
     {
      "code": "f012297-furano:10000510",
@@ -13656,7 +13638,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.94
     },
     {
      "code": "f083020-ibaraki:10000187",
@@ -13674,24 +13656,24 @@
      "review_avg": 3.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 0.83
+     "vs_median": 0.86
     }
    ],
-   "candidates": 96,
-   "ranked": 8,
+   "candidates": 95,
+   "ranked": 7,
    "dropped": {
     "量なし": 27,
     "選択式": 50,
     "対象外の商品": 11
    },
    "summary": {
-    "median_per10k": 2.083,
+    "median_per10k": 2.0,
     "median_unit_price": 5000,
     "min_unit_price": 4500,
     "max_unit_price": 5800,
     "towns": 4
    },
-   "popularity": 93
+   "popularity": 79
   },
   "udon": {
    "items": [
@@ -14106,11 +14088,11 @@
      "vs_median": 0.3
     }
    ],
-   "candidates": 97,
+   "candidates": 98,
    "ranked": 22,
    "dropped": {
     "選択式": 15,
-    "量なし": 29,
+    "量なし": 30,
     "対象外の商品": 29,
     "量が複数": 1,
     "量が範囲外": 1
@@ -15371,22 +15353,22 @@
     }
    ],
    "candidates": 88,
-   "ranked": 39,
+   "ranked": 38,
    "dropped": {
-    "量が範囲外": 16,
     "量なし": 4,
-    "対象外の商品": 12,
+    "量が範囲外": 17,
     "選択式": 16,
+    "対象外の商品": 12,
     "量が複数": 1
    },
    "summary": {
     "median_per10k": 12.0,
     "median_unit_price": 833,
     "min_unit_price": 514,
-    "max_unit_price": 6190,
+    "max_unit_price": 3095,
     "towns": 24
    },
-   "popularity": 202
+   "popularity": 201
   },
   "sake": {
    "items": [
@@ -15938,10 +15920,10 @@
      "vs_median": 1.05
     }
    ],
-   "candidates": 167,
+   "candidates": 169,
    "ranked": 61,
    "dropped": {
-    "対象外の商品": 77,
+    "対象外の商品": 79,
     "選択式": 18,
     "量なし": 8,
     "量が複数": 2,
@@ -16430,10 +16412,10 @@
    "candidates": 74,
    "ranked": 26,
    "dropped": {
-    "選択式": 17,
+    "選択式": 16,
     "量なし": 11,
     "対象外の商品": 19,
-    "量が複数": 1
+    "量が複数": 2
    },
    "summary": {
     "median_per10k": 2.1,
@@ -16899,5 +16881,5 @@
    }
   }
  },
- "fetched_at": "2026-11-01T06:44+09:00"
+ "fetched_at": "2026-11-01T08:49+09:00"
 }
