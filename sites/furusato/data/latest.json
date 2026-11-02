@@ -2582,10 +2582,10 @@
      "market_pct": 21
     }
    ],
-   "candidates": 163,
+   "candidates": 162,
    "ranked": 38,
    "dropped": {
-    "対象外の商品": 74,
+    "対象外の商品": 73,
     "選択式": 44,
     "量が複数": 2,
     "量なし": 4,
@@ -3873,11 +3873,11 @@
      "market_pct": 13
     }
    ],
-   "candidates": 142,
+   "candidates": 143,
    "ranked": 32,
    "dropped": {
     "選択式": 46,
-    "対象外の商品": 53,
+    "対象外の商品": 54,
     "量なし": 4,
     "量が複数": 2,
     "量が範囲外": 5
@@ -4153,24 +4153,6 @@
      }
     },
     {
-     "code": "f012238-nemuro:10005613",
-     "name": "紅ズワイガニポーション 400g × 3P ( 計 1.2kg ) 紅ずわいがに ずわいがに ズワイ ずわい ズワイ蟹 ずわい蟹 かに カニ 蟹 お取り寄せ グルメ 海鮮 刺身 北海道 根室市 ふるさと納税 B-11075",
-     "price": 25000,
-     "qty": 1.2,
-     "evidence": "計1.2kg",
-     "per10k": 0.48,
-     "unit_price": 20833,
-     "shop": "北海道根室市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tif2o.ia330f2c.g00tif2o.ia33195b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012238-nemuro%2F10005613%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012238-nemuro%2Fi%2F10005613%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "根室市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012238-nemuro/cabinet/item/b-11075_1.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.15
-    },
-    {
      "code": "f016659-teshikaga:10000742",
      "name": "3297. 紅ズワイ蟹 ポーション 500g前後 生食可 約3人前 食べ方ガイド カニ かに 蟹 海鮮 鍋 しゃぶしゃぶ 紅 ズワイガニ ずわいがに ズワイ ずわい ズワイガニポーション500g バーベキュー BBQ 送料無料 北海道 弟子屈町",
      "price": 11000,
@@ -4439,19 +4421,37 @@
      "review_count": 10,
      "wakeari": false,
      "vs_median": 0.6
+    },
+    {
+     "code": "f012114-abashiri:10000671",
+     "name": "【数量限定／極太／刺身】生 本ずわい蟹 むき身 ポーション 500g × 2 計1kg 【 かに 北海道 カニ ズワイガニ ふるさと ずわいがに 生 ずわい蟹 ズワイ蟹 かにしゃぶ ポーション ふるさと納税限定額 人気 蟹 生食 kani 冷凍 北海道 網走市 送料無料 】",
+     "price": 40000,
+     "qty": 1.0,
+     "evidence": "計1kg",
+     "per10k": 0.25,
+     "unit_price": 40000,
+     "shop": "北海道網走市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t1g4o.ia330d0d.g00t1g4o.ia331138/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012114-abashiri%2F14007-30041044%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012114-abashiri%2Fi%2F10000671%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "網走市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012114-abashiri/cabinet/i3/14007-30041044-01.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 3,
+     "wakeari": false,
+     "vs_median": 0.6
     }
    ],
    "candidates": 134,
-   "ranked": 37,
+   "ranked": 36,
    "dropped": {
     "対象外の商品": 15,
-    "選択式": 62,
+    "選択式": 63,
     "量が複数": 4,
     "量なし": 16
    },
    "summary": {
     "median_per10k": 0.417,
-    "median_unit_price": 24000,
+    "median_unit_price": 25000,
     "min_unit_price": 8750,
     "max_unit_price": 79833,
     "towns": 17
@@ -6561,8 +6561,8 @@
    "candidates": 83,
    "ranked": 20,
    "dropped": {
-    "選択式": 40,
     "量が複数": 7,
+    "選択式": 40,
     "量が範囲外": 10,
     "量なし": 1,
     "対象外の商品": 5
@@ -7708,7 +7708,7 @@
     "median_per10k": 15.0,
     "median_unit_price": 667,
     "min_unit_price": 167,
-    "max_unit_price": 2167,
+    "max_unit_price": 2417,
     "towns": 43
    },
    "popularity": 474
@@ -14591,24 +14591,6 @@
      "vs_median": 1.0
     },
     {
-     "code": "f462144-tarumizu:10002036",
-     "name": "温泉炭酸水「OUGAKU SPARKLING」(計12L・500ml×24本)水 ミネラルウォーター 温泉水 天然水 飲む温泉水 炭酸 炭酸水 強炭酸 強炭酸水 スパークリング 飲料 500ml ペットボトル 国産 鹿児島産 垂水市【櫻岳】A1-1507",
-     "price": 16000,
-     "qty": 12.0,
-     "evidence": "計12L",
-     "per10k": 7.5,
-     "unit_price": 1333,
-     "shop": "鹿児島県垂水市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sl1to.ia330e0b.g00sl1to.ia331170/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462144-tarumizu%2Fa1-1503%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462144-tarumizu%2Fi%2F10002036%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "垂水市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462144-tarumizu/cabinet/new/ougaku/a1-1503_smn.jpg?_ex=240x240",
-     "review_avg": 4.75,
-     "review_count": 4,
-     "wakeari": false,
-     "vs_median": 0.69
-    },
-    {
      "code": "f014605-kamifurano:10000611",
      "name": "炭酸水 500ml × 24本 北海道富良野ホップ炭酸水 [7営業日以内最短発送] ポッカサッポロ 無糖 北海道富良野ホップ ペットボトル 炭酸飲料 炭酸 ソーダ ソーダ水 飲み物 飲料 ドリンク (有)リカーショップかまだ 北海道 上富良野町",
      "price": 16000,
@@ -14661,6 +14643,31 @@
      "review_count": 6,
      "wakeari": false,
      "vs_median": 0.67
+    },
+    {
+     "code": "f462144-tarumizu:10002036",
+     "name": "温泉炭酸水「OUGAKU SPARKLING」(計12L・500ml×24本)水 ミネラルウォーター 温泉水 天然水 飲む温泉水 炭酸 炭酸水 強炭酸 強炭酸水 スパークリング 飲料 500ml ペットボトル 国産 鹿児島産 垂水市【櫻岳】A1-1507",
+     "price": 18000,
+     "qty": 12.0,
+     "evidence": "計12L",
+     "per10k": 6.667,
+     "unit_price": 1500,
+     "shop": "鹿児島県垂水市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sl1to.ia330e0b.g00sl1to.ia331170/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462144-tarumizu%2Fa1-1503%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462144-tarumizu%2Fi%2F10002036%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "垂水市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462144-tarumizu/cabinet/new/ougaku/a1-1503_smn.jpg?_ex=240x240",
+     "review_avg": 4.75,
+     "review_count": 4,
+     "wakeari": false,
+     "vs_median": 0.61,
+     "change": {
+      "price": 16000,
+      "qty": 12.0,
+      "since": "2026-10-10",
+      "changed": "2026-11-02",
+      "per10k_pct": -11
+     }
     },
     {
      "code": "f143642-yamakita:10000164",
@@ -15248,12 +15255,12 @@
      "vs_median": 0.66
     }
    ],
-   "candidates": 88,
+   "candidates": 87,
    "ranked": 38,
    "dropped": {
     "量が範囲外": 17,
     "量なし": 4,
-    "対象外の商品": 12,
+    "対象外の商品": 11,
     "選択式": 16,
     "量が複数": 1
    },
@@ -16305,12 +16312,12 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 74,
+   "candidates": 73,
    "ranked": 26,
    "dropped": {
-    "選択式": 16,
-    "量なし": 12,
-    "対象外の商品": 18,
+    "選択式": 15,
+    "量なし": 11,
+    "対象外の商品": 19,
     "量が複数": 2
    },
    "summary": {
@@ -16777,5 +16784,5 @@
    }
   }
  },
- "fetched_at": "2026-11-02T07:10+09:00"
+ "fetched_at": "2026-11-02T08:58+09:00"
 }
