@@ -923,7 +923,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,auc-yamanoraisu:10000557,genmai,3380,10.0,False,1,5,3.6,True,ヤマノライス 楽天市場店
 2026-11-04,fuchigami:10000062,hakumai,10680,30.0,True,1,8040,4.39,True,こめたつ
 2026-11-04,higohime:10000046,musen,10680,30.0,True,1,73,4.7,True,お米職人 肥後姫
-2026-11-04,higohime:10000035,musen,10680,30.0,True,1,316,4.27,True,お米職人 肥後姫
 2026-11-04,okomeabe:10000076,hakumai,3580,10.0,True,1,14108,4.28,True,阿部ベイコク
 2026-11-04,rs-takeo:10000019,hakumai,3580,10.0,True,1,4290,4.07,True,有限会社 佐藤米穀商店楽天市場店
 2026-11-04,higohime:10000034,musen,7280,20.0,True,1,1603,4.34,True,お米職人 肥後姫
@@ -955,6 +954,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,yahagishouten:10000202,hakumai,4380,10.0,True,1,4046,4.59,True,山形のお米とさくらんぼの矢萩商店
 2026-11-04,yahagishouten:10000204,hakumai,4380,10.0,False,1,287,4.53,True,山形のお米とさくらんぼの矢萩商店
 2026-11-04,okomeabe:10000022,hakumai,4480,10.0,True,1,7511,4.56,True,阿部ベイコク
+2026-11-04,rice-akita:10000038,mochi,8980,20.0,False,1,108,4.73,True,ライス秋田
 2026-11-04,miyaki413461:10000028,hakumai,4500,10.0,True,1,2,5.0,True,みやきふるさと便
 2026-11-04,minoriya-come:10000048,genmai,13500,30.0,True,1,358,4.56,True,米の専門店みのりや
 2026-11-04,komean-sugasawa:10000168,genmai,4499,10.0,True,1,24,4.42,True,こめ庵
@@ -963,20 +963,22 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,rc-kaneko:10000004,hakumai,11333,25.0,False,1,6472,4.61,True,小江戸市場カネヒロ
 2026-11-04,fuchigami:10000104,hakumai,2280,5.0,True,1,345,4.31,True,こめたつ
 2026-11-04,rice-smile:10000004,hakumai,2280,5.0,True,1,1744,4.46,True,ライスマイルねっとショップ
-2026-11-04,auc-oyamadashouten:10000815,genmai,4580,10.0,False,1,131,4.43,True,お米と落花生の小山田商店
 2026-11-04,komean-sugasawa:10000181,musen,11499,25.0,True,1,20,4.5,True,こめ庵
 2026-11-04,auc-nihei-aizu:10000012,genmai,11500,25.0,False,1,972,4.8,True,会津の米蔵 二瓶商店
 2026-11-04,komean-sugasawa:10000149,hakumai,11499,25.0,True,1,8,4.5,True,こめ庵
+2026-11-04,rice-akita:10000037,mochi,6980,15.0,False,1,181,4.81,True,ライス秋田
 2026-11-04,kougobeikoku:10000358,hakumai,9330,20.0,True,1,5,5.0,True,お米の向後米穀楽天市場店
 2026-11-04,okomeabe:10000291,musen,4680,10.0,True,1,1853,4.61,True,阿部ベイコク
 2026-11-04,auc-inouebeikoku:10000017,genmai,4680,10.0,True,1,52,3.77,True,井上米穀
 2026-11-04,komean-sugasawa:10000159,musen,11799,25.0,True,1,3,3.0,True,こめ庵
+2026-11-04,komean-sugasawa:10000184,musen,9499,20.0,True,1,30,4.7,True,こめ庵
 2026-11-04,komean-sugasawa:10000079,hakumai,4799,10.0,True,1,68,4.57,True,こめ庵
 2026-11-04,komean-sugasawa:10000158,musen,11999,25.0,True,1,51,4.76,True,こめ庵
 2026-11-04,komean-sugasawa:10000139,genmai,4799,10.0,True,1,234,4.53,True,こめ庵
 2026-11-04,yutakarice-miyagi:10000017,hakumai,14450,30.0,False,1,1,5.0,True,豊ライスみやぎ
 2026-11-04,fuchigami:10000473,mochi,14580,30.0,True,1,4,3.75,True,こめたつ
 2026-11-04,shokome:10000132,hakumai,4880,10.0,False,1,22,4.45,True,おいしい庄内米の店 秋田屋商店
+2026-11-04,shokome:10000057,hakumai,4880,10.0,False,1,15,4.8,True,おいしい庄内米の店 秋田屋商店
 2026-11-04,yutakarice-miyagi:10000038,mochi,14650,30.0,False,1,21,3.9,True,豊ライスみやぎ
 2026-11-04,rice-smile:10000047,hakumai,7380,15.0,True,1,48,4.65,True,ライスマイルねっとショップ
 2026-11-04,tendofoods:10000086,hakumai,4980,10.0,False,1,4732,4.66,True,てんどうフーズうまいもの通販
@@ -984,9 +986,10 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,kyusyukome:10000128,hakumai,4980,10.0,True,1,2695,4.45,True,九州米大将
 2026-11-04,ebisu-murayama:10000058,hakumai,4980,10.0,True,1,187,4.7,True,丸公楽天市場店
 2026-11-04,rs-takeo:10000120,hakumai,4980,10.0,True,1,207,4.51,True,有限会社 佐藤米穀商店楽天市場店
-2026-11-04,yutakarice-miyagi:10000045,hakumai,4980,10.0,False,1,48,4.54,True,豊ライスみやぎ
+2026-11-04,komeminori:10000004,hakumai,4980,10.0,False,1,299,4.74,True,米のみのり屋
 2026-11-04,ebisu-murayama:10000321,hakumai,4980,10.0,True,1,382,4.79,True,丸公楽天市場店
 2026-11-04,mizuhonokuni:10001014,genmai,4980,10.0,False,1,763,4.55,True,純米処 瑞穂の国
+2026-11-04,rice-akita:10000377,mochi,4980,10.0,True,1,203,4.73,True,ライス秋田
 2026-11-04,maidodesu:10000449,mochi,4978,10.0,False,1,6,4.67,True,毎度です
 2026-11-04,marukichi-kayano:10000021,genmai,14980,30.0,True,1,2981,4.66,True,丸吉 茅野商店 北海道
 2026-11-04,auc-inouebeikoku:10000013,hakumai,4990,10.0,False,1,97,4.63,True,井上米穀
@@ -1023,25 +1026,24 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,agripartner:10001834,genmai,5280,10.0,False,1,154,4.82,True,東北の農産特産品アグリパートナー
 2026-11-04,rice-life-eto:10000025,genmai,5280,10.0,False,1,23,4.57,True,お米の専門店 【rice-lifeえとう】
 2026-11-04,hseason:10000338,musen,5290,10.0,False,1,1516,4.53,True,ハーベストシーズン
+2026-11-04,daisukiaizu:10000872,hakumai,5299,10.0,True,1,185,4.83,True,ごはん大好き 会津米
 2026-11-04,kimsho:10000000,genmai,10600,20.0,True,1,794,4.49,True,近江の国から木村商店
 2026-11-04,marukichi-kayano:10000051,genmai,15980,30.0,False,1,3064,4.72,True,丸吉 茅野商店 北海道
 2026-11-04,ebisu-murayama:10000357,mochi,10700,20.0,True,1,26,4.19,True,丸公楽天市場店
 2026-11-04,rice-smile:10000076,hakumai,2680,5.0,True,1,694,4.62,True,ライスマイルねっとショップ
 2026-11-04,kyusyukome:10000034,musen,5380,10.0,True,1,3190,4.68,True,九州米大将
 2026-11-04,agripartner:10002303,genmai,5380,10.0,False,1,26,4.85,True,東北の農産特産品アグリパートナー
-2026-11-04,ricetanaka:10000038,musen,5380,10.0,True,1,121,4.74,True,こめた 楽天市場店
+2026-11-04,ricetanaka:10000045,musen,5380,10.0,True,1,330,4.77,True,こめた 楽天市場店
 2026-11-04,fuchigami:10000079,musen,5380,10.0,True,1,1357,4.54,True,こめたつ
+2026-11-04,ricetanaka:10000038,musen,5380,10.0,True,1,121,4.74,True,こめた 楽天市場店
 2026-11-04,ricetanaka:10000029,musen,5380,10.0,True,1,259,4.9,True,こめた 楽天市場店
-2026-11-04,ricetanaka:10000025,hakumai,5380,10.0,True,1,350,4.84,True,こめた 楽天市場店
 2026-11-04,okomeyuki:10000069,genmai,5380,10.0,True,1,93,4.84,True,雪の中のお米屋
 2026-11-04,noukamai:10000022,genmai,5380,10.0,False,1,72,4.81,True,食卓に笑顔をお届け【農家の米】
 2026-11-04,agripartner:10001728,genmai,5380,10.0,False,1,296,4.77,True,東北の農産特産品アグリパートナー
-2026-11-04,mizuhonokuni:10002048,genmai,5380,10.0,False,1,301,4.53,True,純米処 瑞穂の国
 2026-11-04,kome88:10000013,genmai,5398,10.0,True,1,845,4.52,True,米甚 楽天市場店
 2026-11-04,nishidukafarm:10000017,genmai,5400,10.0,True,1,11,4.64,True,株式会社西塚農場
 2026-11-04,ocomeya3:10000535,genmai,13600,25.0,True,1,1275,4.62,True,越後の米穀商高田屋
 2026-11-04,rs-takeo:10000165,hakumai,5480,10.0,True,1,235,4.57,True,有限会社 佐藤米穀商店楽天市場店
-2026-11-04,kimsho:10001233,hakumai,5480,10.0,True,5,333,4.27,True,近江の国から木村商店
 2026-11-04,aizugensen:10000229,hakumai,14800,27.0,False,1,2,5.0,True,会津厳選マーケット
 2026-11-04,okomeabe:10000277,genmai,5480,10.0,True,1,727,4.71,True,阿部ベイコク
 2026-11-04,morikawakomeya:10000032,hakumai,5490,10.0,True,1,2421,4.84,True,お米のもりかわ楽天市場店
@@ -1051,7 +1053,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,kururinokome:10000507,genmai,5499,10.0,True,1,645,4.45,True,くるりのお米屋
 2026-11-04,okadabeikoku:10000001,hakumai,2780,5.0,True,1,8,4.38,True,岡田米穀店 楽天市場店
 2026-11-04,hseason:10000078,musen,5580,10.0,False,1,4527,4.61,True,ハーベストシーズン
-2026-11-04,rice-miyagi:10005758,musen,5590,10.0,False,1,21,4.62,True,ライス宮城
 2026-11-04,komean-sugasawa:10000103,hakumai,2799,5.0,True,1,65,4.74,True,こめ庵
 2026-11-04,myoko-koide:10000180,hakumai,5600,10.0,False,1,39,4.85,True,こしひかりの郷 小出農場
 2026-11-04,daisukiaizu:10000207,hakumai,5599,10.0,True,1,1721,4.77,True,ごはん大好き 会津米
@@ -1061,7 +1062,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,kimsho:10000695,hakumai,5690,10.0,True,1,12554,4.47,True,近江の国から木村商店
 2026-11-04,yamamotoyasuo-saketen:10000020,hakumai,2850,5.0,False,1,32,4.56,True,山本靖雄酒店 楽天市場店
 2026-11-04,imagi:10000277,hakumai,5700,10.0,False,1,119,4.71,True,お米プラザ新潟[楽天市場店]
-2026-11-04,yamamotoyasuo-saketen:10000348,musen,2850,5.0,False,1,18,4.39,True,山本靖雄酒店 楽天市場店
 2026-11-04,sunfarm:10000007,genmai,5700,10.0,True,1,79,4.72,True,サンファームしらたか
 2026-11-04,santoyo:10000068,mochi,2850,5.0,False,1,13,5.0,True,京丹後のお米 三浦豊蔵商店
 2026-11-04,okomeabe:10000348,mochi,11480,20.0,True,1,10,4.7,True,阿部ベイコク
@@ -1087,7 +1087,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,nogyoya:10150759,genmai,5980,10.0,True,1,14,3.14,True,【菜園くらぶ】家庭菜園の専門店
 2026-11-04,hseason:10000815,musen,5990,10.0,False,1,19,3.68,True,ハーベストシーズン
 2026-11-04,hijikata-syoten:10000042,genmai,5994,10.0,True,1,359,4.79,True,土方商店 晴れの岡山 楽天市場店
-2026-11-04,takizawa:10000188,hakumai,3000,5.0,False,1,418,4.79,True,滝沢米穀店
 2026-11-04,meimaikoubou:10000007,hakumai,3000,5.0,True,1,48,4.29,True,めいまい工房 楽天市場店
 2026-11-04,komean-sugasawa:10000011,genmai,2999,5.0,True,1,897,4.7,True,こめ庵
 2026-11-04,yamagatanougei:10000115,genmai,5999,10.0,True,1,25,4.92,True,山形農芸 楽天市場店
@@ -1098,12 +1097,14 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,hseason:10000377,musen,6080,10.0,False,1,5014,4.58,True,ハーベストシーズン
 2026-11-04,banshu:10000015,hakumai,6080,10.0,False,1,83,4.63,True,おいしいお米「米蔵」(こめくら)
 2026-11-04,adachi-umai:10000827,musen,6099,10.0,True,1,262,4.54,True,あだちねっと 美米屋
+2026-11-04,hseason:10000777,musen,12260,20.0,False,1,23,4.61,True,ハーベストシーズン
 2026-11-04,kodawari-komachi:10000035,genmai,6150,10.0,True,2,70,4.87,True,秋田県こだわり農場 楽天市場店
-2026-11-04,anzai-rice:10000572,hakumai,3080,5.0,True,1,2,5.0,True,まんま屋
+2026-11-04,fuchigami:10000360,hakumai,3080,5.0,True,1,671,4.64,True,こめたつ
 2026-11-04,haratafarm:10000020,genmai,6201,10.0,True,1,21,4.76,True,原田佐渡島ファーム 楽天市場店
 2026-11-04,rakuten24:10322448,hakumai,3107,5.0,False,1,55,4.07,True,楽天24
 2026-11-04,kyusyukome:10000341,hakumai,3130,5.0,True,1,13,4.31,True,九州米大将
 2026-11-04,hseason:10000349,musen,6280,10.0,False,1,6940,4.6,True,ハーベストシーズン
+2026-11-04,komedokoro:10000001,hakumai,6280,10.0,True,1,60,4.75,True,米処 稲穂屋
 2026-11-04,rice-akita:10000018,genmai,6280,10.0,False,1,519,4.68,True,ライス秋田
 2026-11-04,okomeyuki:10000057,hakumai,6330,10.0,True,1,1465,4.88,True,雪の中のお米屋
 2026-11-04,daisukiaizu:10000871,mochi,6350,10.0,True,1,1,5.0,True,ごはん大好き 会津米
@@ -1118,6 +1119,7 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,marukichi-kayano:10000140,genmai,6480,10.0,True,1,931,4.77,True,丸吉 茅野商店 北海道
 2026-11-04,okome-gensenmai:10000105,mochi,19480,30.0,True,1,9,4.78,True,米 通販 厳選米本舗
 2026-11-04,adachi-umai:10000188,hakumai,6499,10.0,True,1,20774,4.66,True,あだちねっと 美米屋
+2026-11-04,itamimai:10001743,hakumai,3250,5.0,True,1,30,4.8,True,お米くらぶ
 2026-11-04,isobekomeya:10000083,mochi,15600,24.0,False,1,98,4.64,True,いそべ米屋 楽天市場店
 2026-11-04,yokogoshi:10001025,hakumai,3270,5.0,False,1,1147,4.58,True,越後雪国地酒連峰(新潟店)
 2026-11-04,shokome:10000056,hakumai,3280,5.0,False,1,17,4.82,True,おいしい庄内米の店 秋田屋商店
@@ -1129,17 +1131,16 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,ricey-miyagi:10000045,hakumai,3300,5.0,True,1,67,4.87,True,株式会社ライシー宮城
 2026-11-04,myoko-koide:10000060,genmai,6600,10.0,True,1,836,4.71,True,こしひかりの郷 小出農場
 2026-11-04,yokogoshi:10000946,hakumai,6650,10.0,False,1,1997,4.7,True,越後雪国地酒連峰(新潟店)
-2026-11-04,kyusyukome:10000062,musen,3330,5.0,True,1,142,4.58,True,九州米大将
 2026-11-04,yamatorice:10000184,hakumai,6680,10.0,False,1,4291,4.51,True,ヤマトライス
 2026-11-04,yamatorice:10000175,musen,13380,20.0,False,1,221,4.67,True,ヤマトライス
 2026-11-04,work-parts:10000528,mochi,13400,20.0,True,1,0,0,True,ワークパーツ
 2026-11-04,rakuten24:11222813,hakumai,3365,5.0,True,1,15,3.67,True,楽天24
-2026-11-04,kougobeikoku:10000375,hakumai,3370,5.0,True,1,35,4.8,True,お米の向後米穀楽天市場店
 2026-11-04,heartlandfarm:10000263,hakumai,3380,5.0,False,5,4,5.0,True,ハートランドファームいちご一笑
 2026-11-04,heartlandfarm:10000213,hakumai,3380,5.0,False,1,5,5.0,True,ハートランドファームいちご一笑
 2026-11-04,eekome:10000381,genmai,6780,10.0,True,1,4126,4.79,True,京の米職人
 2026-11-04,okomenohizenya:10000022,hakumai,6780,10.0,True,1,77,4.78,True,お米のひぜん屋
 2026-11-04,yukihikari:10000073,hakumai,6780,10.0,True,1,1926,4.84,True,市川農場 楽天市場店
+2026-11-04,okomenohizenya:10000109,hakumai,6880,10.0,True,1,33,4.85,True,お米のひぜん屋
 2026-11-04,hseason:10000255,musen,3450,5.0,True,3,2023,4.58,True,ハーベストシーズン
 2026-11-04,okome-no-takasaka:10000016,hakumai,6900,10.0,False,1,762,4.72,True,お米のたかさか
 2026-11-04,okomekometouji:10000049,genmai,6910,10.0,True,1,255,4.73,True,お米屋 米杜氏 楽天市場店
@@ -1151,14 +1152,14 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,yamatorice:10000005,hakumai,6980,10.0,False,1,143,4.56,True,ヤマトライス
 2026-11-04,komenouka:10000002,genmai,6980,10.0,True,1,191,4.7,True,農家からの贈り物 楽天市場店
 2026-11-04,akutagawa-foods:10000044,mochi,3488,5.0,True,1,10,4.5,True,里山農家のおいしいお米
-2026-11-04,okomeabe:10000352,mochi,13980,20.0,True,1,3,4.33,True,阿部ベイコク
 2026-11-04,oga-tama:10000067,genmai,7000,10.0,True,1,6,4.33,True,小川の玉手箱「おがたま」
+2026-11-04,adachi-umai:10004902,musen,3508,5.0,True,1,22,4.18,True,あだちねっと 美米屋
 2026-11-04,rakuten24:11406677,musen,7027,10.0,False,1,0,0,True,楽天24
 2026-11-04,hseason:10000363,musen,3540,5.0,True,1,420,4.52,True,ハーベストシーズン
 2026-11-04,marukichi-kayano:10000022,genmai,7180,10.0,True,1,1505,4.79,True,丸吉 茅野商店 北海道
 2026-11-04,rakuten24:10979010,musen,7248,10.0,True,1,28,4.36,True,楽天24
-2026-11-04,kougobeikoku:10000380,genmai,3640,5.0,True,1,23,4.87,True,お米の向後米穀楽天市場店
 2026-11-04,marukichi-kayano:10000002,hakumai,3640,5.0,True,1,41,4.51,True,丸吉 茅野商店 北海道
+2026-11-04,kougobeikoku:10000380,genmai,3640,5.0,True,1,23,4.87,True,お米の向後米穀楽天市場店
 2026-11-04,tendofoods:10000186,hakumai,7280,10.0,False,1,943,4.71,True,てんどうフーズうまいもの通販
 2026-11-04,ebisu-murayama:10000336,hakumai,3680,5.0,True,1,18,4.78,True,丸公楽天市場店
 2026-11-04,yokogoshi:10000947,hakumai,3700,5.0,False,1,790,4.67,True,越後雪国地酒連峰(新潟店)
@@ -1166,7 +1167,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,yamatorice:10000040,musen,7480,10.0,False,1,106,4.56,True,ヤマトライス
 2026-11-04,toyorice:10000262,genmai,6800,9.0,True,5,13679,4.78,True,金芽米・オンラインショップ
 2026-11-04,myoko-koide:10000008,mochi,3800,5.0,False,1,118,4.75,True,こしひかりの郷 小出農場
-2026-11-04,imagi:10001475,mochi,19000,25.0,True,1,5,5.0,True,お米プラザ新潟[楽天市場店]
 2026-11-04,rakuten24:10628129,hakumai,3809,5.0,True,1,40,4.38,True,楽天24
 2026-11-04,rakuten24:10978995,hakumai,7619,10.0,True,1,20,4.35,True,楽天24
 2026-11-04,ricey-miyagi:10000042,hakumai,7700,10.0,True,1,27,4.41,True,株式会社ライシー宮城
@@ -1175,7 +1175,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,toyorice:10000388,musen,7800,10.0,True,1,1445,4.79,True,金芽米・オンラインショップ
 2026-11-04,myoko-koide:10000217,hakumai,3950,5.0,False,1,4,4.25,True,こしひかりの郷 小出農場
 2026-11-04,ocomeya3:10001027,hakumai,3980,5.0,True,1,78,4.74,True,越後の米穀商高田屋
-2026-11-04,comeya:10000054,musen,3980,5.0,True,1,17,4.0,True,庄内の水田を守る会斎藤農場
 2026-11-04,tendofoods:10000012,hakumai,3980,5.0,False,1,214,4.59,True,てんどうフーズうまいもの通販
 2026-11-04,okome-gensenmai:10000291,mochi,3980,5.0,True,1,0,0,True,米 通販 厳選米本舗
 2026-11-04,revives01:10000043,hakumai,7980,10.0,False,1,7,4.71,True,ふるさとファーム2021
@@ -1184,7 +1183,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,toyorice:10000206,musen,7200,9.0,True,1,4564,4.8,True,金芽米・オンラインショップ
 2026-11-04,komenouka:10000014,hakumai,7998,10.0,True,1,1249,4.69,True,農家からの贈り物 楽天市場店
 2026-11-04,kururinokome:10000432,genmai,7996,10.0,True,1,526,4.52,True,くるりのお米屋
-2026-11-04,imagi:10000672,mochi,8000,10.0,False,1,28,4.5,True,お米プラザ新潟[楽天市場店]
 2026-11-04,kome-tora:10000070,mochi,25000,30.0,True,1,1,5.0,True,株式会社 とらわか
 2026-11-04,rakuten24:10387812,hakumai,8345,10.0,True,1,19,4.0,True,楽天24
 2026-11-04,serebunakomeya:10000123,hakumai,8350,10.0,False,1,4248,4.47,True,吟米本舗
@@ -1226,7 +1224,6 @@ date,code,kind,price,qty_kg,postage_included,point_rate,review_count,review_avg,
 2026-11-04,genki-genmai:10000006,genmai,17800,15.0,False,1,1785,4.88,True,玄米・雑穀米の通販 川島米穀店
 2026-11-04,hokkarimochi:10000158,mochi,5980,5.0,False,1,1,4.0,True,お米の専門店 穂っかりもち
 2026-11-04,beikokukan:10000039,mochi,5990,5.0,True,1,138,4.75,True,無洗米とお米の「米穀館」
-2026-11-04,kanaemina:10044622,hakumai,4960,4.0,True,1,0,0,True,kanaemina
 2026-11-04,genki-genmai:10000005,genmai,11200,9.0,False,1,1893,4.84,True,玄米・雑穀米の通販 川島米穀店
 2026-11-04,genki-genmai:10000004,genmai,5800,4.5,False,1,11193,4.79,True,玄米・雑穀米の通販 川島米穀店
 2026-11-04,uonumanoukousha:10000001,hakumai,13800,10.0,True,1,39,4.64,True,魚沼のこしひかり 魚沼農耕舎
