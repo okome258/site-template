@@ -1954,26 +1954,6 @@
   "chicken": {
    "items": [
     {
-     "code": "f454010-takanabe:10001215",
-     "name": "【小分け】【大容量】＜鶏もも肉・鶏むね肉セット 各250g（各7パック 計3.5kg/各14パック 計7.0kg/各21パック 計10.5kg）＞翌月末迄に順次出荷 鶏肉 モモ肉 ムネ肉 冷凍 宮崎県産 国産 宮崎県 高鍋町 送料無料",
-     "price": 18000,
-     "qty": 10.5,
-     "evidence": "計10.5kg",
-     "per10k": 5.833,
-     "unit_price": 1714,
-     "shop": "宮崎県高鍋町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sj6go.ia33055a.g00sj6go.ia331cf9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff454010-takanabe%2Fkf_10%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff454010-takanabe%2Fi%2F10001215%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "高鍋町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f454010-takanabe/cabinet/11698978/imgrc0102226341.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 2.77,
-     "market_yen": 17120.0,
-     "market_pct": 95
-    },
-    {
      "code": "f032140-hachimantai:10001035",
      "name": "鶏肉 岩手県産 菜彩鶏 むね肉 4kgセット（1kg×4 計4kg）／ 国産 国産鶏 ブランド鶏 ブランド肉 お肉 鶏むね 鶏 もも 鳥肉 とりにく ムネ 冷凍 さいさいどり おすすめ 岩手県 八幡平市 送料無料 十文字 チキン カンパニー 八幡平工場",
      "price": 9000,
@@ -1989,7 +1969,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.11,
+     "vs_median": 2.22,
      "market_yen": 6520.0,
      "market_pct": 72
     },
@@ -2009,7 +1989,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.04,
+     "vs_median": 2.14,
      "market_yen": 19560.0,
      "market_pct": 70
     },
@@ -2029,7 +2009,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 1.87,
+     "vs_median": 1.97,
      "market_yen": 13040.0,
      "market_pct": 64
     },
@@ -2049,9 +2029,29 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 1.81,
+     "vs_median": 1.91,
      "market_yen": 13040.0,
      "market_pct": 62
+    },
+    {
+     "code": "f454010-takanabe:10000577",
+     "name": "＜宮崎県産若鶏4種 総重量8kgセット＞ 鶏肉 もも むね ささみ 手羽元 特産品 宮崎県 高鍋町【冷凍】",
+     "price": 23000,
+     "qty": 8.0,
+     "evidence": "総重量8kg",
+     "per10k": 3.478,
+     "unit_price": 2875,
+     "shop": "宮崎県高鍋町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sj6go.ia33055a.g00sj6go.ia331cf9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff454010-takanabe%2Fdm_25%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff454010-takanabe%2Fi%2F10000577%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "高鍋町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f454010-takanabe/cabinet/dm/c624_dm_01c.jpg?_ex=240x240",
+     "review_avg": 4.25,
+     "review_count": 4,
+     "wakeari": false,
+     "vs_median": 1.74,
+     "market_yen": 13040.0,
+     "market_pct": 57
     },
     {
      "code": "f452025-miyakonojo:10007038",
@@ -2069,7 +2069,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.58,
+     "vs_median": 1.67,
      "market_yen": 6520.0,
      "market_pct": 54
     },
@@ -2089,7 +2089,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.53,
+     "vs_median": 1.61,
      "market_yen": 16300.0,
      "market_pct": 53
     },
@@ -2109,7 +2109,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.5,
+     "vs_median": 1.58,
      "market_yen": 9780.0,
      "market_pct": 51
     },
@@ -2129,7 +2129,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.46,
+     "vs_median": 1.54,
      "market_yen": 6520.0,
      "market_pct": 50
     },
@@ -2149,7 +2149,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.46,
+     "vs_median": 1.54,
      "market_yen": 19560.0,
      "market_pct": 50
     },
@@ -2169,7 +2169,7 @@
      "review_avg": 4.5,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.36,
+     "vs_median": 1.43,
      "market_yen": 6520.0,
      "market_pct": 47
     },
@@ -2189,7 +2189,7 @@
      "review_avg": 4.81,
      "review_count": 21,
      "wakeari": false,
-     "vs_median": 1.3,
+     "vs_median": 1.36,
      "market_yen": 4890.0,
      "market_pct": 44
     },
@@ -2209,7 +2209,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.3,
+     "vs_median": 1.36,
      "market_yen": 4890.0,
      "market_pct": 44
     },
@@ -2229,7 +2229,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.27,
+     "vs_median": 1.33,
      "market_yen": 13040.0,
      "market_pct": 43
     },
@@ -2249,7 +2249,7 @@
      "review_avg": 4.42,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.17,
+     "vs_median": 1.23,
      "market_yen": 5220.0,
      "market_pct": 40
     },
@@ -2269,7 +2269,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.16,
      "market_yen": 8310.0,
      "market_pct": 38
     },
@@ -2289,7 +2289,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": true,
-     "vs_median": 1.09,
+     "vs_median": 1.14,
      "market_yen": 5220.0,
      "market_pct": 37
     },
@@ -2309,7 +2309,7 @@
      "review_avg": 4.59,
      "review_count": 69,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.05,
      "market_yen": 6520.0,
      "market_pct": 34
     },
@@ -2329,7 +2329,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 0.95,
+     "vs_median": 1.0,
      "market_yen": 5540.0,
      "market_pct": 33
     },
@@ -2349,7 +2349,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.95,
+     "vs_median": 1.0,
      "market_yen": 4890.0,
      "market_pct": 33
     },
@@ -2369,7 +2369,7 @@
      "review_avg": 4.55,
      "review_count": 184,
      "wakeari": false,
-     "vs_median": 0.86,
+     "vs_median": 0.91,
      "market_yen": 3260.0,
      "market_pct": 30
     },
@@ -2389,7 +2389,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 0.86,
+     "vs_median": 0.91,
      "market_yen": 4890.0,
      "market_pct": 30
     },
@@ -2409,8 +2409,28 @@
      "review_avg": 4.73,
      "review_count": 436,
      "wakeari": false,
-     "vs_median": 0.79,
+     "vs_median": 0.83,
      "market_yen": 4890.0,
+     "market_pct": 27
+    },
+    {
+     "code": "f363871-minami:10000065",
+     "name": "阿波尾鶏むね肉セット（2kg）",
+     "price": 12000,
+     "qty": 2.0,
+     "evidence": "2kg",
+     "per10k": 1.667,
+     "unit_price": 6000,
+     "shop": "徳島県美波町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00towco.ia330de2.g00towco.ia331e15/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff363871-minami%2Fmt030-002%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff363871-minami%2Fi%2F10000065%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "美波町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f363871-minami/cabinet/11162064/imgrc0106118314.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.83,
+     "market_yen": 3260.0,
      "market_pct": 27
     },
     {
@@ -2429,7 +2449,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.73,
+     "vs_median": 0.77,
      "market_yen": 3260.0,
      "market_pct": 25
     },
@@ -2449,7 +2469,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2476,7 +2496,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2503,7 +2523,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.69,
+     "vs_median": 0.73,
      "market_yen": 2610.0,
      "market_pct": 24
     },
@@ -2523,7 +2543,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.63,
+     "vs_median": 0.67,
      "change": {
       "price": 13000,
       "qty": 2.0,
@@ -2550,48 +2570,28 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.61,
+     "vs_median": 0.65,
      "market_yen": 6520.0,
-     "market_pct": 21
-    },
-    {
-     "code": "f352110-nagato:10000189",
-     "name": "長州どり もも肉 1.8kg（300g×6パック）【鶏肉 小分け もも カット もも肉 チキン モモ肉 とりにく 切り身 とり肉 国産 冷凍 精肉 カット済 小分けパック】",
-     "price": 14000,
-     "qty": 1.8,
-     "evidence": "300g×6",
-     "per10k": 1.286,
-     "unit_price": 7778,
-     "shop": "山口県長門市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tpggo.ia330cfb.g00tpggo.ia331b7e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff352110-nagato%2F1006%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff352110-nagato%2Fi%2F10000189%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "長門市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f352110-nagato/cabinet/07428829/imgrc0087924504.jpg?_ex=240x240",
-     "review_avg": 4.96,
-     "review_count": 25,
-     "wakeari": false,
-     "vs_median": 0.61,
-     "market_yen": 2930.0,
      "market_pct": 21
     }
    ],
-   "candidates": 163,
-   "ranked": 36,
+   "candidates": 166,
+   "ranked": 38,
    "dropped": {
-    "対象外の商品": 75,
-    "選択式": 46,
+    "対象外の商品": 76,
+    "選択式": 45,
     "量が複数": 2,
-    "量なし": 3,
+    "量なし": 4,
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 2.105,
+    "median_per10k": 2.0,
     "median_unit_price": 5000,
-    "min_unit_price": 1714,
+    "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 23
+    "towns": 25
    },
-   "popularity": 1483
+   "popularity": 1555
   },
   "scallop": {
    "items": [
@@ -4424,8 +4424,8 @@
    "ranked": 33,
    "dropped": {
     "対象外の商品": 15,
-    "量が複数": 5,
     "選択式": 62,
+    "量が複数": 5,
     "量なし": 15
    },
    "summary": {
@@ -6681,8 +6681,8 @@
    "dropped": {
     "量が複数": 7,
     "選択式": 38,
-    "量なし": 1,
     "対象外の商品": 10,
+    "量なし": 1,
     "量が範囲外": 8
    },
    "summary": {
@@ -10499,8 +10499,8 @@
    "candidates": 148,
    "ranked": 60,
    "dropped": {
-    "対象外の商品": 18,
-    "選択式": 60,
+    "対象外の商品": 17,
+    "選択式": 61,
     "量が複数": 3,
     "量なし": 5,
     "量が範囲外": 2
@@ -11542,25 +11542,43 @@
      "review_count": 13,
      "wakeari": false,
      "vs_median": 0.37
+    },
+    {
+     "code": "f462195-itikikusikino:10000066",
+     "name": "鹿児島県産黒豚使用！煮込みハンバーグ・チーズインハンバーグセット(合計12個・各180g×6個) 豚 豚肉 肉 鹿児島 国産 黒豚 調理済 レンジ 時短 調理 ハンバーグ 惣菜 チーズ チーズインハンバーグ【エーエフ企画】",
+     "price": 33000,
+     "qty": 1.08,
+     "evidence": "180g×6",
+     "per10k": 0.327,
+     "unit_price": 30556,
+     "shop": "鹿児島県いちき串木野市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00skvgo.ia330f56.g00skvgo.ia33121d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff462195-itikikusikino%2F10000066%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff462195-itikikusikino%2Fi%2F10000066%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "いちき串木野市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f462195-itikikusikino/cabinet/05184417/10000066_smn1.jpg?_ex=240x240",
+     "review_avg": 3.0,
+     "review_count": 2,
+     "wakeari": false,
+     "vs_median": 0.36
     }
    ],
    "candidates": 102,
-   "ranked": 17,
+   "ranked": 18,
    "dropped": {
+    "選択式": 34,
     "対象外の商品": 34,
-    "選択式": 35,
     "量が複数": 2,
     "量なし": 11,
     "量が範囲外": 3
    },
    "summary": {
     "median_per10k": 0.9,
-    "median_unit_price": 11111,
+    "median_unit_price": 12500,
     "min_unit_price": 3125,
-    "max_unit_price": 30000,
-    "towns": 13
+    "max_unit_price": 30556,
+    "towns": 14
    },
-   "popularity": 1615
+   "popularity": 1617
   },
   "gyoza": {
    "items": [
@@ -12302,10 +12320,10 @@
      "vs_median": 0.45
     }
    ],
-   "candidates": 119,
+   "candidates": 118,
    "ranked": 14,
    "dropped": {
-    "対象外の商品": 83,
+    "対象外の商品": 82,
     "選択式": 12,
     "量が複数": 6,
     "量なし": 4
@@ -14687,11 +14705,11 @@
      "vs_median": 0.53
     }
    ],
-   "candidates": 146,
+   "candidates": 145,
    "ranked": 27,
    "dropped": {
     "選択式": 42,
-    "対象外の商品": 46,
+    "対象外の商品": 45,
     "量なし": 21,
     "量が範囲外": 8,
     "量が複数": 2
@@ -14913,13 +14931,13 @@
      "vs_median": 0.55
     }
    ],
-   "candidates": 96,
+   "candidates": 97,
    "ranked": 11,
    "dropped": {
-    "対象外の商品": 58,
-    "選択式": 17,
+    "対象外の商品": 59,
+    "選択式": 16,
     "量が範囲外": 9,
-    "量なし": 1
+    "量なし": 2
    },
    "summary": {
     "median_per10k": 10.909,
@@ -15501,13 +15519,13 @@
      "vs_median": 0.67
     }
    ],
-   "candidates": 87,
+   "candidates": 88,
    "ranked": 39,
    "dropped": {
     "量が範囲外": 15,
     "選択式": 16,
     "量なし": 5,
-    "対象外の商品": 10,
+    "対象外の商品": 11,
     "量が複数": 2
    },
    "summary": {
@@ -15864,24 +15882,6 @@
      "vs_median": 1.25
     },
     {
-     "code": "f392111-konan:10001011",
-     "name": "【7日程度で発送】高木酒造 白ワインのようなお酒！純米吟醸いとをかし 一升瓶 1800ml×1本 - お酒 日本酒 米 アルコール フルーティー 国産 晩酌 特産品 ギフト 贈り物 プレゼント 贈答用 御礼 乾杯 早い スピード発送 7日程度 高知県 香南市【常温/冷蔵】",
-     "price": 16000,
-     "qty": 1.8,
-     "evidence": "1800ml×1",
-     "per10k": 1.125,
-     "unit_price": 8889,
-     "shop": "高知県香南市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ss7qo.ia3301c3.g00ss7qo.ia33156d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff392111-konan%2Fgs_03%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff392111-konan%2Fi%2F10001011%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "香南市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f392111-konan/cabinet/y_item_img/gs/0436_gs_01c_s.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 1,
-     "wakeari": false,
-     "vs_median": 1.25
-    },
-    {
      "code": "f412066-takeo:10000730",
      "name": "【お歳暮ギフト】The SAGA認定酒 特別純米酒 東長 1.8L /江口酒店 [UBS002] 酒 お酒 日本酒 おさけ アルコール",
      "price": 16000,
@@ -15894,6 +15894,24 @@
      "portal": "楽天ふるさと納税",
      "town": "武雄市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412066-takeo/cabinet/item/ubs/ubs002.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 1,
+     "wakeari": false,
+     "vs_median": 1.25
+    },
+    {
+     "code": "f392111-konan:10001011",
+     "name": "【7日程度で発送】高木酒造 白ワインのようなお酒！純米吟醸いとをかし 一升瓶 1800ml×1本 - お酒 日本酒 米 アルコール フルーティー 国産 晩酌 特産品 ギフト 贈り物 プレゼント 贈答用 御礼 乾杯 早い スピード発送 7日程度 高知県 香南市【常温/冷蔵】",
+     "price": 16000,
+     "qty": 1.8,
+     "evidence": "1800ml×1",
+     "per10k": 1.125,
+     "unit_price": 8889,
+     "shop": "高知県香南市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ss7qo.ia3301c3.g00ss7qo.ia33156d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff392111-konan%2Fgs_03%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff392111-konan%2Fi%2F10001011%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "香南市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f392111-konan/cabinet/y_item_img/gs/0436_gs_01c_s.jpg?_ex=240x240",
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
@@ -16069,12 +16087,12 @@
      "vs_median": 1.0
     }
    ],
-   "candidates": 168,
+   "candidates": 169,
    "ranked": 63,
    "dropped": {
     "対象外の商品": 77,
     "選択式": 17,
-    "量なし": 8,
+    "量なし": 9,
     "量が複数": 2,
     "量が範囲外": 1
    },
@@ -17030,5 +17048,5 @@
    }
   }
  },
- "fetched_at": "2026-11-09T07:15+09:00"
+ "fetched_at": "2026-11-09T09:06+09:00"
 }
