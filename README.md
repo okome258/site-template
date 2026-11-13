@@ -62,3 +62,11 @@ GitHub Secrets: `RAKUTEN_APP_ID` / `RAKUTEN_ACCESS_KEY` / `RAKUTEN_AFFILIATE_ID`
 ## ふるさと納税サイトのキャラクター
 
 マスコット「ふくすけ」(ふくら雀。福がふくらむ縁起物)。おこめさん作のイラスト。`sites/furusato/static/fukusuke.webp`(全身・背景透過)、`fukusuke-face.png`(顔・ロゴ用)、`favicon-64.png` / `apple-touch-icon.png`。
+
+## 週1の検索チェック(`.github/workflows/search-check.yml`)
+
+毎週月曜 7:37 JST に `scripts/search_check.py` が動き、結果を `reports/gsc/latest.json`(と `history.jsonl`)に残す。
+
+- Google: Search Console API で主要URLのインデックス状況と直近28日の表示回数・クリック数を取る。Secrets の `GSC_SA_JSON`(サービスアカウントの鍵JSON)が無ければ飛ばす。サービスアカウントのメールは Search Console の otokuest.com に「ユーザー」として追加しておく
+- Bing等: IndexNow で sitemap の全URLを通知(鍵ファイルは `core/static/<鍵>.txt` で全サイトに配信。Googleは非対応)
+- Discord: Secrets に `DISCORD_WEBHOOK_URL` があれば要約を送る

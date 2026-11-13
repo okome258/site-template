@@ -1,0 +1,38 @@
+name: 週1の検索チェック
+
+on:
+  schedule:
+    - cron: "37 22 * * 0"   # 月曜 7:37 JST(毎日の更新・デプロイが終わった後)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build   # 毎日の更新と同時にpushしないよう、同じグループで順番待ち
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt google-auth
+      - name: Google登録状況の確認・IndexNow送信
+        env:
+          GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/search_check.py
+      - name: レポートをコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports
+          git diff --cached --quiet && exit 0
+          git commit -m "検索チェック $(TZ=Asia/Tokyo date +%Y-%m-%d)"
+          for i in 1 2 3; do git push && exit 0; git pull --rebase origin main; sleep 5; done
+          exit 1
