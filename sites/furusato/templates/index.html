@@ -1,5 +1,9 @@
 {% extends "_layout.html" %}
-{% block head %}<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ふるさと納税 量くらべ", "alternateName": ["量くらべ", "furusato.otokuest.com"], "url": "https://furusato.otokuest.com/"}</script>{% endblock %}
+{% block head %}<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ふるさと納税 量くらべ", "alternateName": ["量くらべ", "furusato.otokuest.com"], "url": "https://furusato.otokuest.com/"}</script>
+<style>
+.rc-list{padding-left:1.2em;margin:8px 0}.rc-list li{margin:6px 0;font-size:14px;line-height:1.5}
+.badge.chg.good{background:#e6f4ea;color:#1e6b34}.badge.chg.bad{background:#fdeee8;color:#a3401c}.badge.chg.same{background:#eee;color:#555}
+</style>{% endblock %}
 {% block content %}
 <section class="hero">
   <img class="hero-bird" src="{{ page.root }}fukusuke.webp" alt="ふくら雀のふくすけ" width="170" height="168">
@@ -37,6 +41,26 @@
 {% endif %}
 
 
+
+<section class="diff-official">
+  <h2>公式ランキングとの違い</h2>
+  <p>楽天やさとふるの公式ランキングは「よく選ばれている順」です。このサイトは、楽天ふるさと納税の{{ cats | length }}カテゴリ・{{ "{:,}".format(nav.ranked_total) }}件の返礼品を<strong>「寄付1万円あたり何kg・何個届くか」</strong>で並べ直しています。人気の返礼品が量でも得とは限らないので、候補を決めたあとに「同じ寄付額でもっと多く届くものはないか」を確かめる使い方を想定しています。</p>
+  <p>あわせて、比べている返礼品の寄付額と内容量を毎日記録し、量が減った・寄付額が上がった「実質値上げ」を見つけて載せています。公式ページでは分からない部分です。</p>
+</section>
+
+{% if nav.changes_recent %}
+<section class="recent-changes">
+  <h2>最近の値上げ・減量</h2>
+  <p class="small">記録中の変更 {{ nav.changes_n }}件のうち、実質値上げ {{ nav.changes_up }}件・お得になった {{ nav.changes_down }}件。新しい順に5件。</p>
+  <ul class="rc-list">
+  {% for r in nav.changes_recent %}
+    <li><a href="{{ page.root }}c/{{ r.cat.id }}/">{{ r.cat.name }}</a>{% if r.town %}（{{ r.town }}）{% endif %}：寄付額 {{ r.p0 | yen }}→{{ r.p1 | yen }}／量 {{ "%g" | format(r.q0) }}→{{ "%g" | format(r.q1) }}{{ r.cat.unit }}
+      <span class="badge chg {{ r.tone }}">{{ r.kind }}{% if r.pct %} {{ '+' if r.pct > 0 else '' }}{{ r.pct }}%{% endif %}</span></li>
+  {% endfor %}
+  </ul>
+  <p><a href="{{ page.root }}changes/">値上げ・減量の一覧を見る →</a></p>
+</section>
+{% endif %}
 
 <h2 class="h-board">定番カテゴリの1位</h2>
 {% with list = nav.tops %}{% include "_board.html" %}{% endwith %}

@@ -394,6 +394,7 @@ def _pick(cat: dict, items: list[dict], data: dict, cfg: dict) -> dict | None:
     return res
 
 
+PREF_INDEX_MIN = 3  # 県ページを検索に出す最低件数(上位TOP_N_MAP位に入った数)
 TOP_N_MAP = 10  # 地図で数える順位(各カテゴリの上位何位まで)
 
 
@@ -431,7 +432,10 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     changes = _changes(cfg, data, cats)
     nav = {"tops": tops, "others": others, "groups": list(groups.items()), "season": season,
            "pref_counts": pref_counts, "top_n_map": TOP_N_MAP,
-           "changes_n": len(changes), "changes_recent": changes[:5]}
+           "changes_n": len(changes), "changes_recent": changes[:5],
+           "changes_up": sum(1 for x in changes if x["tone"] == "bad"),
+           "changes_down": sum(1 for x in changes if x["tone"] == "good"),
+           "ranked_total": sum(r.get("ranked", 0) for r in data.get("categories", {}).values())}
     ps = [{"path": "index.html", "template": "index.html", "context": {"cats": cats, "nav": nav, "genres": GENRE_RANKINGS},
            "title": f"ふるさと納税 量くらべ｜コスパ最強の返礼品を寄付1万円あたりの量でランキング【{_ym(data)}】"}]
     for c in cats:
@@ -484,7 +488,10 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         ps.append({"path": f"pref/{SLUGS[p]}/index.html", "template": "pref.html",
                    "title": f"{p}のふるさと納税 コスパの良い返礼品(量が多い順)【{_ym(data)}】",
                    "description": desc + "毎日自動更新。",
-                   "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near}})
+                   "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near},
+                   # 上位に入った返礼品が少ない県は中身が薄いので検索には出さない(サイト全体の評価を下げないため)。
+                   # ページ自体は地図から行けるように残す。sitemap からも外れる
+                   "noindex": n < PREF_INDEX_MIN})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats, "nav": nav}, "changefreq": "monthly"})
     return ps
