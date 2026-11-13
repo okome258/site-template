@@ -112,11 +112,24 @@ def analytics(sess, site: dict) -> dict:
                          "position": round(r["position"], 1)} for r in (q.json().get("rows", []) if q.status_code == 200 else [])]}
 
 
+def sitemaps(sess) -> list[dict]:
+    url = f"https://www.googleapis.com/webmasters/v3/sites/{requests.utils.quote(PROPERTY, safe='')}/sitemaps"
+    r = sess.get(url, timeout=60)
+    if r.status_code != 200:
+        return [{"error": f"HTTP {r.status_code}: {r.text[:200]}"}]
+    return [{"path": x.get("path"), "last_submitted": x.get("lastSubmitted"), "last_downloaded": x.get("lastDownloaded"),
+             "pending": x.get("isPending"), "errors": x.get("errors"), "warnings": x.get("warnings"),
+             "submitted": sum(int(c.get("submitted", 0)) for c in x.get("contents", []))}
+            for x in r.json().get("sitemap", [])]
+
+
 def main() -> int:
     now = dt.datetime.now(JST).strftime("%Y-%m-%d %H:%M")
     key = indexnow_key()
     sess = gsc_session()
     report = {"checked_at": now, "gsc": "ok" if sess else "未設定(GSC_SA_JSON なし)", "sites": []}
+    if sess:
+        report["sitemaps"] = sitemaps(sess)
     for s in sites():
         entry = {"slug": s["slug"], "base": s["base"], "sitemap_urls": len(s["urls"])}
         entry["indexnow"] = indexnow(s, key) if (key and s["urls"]) else "スキップ"
