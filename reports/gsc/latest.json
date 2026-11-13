@@ -1,0 +1,363 @@
+{
+ "checked_at": "2026-11-14 00:13",
+ "gsc": "ok",
+ "sites": [
+  {
+   "slug": "furusato",
+   "base": "https://furusato.otokuest.com",
+   "sitemap_urls": 69,
+   "indexnow": "HTTP 202",
+   "inspect": [
+    {
+     "url": "https://furusato.otokuest.com/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-13T13:59:50Z",
+     "google_canonical": "https://furusato.otokuest.com/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/simulator/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-23T15:53:49Z",
+     "google_canonical": "https://furusato.otokuest.com/simulator/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/changes/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-13T14:01:51Z",
+     "google_canonical": "https://furusato.otokuest.com/changes/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/shine/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-11T18:54:42Z",
+     "google_canonical": "https://furusato.otokuest.com/c/shine/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/strawberry/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-12T03:35:00Z",
+     "google_canonical": "https://furusato.otokuest.com/c/strawberry/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/peach/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-26T13:28:58Z",
+     "google_canonical": "https://furusato.otokuest.com/c/peach/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/melon/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-26T17:50:08Z",
+     "google_canonical": "https://furusato.otokuest.com/c/melon/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/udon/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-13T21:13:53Z",
+     "google_canonical": "https://furusato.otokuest.com/c/udon/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/soba/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-27T10:51:42Z",
+     "google_canonical": "https://furusato.otokuest.com/c/soba/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/sparkling/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-11T21:42:11Z",
+     "google_canonical": "https://furusato.otokuest.com/c/sparkling/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/tea/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-26T16:46:58Z",
+     "google_canonical": "https://furusato.otokuest.com/c/tea/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/sake/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-26T10:14:05Z",
+     "google_canonical": "https://furusato.otokuest.com/c/sake/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/detergent/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-12T03:12:35Z",
+     "google_canonical": "https://furusato.otokuest.com/c/detergent/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/c/kitchen/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-13T20:53:58Z",
+     "google_canonical": "https://furusato.otokuest.com/c/kitchen/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/portals/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    }
+   ],
+   "indexed": 0,
+   "analytics": {
+    "from": "2026-10-14",
+    "to": "2026-11-10",
+    "clicks": 3,
+    "impressions": 148,
+    "position": 41.9,
+    "queries": [
+     {
+      "q": "いくらふるさと納税",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 27
+     },
+     {
+      "q": "さと ふる シミュレーション",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 100
+     },
+     {
+      "q": "ふるさと 納税 キッチン ペーパー",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 56
+     },
+     {
+      "q": "ふるさと 納税 コスパ",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 92
+     },
+     {
+      "q": "ふるさと 納税 シミュレーション",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 96.2
+     },
+     {
+      "q": "ふるさと 納税 シュミレーター",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 86
+     },
+     {
+      "q": "ふるさと 納税 年収",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 87.8
+     },
+     {
+      "q": "ふるさと 納税 年収 手取り",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 91
+     },
+     {
+      "q": "ふるさと 納税 年収 計算",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 94
+     },
+     {
+      "q": "ふるさと 納税 手取り",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 88.5
+     }
+    ]
+   }
+  },
+  {
+   "slug": "jikyu",
+   "base": "https://jikyu.otokuest.com",
+   "sitemap_urls": 42,
+   "indexnow": "HTTP 202",
+   "inspect": [
+    {
+     "url": "https://jikyu.otokuest.com/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/advertising/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/kikai-shosha/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/telecom/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/sier/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/school/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/auto/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/hospital/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/kaigo/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/trucking/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/restaurant/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyoshu/haken/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/about/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/yosoku/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://jikyu.otokuest.com/ai/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    }
+   ],
+   "indexed": 0,
+   "analytics": {
+    "from": "2026-10-14",
+    "to": "2026-11-10",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0,
+    "queries": []
+   }
+  },
+  {
+   "slug": "kome",
+   "base": "https://kome.otokuest.com",
+   "sitemap_urls": 5,
+   "indexnow": "HTTP 202",
+   "inspect": [
+    {
+     "url": "https://kome.otokuest.com/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://kome.otokuest.com/musen/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
+    },
+    {
+     "url": "https://kome.otokuest.com/genmai/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-03T09:32:47Z",
+     "google_canonical": "https://kome.otokuest.com/genmai/"
+    },
+    {
+     "url": "https://kome.otokuest.com/mochi/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-03T08:11:31Z",
+     "google_canonical": "https://kome.otokuest.com/mochi/"
+    },
+    {
+     "url": "https://kome.otokuest.com/about/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-03T08:04:30Z",
+     "google_canonical": "https://kome.otokuest.com/about/"
+    }
+   ],
+   "indexed": 0,
+   "analytics": {
+    "from": "2026-10-14",
+    "to": "2026-11-10",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0,
+    "queries": []
+   }
+  }
+ ]
+}
