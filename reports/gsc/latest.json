@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-14 00:24",
+ "checked_at": "2026-11-14 01:11",
  "gsc": "ok",
  "sites": [
   {
@@ -347,6 +347,30 @@
      "coverage": "クロール済み - インデックス未登録",
      "last_crawl": "2026-11-03T08:04:30Z",
      "google_canonical": "https://kome.otokuest.com/about/"
+    }
+   ],
+   "indexed": 0,
+   "analytics": {
+    "from": "2026-10-14",
+    "to": "2026-11-10",
+    "clicks": 0,
+    "impressions": 0,
+    "position": 0,
+    "queries": []
+   }
+  },
+  {
+   "slug": "luck",
+   "base": "https://luck.otokuest.com",
+   "sitemap_urls": 1,
+   "indexnow": "スキップ",
+   "inspect": [
+    {
+     "url": "https://luck.otokuest.com/",
+     "verdict": "NEUTRAL",
+     "coverage": "URL が Google に認識されていません",
+     "last_crawl": null,
+     "google_canonical": null
     }
    ],
    "indexed": 0,
