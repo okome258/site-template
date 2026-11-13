@@ -24,7 +24,9 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "reports" / "gsc"
 PROPERTY = "sc-domain:otokuest.com"
-INSPECT_MAX = 15  # 1サイトあたりの検査URL数(APIの上限は1プロパティ1日2000件)
+INSPECT_MAX = 15
+# このリポジトリ以外で otokuest.com 配下にあるサイト(Googleの確認だけ。IndexNowの鍵は置いていないので通知はしない)
+EXTRA_SITES = {"luck": "https://luck.otokuest.com"}  # 1サイトあたりの検査URL数(APIの上限は1プロパティ1日2000件)
 JST = dt.timezone(dt.timedelta(hours=9))
 
 
@@ -40,7 +42,18 @@ def sites() -> list[dict]:
         sm = cfg_path.parent / "public" / "sitemap.xml"
         urls = re.findall(r"<loc>([^<]+)</loc>", sm.read_text(encoding="utf-8")) if sm.exists() else []
         out.append({"slug": cfg_path.parent.name, "base": base.rstrip("/"), "urls": urls})
+    for slug, base in EXTRA_SITES.items():
+        out.append({"slug": slug, "base": base, "urls": live_sitemap(base + "/sitemap.xml"), "extra": True})
     return out
+
+
+def live_sitemap(url: str) -> list[str]:
+    try:
+        r = requests.get(url, timeout=60, headers={"User-Agent": "search-check"})
+        r.raise_for_status()
+    except requests.RequestException:
+        return []
+    return re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
 
 
 def indexnow_key() -> str | None:
@@ -132,7 +145,7 @@ def main() -> int:
         report["sitemaps"] = sitemaps(sess)
     for s in sites():
         entry = {"slug": s["slug"], "base": s["base"], "sitemap_urls": len(s["urls"])}
-        entry["indexnow"] = indexnow(s, key) if (key and s["urls"]) else "スキップ"
+        entry["indexnow"] = indexnow(s, key) if (key and s["urls"] and not s.get("extra")) else "スキップ"
         if sess:
             entry["inspect"] = [inspect(sess, u) for u in pick_urls(s)]
             entry["indexed"] = sum(1 for x in entry["inspect"] if x.get("verdict") == "PASS")
