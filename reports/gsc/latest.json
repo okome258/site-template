@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-14 00:13",
+ "checked_at": "2026-11-14 00:24",
  "gsc": "ok",
  "sites": [
   {
    "slug": "furusato",
    "base": "https://furusato.otokuest.com",
    "sitemap_urls": 69,
-   "indexnow": "HTTP 202",
+   "indexnow": "HTTP 200",
    "inspect": [
     {
      "url": "https://furusato.otokuest.com/",
@@ -189,7 +189,7 @@
    "slug": "jikyu",
    "base": "https://jikyu.otokuest.com",
    "sitemap_urls": 42,
-   "indexnow": "HTTP 202",
+   "indexnow": "HTTP 200",
    "inspect": [
     {
      "url": "https://jikyu.otokuest.com/",
@@ -311,7 +311,7 @@
    "slug": "kome",
    "base": "https://kome.otokuest.com",
    "sitemap_urls": 5,
-   "indexnow": "HTTP 202",
+   "indexnow": "HTTP 200",
    "inspect": [
     {
      "url": "https://kome.otokuest.com/",
@@ -358,6 +358,35 @@
     "position": 0,
     "queries": []
    }
+  }
+ ],
+ "sitemaps": [
+  {
+   "path": "https://furusato.otokuest.com/sitemap.xml",
+   "last_submitted": "2026-11-13T14:02:02.194Z",
+   "last_downloaded": "2026-11-13T14:02:02.633Z",
+   "pending": false,
+   "errors": "0",
+   "warnings": "0",
+   "submitted": 88
+  },
+  {
+   "path": "https://kome.otokuest.com/sitemap.xml",
+   "last_submitted": "2026-10-10T13:50:56.193Z",
+   "last_downloaded": "2026-10-24T10:13:19.494Z",
+   "pending": false,
+   "errors": "0",
+   "warnings": "0",
+   "submitted": 5
+  },
+  {
+   "path": "https://jikyu.otokuest.com/sitemap.xml",
+   "last_submitted": "2026-10-10T13:49:24.155Z",
+   "last_downloaded": "2026-11-10T00:31:43.856Z",
+   "pending": false,
+   "errors": "0",
+   "warnings": "0",
+   "submitted": 42
   }
  ]
 }
