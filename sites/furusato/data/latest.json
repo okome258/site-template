@@ -5356,7 +5356,7 @@
      "town": "熊本市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f431001-kumamoto/cabinet/08068638/074-1152x2_00r_po.jpg?_ex=240x240",
      "review_avg": 3.8,
-     "review_count": 204,
+     "review_count": 202,
      "wakeari": false,
      "vs_median": 1.54,
      "market_yen": 4660.0,
@@ -5706,7 +5706,7 @@
     "max_unit_price": 5600,
     "towns": 10
    },
-   "popularity": 1654
+   "popularity": 1652
   },
   "apple": {
    "items": [
@@ -11293,10 +11293,10 @@
    "candidates": 93,
    "ranked": 20,
    "dropped": {
-    "選択式": 46,
+    "選択式": 47,
     "対象外の商品": 20,
     "量なし": 3,
-    "量が複数": 3,
+    "量が複数": 2,
     "量が範囲外": 1
    },
    "summary": {
@@ -11884,7 +11884,7 @@
      "town": "行方市",
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f082333-namegata/cabinet/11286002/imgrc0122327749.jpg?_ex=240x240",
      "review_avg": 4.51,
-     "review_count": 480,
+     "review_count": 481,
      "wakeari": false,
      "vs_median": 1.0,
      "change": {
@@ -12135,7 +12135,7 @@
     "max_unit_price": 467,
     "towns": 18
    },
-   "popularity": 1070
+   "popularity": 1071
   },
   "sausage": {
    "items": [
@@ -15715,10 +15715,10 @@
     }
    ],
    "candidates": 87,
-   "ranked": 39,
+   "ranked": 38,
    "dropped": {
     "量なし": 5,
-    "量が範囲外": 15,
+    "量が範囲外": 16,
     "選択式": 16,
     "対象外の商品": 10,
     "量が複数": 2
@@ -15727,10 +15727,10 @@
     "median_per10k": 12.0,
     "median_unit_price": 833,
     "min_unit_price": 500,
-    "max_unit_price": 6190,
+    "max_unit_price": 3095,
     "towns": 24
    },
-   "popularity": 202
+   "popularity": 201
   },
   "sake": {
    "items": [
@@ -16289,10 +16289,10 @@
      "vs_median": 1.0
     }
    ],
-   "candidates": 166,
+   "candidates": 168,
    "ranked": 60,
    "dropped": {
-    "対象外の商品": 79,
+    "対象外の商品": 81,
     "選択式": 18,
     "量なし": 6,
     "量が複数": 2,
@@ -16641,6 +16641,24 @@
      "vs_median": 0.24
     },
     {
+     "code": "f282286-kato:10000854",
+     "name": "ファーファ ストーリー ドリーミー 洗濯用洗剤 液体 850g 詰め替え用 6個セット / ファーファ 無添加 洗濯洗剤 液体 洗剤 衣類用洗剤 詰め替え 部屋干し お花の香り 赤ちゃんから大人まで 日本製",
+     "price": 20000,
+     "qty": 0.85,
+     "evidence": "850g",
+     "per10k": 0.425,
+     "unit_price": 23529,
+     "shop": "兵庫県加東市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tdzoo.ia330fb0.g00tdzoo.ia331016/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff282286-kato%2F59721277%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff282286-kato%2Fi%2F10000854%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "加東市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f282286-kato/cabinet/product_page/product05/155259047.jpg?_ex=240x240",
+     "review_avg": 0,
+     "review_count": 0,
+     "wakeari": false,
+     "vs_median": 0.2
+    },
+    {
      "code": "f282286-kato:10000681",
      "name": "ファーファ 乾燥機で服が縮むのを防ぐ洗剤 詰め替え用 1500g 6個セット / ファーファ 乾燥機 洗剤 洗濯洗剤 液体 衣類用洗剤 詰め替え ドラム式 自動投入 浴室乾燥機 日本製",
      "price": 37000,
@@ -16731,12 +16749,12 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 73,
-   "ranked": 23,
+   "candidates": 74,
+   "ranked": 24,
    "dropped": {
     "選択式": 18,
-    "量なし": 11,
-    "対象外の商品": 20,
+    "量なし": 12,
+    "対象外の商品": 19,
     "量が複数": 1
    },
    "summary": {
@@ -16949,11 +16967,11 @@
      "vs_median": 0.16
     }
    ],
-   "candidates": 78,
+   "candidates": 79,
    "ranked": 11,
    "dropped": {
     "選択式": 12,
-    "量なし": 24,
+    "量なし": 25,
     "対象外の商品": 31
    },
    "summary": {
@@ -17148,5 +17166,5 @@
    }
   }
  },
- "fetched_at": "2026-11-14T23:34+09:00"
+ "fetched_at": "2026-11-14T23:41+09:00"
 }
