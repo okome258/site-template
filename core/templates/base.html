@@ -50,6 +50,14 @@
 <footer class="site-footer">
   <div class="wrap">
     {% block footer_extra %}{% endblock %}
+    {# 姉妹サイト: 検索エンジンが他のサブドメインを見つけやすくするための相互リンク(自分自身は出さない) #}
+    {% set sisters = [
+      ("https://furusato.otokuest.com/", "ふるさと納税 量くらべ"),
+      ("https://jikyu.otokuest.com/", "業界別 実質時給ランキング"),
+      ("https://kome.otokuest.com/", "お米の最安値ウォッチ"),
+      ("https://luck.otokuest.com/", "本気の「運」攻略戦略"),
+    ] %}
+    <p class="small">姉妹サイト:{% for u, n in sisters if not u.startswith(site.base_url) %} <a href="{{ u }}">{{ n }}</a>{% if not loop.last %} ／{% endif %}{% endfor %}</p>
     <p class="small">{{ site.pr_note }}</p>
     <p class="small">掲載情報は自動取得したものです。最新の価格・内容は必ずリンク先でご確認ください。最終更新: {{ built_at | jdate }}</p>
     {% if site.rakuten_credit | default(true) %}
