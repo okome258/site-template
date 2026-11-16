@@ -82,10 +82,10 @@
     {% set q = (it.town or it.shop) ~ " " ~ (cat.search_word or cat.name) %}
     <div class="others">
       <span>同じ自治体を他サイトで探す</span>
-      <a href="https://www.satofull.jp/products/list.php?mode=search&q={{ q | urlencode }}" target="_blank" rel="noopener">さとふる</a>
-      <a href="https://www.furusato-tax.jp/search?q={{ q | urlencode }}" target="_blank" rel="noopener">ふるさとチョイス</a>
-      <a href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="noopener">ふるなび</a>
-      <a href="https://shopping.yahoo.co.jp/search?p={{ ('ふるさと納税 ' ~ q) | urlencode }}" target="_blank" rel="noopener">Yahoo!</a>
+      <a href="https://www.satofull.jp/products/list.php?mode=search&q={{ q | urlencode }}" target="_blank" rel="sponsored noopener">さとふる</a>
+      <a href="https://www.furusato-tax.jp/search?q={{ q | urlencode }}" target="_blank" rel="sponsored noopener">ふるさとチョイス</a>
+      <a href="https://furunavi.jp/Product/Search?keyword={{ q | urlencode }}" target="_blank" rel="sponsored noopener">ふるなび</a>
+      <a href="https://shopping.yahoo.co.jp/search?p={{ ('ふるさと納税 ' ~ q) | urlencode }}" target="_blank" rel="sponsored noopener">Yahoo!</a>
       {% set amz = "https://www.amazon.co.jp/s?i=jpdonation&k=" ~ (q | urlencode) %}{% if site.amazon_tag %}<a href="{{ amz }}&tag={{ site.amazon_tag }}" target="_blank" rel="sponsored noopener">Amazon</a>{% else %}<a href="{{ amz }}" target="_blank" rel="noopener">Amazon</a>{% endif %}
     </div>
   </li>
@@ -100,7 +100,7 @@
   <h2>量ではなく「人気順」で見るなら</h2>
   <div class="pop-main">
     <a class="btn" href="{{ rl[cat.id] or rl._total or 'https://event.rakuten.co.jp/furusato/ranking/' }}" target="_blank" rel="sponsored noopener">楽天ふるさと納税 人気ランキング</a>
-    <a class="btn" href="https://www.satofull.jp/products/ranking.php" target="_blank" rel="noopener">さとふる 人気ランキング</a>
+    <a class="btn" href="https://www.satofull.jp/products/ranking.php" target="_blank" rel="sponsored noopener">さとふる 人気ランキング</a>
   </div>
   <p class="other-portals small">ほかのふるさと納税サイト：<a href="https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" target="_blank" rel="sponsored nofollow noopener">au PAY ふるさと納税</a>（Pontaポイントを寄付に使える）<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BECH2+BOC3EQ+54OC+5YJRM" alt="" style="position:absolute">／<a href="https://furusato.asahi.co.jp/" target="_blank" rel="sponsored nofollow noopener">ふるラボ</a>（テレビ番組で紹介された返礼品）／<a href="https://furusatohonpo.jp/" target="_blank" rel="sponsored nofollow noopener">ふるさと本舗</a></p>
 </section>
