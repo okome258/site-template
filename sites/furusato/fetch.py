@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -201,6 +202,65 @@ def _per(c: dict, v: float) -> str:
     return f"{v:,.{d}f}"
 
 
+def furusato_limit(income: int, y: int, spouse: int = 0, k1: int = 0, k2: int = 0) -> int:
+    """控除上限額の目安(円)。simulator.html の JS calc() と同じ式(社会保険料は年収の15%)。
+    どちらかを直したら両方そろえること。"""
+    def kyuyo_it(x):
+        if y >= 2026:
+            if x <= 2_200_000:
+                return min(x, 740_000)
+        elif x <= 1_900_000:
+            return min(x, 650_000)
+        return kyuyo_common(x)
+
+    def kyuyo_rt(x):
+        return min(x, 650_000) if x <= 1_900_000 else kyuyo_common(x)
+
+    def kyuyo_common(x):
+        if x <= 3_600_000: return x * 0.3 + 80_000
+        if x <= 6_600_000: return x * 0.2 + 440_000
+        if x <= 8_500_000: return x * 0.1 + 1_100_000
+        return 1_950_000
+
+    def kiso_it(g):
+        t = ([(1_320_000, 1_040_000), (3_360_000, 1_040_000), (4_890_000, 1_040_000), (6_550_000, 670_000), (23_500_000, 620_000)]
+             if y >= 2026 else
+             [(1_320_000, 950_000), (3_360_000, 880_000), (4_890_000, 680_000), (6_550_000, 630_000), (23_500_000, 580_000)])
+        for lim, v in t:
+            if g <= lim:
+                return v
+        return 480_000 if g <= 24_000_000 else 320_000 if g <= 24_500_000 else 160_000 if g <= 25_000_000 else 0
+
+    def rate(ti):
+        if ti <= 0:
+            return 0
+        for lim, r in [(1_950_000, .05), (3_300_000, .10), (6_950_000, .20), (9_000_000, .23), (18_000_000, .33), (40_000_000, .40)]:
+            if ti <= lim:
+                return r
+        return .45
+
+    si = income * 0.15
+    g_it = max(0, income - kyuyo_it(income))
+    g_rt = max(0, income - kyuyo_rt(income))
+    ti_rt = max(0, g_rt - si - 430_000 - spouse * 330_000 - k1 * 330_000 - k2 * 450_000)
+    ti_it = max(0, g_it - si - kiso_it(g_it) - spouse * 380_000 - k1 * 380_000 - k2 * 630_000)
+    ti_rt = math.floor(ti_rt / 1000) * 1000
+    ti_it = math.floor(ti_it / 1000) * 1000
+    sw = ti_rt * 0.10
+    lim = sw * 0.2 / (0.9 - rate(ti_it) * 1.021) + 2000 if sw > 0 else 0
+    lim = math.floor(lim / 1000) * 1000
+    return int(lim) if lim > 2000 else 0
+
+
+# 年収別早見表の家族パターン(配偶者控除, 16〜18歳・23歳以上の扶養, 19〜22歳の扶養)
+HAYAMI_FAMILIES = [
+    ("独身・共働き", 0, 0, 0),
+    ("夫婦（配偶者控除あり）", 1, 0, 0),
+    ("共働き＋高校生1人", 0, 1, 0),
+    ("夫婦＋大学生1人", 1, 0, 1),
+]
+
+
 def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
     """控除上限額シミュレーター。税制の年は寄付する年(取得日の年)。"""
     year = int((data.get("fetched_at") or "2026")[:4])
@@ -229,12 +289,21 @@ def _simulator_page(cfg: dict, data: dict, cats: list) -> dict:
         ("住宅ローン控除があると上限は下がりますか？", "住宅ローン控除が所得税から引ききれない場合などは、上限額が下がることがあります。このシミュレーターでは考慮していないので、目安として使ってください。"),
         ("ワンストップ特例と確定申告で上限額は変わりますか？", "上限額そのものは変わりません。寄付先が5自治体以内で確定申告が不要な会社員なら、ワンストップ特例で手続きできます。"),
     ]
+    calc_year = min(year, table_year)
+    hayami = [{"income": man, "limits": [furusato_limit(man * 10_000, calc_year, sp, k1, k2)
+                                         for _, sp, k1, k2 in HAYAMI_FAMILIES]}
+              for man in list(range(300, 1000, 50)) + list(range(1000, 1600, 100)) + [1800, 2000]]
+    l500 = next(r["limits"][0] for r in hayami if r["income"] == 500)
+    qa.insert(1, ("年収500万円だと上限はいくらですか？",
+                  f"独身または共働き（社会保険料を年収の15%とした場合）で約{l500:,}円が目安です。"
+                  "配偶者控除や扶養があると下がります。ページ内の年収別早見表も参考にしてください。"))
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     return {"path": "simulator/index.html", "template": "simulator.html",
-            "title": f"ふるさと納税 控除上限額シミュレーター【{year}年版】年収と家族構成ですぐ計算",
-            "description": f"{year}年の税制(基礎控除・給与所得控除の改正)に対応。年収と家族構成を入れるだけで、ふるさと納税の控除上限額の目安を計算し、上限内で量が一番多い返礼品も表示します。",
-            "context": {"cats": cats, "tax_year": year, "table_year": table_year, "picks": picks, "faq": faq}}
+            "title": f"ふるさと納税 控除上限額シミュレーター【{year}年版】年収別の早見表つき",
+            "description": f"{year}年の税制(基礎控除・給与所得控除の改正)に対応。年収と家族構成を入れるだけで、ふるさと納税の控除上限額の目安を計算。年収300万〜2,000万円・家族構成別の早見表と、上限内で量が一番多い返礼品も表示します。",
+            "context": {"cats": cats, "tax_year": year, "table_year": table_year, "picks": picks, "faq": faq,
+                        "hayami": hayami, "hayami_families": [f[0] for f in HAYAMI_FAMILIES]}}
 
 
 AUPAY_A8 = "https://px.a8.net/svt/ejp?a8mat=4BECH2+BOC3EQ+54OC+5YJRM"

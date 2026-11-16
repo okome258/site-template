@@ -52,6 +52,19 @@
   </ul>
 </div>
 
+<h2 id="hayami">年収別 控除上限額の早見表（{{ [tax_year, table_year] | min }}年分の税制）</h2>
+<p class="small">給与収入のみ・社会保険料を年収の15%とした場合の目安です（上のシミュレーターと同じ計算）。高校生は16〜18歳、大学生は19〜22歳の扶養として計算しています。15歳以下の子どもは上限額に影響しません。</p>
+<div class="card" style="overflow-x:auto">
+  <table class="board">
+    <thead><tr><th>年収</th>{% for f in hayami_families %}<th class="num">{{ f }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for r in hayami %}
+    <tr><th>{{ "{:,}".format(r.income) }}万円</th>{% for v in r.limits %}<td class="num">{{ "{:,}円".format(v) if v else "―" }}</td>{% endfor %}</tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
 <h2>よくある質問</h2>
 <div class="faq">
 {% for q in faq.mainEntity %}
