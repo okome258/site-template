@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-16 10:18",
+ "checked_at": "2026-11-16 11:22",
  "gsc": "ok",
  "sites": [
   {
@@ -81,7 +81,7 @@
     {
      "url": "https://furusato.otokuest.com/portals/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
