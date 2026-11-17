@@ -1,0 +1,20 @@
+name: 毎日のサイト更新を起動(サーバーcronから)
+
+# bot-server(Oracle)の cron が毎朝このブランチ(kick)に push してくる。
+# GitHub の定時実行(schedule)は数時間遅れることがあるため、その保険。
+# GITHUB_TOKEN でも workflow_dispatch は起動できる(GitHubの仕様上の例外)。
+on:
+  push:
+    branches: [kick]
+
+permissions:
+  actions: write
+
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: main の「毎日のサイト更新」を起動
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run build.yml --repo "${{ github.repository }}" --ref main
