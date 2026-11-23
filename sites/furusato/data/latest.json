@@ -4408,26 +4408,6 @@
   "ikura": {
    "items": [
     {
-     "code": "f015636-oumu:10000408",
-     "name": "北海道雄武産　生冷いくら「我が家の黄金比」1パック150g×2【21041AA0101】",
-     "price": 23000,
-     "qty": 300.0,
-     "evidence": "150g×2",
-     "per10k": 130.435,
-     "unit_price": 77,
-     "shop": "北海道雄武町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbvpo.ia3301d0.g00tbvpo.ia3311cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff015636-oumu%2F07121%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff015636-oumu%2Fi%2F10000408%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "雄武町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f015636-oumu/cabinet/henreihin/007/0070344_2_113957.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 1.39,
-     "market_yen": 8720.0,
-     "market_pct": 38
-    },
-    {
      "code": "f012238-nemuro:10003630",
      "name": "秋鮭いくら 100g × 6P ( 計 600g ) イクラ 醤油 醤油漬 醤油漬け 魚卵 鮭卵 鮭 さけ サケ しゃけ シャケ 魚 さかな サカナ 秋鮭 秋ざけ 秋ザケ あきざけ アキザケ グルメ 海鮮小分け 北海道 根室市 D-24001",
      "price": 62000,
@@ -4555,10 +4535,10 @@
      "market_pct": 19
     }
    ],
-   "candidates": 109,
-   "ranked": 7,
+   "candidates": 107,
+   "ranked": 6,
    "dropped": {
-    "選択式": 16,
+    "選択式": 15,
     "対象外の商品": 80,
     "量が複数": 3,
     "量が範囲外": 1,
@@ -4566,12 +4546,12 @@
    },
    "summary": {
     "median_per10k": 93.75,
-    "median_unit_price": 107,
-    "min_unit_price": 77,
+    "median_unit_price": 118,
+    "min_unit_price": 103,
     "max_unit_price": 156,
-    "towns": 5
+    "towns": 4
    },
-   "popularity": 25
+   "popularity": 23
   },
   "salmon": {
    "items": [
@@ -6594,12 +6574,12 @@
      "vs_median": 0.15
     }
    ],
-   "candidates": 86,
+   "candidates": 85,
    "ranked": 23,
    "dropped": {
-    "選択式": 39,
-    "量が複数": 7,
     "量が範囲外": 7,
+    "選択式": 38,
+    "量が複数": 7,
     "対象外の商品": 9,
     "量なし": 1
    },
@@ -11117,10 +11097,10 @@
    "candidates": 95,
    "ranked": 22,
    "dropped": {
-    "選択式": 44,
+    "選択式": 45,
     "対象外の商品": 20,
+    "量が複数": 3,
     "量なし": 4,
-    "量が複数": 4,
     "量が範囲外": 1
    },
    "summary": {
@@ -16882,11 +16862,11 @@
      "vs_median": 0.16
     }
    ],
-   "candidates": 77,
+   "candidates": 78,
    "ranked": 11,
    "dropped": {
     "選択式": 12,
-    "量なし": 23,
+    "量なし": 24,
     "対象外の商品": 31
    },
    "summary": {
@@ -17081,5 +17061,5 @@
    }
   }
  },
- "fetched_at": "2026-11-23T10:12+09:00"
+ "fetched_at": "2026-11-23T10:26+09:00"
 }
