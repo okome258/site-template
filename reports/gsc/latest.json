@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-16 11:22",
+ "checked_at": "2026-11-23 10:17",
  "gsc": "ok",
  "sites": [
   {
    "slug": "furusato",
    "base": "https://furusato.otokuest.com",
-   "sitemap_urls": 70,
+   "sitemap_urls": 69,
    "indexnow": "HTTP 200",
    "inspect": [
     {
@@ -30,110 +30,98 @@
      "google_canonical": "https://furusato.otokuest.com/changes/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/udon/",
+     "url": "https://furusato.otokuest.com/pref/hyogo/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-13T21:13:53Z",
-     "google_canonical": "https://furusato.otokuest.com/c/udon/"
+     "last_crawl": "2026-10-13T11:44:44Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/hyogo/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/soba/",
+     "url": "https://furusato.otokuest.com/pref/aichi/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-27T10:51:42Z",
-     "google_canonical": "https://furusato.otokuest.com/c/soba/"
+     "last_crawl": "2026-10-13T14:05:16Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/aichi/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/sparkling/",
+     "url": "https://furusato.otokuest.com/pref/yamanashi/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-11T21:42:11Z",
-     "google_canonical": "https://furusato.otokuest.com/c/sparkling/"
+     "last_crawl": "2026-10-26T17:25:02Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/yamanashi/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/tea/",
+     "url": "https://furusato.otokuest.com/pref/ibaraki/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-26T16:46:58Z",
-     "google_canonical": "https://furusato.otokuest.com/c/tea/"
+     "last_crawl": "2026-10-13T05:32:02Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/ibaraki/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/sake/",
+     "url": "https://furusato.otokuest.com/pref/fukuoka/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-26T10:14:05Z",
-     "google_canonical": "https://furusato.otokuest.com/c/sake/"
+     "last_crawl": "2026-10-13T17:08:16Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/fukuoka/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/detergent/",
+     "url": "https://furusato.otokuest.com/pref/shizuoka/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-12T03:12:35Z",
-     "google_canonical": "https://furusato.otokuest.com/c/detergent/"
+     "last_crawl": "2026-10-13T16:06:48Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/shizuoka/"
     },
     {
-     "url": "https://furusato.otokuest.com/c/kitchen/",
+     "url": "https://furusato.otokuest.com/pref/chiba/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-13T20:53:58Z",
-     "google_canonical": "https://furusato.otokuest.com/c/kitchen/"
+     "last_crawl": "2026-10-13T21:03:56Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/chiba/"
     },
     {
-     "url": "https://furusato.otokuest.com/portals/",
-     "verdict": "NEUTRAL",
-     "coverage": "検出 - インデックス未登録",
-     "last_crawl": null,
-     "google_canonical": null
-    },
-    {
-     "url": "https://furusato.otokuest.com/other/",
+     "url": "https://furusato.otokuest.com/pref/saga/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-11T17:59:24Z",
-     "google_canonical": "https://furusato.otokuest.com/other/"
+     "last_crawl": "2026-10-26T15:21:26Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/saga/"
     },
     {
-     "url": "https://furusato.otokuest.com/pref/hokkaido/",
-     "verdict": "NEUTRAL",
-     "coverage": "検出 - インデックス未登録",
-     "last_crawl": null,
-     "google_canonical": null
-    },
-    {
-     "url": "https://furusato.otokuest.com/pref/akita/",
-     "verdict": "NEUTRAL",
-     "coverage": "検出 - インデックス未登録",
-     "last_crawl": null,
-     "google_canonical": null
-    },
-    {
-     "url": "https://furusato.otokuest.com/pref/iwate/",
+     "url": "https://furusato.otokuest.com/pref/kumamoto/",
      "verdict": "NEUTRAL",
      "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-10-24T13:51:05Z",
-     "google_canonical": "https://furusato.otokuest.com/pref/iwate/"
+     "last_crawl": "2026-10-13T21:52:07Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/kumamoto/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/pref/oita/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-13T10:22:18Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/oita/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/pref/ehime/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-13T14:12:37Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/ehime/"
+    },
+    {
+     "url": "https://furusato.otokuest.com/pref/wakayama/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-10-13T16:23:50Z",
+     "google_canonical": "https://furusato.otokuest.com/pref/wakayama/"
     }
    ],
    "indexed": 0,
    "analytics": {
-    "from": "2026-10-17",
-    "to": "2026-11-13",
-    "clicks": 2,
-    "impressions": 74,
-    "position": 38.1,
+    "from": "2026-10-24",
+    "to": "2026-11-20",
+    "clicks": 0,
+    "impressions": 12,
+    "position": 16.2,
     "queries": [
-     {
-      "q": "いくらふるさと納税",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 27
-     },
-     {
-      "q": "さと ふる シミュレーション",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 100
-     },
      {
       "q": "ふるさと 納税 キッチン ペーパー",
       "clicks": 0,
@@ -141,46 +129,10 @@
       "position": 56
      },
      {
-      "q": "ふるさと 納税 シュミレーター",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 86
-     },
-     {
-      "q": "ふるさと 納税 年収",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 89
-     },
-     {
-      "q": "ふるさと 納税 手取り",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 100
-     },
-     {
       "q": "ふるさと 納税 牛 タン おすすめ",
       "clicks": 0,
       "impressions": 1,
       "position": 83
-     },
-     {
-      "q": "ふるさと 納税 生命 保険 料 控除 シュミレーション",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 94
-     },
-     {
-      "q": "ふるさと 納税 節税 シュミレーション",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 96
-     },
-     {
-      "q": "ふるさと 納税 米 還元 率",
-      "clicks": 0,
-      "impressions": 1,
-      "position": 97
      }
     ]
    }
@@ -194,113 +146,113 @@
     {
      "url": "https://jikyu.otokuest.com/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-16T06:42:04Z",
+     "google_canonical": "https://jikyu.otokuest.com/"
+    },
+    {
+     "url": "https://jikyu.otokuest.com/gyokai/lifestyle/",
+     "verdict": "NEUTRAL",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/chiiki/",
+     "url": "https://jikyu.otokuest.com/gyokai/services/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/finance/",
+     "url": "https://jikyu.otokuest.com/gyokai/hospitality/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/utilities/",
+     "url": "https://jikyu.otokuest.com/gyoshu/securities/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/professional/",
+     "url": "https://jikyu.otokuest.com/gyoshu/airline/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/it/",
+     "url": "https://jikyu.otokuest.com/gyoshu/shosha/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/mining/",
+     "url": "https://jikyu.otokuest.com/gyoshu/electric/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/education/",
+     "url": "https://jikyu.otokuest.com/gyoshu/insurance/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/realestate/",
+     "url": "https://jikyu.otokuest.com/gyoshu/railway/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/construction/",
+     "url": "https://jikyu.otokuest.com/gyoshu/broadcast/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/trade/",
+     "url": "https://jikyu.otokuest.com/gyoshu/bank/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/manufacturing/",
+     "url": "https://jikyu.otokuest.com/gyoshu/web/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/compound/",
+     "url": "https://jikyu.otokuest.com/gyoshu/chemical/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     },
     {
-     "url": "https://jikyu.otokuest.com/gyokai/medical/",
+     "url": "https://jikyu.otokuest.com/gyoshu/advertising/",
      "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
-     "last_crawl": null,
-     "google_canonical": null
-    },
-    {
-     "url": "https://jikyu.otokuest.com/gyokai/transport/",
-     "verdict": "NEUTRAL",
-     "coverage": "URL が Google に認識されていません",
+     "coverage": "検出 - インデックス未登録",
      "last_crawl": null,
      "google_canonical": null
     }
    ],
    "indexed": 0,
    "analytics": {
-    "from": "2026-10-17",
-    "to": "2026-11-13",
+    "from": "2026-10-24",
+    "to": "2026-11-20",
     "clicks": 0,
     "impressions": 0,
     "position": 0,
@@ -321,20 +273,6 @@
      "google_canonical": null
     },
     {
-     "url": "https://kome.otokuest.com/mochi/",
-     "verdict": "NEUTRAL",
-     "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-11-03T08:11:31Z",
-     "google_canonical": "https://kome.otokuest.com/mochi/"
-    },
-    {
-     "url": "https://kome.otokuest.com/about/",
-     "verdict": "NEUTRAL",
-     "coverage": "クロール済み - インデックス未登録",
-     "last_crawl": "2026-11-03T08:04:30Z",
-     "google_canonical": "https://kome.otokuest.com/about/"
-    },
-    {
      "url": "https://kome.otokuest.com/musen/",
      "verdict": "NEUTRAL",
      "coverage": "URL が Google に認識されていません",
@@ -347,12 +285,26 @@
      "coverage": "クロール済み - インデックス未登録",
      "last_crawl": "2026-11-03T09:32:47Z",
      "google_canonical": "https://kome.otokuest.com/genmai/"
+    },
+    {
+     "url": "https://kome.otokuest.com/mochi/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-03T08:11:31Z",
+     "google_canonical": "https://kome.otokuest.com/mochi/"
+    },
+    {
+     "url": "https://kome.otokuest.com/about/",
+     "verdict": "NEUTRAL",
+     "coverage": "クロール済み - インデックス未登録",
+     "last_crawl": "2026-11-03T08:04:30Z",
+     "google_canonical": "https://kome.otokuest.com/about/"
     }
    ],
    "indexed": 0,
    "analytics": {
-    "from": "2026-10-17",
-    "to": "2026-11-13",
+    "from": "2026-10-24",
+    "to": "2026-11-20",
     "clicks": 0,
     "impressions": 0,
     "position": 0,
@@ -375,8 +327,8 @@
    ],
    "indexed": 0,
    "analytics": {
-    "from": "2026-10-17",
-    "to": "2026-11-13",
+    "from": "2026-10-24",
+    "to": "2026-11-20",
     "clicks": 0,
     "impressions": 0,
     "position": 0,
@@ -385,6 +337,15 @@
   }
  ],
  "sitemaps": [
+  {
+   "path": "https://luck.otokuest.com/sitemap.xml",
+   "last_submitted": "2026-11-16T06:43:14.886Z",
+   "last_downloaded": "2026-11-16T06:43:18.543Z",
+   "pending": false,
+   "errors": "0",
+   "warnings": "0",
+   "submitted": 1
+  },
   {
    "path": "https://furusato.otokuest.com/sitemap.xml",
    "last_submitted": "2026-11-13T14:02:02.194Z",
@@ -397,7 +358,7 @@
   {
    "path": "https://kome.otokuest.com/sitemap.xml",
    "last_submitted": "2026-10-10T13:50:56.193Z",
-   "last_downloaded": "2026-10-24T10:13:19.494Z",
+   "last_downloaded": "2026-11-19T16:15:08.763Z",
    "pending": false,
    "errors": "0",
    "warnings": "0",
@@ -406,7 +367,7 @@
   {
    "path": "https://jikyu.otokuest.com/sitemap.xml",
    "last_submitted": "2026-10-10T13:49:24.155Z",
-   "last_downloaded": "2026-11-10T00:31:43.856Z",
+   "last_downloaded": "2026-11-20T23:49:23.096Z",
    "pending": false,
    "errors": "0",
    "warnings": "0",
