@@ -652,11 +652,11 @@
      "market_pct": 37
     }
    ],
-   "candidates": 167,
+   "candidates": 166,
    "ranked": 44,
    "dropped": {
     "量が複数": 10,
-    "量なし": 2,
+    "量なし": 1,
     "選択式": 100,
     "対象外の商品": 11
    },
@@ -2011,7 +2011,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 2.44,
+     "vs_median": 2.22,
      "market_yen": 6480.0,
      "market_pct": 72
     },
@@ -2031,7 +2031,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 2.36,
+     "vs_median": 2.14,
      "market_yen": 19440.0,
      "market_pct": 69
     },
@@ -2051,7 +2051,7 @@
      "review_avg": 4.4,
      "review_count": 10,
      "wakeari": false,
-     "vs_median": 2.17,
+     "vs_median": 1.97,
      "market_yen": 12960.0,
      "market_pct": 64
     },
@@ -2071,7 +2071,7 @@
      "review_avg": 4.67,
      "review_count": 127,
      "wakeari": false,
-     "vs_median": 2.1,
+     "vs_median": 1.91,
      "market_yen": 12960.0,
      "market_pct": 62
     },
@@ -2091,7 +2091,7 @@
      "review_avg": 4.25,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.91,
+     "vs_median": 1.74,
      "market_yen": 12960.0,
      "market_pct": 56
     },
@@ -2111,7 +2111,7 @@
      "review_avg": 4.45,
      "review_count": 11,
      "wakeari": false,
-     "vs_median": 1.83,
+     "vs_median": 1.67,
      "market_yen": 6480.0,
      "market_pct": 54
     },
@@ -2131,7 +2131,7 @@
      "review_avg": 4.56,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 1.77,
+     "vs_median": 1.61,
      "market_yen": 16200.0,
      "market_pct": 52
     },
@@ -2151,7 +2151,7 @@
      "review_avg": 4.63,
      "review_count": 8,
      "wakeari": false,
-     "vs_median": 1.74,
+     "vs_median": 1.58,
      "market_yen": 9720.0,
      "market_pct": 51
     },
@@ -2171,7 +2171,7 @@
      "review_avg": 4.72,
      "review_count": 96,
      "wakeari": false,
-     "vs_median": 1.69,
+     "vs_median": 1.54,
      "market_yen": 6480.0,
      "market_pct": 50
     },
@@ -2191,7 +2191,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.69,
+     "vs_median": 1.54,
      "market_yen": 19440.0,
      "market_pct": 50
     },
@@ -2211,7 +2211,7 @@
      "review_avg": 4.5,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.57,
+     "vs_median": 1.43,
      "market_yen": 6480.0,
      "market_pct": 46
     },
@@ -2231,7 +2231,7 @@
      "review_avg": 4.73,
      "review_count": 22,
      "wakeari": false,
-     "vs_median": 1.5,
+     "vs_median": 1.36,
      "market_yen": 4860.0,
      "market_pct": 44
     },
@@ -2251,7 +2251,7 @@
      "review_avg": 4.56,
      "review_count": 18,
      "wakeari": false,
-     "vs_median": 1.5,
+     "vs_median": 1.36,
      "market_yen": 4860.0,
      "market_pct": 44
     },
@@ -2271,7 +2271,7 @@
      "review_avg": 4.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.47,
+     "vs_median": 1.33,
      "market_yen": 12960.0,
      "market_pct": 43
     },
@@ -2291,7 +2291,7 @@
      "review_avg": 4.73,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.28,
+     "vs_median": 1.16,
      "market_yen": 8260.0,
      "market_pct": 38
     },
@@ -2311,7 +2311,7 @@
      "review_avg": 4.6,
      "review_count": 70,
      "wakeari": false,
-     "vs_median": 1.16,
+     "vs_median": 1.05,
      "market_yen": 6480.0,
      "market_pct": 34
     },
@@ -2331,7 +2331,7 @@
      "review_avg": 4.88,
      "review_count": 83,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.0,
      "market_yen": 5510.0,
      "market_pct": 32
     },
@@ -2351,7 +2351,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.0,
      "market_yen": 4860.0,
      "market_pct": 32
     },
@@ -2371,7 +2371,7 @@
      "review_avg": 4.55,
      "review_count": 184,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 0.91,
      "market_yen": 3240.0,
      "market_pct": 29
     },
@@ -2391,7 +2391,7 @@
      "review_avg": 4.75,
      "review_count": 67,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 0.91,
      "market_yen": 4860.0,
      "market_pct": 29
     },
@@ -2411,7 +2411,7 @@
      "review_avg": 4.73,
      "review_count": 436,
      "wakeari": false,
-     "vs_median": 0.92,
+     "vs_median": 0.83,
      "market_yen": 4860.0,
      "market_pct": 27
     },
@@ -2431,7 +2431,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.85,
+     "vs_median": 0.77,
      "market_yen": 3240.0,
      "market_pct": 25
     },
@@ -2451,7 +2451,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.83,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2478,7 +2478,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.83,
+     "vs_median": 0.75,
      "change": {
       "price": 18000,
       "qty": 3.0,
@@ -2505,7 +2505,7 @@
      "review_avg": 4.72,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.8,
+     "vs_median": 0.73,
      "market_yen": 2590.0,
      "market_pct": 24
     },
@@ -2525,7 +2525,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.73,
+     "vs_median": 0.67,
      "change": {
       "price": 13000,
       "qty": 2.0,
@@ -2552,7 +2552,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.71,
+     "vs_median": 0.65,
      "market_yen": 6480.0,
      "market_pct": 21
     },
@@ -2572,7 +2572,7 @@
      "review_avg": 4.96,
      "review_count": 25,
      "wakeari": false,
-     "vs_median": 0.71,
+     "vs_median": 0.64,
      "market_yen": 2920.0,
      "market_pct": 21
     },
@@ -2592,7 +2592,7 @@
      "review_avg": 4.61,
      "review_count": 121,
      "wakeari": false,
-     "vs_median": 0.7,
+     "vs_median": 0.64,
      "market_yen": 2270.0,
      "market_pct": 21
     },
@@ -2612,7 +2612,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.65,
+     "vs_median": 0.59,
      "change": {
       "price": 14000,
       "qty": 2.0,
@@ -2624,8 +2624,8 @@
      "market_pct": 19
     }
    ],
-   "candidates": 167,
-   "ranked": 37,
+   "candidates": 166,
+   "ranked": 36,
    "dropped": {
     "対象外の商品": 76,
     "選択式": 45,
@@ -2634,11 +2634,11 @@
     "量が範囲外": 1
    },
    "summary": {
-    "median_per10k": 1.818,
+    "median_per10k": 2.0,
     "median_unit_price": 5500,
     "min_unit_price": 2250,
     "max_unit_price": 19000,
-    "towns": 24
+    "towns": 23
    },
    "popularity": 1662
   },
@@ -2743,26 +2743,6 @@
      "vs_median": 1.68,
      "market_yen": 11750.0,
      "market_pct": 27
-    },
-    {
-     "code": "f015636-oumu:10000611",
-     "name": "北海道雄武町産 ほたて貝柱 冷凍 Bフレーク 600g 訳あり品 | ふるさと納税 北海道 雄武 ほたて貝柱 ホタテ貝柱 ホタテ 帆立 ほたて 貝柱 Bフレーク 冷凍 急速冷凍 刺身用 生食用 訳あり【12087AA0101】",
-     "price": 11000,
-     "qty": 0.6,
-     "evidence": "600g",
-     "per10k": 0.545,
-     "unit_price": 18333,
-     "shop": "北海道雄武町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tbvpo.ia3301d0.g00tbvpo.ia3311cb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff015636-oumu%2F12450%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff015636-oumu%2Fi%2F10000611%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "雄武町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f015636-oumu/cabinet/henreihin/012/0120592_6_155249.jpg?_ex=240x240",
-     "review_avg": 5.0,
-     "review_count": 1,
-     "wakeari": true,
-     "vs_median": 1.58,
-     "market_yen": 2820.0,
-     "market_pct": 26
     },
     {
      "code": "f012149-wakkanai:10000751",
@@ -3192,8 +3172,8 @@
      "market_pct": 4
     }
    ],
-   "candidates": 107,
-   "ranked": 27,
+   "candidates": 106,
+   "ranked": 26,
    "dropped": {
     "選択式": 57,
     "対象外の商品": 15,
@@ -3203,12 +3183,12 @@
    },
    "summary": {
     "median_per10k": 0.345,
-    "median_unit_price": 29000,
+    "median_unit_price": 30000,
     "min_unit_price": 6667,
     "max_unit_price": 133333,
     "towns": 11
    },
-   "popularity": 1972
+   "popularity": 1971
   },
   "shrimp": {
    "items": [
@@ -3228,7 +3208,7 @@
      "review_avg": 3.5,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 1.83,
+     "vs_median": 1.87,
      "market_yen": 6060.0,
      "market_pct": 51
     },
@@ -3248,7 +3228,7 @@
      "review_avg": 4.82,
      "review_count": 338,
      "wakeari": false,
-     "vs_median": 1.53,
+     "vs_median": 1.56,
      "market_yen": 3790.0,
      "market_pct": 42
     },
@@ -3268,28 +3248,8 @@
      "review_avg": 3.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.38,
+     "vs_median": 1.4,
      "market_yen": 3790.0,
-     "market_pct": 38
-    },
-    {
-     "code": "f012238-nemuro:10007431",
-     "name": "むきバナメイエビ約 800g × 2P ( 計約 1.6kg ) ( 背ワタ除去済み ) エビ えび 海老 むきえび 剥きえび 剥きエビ むきエビ 剥き海老 むき海老 お取り寄せ グルメ 海鮮 北海道 根室市 ふるさと納税 A-14262",
-     "price": 16000,
-     "qty": 1.6,
-     "evidence": "800g×2",
-     "per10k": 1.0,
-     "unit_price": 10000,
-     "shop": "北海道根室市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tif2o.ia330f2c.g00tif2o.ia33195b/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012238-nemuro%2Fa-14262%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff012238-nemuro%2Fi%2F10007431%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "根室市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f012238-nemuro/cabinet/kinenhin/r01/14/a-14262_r.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
-     "wakeari": false,
-     "vs_median": 1.38,
-     "market_yen": 6060.0,
      "market_pct": 38
     },
     {
@@ -3308,7 +3268,7 @@
      "review_avg": 4.68,
      "review_count": 250,
      "wakeari": true,
-     "vs_median": 1.31,
+     "vs_median": 1.33,
      "market_yen": 3790.0,
      "market_pct": 36
     },
@@ -3328,7 +3288,7 @@
      "review_avg": 4.0,
      "review_count": 5,
      "wakeari": false,
-     "vs_median": 1.2,
+     "vs_median": 1.22,
      "market_yen": 3790.0,
      "market_pct": 33
     },
@@ -3348,7 +3308,7 @@
      "review_avg": 4.33,
      "review_count": 6,
      "wakeari": false,
-     "vs_median": 1.15,
+     "vs_median": 1.17,
      "market_yen": 3790.0,
      "market_pct": 32
     },
@@ -3368,7 +3328,7 @@
      "review_avg": 1.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.1,
+     "vs_median": 1.12,
      "market_yen": 3030.0,
      "market_pct": 30
     },
@@ -3388,7 +3348,7 @@
      "review_avg": 4.36,
      "review_count": 22,
      "wakeari": true,
-     "vs_median": 1.03,
+     "vs_median": 1.05,
      "market_yen": 2270.0,
      "market_pct": 28
     },
@@ -3408,7 +3368,7 @@
      "review_avg": 4.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.03,
+     "vs_median": 1.05,
      "market_yen": 2840.0,
      "market_pct": 28
     },
@@ -3428,7 +3388,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.03,
+     "vs_median": 1.05,
      "change": {
       "price": 17000,
       "qty": 1.5,
@@ -3455,7 +3415,7 @@
      "review_avg": 4.29,
      "review_count": 17,
      "wakeari": false,
-     "vs_median": 1.01,
+     "vs_median": 1.03,
      "market_yen": 4170.0,
      "market_pct": 28
     },
@@ -3475,7 +3435,7 @@
      "review_avg": 3.67,
      "review_count": 12,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.02,
      "market_yen": 4550.0,
      "market_pct": 28
     },
@@ -3495,7 +3455,7 @@
      "review_avg": 5.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.02,
      "market_yen": 3030.0,
      "market_pct": 28
     },
@@ -3515,7 +3475,7 @@
      "review_avg": 3.0,
      "review_count": 1,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.02,
      "market_yen": 3030.0,
      "market_pct": 28
     },
@@ -3535,7 +3495,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 1.0,
+     "vs_median": 1.02,
      "market_yen": 3030.0,
      "market_pct": 28
     },
@@ -3555,7 +3515,7 @@
      "review_avg": 4.58,
      "review_count": 43,
      "wakeari": false,
-     "vs_median": 0.98,
+     "vs_median": 1.0,
      "market_yen": 3790.0,
      "market_pct": 27
     },
@@ -3575,7 +3535,7 @@
      "review_avg": 4.59,
      "review_count": 27,
      "wakeari": false,
-     "vs_median": 0.98,
+     "vs_median": 1.0,
      "change": {
       "price": 15000,
       "qty": 1.0,
@@ -3602,7 +3562,7 @@
      "review_avg": 4.75,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.98,
+     "vs_median": 1.0,
      "market_yen": 3790.0,
      "market_pct": 27
     },
@@ -3622,7 +3582,7 @@
      "review_avg": 4.8,
      "review_count": 280,
      "wakeari": false,
-     "vs_median": 0.92,
+     "vs_median": 0.93,
      "market_yen": 4170.0,
      "market_pct": 25
     },
@@ -3642,7 +3602,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.92,
+     "vs_median": 0.93,
      "change": {
       "price": 13000,
       "qty": 1.0,
@@ -3669,7 +3629,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.79,
+     "vs_median": 0.8,
      "market_yen": 3790.0,
      "market_pct": 22
     },
@@ -3689,7 +3649,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.75,
+     "vs_median": 0.76,
      "change": {
       "price": 10000,
       "qty": 0.6,
@@ -3716,7 +3676,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.69,
+     "vs_median": 0.7,
      "change": {
       "price": 12000,
       "qty": 0.9,
@@ -3743,7 +3703,7 @@
      "review_avg": 5.0,
      "review_count": 2,
      "wakeari": false,
-     "vs_median": 0.6,
+     "vs_median": 0.61,
      "market_yen": 3790.0,
      "market_pct": 16
     },
@@ -3763,7 +3723,7 @@
      "review_avg": 4.81,
      "review_count": 48,
      "wakeari": false,
-     "vs_median": 0.57,
+     "vs_median": 0.58,
      "change": {
       "price": 11000,
       "qty": 0.5,
@@ -3790,7 +3750,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.55,
+     "vs_median": 0.56,
      "market_yen": 2270.0,
      "market_pct": 15
     },
@@ -3810,7 +3770,7 @@
      "review_avg": 0,
      "review_count": 0,
      "wakeari": false,
-     "vs_median": 0.53,
+     "vs_median": 0.54,
      "market_yen": 3790.0,
      "market_pct": 15
     },
@@ -3830,7 +3790,7 @@
      "review_avg": 4.89,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.47,
+     "vs_median": 0.48,
      "market_yen": 1900.0,
      "market_pct": 13
     },
@@ -3850,7 +3810,7 @@
      "review_avg": 4.67,
      "review_count": 9,
      "wakeari": false,
-     "vs_median": 0.46,
+     "vs_median": 0.47,
      "change": {
       "price": 10000,
       "qty": 0.5,
@@ -3860,19 +3820,39 @@
      },
      "market_yen": 1900.0,
      "market_pct": 13
+    },
+    {
+     "code": "f422118-goto:10001001",
+     "name": "五島特産 ボイル車海老500g（250g×2P） 五島市/拓水 五島事業場[PCU004] エビ えび 海鮮 海産物 冷凍 自然解凍 ムキエビ エビ 尾付き むきえび",
+     "price": 17000,
+     "qty": 0.5,
+     "evidence": "500g",
+     "per10k": 0.294,
+     "unit_price": 34000,
+     "shop": "長崎県五島市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t97so.ia330570.g00t97so.ia3315cc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff422118-goto%2Fpcu004%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff422118-goto%2Fi%2F10001001%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "五島市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f422118-goto/cabinet/item/pcu/pcu004.jpg?_ex=240x240",
+     "review_avg": 4.88,
+     "review_count": 40,
+     "wakeari": false,
+     "vs_median": 0.41,
+     "market_yen": 1900.0,
+     "market_pct": 11
     }
    ],
    "candidates": 146,
-   "ranked": 32,
+   "ranked": 31,
    "dropped": {
     "選択式": 48,
-    "対象外の商品": 55,
+    "対象外の商品": 56,
     "量が複数": 2,
     "量が範囲外": 5,
     "量なし": 4
    },
    "summary": {
-    "median_per10k": 0.727,
+    "median_per10k": 0.714,
     "median_unit_price": 14000,
     "min_unit_price": 7500,
     "max_unit_price": 61111,
@@ -4575,10 +4555,10 @@
      "market_pct": 19
     }
    ],
-   "candidates": 108,
+   "candidates": 109,
    "ranked": 7,
    "dropped": {
-    "選択式": 15,
+    "選択式": 16,
     "対象外の商品": 80,
     "量が複数": 3,
     "量が範囲外": 1,
@@ -5237,46 +5217,6 @@
   "mikan": {
    "items": [
     {
-     "code": "f412074-kashima:10001389",
-     "name": "”がばいふとか”みかん 大玉 約9kg 鹿島産 みかん 傷み保証含む 箱込み総重量 大サイズ ご家庭用 | ふるさと納税 みかん 蜜柑 柑橘 果物 フルーツ 果実 国産 佐賀県 鹿島市 ふるさと 人気 送料無料 AA-48",
-     "price": 7000,
-     "qty": 9.0,
-     "evidence": "9kg",
-     "per10k": 12.857,
-     "unit_price": 778,
-     "shop": "佐賀県鹿島市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3jfo.ia330ad3.g00t3jfo.ia331f7a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff412074-kashima%2Faa-48%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff412074-kashima%2Fi%2F10001389%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "鹿島市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f412074-kashima/cabinet/maruoka/700_001_aa-48.jpg?_ex=240x240",
-     "review_avg": 4.14,
-     "review_count": 7,
-     "wakeari": false,
-     "vs_median": 2.83,
-     "market_yen": 7520.0,
-     "market_pct": 107
-    },
-    {
-     "code": "f422045-isahaya:10001463",
-     "name": "高評価4.76※【2026年11月より順次発送／先行予約】伊木力温州早生みかん10kg(ご家庭用、箱入り) / みかん 温州みかん 柑橘 蜜柑 ミカン 果物 / 諫早市 / 末永果樹園 [AHBD002]",
-     "price": 10000,
-     "qty": 10.0,
-     "evidence": "10kg",
-     "per10k": 10.0,
-     "unit_price": 1000,
-     "shop": "長崎県諫早市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ts8zo.ia330ab2.g00ts8zo.ia33168f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff422045-isahaya%2F10001463%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff422045-isahaya%2Fi%2F10001463%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "諫早市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f422045-isahaya/cabinet/item/ahbd/ahbd002.jpg?_ex=240x240",
-     "review_avg": 4.76,
-     "review_count": 62,
-     "wakeari": false,
-     "vs_median": 2.2,
-     "market_yen": 8360.0,
-     "market_pct": 84
-    },
-    {
      "code": "f302015-wakayama:10001832",
      "name": "和歌山産 みかん 10kg ［ご自宅用・サイズ不揃い・キズ等あり］［ヤマタ大谷商店］ | 和歌山市 柑橘類 ご家庭用 訳あり フルーツ 人気 おすすめ みかん 果物 甘い ジューシー ビタミンC 季節限定 お取り寄せ 通販 送料無料 ふるさと納税",
      "price": 10000,
@@ -5294,6 +5234,26 @@
      "wakeari": true,
      "vs_median": 2.2,
      "market_yen": 8360.0,
+     "market_pct": 84
+    },
+    {
+     "code": "f431001-kumamoto:10000470",
+     "name": "＜ R8年熊本地震復興支援 ＞ 【規格外品】 熊本市産 完熟蜜柑 ご家庭用 12kg みかん 蜜柑 ミカン 柑橘 フルーツ 果物 くだもの 果実 訳あり 熊本市 熊本県 送料無料 【2027年2月上旬迄発送予定】",
+     "price": 12000,
+     "qty": 12.0,
+     "evidence": "12kg",
+     "per10k": 10.0,
+     "unit_price": 1000,
+     "shop": "熊本県熊本市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00twhjo.ia3301fe.g00twhjo.ia331bf8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff431001-kumamoto%2F008-0465%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff431001-kumamoto%2Fi%2F10000470%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "熊本市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f431001-kumamoto/cabinet/maruichi/imgrc0116376433.jpg?_ex=240x240",
+     "review_avg": 3.25,
+     "review_count": 16,
+     "wakeari": true,
+     "vs_median": 2.2,
+     "market_yen": 10030.0,
      "market_pct": 84
     },
     {
@@ -5437,20 +5397,20 @@
      "market_pct": 46
     },
     {
-     "code": "f303615-yuasa:10007061",
-     "name": "【2026年11月下旬頃より発送】高級ブランド 田村みかん 約 5kg 訳あり 家庭用 濃厚 味わい 糖度 酸味 バランス 絶妙 甘い コク みかん 温州みかん 有田みかん 果物 果実 フルーツ 柑橘 お取り寄せ 産地直送 送料無料 和歌山県 湯浅町",
+     "code": "f304271-kitayama:10001793",
+     "name": "訳あり みかん 有田みかん 約5kg ご家庭用 サイズ混合 みかん ミカン フルーツ 果物 くだもの 温州みかん 柑橘 訳アリ ご家庭用 旬 産地直送 予約 和歌山 ※2026年11月下旬～2027年1月中旬頃順次発送予定 ※北海道・沖縄・離島配送不可",
      "price": 11000,
      "qty": 5.0,
      "evidence": "5kg",
      "per10k": 4.545,
      "unit_price": 2200,
-     "shop": "和歌山県湯浅町",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s7ijo.ia33097c.g00s7ijo.ia331e1f/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff303615-yuasa%2Fg6166%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff303615-yuasa%2Fi%2F10007061%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "shop": "和歌山県北山村",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00s633o.ia330142.g00s633o.ia331c55/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff304271-kitayama%2Fsml130%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff304271-kitayama%2Fi%2F10001793%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
      "portal": "楽天ふるさと納税",
-     "town": "湯浅町",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f303615-yuasa/cabinet/10789896/g7049-s01-240226.jpg?_ex=240x240",
-     "review_avg": 4.32,
-     "review_count": 92,
+     "town": "北山村",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f304271-kitayama/cabinet/imageall/rakuten_15525_1.jpg?_ex=240x240",
+     "review_avg": 5.0,
+     "review_count": 4,
      "wakeari": true,
      "vs_median": 1.0,
      "market_yen": 4180.0,
@@ -5664,23 +5624,23 @@
      "market_pct": 6
     }
    ],
-   "candidates": 100,
-   "ranked": 21,
+   "candidates": 101,
+   "ranked": 20,
    "dropped": {
     "選択式": 45,
     "量が複数": 8,
+    "対象外の商品": 25,
     "量なし": 2,
-    "対象外の商品": 23,
     "量が範囲外": 1
    },
    "summary": {
     "median_per10k": 4.545,
-    "median_unit_price": 2200,
-    "min_unit_price": 778,
+    "median_unit_price": 2500,
+    "min_unit_price": 1000,
     "max_unit_price": 14074,
-    "towns": 13
+    "towns": 12
    },
-   "popularity": 1805
+   "popularity": 1664
   },
   "apple": {
    "items": [
@@ -6179,11 +6139,11 @@
      "market_pct": 7
     }
    ],
-   "candidates": 95,
+   "candidates": 96,
    "ranked": 24,
    "dropped": {
-    "選択式": 57,
     "量が複数": 3,
+    "選択式": 58,
     "量なし": 4,
     "対象外の商品": 7
    },
@@ -6490,6 +6450,24 @@
      "vs_median": 0.76
     },
     {
+     "code": "f052019-akita:10004119",
+     "name": "トイレットペーパー クリネックス ダブル 長持ち 8ロール×8パック 日用品 最短翌日発送 【年内配送】 防災 備蓄 非常用 まとめ買い ストック within2026 [クリネックス 長持ちロール トイレットペーパー 日本製紙クレシア]",
+     "price": 22000,
+     "qty": 64.0,
+     "evidence": "8ロール×8",
+     "per10k": 29.091,
+     "unit_price": 344,
+     "shop": "秋田県秋田市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00ti67o.ia330f77.g00ti67o.ia331fb2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff052019-akita%2F15_nsc-040801d%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff052019-akita%2Fi%2F10004119%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "秋田市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f052019-akita/cabinet/img/p/nsc/15_nsc-040801d_yk.jpg?_ex=240x240",
+     "review_avg": 4.96,
+     "review_count": 45,
+     "wakeari": false,
+     "vs_median": 0.69
+    },
+    {
      "code": "f222071-fujinomiya:10000750",
      "name": "エリエール i:na（イーナ）トイレットティシュー 3.2倍巻 ダブル 4ロール×16パック 64ロール　トイレットペーパー 日用品 消耗品 送料無料 静岡県 富士宮市",
      "price": 29900,
@@ -6617,12 +6595,12 @@
     }
    ],
    "candidates": 86,
-   "ranked": 22,
+   "ranked": 23,
    "dropped": {
+    "選択式": 39,
     "量が複数": 7,
-    "選択式": 40,
-    "量が範囲外": 8,
-    "対象外の商品": 8,
+    "量が範囲外": 7,
+    "対象外の商品": 9,
     "量なし": 1
    },
    "summary": {
@@ -6630,9 +6608,9 @@
     "median_unit_price": 236,
     "min_unit_price": 90,
     "max_unit_price": 1625,
-    "towns": 12
+    "towns": 13
    },
-   "popularity": 5271
+   "popularity": 5316
   },
   "tissue": {
    "items": [
@@ -7202,26 +7180,6 @@
      "market_pct": 19
     },
     {
-     "code": "f222101-fuji:10000726",
-     "name": "猫砂 LOVEにゃんブルーでキャッチ 12L×5袋 紙砂 色が青に変わる しっかり固まる 燃えるゴミ 水洗トイレ使用不可 消臭 ニャン 猫 ネコ ねこ まとめ買い ペット用 消耗 衛生 防災 備蓄 日本製 国産 SDGs サノテック 静岡 富士市 [sf024-019]",
-     "price": 20000,
-     "qty": 60.0,
-     "evidence": "12L×5",
-     "per10k": 30.0,
-     "unit_price": 333,
-     "shop": "静岡県富士市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00t3yio.ia330d9c.g00t3yio.ia331f8c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222101-fuji%2F1431%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222101-fuji%2Fi%2F10000726%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "富士市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222101-fuji/cabinet/024/10516565/sf024-019-s-r.jpg?_ex=240x240",
-     "review_avg": 2.5,
-     "review_count": 2,
-     "wakeari": false,
-     "vs_median": 2.08,
-     "market_yen": 3810.0,
-     "market_pct": 19
-    },
-    {
      "code": "f434281-takamori:10000593",
      "name": "い・ろ・は・す 阿蘇の天然水 2L 計12本 2L×6本×2ケース いろはす 水 箱 飲料水 天然水 軟水 ミネラルウォーター コカ・コーラ ドリンク ペットボトル 阿蘇 熊本県 送料無料",
      "price": 9000,
@@ -7740,25 +7698,45 @@
      "vs_median": 1.04,
      "market_yen": 760.0,
      "market_pct": 10
+    },
+    {
+     "code": "f222071-fujinomiya:10000007",
+     "name": "アサヒ 富士山のバナジウム天然水 600ml×24本　ミネラルウォーター 水 送料無料 静岡県 富士宮市",
+     "price": 10000,
+     "qty": 14.4,
+     "evidence": "600ml×24",
+     "per10k": 14.4,
+     "unit_price": 694,
+     "shop": "静岡県富士宮市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00siv1o.ia3309b9.g00siv1o.ia331452/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222071-fujinomiya%2Fa-01-24%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff222071-fujinomiya%2Fi%2F10000007%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "富士宮市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f222071-fujinomiya/cabinet/09455198/69f04d3ad9f6f2636692.jpg?_ex=240x240",
+     "review_avg": 4.0,
+     "review_count": 4,
+     "wakeari": false,
+     "vs_median": 1.0,
+     "market_yen": 910.0,
+     "market_pct": 9
     }
    ],
-   "candidates": 168,
-   "ranked": 61,
+   "candidates": 166,
+   "ranked": 60,
    "dropped": {
     "選択式": 61,
-    "量が範囲外": 23,
+    "量が範囲外": 22,
     "対象外の商品": 10,
     "量が複数": 4,
     "量なし": 9
    },
    "summary": {
     "median_per10k": 14.4,
-    "median_unit_price": 694,
+    "median_unit_price": 708,
     "min_unit_price": 167,
     "max_unit_price": 2417,
-    "towns": 45
+    "towns": 44
    },
-   "popularity": 478
+   "popularity": 476
   },
   "beer": {
    "items": [
@@ -8803,7 +8781,7 @@
      "review_avg": 4.72,
      "review_count": 397,
      "wakeari": false,
-     "vs_median": 1.64,
+     "vs_median": 1.72,
      "change": {
       "price": 22000,
       "qty": 1200.0,
@@ -8828,7 +8806,7 @@
      "review_avg": 4.3,
      "review_count": 61,
      "wakeari": true,
-     "vs_median": 1.5
+     "vs_median": 1.58
     },
     {
      "code": "f464821-higashikushira:10000612",
@@ -8846,7 +8824,7 @@
      "review_avg": 4.59,
      "review_count": 265,
      "wakeari": true,
-     "vs_median": 1.44
+     "vs_median": 1.51
     },
     {
      "code": "f464821-higashikushira:10000681",
@@ -8864,7 +8842,7 @@
      "review_avg": 4.77,
      "review_count": 159,
      "wakeari": false,
-     "vs_median": 1.22
+     "vs_median": 1.28
     },
     {
      "code": "f302040-arida:10000541",
@@ -8882,7 +8860,7 @@
      "review_avg": 4.6,
      "review_count": 30,
      "wakeari": false,
-     "vs_median": 1.2
+     "vs_median": 1.26
     },
     {
      "code": "f462217-shibushi:10002214",
@@ -8900,7 +8878,7 @@
      "review_avg": 4.5,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.19
     },
     {
      "code": "f464821-higashikushira:10000502",
@@ -8918,7 +8896,7 @@
      "review_avg": 4.8,
      "review_count": 1181,
      "wakeari": false,
-     "vs_median": 1.14
+     "vs_median": 1.19
     },
     {
      "code": "f232319-tahara:10000265",
@@ -8936,7 +8914,7 @@
      "review_avg": 5.0,
      "review_count": 8,
      "wakeari": true,
-     "vs_median": 1.08
+     "vs_median": 1.14
     },
     {
      "code": "f402265-miyawaka:10001317",
@@ -8954,7 +8932,7 @@
      "review_avg": 1.33,
      "review_count": 3,
      "wakeari": false,
-     "vs_median": 1.08
+     "vs_median": 1.14
     },
     {
      "code": "f464821-higashikushira:10000575",
@@ -8972,7 +8950,7 @@
      "review_avg": 4.78,
      "review_count": 108,
      "wakeari": false,
-     "vs_median": 1.03
+     "vs_median": 1.08
     },
     {
      "code": "f464821-higashikushira:10000611",
@@ -8989,6 +8967,24 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f464821-higashikushira/cabinet/smn/27034_smn.jpg?_ex=240x240",
      "review_avg": 4.66,
      "review_count": 92,
+     "wakeari": false,
+     "vs_median": 1.05
+    },
+    {
+     "code": "f464821-higashikushira:10000819",
+     "name": "＼高評価★4.88獲得！／＜特大＞うなぎ蒲焼き(無頭)(2尾・計約370g・タレ、山椒付) うなぎ 蒲焼長焼 ウナギ 鰻 蒲焼き 国産うなぎ 国産 九州産 鹿児島 鹿児島県産 人気 ランキング 特大 高級【アクアおおすみ】【0144360a】",
+     "price": 14000,
+     "qty": 370.0,
+     "evidence": "370g",
+     "per10k": 264.286,
+     "unit_price": 38,
+     "shop": "鹿児島県東串良町",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00sliio.ia3305fc.g00sliio.ia3315c7/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff464821-higashikushira%2F0154302a%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff464821-higashikushira%2Fi%2F10000819%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "東串良町",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f464821-higashikushira/cabinet/nt/0154302a_nt_01.jpg?_ex=240x240",
+     "review_avg": 4.89,
+     "review_count": 56,
      "wakeari": false,
      "vs_median": 1.0
     },
@@ -9008,7 +9004,7 @@
      "review_avg": 4.77,
      "review_count": 429,
      "wakeari": false,
-     "vs_median": 0.93
+     "vs_median": 0.98
     },
     {
      "code": "f464686-osaki:10000312",
@@ -9026,7 +9022,7 @@
      "review_avg": 4.31,
      "review_count": 296,
      "wakeari": false,
-     "vs_median": 0.9,
+     "vs_median": 0.95,
      "change": {
       "price": 20000,
       "qty": 600.0,
@@ -9051,7 +9047,7 @@
      "review_avg": 4.55,
      "review_count": 224,
      "wakeari": false,
-     "vs_median": 0.9
+     "vs_median": 0.95
     },
     {
      "code": "f462217-shibushi:10000789",
@@ -9069,7 +9065,7 @@
      "review_avg": 4.83,
      "review_count": 66,
      "wakeari": false,
-     "vs_median": 0.81
+     "vs_median": 0.85
     },
     {
      "code": "f462217-shibushi:10000788",
@@ -9087,7 +9083,7 @@
      "review_avg": 4.85,
      "review_count": 40,
      "wakeari": false,
-     "vs_median": 0.8
+     "vs_median": 0.83
     },
     {
      "code": "f464686-osaki:10001172",
@@ -9105,7 +9101,7 @@
      "review_avg": 4.8,
      "review_count": 79,
      "wakeari": false,
-     "vs_median": 0.76,
+     "vs_median": 0.8,
      "change": {
       "price": 13000,
       "qty": 330.0,
@@ -9130,7 +9126,7 @@
      "review_avg": 5.0,
      "review_count": 4,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.55
     },
     {
      "code": "f221309-hamamatsu:10001189",
@@ -9148,7 +9144,7 @@
      "review_avg": 3.96,
      "review_count": 137,
      "wakeari": false,
-     "vs_median": 0.52
+     "vs_median": 0.54
     },
     {
      "code": "f462217-shibushi:10000521",
@@ -9166,7 +9162,7 @@
      "review_avg": 4.71,
      "review_count": 3242,
      "wakeari": false,
-     "vs_median": 0.48,
+     "vs_median": 0.5,
      "change": {
       "price": 15000,
       "qty": 160.0,
@@ -9191,7 +9187,7 @@
      "review_avg": 4.49,
      "review_count": 99,
      "wakeari": false,
-     "vs_median": 0.43
+     "vs_median": 0.45
     },
     {
      "code": "f302040-arida:10000347",
@@ -9212,22 +9208,22 @@
      "vs_median": 0.1
     }
    ],
-   "candidates": 94,
-   "ranked": 22,
+   "candidates": 96,
+   "ranked": 23,
    "dropped": {
-    "選択式": 43,
+    "選択式": 44,
     "量なし": 24,
     "量が複数": 2,
     "対象外の商品": 3
    },
    "summary": {
-    "median_per10k": 276.923,
-    "median_unit_price": 39,
+    "median_per10k": 264.286,
+    "median_unit_price": 38,
     "min_unit_price": 22,
     "max_unit_price": 371,
     "towns": 9
    },
-   "popularity": 6946
+   "popularity": 7002
   },
   "mentaiko": {
    "items": [
@@ -9336,24 +9332,6 @@
      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402192-onojo/cabinet/13375171/imgrc0106419490.jpg?_ex=240x240",
      "review_avg": 4.71,
      "review_count": 105,
-     "wakeari": false,
-     "vs_median": 1.67
-    },
-    {
-     "code": "f402192-onojo:10002127",
-     "name": "出来立て鮮度そのまま急速凍結 _待望の無着色!粒が自慢の千曲屋一口明太子200g×6P(計1.2キロ)お裾分けにも_ 小分け パック ふるさと納税 めんたいこ 辛子明太子 切子 冷凍 福岡 ふるさと ランキング 【配送不可地域：離島】【1489854】",
-     "price": 11500,
-     "qty": 1200.0,
-     "evidence": "計1.2キロ",
-     "per10k": 1043.478,
-     "unit_price": 10,
-     "shop": "福岡県大野城市",
-     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tqjpo.ia330047.g00tqjpo.ia3313f9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff402192-onojo%2F1489854%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff402192-onojo%2Fi%2F10002127%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
-     "portal": "楽天ふるさと納税",
-     "town": "大野城市",
-     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402192-onojo/cabinet/09806514/0289_1489854_01.jpg?_ex=240x240",
-     "review_avg": 0,
-     "review_count": 0,
      "wakeari": false,
      "vs_median": 1.67
     },
@@ -9581,6 +9559,24 @@
      "vs_median": 0.73
     },
     {
+     "code": "f402192-onojo:10000016",
+     "name": "【冷凍配送】やまやのうちのめんたい切子込(150g×5個セット)(大野城市)_ 明太子 めんたいこ 辛子明太子 切子 破れ 国産 博多めんたいこ 福岡 博多 産地直送 ブランド やまや 冷凍 ご飯のお供 つまみ 家庭用 小分け 【配送不可地域：離島】【1026857】",
+     "price": 17000,
+     "qty": 750.0,
+     "evidence": "150g×5",
+     "per10k": 441.176,
+     "unit_price": 23,
+     "shop": "福岡県大野城市",
+     "url": "https://hb.afl.rakuten.co.jp/hgc/g00tqjpo.ia330047.g00tqjpo.ia3313f9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff402192-onojo%2F1026857%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Ff402192-onojo%2Fi%2F10000016%2F&rafcid=wsc_i_is_c97936bc-f041-4b0e-92cf-fe80e86499f7",
+     "portal": "楽天ふるさと納税",
+     "town": "大野城市",
+     "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/f402192-onojo/cabinet/07776756/1026857_s.jpg?_ex=240x240",
+     "review_avg": 4.67,
+     "review_count": 12,
+     "wakeari": false,
+     "vs_median": 0.71
+    },
+    {
      "code": "f403458-shingu:10000466",
      "name": "【訳あり】無着色辛子明太子切れ子300g【辛子明太子】.ZG334",
      "price": 7000,
@@ -9793,11 +9789,11 @@
      "vs_median": 0.36
     }
    ],
-   "candidates": 84,
+   "candidates": 85,
    "ranked": 31,
    "dropped": {
     "量が複数": 5,
-    "対象外の商品": 19,
+    "対象外の商品": 20,
     "選択式": 26,
     "量なし": 3
    },
@@ -9808,7 +9804,7 @@
     "max_unit_price": 63,
     "towns": 18
    },
-   "popularity": 2328
+   "popularity": 2340
   },
   "tuna": {
    "items": [
@@ -11509,10 +11505,10 @@
      "vs_median": 0.36
     }
    ],
-   "candidates": 97,
+   "candidates": 98,
    "ranked": 19,
    "dropped": {
-    "選択式": 35,
+    "選択式": 36,
     "対象外の商品": 28,
     "量なし": 9,
     "量が複数": 3,
@@ -13250,12 +13246,12 @@
      "market_pct": 1
     }
    ],
-   "candidates": 102,
+   "candidates": 103,
    "ranked": 22,
    "dropped": {
-    "選択式": 34,
+    "選択式": 36,
     "量なし": 16,
-    "対象外の商品": 27,
+    "対象外の商品": 26,
     "量が複数": 3
    },
    "summary": {
@@ -15648,10 +15644,10 @@
    "candidates": 89,
    "ranked": 40,
    "dropped": {
-    "量が範囲外": 16,
+    "量が範囲外": 17,
     "選択式": 16,
     "量なし": 5,
-    "対象外の商品": 10,
+    "対象外の商品": 9,
     "量が複数": 2
    },
    "summary": {
@@ -16220,12 +16216,12 @@
      "vs_median": 0.95
     }
    ],
-   "candidates": 163,
+   "candidates": 164,
    "ranked": 56,
    "dropped": {
     "対象外の商品": 80,
     "選択式": 19,
-    "量なし": 6,
+    "量なし": 7,
     "量が複数": 2
    },
    "summary": {
@@ -16664,10 +16660,10 @@
    "candidates": 73,
    "ranked": 23,
    "dropped": {
-    "選択式": 19,
+    "選択式": 20,
     "量なし": 10,
     "対象外の商品": 19,
-    "量が複数": 2
+    "量が複数": 1
    },
    "summary": {
     "median_per10k": 2.1,
@@ -16886,11 +16882,11 @@
      "vs_median": 0.16
     }
    ],
-   "candidates": 78,
+   "candidates": 77,
    "ranked": 11,
    "dropped": {
     "選択式": 12,
-    "量なし": 24,
+    "量なし": 23,
     "対象外の商品": 31
    },
    "summary": {
@@ -17085,5 +17081,5 @@
    }
   }
  },
- "fetched_at": "2026-11-23T08:42+09:00"
+ "fetched_at": "2026-11-23T10:12+09:00"
 }
