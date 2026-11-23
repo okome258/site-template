@@ -463,7 +463,11 @@ def _pick(cat: dict, items: list[dict], data: dict, cfg: dict) -> dict | None:
     return res
 
 
-PREF_INDEX_MIN = 3  # 県ページを検索に出す最低件数(上位TOP_N_MAP位に入った数)
+# 県ページは検索に出さない(2026-11-23)。中身がカテゴリページの返礼品の再掲だけで、
+# 上位入りが9件ある県(兵庫・福岡・静岡など)まで「クロール済み - インデックス未登録」だったため、
+# 薄い重複ページとしてサイト全体の評価を下げないよう全県 noindex・sitemap 除外にする。
+# 地図からの移動用にページ自体は残す。中身を厚くしたら件数で出し分ける形に戻せる
+PREF_INDEX_MIN = None  # 数値にすると、上位TOP_N_MAP位に入った数がこれ以上の県だけ検索に出す
 TOP_N_MAP = 10  # 地図で数える順位(各カテゴリの上位何位まで)
 
 
@@ -558,9 +562,8 @@ def pages(cfg: dict, data: dict) -> list[dict]:
                    "title": f"{p}のふるさと納税 コスパの良い返礼品(量が多い順)【{_ym(data)}】",
                    "description": desc + "毎日自動更新。",
                    "context": {"cats": cats, "nav": nav, "pref": p, "rows": rows, "near": near},
-                   # 上位に入った返礼品が少ない県は中身が薄いので検索には出さない(サイト全体の評価を下げないため)。
-                   # ページ自体は地図から行けるように残す。sitemap からも外れる
-                   "noindex": n < PREF_INDEX_MIN})
+                   # 検索に出さない県ページは sitemap からも外れる(PREF_INDEX_MIN の説明参照)
+                   "noindex": PREF_INDEX_MIN is None or n < PREF_INDEX_MIN})
     ps.append({"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
                "context": {"cats": cats, "nav": nav}, "changefreq": "monthly"})
     return ps
