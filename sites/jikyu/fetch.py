@@ -1104,6 +1104,11 @@ def labor_context(data: dict, ranking: list) -> dict | None:
     return out
 
 
+# 2026-11-28 検索対策: 業界・業種ごとのページ(38本)は同じ形で中身が薄く、サイト全体の評価を下げるため検索に載せない。
+# 検索はトップ・AI時代(/ai/)・予想・地域の厚いページに絞る。ページ自体は残す(サイト内リンクから開ける)
+INDUSTRY_PAGES_INDEX = False
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     about = {"path": "about/index.html", "template": "about.html", "title": "このサイトについて・計算方法",
              "changefreq": "monthly"}
@@ -1217,7 +1222,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     for i, r in enumerate(ranking, 1):
         s = r["ind"]["slug"]
         out.append({
-            "path": f"gyokai/{s}/index.html", "template": "industry.html",
+            "path": f"gyokai/{s}/index.html", "template": "industry.html", "noindex": not INDUSTRY_PAGES_INDEX,
             "title": f"{r['ind']['short']}業界の実質時給・年収・残業時間（{latest['year']}年）",
             "description": (f"{r['ind']['name']}の実質時給は{r['hourly']:,.0f}円で全{len(ranking)}業界中{i}位。"
                             f"平均年収{r.get('annual_man', 0):,.0f}万円、月の労働時間{r.get('hours_month', 0)}時間。"
@@ -1228,7 +1233,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         s = r["ind"]["slug"]
         pn = r["ind"]["parent"].get("short", "")
         out.append({
-            "path": f"gyoshu/{s}/index.html", "template": "industry.html",
+            "path": f"gyoshu/{s}/index.html", "template": "industry.html", "noindex": not INDUSTRY_PAGES_INDEX,
             "title": f"{r['ind']['short']}の年収・実質時給・残業時間（{latest['year']}年）",
             "description": (f"{r['ind']['short']}（{r['ind']['name']}）の実質時給は{r['hourly']:,.0f}円、"
                             f"平均年収{r.get('annual_man', 0):,.0f}万円、月の労働時間{r.get('hours_month', 0)}時間。"

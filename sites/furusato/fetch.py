@@ -486,6 +486,11 @@ def _by_pref(data: dict, cats: list) -> dict:
     return out
 
 
+# 2026-11-28 検索対策: Googleが「クロール済み - インデックス未登録」でサイトを載せていないため、
+# 検索に載せるのは中身の厚いページだけにする。比較できた返礼品がこの件数未満のカテゴリは noindex・サイトマップ除外
+CAT_INDEX_MIN = 15
+
+
 def pages(cfg: dict, data: dict) -> list[dict]:
     allc = cfg["categories"]
     byid = {c["id"]: c for c in allc}
@@ -524,6 +529,8 @@ def pages(cfg: dict, data: dict) -> list[dict]:
         ps.append({
             "path": f"c/{c['id']}/index.html",
             "template": "category.html",
+            # 2026-11-28 検索対策: 比較できた件数が少ないカテゴリは薄いページとして検索に載せない(ページは残す)
+            "noindex": r.get("ranked", 0) < CAT_INDEX_MIN,
             "title": f"ふるさと納税 {c['name']}のコスパ・量ランキング{best}【{ym}】",
             "description": desc,
             "context": {"cats": cats, "nav": nav, "cat": c, "rank": r, "ym": ym,
@@ -544,7 +551,7 @@ def pages(cfg: dict, data: dict) -> list[dict]:
     pt = _portals_page(data)
     pt["context"].update({"cats": cats, "nav": nav})
     ps.append(pt)
-    ps.append({"path": "other/index.html", "template": "other.html", "title": "その他のカテゴリ",
+    ps.append({"path": "other/index.html", "template": "other.html", "title": "その他のカテゴリ", "noindex": True,
                "description": "日用品・果物・麺・飲み物など、定番以外のふるさと納税の返礼品も寄付1万円あたりの量で比較。",
                "context": {"cats": cats, "nav": nav}})
     for p in TILES:
